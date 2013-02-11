@@ -1,0 +1,45 @@
+SCC = This is a source code control file
+
+[WorldLoader.vcproj]
+SCC_Aux_Path = ""
+SCC_Project_Name = Perforce Project
+
+[HeightMapLoader.vcproj]
+SCC_Aux_Path = ""
+SCC_Project_Name = Perforce Project
+
+[LoadSaveManager.vcproj]
+SCC_Aux_Path = ""
+SCC_Project_Name = Perforce Project
+
+[GUIEditor.vcproj]
+SCC_Aux_Path = ""
+SCC_Project_Name = Perforce Project
+
+[TextureLoader.vcproj]
+SCC_Aux_Path = ""
+SCC_Project_Name = Perforce Project
+
+[ElementalEngine.sln]
+SCC_Aux_Path = ""
+SCC_Project_Name = Perforce Project
+
+[unitTest.vcproj]
+SCC_Aux_Path = ""
+SCC_Project_Name = Perforce Project
+
+[EE-SDK.vcproj]
+SCC_Aux_Path = ""
+SCC_Project_Name = Perforce Project
+
+[EEPhysClient.vcproj]
+SCC_Aux_Path = ""
+SCC_Project_Name = Perforce Project
+
+[ElementalEngine.vcproj]
+SCC_Aux_Path = ""
+SCC_Project_Name = Perforce Project
+
+[GuiLoader.vcproj]
+SCC_Aux_Path = ""
+SCC_Project_Name = Perforce Project

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root Num="1">
+<MapAssetsDatabase Name="Map Assets Database" Num="6">
+	<edit Type="string" Name="Name" key="false"/>
+	<edit Type="string" Name="Callsign" key="true"/>
+	<edit Type="long int" Name="PosX" key="false"/>
+	<edit Type="long int" Name="PosY" key="false"/>
+	<edit Type="long int" Name="PosZ" key="false"/>
+	<combo Type="string" name="Type" key="false" DefSelect="HA" 
+		NumOptions="6"
+		option1="HA"
+		option2="IP"
+		option3="BP"
+		option4="Known Point"
+		option5="Starting Point"
+		option6="Origin Grid Coordinates"
+	/>
+</MapAssetsDatabase>
+</root>

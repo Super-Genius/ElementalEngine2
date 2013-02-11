@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<CShaderPath Version="1"  API="DX9" ShaderVersion="2.0" numeffects="1" effectname1="shaders/Default.efx" numentries="2" >
+	<ShaderEntry type="vertexshader" numflags="0" shaderfile="Shaders/Default.vsh" ShaderDefineFile="" ></ShaderEntry>
+	<ShaderEntry type="pixelshader" numflags="0" shaderfile="Shaders/Default.psh" ShaderDefineFile="" ></ShaderEntry>
+</CShaderPath>

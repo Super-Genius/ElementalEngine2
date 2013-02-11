@@ -1,0 +1,40 @@
+#include "Shaders\HLSLconstants.h"
+
+
+struct v2f
+{
+	float4 Position     : POSITION;
+	float2 TexCoord0    : TEXCOORD0;	// TexCoord
+};
+
+half3 SuppressLDRLuminance( half3 c )
+{
+	float clampValue = .96f;
+	float Dampen = .65f;
+	float3 luminanceDot = float3( .299, .587, .114 );
+	float  Luminance = dot( luminanceDot, c );
+   if( Luminance > clampValue )
+      return clamp( c - Dampen, 0, 1 );
+  else
+      return half3(0,0,0);
+}
+half3 SuppressLDR( half3 c )
+{
+	float clampValue = .7f;
+   if( c.r > clampValue || c.g > clampValue || c.b > clampValue )
+      return clamp( c - clampValue, 0, 1 );
+  else
+      return half3(0,0,0);
+}
+
+half4 main(v2f i, 
+	uniform sampler2D CachedTexture : register(s0)) 	: COLOR
+{
+	float Kd = 1.0001f;
+	float hdrIntensity = 1.0;
+	half4 original  = tex2D(CachedTexture, i.TexCoord0)*Kd;
+	original.rgb =  SuppressLDRLuminance( original.rgb )*hdrIntensity;
+	original.a = 1.0;
+	return original;
+	
+}

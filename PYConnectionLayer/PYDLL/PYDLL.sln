@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PYDLL", "PYDLL\PYDLL.vcproj", "{1FFAC0E7-2884-4EEE-A7B4-528778215E0D}"
+	ProjectSection(ProjectDependencies) = postProject
+		{3423EC9A-52E4-4A4D-9753-EDEBC38785EF} = {3423EC9A-52E4-4A4D-9753-EDEBC38785EF}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PYDLLTester", "PYDLLTester\PYDLLTester.vcproj", "{E5306FD7-6F92-4959-A872-9693F4ABA086}"
+	ProjectSection(ProjectDependencies) = postProject
+		{1FFAC0E7-2884-4EEE-A7B4-528778215E0D} = {1FFAC0E7-2884-4EEE-A7B4-528778215E0D}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "cryptlib", "cryptopp552\cryptlib.vcproj", "{3423EC9A-52E4-4A4D-9753-EDEBC38785EF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Debug|Xbox 360 = Debug|Xbox 360
+		Release|Win32 = Release|Win32
+		Release|Xbox 360 = Release|Xbox 360
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1FFAC0E7-2884-4EEE-A7B4-528778215E0D}.Debug|Win32.ActiveCfg = Debug|Win32
+		{1FFAC0E7-2884-4EEE-A7B4-528778215E0D}.Debug|Win32.Build.0 = Debug|Win32
+		{1FFAC0E7-2884-4EEE-A7B4-528778215E0D}.Debug|Xbox 360.ActiveCfg = Debug|Xbox 360
+		{1FFAC0E7-2884-4EEE-A7B4-528778215E0D}.Debug|Xbox 360.Build.0 = Debug|Xbox 360
+		{1FFAC0E7-2884-4EEE-A7B4-528778215E0D}.Release|Win32.ActiveCfg = Release|Win32
+		{1FFAC0E7-2884-4EEE-A7B4-528778215E0D}.Release|Win32.Build.0 = Release|Win32
+		{1FFAC0E7-2884-4EEE-A7B4-528778215E0D}.Release|Xbox 360.ActiveCfg = Release|Xbox 360
+		{1FFAC0E7-2884-4EEE-A7B4-528778215E0D}.Release|Xbox 360.Build.0 = Release|Xbox 360
+		{E5306FD7-6F92-4959-A872-9693F4ABA086}.Debug|Win32.ActiveCfg = Debug|Win32
+		{E5306FD7-6F92-4959-A872-9693F4ABA086}.Debug|Win32.Build.0 = Debug|Win32
+		{E5306FD7-6F92-4959-A872-9693F4ABA086}.Debug|Xbox 360.ActiveCfg = Debug|Xbox 360
+		{E5306FD7-6F92-4959-A872-9693F4ABA086}.Debug|Xbox 360.Build.0 = Debug|Xbox 360
+		{E5306FD7-6F92-4959-A872-9693F4ABA086}.Release|Win32.ActiveCfg = Release|Win32
+		{E5306FD7-6F92-4959-A872-9693F4ABA086}.Release|Win32.Build.0 = Release|Win32
+		{E5306FD7-6F92-4959-A872-9693F4ABA086}.Release|Xbox 360.ActiveCfg = Release|Xbox 360
+		{E5306FD7-6F92-4959-A872-9693F4ABA086}.Release|Xbox 360.Build.0 = Release|Xbox 360
+		{3423EC9A-52E4-4A4D-9753-EDEBC38785EF}.Debug|Win32.ActiveCfg = Debug|Win32
+		{3423EC9A-52E4-4A4D-9753-EDEBC38785EF}.Debug|Win32.Build.0 = Debug|Win32
+		{3423EC9A-52E4-4A4D-9753-EDEBC38785EF}.Debug|Xbox 360.ActiveCfg = Debug|Xbox 360
+		{3423EC9A-52E4-4A4D-9753-EDEBC38785EF}.Debug|Xbox 360.Build.0 = Debug|Xbox 360
+		{3423EC9A-52E4-4A4D-9753-EDEBC38785EF}.Release|Win32.ActiveCfg = Release|Win32
+		{3423EC9A-52E4-4A4D-9753-EDEBC38785EF}.Release|Win32.Build.0 = Release|Win32
+		{3423EC9A-52E4-4A4D-9753-EDEBC38785EF}.Release|Xbox 360.ActiveCfg = Release|Xbox 360
+		{3423EC9A-52E4-4A4D-9753-EDEBC38785EF}.Release|Xbox 360.Build.0 = Release|Xbox 360
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

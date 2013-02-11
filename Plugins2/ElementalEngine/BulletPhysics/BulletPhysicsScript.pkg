@@ -1,0 +1,8 @@
+$#include "StdAfx.h"
+$#include "../../ElementalEngine/EELuaScript/LuaHashString.h"
+$pfile "../../include/EELuaScript/EE_binding_common.pkg"
+
+$#if 0 // To not include the "../"
+$cfile "../../include/Physics/PhysicsDefines.h"
+$cfile "cluaraycollisionlist.h"
+$#endif

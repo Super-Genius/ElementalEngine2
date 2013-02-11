@@ -1,0 +1,15 @@
+#include "Shaders\HLSLconstants.h"
+#include "Shaders\PSH_CommonFunctions.h"
+
+struct PSIn
+{
+	float4 Position			: POSITION;
+	float4 PosOutDepth		: COLOR0;
+};
+
+uniform float3 FogColor				: register(c24);
+
+PS_MRT_OUTPUT main(	PSIn  In )
+{
+	return MakeMRTOutput( float4(FogColor.rgb,1.0), In.PosOutDepth.w );
+}

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root Num="1">
+	<TASVehicleArmory Name="TAS Vehicle Armory" Num="21" >
+		<edit Type="string" Name="Turret Rotation Name" key="true"/>
+		<edit Type="string" Name="Turret Angle Name" key="false"/>
+		<edit Type="float" name="Rate of Fire(rps)" key="false"/>
+		<edit Type="float" name="Range" key="false"/>
+		<edit Type="float" name="Projectile Speed" key="false"/>
+		<edit Type="float" name="Projectile Damage" key="false"/>
+		<edit Type="float" name="Projectile Spawner" key="false"/>
+		<edit Type="bool" Name="Salvoing" key="false"/>
+		<edit Type="float" name="Salvoing Delay(sec)" key="false"/>
+		<edit Type="string" Name="Fire Particle Effect Spawner" key="false"/>
+		<edit Type="float" name="Min Fire Angle" key="false"/>
+		<edit Type="float" name="Max Fire Angle" key="false"/>
+		<edit Type="float" name="Angle Speed(deg/sec)" key="false"/>
+		<edit Type="float" name="Right Rotation" key="false"/>
+		<edit Type="float" name="Left Rotation" key="false"/>
+		<edit Type="float" name="Rotation Speed(deg/sec)" key="false"/>
+		<edit Type="short int" Name="Number of Barrels" key="false"/>
+		<edit Type="string" Name="Barrel Fire Point 1" key="false"/>
+		<edit Type="string" Name="Barrel Fire Point 2" key="false"/>
+		<edit Type="string" Name="Barrel Fire Point 3" key="false"/>
+		<edit Type="string" Name="Barrel Fire Point 4" key="false"/>
+	</TASVehicleArmory>
+</root>

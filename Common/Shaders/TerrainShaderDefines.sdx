@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<ShaderDefines version="1" count="3">
+  <ShaderDefine name="ACTIVELIGHTS" min="0" max="4" />
+  <ShaderDefine name="DETAILLIGHTS" min="0" max="2" />
+  <ShaderDefine name="SHADOWMAPS" min="0" max="2" />
+</ShaderDefines>

@@ -1,0 +1,95 @@
+#include "Shaders\HLSLconstants.h"
+
+float Kd = 1.0001f;
+
+struct v2f
+{
+	float4 Position     : POSITION;
+	float2 TexCoord0    : TEXCOORD0;	// TexCoord
+};
+
+half4 main(v2f input, 
+	uniform sampler2D CachedTexture : register(s0),
+	uniform sampler2D DownsampledTexture : register(s1)) 	: COLOR
+{
+	float exposure = .8f;
+	float contrast = 1.2f;//the higher the more contrast
+	//Guassian weighting
+	half3 original  = tex2D(CachedTexture, input.TexCoord0);
+	float3 blurpixel =  tex2D( DownsampledTexture, input.TexCoord0 );
+	blurpixel *= blurpixel*1.4f;//square to smooth of transition into blacks
+	float2 texcoord = input.TexCoord0;
+	float3 color = original + blurpixel;
+	float4 outcolor;
+	
+	float thresholdContrast = .7f;
+	float luminanceMultiplier = 2.0f;
+	float luminanceShift = .1f;
+	float darkClamp = .3f;
+	//grab pixels around radius for local tonemapping	
+	float4 coord1 = float4( input.TexCoord0.x, input.TexCoord0.y, 0, 11 );
+	float3 color1 = tex2Dlod( CachedTexture, coord1 ).rgb;
+	float3 luminanceDot = float3( .299, .587, .114 );
+	//Set fixed local luminance for now(disable tone mapping)
+	float localLuminance = .3f;//dot( luminanceDot, color1 );
+	float curLum = localLuminance;
+	//calculates local luminance based on average area around pixel expanding until it hits a 
+	//contrast threshold where the contrast between the last average luminance calculated and the expanded
+	//luminance is greater than the threshold.
+	/*for( int i = 10; i < 11 && abs( curLum - localLuminance ) < thresholdContrast; i += 1 )
+	{
+		coord1 = float4( input.TexCoord0.x, input.TexCoord0.y, 0, i );
+		color1 = tex2Dlod( CachedTexture, coord1 ).rgb;
+		localLuminance = curLum;
+		curLum = dot( luminanceDot, color1 );
+	}*/
+	//This keeps the dark areas from overbrightening as if lit by ambient since we're doing
+	//localized tone-mapping
+	if( localLuminance < darkClamp )
+	{
+		localLuminance = darkClamp;
+	}
+	localLuminance += luminanceShift;
+	localLuminance *= luminanceMultiplier;	
+	
+	outcolor.rgb =  color.rgb;
+	outcolor.a = 1.0;
+	//outcolor.rgb = color4;	
+	
+	//outcolor.rgb = saturate( color/1.5f );
+	//outcolor.rgb =  saturate( blurpixel);
+	//outcolor.rgb = localLuminance/luminanceShift;
+	//return outcolor;
+	
+	// RGB -> XYZ conversion
+	const float3x3 RGB2XYZ = {0.5141364, 0.3238786,  0.16036376,
+								0.265068,  0.67023428, 0.06409157,
+								0.0241188, 0.1228178,  0.84442666};				                    
+	float3 XYZ = mul(RGB2XYZ, outcolor.rgb);
+	// XYZ -> Yxy conversion
+	float3 Yxy;
+	Yxy.r = XYZ.g;                            // copy luminance Y
+	Yxy.g = XYZ.r / (XYZ.r + XYZ.g + XYZ.b ); // x = X / (X + Y + Z)
+	Yxy.b = XYZ.g / (XYZ.r + XYZ.g + XYZ.b ); // y = Y / (X + Y + Z)
+
+	// (Lp) Map average luminance to the middlegrey zone by scaling pixel luminance
+	float exposure2 = 1.5f;
+	float whitePoint = 3.75f;           
+	float Lp;
+	Lp = Yxy.r * exposure2/ localLuminance;         
+	// (Ld) Scale all luminance within a displayable range of 0 to 1
+	Yxy.r = (Lp * (1.0f + Lp/(whitePoint * whitePoint)))/(1.0f + Lp);
+	  
+	// Yxy -> XYZ conversion
+	XYZ.r = Yxy.r * Yxy.g / Yxy. b;               // X = Y * x / y
+	XYZ.g = Yxy.r;                                // copy luminance Y
+	XYZ.b = Yxy.r * (1 - Yxy.g - Yxy.b) / Yxy.b;  // Z = Y * (1-x-y) / y
+	    
+	// XYZ -> RGB conversion
+	const float3x3 XYZ2RGB  = { 2.5651,-1.1665,-0.3986,
+								-1.0217, 1.9777, 0.0439, 
+								0.0753, -0.2543, 1.1892};
+	outcolor.rgb = mul(XYZ2RGB, XYZ);
+
+	return outcolor;
+}

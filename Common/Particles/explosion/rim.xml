@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<ParticleBrush name="ICenter" additive="false" framerate="30" texturerate="30" texture="particles/explosion/explosion.tga" loop="false" AttachToEmitter="0.0" shader="" keyframes="44" >
+	<Keyframe type="PARTICLE_LIFE" time="0.2" value="3.0" />
+	<Keyframe type="PARTICLE_LIFE_VARIATION" time="0.0" value="0.0" />
+	<Keyframe type="PARTICLE_NUMBER" time="0.0" value="9.0" />
+	<Keyframe type="PARTICLE_NUMBER_VARIATION" time="0.0" value="0.0" />
+	<Keyframe type="PARTICLE_VISIBILITY" time="0.0" value="0.0" />
+	<Keyframe type="PARTICLE_COLOR_R" time="0.0" value="0.3359375" />
+	<Keyframe type="PARTICLE_COLOR_R" time="0.1" value="1.0" />
+	<Keyframe type="PARTICLE_COLOR_R" time="0.22" value="0.91015625" />
+	<Keyframe type="PARTICLE_COLOR_R" time=".6" value="0.0" />
+	<Keyframe type="PARTICLE_COLOR_G" time="0.0" value="0.3359375" />
+	<Keyframe type="PARTICLE_COLOR_G" time="0.1" value="0.9609375" />
+	<Keyframe type="PARTICLE_COLOR_G" time="0.22" value="0.48828125" />
+	<Keyframe type="PARTICLE_COLOR_G" time=".6" value="0.0" />
+	<Keyframe type="PARTICLE_COLOR_B" time="0.0" value="0.3359375" />
+	<Keyframe type="PARTICLE_COLOR_B" time="0.1" value="0.58203125" />
+	<Keyframe type="PARTICLE_COLOR_B" time="0.22" value="0.06640625" />
+	<Keyframe type="PARTICLE_COLOR_B" time=".6" value="0.0" />
+	<Keyframe type="PARTICLE_COLOR_A" time="0.0" value="1.0" />
+	<Keyframe type="PARTICLE_COLOR_A" time="0.1" value="1.0" />
+	<Keyframe type="PARTICLE_COLOR_A" time="0.22" value="0.91015625" />
+	<Keyframe type="PARTICLE_COLOR_A" time=".6" value="0.0" />
+	<Keyframe type="PARTICLE_VELOCITY" time="0.0" value="58" />
+	<Keyframe type="PARTICLE_VELOCITY" time="8" value="58" />
+	<Keyframe type="PARTICLE_VELOCITY" time="9" value="0.0" />
+	<Keyframe type="PARTICLE_VELOCITY_VARIATION" time="0.0" value="0.0" />
+	<Keyframe type="PARTICLE_VELOCITY_LIFE" time="0.0" value="2.0" />
+	<Keyframe type="PARTICLE_VELOCITY_LIFE" time="0.08" value="0.2" />
+	<Keyframe type="PARTICLE_VELOCITY_LIFE" time="1.0" value="0.0" />
+	<Keyframe type="PARTICLE_SPIN" time="0.0" value="-12.0" />
+	<Keyframe type="PARTICLE_SPIN_VARIATION" time="0.0" value="12.0" />
+	<Keyframe type="PARTICLE_SPIN_LIFE" time="0.0" value="0.2" />
+	<Keyframe type="PARTICLE_SPIN_LIFE" time="1.0" value="0.2" />
+	<Keyframe type="PARTICLE_SIZE" time="0.0" value="58" />
+	<Keyframe type="PARTICLE_SIZE_VARIATION" time="0.0" value="14" />
+	<Keyframe type="PARTICLE_SIZE_LIFE" time="0.0" value="0.0" />
+	<Keyframe type="PARTICLE_SIZE_LIFE" time="0.1" value="1.4" />
+	<Keyframe type="PARTICLE_SIZE_LIFE" time="1.0" value="2.0" />
+	<Keyframe type="PARTICLE_MOTION_RAND" time="0.0" value="0.0" />
+	<Keyframe type="PARTICLE_MOTION_RAND_VARIATION" time="0.0" value="24.0" />
+	<Keyframe type="PARTICLE_MOTION_RAND_LIFE" time="0.0" value="1.9" />
+	<Keyframe type="PARTICLE_MOTION_RAND_LIFE" time="1.0" value="1.0" />
+	<Keyframe type="PARTICLE_WEIGHT" time="0.0" value="-29.0" />
+	<Keyframe type="PARTICLE_WEIGHT_VARIATION" time="0.0" value="0.0" />
+	<Keyframe type="PARTICLE_WEIGHT_LIFE" time="0.0" value="1.0" />
+</ParticleBrush>

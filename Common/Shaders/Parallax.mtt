@@ -1,0 +1,7 @@
+<MaterialTemplate version="3000" effect="Parallax.efx" numrenderstates="5">
+    <RenderState mode="alphablend" value="false" />
+    <RenderState mode="alphatest" value="false" />
+    <RenderState mode="cullmode" value="cullregular" />
+    <RenderState mode="depthtest" value="ztrue" />
+    <RenderState mode="depthwrite" value="true" />
+</MaterialTemplate>

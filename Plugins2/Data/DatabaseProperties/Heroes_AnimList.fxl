@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root Num="1">
+<Heroes_AnimList Name="Heroes Animation List" Num="2">
+	<combo Type="string" name="Animation Type" key="true" DefSelect="Anim_Idle"
+		NumOptions="32"
+		option1="Anim_Idle"
+		option2="Anim_Walk"
+		option3="Anim_Run"			
+		option4="Anim_A"
+		option5="Anim_AToIdle"
+		option6="Anim_AA"
+		option7="Anim_AAToIdle"
+		option8="Anim_AAA"
+		option9="Anim_AAB"
+		option10="Anim_AB"
+		option11="Anim_ABToIdle"
+		option12="Anim_ABA"
+		option13="Anim_ABB"
+		option14="Anim_B"
+		option15="Anim_BToIdle"
+		option16="Anim_BA"
+		option17="Anim_BAToIdle"
+		option18="Anim_BAA"
+		option19="Anim_BAB"
+		option20="Anim_BB"
+		option21="Anim_BBToIdle"
+		option22="Anim_BBA"
+		option23="Anim_C100"
+		option24="Anim_C200"
+		option25="Anim_C300"
+		option26="Anim_DHold"
+		option27="Anim_DHoldToIdle"
+		option28="Anim_DTapForward"
+		option29="Anim_DTapBackward"
+		option30="Anim_DTapLeft"
+		option31="Anim_DTapRight"
+		option32="Anim_DTapUp"
+	/>
+	<edit Type="string" name="Animation File" key="false" DefSelect="DefaultAnim.xaf" />
+</Heroes_AnimList>
+</root>

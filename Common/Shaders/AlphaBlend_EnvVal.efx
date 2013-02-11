@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<CEffect version="3100" 
+	numconstants="6"
+	numtextures="3"
+	numrenderstates="0"
+	numbones="0"
+	numflags="0"
+	numformats="0" >
+	<ShaderVariable shadertype="vertexshader" type="Function" name="EyePos" register="17" x="0.0" y="0.0" z="0.0" w="1.0" ></ShaderVariable>
+	<ShaderVariable shadertype="vertexshader" type="Function" name="FogDistance" register="18" x="0.6705" y="0.7294" z="0.8549" w="6000.0" ></ShaderVariable>	
+	<ShaderVariable shadertype="vertexshader" type="Function" name="ZMinMax" register="19" x="0.0" y="8000.0" z="0.0" w="1.0" ></ShaderVariable>
+	<ShaderVariable shadertype="pixelshader" type="Constant" name="ColorMultiplier" register="19" x="1.0" y="1.0" z="1.0" w="1.0" ></ShaderVariable>	
+	<ShaderVariable shadertype="pixelshader" type="Constant" name="SpecularGlossReflection" register="20" x="1.0" y="8.0" z="0.5" w="4000.0" ></ShaderVariable>	
+	<ShaderVariable shadertype="pixelshader" type="Function" name="FogColor" register="21" x="1.0" y="8.0" z="0.0" w="0.0" ></ShaderVariable>	
+	<Texture tag="Diffuse" pass="0" stage="0" type="Constant" file="none" numtexturestates="2">
+        <TextureStageState mode="minfilter" value="bilinear" />
+        <TextureStageState mode="magfilter" value="bilinear" />
+	</Texture>
+	<Texture tag="Normal" pass="0" stage="1" type="Constant" file="none" numtexturestates="2">
+        <TextureStageState mode="minfilter" value="bilinear" />
+        <TextureStageState mode="magfilter" value="bilinear" />
+	</Texture>
+	<Texture tag="SkyboxTextureCallback" pass="0" stage="2" type="Function" file="SkyboxTextureCallback" numtexturestates="3">
+		<TextureStageState mode="minfilter" value="bilinear" />
+        <TextureStageState mode="magfilter" value="bilinear" />
+        <TextureStageState mode="mipfilter" value="none" />
+	</Texture>
+</CEffect>

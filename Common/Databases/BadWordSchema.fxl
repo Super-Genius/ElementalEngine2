@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<CDatabaseSchema Version="1.0" Name="BadWordSchema" NumItems="1">
+	<CSchemaItem Version="1.0" Name="Word" Type="string" Class="edit" Default="">
+	</CSchemaItem>	
+</CDatabaseSchema>

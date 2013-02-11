@@ -1,0 +1,18 @@
+#include "Shaders\HLSLconstants.h"
+
+struct v2f
+{
+	float4  Pos					: POSITION;
+	float2  TexCoord0			: TEXCOORD0;
+	float4  Color				: COLOR0;
+};
+
+float4 main(v2f i, 
+	uniform sampler2D BaseTexture : register(s0)) 	: COLOR
+{
+	float4 water = tex2D(BaseTexture, i.TexCoord0);
+	float depth = i.Color.a;
+	float transparency = min( depth, 0.7 );
+	float4 outcolor = float4(water.rgb, transparency);
+	return outcolor;
+}

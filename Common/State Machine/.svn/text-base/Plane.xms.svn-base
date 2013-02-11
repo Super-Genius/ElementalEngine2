@@ -1,0 +1,165 @@
+<?xml version="1.0"?>
+<CQHStateMachine version="1.2" name="Plane_StateMachine" numStates="3" startState="Plane_Start_State" endState="Plane_End_State">	
+	<CQHState version="1.0" name="Plane_Start_State" x="0" y="0" width="0" height="0" numSubStates="0" numEvents="1" entryEvent="Plane_Start_ENTRY_SIG_Event" updateEvent="" exitEvent="">
+		<CQHStateMachineEvent version="1.0" name="Plane_Start_ENTRY_SIG_Event" x="0" y="0" guard="" numParam="0" numActions="0" numTransitions="0">
+			<CQHStateMachineTransition version="1.0" name="Plane_NewRelation_Transition" weight="0" targetState="Plane_Ready_State">
+			</CQHStateMachineTransition>
+		</CQHStateMachineEvent>
+	</CQHState>
+	<CQHState version="1.0" name="Plane_State" x="50" y="200" width="500" height="200" numSubStates="1" numEvents="2" entryEvent="" updateEvent="Plane_Update_Event" exitEvent="">
+		<CQHStateMachineEvent version="1.0" name="Collision_Event" x="0" y="0" guard="" numActions="1" numTransitions="0">
+		</CQHStateMachineEvent>
+		<CQHStateMachineEvent version="1.0" name="ReceiveDamage_Event" x="0" y="0" guard="" numActions="1" numTransitions="0">
+		</CQHStateMachineEvent>
+		<CQHStateMachineEvent version="1.0" name="RegisterChild" x="0" y="0" guard="" numParams="1" numActions="1" numTransitions="0">
+			<CQHStateMachineActionHandler version="1.0" name="Plane_RegisterChild_ActionHandler" actionName="RegisterChild">
+			</CQHStateMachineActionHandler>
+		</CQHStateMachineEvent>	
+		<CQHStateMachineEvent version="1.0" name="DeRegisterChild" x="0" y="0" guard="" numParams="1" numActions="1" numTransitions="0">
+			<CQHStateMachineActionHandler version="1.0" name="Plane_DeRegisterChild_ActionHandler" actionName="DeRegisterChild">
+			</CQHStateMachineActionHandler>
+		</CQHStateMachineEvent>	
+		<CQHStateMachineEvent version="1.0" name="Plane_DeInit_Event" x="0" y="0" guard=""  numActions="0" numTransitions="1">
+			<CQHStateMachineTransition version="1.0" name="Plane_DeInit_Transition" weight="0" targetState="Plane_End_State">
+			</CQHStateMachineTransition>
+		</CQHStateMachineEvent>
+		<CQHState version="1.0" name="Plane_Alive_State" x="50" y="200" width="500" height="200" numSubStates="6" numEvents="13" entryEvent="" updateEvent="Plane_Update_Event" exitEvent="">
+			<CQHStateMachineEvent version="1.0" name="Plane_SetGroupLeader_Event" x="0" y="0" guard="" numActions="0" numTransitions="0">
+				<CQHStateMachineActionHandler version="1.0" name="Plane_SetGroupLeader_ActionHandler" actionName="Plane_SetGroupLeader">
+				</CQHStateMachineActionHandler>
+			</CQHStateMachineEvent>	
+			<CQHStateMachineEvent version="1.0" name="Plane_AddSubordinate_Event" x="0" y="0" guard="" numActions="0" numTransitions="0">
+				<CQHStateMachineActionHandler version="1.0" name="Plane_AddSubordinate_ActionHandler" actionName="Plane_AddSubordinate">
+				</CQHStateMachineActionHandler>
+			</CQHStateMachineEvent>	
+			<CQHStateMachineEvent version="1.0" name="Plane_OrderFormation_Event" x="0" y="0" guard="" numActions="0" numTransitions="0">
+				<CQHStateMachineActionHandler version="1.0" name="Plane_OrderFormationt_ActionHandler" actionName="Plane_OrderFormation">
+				</CQHStateMachineActionHandler>
+			</CQHStateMachineEvent>
+			<CQHStateMachineEvent version="1.0" name="Plane_OrderBreakFormation_Event" x="0" y="0" guard="" numActions="0" numTransitions="0">
+				<CQHStateMachineActionHandler version="1.0" name="Plane_OrderBreakFormation_ActionHandler" actionName="Plane_OrderBreakFormation">
+				</CQHStateMachineActionHandler>
+			</CQHStateMachineEvent>	
+			<CQHStateMachineEvent version="1.0" name="Plane_OrderAttack_Event" x="0" y="0" guard="" numActions="0" numTransitions="0">
+				<CQHStateMachineActionHandler version="1.0" name="Plane_OrderAttack_ActionHandler" actionName="Plane_OrderAttack">
+				</CQHStateMachineActionHandler>
+			</CQHStateMachineEvent>
+			<CQHStateMachineEvent version="1.0" name="Plane_Formation_Event" x="0" y="0" guard="" numActions="0" numTransitions="0">
+				<CQHStateMachineTransition version="1.0" name="Plane_Formation_Transition" weight="0" targetState="Plane_Formation_State">
+				</CQHStateMachineTransition>
+			</CQHStateMachineEvent>
+			<CQHStateMachineEvent version="1.0" name="Plane_FormationPositionRequested_Event" x="0" y="0" guard="" numActions="0" numTransitions="0">
+				<CQHStateMachineActionHandler version="1.0" name="Plane_FormationPositionRequested_ActionHandler" actionName="Plane_FormationPositionRequested">
+				</CQHStateMachineActionHandler>
+			</CQHStateMachineEvent>
+			<CQHStateMachineEvent version="1.0" name="Plane_UnderAttack_Event" x="0" y="0" guard="" numActions="0" numTransitions="0">
+				<CQHStateMachineTransition version="1.0" name="Plane_UnderAttack_Transition" weight="25" targetState="Plane_Evasion_State">
+				</CQHStateMachineTransition>
+			</CQHStateMachineEvent>
+			<CQHStateMachineEvent version="1.0" name="Plane_Start_Idle_Event" x="0" y="0" guard="" numActions="1" numTransitions="0">
+				<CQHStateMachineTransition version="1.0" name="Plane_Start_Idle_Transition" weight="0" targetState="Plane_Idle_State">
+				</CQHStateMachineTransition>
+			</CQHStateMachineEvent>
+			<CQHStateMachineEvent version="1.0" name="Plane_Start_Attack_Event" x="0" y="0" guard="" numActions="1" numTransitions="0">
+				<CQHStateMachineTransition version="1.0" name="Plane_Start_Attack_Transition" weight="0" targetState="Plane_Attack_State">
+				</CQHStateMachineTransition>
+			</CQHStateMachineEvent>
+			<CQHStateMachineEvent version="1.0" name="Plane_AttackPreposition_Event" x="0" y="0" guard="" numActions="1" numTransitions="0">
+				<CQHStateMachineTransition version="1.0" name="Plane_AttackPreposition_Transition" weight="0" targetState="Plane_AttackPreposition_State">
+				</CQHStateMachineTransition>
+			</CQHStateMachineEvent>
+			<CQHStateMachineEvent version="1.0" name="Collision_Event" x="0" y="0" guard="" numActions="1" numTransitions="0">
+			</CQHStateMachineEvent>
+			<CQHStateMachineEvent version="1.0" name="ReceiveDamage_Event" x="0" y="0" guard="" numActions="1" numTransitions="0">
+				<CQHStateMachineActionHandler version="1.0" name="Plane_ApplyDamage_ActionHandler" actionName="Plane_ApplyDamage">
+				</CQHStateMachineActionHandler>
+			</CQHStateMachineEvent>
+			<CQHStateMachineEvent version="1.0" name="Plane_Destroy_Event" x="0" y="0" guard=""  numActions="0" numTransitions="1">
+				<CQHStateMachineTransition version="1.0" name="Plane_Destroy_Transition" weight="0" targetState="Plane_Destroyed_State">
+				</CQHStateMachineTransition>
+			</CQHStateMachineEvent>
+			<CQHState version="1.0" name="Plane_Ready_State" x="100" y="250" width="0" height="0" numSubStates="0" numEvents="1" entryEvent="Plane_Ready_Init_Event" updateEvent="" exitEvent="">
+				<CQHStateMachineEvent version="1.0" name="Plane_Ready_Init_Event" x="0" y="0" guard=""  numActions="1" numTransitions="0">
+					<CQHStateMachineActionHandler version="1.0" name="Plane_Init_ActionHandler" actionName="Plane_Init" >
+					</CQHStateMachineActionHandler>
+					<CQHStateMachineTransition version="1.0" name="Plane_Ready_Launch_Transition" weight="0" targetState="Plane_Idle_State">
+					</CQHStateMachineTransition>
+				</CQHStateMachineEvent>
+			</CQHState>
+			<CQHState version="1.0" name="Plane_Formation_State" x="0" y="0" width="0" height="0" numSubStates="0" numEvents="2" entryEvent="Plane_Formation_Entry_Event" updateEvent="Plane_Formation_Update_Event" exitEvent="">
+				<CQHStateMachineEvent version="1.0" name="Plane_Formation_Entry_Event" x="0" y="0" guard="" numParam="0" numActions="1" numTransitions="0">
+					<CQHStateMachineActionHandler version="1.0" name="Plane_Formation_Entry_ActionHandler" actionName="Plane_Formation_Init">
+					</CQHStateMachineActionHandler>
+				</CQHStateMachineEvent>
+				<CQHStateMachineEvent version="1.0" name="Plane_Formation_Update_Event" x="0" y="0" guard=""  numActions="1" numTransitions="0">
+					<CQHStateMachineActionHandler version="1.0" name="Plane_Formation_Update_ActionHandler" actionName="Plane_Formation_Update">
+					</CQHStateMachineActionHandler>
+				</CQHStateMachineEvent>
+			</CQHState>
+			<CQHState version="1.0" name="Plane_Evasion_State" x="100" y="250" width="0" height="0" numSubStates="0" numEvents="1" entryEvent="Plane_Evasion_Init_Event" updateEvent="Plane_Evasion_Update_Event" exitEvent="">
+				<CQHStateMachineEvent version="1.0" name="Plane_Evasion_Init_Event" x="0" y="0" guard=""  numActions="1" numTransitions="0">
+					<CQHStateMachineActionHandler version="1.0" name="Plane_Evasion_Init_ActionHandler" actionName="Plane_Evasion_Init" >
+					</CQHStateMachineActionHandler>
+				</CQHStateMachineEvent>
+				<CQHStateMachineEvent version="1.0" name="Plane_Evasion_Update_Event" x="0" y="0" guard=""  numActions="1" numTransitions="0">
+					<CQHStateMachineActionHandler version="1.0" name="Plane_Evasion_Update_ActionHandler" actionName="Plane_Evasion_Update" >
+					</CQHStateMachineActionHandler>
+				</CQHStateMachineEvent>
+				<CQHStateMachineEvent version="1.0" name="Plane_UnderAttack_Event" x="0" y="0" guard="" numActions="0" numTransitions="0">
+				</CQHStateMachineEvent>
+			</CQHState>
+			<CQHState version="1.0" name="Plane_Idle_State" x="0" y="0" width="0" height="0" numSubStates="0" numEvents="2" entryEvent="Plane_Idle_ENTRY_SIG_Event" updateEvent="Plane_Idle_Update_Event" exitEvent="">
+				<CQHStateMachineEvent version="1.0" name="Plane_Idle_ENTRY_SIG_Event" x="0" y="0" guard="" numParam="0" numActions="1" numTransitions="0">
+					<CQHStateMachineActionHandler version="1.0" name="Plane_Idle_ENTRY_SIG_ActionHandler" actionName="Plane_Idle_Init" >
+					</CQHStateMachineActionHandler>
+				</CQHStateMachineEvent>
+				<CQHStateMachineEvent version="1.0" name="Plane_Idle_Update_Event" x="0" y="0" guard=""  numActions="1" numTransitions="0">
+					<CQHStateMachineActionHandler version="1.0" name="Plane_Idle_Update_ActionHandler" actionName="Plane_Idle_Update" >
+					</CQHStateMachineActionHandler>
+				</CQHStateMachineEvent>
+			</CQHState>
+			<CQHState version="1.0" name="Plane_AttackPreposition_State" x="0" y="0" width="0" height="0" numSubStates="0" numEvents="2" entryEvent="Plane_AttackPreposition_Entry_Event" updateEvent="Plane_AttackPreposition_Update_Event" exitEvent="">
+				<CQHStateMachineEvent version="1.0" name="Plane_AttackPreposition_Entry_Event" x="0" y="0" guard="" numParam="0" numActions="1" numTransitions="0">
+					<CQHStateMachineActionHandler version="1.0" name="Plane_AttackPreposition_Entry_ActionHandler" actionName="Plane_AttackPreposition_Init">
+					</CQHStateMachineActionHandler>
+				</CQHStateMachineEvent>
+				<CQHStateMachineEvent version="1.0" name="Plane_AttackPreposition_Update_Event" x="0" y="0" guard=""  numActions="1" numTransitions="0">
+					<CQHStateMachineActionHandler version="1.0" name="Plane_AttackPreposition_Update_ActionHandler" actionName="Plane_AttackPreposition_Update">
+					</CQHStateMachineActionHandler>
+				</CQHStateMachineEvent>
+			</CQHState>
+			<CQHState version="1.0" name="Plane_Attack_State" x="0" y="0" width="0" height="0" numSubStates="0" numEvents="2" entryEvent="Plane_Attack_Entry_Event" updateEvent="Plane_Attack_Update_Event" exitEvent="Plane_Attack_Exit_Event">	
+				<CQHStateMachineEvent version="1.0" name="Plane_Attack_Entry_Event" x="0" y="0" guard="" numParam="0" numActions="1" numTransitions="0">
+					<CQHStateMachineActionHandler version="1.0" name="Plane_Attack_Entry_ActionHandler" actionName="Plane_Attack_Init" >
+					</CQHStateMachineActionHandler>
+				</CQHStateMachineEvent>
+				<CQHStateMachineEvent version="1.0" name="Plane_Attack_Update_Event" x="0" y="0" guard=""  numActions="1" numTransitions="0">
+					<CQHStateMachineActionHandler version="1.0" name="Plane_Attack_Update_ActionHandler" actionName="Plane_Attack_Update" >
+					</CQHStateMachineActionHandler>
+				</CQHStateMachineEvent>
+				<CQHStateMachineEvent version="1.0" name="Plane_Attack_Exit_Event" x="0" y="0" guard="" numParam="0" numActions="1" numTransitions="0">
+					<CQHStateMachineActionHandler version="1.0" name="Plane_Attack_Exit_ActionHandler" actionName="Plane_Attack_DeInit" >
+					</CQHStateMachineActionHandler>
+				</CQHStateMachineEvent>
+			</CQHState>
+		</CQHState>
+		<CQHState version="1.0" name="Plane_Destroyed_State" x="0" y="0" width="0" height="0" numSubStates="0" numEvents="2" entryEvent="Plane_Destroyed_ENTRY_SIG_Event" updateEvent="Plane_Destroyed_Update_Event" exitEvent="">
+			<CQHStateMachineEvent version="1.0" name="Plane_Destroyed_ENTRY_SIG_Event" x="0" y="0" guard="" numParam="0" numActions="1" numTransitions="0">
+				<CQHStateMachineActionHandler version="1.0" name="Plane_Destroyed_ENTRY_SIG_ActionHandler" actionName="Plane_Destroyed_Init" >
+				</CQHStateMachineActionHandler>
+			</CQHStateMachineEvent>
+			<CQHStateMachineEvent version="1.0" name="Plane_Destroyed_Update_Event" x="0" y="0" guard=""  numActions="1" numTransitions="0">
+				<CQHStateMachineActionHandler version="1.0" name="Plane_Destroyed_Update_ActionHandler" actionName="Plane_Destroyed_Update" >
+				</CQHStateMachineActionHandler>
+			</CQHStateMachineEvent>
+			<CQHStateMachineEvent version="1.0" name="Plane_UnderAttack_Event" x="0" y="0" guard="" numActions="0" numTransitions="0">
+			</CQHStateMachineEvent>
+		</CQHState>		
+	</CQHState>	
+	<CQHState version="1.0" name="Plane_End_State" x="0" y="0" width="0" height="0" numSubStates="0" numEvents="1" entryEvent="Plane_End_ENTRY_SIG_Event" updateEvent="" exitEvent="">		
+		<CQHStateMachineEvent version="1.0" name="Plane_End_ENTRY_SIG_Event" x="0" y="0" guard="" numParam="0" numActions="0" numTransitions="0">
+			<CQHStateMachineActionHandler version="1.0" name="Plane_End_ENTRY_SIG_ActionHandler" actionName="Plane_DeInit" >
+			</CQHStateMachineActionHandler>
+		</CQHStateMachineEvent>
+	</CQHState>	
+</CQHStateMachine>

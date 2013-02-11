@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<CSpawner Name="World" vers="3.0">
+	<CQHStateObject Name="%FileName%" FileName="%Path%" StateMachine="%FileName%" StartState="" UpdatePriority="1000">
+	</CQHStateObject>		
+</CSpawner>

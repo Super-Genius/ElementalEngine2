@@ -1,0 +1,215 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\DatabaseEditor.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "Comments", "Author: Kenneth Hurley"
+            VALUE "CompanyName", "Signature Devices, Inc."
+            VALUE "FileDescription", "DatabaseEditor DLL"
+            VALUE "FileVersion", "1, 0, 0, 1"
+            VALUE "InternalName", "DatabaseEditor"
+            VALUE "LegalCopyright", "Copyright (C) Signature Devices, Inc 2005"
+            VALUE "OriginalFilename", "DatabaseEditor.DLL"
+            VALUE "ProductName", "DatabaseEditor Dynamic Link Library"
+            VALUE "ProductVersion", "1, 0, 0, 1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_DATABASETYPE        ICON                    "res\\database.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_DATABASETYPE MENU 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&Save\tCtrl+S",               ID_FILE_SAVE
+        MENUITEM "Save &As...\tCtrl+A",         ID_FILE_SAVE_AS
+        MENUITEM "&Close",                      ID_FILE_CLOSE
+    END
+    POPUP "&Database"
+    BEGIN
+        MENUITEM "&Add Row",                    ID_DATABASE_ADDROW
+        MENUITEM "&Remove Row",                 ID_DATABASE_REMOVEROW
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_DATABASE_TOOLBAR DIALOGEX 0, 0, 64, 31
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    PUSHBUTTON      "",ID_DATABASE_ADDROW,5,3,24,24,BS_BITMAP | NOT 
+                    WS_TABSTOP
+    PUSHBUTTON      "",ID_DATABASE_REMOVEROW,33,3,24,24,BS_BITMAP | NOT 
+                    WS_TABSTOP
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDR_DATABASETYPE TOOLBAR  16, 16
+BEGIN
+    BUTTON      ID_DATABASE_ADDROW
+    BUTTON      ID_DATABASE_REMOVEROW
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDR_DATABASETYPE        BITMAP                  "res\\toolbar1.bmp"
+IDB_DATABASE_LINEADD_DOWN BITMAP                  "res\\database_line_new_down.bmp"
+IDB_DATABASE_LINEDEL_DOWN BITMAP                  "res\\database_line_delete_down.bmp"
+IDB_DATABASE_LINEDEL_UP BITMAP                  "res\\database_line_delete_up.bmp"
+IDB_DATABASE_LINEDEL_DISABLED BITMAP                  "res\\database_line_delete_disable.bmp"
+IDB_DATABASE_LINEADD_UP BITMAP                  "res\\database_line_new_up.bmp"
+IDB_DATABASE_LINEADD_DISABLED BITMAP                  "res\\database_line_new_disabled.bmp"
+IDB_DATABASE_LINEDEL_SEL BITMAP                  "res\\database_line_delete_sel.bmp"
+IDB_DATABASE_LINEADD_SEL BITMAP                  "res\\database_line_new_sel.bmp"
+IDB_TOOLBAR             BITMAP                  "res\\databasetoolbar.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDR_DATABASETYPE        "\nDatabase\nDatabase\n\n\nDatabase.Document\nDatabase Document"
+    IDS_RESOURCE_NAME       "Databases"
+    IDS_ERR_CANT_FIND_DB    "Unable to locate database '%s' in manager"
+    IDS_ERR_UNKNOWN_SCHEMA  "Database schema '%s' is unknown"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif //_WIN32
+#include "res\DatabaseEditor.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

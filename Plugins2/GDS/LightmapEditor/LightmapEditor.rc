@@ -1,0 +1,203 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#include ""res\\LightmapEditor.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""     // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904e4"
+        BEGIN
+            VALUE "CompanyName", "TODO: <Company name>"
+            VALUE "FileDescription", "TODO: <File description>"
+            VALUE "FileVersion", "1.0.0.1"
+            VALUE "InternalName", "LightmapEditor.dll"
+            VALUE "LegalCopyright", "TODO: (c) <Company name>.  All rights reserved."
+            VALUE "OriginalFilename", "LightmapEditor.dll"
+            VALUE "ProductName", "TODO: <Product name>"
+            VALUE "ProductVersion", "1.0.0.1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1252
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_LIGHTMAPEDITORDIALOG DIALOGEX 0, 0, 355, 278
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | DS_CENTER | WS_POPUP | 
+    WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_STATICEDGE
+CAPTION "Lightmap Generator"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    LTEXT           "Number of Photons:\n\nMax Bounce Test:\n\nNum Photon Samples:\n\nPhoton Sample Range:\n\nShadow Epsilon:\n\nEnergy Cutoff:\n\nWorld Units Per Texel:\n\nMin Texture Size:\n\nMax Texture Size:\n\nFix Sparse Data Range:\n\nBlur Range Direct:\n\nBlur Range Indirect:\n\n",
+                    IDC_STATIC,14,11,86,192
+    EDITTEXT        IDC_NUMPHOTONS,107,7,89,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_BOUNCETEST,107,23,89,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_PHOTONSAMPLES,107,39,89,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_PHOTONSAMPLERANGE,107,55,89,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_SHADOWEPSILON,107,71,89,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_ENERGYCUTOFF,107,87,89,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_WORLDUNITSPERTEXEL,107,103,89,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_MINTEXTURESIZE,107,119,89,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_MAXTEXTURESIZE,107,135,89,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_NORMALIZERANGE,107,151,89,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_BLURDIRECTRANGE,107,167,89,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_BLURINDIRECTRANGE,107,183,89,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Generate",IDC_BUTTONGENERATE,240,234,91,18
+    CONTROL         "",IDC_PROGRESSLIGHTMAP,"msctls_progress32",WS_BORDER,16,
+                    258,317,13
+    CONTROL         "Direct Light Only",IDC_USEINDIRECT,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,212,8,72,8
+    EDITTEXT        IDC_OUTPUTDIRECTORY,107,202,195,15,ES_AUTOHSCROLL
+    LTEXT           "Output Directory:",IDC_STATIC,17,205,74,11
+    PUSHBUTTON      "...",IDC_BROWSEDIRECTORY,305,201,24,12
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_LIGHTMAPEDITORDIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 348
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 271
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDR_RENDERLIGHTMAPVIEWER "Enable or disable the lightmap generation menu"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#include "res\LightmapEditor.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"     // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

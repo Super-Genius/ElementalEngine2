@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<CShaderPath Version="1" API="DX9" ShaderVersion="3.0" numeffects="1" effectname1="shaders/oldparticle.efx" numentries="2" >
+	<ShaderEntry type="vertexshader" numflags="0" shaderfile="Shaders/oldparticle.vsh" ShaderDefineFile="" ></ShaderEntry>
+	<ShaderEntry type="pixelshader" numflags="0" shaderfile="Shaders/oldparticle.psh" ShaderDefineFile="" ></ShaderEntry>
+</CShaderPath>

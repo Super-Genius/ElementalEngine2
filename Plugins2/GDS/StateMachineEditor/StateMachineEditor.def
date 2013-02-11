@@ -1,0 +1,6 @@
+; StateMachineEditor.def : Declares the module parameters for the DLL.
+
+LIBRARY      "StateMachineEditor"
+
+EXPORTS
+    ; Explicit exports can go here

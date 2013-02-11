@@ -1,0 +1,60 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=windows-1251">
+<META NAME="Generator" CONTENT="Microsoft Word 97">
+<TITLE>SML Overview</TITLE>
+<META NAME="Template" CONTENT="D:\Program Files\Microsoft Office\Office\html.dot">
+<LINK href="styles.css" rel="STYLESHEET" type="text/css"></HEAD>
+<BODY LINK="#0000ff" VLINK="#800080">
+
+<H1><A NAME="top"></A>Overview</H1>
+<P>Library SML includes classes, which represent matrix objects and geometrical objects allowing various operations with them.</P>
+<P>Library SML includes the following base classes/functions groups:</P>
+
+<UL TYPE="CIRCLE">
+<H2><LI>Basic geometrical objects</LI></H2></UL>
+<DIR>
+<DIR>
+
+<P><A HREF="SMLMatrix3f.htm"><B>SMLMatrix3f</B></A> class defines 3x3 matrixes.</P>
+<P><A HREF="SMLMatrix4f.htm"><B>SMLMatrix4f</B></A> class defines 4x4 matrixes.</P>
+<P><A HREF="SMLVec2f.htm"><B>SMLVec2f</B></A> class represents 2x1 vector.</P>
+<P><A HREF="SMLVec3f.htm"><B>SMLVec3f</B></A> class represents 3x1 vector.</P>
+<P><A HREF="SMLVec4f.htm"><B>SMLVec4f</B></A> class represents 4x1 vector.</P>
+<P><A HREF="SMLLine.htm"><B>SMLLine</B></A> class represents a line in 3D space.</P>
+<P><A HREF="SMLRay.htm"><B>SMLRay</B></A> creates object with properties of ray.</P>
+<P><A HREF="SMLPlane.htm"><B>SMLPlane</B></A> class represents plane.</P>
+<P><A HREF="SMLBound.htm"><B>SMLBound</B></A> class is an abstract class providing basic interface for bounding objects</P>
+<P><A HREF="SMLBoxBound.htm"><B>SMLBoxBound</B></A> class defines parallelepiped by coordinates of its center and corners.</P>
+<P><A HREF="SMLSphereBound.htm"><B>SMLSphereBound</B></A> class determines spheres with radius and coordinates of the center.</P></DIR>
+</DIR>
+
+
+<UL TYPE="CIRCLE">
+<H2><LI>Enchanced matrices support</LI></H2></UL>
+<DIR>
+<DIR>
+
+<P><A HREF="SMLXMatrix.htm"><B>SMLXMatrix</B></A> class is a base class for all resizable matrix objects.</P>
+<P><A HREF="SMLXSpatialVector.htm"><B>SMLXSpatialVector</B></A> class represents spatial vector objects.</P>
+<P><A HREF="SMLXTmpMatrix.htm"><B>SMLXTmpMatrix</B></A> class represents temporary matrix objects.</P>
+<P><A HREF="SMLXTransposedMatrix.htm"><B>SMLXTransposedMatrix</B></A> class represents transposed matrices.</P></DIR>
+</DIR>
+
+<P>Basic geometrical objects are implemented to achieve maximum performance, while <A HREF="SMLXMatrix.htm"><B>SMLXMatrix</B></A> and <A HREF="SMLXSpatialVector.htm"><B>SMLXSpatialVector</B></A> classes are designed to provide convenient interface with overloaded mathematical operations and hidden memory management.</P>
+<P><HR></P>
+<H1>Platforms Supported</H1>
+<P>The SM Library runs on Intel&reg; Architecture-based personal computers. This manual presents "collection of the classes" which provides a C++ - language interface to the library.</P>
+<H2>Software Requirements</H2>
+
+<UL TYPE="SQUARE">
+<LI>Microsoft* Windows NT or Windows 95/98</LI>
+<LI>Microsoft Visual C++ 5.x or later</LI>
+<LI>Intel&reg; C/C++ Compiler version 4.0 or later (to build Pentium&reg; III version of the library)</LI></UL>
+
+<H2>Installation Procedure</H2>
+<P>In order to build Pentium&reg; III version of the library, _PIII<I>_</I>CODE_ preprocessing definition should be defined. Otherwise, library will be optimized for Pentium&reg; II processor. Source code and a binary library are included in the ..\samples subdirectory.</P>
+<I><P>Note: </P>
+</I><P>For some versions of Microsoft Visual C++ 5.X, compilation of <B>smlxmatrix.cpp</B> file may led to "internal compiler error". In this case you will need Intel&reg; C/C++ Compiler to build the library for Pentium&reg; II processor as well as for Pentium&reg; III processor.</P>
+<P>[<A HREF="#top">top</A>]</P></BODY>
+</HTML>

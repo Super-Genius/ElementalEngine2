@@ -1,0 +1,1046 @@
+<html>
+<head>
+<title>
+Documentation for class CBaseObject
+
+</title>
+<link rel="stylesheet" type="text/css" href="doc.css">
+</head>
+<body>
+<table border="0" width="100%">
+	<tr>
+		<td align="right">
+			<h4>Auto Generated Class Documentation by ClassBuilder</h4>
+		<td>
+	</tr>
+</table>
+<hr>
+<center><a href="main_index.html">Main</a>
+<a href="namespace.html">Namespace List</a>
+<a href="class_hiearchy.html">Class Hierarchy</a>
+<a href="compound_members.html">Compound Members</a>
+<a href="compound_list.html">Compound List</a>
+<a href="diagram_list.html">Diagram List</a>
+</center><hr><h1>CBaseObject Reference</h1>
+<p></p><p><pre>#include 
+</pre></p><p>Inheritance diagram for CBaseObject
+</p><table border="0"><tr>
+<td colspan="2"><h2>Public Methods</h2></td>
+</tr>
+<tr>
+<td align="right"><a name="#_methodCBaseObject_summary"></a>__inline </td><td align="left"><a href="#_methodCBaseObject_details">CBaseObject</a>( const GUID*  type, LPCSTR  name, BOOL  dirty )</td></tr>
+<tr>
+<td align="right"><a name="#_method~CBaseObject_summary"></a>__inline virtual </td><td align="left"><a href="#_method~CBaseObject_details">~CBaseObject</a>(  )</td></tr>
+<tr>
+<td align="right"><a name="#_methodInitialize_summary"></a>__inline </td><td align="left"><a href="#_methodInitialize_details">Initialize</a>( CBaseObject*  parent, VECHO::iterator  siblingIterator )</td></tr>
+<tr>
+<td align="right"><a name="#_methodGetType_summary"></a>__inline  GUID* </td><td align="left"><a href="#_methodGetType_details">GetType</a>(  ) const</td></tr>
+<tr>
+<td align="right"><a name="#_methodSetType_summary"></a>__inline void </td><td align="left"><a href="#_methodSetType_details">SetType</a>( const GUID*  type )</td></tr>
+<tr>
+<td align="right"><a name="#_methodGetName_summary"></a>__inline LPCSTR </td><td align="left"><a href="#_methodGetName_details">GetName</a>(  )</td></tr>
+<tr>
+<td align="right"><a name="#_methodSetName_summary"></a>__inline void </td><td align="left"><a href="#_methodSetName_details">SetName</a>( LPCSTR  name )</td></tr>
+<tr>
+<td align="right"><a name="#_methodSetDirty_summary"></a>__inline void </td><td align="left"><a href="#_methodSetDirty_details">SetDirty</a>(  )</td></tr>
+<tr>
+<td align="right"><a name="#_methodClearDirty_summary"></a>__inline void </td><td align="left"><a href="#_methodClearDirty_details">ClearDirty</a>(  )</td></tr>
+<tr>
+<td align="right"><a name="#_methodVECHO::GetChildren_summary"></a>__inline VECHO::iterator </td><td align="left"><a href="#_methodVECHO::GetChildren_details">VECHO::GetChildren</a>(  )</td></tr>
+<tr>
+<td align="right"><a name="#_methodGetParent_summary"></a>__inline CBaseObject* </td><td align="left"><a href="#_methodGetParent_details">GetParent</a>(  )</td></tr>
+<tr>
+<td align="right"><a name="#_methodVECHO::GetSiblingIterator_summary"></a>__inline VECHO::iterator </td><td align="left"><a href="#_methodVECHO::GetSiblingIterator_details">VECHO::GetSiblingIterator</a>(  )</td></tr>
+<tr>
+<td align="right"><a name="#_methodVECHO::GetNext_summary"></a>__inline VECHO::iterator </td><td align="left"><a href="#_methodVECHO::GetNext_details">VECHO::GetNext</a>(  )</td></tr>
+<tr>
+<td align="right"><a name="#_methodVECHO::GetPrevious_summary"></a>__inline VECHO::iterator </td><td align="left"><a href="#_methodVECHO::GetPrevious_details">VECHO::GetPrevious</a>(  )</td></tr>
+<tr>
+<td align="right"><a name="#_methodGetProperties_summary"></a>__inline CConfig& </td><td align="left"><a href="#_methodGetProperties_details">GetProperties</a>(  )</td></tr>
+<tr>
+<td align="right"><a name="#_methodAddChild_summary"></a>__inline BOOL </td><td align="left"><a href="#_methodAddChild_details">AddChild</a>( CBaseObject*  child, DWORD  before )</td></tr>
+<tr>
+<td align="right"><a name="#_methodDeleteSiblingIterator_summary"></a>__inline void </td><td align="left"><a href="#_methodDeleteSiblingIterator_details">DeleteSiblingIterator</a>(  )</td></tr>
+<tr>
+<td align="right"><a name="#_methodRemoveChild_summary"></a>__inline void </td><td align="left"><a href="#_methodRemoveChild_details">RemoveChild</a>( CBaseObject*  child )</td></tr>
+<tr>
+<td align="right"><a name="#_methodRemoveAllChildren_summary"></a>__inline void </td><td align="left"><a href="#_methodRemoveAllChildren_details">RemoveAllChildren</a>(  )</td></tr>
+<tr>
+<td align="right"><a name="#_methodOnUpdate_summary"></a>void </td><td align="left"><a href="#_methodOnUpdate_details">OnUpdate</a>(  )</td></tr>
+<tr>
+<td align="right"><a name="#_methodOnDisplay_summary"></a>void </td><td align="left"><a href="#_methodOnDisplay_details">OnDisplay</a>(  )</td></tr>
+<tr>
+<td align="right">virtual <a name="#_method~CBaseObject_summary"></a></td><td align="left"><a href="#_method~CBaseObject_details">~CBaseObject</a>(  )</td></tr>
+<tr>
+<td>&nbsp;</td>
+<td>
+<font size=-1><em>Destructor method.</em><a href="#_method~CBaseObject_details">More...</a>
+</font></td></tr>
+<tr>
+<td colspan="2"><h2>Public Members</h2></td>
+</tr>
+<tr>
+<td colspan="2"><h2>Protected Methods</h2></td>
+</tr>
+<tr>
+<td colspan="2"><h2>Protected Members</h2></td>
+</tr>
+</table>
+<hr>
+<h2><a name="_details"></a>Detailed Description</h2>
+<p>
+</p>
+<hr>
+<h2>Constructor and Destructor Documentation</h2>
+<a name="#_method~CBaseObject_details"></a><table border="0">
+<tr>
+<td>
+<table border="0">
+<tr>
+<td align="right"><a href="#_method~CBaseObject_summary">top</a>
+CBaseObject::~CBaseObject</td>
+<td >
+(</td>
+<td >
+)</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<hr>
+<p>
+<h2>Member Function Documentation</h2>
+</p>
+<a name="#_methodCBaseObject_details"></a><table border="0">
+<tr>
+<td>
+<table border="0">
+<tr>
+<td ><a href="#_methodCBaseObject_summary">top</a>
+__inline CBaseObject::CBaseObject</td>
+<td >
+(</td>
+<td >
+const GUID* </td>
+<td ><i>
+type</i></td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td >
+LPCSTR </td>
+<td ><i>
+name</i></td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td >
+BOOL </td>
+<td ><i>
+dirty</i></td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>)</td>
+<td colspan="2">&nbsp;<code> [public]</code></td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table border="0"><tr>
+<td>&nbsp;</td>
+<td>
+<p>
+
+</p>
+<p>
+<b>Parameters:</b>
+</p>
+<table border="0">
+<tr>
+<td>
+<em><i>const GUID* </i></em>
+</td>
+<td>
+&nbsp;</td>
+</tr>
+<tr>
+<td>
+<em><i>LPCSTR </i></em>
+</td>
+<td>
+&nbsp;</td>
+</tr>
+<tr>
+<td>
+<em><i>BOOL </i></em>
+</td>
+<td>
+&nbsp;</td>
+</tr>
+</table>
+<p>
+<b>Returns:</b>
+</p>
+<p><em><i>__inline  : </i></em></p>
+</td>
+</tr>
+</table></td>
+</tr>
+</table><a name="#_method~CBaseObject_details"></a><table border="0">
+<tr>
+<td>
+<table border="0">
+<tr>
+<td ><a href="#_method~CBaseObject_summary">top</a>
+__inline virtual CBaseObject::~CBaseObject</td>
+<td >
+(</td>
+<td >
+)</td>
+<td >
+<code> [public]</code></td >
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table border="0"><tr>
+<td>&nbsp;</td>
+<td>
+<p>
+
+</p>
+<p>
+<b>Parameters:</b>
+</p>
+<table border="0">
+</table>
+<p>
+<b>Returns:</b>
+</p>
+<p><em><i>__inline virtual  : </i></em></p>
+</td>
+</tr>
+</table></td>
+</tr>
+</table><a name="#_methodInitialize_details"></a><table border="0">
+<tr>
+<td>
+<table border="0">
+<tr>
+<td ><a href="#_methodInitialize_summary">top</a>
+__inline CBaseObject::Initialize</td>
+<td >
+(</td>
+<td >
+CBaseObject* </td>
+<td ><i>
+parent</i></td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td >
+VECHO::iterator </td>
+<td ><i>
+siblingIterator</i></td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>)</td>
+<td colspan="2">&nbsp;<code> [public]</code></td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table border="0"><tr>
+<td>&nbsp;</td>
+<td>
+<p>
+
+</p>
+<p>
+<b>Parameters:</b>
+</p>
+<table border="0">
+<tr>
+<td>
+<em><i>CBaseObject* </i></em>
+</td>
+<td>
+&nbsp;</td>
+</tr>
+<tr>
+<td>
+<em><i>VECHO::iterator </i></em>
+</td>
+<td>
+&nbsp;</td>
+</tr>
+</table>
+<p>
+<b>Returns:</b>
+</p>
+<p><em><i>__inline  : </i></em></p>
+</td>
+</tr>
+</table></td>
+</tr>
+</table><a name="#_methodGetType_details"></a><table border="0">
+<tr>
+<td>
+<table border="0">
+<tr>
+<td ><a href="#_methodGetType_summary">top</a>
+__inline  GUID* CBaseObject::GetType</td>
+<td >
+(</td>
+<td >
+)</td>
+<td >
+<code> [const]</code><code> [public]</code></td >
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table border="0"><tr>
+<td>&nbsp;</td>
+<td>
+<p>
+
+</p>
+<p>
+<b>Parameters:</b>
+</p>
+<table border="0">
+</table>
+<p>
+<b>Returns:</b>
+</p>
+<p><em><i>__inline  GUID*  : </i></em></p>
+</td>
+</tr>
+</table></td>
+</tr>
+</table><a name="#_methodSetType_details"></a><table border="0">
+<tr>
+<td>
+<table border="0">
+<tr>
+<td ><a href="#_methodSetType_summary">top</a>
+__inline void CBaseObject::SetType</td>
+<td >
+(</td>
+<td >
+const GUID* </td>
+<td ><i>
+type</i></td>
+<td >
+)</td>
+<td >
+<code> [public]</code></td >
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table border="0"><tr>
+<td>&nbsp;</td>
+<td>
+<p>
+
+</p>
+<p>
+<b>Parameters:</b>
+</p>
+<table border="0">
+<tr>
+<td>
+<em><i>const GUID* </i></em>
+</td>
+<td>
+&nbsp;</td>
+</tr>
+</table>
+<p>
+<b>Returns:</b>
+</p>
+<p><em><i>__inline void  : </i></em></p>
+</td>
+</tr>
+</table></td>
+</tr>
+</table><a name="#_methodGetName_details"></a><table border="0">
+<tr>
+<td>
+<table border="0">
+<tr>
+<td ><a href="#_methodGetName_summary">top</a>
+__inline LPCSTR CBaseObject::GetName</td>
+<td >
+(</td>
+<td >
+)</td>
+<td >
+<code> [public]</code></td >
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table border="0"><tr>
+<td>&nbsp;</td>
+<td>
+<p>
+
+</p>
+<p>
+<b>Parameters:</b>
+</p>
+<table border="0">
+</table>
+<p>
+<b>Returns:</b>
+</p>
+<p><em><i>__inline LPCSTR  : </i></em></p>
+</td>
+</tr>
+</table></td>
+</tr>
+</table><a name="#_methodSetName_details"></a><table border="0">
+<tr>
+<td>
+<table border="0">
+<tr>
+<td ><a href="#_methodSetName_summary">top</a>
+__inline void CBaseObject::SetName</td>
+<td >
+(</td>
+<td >
+LPCSTR </td>
+<td ><i>
+name</i></td>
+<td >
+)</td>
+<td >
+<code> [public]</code></td >
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table border="0"><tr>
+<td>&nbsp;</td>
+<td>
+<p>
+
+</p>
+<p>
+<b>Parameters:</b>
+</p>
+<table border="0">
+<tr>
+<td>
+<em><i>LPCSTR </i></em>
+</td>
+<td>
+&nbsp;</td>
+</tr>
+</table>
+<p>
+<b>Returns:</b>
+</p>
+<p><em><i>__inline void  : </i></em></p>
+</td>
+</tr>
+</table></td>
+</tr>
+</table><a name="#_methodSetDirty_details"></a><table border="0">
+<tr>
+<td>
+<table border="0">
+<tr>
+<td ><a href="#_methodSetDirty_summary">top</a>
+__inline void CBaseObject::SetDirty</td>
+<td >
+(</td>
+<td >
+)</td>
+<td >
+<code> [public]</code></td >
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table border="0"><tr>
+<td>&nbsp;</td>
+<td>
+<p>
+
+</p>
+<p>
+<b>Parameters:</b>
+</p>
+<table border="0">
+</table>
+<p>
+<b>Returns:</b>
+</p>
+<p><em><i>__inline void  : </i></em></p>
+</td>
+</tr>
+</table></td>
+</tr>
+</table><a name="#_methodClearDirty_details"></a><table border="0">
+<tr>
+<td>
+<table border="0">
+<tr>
+<td ><a href="#_methodClearDirty_summary">top</a>
+__inline void CBaseObject::ClearDirty</td>
+<td >
+(</td>
+<td >
+)</td>
+<td >
+<code> [public]</code></td >
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table border="0"><tr>
+<td>&nbsp;</td>
+<td>
+<p>
+
+</p>
+<p>
+<b>Parameters:</b>
+</p>
+<table border="0">
+</table>
+<p>
+<b>Returns:</b>
+</p>
+<p><em><i>__inline void  : </i></em></p>
+</td>
+</tr>
+</table></td>
+</tr>
+</table><a name="#_methodVECHO::GetChildren_details"></a><table border="0">
+<tr>
+<td>
+<table border="0">
+<tr>
+<td ><a href="#_methodVECHO::GetChildren_summary">top</a>
+__inline VECHO::iterator CBaseObject::VECHO::GetChildren</td>
+<td >
+(</td>
+<td >
+)</td>
+<td >
+<code> [public]</code></td >
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table border="0"><tr>
+<td>&nbsp;</td>
+<td>
+<p>
+
+</p>
+<p>
+<b>Parameters:</b>
+</p>
+<table border="0">
+</table>
+<p>
+<b>Returns:</b>
+</p>
+<p><em><i>__inline VECHO::iterator  : </i></em></p>
+</td>
+</tr>
+</table></td>
+</tr>
+</table><a name="#_methodGetParent_details"></a><table border="0">
+<tr>
+<td>
+<table border="0">
+<tr>
+<td ><a href="#_methodGetParent_summary">top</a>
+__inline CBaseObject* CBaseObject::GetParent</td>
+<td >
+(</td>
+<td >
+)</td>
+<td >
+<code> [public]</code></td >
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table border="0"><tr>
+<td>&nbsp;</td>
+<td>
+<p>
+
+</p>
+<p>
+<b>Parameters:</b>
+</p>
+<table border="0">
+</table>
+<p>
+<b>Returns:</b>
+</p>
+<p><em><i>__inline CBaseObject*  : </i></em></p>
+</td>
+</tr>
+</table></td>
+</tr>
+</table><a name="#_methodVECHO::GetSiblingIterator_details"></a><table border="0">
+<tr>
+<td>
+<table border="0">
+<tr>
+<td ><a href="#_methodVECHO::GetSiblingIterator_summary">top</a>
+__inline VECHO::iterator CBaseObject::VECHO::GetSiblingIterator</td>
+<td >
+(</td>
+<td >
+)</td>
+<td >
+<code> [public]</code></td >
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table border="0"><tr>
+<td>&nbsp;</td>
+<td>
+<p>
+
+</p>
+<p>
+<b>Parameters:</b>
+</p>
+<table border="0">
+</table>
+<p>
+<b>Returns:</b>
+</p>
+<p><em><i>__inline VECHO::iterator  : </i></em></p>
+</td>
+</tr>
+</table></td>
+</tr>
+</table><a name="#_methodVECHO::GetNext_details"></a><table border="0">
+<tr>
+<td>
+<table border="0">
+<tr>
+<td ><a href="#_methodVECHO::GetNext_summary">top</a>
+__inline VECHO::iterator CBaseObject::VECHO::GetNext</td>
+<td >
+(</td>
+<td >
+)</td>
+<td >
+<code> [public]</code></td >
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table border="0"><tr>
+<td>&nbsp;</td>
+<td>
+<p>
+
+</p>
+<p>
+<b>Parameters:</b>
+</p>
+<table border="0">
+</table>
+<p>
+<b>Returns:</b>
+</p>
+<p><em><i>__inline VECHO::iterator  : </i></em></p>
+</td>
+</tr>
+</table></td>
+</tr>
+</table><a name="#_methodVECHO::GetPrevious_details"></a><table border="0">
+<tr>
+<td>
+<table border="0">
+<tr>
+<td ><a href="#_methodVECHO::GetPrevious_summary">top</a>
+__inline VECHO::iterator CBaseObject::VECHO::GetPrevious</td>
+<td >
+(</td>
+<td >
+)</td>
+<td >
+<code> [public]</code></td >
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table border="0"><tr>
+<td>&nbsp;</td>
+<td>
+<p>
+
+</p>
+<p>
+<b>Parameters:</b>
+</p>
+<table border="0">
+</table>
+<p>
+<b>Returns:</b>
+</p>
+<p><em><i>__inline VECHO::iterator  : </i></em></p>
+</td>
+</tr>
+</table></td>
+</tr>
+</table><a name="#_methodGetProperties_details"></a><table border="0">
+<tr>
+<td>
+<table border="0">
+<tr>
+<td ><a href="#_methodGetProperties_summary">top</a>
+__inline CConfig& CBaseObject::GetProperties</td>
+<td >
+(</td>
+<td >
+)</td>
+<td >
+<code> [public]</code></td >
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table border="0"><tr>
+<td>&nbsp;</td>
+<td>
+<p>
+
+</p>
+<p>
+<b>Parameters:</b>
+</p>
+<table border="0">
+</table>
+<p>
+<b>Returns:</b>
+</p>
+<p><em><i>__inline CConfig&  : </i></em></p>
+</td>
+</tr>
+</table></td>
+</tr>
+</table><a name="#_methodAddChild_details"></a><table border="0">
+<tr>
+<td>
+<table border="0">
+<tr>
+<td ><a href="#_methodAddChild_summary">top</a>
+__inline BOOL CBaseObject::AddChild</td>
+<td >
+(</td>
+<td >
+CBaseObject* </td>
+<td ><i>
+child</i></td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td >
+DWORD </td>
+<td ><i>
+before</i></td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>)</td>
+<td colspan="2">&nbsp;<code> [public]</code></td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table border="0"><tr>
+<td>&nbsp;</td>
+<td>
+<p>
+
+</p>
+<p>
+<b>Parameters:</b>
+</p>
+<table border="0">
+<tr>
+<td>
+<em><i>CBaseObject* </i></em>
+</td>
+<td>
+&nbsp;</td>
+</tr>
+<tr>
+<td>
+<em><i>DWORD </i></em>
+</td>
+<td>
+&nbsp;</td>
+</tr>
+</table>
+<p>
+<b>Returns:</b>
+</p>
+<p><em><i>__inline BOOL  : </i></em></p>
+</td>
+</tr>
+</table></td>
+</tr>
+</table><a name="#_methodDeleteSiblingIterator_details"></a><table border="0">
+<tr>
+<td>
+<table border="0">
+<tr>
+<td ><a href="#_methodDeleteSiblingIterator_summary">top</a>
+__inline void CBaseObject::DeleteSiblingIterator</td>
+<td >
+(</td>
+<td >
+)</td>
+<td >
+<code> [public]</code></td >
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table border="0"><tr>
+<td>&nbsp;</td>
+<td>
+<p>
+
+</p>
+<p>
+<b>Parameters:</b>
+</p>
+<table border="0">
+</table>
+<p>
+<b>Returns:</b>
+</p>
+<p><em><i>__inline void  : </i></em></p>
+</td>
+</tr>
+</table></td>
+</tr>
+</table><a name="#_methodRemoveChild_details"></a><table border="0">
+<tr>
+<td>
+<table border="0">
+<tr>
+<td ><a href="#_methodRemoveChild_summary">top</a>
+__inline void CBaseObject::RemoveChild</td>
+<td >
+(</td>
+<td >
+CBaseObject* </td>
+<td ><i>
+child</i></td>
+<td >
+)</td>
+<td >
+<code> [public]</code></td >
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table border="0"><tr>
+<td>&nbsp;</td>
+<td>
+<p>
+
+</p>
+<p>
+<b>Parameters:</b>
+</p>
+<table border="0">
+<tr>
+<td>
+<em><i>CBaseObject* </i></em>
+</td>
+<td>
+&nbsp;</td>
+</tr>
+</table>
+<p>
+<b>Returns:</b>
+</p>
+<p><em><i>__inline void  : </i></em></p>
+</td>
+</tr>
+</table></td>
+</tr>
+</table><a name="#_methodRemoveAllChildren_details"></a><table border="0">
+<tr>
+<td>
+<table border="0">
+<tr>
+<td ><a href="#_methodRemoveAllChildren_summary">top</a>
+__inline void CBaseObject::RemoveAllChildren</td>
+<td >
+(</td>
+<td >
+)</td>
+<td >
+<code> [public]</code></td >
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table border="0"><tr>
+<td>&nbsp;</td>
+<td>
+<p>
+
+</p>
+<p>
+<b>Parameters:</b>
+</p>
+<table border="0">
+</table>
+<p>
+<b>Returns:</b>
+</p>
+<p><em><i>__inline void  : </i></em></p>
+</td>
+</tr>
+</table></td>
+</tr>
+</table><a name="#_methodOnUpdate_details"></a><table border="0">
+<tr>
+<td>
+<table border="0">
+<tr>
+<td ><a href="#_methodOnUpdate_summary">top</a>
+void CBaseObject::OnUpdate</td>
+<td >
+(</td>
+<td >
+)</td>
+<td >
+<code> [public]</code></td >
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table border="0"><tr>
+<td>&nbsp;</td>
+<td>
+<p>
+
+</p>
+<p>
+<b>Parameters:</b>
+</p>
+<table border="0">
+</table>
+<p>
+<b>Returns:</b>
+</p>
+<p><em><i>void  : </i></em></p>
+</td>
+</tr>
+</table></td>
+</tr>
+</table><a name="#_methodOnDisplay_details"></a><table border="0">
+<tr>
+<td>
+<table border="0">
+<tr>
+<td ><a href="#_methodOnDisplay_summary">top</a>
+void CBaseObject::OnDisplay</td>
+<td >
+(</td>
+<td >
+)</td>
+<td >
+<code> [public]</code></td >
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table border="0"><tr>
+<td>&nbsp;</td>
+<td>
+<p>
+
+</p>
+<p>
+<b>Parameters:</b>
+</p>
+<table border="0">
+</table>
+<p>
+<b>Returns:</b>
+</p>
+<p><em><i>void  : </i></em></p>
+</td>
+</tr>
+</table></td>
+</tr>
+</table></body>
+</html>

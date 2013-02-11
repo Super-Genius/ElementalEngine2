@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<CEffect version="3000" 
+	numconstants="1"
+	numtextures="1"
+	numrenderstates="0"
+	numbones="0"
+	numflags="0"
+	numformats="0" >
+  <ShaderVariable shadertype="pixelshader" type="Constant" name="Glow" register="22" x="1.0" y="0.0" z="0.0" w="0.0" ></ShaderVariable>
+  <Texture tag="Diffuse" pass="0" stage="0" file="none" numtexturestates="5">
+		<TextureStageState mode="mipfilter" value="point" ></TextureStageState>
+		<TextureStageState mode="minfilter" value="bilinear" ></TextureStageState>
+		<TextureStageState mode="magfilter" value="bilinear" ></TextureStageState>
+		<TextureStageState mode="umode" value="wrap" ></TextureStageState>
+		<TextureStageState mode="vmode" value="clamp" ></TextureStageState>
+	</Texture>
+</CEffect>

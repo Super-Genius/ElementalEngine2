@@ -1,0 +1,8 @@
+<MATERIAL version="3000" effectname="ParticleRibbon.efx" numrenderstates="6">
+    <RenderState mode="depthtest" value="ztrue" />
+    <RenderState mode="depthwrite" value="false" />
+    <RenderState mode="alphatest" value="true" />
+    <RenderState mode="alphatestref" value="1" />
+    <RenderState mode="alphablend" value="true" />
+    <RenderState mode="cullmode" value="cullnone" />
+</MATERIAL>

@@ -1,0 +1,321 @@
+<HTML>
+<HEAD>
+<TITLE>class SMLMatrix4f</TITLE>
+<link href="styles.css" rel="STYLESHEET" type="text/css">
+</HEAD>
+<BODY LINK="#0000ff" VLINK="#800080">
+
+<P><A NAME="SMLMatrix4f"></A><a NAME="SMLMatrix4f"></a>[<A href="index.htm">SML Overview</A>]</P>
+
+<h1>class SMLMatrix4f</h1>
+<PRE>#include &quot;<A href="smlmath.h">smlmath.h</A>&quot;</PRE>
+
+<P><B>SMLMatrix4f</B> class defines 4x4 matrix of single precision floats. It includes data and methods which allow to form matrices, multiply two matrices, perform some other operations.</P>
+<hr>
+<h2>Public Interface</h2>
+<h2></h2>
+<h3>Constructors and Destructor</h3>
+
+<TABLE CELLSPACING=5 WIDTH=400>
+<TR>
+  <td><p><A href="SMLMatrix4f.htm#ctor">constructors</A></p></td>
+  <td><p><A href="SMLMatrix4f.htm#dtor">destructor</A></p></td>
+</TR>
+</TABLE>
+
+<h3>Access elements</h3>
+<h3></h3>
+  
+<TABLE CELLSPACING=5 WIDTH=600>
+<TR>
+  <TD><P><A href="SMLMatrix4f.htm#operator_assign">operator=</A></P></TD>
+  <TD><P><A href="SMLMatrix4f.htm#Set">Set</A></P></TD>
+  <TD><P><A href="SMLMatrix4f.htm#Get">Get</A></P></TD>
+</TR>
+<TR>  
+  <TD><P><A href="SMLMatrix4f.htm#Copy">Copy</A></P></TD>
+  <TD><P><A href="SMLMatrix4f.htm#Identity">Identity</A></P></TD>
+  <TD><P><A href="SMLMatrix4f.htm#Zero">Zero</A></P></TD>
+</TR>
+<TR>
+  <TD><P><A href="SMLMatrix4f.htm#Add">Add</A></P></TD>
+  <TD><P><A href="SMLMatrix4f.htm#Sub">Sub</A></P></TD>
+  <TD><P><A href="SMLMatrix4f.htm#Invert">Invert</A></P></TD>
+</TR>
+<TR>
+  <TD><P><A href="SMLMatrix4f.htm#Transpose">Transpose</A></P></TD>
+  <TD><P><A href="SMLMatrix4f.htm#ScaleMatrix">ScaleMatrix</A></P></TD>
+  <TD><P><A href="SMLMatrix4f.htm#TranslationMatrix">TranslationMatrix</A></P></TD>
+</TR>
+<TR>
+  <TD><P><A href="SMLMatrix4f.htm#RotationMatrix">RotationMatrix</A></P></TD>
+  <TD><P><A href="SMLMatrix4f.htm#IsIdentity">IsIdentity</A></P></TD>
+  <TD><P><A href="SMLMatrix4f.htm#Multiply">Multiply</A></P></TD>
+</TR>
+<TR>
+  <TD><P><A href="SMLMatrix4f.htm#Output">Output</A></P></TD>
+</TR>
+</TABLE>
+
+<h3>Transformations for points, vectors and spheres</h3>
+<P></P>
+  
+<TABLE CELLSPACING=5 WIDTH=600>
+<TR>
+  <TD><P><A href="SMLMatrix4f.htm#TransformPoint">TransformPoint</A></P></TD>
+  <TD><P><A href="SMLMatrix4f.htm#TransformVector">TransformVector</A></P></TD>
+  <TD><P><A href="SMLMatrix4f.htm#Transform">Transform</A></P></TD>
+</TR>
+<TR>
+  <TD><P><A href="SMLMatrix4f.htm#GetRotationVector">GetRotationVector</A></P></TD>
+</TR>
+</TABLE>
+
+<HR>
+
+<A NAME="constructor"></A>
+<P>SMLLIBENTRY <B>SMLMatrix4f</B>();</P>
+<h4>Discussion</h4>
+<P>Default SMLMatrix4f object constructor. This matrix is initialized as identity (1.0 on main diagonal, 0.0 for other elements).</P>
+<P><I>Example:</I></P>
+<PRE><A href="SMLMatrix4f.htm#SMLMatrix4f">SMLMatrix4f</A> A();</PRE>
+<h4>Parameters</h4>
+<P>No.</P>
+<P>[<A href="SMLMatrix4f.htm#SMLMatrix4f" >top</A>]</P>
+<HR>
+
+<P>SMLLIBENTRY <B>SMLMatrix4f</B>(float* <I><B>src</I></B>);</P>
+<h4>Discussion</h4>
+<P>SMLMatrix4f object constructor. Matrix data is initialized by float array <I><B>src</I></B> assuming row-wise 
+representation.</P>
+<P><I>Example:</I></P>
+<PRE>float src[16] = {1,2,3,4,5,6,7,8,9,-4,-3,-2,-1,0,1,2};<br><A href="SMLMatrix4f.htm#SMLMatrix4f">SMLMatrix4f</A> A(src);</PRE>
+<h4>Parameters</h4>
+<P><B><I>src</I></B> - pointer to a float-type object.</P>
+<P>[<A href="SMLMatrix4f.htm#SMLMatrix4f" >top</A>]</P><HR>
+
+<P>SMLLIBENTRY <B>SMLMatrix4f</B>(const <A href="SMLMatrix4f.htm#SMLMatrix4f">SMLMatrix4f</A>&amp; <I><B>src</I></B>);</P>
+<h4>Discussion</h4>
+<P>SMLMatrix4f object copy-constructor. This matrix is initialized by <I><B>src</I></B> 
+ data.</P>
+<P><I>Example:</I></P><PRE>float src[16] = {1,2,3,4,5,6,7,8,9,-4,-3,-2,-1,0,1,2};<br><A href="SMLMatrix4f.htm#SMLMatrix4f">SMLMatrix4f</A> A(src); <br><A href="SMLMatrix4f.htm#SMLMatrix4f">SMLMatrix4f</A> B(A);</PRE>
+<h4>Parameters</h4>
+<P><B><I>src</I></B> - reference to SMLMatrix4f-type object.</P>
+<P>[<A href="SMLMatrix4f.htm#SMLMatrix4f" >top</A>]</P><HR>
+
+<P><A NAME="dtor"></A>SKINLIBENTRY ~<B>SMLMatrix4f</B>();</P>
+<h4>Discussion</h4>
+<P>Destructor for SMLMatrix4f object (it is empty).</P>
+<h4>Parameters</h4>
+<P>No.</P>
+<P>[<A href="SMLMatrix4f.htm#SMLMatrix4f" >top</A>]</P><HR>
+
+<P>SMLLIBENTRY const <A href="SMLMatrix4f.htm#SMLMatrix4f">SMLMatrix4f</A>&amp; <A NAME="operator_assign"><B>operator=</B></A>(const <A href="SMLMatrix4f.htm#SMLMatrix4f">SMLMatrix4f</A>&amp; <I><B>src</I></B>);</P>
+<h4>Discussion</h4>
+<P>Method is an overloaded operator-function. It makes elements of matrix equal to those of matrix <B><I>src</I></B>.</P>
+<P><I>Example:</I></P><PRE>float src[16] = {1,2,3,4,5,6,7,8,9,-4,-3,-2,-1,0,1,2};<br><A href="SMLMatrix4f.htm#SMLMatrix4f">SMLMatrix4f</A> A(src); <br><A href="SMLMatrix4f.htm#SMLMatrix4f">SMLMatrix4f</A> B();<br>B = A;</PRE>
+<h4>Parameters</h4>
+<P><B><I>src</I></B> - object of SMLMatrix4f type.</P>
+<h4>Return Value</h4>
+<P>Returns reference to current object of SMLMatrix4f type.</P>
+<P>[<A href="SMLMatrix4f.htm#SMLMatrix4f" >top</A>]</P><HR>
+
+<P>SMLLIBENTRY void <A NAME="Set"><B>Set</B></A>(int <I><B>i1</I></B>, int <I><B>i2</I></B>, float <I><B>elem</I></B>);</P>
+<h4>Discussion</h4>
+<P>Method sets matrix element with index <I><B>i1, i2</I></B> equal to value of <I><B>elem</I></B>.</P>
+<P><I>Example:</I></P>
+<PRE><A href="SMLMatrix4f.htm#SMLMatrix4f">SMLMatrix4f</A> A();<br>A.Set(1, 2, 3.0f);</PRE>
+<h4>Parameters</h4>
+<P><B><I>i1, i2</I></B> - index of matrix element</P>
+<P><B><I>elem</I></B> - new value of matrix element.</P>
+<P>[<A href="SMLMatrix4f.htm#SMLMatrix4f" >top</A>]</P><HR>
+
+<P>SMLLIBENTRY float <A NAME="Get"><B>Get</B></A>(int <I><B>i1</I></B>, int <I><B>i2</I></B>) const;</P>
+<h4>Discussion</h4>
+<P>Method gets value of the matrix element with index <I><B>i1 </I></B>,<I><B> i2 </I></B>.</P>
+<P><I>Example:</I></P>
+<PRE>float src[16] = {1,2,3,4,5,6,7,8,9,-4,-3,-2,-1,0,1,2};<br>float fvalue;<br><A href="SMLMatrix4f.htm#SMLMatrix4f">SMLMatrix4f</A> A(src); <br>fvalue = A.Get(1, 1); // fvalue = 6</PRE>
+<h4>Parameters</h4>
+<P><B><I>i1, i2</I></B> - index of matrix element</P>
+<h4>Return Value</h4>
+<P>Returns the value of the matrix element with index <I><B>i1 </I></B>,<I><B> i2.</P></I></B>
+<P></P>
+<P>[<A href="SMLMatrix4f.htm#SMLMatrix4f" >top</A>]</P><HR>
+
+<P>SMLLIBENTRY void <A NAME="Copy"><B>Copy</B></A>(const <A href="SMLMatrix4f.htm#SMLMatrix4f">SMLMatrix4f</A>&amp; <I><B>src</I></B>);</P>
+<h4>Discussion</h4>
+<P>Method makes elements of this matrix <I><B>data</I></B> equal to those of matrix <I><B>data</I></B> of object <I><B>src</I></B>.</P>
+<P><I>Example:</I></P><PRE>float src[16] = {1,2,3,4,5,6,7,8,9,-4,-3,-2,-1,0,1,2};<br><A href="SMLMatrix4f.htm#SMLMatrix4f">SMLMatrix4f</A> A(src);<br><A href="SMLMatrix4f.htm#SMLMatrix4f">SMLMatrix4f</A> B();<br>B.Copy(A);</PRE>
+<h4>Parameters</h4>
+<P><B><I>src</I></B> - reference to SMLMatrix4f-type object whose matrix <I><B>data</I></B> is to be copied.</P>
+<P>[<A href="SMLMatrix4f.htm#SMLMatrix4f" >top</A>]</P><HR>
+
+<P>SMLLIBENTRY void <A NAME="Identity"><B>Identity</B></A>();</P>
+<h4>Discussion</h4>
+<P>Method overwrites this matrix <I><B>data</I></B> with unit diagonal matrix.</P>
+<P><I>Example:</I></P>
+<PRE><A href="SMLMatrix4f.htm#SMLMatrix4f">SMLMatrix4f</A> A();<br>A.Identity();</PRE>
+<h4>Parameters</h4>
+<P>No.</P>
+<P>[<A href="SMLMatrix4f.htm#SMLMatrix4f" >top</A>]</P><HR>
+
+<P>SMLLIBENTRY void <A NAME="Zero"><B>Zero</B></A>();</P>
+<h4>Discussion</h4>
+<P>Method initializes all matrix <I><B>data</I></B> with 0.</P>
+<P><I>Example:</I></P><PRE><A href="SMLMatrix4f.htm#SMLMatrix4f">SMLMatrix4f</A> A();<br>A.Zero();</PRE>
+<h4>Parameters</h4>
+<P>No.</P>
+<P>[<A href="SMLMatrix4f.htm#SMLMatrix4f" >top</A>]</P><HR>
+
+<P>SMLLIBENTRY void <A NAME="Add"><B>Add</B></A>(const <A href="SMLMatrix4f.htm#SMLMatrix4f">SMLMatrix4f</A>&amp; <I><B>m1</I></B>, const <A href="SMLMatrix4f.htm#SMLMatrix4f">SMLMatrix4f</A>&amp; <I><B>m2</I></B>);</P>
+<h4>Discussion</h4>
+<P>Method creates matrix which is equal to sum of corresponding matrices of objects <I><B>m1</I></B> and <I><B>m2</I></B>.</P>
+<P><I>Example:</I></P>
+<PRE>float src1[16] = {1,2,3,4,5,6,7,8,9,-4,-3,-2,-1,0,1,2};<BR>float src2[16] = {7,2,3,-3,5,-1,7,8,0,-4,3,-2,1,0,1,-5};<BR><A href="SMLMatrix4f.htm#SMLMatrix4f">SMLMatrix4f</A> A(src1), B(src2), C;<BR>C.Add(A, B); // C = A + B</PRE>
+<h4>Parameters</h4>
+<P><B><I>m1</I></B> - first operand.</P>
+<P><B><I>m2</I></B> - second operand.</P>
+<P>[<A href="SMLMatrix4f.htm#SMLMatrix4f" >top</A>]</P><HR>
+
+<P>SMLLIBENTRY void <A NAME="Sub"><B>Sub</B></A>(const <A href="SMLMatrix4f.htm#SMLMatrix4f">SMLMatrix4f</A>&amp; <I><B>m1</I></B>, const <A href="SMLMatrix4f.htm#SMLMatrix4f">SMLMatrix4f</A>&amp; <I><B>m2</I></B>);</P>
+<h4>Discussion</h4>
+<P>Method creates matrix which is equal to difference of matrix <I><B>m1</I></B> and matrix <I><B>m2</I></B>.</P>
+<P><I>Example:</I></P>
+<PRE>float src1[16] = {1,2,3,4,5,6,7,8,9,-4,-3,-2,-1,0,1,2};<BR>float src2[16] = {7,2,3,-3,5,-1,7,8,0,-4,3,-2,1,0,1,-5};<BR><A href="SMLMatrix4f.htm#SMLMatrix4f">SMLMatrix4f</A> A(src1), B(src2), C;<BR>C.Sub(A, B); // C = A - B</PRE>
+<h4>Parameters</h4>
+<P><B><I>m1</I></B> - first operand.</P>
+<P><B><I>m2</I></B> - second operand.</P>
+<P>[<A href="SMLMatrix4f.htm#SMLMatrix4f" >top</A>]</P><HR>
+
+<P>SMLLIBENTRY void<B> <A NAME="Invert"></A>Invert</B>(<A href="SMLMatrix4f.htm#SMLMatrix4f">SMLMatrix4f</A>&amp; <I><B>m</I></B>);</P>
+<h4>Discussion</h4>
+<P>Replace this matrix with inverse of <I><B>m</I></B>.</P>
+<P><I>Example:</I></P>
+<PRE>float src[16] = {1,0,3,1,1,2,1,0,2,0,1,0,1,0,2,1};<BR><A href="SMLMatrix4f.htm#SMLMatrix4f">SMLMatrix4f</A> A(src);<BR>A.Invert();</PRE>
+<h4>Parameters</h4>
+<P><B><I>m</I></B> - reference to matrix to be inverted.</P>
+<P>[<A href="SMLMatrix4f.htm#SMLMatrix4f" >top</A>]</P><HR>
+
+<P>SMLLIBENTRY void <A NAME="Transpose"><B>Transpose</B></A>();</P>
+<h4>Discussion</h4>
+<P>Method transposes this matrix <I><B>data</I></B>.</P>
+<P><I>Example:</I></P><PRE>float src[16] = {1,0,3,1,1,2,1,0,2,0,1,0,1,0,2,1};<br><A href="SMLMatrix4f.htm#SMLMatrix4f">SMLMatrix4f</A> A(src);<br>A.Transpose();</PRE>
+<h4>Parameters</h4>
+<P>No.</P>
+<P>[<A href="SMLMatrix4f.htm#SMLMatrix4f" >top</A>]</P><HR>
+
+<P>SMLLIBENTRY void <A NAME="ScaleMatrix"><B>ScaleMatrix</B></A>(const <A href="SMLVec3f.htm#SMLVec3f">SMLVec3f</A>&amp; <I><B>vect</I></B>);</P>
+<h4>Discussion</h4>
+<P>Method creates matrix representing scale trasformation. Its first three diagonal elements are the coordinates <I><B>x, y, z </I></B>of object <I><B>vect </I></B>and the last element is 1.0. Other elements of the matrix are set to zero.</P>
+<P><I>Example:</I></P><PRE><A href="SMLVec3f.htm#SMLVec3f">SMLVec3f</A> vec(2, 3, 1);<br><A href="SMLMatrix4f.htm#SMLMatrix4f">SMLMatrix4f</A> A();<br>A.ScaleMatrix(vec);</PRE>
+<table border="1" cellspacing="3" cellpadding="3"><TR><TD>2</td> <TD>0</TD><TD>0</TD><TD>0</TD></TR><TR><TD>0</TD><TD>3</TD><TD>0</TD><TD>0</TD></TR><TR><TD>0</TD><TD>0</TD><TD>1</TD><TD>0</TD></TR><TR><TD>0</TD><TD>0</TD><TD>0</TD><TD>1</TD></TR></TABLE>
+<h4>Parameters</h4>
+<P><B><I>vect</I></B> - reference to vector defining this matrix.</P>
+<P>[<A href="SMLMatrix4f.htm#SMLMatrix4f" >top</A>]</P><HR>
+
+<P>SMLLIBENTRY void <A NAME="TranslationMatrix"><B>TranslationMatrix</B></A>(const <A href="SMLVec3f.htm#SMLVec3f">SMLVec3f</A>&amp; <I><B>vect</I></B>);</P>
+<h4>Discussion</h4>
+<P>Method creates matrix <I><B>data</I></B> with units on the main diagonal and elements of the last column equal to coordinates <I><B>x, y, z</I></B> of the object <I><B>vect</I></B> correspondingly. Other elements of the matrix are set to zero.</P>
+<P><I>Example:</I></P><PRE><A href="SMLVec3f.htm#SMLVec3f">SMLVec3f</A> vec(2, 3, 1);<br><A href="SMLMatrix4f.htm#SMLMatrix4f">SMLMatrix4f</A> A();<br>A.TranslationMatrix(vec);</PRE>
+<table border="1" cellspacing="3" cellpadding="3"><TR><TD> 1</TD><TD>0</TD><TD>0</TD><TD>2</TD></TR><TR><TD>0</TD><TD>1</TD><TD>0</TD><TD>3</TD></TR><TR><TD>0</TD><TD>0</TD><TD>1</TD><TD>1</TD></TR><TR><TD>0</TD><TD>0</TD><TD>0</TD><TD>1</TD></TR></TABLE>
+<h4>Parameters</h4>
+<P><B><I>vect</I></B> - reference to vector defining this matrix.</P>
+<P>[<A href="SMLMatrix4f.htm#SMLMatrix4f" >top</A>]</P><HR>
+
+<P>SMLLIBENTRY void <A NAME="RotationMatrix"></A><B>RotationMatrix</B>(float <I><B>theta</I></B>, float <I><B>x</I></B>, float <I><B>y</I></B>, float <I><B>z</I></B>);</P>
+<h4>Discussion</h4>
+<P>Method creates transformation matrix <I><B>data</I></B> which describes the coordinate system rotation at angle <I><B>theta </I></B>radians around the axis defined by coordinates <I><B>x</I></B>, <I><B>y</I></B>, <I><B>z.</I></B> The right hand rule indicates the direction of positive <I><B>theta</I></B> rotations.</P>
+<P><I>Example:</I></P>
+<PRE><A href="SMLMatrix4f.htm#SMLMatrix4f">SMLMatrix4f</A> A();<br>A.RotationMatrix(0.34f, 2, 3, 1);</PRE>
+<h4>Parameters</h4>
+<P><B><I>theta</I></B> - angle of rotation.</P>
+<P><B><I>x, y, z</I></B> - coordinates of axis of rotation.</P>
+<P>[<A href="SMLMatrix4f.htm#SMLMatrix4f" >top</A>]</P><HR>
+
+<P>SMLLIBENTRY void <B>RotationMatrix</B>(const <A href="SMLVec4f.htm#SMLVec4f">SMLVec4f</A>&amp; <I><B>vect</I></B>);</P>
+<h4>Discussion</h4>
+<P>Method creates transformation matrix <I><B>data</I></B> which describes the coordinate system rotation at angle <I><B>vect.w </I></B>around the axis defined by coordinates <I><B>vect.x</I></B>, <I><B>vect.y</I></B>, <I><B>vect.z</I></B>.</P>
+<h4>Parameters</h4>
+<P><B><I>vect</I></B> - reference to object of SMLVec4f type.</P>
+<P>[<A href="SMLMatrix4f.htm#SMLMatrix4f" >top</A>]</P><HR>
+
+<P>SMLLIBENTRY void<B> <A NAME="Multiply"></A>Multiply</B>(const <A href="SMLMatrix4f.htm#SMLMatrix4f">SMLMatrix4f</A>&amp; <I><B>m1</I></B>, const <A href="SMLMatrix4f.htm#SMLMatrix4f">SMLMatrix4f</A>&amp; <I><B>m2</I></B>);</P>
+<h4>Discussion</h4>
+<P>Computes this = <I><B>m1 m2</I></B>(matrix multiplication).</P>
+<P><I>Example:</I></P>
+<PRE>float src1[16] = {1,2,3,4,5,6,7,8,9,-4,-3,-2,-1,0,1,2};<BR>float src2[16] = {7,2,3,-3,5,-1,7,8,0,-4,3,-2,1,0,1,-5};<BR><A href="SMLMatrix4f.htm#SMLMatrix4f">SMLMatrix4f</A> A(src1), B(src2), C;<BR>C.Multiply(A, B); // C = A * B</PRE>
+<h4>Parameters</h4>
+<P><B><I>m1, m2</I></B> - references to matrices to be multiplied.</P>
+<P>[<A href="SMLMatrix4f.htm#SMLMatrix4f" >top</A>]</P><HR>
+
+<P>void <A NAME="Output"><B>Output</B></A>(char* <I><B>label1</I></B> = NULL, char* <I><B>label2</I></B> = NULL);</P>
+<h4>Discussion</h4>
+<P>Print out matrix data using <I><B>OutputDebugString</I></B> function.</P>
+<P>[<A href="SMLMatrix4f.htm#SMLMatrix4f" >top</A>]</P><HR>
+
+<P>SMLLIBENTRY void <A NAME="TransformPoint"><B>TransformPoint</B></A>(const <A href="SMLVec3f.htm#SMLVec3f">SMLVec3f</A>&amp; <I><B>src</I></B>, <A href="SMLVec3f.htm#SMLVec3f">SMLVec3f</A>&amp; <I><B>dst</I></B>) 
+const;</P>
+<h4>Discussion</h4>
+<P>Method transforms vector <I><B>src</I></B> using this matrix and writes it into <I><B>dst</I></B>.</P>
+<h4>Parameters</h4>
+<P><B><I>src</I></B> - reference to a point to be transformed.</P>
+<h4>Output Parameters</h4>
+<P><B><I>dst</I></B> - reference to transformed point.</P>
+<P>[<A href="SMLMatrix4f.htm#SMLMatrix4f" >top</A>]</P><HR>
+
+<P>SMLLIBENTRY void <A NAME="TransformVector"><B>TransformVector</B></A>(const <A href="SMLVec3f.htm#SMLVec3f">SMLVec3f</A>&amp; <I><B>src</I></B>, <A href="SMLVec3f.htm#SMLVec3f">SMLVec3f</A>&amp; <I><B>dst</I></B>) const;</P><h4>Discussion</h4>
+<P>Method obtains product of 3x3 submatrix of this matrix and vector <I><B>src</I></B> and writes it into <I><B>dst</I></B>.</P>
+<h4>Parameters</h4>
+<P><B><I>src</I></B> - reference to a vector to be transformed.</P>
+<h4>Output Parameters</h4>
+<P><B><I>dst</I></B> - reference to transformed vector.</P>
+<P>[<A href="SMLMatrix4f.htm#SMLMatrix4f" >top</A>]</P><HR>
+
+<P>SMLLIBENTRY void <A NAME="Transform"><B>Transform</B></A>(const <A href="SMLVec4f.htm#SMLVec4f">SMLVec4f</A>&amp; <I><B>src</I></B>, <A href="SMLVec4f.htm#SMLVec4f">SMLVec4f</A>&amp; <I><B>dst</I></B>) 
+const;</P>
+<h4>Discussion</h4>
+<P>Method obtains product of this matrix and vector <I><B>src</I></B>. Result of transformation is written into vector <I><B>dst</I></B>.</P>
+<h4>Parameters</h4>
+<P><B><I>src</I></B> - reference to a vector to be transformed.</P>
+<h4>Output Parameters</h4>
+<P><B><I>dst</I></B> - reference to transformed vector.</P>
+<P>[<A href="SMLMatrix4f.htm#SMLMatrix4f" >top</A>]</P><HR>
+
+<P>SMLLIBENTRY void <B>Transform</B>(const <A href="SMLVec3f.htm#SMLVec3f">SMLVec3f</A>&amp; <I><B>src</I></B>, <A href="SMLVec4f.htm#SMLVec4f">SMLVec4f</A>&amp; <I><B>dst</I></B>) const;</P>
+<h4>Discussion</h4>
+<P>Methods writes into vector <I><B>dst</I></B> result of multiplication of this matrix and vector <B>SMLVec4f</B> (<I><B>src.x, src.y, src.z, 1</I></B>).</P>
+<h4>Parameters</h4>
+<P><B><I>src</I></B> - reference to a vector to be transformed.</P>
+<h4>Output Parameters</h4>
+<P><B><I>dst</I></B> - reference to transformed vector.</P>
+<P>[<A href="SMLMatrix4f.htm#SMLMatrix4f" >top</A>]</P><HR>
+
+<P>SMLLIBENTRY void <B>Transform</B>(const <A href="SMLSphereBound.htm#SMLSphereBound">SMLSphereBound</A>&amp; <I><B>src</I></B>, <A href="SMLSphereBound.htm#SMLSphereBound">SMLSphereBound</A>&amp; <I><B>dst</I></B>) const;</P>
+<h4>Discussion</h4>
+<P>Method transforms the center of sphere <I><B>src</I></B> in accordance with this matrix and sets new value of the radius. Radius is set to maximum absolute value of all matrix elements. It is defined in such manner, that any object within bound <I><B>src</I></B>, after transformation by this matrix will be covered by <I><B>dst</I></B>.</P>
+<h4>Parameters</h4>
+<P><B><I>src</I></B> - reference to a sphere to be transformed.</P>
+<h4>Output Parameters</h4>
+<P><B><I>dst</I></B> - reference to transformed sphere.</P>
+<P>[<A href="SMLMatrix4f.htm#SMLMatrix4f" >top</A>]</P><HR>
+
+<P>SMLLIBENTRY SMLVec4f <A NAME="GetRotationVector"><B>GetRotationVector</B></A>() const;</P>
+<h4>Discussion</h4>
+<P>Method obtains coordinates of the axis around which the matrix carries out rotation transformation, assuming this matrix is matrix of rotation.</P>
+<h4>Parameters</h4>
+<P>No.</P>
+<h4>Return Value</h4>
+<P>Returns object of SMLVec4f type. Variables <I><B>x, y, z</I></B> of the object are set to coordinates of the rotation axis, variable <I><B>w</I></B> is the angle of rotation.</P>
+<P>[<A href="SMLMatrix4f.htm#SMLMatrix4f" >top</A>]</P><HR>
+
+<P>SMLLIBENTRY bool <A NAME="IsIdentity"><B>IsIdentity</B></A>();</P>
+<h4>Discussion</h4>
+<P>Method returns <I>true</I>if matrix was initialized with the help of <A href="SMLMatrix4f.htm#Identity">Identity</A>() function and was not changed after that.</P>
+<h4>Parameters</h4>
+<P>No.</P>
+<h4>Return Value</h4>
+<P>Returns the value of variable <B>identity</B> (<I>true</I> or <I>false</I>).</P>
+<P>[<A href="SMLMatrix4f.htm#SMLMatrix4f" >top</A>]</P><HR>
+
+</BODY>
+</HTML>

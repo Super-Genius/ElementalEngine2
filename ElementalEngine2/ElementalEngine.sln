@@ -1,0 +1,63 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ElementalEngine", "ElementalEngine.vcproj", "{A51E8CB3-3995-48B7-9D44-96F04A31DCDE}"
+	ProjectSection(ProjectDependencies) = postProject
+		{C87A3EE8-D7C5-4970-9B62-1D04BB28CA13} = {C87A3EE8-D7C5-4970-9B62-1D04BB28CA13}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "unitTest", "unitTest\unitTest.vcproj", "{B704B821-6F90-45C1-9678-DDEE08E2FCA6}"
+	ProjectSection(ProjectDependencies) = postProject
+		{A51E8CB3-3995-48B7-9D44-96F04A31DCDE} = {A51E8CB3-3995-48B7-9D44-96F04A31DCDE}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "EESDKLib", "EESDKLib\EE-SDK.vcproj", "{C87A3EE8-D7C5-4970-9B62-1D04BB28CA13}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SourceCodeControl) = preSolution
+		SccNumberOfProjects = 4
+		SccLocalPath0 = .
+		CanCheckoutShared = true
+		SolutionUniqueID = {440713C3-AD35-4B3D-AFB0-1C079F22177F}
+		SccProjectUniqueName1 = ElementalEngine.vcproj
+		SccLocalPath1 = .
+		CanCheckoutShared = true
+		SccProjectUniqueName2 = unitTest\\unitTest.vcproj
+		SccLocalPath2 = .
+		CanCheckoutShared = true
+		SccProjectFilePathRelativizedFromConnection2 = unitTest\\
+		SccProjectUniqueName3 = EESDKLib\\EE-SDK.vcproj
+		SccLocalPath3 = .
+		CanCheckoutShared = true
+		SccProjectFilePathRelativizedFromConnection3 = EESDKLib\\
+	EndGlobalSection
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Profile = Profile
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{A51E8CB3-3995-48B7-9D44-96F04A31DCDE}.Debug.ActiveCfg = Debug|Win32
+		{A51E8CB3-3995-48B7-9D44-96F04A31DCDE}.Debug.Build.0 = Debug|Win32
+		{A51E8CB3-3995-48B7-9D44-96F04A31DCDE}.Profile.ActiveCfg = Profile|Win32
+		{A51E8CB3-3995-48B7-9D44-96F04A31DCDE}.Profile.Build.0 = Profile|Win32
+		{A51E8CB3-3995-48B7-9D44-96F04A31DCDE}.Release.ActiveCfg = Release|Win32
+		{A51E8CB3-3995-48B7-9D44-96F04A31DCDE}.Release.Build.0 = Release|Win32
+		{B704B821-6F90-45C1-9678-DDEE08E2FCA6}.Debug.ActiveCfg = Debug|Win32
+		{B704B821-6F90-45C1-9678-DDEE08E2FCA6}.Debug.Build.0 = Debug|Win32
+		{B704B821-6F90-45C1-9678-DDEE08E2FCA6}.Profile.ActiveCfg = Profile|Win32
+		{B704B821-6F90-45C1-9678-DDEE08E2FCA6}.Profile.Build.0 = Profile|Win32
+		{B704B821-6F90-45C1-9678-DDEE08E2FCA6}.Release.ActiveCfg = Release|Win32
+		{B704B821-6F90-45C1-9678-DDEE08E2FCA6}.Release.Build.0 = Release|Win32
+		{C87A3EE8-D7C5-4970-9B62-1D04BB28CA13}.Debug.ActiveCfg = Debug|Win32
+		{C87A3EE8-D7C5-4970-9B62-1D04BB28CA13}.Debug.Build.0 = Debug|Win32
+		{C87A3EE8-D7C5-4970-9B62-1D04BB28CA13}.Profile.ActiveCfg = Profile|Win32
+		{C87A3EE8-D7C5-4970-9B62-1D04BB28CA13}.Profile.Build.0 = Profile|Win32
+		{C87A3EE8-D7C5-4970-9B62-1D04BB28CA13}.Release.ActiveCfg = Release|Win32
+		{C87A3EE8-D7C5-4970-9B62-1D04BB28CA13}.Release.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

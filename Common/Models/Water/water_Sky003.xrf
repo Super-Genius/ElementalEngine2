@@ -1,0 +1,20 @@
+<MATERIAL version="2000" effectname="shaders/water.efx"  
+	numconstants="0"
+	numtextures="3"
+	numrenderstates="0"
+	numbones="0"
+	numflags="0">	
+	<Texture pass="0" stage="0" file="Water1.dds" numtexturestates="4">
+		<TextureStageState mode="minfilter" value="bilinear" ></TextureStageState>
+		<TextureStageState mode="magfilter" value="bilinear" ></TextureStageState>
+		<TextureStageState mode="umode" value="wrap" ></TextureStageState>
+		<TextureStageState mode="vmode" value="wrap" ></TextureStageState>
+	</Texture>
+	<Texture pass="0" stage="1" file="waterbump.dds" numtexturestates="4">
+		<TextureStageState mode="minfilter" value="bilinear" ></TextureStageState>
+		<TextureStageState mode="magfilter" value="bilinear" ></TextureStageState>
+		<TextureStageState mode="umode" value="wrap" ></TextureStageState>
+		<TextureStageState mode="vmode" value="wrap" ></TextureStageState>
+	</Texture>
+	<Texture pass="0" stage="2" file="cubemap_Sky003.dds" numtexturestates="0"></Texture>
+</MATERIAL>

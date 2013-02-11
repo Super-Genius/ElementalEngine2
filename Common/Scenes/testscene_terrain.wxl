@@ -1,0 +1,149 @@
+<?xml version="1.0"?>
+<CWorld Name="World" Version="3.000000">
+	<CEntity Name="TerrainEntity" EntityTypes="" PositionX="0.000000" PositionY="0.000000" PositionZ="0.000000" RotationRoll="0.000000" RotationPitch="0.000000" RotationYaw="0.000000" RotationOrder="0" ScaleX="1.000000" ScaleY="1.000000" ScaleZ="1.000000">
+		<CTerrainConfig Name="TerrainConfig" TerrainShaderLibrary="" TerrainShaderEffect="" SectorResolution="32" SectorSize="125.000000" ZScale="1.000000" LODDistance="150.000000">
+		</CTerrainConfig>
+		<CTerrainSector Name="TerrainSector0_0" SectorX="0" SectorY="0" HeightMap="scenes\TerrainSector0_0.hmp">
+			<CTerrainSectorRenderObject Name="TerrainRenderObj0_0" Version="1.100000" SectorX="0" SectorY="0" BaseTexture="Textures\Terrain\ter_grass2_base4.dds" BaseScaleX="32.000000" BaseScaleY="32.000000" MaskTexture="scenes\TerrainSector0_0_mask0.tga" NumLayers="4" SplatTexture0="textures\terrain\ter_beach02.dds" SplatScale0X="32.000000" SplatScale0Y="32.000000" SplatTexture1="textures\terrain\ter_dirt_base3.dds" SplatScale1X="32.000000" SplatScale1Y="32.000000" SplatTexture2="textures\terrain\ter_hilltop1.dds" SplatScale2X="32.000000" SplatScale2Y="32.000000" SplatTexture3="textures\terrain\ter_asphalt.dds" SplatScale3X="32.000000" SplatScale3Y="32.000000">
+			</CTerrainSectorRenderObject>
+			<CHeightfieldPhysicsObject Name="TerrainPhysicsObj0_0" collisiongroup="2" contactgroup="0">
+			</CHeightfieldPhysicsObject>
+			<CTerrainWaterRenderObject Name="TerrainWaterObj0_0" WaterLevel="-0.500000" Tesselation="32" TransparencyDepth="12.000000" Shader="Shaders\TerrainWater.efx">
+			</CTerrainWaterRenderObject>
+		</CTerrainSector>
+		<CTerrainSector Name="TerrainSector0_1" SectorX="0" SectorY="1" HeightMap="scenes\TerrainSector0_1.hmp">
+			<CTerrainSectorRenderObject Name="TerrainRenderObj0_1" Version="1.100000" SectorX="0" SectorY="1" BaseTexture="Textures\Terrain\ter_grass2_base4.dds" BaseScaleX="32.000000" BaseScaleY="32.000000" MaskTexture="scenes\TerrainSector0_1_mask0.tga" NumLayers="2" SplatTexture0="textures\terrain\ter_beach02.dds" SplatScale0X="32.000000" SplatScale0Y="32.000000" SplatTexture1="textures\terrain\ter_hilltop1.dds" SplatScale1X="32.000000" SplatScale1Y="32.000000">
+			</CTerrainSectorRenderObject>
+			<CHeightfieldPhysicsObject Name="TerrainPhysicsObj0_1" collisiongroup="2" contactgroup="0">
+			</CHeightfieldPhysicsObject>
+			<CTerrainWaterRenderObject Name="TerrainWaterObj0_1" WaterLevel="-0.500000" Tesselation="32" TransparencyDepth="12.000000" Shader="Shaders\TerrainWater.efx">
+			</CTerrainWaterRenderObject>
+		</CTerrainSector>
+		<CTerrainSector Name="TerrainSector0_2" SectorX="0" SectorY="2" HeightMap="scenes\TerrainSector0_2.hmp">
+			<CTerrainSectorRenderObject Name="TerrainRenderObj0_2" Version="1.100000" SectorX="0" SectorY="2" BaseTexture="Textures\Terrain\ter_grass2_base4.dds" BaseScaleX="32.000000" BaseScaleY="32.000000" MaskTexture="" NumLayers="0">
+			</CTerrainSectorRenderObject>
+			<CHeightfieldPhysicsObject Name="TerrainPhysicsObj0_2" collisiongroup="2" contactgroup="0">
+			</CHeightfieldPhysicsObject>
+			<CTerrainWaterRenderObject Name="TerrainWaterObj0_2" WaterLevel="-0.500000" Tesselation="32" TransparencyDepth="12.000000" Shader="Shaders\TerrainWater.efx">
+			</CTerrainWaterRenderObject>
+		</CTerrainSector>
+		<CTerrainSector Name="TerrainSector0_3" SectorX="0" SectorY="3" HeightMap="scenes\TerrainSector0_3.hmp">
+			<CTerrainSectorRenderObject Name="TerrainRenderObj0_3" Version="1.100000" SectorX="0" SectorY="3" BaseTexture="Textures\Terrain\ter_grass2_base4.dds" BaseScaleX="32.000000" BaseScaleY="32.000000" MaskTexture="" NumLayers="0">
+			</CTerrainSectorRenderObject>
+			<CHeightfieldPhysicsObject Name="TerrainPhysicsObj0_3" collisiongroup="2" contactgroup="0">
+			</CHeightfieldPhysicsObject>
+			<CTerrainWaterRenderObject Name="TerrainWaterObj0_3" WaterLevel="-0.500000" Tesselation="32" TransparencyDepth="12.000000" Shader="Shaders\TerrainWater.efx">
+			</CTerrainWaterRenderObject>
+		</CTerrainSector>
+		<CTerrainSector Name="TerrainSector1_0" SectorX="1" SectorY="0" HeightMap="scenes\TerrainSector1_0.hmp">
+			<CTerrainSectorRenderObject Name="TerrainRenderObj1_0" Version="1.100000" SectorX="1" SectorY="0" BaseTexture="Textures\Terrain\ter_grass2_base4.dds" BaseScaleX="32.000000" BaseScaleY="32.000000" MaskTexture="scenes\TerrainSector1_0_mask0.tga" NumLayers="4" SplatTexture0="textures\terrain\ter_beach02.dds" SplatScale0X="32.000000" SplatScale0Y="32.000000" SplatTexture1="textures\terrain\ter_dirt_base3.dds" SplatScale1X="32.000000" SplatScale1Y="32.000000" SplatTexture2="textures\terrain\ter_hilltop1.dds" SplatScale2X="32.000000" SplatScale2Y="32.000000" SplatTexture3="textures\terrain\ter_asphalt.dds" SplatScale3X="32.000000" SplatScale3Y="32.000000">
+			</CTerrainSectorRenderObject>
+			<CHeightfieldPhysicsObject Name="TerrainPhysicsObj1_0" collisiongroup="2" contactgroup="0">
+			</CHeightfieldPhysicsObject>
+			<CTerrainWaterRenderObject Name="TerrainWaterObj1_0" WaterLevel="-0.500000" Tesselation="32" TransparencyDepth="12.000000" Shader="Shaders\TerrainWater.efx">
+			</CTerrainWaterRenderObject>
+		</CTerrainSector>
+		<CTerrainSector Name="TerrainSector1_1" SectorX="1" SectorY="1" HeightMap="scenes\TerrainSector1_1.hmp">
+			<CTerrainSectorRenderObject Name="TerrainRenderObj1_1" Version="1.100000" SectorX="1" SectorY="1" BaseTexture="Textures\Terrain\ter_grass2_base4.dds" BaseScaleX="32.000000" BaseScaleY="32.000000" MaskTexture="scenes\TerrainSector1_1_mask0.tga" NumLayers="2" SplatTexture0="textures\terrain\ter_beach02.dds" SplatScale0X="32.000000" SplatScale0Y="32.000000" SplatTexture1="textures\terrain\ter_hilltop1.dds" SplatScale1X="32.000000" SplatScale1Y="32.000000">
+			</CTerrainSectorRenderObject>
+			<CHeightfieldPhysicsObject Name="TerrainPhysicsObj1_1" collisiongroup="2" contactgroup="0">
+			</CHeightfieldPhysicsObject>
+			<CTerrainWaterRenderObject Name="TerrainWaterObj1_1" WaterLevel="-0.500000" Tesselation="32" TransparencyDepth="12.000000" Shader="Shaders\TerrainWater.efx">
+			</CTerrainWaterRenderObject>
+		</CTerrainSector>
+		<CTerrainSector Name="TerrainSector1_2" SectorX="1" SectorY="2" HeightMap="scenes\TerrainSector1_2.hmp">
+			<CTerrainSectorRenderObject Name="TerrainRenderObj1_2" Version="1.100000" SectorX="1" SectorY="2" BaseTexture="Textures\Terrain\ter_grass2_base4.dds" BaseScaleX="32.000000" BaseScaleY="32.000000" MaskTexture="" NumLayers="0">
+			</CTerrainSectorRenderObject>
+			<CHeightfieldPhysicsObject Name="TerrainPhysicsObj1_2" collisiongroup="2" contactgroup="0">
+			</CHeightfieldPhysicsObject>
+			<CTerrainWaterRenderObject Name="TerrainWaterObj1_2" WaterLevel="-0.500000" Tesselation="32" TransparencyDepth="12.000000" Shader="Shaders\TerrainWater.efx">
+			</CTerrainWaterRenderObject>
+		</CTerrainSector>
+		<CTerrainSector Name="TerrainSector1_3" SectorX="1" SectorY="3" HeightMap="scenes\TerrainSector1_3.hmp">
+			<CTerrainSectorRenderObject Name="TerrainRenderObj1_3" Version="1.100000" SectorX="1" SectorY="3" BaseTexture="Textures\Terrain\ter_grass2_base4.dds" BaseScaleX="32.000000" BaseScaleY="32.000000" MaskTexture="" NumLayers="0">
+			</CTerrainSectorRenderObject>
+			<CHeightfieldPhysicsObject Name="TerrainPhysicsObj1_3" collisiongroup="2" contactgroup="0">
+			</CHeightfieldPhysicsObject>
+			<CTerrainWaterRenderObject Name="TerrainWaterObj1_3" WaterLevel="-0.500000" Tesselation="32" TransparencyDepth="12.000000" Shader="Shaders\TerrainWater.efx">
+			</CTerrainWaterRenderObject>
+		</CTerrainSector>
+		<CTerrainSector Name="TerrainSector2_0" SectorX="2" SectorY="0" HeightMap="scenes\TerrainSector2_0.hmp">
+			<CTerrainSectorRenderObject Name="TerrainRenderObj2_0" Version="1.100000" SectorX="2" SectorY="0" BaseTexture="Textures\Terrain\ter_grass2_base4.dds" BaseScaleX="32.000000" BaseScaleY="32.000000" MaskTexture="scenes\TerrainSector2_0_mask0.tga" NumLayers="1" SplatTexture0="textures\terrain\ter_hilltop1.dds" SplatScale0X="32.000000" SplatScale0Y="32.000000">
+			</CTerrainSectorRenderObject>
+			<CHeightfieldPhysicsObject Name="TerrainPhysicsObj2_0" collisiongroup="2" contactgroup="0">
+			</CHeightfieldPhysicsObject>
+			<CTerrainWaterRenderObject Name="TerrainWaterObj2_0" WaterLevel="-0.500000" Tesselation="32" TransparencyDepth="12.000000" Shader="Shaders\TerrainWater.efx">
+			</CTerrainWaterRenderObject>
+		</CTerrainSector>
+		<CTerrainSector Name="TerrainSector2_1" SectorX="2" SectorY="1" HeightMap="scenes\TerrainSector2_1.hmp">
+			<CTerrainSectorRenderObject Name="TerrainRenderObj2_1" Version="1.100000" SectorX="2" SectorY="1" BaseTexture="Textures\Terrain\ter_grass2_base4.dds" BaseScaleX="32.000000" BaseScaleY="32.000000" MaskTexture="" NumLayers="0">
+			</CTerrainSectorRenderObject>
+			<CHeightfieldPhysicsObject Name="TerrainPhysicsObj2_1" collisiongroup="2" contactgroup="0">
+			</CHeightfieldPhysicsObject>
+			<CTerrainWaterRenderObject Name="TerrainWaterObj2_1" WaterLevel="-0.500000" Tesselation="32" TransparencyDepth="12.000000" Shader="Shaders\TerrainWater.efx">
+			</CTerrainWaterRenderObject>
+		</CTerrainSector>
+		<CTerrainSector Name="TerrainSector2_2" SectorX="2" SectorY="2" HeightMap="scenes\TerrainSector2_2.hmp">
+			<CTerrainSectorRenderObject Name="TerrainRenderObj2_2" Version="1.100000" SectorX="2" SectorY="2" BaseTexture="Textures\Terrain\ter_grass2_base4.dds" BaseScaleX="32.000000" BaseScaleY="32.000000" MaskTexture="" NumLayers="0">
+			</CTerrainSectorRenderObject>
+			<CHeightfieldPhysicsObject Name="TerrainPhysicsObj2_2" collisiongroup="2" contactgroup="0">
+			</CHeightfieldPhysicsObject>
+			<CTerrainWaterRenderObject Name="TerrainWaterObj2_2" WaterLevel="-0.500000" Tesselation="32" TransparencyDepth="12.000000" Shader="Shaders\TerrainWater.efx">
+			</CTerrainWaterRenderObject>
+		</CTerrainSector>
+		<CTerrainSector Name="TerrainSector2_3" SectorX="2" SectorY="3" HeightMap="scenes\TerrainSector2_3.hmp">
+			<CTerrainSectorRenderObject Name="TerrainRenderObj2_3" Version="1.100000" SectorX="2" SectorY="3" BaseTexture="Textures\Terrain\ter_grass2_base4.dds" BaseScaleX="32.000000" BaseScaleY="32.000000" MaskTexture="" NumLayers="0">
+			</CTerrainSectorRenderObject>
+			<CHeightfieldPhysicsObject Name="TerrainPhysicsObj2_3" collisiongroup="2" contactgroup="0">
+			</CHeightfieldPhysicsObject>
+			<CTerrainWaterRenderObject Name="TerrainWaterObj2_3" WaterLevel="-0.500000" Tesselation="32" TransparencyDepth="12.000000" Shader="Shaders\TerrainWater.efx">
+			</CTerrainWaterRenderObject>
+		</CTerrainSector>
+		<CTerrainSector Name="TerrainSector3_0" SectorX="3" SectorY="0" HeightMap="scenes\TerrainSector3_0.hmp">
+			<CTerrainSectorRenderObject Name="TerrainRenderObj3_0" Version="1.100000" SectorX="3" SectorY="0" BaseTexture="Textures\Terrain\ter_grass2_base4.dds" BaseScaleX="32.000000" BaseScaleY="32.000000" MaskTexture="" NumLayers="0">
+			</CTerrainSectorRenderObject>
+			<CHeightfieldPhysicsObject Name="TerrainPhysicsObj3_0" collisiongroup="2" contactgroup="0">
+			</CHeightfieldPhysicsObject>
+			<CTerrainWaterRenderObject Name="TerrainWaterObj3_0" WaterLevel="-0.500000" Tesselation="32" TransparencyDepth="12.000000" Shader="Shaders\TerrainWater.efx">
+			</CTerrainWaterRenderObject>
+		</CTerrainSector>
+		<CTerrainSector Name="TerrainSector3_1" SectorX="3" SectorY="1" HeightMap="scenes\TerrainSector3_1.hmp">
+			<CTerrainSectorRenderObject Name="TerrainRenderObj3_1" Version="1.100000" SectorX="3" SectorY="1" BaseTexture="Textures\Terrain\ter_grass2_base4.dds" BaseScaleX="32.000000" BaseScaleY="32.000000" MaskTexture="" NumLayers="0">
+			</CTerrainSectorRenderObject>
+			<CHeightfieldPhysicsObject Name="TerrainPhysicsObj3_1" collisiongroup="2" contactgroup="0">
+			</CHeightfieldPhysicsObject>
+			<CTerrainWaterRenderObject Name="TerrainWaterObj3_1" WaterLevel="-0.500000" Tesselation="32" TransparencyDepth="12.000000" Shader="Shaders\TerrainWater.efx">
+			</CTerrainWaterRenderObject>
+		</CTerrainSector>
+		<CTerrainSector Name="TerrainSector3_2" SectorX="3" SectorY="2" HeightMap="scenes\TerrainSector3_2.hmp">
+			<CTerrainSectorRenderObject Name="TerrainRenderObj3_2" Version="1.100000" SectorX="3" SectorY="2" BaseTexture="Textures\Terrain\ter_grass2_base4.dds" BaseScaleX="32.000000" BaseScaleY="32.000000" MaskTexture="" NumLayers="0">
+			</CTerrainSectorRenderObject>
+			<CHeightfieldPhysicsObject Name="TerrainPhysicsObj3_2" collisiongroup="2" contactgroup="0">
+			</CHeightfieldPhysicsObject>
+			<CTerrainWaterRenderObject Name="TerrainWaterObj3_2" WaterLevel="-0.500000" Tesselation="32" TransparencyDepth="12.000000" Shader="Shaders\TerrainWater.efx">
+			</CTerrainWaterRenderObject>
+		</CTerrainSector>
+		<CTerrainSector Name="TerrainSector3_3" SectorX="3" SectorY="3" HeightMap="scenes\TerrainSector3_3.hmp">
+			<CTerrainSectorRenderObject Name="TerrainRenderObj3_3" Version="1.100000" SectorX="3" SectorY="3" BaseTexture="Textures\Terrain\ter_grass2_base4.dds" BaseScaleX="32.000000" BaseScaleY="32.000000" MaskTexture="" NumLayers="0">
+			</CTerrainSectorRenderObject>
+			<CHeightfieldPhysicsObject Name="TerrainPhysicsObj3_3" collisiongroup="2" contactgroup="0">
+			</CHeightfieldPhysicsObject>
+			<CTerrainWaterRenderObject Name="TerrainWaterObj3_3" WaterLevel="-0.500000" Tesselation="32" TransparencyDepth="12.000000" Shader="Shaders\TerrainWater.efx">
+			</CTerrainWaterRenderObject>
+		</CTerrainSector>
+	</CEntity>
+	<CEntity Name="AmbientLight_000" EntityTypes="Light/Ambient" PositionX="229.688583" PositionY="233.045578" PositionZ="144.709824" RotationRoll="0.000000" RotationPitch="0.000000" RotationYaw="0.000000" RotationOrder="0" ScaleX="1.000000" ScaleY="1.000000" ScaleZ="1.000000">
+		<CLightObject Name="AmbientLight_Object_000" Version="1000" PositionX="0.000000" PositionY="0.000000" PositionZ="0.000000" DirectionX="0.000000" DirectionY="0.000000" DirectionZ="0.000000" Attenuation="99999.000000" ColorRed="1.000000" ColorGreen="1.000000" ColorBlue="1.000000" ColorAlpha="1.000000" LightType="AMBIENT_LIGHT" CastShadows="false" NumKeyframes="0">
+		</CLightObject>
+	</CEntity>
+	<CEntity Name="Henchman_000" EntityTypes="models" PositionX="256.514557" PositionY="11.536253" PositionZ="317.098114" RotationRoll="0.000000" RotationPitch="0.000000" RotationYaw="0.000000" RotationOrder="0" ScaleX="1.000000" ScaleY="1.000000" ScaleZ="1.000000">
+		<Cal3DRenderObject Name="Henchman_RO_000" FileName="models\boned models\aim_henchman\aim_henchman.cfg">
+		</Cal3DRenderObject>
+	</CEntity>
+	<CEntity Name="B17_Body_000" EntityTypes="models" PositionX="736.467346" PositionY="247.738998" PositionZ="709.620789" RotationRoll="0.000000" RotationPitch="0.000000" RotationYaw="0.000000" RotationOrder="0" ScaleX="1.000000" ScaleY="1.000000" ScaleZ="1.000000">
+		<CHierarchicalModel Name="B17_Body_RO_000" StringAttribute="models\hierarchical models\b-17_ballturret\b_17.hrc">
+		</CHierarchicalModel>
+	</CEntity>
+	<CSkyboxObject Name="Skybox_000" EffectPath="shaders/skybox.efx" TexturePath="Textures/Sky/cubemap_Sky001.dds" ZOffset="0.000000">
+	</CSkyboxObject>
+</CWorld>

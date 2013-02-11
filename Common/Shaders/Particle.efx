@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<CEffect version="2000" 
+	numconstants="7"
+	numtextures="1"
+	numrenderstates="0"
+	numbones="0"
+	numflags="0">
+  <ShaderVariable shadertype="vertexshader" type="Function" name="ZMinMax" register="19" x="0.0" y="8000.0" z="0.0" w="1.0" ></ShaderVariable>
+  <ShaderVariable shadertype="vertexshader" type="Constant" name="ParticleWeightSpeedSizeSpinKey0" register="24" x="0.0" y="0.0" z="0.0" w="0.0" ></ShaderVariable>
+  <ShaderVariable shadertype="vertexshader" type="Constant" name="ParticleWeightSpeedSizeSpinKey1" register="25" x="0.0" y="0.0" z="0.0" w="0.0" ></ShaderVariable>
+  <ShaderVariable shadertype="vertexshader" type="Constant" name="ParticleWeightSpeedSizeSpinKey2" register="26" x="0.0" y="0.0" z="0.0" w="0.0" ></ShaderVariable>
+  <ShaderVariable shadertype="vertexshader" type="Constant" name="ParticleColorKey0" register="27" x="0.0" y="0.0" z="0.0" w="0.0" ></ShaderVariable>
+  <ShaderVariable shadertype="vertexshader" type="Constant" name="ParticleColorKey1" register="28" x="0.0" y="0.0" z="0.0" w="0.0" ></ShaderVariable>
+  <ShaderVariable shadertype="vertexshader" type="Constant" name="ParticleColorKey2" register="29" x="0.0" y="0.0" z="0.0" w="0.0" ></ShaderVariable>
+	<Texture pass="0" stage="0" file="none" numtexturestates="5" >
+		<TextureStageState mode="mipfilter" value="point" ></TextureStageState>
+		<TextureStageState mode="minfilter" value="bilinear" ></TextureStageState>
+		<TextureStageState mode="magfilter" value="bilinear" ></TextureStageState>
+		<TextureStageState mode="umode" value="clamp" ></TextureStageState>
+		<TextureStageState mode="vmode" value="clamp" ></TextureStageState>
+	</Texture>
+</CEffect>

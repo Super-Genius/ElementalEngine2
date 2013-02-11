@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root Num="1">
+<Heroes_MoveList Name="Heroes Move List" Num="16" >
+	<edit Type="string" name="Move Name" key="true" />
+	<combo Type="string" name="Attack Style" key="false" DefSelect="Single Melee Attack"
+		NumOptions="10"
+		option1="Single Melee Attack"
+		option2="Multiple Melee Attack"
+		option3="Single Ranged Attack"
+		option4="Multiple Ranged Attack"
+		option5="Cylindrical Attack"
+		option6="Cone Attack"
+		option7="Area Of Effect"
+		option8="All Enemies"
+		option9="Charge"
+		option10="All Players"
+	/>
+	<edit Type="float" Name="Attack Style Parameter" key="false" DefSelect="0" />
+	<combo Type="string" name="Button #1" key="true" DefSelect="None"
+		NumOptions="7"
+		option1="None"
+		option2="A"
+		option3="B"
+		option4="D"
+		option5="S@100"
+		option6="S@200"
+		option7="S@300"
+	/>
+	<edit Type="short int" name="Energy Drain/Gain" key="false" />
+	<edit Type="float" name="Bonus Damage" key="false" />
+	<edit Type="long int" name="Cast Time" key="false" />
+	<combo Type="string" name="Button #2" key="true" DefSelect="None"
+		NumOptions="7"
+		option1="None"
+		option2="A"
+		option3="B"
+		option4="D"
+		option5="S@100"
+		option6="S@200"
+		option7="S@300"
+	/>
+	<edit Type="short int" name="Energy Drain/Gain" key="false" />
+	<edit Type="float" name="Bonus Damage" key="false" />
+	<edit Type="long int" name="Cast Time" key="false" />
+	<combo Type="string" name="Button #3" key="true" DefSelect="None"
+		NumOptions="7"
+		option1="None"
+		option2="A"
+		option3="B"
+		option4="D"
+		option5="S@100"
+		option6="S@200"
+		option7="S@300"
+	/>
+	<edit Type="short int" name="Energy Drain/Gain" key="false" />
+	<edit Type="float" name="Bonus Damage" key="false" />
+	<edit Type="long int" name="Cast Time" key="false" />
+	<combo Type="string" name="Special Effect" key="false" DefSelect="None"
+		NumOptions="26"
+		option1="None"
+		option2="Enemy_Blind"
+		option3="Enemy_Confused"
+		option4="Enemy_Frozen"
+		option5="Enemy_Knockback"
+		option6="Enemy_Slow"
+		option7="Enemy_Stun"
+		option8="Enemy_Webbed"
+		option9="EnemyTeam_Blind"
+		option10="EnemyTeam_Confused"
+		option11="EnemyTeam_Frozen"
+		option12="EnemyTeam_Knockback"
+		option13="EnemyTeam_Slow"
+		option14="EnemyTeam_Stun"
+		option15="EnemyTeam_Webbed"
+		option16="Player_Armor"
+		option17="Player_Damage"
+		option18="Player_Healing"
+		option19="Player_ElectricalAttack"
+		option20="Player_FrozenAttack"
+		option21="PlayerTeam_Armor"
+		option22="PlayerTeam_Damage"
+		option23="PlayerTeam_Healing"
+		option24="PlayerTeam_ElectricalAttack"
+		option25="PlayerTeam_FrozenAttack"
+		option26="CustomFunction"
+	/>
+</Heroes_MoveList>
+</root>

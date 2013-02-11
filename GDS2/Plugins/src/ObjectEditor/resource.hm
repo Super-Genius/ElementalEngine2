@@ -1,0 +1,12 @@
+// Microsoft Visual C++ generated Help ID include file.
+// Used by ObjectEditor.rc
+//
+#define HIDC_HUGNEAREST                 0x9b5b1bc8    // IDD_OBJECT_TOOL_PALETTE
+#define HIDC_LOCK                       0x9b5b1bc4    // IDD_OBJECT_TOOL_PALETTE
+#define HIDC_OBJECTCHECK_ROT            0x9b801bea    // IDD_OBJECT_PAINT_PALETTE
+#define HIDC_OBJECTCHECK_SCALE          0x9b801be3    // IDD_OBJECT_PAINT_PALETTE
+#define HIDC_OBJECTLIST_ROTAXIS         0x9b801beb    // IDD_OBJECT_PAINT_PALETTE
+#define HIDC_OBJECT_ENABLE_COLLISIONS   0x9b5b1bc6    // IDD_OBJECT_TOOL_PALETTE
+#define HIDC_OBJECT_ERASE               0x9b801bdd    // IDD_OBJECT_PAINT_PALETTE
+#define HIDC_OBJECT_LEVELTERRAIN        0x9b801bec    // IDD_OBJECT_PAINT_PALETTE
+#define HIDC_OBJECT_PAINT               0x9b801bdc    // IDD_OBJECT_PAINT_PALETTE

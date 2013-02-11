@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CWorld Name="World" Version="1.500000">
+<CEntity Name="Buckwheat" EntityTypes="Dummy">
+	<CEntity Name="Alfalfa" EntityTypes="Dummy">
+	</CEntity>
+</CEntity>
+</CWorld>

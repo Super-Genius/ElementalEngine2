@@ -1,0 +1,7 @@
+$#include "StdAfx.h"
+$#include "../../ElementalEngine/EELuaScript/LuaHashString.h"
+$pfile "../../include/EELuaScript/EE_binding_common.pkg"
+
+$#if 0	// dummy include with relative path for tolua .pkg file
+$hfile "..\..\include\Cal3dModels\Cal3dModelsDefine.h"
+$#endif

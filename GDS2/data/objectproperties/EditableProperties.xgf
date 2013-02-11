@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root Num="35">
+	<CHierarchyRoot Name="Root" Num="0">
+	</CHierarchyRoot>
+	
+	<CWorld Name="World" Num="0">
+	</CWorld>
+	
+	<CEntity Name="Entity" Num="11">
+		<static Type="string" Name="Entity Type"/>
+		<spinner Type="float" Name="Pos X" Min="-100000" Max="100000" Increments="1" DefVal="0"/>
+		<spinner Type="float" Name="Pos Y" Min="-100000" Max="100000" Increments="1" DefVal="0"/>
+		<spinner Type="float" Name="Pos Z" Min="-100000" Max="100000" Increments="1" DefVal="0"/>
+		<spinner Type="float" Name="Rot X" Min="-180" Max="180" Increments="0.1" DefVal="0"/>
+		<spinner Type="float" Name="Rot Y" Min="-180" Max="180" Increments="0.1" DefVal="0"/>
+		<spinner Type="float" Name="Rot Z" Min="-180" Max="180" Increments="0.1" DefVal="0"/>
+		<hidden Type="int"/>
+		<spinner Type="float" Name="Scale X" Min="0" Max="100" Increments="0.1" DefVal="1"/>
+		<spinner Type="float" Name="Scale Y" Min="0" Max="100" Increments="0.1" DefVal="1"/>
+		<spinner Type="float" Name="Scale Z" Min="0" Max="100" Increments="0.1" DefVal="1"/>
+	</CEntity>
+	
+	<CSplineObject Name="Spline" Num="6">
+		<combo Type="string" name="Type" key="false" DefSelect="Point" NumOptions="3" option1="Point" option2="Line" option3="Bezier"/>
+	  <check Type="bool" Name="Loop"/>
+		<spinner Type="int" Name="Resolution" Min="2" Max="1000" Increments="1" DefVal="2"/>
+		<edit Type="string" Name="EventCollide" Key="false"/>
+		<edit Type="string" Name="EventEnter" Key="false"/>
+		<edit Type="string" Name="EventExit" Key="false"/>
+	</CSplineObject>
+	
+	<CEditorEntity Name="Entity" Num="11">
+		<static Type="string" Name="Entity Type"/>
+		<spinner Type="float" Name="Pos X" Min="-100000" Max="100000" Increments="1" DefVal="0"/>
+		<spinner Type="float" Name="Pos Y" Min="-100000" Max="100000" Increments="1" DefVal="0"/>
+		<spinner Type="float" Name="Pos Z" Min="-100000" Max="100000" Increments="1" DefVal="0"/>
+		<spinner Type="float" Name="Rot X" Min="-180" Max="180" Increments="0.1" DefVal="0"/>
+		<spinner Type="float" Name="Rot Y" Min="-180" Max="180" Increments="0.1" DefVal="0"/>
+		<spinner Type="float" Name="Rot Z" Min="-180" Max="180" Increments="0.1" DefVal="0"/>
+		<hidden Type="int"/>
+		<spinner Type="float" Name="Scale X" Min="0" Max="100" Increments="0.1" DefVal="1"/>
+		<spinner Type="float" Name="Scale Y" Min="0" Max="100" Increments="0.1" DefVal="1"/>
+		<spinner Type="float" Name="Scale Z" Min="0" Max="100" Increments="0.1" DefVal="1"/>
+	</CEditorEntity>
+	
+	<CParticleEmitterObject Name="Particle Emitter Object" Num="15">
+		<static Type="string" Name="Version"/>
+		<file Type="string" Name="Particle Def. File" DefFile="" defExt="*.eml" filters="Particle Def. Files|*.eml" />
+		<spinner Type="float" Name="Pos X" Min="-100000" Max="100000" Increments="1" DefVal="0"/>
+		<spinner Type="float" Name="Pos Y" Min="-100000" Max="100000" Increments="1" DefVal="0"/>
+		<spinner Type="float" Name="Pos Z" Min="-100000" Max="100000" Increments="1" DefVal="0"/>
+		<spinner Type="float" Name="Rot X" Min="-180" Max="180" Increments="0.1" DefVal="0"/>
+		<spinner Type="float" Name="Rot Y" Min="-180" Max="180" Increments="0.1" DefVal="0"/>
+		<spinner Type="float" Name="Rot Z" Min="-180" Max="180" Increments="0.1" DefVal="0"/>
+		<hidden Type="int"/>
+		<spinner Type="float" Name="Scale X" Min="0" Max="100" Increments="0.1" DefVal="1"/>
+		<spinner Type="float" Name="Scale Y" Min="0" Max="100" Increments="0.1" DefVal="1"/>
+		<spinner Type="float" Name="Scale Z" Min="0" Max="100" Increments="0.1" DefVal="1"/>
+		<check Type="bool" Name="Enabled"/>
+		<combo Type="string" name="Scale Mode" key="false" DefSelect="SCALENORMAL" NumOptions="3" option1="SCALENORMAL" option2="SCALEVOLUME" option3="SCALEPARTICLE" />
+		<spinner Type="float" Name="Life(Sec.)" Min="-1" Max="100000" Increments=".5" DefVal="-1"/>
+	</CParticleEmitterObject>
+	
+	<CParticleRenderObject Name="Render Object" Num="5">
+		<static Type="string" Name="File Name"/>
+		<check Type="bool" Name="Enabled"/>
+		<static Type="float" Name="Clip Distance"/>
+		<static Type="float" Name="Remaining Life"/>
+		<check Type="bool" Name="ScreenAligned"/>
+	</CParticleRenderObject>
+	
+	<CParticleRibbonRenderObject Name="Character Physics Object" Num="0">
+	</CParticleRibbonRenderObject>
+	
+	<CRenderObject Name="Render Object" Num="10">
+		<file Type="string" Name="Model File" DefFile="" defExt="*.v3o" filters="v3o Files|*.v3o" />
+		<static Type="float" Name="Pos X"/>
+		<static Type="float" Name="Pos Y"/>
+		<static Type="float" Name="Pos Z"/>
+		<static Type="float" Name="Rot X"/>
+		<static Type="float" Name="Rot Y"/>
+		<static Type="float" Name="Rot Z"/>
+		<static Type="float" Name="Scale X"/>
+		<static Type="float" Name="Scale Y"/>
+		<static Type="float" Name="Scale Z"/>
+	</CRenderObject>
+	
+	<Cal3DRenderObject Name="Render Object" Num="1">
+		<file Type="string" Name="Model File" DefFile="" defExt="*.cfg" filters="Cal3D Model CFG File Files|*.cfg|" />
+	</Cal3DRenderObject>
+	
+	<CHierarchicalModel Name="Render Object" Num="1">
+		<file Type="string" Name="Model File" DefFile="" defExt="*.hrc" filters="HierarhicalModel Files|*.hrc|" />
+	</CHierarchicalModel>
+	
+	<CWeatherRenderObject Name="Weather Effect" Num="3">
+		<spinner Type="float" Name="Intensity" Min="-10" Max="10" Increments="0.1" DefVal="0"/>
+		<spinner Type="float" Name="Particle Scale" Min="0.1" Max="100" Increments="0.1" DefVal="0"/>
+		<static Type="string" Name="Effect"/>
+	</CWeatherRenderObject>	
+	
+	<CAIObject Name="AI Object" Num="0">
+	</CAIObject>	
+	
+	<CTextureObject Name="Texture Object" Num="4">
+		<static Type="string" Name="Width"/>
+		<static Type="string" Name="Height"/>
+		<static Type="string" Name="Color Depth"/>
+		<file Type="string" Name="Texture" DefFile="" defExt="*.tex" filters="Tex Files|*.tex|Jpeg Files|*.jpeg;*.jpg|Targa Files|*.tga|All Texture Files|*.tex;*.jpg;*.jpeg;*.tga|" />
+	</CTextureObject>
+		
+	<CSoundObject Name="Sound Object" Num="8	">
+		<static Type="string" Name="FileName"/>
+		<check Type="bool" Name="Looping"/>
+		<check Type="bool" Name="3D Sound"/>
+		<static Type="float" Name="Pos X"/>
+		<static Type="float" Name="Pos Y"/>
+		<static Type="float" Name="Pos Z"/>
+		<check Type="bool" Name="AutoRemove"/>
+		<static Type="float" Name="3D Sound"/>
+	</CSoundObject>
+	
+	<CPhysicsObject Name="Physics Object" Num="4">
+		<static Type="string" Name="Type"/>
+		<spinner Type="int" Name="Collision Group" Min="0" Max="31" Increments="1" DefVal="0"/>
+		<spinner Type="int" Name="Contact Group" Min="0" Max="256" Increments="1" DefVal="0"/>
+		<static Type="string" name="shapeFile"/>
+	</CPhysicsObject>
+	
+	<CEECharacterPhysicsObject Name="Physics Object" Num="4">
+		<spinner Type="int" Name="Collision Group" Min="0" Max="31" Increments="1" DefVal="0"/>
+		<spinner Type="int" Name="Contact Group" Min="0" Max="256" Increments="1" DefVal="0"/>
+		<combo Type="string" name="Shape" key="false" DefSelect="Capsule" NumOptions="2" option1="Capsule" option2="Box"/>
+		<spinner Type="float" Name="Mass" Min="0" Max="9999" Increments="0.1" DefVal="0"/>
+	</CEECharacterPhysicsObject>
+	
+	<CHeightfieldPhysicsObject Name="Heightfield Physics Object" Num="2">
+		<spinner Type="int" Name="Collision Group" Min="0" Max="31" Increments="1" DefVal="0"/>
+		<spinner Type="int" Name="Contact Group" Min="0" Max="256" Increments="1" DefVal="0"/>
+	</CHeightfieldPhysicsObject>
+	
+	<CBoundaryPhysicsObject Name="Boundary Physics Object" Num="2">
+		<spinner Type="int" Name="Group" Min="0" Max="31" Increments="1" DefVal="0"/>
+		<spinner Type="int" Name="Group" Min="0" Max="31" Increments="1" DefVal="0"/>
+	</CBoundaryPhysicsObject>
+	
+	<CTriggerPhysicsObject Name="Trigger Physics Object" Num="5">
+		<spinner Type="int" Name="Group" Min="0" Max="31" Increments="1" DefVal="0"/>
+		<spinner Type="int" Name="Group" Min="0" Max="31" Increments="1" DefVal="0"/>
+		<check Type="bool" Name="TriggerOnEntry"/>
+		<check Type="bool" Name="TriggerOnStay"/>
+		<check Type="bool" Name="TriggerOnLeave"/>
+	</CTriggerPhysicsObject>
+	
+	<CTerrainConfig Name="Terrain Config" Num="6">
+		<static Type="string" Name="TerrainShaderLibrary"/>
+		<static Type="string" Name="TerrainShaderEffect"/>
+		<static Type="int" Name="SectorResolution"/>
+		<static Type="float" Name="SectorSize"/>
+		<static Type="float" Name="ZScale"/>
+		<static Type="float" Name="LODDistance"/>
+	</CTerrainConfig>
+	
+	<CTerrainSector Name="Terrain Sector" Num="3">
+		<static Type="int" Name="Sector X"/>
+		<static Type="int" Name="Sector Y"/>
+		<static Type="string" Name="HeightMap"/>
+	</CTerrainSector>
+	
+	<CTerrainSectorRenderObject Name="Terrain Sector Render Object" Num="8">
+		<static Type="float" Name="Version"/>
+		<static Type="int" Name="Sector X"/>
+		<static Type="int" Name="Sector Y"/>
+		<static Type="string" Name="BaseTexture"/>
+		<spinner Type="float" Name="Base Scale X" Min="0.001" Max="99999" Increments="0.1" DefVal="16"/>
+		<spinner Type="float" Name="Base Scale Y" Min="0.001" Max="99999" Increments="0.1" DefVal="16"/>
+		<static Type="string" Name="Mask Texture"/>
+		<static Type="int" Name="Number Layers"/>
+	</CTerrainSectorRenderObject>
+	
+	<CTerrainWaterRenderObject Name="Water Render Objects" Num="4">
+		<spinner Type="float" Name="Water Level" Min="-99999" Max="99999" Increments="0.5" DefVal="0"/>
+		<static Type="int" Name="Tesselation"/>
+		<spinner Type="float" Name="Transparency Depth" Min="0" Max="99999" Increments="0.5" DefVal="0"/>
+		<file Type="string" Name="Material" DefFile="" defExt="" filters="" />
+	</CTerrainWaterRenderObject>
+	
+	<CLuaScript Name="Lua Script" Num="1">
+		<file Type="string" Name="Lua Scripts" DefFile="" defExt="*.lua" filters="Lua Scripts|*.lua" />
+	</CLuaScript>
+	
+	<CTimeOfDayObject Name="Time Of Day" Num="0">
+	</CTimeOfDayObject>
+	
+	<CSkyboxObject Name="Skybox" Num="3">
+		<file Type="string" Name="Effect Path" DefFile="" defExt="" filters="" />
+		<file Type="string" Name="Texture Path" DefFile="" defExt="" filters="" />
+		<spinner Type="float" Name="ZOffset" Min="0.0" Max="1.0" Increments="0.01" DefVal="0"/>
+	</CSkyboxObject>
+	
+	<CDatabase Name="Database" Num="1">
+		<file Type="string" Name="Database File" DefFile="" defExt="*.dxl" filters="Database Files|*.dxl|" />
+	</CDatabase>
+	
+	<CNavMeshObject Name="Navigation Mesh" Num="1">
+		<static Type="string" Name="Navigation File"/>
+	</CNavMeshObject>
+	
+	<CLightObject Name="Light Object" Num="15">
+		<hidden Type="int"/>
+		<spinner Type="float" Name="Pos X" Min="-99999.0" Max="99999.0" Increments="0.1" DefVal="0"/>
+		<spinner Type="float" Name="Pos Y" Min="-99999.0" Max="99999.0" Increments="0.1" DefVal="0"/>
+		<spinner Type="float" Name="Pos Z" Min="-99999.0" Max="99999.0" Increments="0.1" DefVal="0"/>
+		<spinner Type="float" Name="Dir Vector X" Min="-99999.0" Max="99999.0" Increments="0.1" DefVal="0"/>
+		<spinner Type="float" Name="Dir Vector Y" Min="-99999.0" Max="99999.0" Increments="0.1" DefVal="-1"/>
+		<spinner Type="float" Name="Dir Vector Z" Min="-99999.0" Max="99999.0" Increments="0.1" DefVal="0"/>
+		<spinner Type="float" Name="Attenuation Distance" Min="0.0" Max="99999.0" Increments="0.1" DefVal="1"/>
+		<spinner Type="float" Name="Color Red" Min="0.0" Max="1.0" Increments="0.01" DefVal="1"/>
+		<spinner Type="float" Name="Color Green" Min="0.0" Max="1.0" Increments="0.01" DefVal="1"/>
+		<spinner Type="float" Name="Color Blue" Min="0.0" Max="1.0" Increments="0.01" DefVal="1"/>
+		<spinner Type="float" Name="Color Alpha" Min="0.0" Max="1.0" Increments="0.01" DefVal="1"/>
+		<combo Type="string" name="Light Type" key="false" DefSelect="DIRECTIONAL_LIGHT" NumOptions="5" option1="DIRECTIONAL_LIGHT" option2="SPOT_LIGHT" option3="OMNI_POINT_LIGHT" option4="HEMI_POINT_LIGHT" option5="AMBIENT_LIGHT"/>
+		<check Type="bool" Name="Cast Shadows"/>
+		<hidden Type="int"/>
+	</CLightObject>
+	
+	<CParticleLineRenderObject Name="Particle Line Render Object" Num="1">
+		<file Type="string" Name="Type File" DefFile="" defExt="*.pxl" filters="Particle Files|*.pxl" />
+	</CParticleLineRenderObject>
+	
+	<CWorldEventTrigger Name="World Event Trigger" Num="3">
+		<static Type="string" Name="Entity Name"/>
+		<static Type="string" Name="Entity Type"/>
+		<static Type="string" Name="Event Name"/>
+	</CWorldEventTrigger>
+	
+	<CWorldEvent Name="World Event" Num="5">
+		<static Type="string" Name="Parent Trigger Name"/>
+		<static Type="string" Name="Target Entity Name"/>
+		<static Type="string" Name="Target Entity Type"/>
+		<static Type="string" Name="Target Event Name"/>
+		<static Type="string" Name="Target Event Param"/>
+	</CWorldEvent>
+	
+	<COceanRenderObject Name="Ocean" Num="13">
+		<file Type="string" Name="FoamTexture" DefFile="" defExt="" filters="" />
+		<file Type="string" Name="EnvMapTexture" DefFile="" defExt="" filters="" />
+		<spinner Type="float" Name="DiffuseColorR" Min="0.0" Max="1.0" Increments="0.01" DefVal="0"/>
+		<spinner Type="float" Name="DiffuseColorG" Min="0.0" Max="1.0" Increments="0.01" DefVal="0"/>
+		<spinner Type="float" Name="DiffuseColorB" Min="0.0" Max="1.0" Increments="0.01" DefVal="0"/>
+		<spinner Type="float" Name="AmbientValue" Min="0.0" Max="1.0" Increments="0.01" DefVal="0"/>
+		<spinner Type="float" Name="SunDirX" Min="-99999.0" Max="99999.0" Increments="0.01" DefVal="0"/>
+		<spinner Type="float" Name="SunDirY" Min="-99999.0" Max="99999.0" Increments="0.01" DefVal="0"/>
+		<spinner Type="float" Name="SunDirZ" Min="-99999.0" Max="99999.0" Increments="0.01" DefVal="0"/>
+		<spinner Type="float" Name="ClipScale" Min="-99999.0" Max="99999.0" Increments="0.01" DefVal="0"/>
+		<spinner Type="float" Name="ClipOffset" Min="-99999.0" Max="99999.0" Increments="0.01" DefVal="0"/>
+		<spinner Type="float" Name="TextureScale" Min="-99999.0" Max="99999.0" Increments="0.001" DefVal="0"/>
+		<spinner Type="float" Name="Windy" Min="-99999.0" Max="99999.0" Increments="0.001" DefVal="0"/>
+	</COceanRenderObject>
+	
+	<CQHStateObject Name="State Object" Num="4">
+		<file Type="string" Name="File Name" DefFile="" defExt="*.xms" filters="State Machine Files|*.xms|" />
+		<static Type="string" StateMachine="StateObject"/>
+		<static Type="string" StartState="Start"/>
+		<spinner Type="int" Name="Update Priority" Min="0" Max="100000" Increments="1" DefVal="1000"/>
+	</CQHStateObject>
+	
+	<CQHStateMachineActionHandler Name="State Machine Action" Num="3">
+		<hidden Type="float"/>
+		<hidden Type="string"/>
+		<edit Type="string" Name="Action Name" Key="false"/>
+	</CQHStateMachineActionHandler>
+</root>

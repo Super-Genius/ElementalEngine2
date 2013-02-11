@@ -1,0 +1,45 @@
+LIBRARY	"PYDLL"
+
+EXPORTS
+	PYDLL_initializePYConnection
+	PYDLL_setResponseTimeoutMS
+	PYDLL_setRequestExpirationTimeoutMS
+	PYDLL_createNewRequest
+	PYDLL_setRequestUserData
+	PYDLL_getRequestUserData
+	PYDLL_getRequestStatus
+	PYDLL_submitRequest
+	PYDLL_getRequestType
+	PYDLL_getNextFinishedRequestID
+	PYDLL_writeData
+	PYDLL_writeString
+	PYDLL_writeUINT8
+	PYDLL_writeUINT16
+	PYDLL_writeUINT32
+	PYDLL_writeFLOAT32
+	PYDLL_writeINT8
+	PYDLL_writeINT16
+	PYDLL_writeINT32
+	PYDLL_readData
+	PYDLL_readString
+	PYDLL_readUINT8
+	PYDLL_readUINT16
+	PYDLL_readUINT32
+	PYDLL_readFLOAT32
+	PYDLL_readINT8
+	PYDLL_readINT16
+	PYDLL_readINT32
+	PYDLL_startProcessing
+	PYDLL_stopProcessing
+	PYDLL_isProcessing
+	PYDLL_cancelRequest
+	PYDLL_disposeRequest
+	PYDLL_unsubmittedCount
+	PYDLL_queueCount
+	PYDLL_completedCount
+	PYDLL_IsTerminalStatus
+	PYDLL_IsErrorStatus
+	
+	
+
+

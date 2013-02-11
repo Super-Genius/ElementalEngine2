@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<hmesh numgeom="6">
+	<hnode name="Fuselage" id="0" pid="-1" type="Cal3D" file="Fuselage.cfg" rotqx="0.000000" rotqy="0.000000" rotqz="0.000000" rotqw="1.000000" scalex="1.000000" scaley="1.000000" scalez="1.000000" posx="-0.534060" posy="0.000000" posz="0.000000" >
+	</hnode>
+	<hnode name="Outer_Prop_R02" id="1" pid="0" type="Cal3D" file="Outer_Prop_R02.cfg" rotqx="0.000000" rotqy="0.000000" rotqz="0.000000" rotqw="1.000000" scalex="1.000000" scaley="1.000000" scalez="1.000000" posx="157.749634" posy="9.218763" posz="85.770958" >
+	</hnode>
+	<hnode name="Inner_Prop_R01" id="2" pid="0" type="Cal3D" file="Inner_Prop_R01.cfg" rotqx="0.000000" rotqy="0.000000" rotqz="0.000000" rotqw="1.000000" scalex="1.000000" scaley="1.000000" scalez="1.000000" posx="72.981262" posy="6.096242" posz="99.133560" >
+	</hnode>
+	<hnode name="Inner_Prop_L01" id="3" pid="0" type="Cal3D" file="Inner_Prop_L01.cfg" rotqx="0.000000" rotqy="-0.000000" rotqz="0.000000" rotqw="1.000000" scalex="1.000000" scaley="1.000000" scalez="1.000000" posx="-72.922981" posy="6.149121" posz="99.133553" >
+	</hnode>
+	<hnode name="Outer_prop_L01" id="4" pid="0" type="Cal3D" file="Outer_prop_L01.cfg" rotqx="0.000000" rotqy="-0.000000" rotqz="0.000000" rotqw="1.000000" scalex="1.000000" scaley="1.000000" scalez="1.000000" posx="-157.769272" posy="9.164088" posz="85.664307" >
+	</hnode>
+	<hnode name="Turret_Attach" id="12" pid="0" type="DUMMY" file="NONE" rotqx="0.000000" rotqy="0.000000" rotqz="0.000000" rotqw="1.000000" scalex="1.000000" scaley="1.000000" scalez="1.000000" posx="0.000004" posy="-23.353727" posz="-111.405037" >
+	</hnode>
+</hmesh>

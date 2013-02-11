@@ -1,0 +1,17 @@
+SCC = This is a source code control file
+
+[TerrainEditor.vcproj]
+SCC_Aux_Path = ""
+SCC_Project_Name = Perforce Project
+
+[gds.vcproj]
+SCC_Aux_Path = ""
+SCC_Project_Name = Perforce Project
+
+[RenderViewer.vcproj]
+SCC_Aux_Path = ""
+SCC_Project_Name = Perforce Project
+
+[GDSBase.sln]
+SCC_Aux_Path = ""
+SCC_Project_Name = Perforce Project

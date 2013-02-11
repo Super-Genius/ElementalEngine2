@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root Num="1">
+<TAS_MissionList Name="TAS Mission List" Num="7" >
+	<edit Type="short int" Name="Mission #" key="true"/>
+	<edit Type="string" Name="Mission Name" key="false"/>
+	<edit Type="short int" Name="Mission Time Bonus" key="false"/>
+	<edit Type="string" Name="Mission DBase File" key="false"/>
+	<edit Type="string" Name="Mission World File" key="false" DefSelect="demo.wxl"/>
+	<edit Type="string" Name="Mission Description File" key="false" DefSelect="nothing.txt"/>
+	<edit Type="short int" Name="Unit #" key="false"/>
+</TAS_MissionList>
+</root>

@@ -1,0 +1,361 @@
+#ifndef _CDX9Renderer_H
+#define _CDX9Renderer_H
+#include <stack>
+#include "IRenderer.h"
+#include "CDX9VertexBufferObject.h"
+#include <d3d9.h>
+#include <d3dx9.h>
+
+#define CDX9RENDERER_DEFAULT_2DBUFFER_ALLOCATION 20000
+
+namespace ElementalEngine
+{
+class CDX9IndexBuffer;
+class CDX9VertexBufferObject;
+
+#define CDX9RENDERER_2DVERTEX_FVF ( D3DFVF_XYZ | D3DFVF_DIFFUSE | D3DFVF_TEX1 )
+
+struct CDX9Renderer_VertexRHW
+{
+	float		pos[3]; //because of the Radion x300's hardware limitations(doesn't do pretransformed vertices)
+    D3DCOLOR	 color;
+	float		tu,tv;
+};
+
+
+typedef map< CHANNELDESCRIPTORLIST, LPDIRECT3DVERTEXDECLARATION9,	VERTEXDESCRIPTIONCOMPARE > VERTEXDECLARATIONMAP;
+typedef pair< CHANNELDESCRIPTORLIST, LPDIRECT3DVERTEXDECLARATION9 > VERTEXDECLARATIONMAP_PAIR;
+typedef map< CHANNELDESCRIPTORLIST, DWORD, VERTEXDESCRIPTIONCOMPARE > VERTEXFVFMAP;
+typedef pair< CHANNELDESCRIPTORLIST, DWORD > VERTEXFVFMAP_PAIR;
+typedef map<DWORD, CConfig> CONFIGNAMEMAP;
+
+/// \brief D3D9 Adapter for the IRenderer class
+class CDX9Renderer : public IRenderer
+{
+private:
+	SINGLETONCONSTRUCTOROVERRIDE( CDX9Renderer );
+
+public:
+	
+	/// \brief	Function to get this component.  This is a singleton
+	/// \param	void
+	/// \return	IComponent*: This Manager
+	static IComponent* Create( va_list argptr );
+
+	void		Serialize(IArchive &ar){}
+
+	IHashString * GetComponentType(void);
+
+	/// Checks if this is similar to it's base classes component
+	/// \return true if it is simlar, else false
+	virtual bool IsKindOf(IHashString *compType);
+
+	/// \brief message that must be implemented that passes back an IRenderer inteface
+	/// to the delivering struct.
+	DWORD CDX9Renderer::OnGetRendererInterface( DWORD size, void *params);
+	/// \brief Sets the working directories
+	DWORD OnSetDirectories( DWORD size, void * params );
+	/// Convert a mouse coord to a raycast position and direction
+	DWORD OnGetRayFromMouseCoords( DWORD size, void * params );
+	/// \brief	Convert world coordinates to screen coordinates
+	DWORD OnTransformWorldToScreen(DWORD size, void *params);
+
+	/// Start Interface Functions ///
+	/// \brief Initializes the Renderer
+	/// \brief Initializes the Renderer
+	/// \param window = The handle to the window to be associated with the render context
+	/// \param width = the width of the frame buffer
+	/// \param height = the height of the frame buffer
+	/// \param depthbits = the number of bits for depth
+	/// \param colorbits = the number of bits for color
+	/// \return bool = 
+	virtual bool Initialize( HWND window,  bool fullscreen, const int width, const int height, const int depthbits, const int colorbits );
+	/// \brief This enables drawing to PBuffers before blitting to the screen
+	/// \param width = the width of the PBuffer(must be a power of 2, usually 512)
+	/// \param height = the height of the PBuffer(must be a power of 2, usually 512)
+	/// \return void
+	virtual void UsePBuffers( const int width, const int height );
+	/// \brief This DeInitializes the renderer
+	virtual void DeInitialize();
+	/// \brief Resets the renderer, must be reinitialized
+	virtual void Reset();
+	/// \brief Resizes the video screen
+	/// \param width = the width of the screen
+	/// \param height = the height of the screen
+	/// \return void
+	virtual void ResizeScreen( const int &width, const int &height );
+	/// \brief This function calls pre-draw routines before calling state calls and such
+	virtual void BeginScene();
+	/// \brief This function does post-draw and swapping of buffers if applicable
+	virtual void EndScene();
+	/// \brief This requires a PBuffer to be active, Blits the current PBuffer to the context passed in
+	/// \param context = The IRenderContext interface returned by CreateNewContext
+	/// \return bool = True if the render succeeded, false otherwise
+	virtual bool RenderToContext( IRenderContext * context );
+	/// \brief Creates a new render context and returns the interface. The concrete class depends on
+	/// the implementation of the engine. The application does not need to know about the concrete class
+	/// so long as an IRenderContext interface is returned.
+	/// \param window = The handle to the window to be associated with the render context
+	/// \param width = the width of the frame buffer
+	/// \param height = the height of the frame buffer
+	/// \param depthbits = the number of bits for depth
+	/// \param colorbits = the number of bits for color
+	/// \return IRenderContext* = The created render context or NULL if the renderer couldnt' create one
+	virtual IRenderContext * CreateNewContext( HWND window, const int width, const int height, const int depthbits, const int colorbits );
+	//Some low level state calls:
+	virtual void SetViewport( const int xpos, const int ypos, const int width, const int height );
+	virtual void Draw2DMask(const float xpos, const float ypos, const float width, const float height, const StdString &texture);
+	/// Draws a 2d line
+	/// \param startX - start of the line (x coord)
+	/// \param startY - start of the line (y coord)
+	/// \param endX - end of the line (x coord)
+	/// \param endY - end of the line (y coord)
+	/// \param r - red component of the line color
+	/// \param g - green component of the line color
+	/// \param b - blue component of the line color
+	/// \param width - width of the line
+	/// \return void
+	virtual void Draw2DLine(const float startX, const float startY, const float endX, const float endY, const int r, const int g, const int b, const float width);
+	/// Draws a 3d line
+	/// \param startX - start of the line (x coord)
+	/// \param startY - start of the line (y coord)
+	/// \param startZ - start of the line (z coord)
+	/// \param endX - end of the line (x coord)
+	/// \param endY - end of the line (y coord)
+	/// \param endZ - end of the line (z coord)
+	/// \param r - red component of the line color
+	/// \param g - green component of the line color
+	/// \param b - blue component of the line color
+	/// \param width - width of the line
+	/// \return void
+	virtual void Draw3DLine(const float startX, const float startY, const float startZ, const float endX, const float endY, const float endZ, const int r, const int g, const int b, const float width);
+	/// Draw a 3D point
+	/// \param xpos - the x coordinate position
+	/// \param ypos - the y coordinate position
+	/// \param zpos - the z coordinate position
+	/// \param r - red component of the line color
+	/// \param g - green component of the line color
+	/// \param b - blue component of the line color
+	/// \param size - size of the point
+	virtual void DrawPoint(const float xpos, const float ypos, const float zpos, const int r, const int g, const int b, const float size);
+	/// \brief Draws a bounding box
+	/// \param in_min = the minimum worldspace position of the bbox
+	/// \param in_max = the maximum worldspace positino of the bbox
+	/// \param colorRGBA = the color values 0-255
+	virtual void DrawBoundingBox( Vec3 &in_min, Vec3 &in_max, int colorR, int colorG, int colorB, int colorA );
+	virtual void DrawOrientedBoundingBox( Vec3 &in_min, Vec3 &in_max, Matrix3x3 &in_rot, Vec3 &in_pos, int colorR, int colorG, int colorB );
+	/// Draws a sphere
+	/// \param position = the position of the sphere
+	/// \param radius = the radius of the sphere
+	/// \param iResolution = the resolution with which to render the sphere
+	virtual void DrawSphere( Vec3 &position, float radius, int colorR, int colorG, int colorB, int iResolution );
+	/// \brief Sets the matrix to a given value
+	/// \param matmode = the matrix mode to set, either PROJECTION_MATRIX or MODELVIEW_MATRIX
+	/// \param pMat = a pointer to a float[16] array holding the values of the matrix
+	///				 in OGL's row major order
+	virtual void SetMatrix( const MATRIXMODE matmode, const float * pMat );
+	virtual void PushMatrix( const MATRIXMODE matmode );
+	virtual void PopMatrix( const MATRIXMODE matmode );
+	
+	virtual bool IsInitialized(){ return m_bInitialized; };
+	/// \brief Gets the matrix 
+	/// \param matmode = the matrix mode to retrieved, either PROJECTION_MATRIX or MODELVIEW_MATRIX
+	/// \param pMat = a pointer to a float[16] array that will hold the values of the matrix
+	///				 in OGL's row major order
+	virtual void GetMatrix( const MATRIXMODE matmode, float * pMat );
+	/// \brief Transforms screen coord(mouse coordinates) to World Coordinates
+	/// \param matmode = the matrix mode to retrieved, either PROJECTION_MATRIX or MODELVIEW_MATRIX
+	/// \param pMat = a pointer to a float[16] array that will hold the values of the matrix
+	///				 in OGL's row major order
+	virtual void TransformScreenToWorld( const int &mouseX, const int &mouseY, Vec3 &Pos );
+	/// \brief Transforms a World Coordinate into screen coordinates
+	/// \param pos = the world space coordinate to transform to screen coordinates
+	/// \param screenX = the transformed screen X coord
+	/// \param screenY = the transformed screen Y coord
+	virtual void TransformWorldToScreen( const Vec3 &pos, int &screenX, int &screenY );
+	virtual void GetViewDimensions( int &width, int &height );
+	virtual void GetBackBufferDimensions( int &width, int &height );
+	
+	/// \brief causes Begin() and End() to render to a texture
+	/// \param pTexture = the texture you wish to render to, set to NULL to disable
+	/// \return bool = true if the texture could be set as a render target
+	virtual bool RenderToTexture( ITextureObject * pTexture );
+
+	/// \brief	Switches to full screen mode or windowed mode
+	///			If it is in windowed mode, switch to full screen. Else
+	///			if already in full screen mode, switch to windowed mode.
+	virtual void SetFullScreen();
+
+	/// \brief Gets the profiling information from the renderer, such as framerate, etc	
+	/// \param info = The information is retrned in this pointer
+	virtual void GetFrameProfileInfo( RENDERERPROFILEINFO * info );
+
+	// \brief	Set the background color
+	virtual void SetBackgroundColor(UINT uRed, UINT uGreen, UINT uBlue);
+	virtual void ClearScreen( bool clearDepth, bool clearTarget );
+
+	/// \brief low level z call
+	virtual void SetPolygonZBias( const float fScale, const float fOffset );
+
+	/// \brief low level z call
+	virtual void SetDepthWrite( bool state );
+
+	/// enable depth compare
+	virtual void SetDepthTest( bool state );
+
+	/// enable alpha testing
+	virtual void SetAlphaTest( bool state );
+
+	///\brief	Capture screenshot
+	virtual void CaptureScreen( const TCHAR *filename = NULL );
+
+	/// \brief returns a vertex buffer interface based on the type of the renderer
+	/// \return IVertexBufferObject * = pointer to created interface or NULL if nothing could be created
+	virtual IVertexBufferObject * CreateVertexBuffer();
+
+	/// \brief returns a vertex buffer interface based on the type of the renderer
+	/// \return IVertexBufferObject * = pointer to created interface or NULL if nothing could be created
+	virtual IIndexBuffer * CreateIndexBuffer();
+
+	/// \brief Render a vertex buffer with texture and shader
+	virtual bool RenderVertexBuffer( IVertexBufferObject * vb,  const UINT offset, const UINT numElements, IShader * shader, 
+		IBaseTextureObject ** textures, const UINT numTextures = 0,
+		const DRAWPRIMITIVETYPE primtype = DP_TRIANGLELIST );
+
+	/// \brief Render a vertex buffer with an index buffer a texture and shader
+	virtual bool RenderIndexBuffer( IIndexBuffer * ib, IVertexBufferObject * vb,  const UINT offset, const UINT numElements,IShader * shader,
+		IBaseTextureObject ** textures, const UINT numTextures,
+		const DRAWPRIMITIVETYPE primtype = DP_TRIANGLELIST );
+
+	/// \brief Render a vertex buffer with an index buffer a texture and shader
+	virtual bool RenderIndexBuffer( IIndexBuffer * ib, IVertexBufferObject * vb,  const UINT offset, const UINT numElements,
+		const DRAWPRIMITIVETYPE primtype = DP_TRIANGLELIST );
+
+	/// \brief this should be the main and only way to draw indexbuffers
+	virtual bool RenderIndexBuffer( IIndexBuffer * ib, IVertexBufferObject * vb, 
+		const UINT basevertex, const UINT numverticesused,
+		const UINT offset, const UINT numElements,IShader * shader,
+		IBaseTextureObject ** textures, const UINT numTextures,
+		const DRAWPRIMITIVETYPE primtype = DP_TRIANGLELIST );
+
+	virtual void SetWireframeMode( bool val );
+	virtual void SetBlendMode( BLENDMODE mode );
+	/// Get a single configuration parameter
+	/// \param name = pointer to hashstring specifying configuration name
+	/// \return IConfig * pointer to configuration item
+	virtual IConfig *GetConfiguration(IHashString *name);
+
+	virtual void * GetAPIDevice(){
+		return (void*)m_pDevice;
+	}
+	virtual bool SetTexture( UINT stage, IBaseTextureObject * texture );
+	virtual bool SetShader( IShader * pShader );
+	//must set textures before this
+	virtual bool DrawQuad( void * verts, CHANNELDESCRIPTORLIST &channels );
+	virtual void SetOrtho2DScreenSize();
+	
+	virtual bool Draw2DQuad( float x, float y, float width, float height, 
+							 IBaseTextureObject * texture, 
+							 DWORD color, IShader* shader,
+							 float uStart = 0.0f, float vStart = 0.0f, 
+							 float uEnd = 1.0f, float vEnd = 1.0f);
+	virtual void SetColorMask( bool r, bool g, bool b, bool a );
+
+	virtual void EnableScissorClip(bool enable);
+
+	virtual void SetScissorRect(int x1, int y1, int x2, int y2);
+	/// Sets a bunch of lights up to be used in the next rendering pass
+	virtual void SetLightArray( ILightObject * lights[], int numlights );
+
+		/// enables or disables PostProcessing, enables hdr if available returns true if the method was successful
+	virtual bool EnablePostProcess( bool enable, bool hdr );
+
+	/// renders the buffer back to the intermediate buffer
+	virtual bool RenderPostProcessIntermediate( IShader * shader );
+
+	/// renders the buffer to the final screen buffer
+	virtual bool RenderPostProcessFinal( IShader * shader );
+
+	//DX9 specific
+	LPDIRECT3DVERTEXDECLARATION9 CDX9Renderer::GetVertexDescription( CHANNELDESCRIPTORLIST &channels );
+	DWORD GetVertexFVF(  CHANNELDESCRIPTORLIST &channels );
+private:
+	void UpdateFramerate();
+
+	//Redundancy and other tests. Might want to make these functions part of the interface
+	void SetVertexStream( UINT stream, CDX9VertexBufferObject * cvb );
+	void SetIndices( CDX9IndexBuffer * cib );
+	void SetFVF( DWORD fvf );
+	void SetVertexDeclaration( LPDIRECT3DVERTEXDECLARATION9 vertdecl );
+	void SetPixelShader( LPDIRECT3DPIXELSHADER9 pshader );
+	void SetVertexShader( LPDIRECT3DVERTEXSHADER9 vshader );
+	void BuildConfigMap();
+	bool BuildPostProcessBuffer( bool hdr );
+	void RemovePostProcessBuffer();
+	void ApplyRenderTarget( ITextureObject * tex );
+	void UnApplyRenderTarget( ITextureObject * tex );
+
+	//For fast state checking if ortho2d screen matrix is set, called by 2Dquad function
+	bool m_Ortho2DScreenSizeSet;
+
+	/// \brief The Default Constructor for CRenderManager
+	/// \return void
+	CDX9Renderer();
+
+	bool		m_bInitialized;
+	int			m_Width;
+	int			m_Height;
+	StdString	m_ExecutableDirectory;
+	StdString	m_ResourceDirectory;
+	ITextureObject * m_RenderTarget;
+	ITextureObject * m_PostProcessBuffer;
+	bool			m_HDRPostProcessBuffer;
+
+	/// framerate stuff
+	int m_iFrameCtr;
+	float m_fCurrentFPS;
+	float m_fFPSPos;
+
+	///DX9
+	LPDIRECT3D9			m_pD3D9;
+	LPDIRECT3DDEVICE9	m_pDevice;
+	D3DPRESENT_PARAMETERS m_presentParameters; // Used to explain to Direct3D how it will present things on the screen	
+	
+	//Redundancy state checks:
+	BYTE * m_VertexStreams[ 8 ];
+	BYTE * m_IndexStream;
+	LPDIRECT3DPIXELSHADER9			m_PixelShaderSet;
+	LPDIRECT3DVERTEXSHADER9			m_VertexShaderSet;
+	LPDIRECT3DVERTEXDECLARATION9	m_VertexDeclSet;
+	DWORD							m_FVFSet;
+	//End State redundancy checks
+
+	UINT   m_ClearColor[ 4 ]; //argb
+
+	//current matrices:
+	D3DXMATRIX	m_ProjectionMatrix;
+	D3DXMATRIX	m_ModelViewMatrix;
+	D3DXMATRIX	m_WorldMatrix;
+
+	//List of used vertex declarations
+	static	VERTEXDECLARATIONMAP	m_VertexDeclarationList;
+	//List of used FVF declarations map to channel types
+	static 	VERTEXFVFMAP			m_VertexFvFList;
+	//temporary surface pointer for rendertargets, release after you draw to them
+	LPDIRECT3DSURFACE9	m_RTSurf;
+	/// storage for configuration list retreived from DirectX
+	CONFIGNAMEMAP m_ConfigNameMap;
+	stack< D3DXMATRIX > m_MatrixStack[ 3 ];
+
+private:
+	//internal manager-like variables such as dynamic vertex buffers for drawing 2D elements fast
+	CDX9VertexBufferObject *			m_Dynamic2DVertexBuffer;
+	BUFFERALLOCATIONSTRUCT m_Dynamic2DVertexBufferAllocation;
+
+public:
+	D3DFORMAT GetD3DDepthBufferFormat( UINT &depthbits );
+	D3DFORMAT GetD3DColorBufferFormat( UINT &colorbits );
+};
+
+}//end namespace EE
+#endif //#ifndef _CDX9Renderer_H

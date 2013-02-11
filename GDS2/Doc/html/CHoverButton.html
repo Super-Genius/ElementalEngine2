@@ -1,0 +1,713 @@
+<html>
+<head>
+<title>
+Documentation for class CHoverButton
+
+</title>
+<link rel="stylesheet" type="text/css" href="doc.css">
+</head>
+<body>
+<table border="0" width="100%">
+	<tr>
+		<td align="right">
+			<h4>Auto Generated Class Documentation by ClassBuilder</h4>
+		<td>
+	</tr>
+</table>
+<hr>
+<center><a href="main_index.html">Main</a>
+<a href="namespace.html">Namespace List</a>
+<a href="class_hiearchy.html">Class Hierarchy</a>
+<a href="compound_members.html">Compound Members</a>
+<a href="compound_list.html">Compound List</a>
+<a href="diagram_list.html">Diagram List</a>
+</center><hr><h1>CHoverButton Reference</h1>
+<p>C:\Development\Game Dev System\Plugins\src\include\HoverButton.<a href="#_details">More...</a>
+</p><p><pre>#include 
+</pre></p><p>Inheritance diagram for CHoverButton
+</p><table border="0"><tr>
+<td colspan="2"><h2>Public Methods</h2></td>
+</tr>
+<tr>
+<td align="right"><a name="#_methodCHoverButton_summary"></a></td><td align="left"><a href="#_methodCHoverButton_details">CHoverButton</a>(  )</td></tr>
+<tr>
+<td>&nbsp;</td>
+<td>
+<font size=-1><em>Constructor method.</em><a href="#_methodCHoverButton_details">More...</a>
+</font></td></tr>
+<tr>
+<td align="right"><a name="#_methodSetToolTipText_summary"></a>void </td><td align="left"><a href="#_methodSetToolTipText_details">SetToolTipText</a>( CString*  spText, BOOL  bActivate )</td></tr>
+<tr>
+<td align="right"><a name="#_methodSetToolTipText_summary"></a>void </td><td align="left"><a href="#_methodSetToolTipText_details">SetToolTipText</a>( int  nId, BOOL  bActivate )</td></tr>
+<tr>
+<td align="right"><a name="#_methodLoadBitmap_summary"></a>BOOL </td><td align="left"><a href="#_methodLoadBitmap_details">LoadBitmap</a>( UINT  bitmapid )</td></tr>
+<tr>
+<td align="right">virtual <a name="#_method~CHoverButton_summary"></a></td><td align="left"><a href="#_method~CHoverButton_details">~CHoverButton</a>(  )</td></tr>
+<tr>
+<td>&nbsp;</td>
+<td>
+<font size=-1><em>Destructor method.</em><a href="#_method~CHoverButton_details">More...</a>
+</font></td></tr>
+<tr>
+<td colspan="2"><h2>Public Members</h2></td>
+</tr>
+<tr>
+<td colspan="2"><h2>Protected Methods</h2></td>
+</tr>
+<tr>
+<td align="right"><a name="#_methodActivateTooltip_summary"></a>void </td><td align="left"><a href="#_methodActivateTooltip_details">ActivateTooltip</a>( BOOL  bActivate )</td></tr>
+<tr>
+<td align="right"><a name="#_methodPreTranslateMessage_summary"></a>BOOL </td><td align="left"><a href="#_methodPreTranslateMessage_details">PreTranslateMessage</a>( MSG*  pMsg )</td></tr>
+<tr>
+<td align="right"><a name="#_methodDrawItem_summary"></a>void </td><td align="left"><a href="#_methodDrawItem_details">DrawItem</a>( LPDRAWITEMSTRUCT  lpDrawItemStruct )</td></tr>
+<tr>
+<td align="right"><a name="#_methodInitToolTip_summary"></a>void </td><td align="left"><a href="#_methodInitToolTip_details">InitToolTip</a>(  )</td></tr>
+<tr>
+<td align="right"><a name="#_methodOnMouseMove_summary"></a>afx_msg void </td><td align="left"><a href="#_methodOnMouseMove_details">OnMouseMove</a>( UINT  nFlags, CPoint  point )</td></tr>
+<tr>
+<td align="right"><a name="#_methodOnMouseLeave_summary"></a>afx_msg LRESULT </td><td align="left"><a href="#_methodOnMouseLeave_details">OnMouseLeave</a>( WPARAM  wparam, LPARAM  lparam )</td></tr>
+<tr>
+<td align="right"><a name="#_methodOnMouseHover_summary"></a>afx_msg void </td><td align="left"><a href="#_methodOnMouseHover_details">OnMouseHover</a>( WPARAM  wparam, LPARAM  lparam )</td></tr>
+<tr>
+<td colspan="2"><h2>Protected Members</h2></td>
+</tr>
+</table>
+<hr>
+<tr>
+<td align="right">BOOL </td><td align="left"><a href="#_memberm_bHover_details">m_bHover</a></td></tr>
+<tr>
+<td align="right">CSize </td><td align="left"><a href="#_memberm_ButtonSize_details">m_ButtonSize</a></td></tr>
+<tr>
+<td align="right">CBitmap </td><td align="left"><a href="#_membermybitmap_details">mybitmap</a></td></tr>
+<tr>
+<td align="right">BOOL </td><td align="left"><a href="#_memberm_bTracking_details">m_bTracking</a></td></tr>
+<tr>
+<td align="right">CToolTipCtrl </td><td align="left"><a href="#_memberm_ToolTip_details">m_ToolTip</a></td></tr>
+<h2><a name="_details"></a>Detailed Description</h2>
+<p>
+C:\Development\Game Dev System\Plugins\src\include\HoverButton.h(15)
+
+ HoverButton.h : header file
+C:\Development\Game Dev System\Plugins\src\include\HoverButton.h(15)
+
+
+C:\Development\Game Dev System\Plugins\src\include\HoverButton.h(15)
+
+
+C:\Development\Game Dev System\Plugins\src\include\HoverButton.h(15)
+
+ CHoverButton by Niek Albers
+C:\Development\Game Dev System\Plugins\src\include\HoverButton.h(15)
+
+ Thanks to some people for the tooltip.
+C:\Development\Game Dev System\Plugins\src\include\HoverButton.h(15)
+
+ A cool CBitmapButton derived class with 3 states,
+C:\Development\Game Dev System\Plugins\src\include\HoverButton.h(15)
+
+ Up/Down/Hover.
+</p>
+<hr>
+<h2>Constructor and Destructor Documentation</h2>
+<a name="#_methodCHoverButton_details"></a><table border="0">
+<tr>
+<td>
+<table border="0">
+<tr>
+<td align="right"><a href="#_methodCHoverButton_summary">top</a>
+CHoverButton::CHoverButton</td>
+<td >
+(</td>
+<td >
+)</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<a name="#_method~CHoverButton_details"></a><table border="0">
+<tr>
+<td>
+<table border="0">
+<tr>
+<td align="right"><a href="#_method~CHoverButton_summary">top</a>
+CHoverButton::~CHoverButton</td>
+<td >
+(</td>
+<td >
+)</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<hr>
+<p>
+<h2>Member Function Documentation</h2>
+</p>
+<a name="#_methodSetToolTipText_details"></a><table border="0">
+<tr>
+<td>
+<table border="0">
+<tr>
+<td ><a href="#_methodSetToolTipText_summary">top</a>
+void CHoverButton::SetToolTipText</td>
+<td >
+(</td>
+<td >
+CString* </td>
+<td ><i>
+spText</i></td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td >
+BOOL </td>
+<td ><i>
+bActivate</i></td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>)</td>
+<td colspan="2">&nbsp;<code> [public]</code></td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table border="0"><tr>
+<td>&nbsp;</td>
+<td>
+<p>
+
+</p>
+<p>
+<b>Parameters:</b>
+</p>
+<table border="0">
+<tr>
+<td>
+<em><i>CString* </i></em>
+</td>
+<td>
+&nbsp;</td>
+</tr>
+<tr>
+<td>
+<em><i>BOOL </i></em>
+</td>
+<td>
+&nbsp;</td>
+</tr>
+</table>
+<p>
+<b>Returns:</b>
+</p>
+<p><em><i>void  : </i></em></p>
+</td>
+</tr>
+</table></td>
+</tr>
+</table><a name="#_methodSetToolTipText_details"></a><table border="0">
+<tr>
+<td>
+<table border="0">
+<tr>
+<td ><a href="#_methodSetToolTipText_summary">top</a>
+void CHoverButton::SetToolTipText</td>
+<td >
+(</td>
+<td >
+int </td>
+<td ><i>
+nId</i></td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td >
+BOOL </td>
+<td ><i>
+bActivate</i></td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>)</td>
+<td colspan="2">&nbsp;<code> [public]</code></td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table border="0"><tr>
+<td>&nbsp;</td>
+<td>
+<p>
+
+</p>
+<p>
+<b>Parameters:</b>
+</p>
+<table border="0">
+<tr>
+<td>
+<em><i>int </i></em>
+</td>
+<td>
+&nbsp;</td>
+</tr>
+<tr>
+<td>
+<em><i>BOOL </i></em>
+</td>
+<td>
+&nbsp;</td>
+</tr>
+</table>
+<p>
+<b>Returns:</b>
+</p>
+<p><em><i>void  : </i></em></p>
+</td>
+</tr>
+</table></td>
+</tr>
+</table><a name="#_methodActivateTooltip_details"></a><table border="0">
+<tr>
+<td>
+<table border="0">
+<tr>
+<td ><a href="#_methodActivateTooltip_summary">top</a>
+void CHoverButton::ActivateTooltip</td>
+<td >
+(</td>
+<td >
+BOOL </td>
+<td ><i>
+bActivate</i></td>
+<td >
+)</td>
+<td >
+<code> [protected]</code></td >
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table border="0"><tr>
+<td>&nbsp;</td>
+<td>
+<p>
+
+</p>
+<p>
+<b>Parameters:</b>
+</p>
+<table border="0">
+<tr>
+<td>
+<em><i>BOOL </i></em>
+</td>
+<td>
+&nbsp;</td>
+</tr>
+</table>
+<p>
+<b>Returns:</b>
+</p>
+<p><em><i>void  : </i></em></p>
+</td>
+</tr>
+</table></td>
+</tr>
+</table><a name="#_methodPreTranslateMessage_details"></a><table border="0">
+<tr>
+<td>
+<table border="0">
+<tr>
+<td ><a href="#_methodPreTranslateMessage_summary">top</a>
+BOOL CHoverButton::PreTranslateMessage</td>
+<td >
+(</td>
+<td >
+MSG* </td>
+<td ><i>
+pMsg</i></td>
+<td >
+)</td>
+<td >
+<code> [protected]</code></td >
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table border="0"><tr>
+<td>&nbsp;</td>
+<td>
+<p>
+
+</p>
+<p>
+<b>Parameters:</b>
+</p>
+<table border="0">
+<tr>
+<td>
+<em><i>MSG* </i></em>
+</td>
+<td>
+&nbsp;</td>
+</tr>
+</table>
+<p>
+<b>Returns:</b>
+</p>
+<p><em><i>BOOL  : </i></em></p>
+</td>
+</tr>
+</table></td>
+</tr>
+</table><a name="#_methodDrawItem_details"></a><table border="0">
+<tr>
+<td>
+<table border="0">
+<tr>
+<td ><a href="#_methodDrawItem_summary">top</a>
+void CHoverButton::DrawItem</td>
+<td >
+(</td>
+<td >
+LPDRAWITEMSTRUCT </td>
+<td ><i>
+lpDrawItemStruct</i></td>
+<td >
+)</td>
+<td >
+<code> [protected]</code></td >
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table border="0"><tr>
+<td>&nbsp;</td>
+<td>
+<p>
+
+</p>
+<p>
+<b>Parameters:</b>
+</p>
+<table border="0">
+<tr>
+<td>
+<em><i>LPDRAWITEMSTRUCT </i></em>
+</td>
+<td>
+&nbsp;</td>
+</tr>
+</table>
+<p>
+<b>Returns:</b>
+</p>
+<p><em><i>void  : </i></em></p>
+</td>
+</tr>
+</table></td>
+</tr>
+</table><a name="#_methodLoadBitmap_details"></a><table border="0">
+<tr>
+<td>
+<table border="0">
+<tr>
+<td ><a href="#_methodLoadBitmap_summary">top</a>
+BOOL CHoverButton::LoadBitmap</td>
+<td >
+(</td>
+<td >
+UINT </td>
+<td ><i>
+bitmapid</i></td>
+<td >
+)</td>
+<td >
+<code> [public]</code></td >
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table border="0"><tr>
+<td>&nbsp;</td>
+<td>
+<p>
+
+</p>
+<p>
+<b>Parameters:</b>
+</p>
+<table border="0">
+<tr>
+<td>
+<em><i>UINT </i></em>
+</td>
+<td>
+&nbsp;</td>
+</tr>
+</table>
+<p>
+<b>Returns:</b>
+</p>
+<p><em><i>BOOL  : </i></em></p>
+</td>
+</tr>
+</table></td>
+</tr>
+</table><a name="#_methodInitToolTip_details"></a><table border="0">
+<tr>
+<td>
+<table border="0">
+<tr>
+<td ><a href="#_methodInitToolTip_summary">top</a>
+void CHoverButton::InitToolTip</td>
+<td >
+(</td>
+<td >
+)</td>
+<td >
+<code> [protected]</code></td >
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table border="0"><tr>
+<td>&nbsp;</td>
+<td>
+<p>
+
+</p>
+<p>
+<b>Parameters:</b>
+</p>
+<table border="0">
+</table>
+<p>
+<b>Returns:</b>
+</p>
+<p><em><i>void  : </i></em></p>
+</td>
+</tr>
+</table></td>
+</tr>
+</table><a name="#_methodOnMouseMove_details"></a><table border="0">
+<tr>
+<td>
+<table border="0">
+<tr>
+<td ><a href="#_methodOnMouseMove_summary">top</a>
+afx_msg void CHoverButton::OnMouseMove</td>
+<td >
+(</td>
+<td >
+UINT </td>
+<td ><i>
+nFlags</i></td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td >
+CPoint </td>
+<td ><i>
+point</i></td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>)</td>
+<td colspan="2">&nbsp;<code> [protected]</code></td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table border="0"><tr>
+<td>&nbsp;</td>
+<td>
+<p>
+
+</p>
+<p>
+<b>Parameters:</b>
+</p>
+<table border="0">
+<tr>
+<td>
+<em><i>UINT </i></em>
+</td>
+<td>
+&nbsp;</td>
+</tr>
+<tr>
+<td>
+<em><i>CPoint </i></em>
+</td>
+<td>
+&nbsp;</td>
+</tr>
+</table>
+<p>
+<b>Returns:</b>
+</p>
+<p><em><i>afx_msg void  : </i></em></p>
+</td>
+</tr>
+</table></td>
+</tr>
+</table><a name="#_methodOnMouseLeave_details"></a><table border="0">
+<tr>
+<td>
+<table border="0">
+<tr>
+<td ><a href="#_methodOnMouseLeave_summary">top</a>
+afx_msg LRESULT CHoverButton::OnMouseLeave</td>
+<td >
+(</td>
+<td >
+WPARAM </td>
+<td ><i>
+wparam</i></td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td >
+LPARAM </td>
+<td ><i>
+lparam</i></td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>)</td>
+<td colspan="2">&nbsp;<code> [protected]</code></td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table border="0"><tr>
+<td>&nbsp;</td>
+<td>
+<p>
+
+</p>
+<p>
+<b>Parameters:</b>
+</p>
+<table border="0">
+<tr>
+<td>
+<em><i>WPARAM </i></em>
+</td>
+<td>
+&nbsp;</td>
+</tr>
+<tr>
+<td>
+<em><i>LPARAM </i></em>
+</td>
+<td>
+&nbsp;</td>
+</tr>
+</table>
+<p>
+<b>Returns:</b>
+</p>
+<p><em><i>afx_msg LRESULT  : </i></em></p>
+</td>
+</tr>
+</table></td>
+</tr>
+</table><a name="#_methodOnMouseHover_details"></a><table border="0">
+<tr>
+<td>
+<table border="0">
+<tr>
+<td ><a href="#_methodOnMouseHover_summary">top</a>
+afx_msg void CHoverButton::OnMouseHover</td>
+<td >
+(</td>
+<td >
+WPARAM </td>
+<td ><i>
+wparam</i></td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td >
+LPARAM </td>
+<td ><i>
+lparam</i></td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>)</td>
+<td colspan="2">&nbsp;<code> [protected]</code></td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table border="0"><tr>
+<td>&nbsp;</td>
+<td>
+<p>
+
+</p>
+<p>
+<b>Parameters:</b>
+</p>
+<table border="0">
+<tr>
+<td>
+<em><i>WPARAM </i></em>
+</td>
+<td>
+&nbsp;</td>
+</tr>
+<tr>
+<td>
+<em><i>LPARAM </i></em>
+</td>
+<td>
+&nbsp;</td>
+</tr>
+</table>
+<p>
+<b>Returns:</b>
+</p>
+<p><em><i>afx_msg void  : </i></em></p>
+</td>
+</tr>
+</table></td>
+</tr>
+</table></body>
+</html>

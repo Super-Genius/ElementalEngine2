@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<CSpawner Name="World" Vers="3.0">
+	<CSkyboxObject Name="Skybox" EffectPath="Shaders/skybox.efx" TexturePath="Textures/Sky/cubemap_Sky001.dds" ZOffset="0">
+	</CSkyboxObject>
+</CSpawner>

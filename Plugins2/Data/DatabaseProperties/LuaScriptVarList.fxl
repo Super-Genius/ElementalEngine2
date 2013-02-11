@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root Num="1">
+<LuaScriptVarList Name="LuaScriptObject Variable List" Num="5">
+	<edit Type="string" Name="Variable Name" key="true"/>
+	<combo Type="string" name="Variable Type" key="false" DefSelect="String" 
+		NumOptions="4"
+		option1="String"
+		option2="Bool"
+		option3="Int"
+		option4="Float"
+	/>
+	<edit Type="string" name="Variable Value" key="false" />
+	<edit Type="string" name="Variable Value Min" key="false" />
+	<edit Type="string" name="Variable Value Max" key="false" />
+</LuaScriptVarList>
+</root>

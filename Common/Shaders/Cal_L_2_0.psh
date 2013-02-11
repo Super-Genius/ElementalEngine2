@@ -1,0 +1,68 @@
+#include "Shaders\HLSLconstants.h"
+#include "Shaders\PSH_CommonFunctions.h"
+
+struct v2f
+{
+	float2 TexCoord			: TEXCOORD0;
+#if (ACTIVELIGHTS > 0)
+	float4 TangentLight[ACTIVELIGHTS]	: TEXCOORD1;
+#endif
+	float4 ViewVectorFog		: TEXCOORD5;
+	float4 PosOutDepth			: COLOR0;
+#if (DETAILLIGHTS > 0 )
+	float3 Normal				: NORMAL;
+#endif
+};
+
+uniform float4 ColorMultiplier		: register(c19);
+uniform float4 SpecularMultiplier	: register(c20);
+uniform float3 FogColor				: register(c21);
+uniform float4 Glow					: register(c22);
+
+PS_MRT_OUTPUT main(v2f i,
+//	float FaceDir : VFACE,									// THIS LINE IS REMOVED TO COMPILE UNDER V2.0
+	uniform sampler2D CachedTexture : register(s0),
+	uniform sampler2D NormalMap : register(s1))
+{
+	float4 outcolor  = tex2D(CachedTexture, i.TexCoord);
+
+	half3 diffuse = half3(0.0,0.0,0.0);
+	half4 normalcolor = tex2D(NormalMap, i.TexCoord);
+	float3 normal = UnpackNormal( normalcolor );
+
+#if (ACTIVELIGHTS > 0)
+
+// THIS NEXT 3 LINES ARE REMOVED TO COMPILE UNDER V2.0
+//	if( FaceDir <= 0 )
+//	{
+//		normal = -normal;
+//	}
+
+	NormalizeLights( i.TangentLight );
+
+	//half specular = SpecularMultiplier.x*CalcSpecular( normal, i.SpecularH, SpecularMultiplier.y, normalcolor.a, i.TangentLight[0].w  );
+	//half3 specular = SpecularMultiplier.x*CalcColoredSpecular( normal, i.SpecularH, SpecularMultiplier.y, normalcolor.a, i.TangentLight[0].w  );
+
+	diffuse = CalcLights( normal, i.TangentLight );
+	float3 ViewVec = normalize( i.ViewVectorFog.xyz );
+	half3 specular = SpecularMultiplier.x*CalcMultiLightColoredSpecular( normal, ViewVec, SpecularMultiplier.y, normalcolor.a, i.TangentLight );
+#endif
+
+#if ( DETAILLIGHTS > 0 )
+	diffuse += CalcPixelLights( i.PosOutDepth.xyz, i.Normal, lightData );
+#endif
+
+	// light
+#if (ACTIVELIGHTS > 0)
+	outcolor.rgb = outcolor.rgb * (lightAmbient.xyz + diffuse.rgb) + specular.rgb;
+#else
+	outcolor.rgb = outcolor.rgb * (lightAmbient.xyz + diffuse.rgb);
+#endif
+	// tint
+	outcolor *= ColorMultiplier;
+	// fog
+	outcolor.rgb = lerp( outcolor.rgb, FogColor.rgb, i.ViewVectorFog.w );
+	// glow
+	outcolor.a *= Glow.x;
+	return MakeMRTOutput( outcolor, i.PosOutDepth.w );
+}

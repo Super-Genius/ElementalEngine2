@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<CAnimatedTextureObject
+	NumFrames="4"
+	FrameRate="15"
+	NumTextures="4"
+	FrameWidth="128" 
+	FrameHeight="128" 
+	TextureFile0="basedata\editor\textures\noise1.dds" 
+	TextureFile1="basedata\editor\textures\noise2.dds"
+	TextureFile2="basedata\editor\textures\noise3.dds"
+	TextureFile3="basedata\editor\textures\noise4.dds">
+</CAnimatedTextureObject>

@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<CSpawner Name="World">
+	<CEntity Name="AmbientLight" EntityTypes="Light/Ambient">
+		<CLightObject Name="AmbientLight_Object" Version="500"  PositionX="0.0" PositionY="0.0" PositionZ="0.0" DirectionX="0.0" DirectionY="0.0" DirectionZ="0.0" Attenuation="99999.0" ColorRed="1.0" ColorBlue="1.0" ColorGreen="1.0" ColorAlpha="1.0" LightType="AMBIENT_LIGHT" CastShadows="false">
+		</CLightObject>
+	</CEntity>
+</CSpawner>

@@ -1,0 +1,461 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+// Generated Help ID header file
+#define APSTUDIO_HIDDEN_SYMBOLS
+#include "resource.hm"
+#undef APSTUDIO_HIDDEN_SYMBOLS
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\ObjectEditor.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "Comments", "Author: Kenneth Hurley"
+            VALUE "CompanyName", "Signature Devices, Inc."
+            VALUE "FileDescription", "ObjectEditor DLL"
+            VALUE "FileVersion", "1, 0, 0, 1"
+            VALUE "InternalName", "ObjectEditor"
+            VALUE "LegalCopyright", "Copyright (C) Signature Devices, Inc 2002"
+            VALUE "OriginalFilename", "ObjectEditor.DLL"
+            VALUE "ProductName", "ObjectEditor Dynamic Link Library"
+            VALUE "ProductVersion", "1, 0, 0, 1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_OBJECTTYPE MENU 
+BEGIN
+    POPUP "&Objects"
+    BEGIN
+        MENUITEM "&Create...",                  IDC_OBJECT_CREATE
+        POPUP "&Painting"
+        BEGIN
+            MENUITEM "P&aint",                      ID_PAINTING_PAINT
+            MENUITEM "&Erase",                      ID_PAINTING_ERASE
+            MENUITEM SEPARATOR
+            MENUITEM "&Scale",                      ID_PAINTING_SCALE, INACTIVE
+            MENUITEM "&Rotation",                   ID_PAINTING_ROTATION, INACTIVE
+            MENUITEM SEPARATOR
+            MENUITEM "&Level Terrain",              ID_PAINTING_LEVELTERRAIN, INACTIVE
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "&Move",                       ID_MENU_OBJECT_MOVE
+        MENUITEM "&Rotate",                     ID_MENU_OBJECT_ROTATE
+        MENUITEM "&Scale",                      ID_MENU_OBJECT_SCALE
+        MENUITEM SEPARATOR
+        POPUP "&Lock"
+        BEGIN
+            MENUITEM "None",                        ID_LOCK_NONE, CHECKED
+            MENUITEM "XY",                          ID_LOCK_XY
+            MENUITEM "XZ",                          ID_LOCK_XZ
+            MENUITEM "YZ",                          ID_LOCK_YZ
+            MENUITEM "X",                           ID_LOCK_X
+            MENUITEM "Y",                           ID_LOCK_Y
+            MENUITEM "Z",                           ID_LOCK_Z
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "Enable Collisions",           ID_OBJECTS_ENABLECOLLISIONS
+        POPUP "&Hug Nearest"
+        BEGIN
+            MENUITEM "None",                        ID_HUG_NONE
+            MENUITEM "-X Object",                   ID_HUG_NEG_X_OBJECT
+            MENUITEM "+X Object",                   ID_HUG_POS_X_OBJECT
+            MENUITEM "-Y Object",                   ID_HUG_NEG_Y_OBJECT
+            MENUITEM "+Y Object",                   ID_HUG_POS_Y_OBJECT
+            MENUITEM "-Z Object",                   ID_HUG_NEG_Z_OBJECT
+            MENUITEM "+Z Object",                   ID_HUG_POS_Z_OBJECT
+        END
+        MENUITEM SEPARATOR
+        POPUP "&Bounding Box"
+        BEGIN
+            MENUITEM "None",                        ID_BOUNDINGBOX_NONE, CHECKED
+            MENUITEM "Render Box",                  ID_BOUNDINGBOX_RENDERBOX
+            MENUITEM "Physics Box",                 ID_BOUNDINGBOX_PHYSICSBOX
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "Zoom To Object",              IDC_OBJECT_ZOOMTO
+    END
+END
+
+IDR_EDIT_MENU MENU 
+BEGIN
+    POPUP "&Edit"
+    BEGIN
+        MENUITEM "C&ut\tCtrl+X",                ID_EDIT_CUT
+        MENUITEM "&Copy\tCtrl+C",               ID_EDIT_COPY
+        MENUITEM "&Paste\tCtrl+V",              ID_EDIT_PASTE
+        MENUITEM SEPARATOR
+        MENUITEM "&Delete\tDel",                ID_EDIT_CLEAR
+    END
+END
+
+IDR_VIEW_OBJECT_PROP_MENU MENU 
+BEGIN
+    POPUP "&View"
+    BEGIN
+        MENUITEM "O&bject Properties",          ID_VIEW_OBJECT_PROPERTIES
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_OBJECT_TOOL_PALETTE DIALOGEX 0, 0, 594, 35
+STYLE DS_SETFONT | WS_CHILD
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    PUSHBUTTON      "",IDC_OBJECT_CREATE,6,1,24,24,BS_ICON
+    PUSHBUTTON      "",ID_EDIT_CLEAR,32,1,24,24,BS_ICON | NOT WS_TABSTOP
+    LTEXT           "Lock Axis",IDC_STATIC,184,2,32,8
+    COMBOBOX        IDC_LOCK,184,12,70,115,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP,0,HIDC_LOCK
+    LTEXT           "Sensitivity",IDC_STATIC,317,2,32,8
+    EDITTEXT        IDC_EDIT_SENSITIVITY,315,12,53,12,ES_AUTOHSCROLL
+    CONTROL         "",IDC_SPIN_SENSITIVITY,"msctls_updown32",UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,358,12,10,12
+    CONTROL         "Check1",IDC_OBJECT_ENABLE_COLLISIONS,"Button",BS_AUTOCHECKBOX | BS_ICON | BS_PUSHLIKE | WS_TABSTOP,375,1,24,24,0,HIDC_OBJECT_ENABLE_COLLISIONS
+    LTEXT           "Hug Nearest",IDC_STATIC,403,2,41,8
+    COMBOBOX        IDC_HUGNEAREST,403,12,70,63,CBS_DROPDOWNLIST | WS_DISABLED | WS_VSCROLL | WS_TABSTOP,0,HIDC_HUGNEAREST
+    PUSHBUTTON      "",IDC_OBJECT_ZOOMTO,479,1,24,24,BS_ICON | NOT WS_TABSTOP
+    CONTROL         "Grid:",IDC_GRID_CHECK,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,505,12,30,12,WS_EX_RIGHT
+    EDITTEXT        IDC_GRID_EDIT,539,12,38,12,ES_AUTOHSCROLL
+    CONTROL         "",IDC_GRID_SPIN,"msctls_updown32",UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,577,12,11,12
+    CONTROL         "Select Tool",IDC_OBJECT_SELECT,"Button",BS_AUTORADIOBUTTON | BS_ICON | BS_PUSHLIKE | WS_GROUP,68,1,24,24
+    CONTROL         "Move Tool",IDC_OBJECT_MOVE,"Button",BS_AUTORADIOBUTTON | BS_ICON | BS_PUSHLIKE,94,1,24,24
+    CONTROL         "Rotate Tool",IDC_OBJECT_ROTATE,"Button",BS_AUTORADIOBUTTON | BS_ICON | BS_PUSHLIKE,120,1,24,24
+    CONTROL         "Scale Tool",IDC_OBJECT_SCALE,"Button",BS_AUTORADIOBUTTON | BS_ICON | BS_PUSHLIKE,146,1,24,24
+    EDITTEXT        IDC_LOCKVALUE,272,12,29,12,ES_AUTOHSCROLL
+    CONTROL         "",IDC_LOCKVALUE_CHECK,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,259,12,11,12
+    LTEXT           "Lock Value",IDC_STATIC,264,2,37,8
+    LTEXT           "Create",IDC_STATIC,6,25,22,8
+    LTEXT           "Delete",IDC_STATIC,32,25,22,8
+    LTEXT           "Select",IDC_STATIC,69,25,22,8
+    CTEXT           "Move",IDC_STATIC,94,25,22,8
+    CTEXT           "Rotate",IDC_STATIC,121,25,22,8
+    CTEXT           "Scale",IDC_STATIC,146,25,22,8
+    CTEXT           "Enable Collision",IDC_STATIC,359,25,55,8
+    CTEXT           "Center to Object",IDC_STATIC,464,25,55,8
+END
+
+IDD_NEWOBJECT_SELECTION DIALOGEX 0, 0, 190, 135
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Select Type of New Object"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,118,28,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,118,51,50,14
+    LISTBOX         IDC_NEWOBJECTLIST,15,16,87,102,LBS_SORT | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_OBJECT_PAINT_PALETTE DIALOGEX 0, 0, 515, 35
+STYLE DS_SETFONT | WS_CHILD
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    CONTROL         "Paint Objects",IDC_OBJECT_PAINT,"Button",BS_AUTOCHECKBOX | BS_ICON | BS_PUSHLIKE | WS_TABSTOP,6,1,24,24,0,HIDC_OBJECT_PAINT
+    CONTROL         "Paint Objects",IDC_OBJECT_ERASE,"Button",BS_AUTOCHECKBOX | BS_ICON | BS_PUSHLIKE | WS_TABSTOP,38,1,24,24,0,HIDC_OBJECT_ERASE
+    LTEXT           "Brush Size",IDC_STATIC,68,1,40,8
+    EDITTEXT        IDC_EDIT_OBJECTBRUSHSIZE,70,13,34,12,ES_AUTOHSCROLL
+    CONTROL         "",IDC_SPIN_OBJECTBRUSHSIZE,"msctls_updown32",UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,104,13,11,11
+    CONTROL         "Scale",IDC_OBJECTCHECK_SCALE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,125,13,34,10,WS_EX_RIGHT,HIDC_OBJECTCHECK_SCALE
+    LTEXT           "Min",IDC_STATIC,161,1,12,8
+    EDITTEXT        IDC_OBJECTEDIT_SCALEMIN,163,13,39,12,ES_AUTOHSCROLL
+    CONTROL         "",IDC_OBJECTSPIN_SCALEMIN,"msctls_updown32",UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,191,13,11,11
+    LTEXT           "Max",IDC_STATIC,205,1,14,8
+    EDITTEXT        IDC_OBJECTEDIT_SCALEMAX,204,13,39,12,ES_AUTOHSCROLL
+    CONTROL         "",IDC_OBJECTSPIN_SCALEMAX,"msctls_updown32",UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,235,13,11,11
+    CONTROL         "Rotation",IDC_OBJECTCHECK_ROT,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,249,13,43,15,WS_EX_RIGHT,HIDC_OBJECTCHECK_ROT
+    LTEXT           "Rotation Axis",IDC_STATIC,293,1,42,8
+    COMBOBOX        IDC_OBJECTLIST_ROTAXIS,295,13,70,63,CBS_DROPDOWNLIST | WS_DISABLED | WS_VSCROLL | WS_TABSTOP,0,HIDC_OBJECTLIST_ROTAXIS
+    LTEXT           "Min",IDC_STATIC,365,1,12,8
+    EDITTEXT        IDC_OBJECTEDIT_ROTMIN,366,13,39,12,ES_AUTOHSCROLL
+    CONTROL         "",IDC_OBJECTSPIN_ROTMIN,"msctls_updown32",UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,395,13,11,12
+    LTEXT           "Max",IDC_STATIC,409,1,14,8
+    EDITTEXT        IDC_OBJECTEDIT_ROTMAX,411,13,39,12,ES_AUTOHSCROLL
+    CONTROL         "",IDC_OBJECTSPIN_ROTMAX,"msctls_updown32",UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,439,13,11,12
+    CONTROL         "Level Terrain Under Object",IDC_OBJECT_LEVELTERRAIN,
+                    "Button",BS_AUTOCHECKBOX | BS_ICON | BS_PUSHLIKE | WS_TABSTOP,459,1,24,24,0,HIDC_OBJECT_LEVELTERRAIN
+    LTEXT           "Paint Obj",IDC_STATIC,1,25,30,8
+    LTEXT           "Erase Obj",IDC_STATIC,35,25,32,8
+    LTEXT           "Level Terrrain",IDC_STATIC,450,25,44,8
+END
+
+IDD_BITMAP_WINDOW DIALOGEX 0, 0, 378, 343
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Dialog"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,321,7,50,14
+    PUSHBUTTON      "Button1",IDC_BITMAP_PREVIEW,7,14,300,300,BS_BITMAP
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_OBJECTPAINT         ICON                    "res\\paint_selected_object_24.ico"
+IDR_OBJECTTYPE          ICON                    "res\\object.ico"
+IDI_OBJECTSCALE         ICON                    "res\\escale_select_object_24.ico"
+IDI_OBJECTROTATE        ICON                    "res\\rotate_3d_object_24.ico"
+IDI_OBJECTDELETE        ICON                    "res\\Erase.ico"
+IDI_OBJECTCREATE        ICON                    "res\\create_new_3d_object_24.ico"
+IDI_OBJECTMOVE          ICON                    "res\\move_3d_object_24.ico"
+IDI_OBJECTCOLLISION     ICON                    "res\\turn_on_collision_detection_24.ico"
+IDI_OBJECTERASE         ICON                    "res\\erase_selected_object_24.ico"
+IDI_OBJECTLEVELTERRAIN  ICON                    "res\\level_terrain_below_object_while_painting_object_24.ico"
+IDI_OBJECTSELECT        ICON                    "res\\select_3d_object_24.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_TOOLBAR             BITMAP                  "res\\MENUBITMAPS.bmp"
+IDB_OBJECT_DELETE_DOWN  BITMAP                  "res\\object_delete_Down.bmp"
+IDB_OBJECT_DELETE_UP    BITMAP                  "res\\object_delete_up.bmp"
+IDB_OBJECT_DELETE_SEL   BITMAP                  "res\\object_delete_sel.bmp"
+IDB_OBJECT_DELETE_DISABLED BITMAP                  "res\\object_delete_disabled.bmp"
+IDB_OBJECT_ZOOM_DOWN    BITMAP                  "res\\object_zoom_down.bmp"
+IDB_OBJECT_ZOOM_UP      BITMAP                  "res\\object_zoom_up.bmp"
+IDB_OBJECT_ZOOM_SEL     BITMAP                  "res\\object_zoom_sel.bmp"
+IDB_OBJECT_ZOOM_DISABLED BITMAP                  "res\\object_zoom_disabled.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_OBJECT_TOOL_PALETTE, DIALOG
+    BEGIN
+        LEFTMARGIN, 6
+        RIGHTMARGIN, 588
+        TOPMARGIN, 1
+        BOTTOMMARGIN, 7
+        HORZGUIDE, 12
+    END
+
+    IDD_NEWOBJECT_SELECTION, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 183
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 128
+    END
+
+    IDD_OBJECT_PAINT_PALETTE, DIALOG
+    BEGIN
+        RIGHTMARGIN, 509
+        VERTGUIDE, 6
+        TOPMARGIN, 1
+        HORZGUIDE, 13
+    END
+
+    IDD_BITMAP_WINDOW, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 371
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 336
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDR_OBJECTTYPE          "\nObject\nObject\n\n\nObject.Document\nObject Document"
+    IDS_LOCK_NONE           "No Lock"
+    IDS_RESOURCE_NAME       "Objects"
+    IDS_LOCK_XY             "Lock XY"
+    IDS_LOCK_YZ             "Lock YZ"
+    IDS_LOCK_XZ             "Lock XZ"
+    IDS_HUG_NONE            "None"
+    IDS_HUG_NEG_X           "-X Object"
+END
+
+STRINGTABLE 
+BEGIN
+    IDC_OBJECT_SCALE        "Scale Object\nScales object(s) selected in view"
+    IDC_OBJECT_ROTATE       "Rotate The Object\nRotates object(s) selected in the view"
+    IDC_OBJECT_MOVE         "Move the Object\nMoves the select object(s)"
+    IDC_OBJECT_CREATE       "Create New Object\nCreates a new object in the view"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_OBJECTS_ENABLECOLLISIONS 
+                            "Enable Collision\nEnables Collision Detections between Objects"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_HUG_POS_X           "+X Object"
+    IDS_HUG_NEG_Y           "-Y Object"
+    IDS_HUG_POS_Y           "+Y Object"
+    IDS_HUG_NEG_Z           "-Z Object"
+    IDS_HUG_POS_Z           "+Z Object"
+    IDS_LOCK_X              "Lock X"
+    IDS_LOCK_Y              "Lock Y"
+    IDS_LOCK_Z              "Lock Z"
+    IDS_X                   "X"
+    IDS_Y                   "Y"
+    IDS_Z                   "Z"
+    IDS_XY                  "XY"
+    IDS_YZ                  "YZ"
+    IDS_XZ                  "XZ"
+    IDS_XYZ                 "XYZ"
+END
+
+STRINGTABLE 
+BEGIN
+    IDC_OBJECT_ZOOMTO       "Zoom to Object\nMove the camera so that the object is in view"
+    IDC_OBJECT_PAINT        "Object Paint Brush\nPaints selected object in world"
+    IDC_OBJECT_ERASE        "Object Eraser\nErase object in world"
+END
+
+STRINGTABLE 
+BEGIN
+    IDC_OBJECTCHECK_SCALE   "Scale Object\nScale painted object(s) by a random value between min and max"
+    IDC_OBJECTCHECK_ROT     "Rotate Object\nRotate object(s) around specified axis by a random value between min and max"
+    IDC_OBJECT_LEVELTERRAIN "Level Terrain\nLevel terrain underneath object while painting"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_PAINTING_PAINT       "Paint Objects"
+    ID_PAINTING_ERASE       "Erase Objects"
+    ID_PAINTING_SCALE       "Random scale while painting"
+    ID_PAINTING_ROTATION    "Random rotation while painting"
+    ID_PAINTING_LEVELTERRAIN "Level terrain under object while painting"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_EDIT_CLEAR           "Delete Selected Object\nDeletes selected object"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif //_WIN32
+#include "res\ObjectEditor.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

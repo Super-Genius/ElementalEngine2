@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<CSpawner Name="World">
+	<CEntity Name="DirectionalLight" EntityTypes="Light/Directional">
+		<CLightObject Name="DirectionalLight_Object" Version="500"  PositionX="0.0" PositionY="0.0" PositionZ="0.0" DirectionX="0.0" DirectionY="0.0" DirectionZ="1.0" Attenuation="9999.0" ColorRed="1.0" ColorBlue="1.0" ColorGreen="1.0" ColorAlpha="1.0" LightType="DIRECTIONAL_LIGHT" CastShadows="true">
+		</CLightObject>
+		<CEditorEntity Name="GDSRenderPoint" EntityTypes="dummyEntity" PositionX="0.0" PositionY="0.0" PositionZ="0.0" RotationX="0.0" RotationY="0.0" RotationZ="0.0" ScaleX="1.0" ScaleY="1.0" ScaleZ="1.0">
+			<Cal3DRenderObject Name="RenderPointRO" FileName="basedata\\editor\\Misc_Triggers\\Light_Trigger.cfg">
+			</Cal3DRenderObject>
+		</CEditorEntity>
+	</CEntity>
+</CSpawner>

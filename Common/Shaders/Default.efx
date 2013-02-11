@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<CEffect version="3100"
+	numconstants="0"
+	numtextures="1"
+	numrenderstates="0"
+	numbones="0"
+	numflags="0"
+	numformats="0" >
+  <Texture tag="Diffuse" pass="0" stage="0" type="Constant" file="none" numtexturestates="5">
+    <TextureStageState mode="mipfilter" value="point" ></TextureStageState>
+    <TextureStageState mode="minfilter" value="linear" ></TextureStageState>
+    <TextureStageState mode="magfilter" value="linear" ></TextureStageState>
+    <TextureStageState mode="umode" value="clamp" ></TextureStageState>
+    <TextureStageState mode="vmode" value="clamp" ></TextureStageState>
+  </Texture>
+</CEffect>

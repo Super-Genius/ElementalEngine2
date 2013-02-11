@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<CQHStateMachine version="1.2" name="ObjectiveCounter_StateMachine" numStates="1" startState="ObjectiveCounter_State" endState="">
+	<CQHState version="1.0" name="ObjectiveCounter_State" x="130" y="70" width="150" height="150" numSubStates="0" numEvents="2" entryEvent="" updateEvent="" exitEvent="">
+		<CQHStateMachineEvent version="1.0" name="ObjectiveCounter_WaveComplete_Event" x="0" y="0" guard="" numActions="0" numTransitions="0">
+			<CQHStateMachineActionHandler version="1.0" name="ObjectiveCounter_WaveComplete_AH" actionName="ObjectiveCounter_WaveComplete" >
+			</CQHStateMachineActionHandler>	
+		</CQHStateMachineEvent>
+		<CQHStateMachineEvent version="1.0" name="ObjectiveCounter_MissionComplete_Event" x="0" y="0" guard="" numActions="0" numTransitions="0">
+			<CQHStateMachineActionHandler version="1.0" name="ObjectiveCounter_MissionComplete_AH" actionName="ObjectiveCounter_MissionComplete" >
+			</CQHStateMachineActionHandler>	
+		</CQHStateMachineEvent>		
+	</CQHState>
+</CQHStateMachine>

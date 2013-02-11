@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<VisualStudioProject
+	ProjectType="Visual C++"
+	Version="7.10"
+	Name="ModelMunger"
+	ProjectGUID="{34085030-121F-4F11-BA4E-E3C109E5942A}"
+	RootNamespace="ModelMunger"
+	SccProjectName="SAK"
+	SccAuxPath="SAK"
+	SccLocalPath="SAK"
+	SccProvider="SAK"
+	Keyword="Win32Proj">
+	<Platforms>
+		<Platform
+			Name="Win32"/>
+	</Platforms>
+	<Configurations>
+		<Configuration
+			Name="Debug|Win32"
+			OutputDirectory="$(ConfigurationName)"
+			IntermediateDirectory="$(ConfigurationName)"
+			ConfigurationType="1"
+			CharacterSet="2">
+			<Tool
+				Name="VCCLCompilerTool"
+				Optimization="0"
+				AdditionalIncludeDirectories="..\..\..\ElementalEngine2\EESDKLib;..\..\..\ElementalEngine2\SDK\include"
+				PreprocessorDefinitions="WIN32;_DEBUG;_CONSOLE"
+				MinimalRebuild="TRUE"
+				BasicRuntimeChecks="3"
+				RuntimeLibrary="3"
+				RuntimeTypeInfo="TRUE"
+				UsePrecompiledHeader="0"
+				ObjectFile="$(IntDir)/"
+				ProgramDataBaseFileName="$(IntDir)/vc70.pdb"
+				WarningLevel="3"
+				WarnAsError="TRUE"
+				Detect64BitPortabilityProblems="TRUE"
+				DebugInformationFormat="4"/>
+			<Tool
+				Name="VCCustomBuildTool"
+				CommandLine="xcopy /Y /D /S &quot;..\..\..\ElementalEngine2\SDK\bin\$(ConfigurationName)\*.*&quot; &quot;$(ConfigurationName)\&quot;
+xcopy /Y /D &quot;..\..\..\3rd Party\MilesWin\redist\*.*&quot; &quot;$(ConfigurationName)\&quot; &gt;nul
+xcopy /Y /D &quot;..\..\..\3rd Party\Novodex\Bin\win32\$(ConfigurationName)\nxPhysics.dll&quot; &quot;$(ConfigurationName)\&quot; &gt;nul
+xcopy /Y /D &quot;..\..\..\3rd Party\Novodex\Bin\win32\$(ConfigurationName)\nxCooking.dll&quot; &quot;$(ConfigurationName)\&quot; &gt;nul
+xcopy /Y /D &quot;..\..\..\3rd Party\Novodex\Bin\win32\$(ConfigurationName)\nxCharacter.dll&quot; &quot;$(ConfigurationName)\&quot; &gt;nul
+xcopy /Y /D &quot;..\..\..\3rd Party\Valhalla\ICore\$(ConfigurationName)\*.dll&quot; &quot;$(ConfigurationName)\&quot; &gt;nul
+xcopy /Y /D &quot;..\..\..\3rd Party\VisionSDK\bin\VisionD71.dll&quot; &quot;$(ConfigurationName)\&quot; &gt;nul
+xcopy /Y /D &quot;..\..\..\3rd Party\VisionSDK\bin\VBaseD71.dll&quot; &quot;$(ConfigurationName)\&quot; &gt;nul
+xcopy /Y /D &quot;..\..\..\ElementalEngine2\SDK\bin\$(ConfigurationName)\LoadSaveManager.dll&quot; &quot;$(ConfigurationName)\&quot; &gt;nul
+xcopy /Y /D &quot;..\..\..\ElementalEngine2\SDK\bin\$(ConfigurationName)\Plugins\*.*&quot; &quot;$(ConfigurationName)\Plugins\&quot; &gt;nul
+xcopy /Y /D &quot;..\..\..\Plugins2\bin\$(ConfigurationName)\*.*&quot; &quot;$(ConfigurationName)\Plugins\&quot; &gt;nul
+xcopy /Y /D &quot;..\..\..\3rd Party\Beyondata\GuiLib\bin\$(ConfigurationName)\guilib.dll&quot; &quot;$(ConfigurationName)\&quot; &gt;nul
+xcopy /Y /D &quot;..\..\..\3rd Party\LibXML++\bin\$(ConfigurationName)\libxml++.dll&quot; &quot;$(ConfigurationName)\&quot; &gt;nul
+xcopy /Y /D &quot;..\..\..\ElementalEngine2\SDK\bin\$(ConfigurationName)\Plugins\TextureLoader.dls&quot; &quot;$(ConfigurationName)\Plugins\&quot; &gt;nul
+xcopy /Y /D &quot;..\..\..\ElementalEngine2\SDK\bin\$(ConfigurationName)\Plugins\TextureLoader.pdb&quot; &quot;$(ConfigurationName)\Plugins\&quot; &gt;nul
+xcopy /Y /D &quot;..\..\..\3rd Party\COptionTreeDLL\bin\$(ConfigurationName)\COptionTree.dll&quot; &quot;$(ConfigurationName)\&quot; &gt;nul
+xcopy /Y /D &quot;..\..\..\3rd Party\COptionTreeDLL\bin\$(ConfigurationName)\COptionTree.pdb&quot; &quot;$(ConfigurationName)\&quot; &gt;nul
+xcopy /Y /D &quot;..\..\..\3rd Party\DevIL\lib\Dynamic$(ConfigurationName)\*.dll&quot; &quot;$(ConfigurationName)\&quot; &gt;nul
+xcopy /Y /D &quot;..\..\..\3rd Party\DevIL\lib\Dynamic$(ConfigurationName)\*.pdb&quot; &quot;$(ConfigurationName)\&quot; &gt;nul
+xcopy /Y /D /S &quot;..\..\..\GDS2\data\*.*&quot; &quot;$(ConfigurationName)\&quot; &gt;nul
+"
+				Outputs="$(ConfigurationName)\*.*"/>
+			<Tool
+				Name="VCLinkerTool"
+				AdditionalDependencies="ElementalEngine.lib"
+				OutputFile="$(OutDir)/ModelMunger.exe"
+				LinkIncremental="2"
+				AdditionalLibraryDirectories="&quot;..\..\..\ElementalEngine2\SDK\lib\$(ConfigurationName)&quot;"
+				GenerateDebugInformation="TRUE"
+				ProgramDatabaseFile="$(OutDir)/ModelMunger.pdb"
+				SubSystem="1"
+				TargetMachine="1"/>
+			<Tool
+				Name="VCMIDLTool"/>
+			<Tool
+				Name="VCPostBuildEventTool"/>
+			<Tool
+				Name="VCPreBuildEventTool"/>
+			<Tool
+				Name="VCPreLinkEventTool"/>
+			<Tool
+				Name="VCResourceCompilerTool"/>
+			<Tool
+				Name="VCWebServiceProxyGeneratorTool"/>
+			<Tool
+				Name="VCXMLDataGeneratorTool"/>
+			<Tool
+				Name="VCWebDeploymentTool"/>
+			<Tool
+				Name="VCManagedWrapperGeneratorTool"/>
+			<Tool
+				Name="VCAuxiliaryManagedWrapperGeneratorTool"/>
+		</Configuration>
+		<Configuration
+			Name="Release|Win32"
+			OutputDirectory="$(ConfigurationName)"
+			IntermediateDirectory="$(ConfigurationName)"
+			ConfigurationType="1"
+			CharacterSet="2">
+			<Tool
+				Name="VCCLCompilerTool"
+				AdditionalIncludeDirectories="..\..\..\ElementalEngine2\EESDKLib;..\..\..\ElementalEngine2\SDK\include"
+				PreprocessorDefinitions="WIN32;NDEBUG;_CONSOLE"
+				RuntimeLibrary="2"
+				RuntimeTypeInfo="TRUE"
+				UsePrecompiledHeader="0"
+				ObjectFile="$(IntDir)/"
+				ProgramDataBaseFileName="$(IntDir)/vc70.pdb"
+				WarningLevel="3"
+				WarnAsError="TRUE"
+				Detect64BitPortabilityProblems="TRUE"
+				DebugInformationFormat="3"/>
+			<Tool
+				Name="VCCustomBuildTool"
+				CommandLine="xcopy /Y /D /S &quot;..\..\..\ElementalEngine2\SDK\bin\$(ConfigurationName)\*.*&quot; &quot;$(ConfigurationName)\&quot;
+xcopy /Y /D &quot;..\..\..\3rd Party\MilesWin\redist\*.*&quot; &quot;$(ConfigurationName)\&quot; &gt;nul
+xcopy /Y /D &quot;..\..\..\3rd Party\Novodex\Bin\win32\$(ConfigurationName)\nxPhysics.dll&quot; &quot;$(ConfigurationName)\&quot; &gt;nul
+xcopy /Y /D &quot;..\..\..\3rd Party\Novodex\Bin\win32\$(ConfigurationName)\nxCooking.dll&quot; &quot;$(ConfigurationName)\&quot; &gt;nul
+xcopy /Y /D &quot;..\..\..\3rd Party\Valhalla\ICore\$(ConfigurationName)\*.dll&quot; &quot;$(ConfigurationName)\&quot; &gt;nul
+xcopy /Y /D &quot;..\..\..\3rd Party\VisionSDK\bin\Vision71.dll&quot; &quot;$(ConfigurationName)\&quot; &gt;nul
+xcopy /Y /D &quot;..\..\..\3rd Party\VisionSDK\bin\VBase71.dll&quot; &quot;$(ConfigurationName)\&quot; &gt;nul
+xcopy /Y /D &quot;..\..\..\ElementalEngine2\SDK\bin\$(ConfigurationName)\LoadSaveManager.dll&quot; &quot;$(ConfigurationName)\&quot; &gt;nul
+xcopy /Y /D &quot;..\..\..\ElementalEngine2\SDK\bin\$(ConfigurationName)\Plugins\*.*&quot; &quot;$(ConfigurationName)\Plugins\&quot; &gt;nul
+xcopy /Y /D &quot;..\..\..\Plugins2\bin\$(ConfigurationName)\LuaLoader.dls&quot; &quot;$(ConfigurationName)\Plugins\&quot; &gt;nul
+xcopy /Y /D &quot;..\..\..\Plugins2\bin\$(ConfigurationName)\EELuaScript.*&quot; &quot;$(ConfigurationName)\Plugins\&quot; &gt;nul
+xcopy /Y /D &quot;..\..\..\Plugins2\bin\$(ConfigurationName)\LuaNSM.*&quot; &quot;$(ConfigurationName)\Plugins\&quot; &gt;nul
+xcopy /Y /D &quot;..\..\..\3rd Party\Beyondata\GuiLib\bin\$(ConfigurationName)\guilib.dll&quot; &quot;$(ConfigurationName)\&quot; &gt;nul
+xcopy /Y /D &quot;..\..\..\3rd Party\LibXML++\bin\$(ConfigurationName)\libxml++.dll&quot; &quot;$(ConfigurationName)\&quot; &gt;nul
+xcopy /Y /D &quot;..\..\..\ElementalEngine2\SDK\bin\$(ConfigurationName)\Plugins\TextureLoader.dls&quot; &quot;$(ConfigurationName)\Plugins\&quot; &gt;nul
+xcopy /Y /D &quot;..\..\..\ElementalEngine2\SDK\bin\$(ConfigurationName)\Plugins\TextureLoader.pdb&quot; &quot;$(ConfigurationName)\Plugins\&quot; &gt;nul
+xcopy /Y /D &quot;..\..\..\3rd Party\COptionTreeDLL\bin\$(ConfigurationName)\COptionTree.dll&quot; &quot;$(ConfigurationName)\&quot; &gt;nul
+xcopy /Y /D &quot;..\..\..\3rd Party\COptionTreeDLL\bin\$(ConfigurationName)\COptionTree.pdb&quot; &quot;$(ConfigurationName)\&quot; &gt;nul
+xcopy /Y /D &quot;..\..\..\3rd Party\DevIL\lib\Dynamic$(ConfigurationName)\*.dll&quot; &quot;$(ConfigurationName)\&quot; &gt;nul
+xcopy /Y /D &quot;..\..\..\3rd Party\DevIL\lib\Dynamic$(ConfigurationName)\*.pdb&quot; &quot;$(ConfigurationName)\&quot; &gt;nul
+xcopy /Y /D /S &quot;..\..\..\GDS2\data\*.*&quot; &quot;$(ConfigurationName)\&quot; &gt;nul
+"
+				Outputs="$(ConfigurationName)\ModelMunger.exe"/>
+			<Tool
+				Name="VCLinkerTool"
+				AdditionalDependencies="ElementalEngine.lib"
+				OutputFile="$(OutDir)/ModelMunger.exe"
+				LinkIncremental="1"
+				AdditionalLibraryDirectories="&quot;..\..\..\ElementalEngine2\SDK\lib\$(ConfigurationName)&quot;"
+				GenerateDebugInformation="TRUE"
+				SubSystem="1"
+				OptimizeReferences="2"
+				EnableCOMDATFolding="2"
+				TargetMachine="1"/>
+			<Tool
+				Name="VCMIDLTool"/>
+			<Tool
+				Name="VCPostBuildEventTool"/>
+			<Tool
+				Name="VCPreBuildEventTool"/>
+			<Tool
+				Name="VCPreLinkEventTool"/>
+			<Tool
+				Name="VCResourceCompilerTool"/>
+			<Tool
+				Name="VCWebServiceProxyGeneratorTool"/>
+			<Tool
+				Name="VCXMLDataGeneratorTool"/>
+			<Tool
+				Name="VCWebDeploymentTool"/>
+			<Tool
+				Name="VCManagedWrapperGeneratorTool"/>
+			<Tool
+				Name="VCAuxiliaryManagedWrapperGeneratorTool"/>
+		</Configuration>
+	</Configurations>
+	<References>
+	</References>
+	<Files>
+		<Filter
+			Name="Source Files"
+			Filter="cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx"
+			UniqueIdentifier="{4FC737F1-C7A5-4376-A066-2A32D752A2FF}">
+			<File
+				RelativePath=".\main.cpp">
+			</File>
+		</Filter>
+		<Filter
+			Name="Header Files"
+			Filter="h;hpp;hxx;hm;inl;inc;xsd"
+			UniqueIdentifier="{93995380-89BD-4b04-88EB-625FBE52EBFB}">
+			<File
+				RelativePath=".\main.h">
+			</File>
+		</Filter>
+		<Filter
+			Name="Resource Files"
+			Filter="rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx"
+			UniqueIdentifier="{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}">
+		</Filter>
+	</Files>
+	<Globals>
+	</Globals>
+</VisualStudioProject>

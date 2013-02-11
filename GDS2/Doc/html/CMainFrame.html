@@ -1,0 +1,1245 @@
+<html>
+<head>
+<title>
+Documentation for class CMainFrame
+
+</title>
+<link rel="stylesheet" type="text/css" href="doc.css">
+</head>
+<body>
+<table border="0" width="100%">
+	<tr>
+		<td align="right">
+			<h4>Auto Generated Class Documentation by ClassBuilder</h4>
+		<td>
+	</tr>
+</table>
+<hr>
+<center><a href="main_index.html">Main</a>
+<a href="namespace.html">Namespace List</a>
+<a href="class_hiearchy.html">Class Hierarchy</a>
+<a href="compound_members.html">Compound Members</a>
+<a href="compound_list.html">Compound List</a>
+<a href="diagram_list.html">Diagram List</a>
+</center><hr><h1>CMainFrame Reference</h1>
+<p></p><p><pre>#include 
+</pre></p><p>Inheritance diagram for CMainFrame
+</p><table border="0"><tr>
+<td colspan="2"><h2>Public Methods</h2></td>
+</tr>
+<tr>
+<td align="right"><a name="#_methodCMainFrame_summary"></a></td><td align="left"><a href="#_methodCMainFrame_details">CMainFrame</a>(  )</td></tr>
+<tr>
+<td>&nbsp;</td>
+<td>
+<font size=-1><em>Constructor method.</em><a href="#_methodCMainFrame_details">More...</a>
+</font></td></tr>
+<tr>
+<td align="right"><a name="#_methodOnCmdMsg_summary"></a>BOOL </td><td align="left"><a href="#_methodOnCmdMsg_details">OnCmdMsg</a>( UINT  nID, int  nCode, void*  pExtra, AFX_CMDHANDLERINFO*  pHandlerInfo )</td></tr>
+<tr>
+<td>&nbsp;</td>
+<td>
+<font size=-1><em>Commands sent to the active window.</em><a href="#_methodOnCmdMsg_details">More...</a>
+</font></td></tr>
+<tr>
+<td align="right"><a name="#_methodBroadcastMessage_summary"></a>BOOL </td><td align="left"><a href="#_methodBroadcastMessage_details">BroadcastMessage</a>( UINT  nIDmsg, WPARAM  wParam, LPARAM  lParam, HWND  tWnd )</td></tr>
+<tr>
+<td>&nbsp;</td>
+<td>
+<font size=-1><em>This is the generic Broadcast message that all windows receive.</em><a href="#_methodBroadcastMessage_details">More...</a>
+</font></td></tr>
+<tr>
+<td align="right"><a name="#_methodGetOverrideClass_summary"></a>PFNCLASSOVERRIDE </td><td align="left"><a href="#_methodGetOverrideClass_details">GetOverrideClass</a>( LPCTSTR  className )</td></tr>
+<tr>
+<td align="right"><a name="#_methodSetOverrideClass_summary"></a>void </td><td align="left"><a href="#_methodSetOverrideClass_details">SetOverrideClass</a>( OVERRIDECLASS*  overrideInfo )</td></tr>
+<tr>
+<td align="right"><a name="#_methodPreCreateWindow_summary"></a>BOOL </td><td align="left"><a href="#_methodPreCreateWindow_details">PreCreateWindow</a>( CREATESTRUCT&  cs )</td></tr>
+<tr>
+<td align="right">virtual <a name="#_method~CMainFrame_summary"></a></td><td align="left"><a href="#_method~CMainFrame_details">~CMainFrame</a>(  )</td></tr>
+<tr>
+<td>&nbsp;</td>
+<td>
+<font size=-1><em>Destructor method.</em><a href="#_method~CMainFrame_details">More...</a>
+</font></td></tr>
+<tr>
+<td align="right"><a name="#_methodAssertValid_summary"></a>void </td><td align="left"><a href="#_methodAssertValid_details">AssertValid</a>(  )</td></tr>
+<tr>
+<td align="right"><a name="#_methodDump_summary"></a>void </td><td align="left"><a href="#_methodDump_details">Dump</a>( CDumpContext&  dc )</td></tr>
+<tr>
+<td align="right"><a name="#_methodVerifyBarState_summary"></a>BOOL </td><td align="left"><a href="#_methodVerifyBarState_details">VerifyBarState</a>( LPCTSTR  lpszProfileName )</td></tr>
+<tr>
+<td colspan="2"><h2>Public Members</h2></td>
+</tr>
+<tr>
+<td align="right">COptionsDialog* </td><td align="left"><a href="#_memberm_OptDialog_details">m_OptDialog</a></td></tr>
+<tr>
+<td>&nbsp;</td>
+<td>
+<font size=-1><em>This is the main dialog that holds the property sheet and property pages for all options
+for all plugins and the main application options.</em><a href="#_memberm_OptDialog_details">More...</a>
+</font></td></tr>
+<tr>
+<td align="right">MAPSTRTOCLASS </td><td align="left"><a href="#_memberm_OverrideMap_details">m_OverrideMap</a></td></tr>
+<tr>
+<td colspan="2"><h2>Protected Methods</h2></td>
+</tr>
+<tr>
+<td align="right"><a name="#_methodOnCreate_summary"></a>afx_msg int </td><td align="left"><a href="#_methodOnCreate_details">OnCreate</a>( LPCREATESTRUCT  lpCreateStruct )</td></tr>
+<tr>
+<td align="right"><a name="#_methodOnViewOutput_summary"></a>afx_msg void </td><td align="left"><a href="#_methodOnViewOutput_details">OnViewOutput</a>(  )</td></tr>
+<tr>
+<td>&nbsp;</td>
+<td>
+<font size=-1><em>Handles the View->Output menu item user selection
+</em></font></td></tr>
+<tr>
+<td align="right"><a name="#_methodOnUpdateViewOutput_summary"></a>afx_msg void </td><td align="left"><a href="#_methodOnUpdateViewOutput_details">OnUpdateViewOutput</a>( CCmdUI*  pCmdUI )</td></tr>
+<tr>
+<td>&nbsp;</td>
+<td>
+<font size=-1><em>When the View->Output menu item is selected this function updates the attibutes of the
+menu item.</em><a href="#_methodOnUpdateViewOutput_details">More...</a>
+</font></td></tr>
+<tr>
+<td align="right"><a name="#_methodOnClose_summary"></a>afx_msg void </td><td align="left"><a href="#_methodOnClose_details">OnClose</a>(  )</td></tr>
+<tr>
+<td align="right"><a name="#_methodOnViewObjects_summary"></a>afx_msg void </td><td align="left"><a href="#_methodOnViewObjects_details">OnViewObjects</a>(  )</td></tr>
+<tr>
+<td>&nbsp;</td>
+<td>
+<font size=-1><em>Handles the View->Objects menu item user selection
+</em></font></td></tr>
+<tr>
+<td align="right"><a name="#_methodOnUpdateViewObjects_summary"></a>afx_msg void </td><td align="left"><a href="#_methodOnUpdateViewObjects_details">OnUpdateViewObjects</a>( CCmdUI*  pCmdUI )</td></tr>
+<tr>
+<td>&nbsp;</td>
+<td>
+<font size=-1><em>When menu for View->Object is displayed, this function updates the attributes (i.</em><a href="#_methodOnUpdateViewObjects_details">More...</a>
+</font></td></tr>
+<tr>
+<td align="right"><a name="#_methodOnToolsOptions_summary"></a>afx_msg void </td><td align="left"><a href="#_methodOnToolsOptions_details">OnToolsOptions</a>(  )</td></tr>
+<tr>
+<td>&nbsp;</td>
+<td>
+<font size=-1><em>Intercepts the menu command to show the options dialog.</em><a href="#_methodOnToolsOptions_details">More...</a>
+</font></td></tr>
+<tr>
+<td align="right"><a name="#_methodOnUpdateToolsOptions_summary"></a>afx_msg void </td><td align="left"><a href="#_methodOnUpdateToolsOptions_details">OnUpdateToolsOptions</a>( CCmdUI*  pCmdUI )</td></tr>
+<tr>
+<td>&nbsp;</td>
+<td>
+<font size=-1><em>This is called when the main application wants to show the Tools Options command.</em><a href="#_methodOnUpdateToolsOptions_details">More...</a>
+</font></td></tr>
+<tr>
+<td align="right"><a name="#_methodOnFileNew_summary"></a>afx_msg void </td><td align="left"><a href="#_methodOnFileNew_details">OnFileNew</a>(  )</td></tr>
+<tr>
+<td align="right"><a name="#_methodOnGetStatusBar_summary"></a>afx_msg LRESULT </td><td align="left"><a href="#_methodOnGetStatusBar_details">OnGetStatusBar</a>( WPARAM  wParam, LPARAM  lParam )</td></tr>
+<tr>
+<td>&nbsp;</td>
+<td>
+<font size=-1><em>Handles windows registered message that retrieves the Status bar.</em><a href="#_methodOnGetStatusBar_details">More...</a>
+</font></td></tr>
+<tr>
+<td align="right"><a name="#_methodOnAddOptionPageMessage_summary"></a>afx_msg LRESULT </td><td align="left"><a href="#_methodOnAddOptionPageMessage_details">OnAddOptionPageMessage</a>( WPARAM  wParam, LPARAM  lParam )</td></tr>
+<tr>
+<td>&nbsp;</td>
+<td>
+<font size=-1><em>Function that handles message to add a page to the options page of the main applications
+options dialog.</em><a href="#_methodOnAddOptionPageMessage_details">More...</a>
+</font></td></tr>
+<tr>
+<td colspan="2"><h2>Protected Members</h2></td>
+</tr>
+</table>
+<hr>
+<tr>
+<td align="right">CStatusBar </td><td align="left"><a href="#_memberm_wndStatusBar_details">m_wndStatusBar</a></td></tr>
+<tr>
+<td>&nbsp;</td>
+<td>
+<font size=-1><em>The main windows status bar.</em><a href="#_memberm_wndStatusBar_details">More...</a>
+</font></td></tr>
+<tr>
+<td align="right">CHiColorToolBar </td><td align="left"><a href="#_memberm_wndToolBar_details">m_wndToolBar</a></td></tr>
+<tr>
+<td>&nbsp;</td>
+<td>
+<font size=-1><em>The main windows High Color Toolbar
+</em></font></td></tr>
+<tr>
+<td align="right">CBitmap </td><td align="left"><a href="#_memberm_bmToolbarHi_details">m_bmToolbarHi</a></td></tr>
+<tr>
+<td>&nbsp;</td>
+<td>
+<font size=-1><em>High Color Toolbar bitmap.</em><a href="#_memberm_bmToolbarHi_details">More...</a>
+</font></td></tr>
+<tr>
+<td align="right">CBitmap </td><td align="left"><a href="#_memberm_bmToolbarHiD_details">m_bmToolbarHiD</a></td></tr>
+<tr>
+<td>&nbsp;</td>
+<td>
+<font size=-1><em>High color Disabled Toolbar bitmap
+</em></font></td></tr>
+<tr>
+<td align="right">CObjectBar </td><td align="left"><a href="#_memberm_ObjectBar_details">m_ObjectBar</a></td></tr>
+<tr>
+<td>&nbsp;</td>
+<td>
+<font size=-1><em>Dockable bar that holds tabs with objects for the resource manager.</em><a href="#_memberm_ObjectBar_details">More...</a>
+</font></td></tr>
+<h2><a name="_details"></a>Detailed Description</h2>
+<p>
+</p>
+<hr>
+<h2>Constructor and Destructor Documentation</h2>
+<a name="#_methodCMainFrame_details"></a><table border="0">
+<tr>
+<td>
+<table border="0">
+<tr>
+<td align="right"><a href="#_methodCMainFrame_summary">top</a>
+CMainFrame::CMainFrame</td>
+<td >
+(</td>
+<td >
+)</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<a name="#_method~CMainFrame_details"></a><table border="0">
+<tr>
+<td>
+<table border="0">
+<tr>
+<td align="right"><a href="#_method~CMainFrame_summary">top</a>
+CMainFrame::~CMainFrame</td>
+<td >
+(</td>
+<td >
+)</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<hr>
+<p>
+<h2>Member Function Documentation</h2>
+</p>
+<a name="#_methodOnCmdMsg_details"></a><table border="0">
+<tr>
+<td>
+<table border="0">
+<tr>
+<td ><a href="#_methodOnCmdMsg_summary">top</a>
+BOOL CMainFrame::OnCmdMsg</td>
+<td >
+(</td>
+<td >
+UINT </td>
+<td ><i>
+nID</i></td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td >
+int </td>
+<td ><i>
+nCode</i></td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td >
+void* </td>
+<td ><i>
+pExtra</i></td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td >
+AFX_CMDHANDLERINFO* </td>
+<td ><i>
+pHandlerInfo</i></td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>)</td>
+<td colspan="2">&nbsp;<code> [public]</code></td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table border="0"><tr>
+<td>&nbsp;</td>
+<td>
+<p>
+Commands sent to the active window.  i.e. Hotkeys, Menu messages etc.
+
+</p>
+<p>
+<b>Parameters:</b>
+</p>
+<table border="0">
+<tr>
+<td>
+<em><i>UINT </i></em>
+</td>
+<td>
+&nbsp;</td>
+</tr>
+<tr>
+<td>
+<em><i>int </i></em>
+</td>
+<td>
+&nbsp;</td>
+</tr>
+<tr>
+<td>
+<em><i>void* </i></em>
+</td>
+<td>
+&nbsp;</td>
+</tr>
+<tr>
+<td>
+<em><i>AFX_CMDHANDLERINFO* </i></em>
+</td>
+<td>
+&nbsp;</td>
+</tr>
+</table>
+<p>
+<b>Returns:</b>
+</p>
+<p><em><i>BOOL  : </i></em></p>
+</td>
+</tr>
+</table></td>
+</tr>
+</table><a name="#_methodBroadcastMessage_details"></a><table border="0">
+<tr>
+<td>
+<table border="0">
+<tr>
+<td ><a href="#_methodBroadcastMessage_summary">top</a>
+BOOL CMainFrame::BroadcastMessage</td>
+<td >
+(</td>
+<td >
+UINT </td>
+<td ><i>
+nIDmsg</i></td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td >
+WPARAM </td>
+<td ><i>
+wParam</i></td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td >
+LPARAM </td>
+<td ><i>
+lParam</i></td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td >
+HWND </td>
+<td ><i>
+tWnd</i></td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>)</td>
+<td colspan="2">&nbsp;<code> [public]</code></td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table border="0"><tr>
+<td>&nbsp;</td>
+<td>
+<p>
+This is the generic Broadcast message that all windows receive.
+
+</p>
+<p>
+<b>Parameters:</b>
+</p>
+<table border="0">
+<tr>
+<td>
+<em><i>UINT </i></em>
+</td>
+<td>
+The RegisterWindowMessage ID passed back when the message was registered.
+</td>
+</tr>
+<tr>
+<td>
+<em><i>WPARAM </i></em>
+</td>
+<td>
+Variable data dependent on the nIDMsg.
+</td>
+</tr>
+<tr>
+<td>
+<em><i>LPARAM </i></em>
+</td>
+<td>
+Variable parameter dependent on the nIDmsg.
+</td>
+</tr>
+<tr>
+<td>
+<em><i>HWND </i></em>
+</td>
+<td>
+&nbsp;</td>
+</tr>
+</table>
+<p>
+<b>Returns:</b>
+</p>
+<p><em><i>BOOL  : </i></em></p>
+</td>
+</tr>
+</table></td>
+</tr>
+</table><a name="#_methodGetOverrideClass_details"></a><table border="0">
+<tr>
+<td>
+<table border="0">
+<tr>
+<td ><a href="#_methodGetOverrideClass_summary">top</a>
+PFNCLASSOVERRIDE CMainFrame::GetOverrideClass</td>
+<td >
+(</td>
+<td >
+LPCTSTR </td>
+<td ><i>
+className</i></td>
+<td >
+)</td>
+<td >
+<code> [public]</code></td >
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table border="0"><tr>
+<td>&nbsp;</td>
+<td>
+<p>
+
+</p>
+<p>
+<b>Parameters:</b>
+</p>
+<table border="0">
+<tr>
+<td>
+<em><i>LPCTSTR </i></em>
+</td>
+<td>
+&nbsp;</td>
+</tr>
+</table>
+<p>
+<b>Returns:</b>
+</p>
+<p><em><i>PFNCLASSOVERRIDE  : </i></em></p>
+</td>
+</tr>
+</table></td>
+</tr>
+</table><a name="#_methodSetOverrideClass_details"></a><table border="0">
+<tr>
+<td>
+<table border="0">
+<tr>
+<td ><a href="#_methodSetOverrideClass_summary">top</a>
+void CMainFrame::SetOverrideClass</td>
+<td >
+(</td>
+<td >
+OVERRIDECLASS* </td>
+<td ><i>
+overrideInfo</i></td>
+<td >
+)</td>
+<td >
+<code> [public]</code></td >
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table border="0"><tr>
+<td>&nbsp;</td>
+<td>
+<p>
+
+</p>
+<p>
+<b>Parameters:</b>
+</p>
+<table border="0">
+<tr>
+<td>
+<em><i>OVERRIDECLASS* </i></em>
+</td>
+<td>
+&nbsp;</td>
+</tr>
+</table>
+<p>
+<b>Returns:</b>
+</p>
+<p><em><i>void  : </i></em></p>
+</td>
+</tr>
+</table></td>
+</tr>
+</table><a name="#_methodPreCreateWindow_details"></a><table border="0">
+<tr>
+<td>
+<table border="0">
+<tr>
+<td ><a href="#_methodPreCreateWindow_summary">top</a>
+BOOL CMainFrame::PreCreateWindow</td>
+<td >
+(</td>
+<td >
+CREATESTRUCT& </td>
+<td ><i>
+cs</i></td>
+<td >
+)</td>
+<td >
+<code> [public]</code></td >
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table border="0"><tr>
+<td>&nbsp;</td>
+<td>
+<p>
+
+</p>
+<p>
+<b>Parameters:</b>
+</p>
+<table border="0">
+<tr>
+<td>
+<em><i>CREATESTRUCT& </i></em>
+</td>
+<td>
+&nbsp;</td>
+</tr>
+</table>
+<p>
+<b>Returns:</b>
+</p>
+<p><em><i>BOOL  : </i></em></p>
+</td>
+</tr>
+</table></td>
+</tr>
+</table><a name="#_methodAssertValid_details"></a><table border="0">
+<tr>
+<td>
+<table border="0">
+<tr>
+<td ><a href="#_methodAssertValid_summary">top</a>
+void CMainFrame::AssertValid</td>
+<td >
+(</td>
+<td >
+)</td>
+<td >
+<code> [public]</code></td >
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table border="0"><tr>
+<td>&nbsp;</td>
+<td>
+<p>
+
+</p>
+<p>
+<b>Parameters:</b>
+</p>
+<table border="0">
+</table>
+<p>
+<b>Returns:</b>
+</p>
+<p><em><i>void  : </i></em></p>
+</td>
+</tr>
+</table></td>
+</tr>
+</table><a name="#_methodDump_details"></a><table border="0">
+<tr>
+<td>
+<table border="0">
+<tr>
+<td ><a href="#_methodDump_summary">top</a>
+void CMainFrame::Dump</td>
+<td >
+(</td>
+<td >
+CDumpContext& </td>
+<td ><i>
+dc</i></td>
+<td >
+)</td>
+<td >
+<code> [public]</code></td >
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table border="0"><tr>
+<td>&nbsp;</td>
+<td>
+<p>
+
+</p>
+<p>
+<b>Parameters:</b>
+</p>
+<table border="0">
+<tr>
+<td>
+<em><i>CDumpContext& </i></em>
+</td>
+<td>
+&nbsp;</td>
+</tr>
+</table>
+<p>
+<b>Returns:</b>
+</p>
+<p><em><i>void  : </i></em></p>
+</td>
+</tr>
+</table></td>
+</tr>
+</table><a name="#_methodVerifyBarState_details"></a><table border="0">
+<tr>
+<td>
+<table border="0">
+<tr>
+<td ><a href="#_methodVerifyBarState_summary">top</a>
+BOOL CMainFrame::VerifyBarState</td>
+<td >
+(</td>
+<td >
+LPCTSTR </td>
+<td ><i>
+lpszProfileName</i></td>
+<td >
+)</td>
+<td >
+<code> [public]</code></td >
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table border="0"><tr>
+<td>&nbsp;</td>
+<td>
+<p>
+
+</p>
+<p>
+<b>Parameters:</b>
+</p>
+<table border="0">
+<tr>
+<td>
+<em><i>LPCTSTR </i></em>
+</td>
+<td>
+&nbsp;</td>
+</tr>
+</table>
+<p>
+<b>Returns:</b>
+</p>
+<p><em><i>BOOL  : </i></em></p>
+</td>
+</tr>
+</table></td>
+</tr>
+</table><a name="#_methodOnCreate_details"></a><table border="0">
+<tr>
+<td>
+<table border="0">
+<tr>
+<td ><a href="#_methodOnCreate_summary">top</a>
+afx_msg int CMainFrame::OnCreate</td>
+<td >
+(</td>
+<td >
+LPCREATESTRUCT </td>
+<td ><i>
+lpCreateStruct</i></td>
+<td >
+)</td>
+<td >
+<code> [protected]</code></td >
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table border="0"><tr>
+<td>&nbsp;</td>
+<td>
+<p>
+
+</p>
+<p>
+<b>Parameters:</b>
+</p>
+<table border="0">
+<tr>
+<td>
+<em><i>LPCREATESTRUCT </i></em>
+</td>
+<td>
+&nbsp;</td>
+</tr>
+</table>
+<p>
+<b>Returns:</b>
+</p>
+<p><em><i>afx_msg int  : </i></em></p>
+</td>
+</tr>
+</table></td>
+</tr>
+</table><a name="#_methodOnViewOutput_details"></a><table border="0">
+<tr>
+<td>
+<table border="0">
+<tr>
+<td ><a href="#_methodOnViewOutput_summary">top</a>
+afx_msg void CMainFrame::OnViewOutput</td>
+<td >
+(</td>
+<td >
+)</td>
+<td >
+<code> [protected]</code></td >
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table border="0"><tr>
+<td>&nbsp;</td>
+<td>
+<p>
+Handles the View->Output menu item user selection
+
+</p>
+<p>
+<b>Parameters:</b>
+</p>
+<table border="0">
+</table>
+<p>
+<b>Returns:</b>
+</p>
+<p><em><i>afx_msg void  : </i></em></p>
+</td>
+</tr>
+</table></td>
+</tr>
+</table><a name="#_methodOnUpdateViewOutput_details"></a><table border="0">
+<tr>
+<td>
+<table border="0">
+<tr>
+<td ><a href="#_methodOnUpdateViewOutput_summary">top</a>
+afx_msg void CMainFrame::OnUpdateViewOutput</td>
+<td >
+(</td>
+<td >
+CCmdUI* </td>
+<td ><i>
+pCmdUI</i></td>
+<td >
+)</td>
+<td >
+<code> [protected]</code></td >
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table border="0"><tr>
+<td>&nbsp;</td>
+<td>
+<p>
+When the View->Output menu item is selected this function updates the attibutes of the
+menu item.
+
+</p>
+<p>
+<b>Parameters:</b>
+</p>
+<table border="0">
+<tr>
+<td>
+<em><i>CCmdUI* </i></em>
+</td>
+<td>
+&nbsp;</td>
+</tr>
+</table>
+<p>
+<b>Returns:</b>
+</p>
+<p><em><i>afx_msg void  : </i></em></p>
+</td>
+</tr>
+</table></td>
+</tr>
+</table><a name="#_methodOnClose_details"></a><table border="0">
+<tr>
+<td>
+<table border="0">
+<tr>
+<td ><a href="#_methodOnClose_summary">top</a>
+afx_msg void CMainFrame::OnClose</td>
+<td >
+(</td>
+<td >
+)</td>
+<td >
+<code> [protected]</code></td >
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table border="0"><tr>
+<td>&nbsp;</td>
+<td>
+<p>
+
+</p>
+<p>
+<b>Parameters:</b>
+</p>
+<table border="0">
+</table>
+<p>
+<b>Returns:</b>
+</p>
+<p><em><i>afx_msg void  : </i></em></p>
+</td>
+</tr>
+</table></td>
+</tr>
+</table><a name="#_methodOnViewObjects_details"></a><table border="0">
+<tr>
+<td>
+<table border="0">
+<tr>
+<td ><a href="#_methodOnViewObjects_summary">top</a>
+afx_msg void CMainFrame::OnViewObjects</td>
+<td >
+(</td>
+<td >
+)</td>
+<td >
+<code> [protected]</code></td >
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table border="0"><tr>
+<td>&nbsp;</td>
+<td>
+<p>
+Handles the View->Objects menu item user selection
+
+</p>
+<p>
+<b>Parameters:</b>
+</p>
+<table border="0">
+</table>
+<p>
+<b>Returns:</b>
+</p>
+<p><em><i>afx_msg void  : </i></em></p>
+</td>
+</tr>
+</table></td>
+</tr>
+</table><a name="#_methodOnUpdateViewObjects_details"></a><table border="0">
+<tr>
+<td>
+<table border="0">
+<tr>
+<td ><a href="#_methodOnUpdateViewObjects_summary">top</a>
+afx_msg void CMainFrame::OnUpdateViewObjects</td>
+<td >
+(</td>
+<td >
+CCmdUI* </td>
+<td ><i>
+pCmdUI</i></td>
+<td >
+)</td>
+<td >
+<code> [protected]</code></td >
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table border="0"><tr>
+<td>&nbsp;</td>
+<td>
+<p>
+When menu for View->Object is displayed, this function updates the attributes (i.e. checkmark).
+
+</p>
+<p>
+<b>Parameters:</b>
+</p>
+<table border="0">
+<tr>
+<td>
+<em><i>CCmdUI* </i></em>
+</td>
+<td>
+&nbsp;</td>
+</tr>
+</table>
+<p>
+<b>Returns:</b>
+</p>
+<p><em><i>afx_msg void  : </i></em></p>
+</td>
+</tr>
+</table></td>
+</tr>
+</table><a name="#_methodOnToolsOptions_details"></a><table border="0">
+<tr>
+<td>
+<table border="0">
+<tr>
+<td ><a href="#_methodOnToolsOptions_summary">top</a>
+afx_msg void CMainFrame::OnToolsOptions</td>
+<td >
+(</td>
+<td >
+)</td>
+<td >
+<code> [protected]</code></td >
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table border="0"><tr>
+<td>&nbsp;</td>
+<td>
+<p>
+Intercepts the menu command to show the options dialog.
+
+</p>
+<p>
+<b>Parameters:</b>
+</p>
+<table border="0">
+</table>
+<p>
+<b>Returns:</b>
+</p>
+<p><em><i>afx_msg void  : </i></em></p>
+</td>
+</tr>
+</table></td>
+</tr>
+</table><a name="#_methodOnUpdateToolsOptions_details"></a><table border="0">
+<tr>
+<td>
+<table border="0">
+<tr>
+<td ><a href="#_methodOnUpdateToolsOptions_summary">top</a>
+afx_msg void CMainFrame::OnUpdateToolsOptions</td>
+<td >
+(</td>
+<td >
+CCmdUI* </td>
+<td ><i>
+pCmdUI</i></td>
+<td >
+)</td>
+<td >
+<code> [protected]</code></td >
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table border="0"><tr>
+<td>&nbsp;</td>
+<td>
+<p>
+This is called when the main application wants to show the Tools Options command.  This
+function can disable, check, etc, the menu item.
+
+</p>
+<p>
+<b>Parameters:</b>
+</p>
+<table border="0">
+<tr>
+<td>
+<em><i>CCmdUI* </i></em>
+</td>
+<td>
+&nbsp;</td>
+</tr>
+</table>
+<p>
+<b>Returns:</b>
+</p>
+<p><em><i>afx_msg void  : </i></em></p>
+</td>
+</tr>
+</table></td>
+</tr>
+</table><a name="#_methodOnFileNew_details"></a><table border="0">
+<tr>
+<td>
+<table border="0">
+<tr>
+<td ><a href="#_methodOnFileNew_summary">top</a>
+afx_msg void CMainFrame::OnFileNew</td>
+<td >
+(</td>
+<td >
+)</td>
+<td >
+<code> [protected]</code></td >
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table border="0"><tr>
+<td>&nbsp;</td>
+<td>
+<p>
+
+</p>
+<p>
+<b>Parameters:</b>
+</p>
+<table border="0">
+</table>
+<p>
+<b>Returns:</b>
+</p>
+<p><em><i>afx_msg void  : </i></em></p>
+</td>
+</tr>
+</table></td>
+</tr>
+</table><a name="#_methodOnGetStatusBar_details"></a><table border="0">
+<tr>
+<td>
+<table border="0">
+<tr>
+<td ><a href="#_methodOnGetStatusBar_summary">top</a>
+afx_msg LRESULT CMainFrame::OnGetStatusBar</td>
+<td >
+(</td>
+<td >
+WPARAM </td>
+<td ><i>
+wParam</i></td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td >
+LPARAM </td>
+<td ><i>
+lParam</i></td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>)</td>
+<td colspan="2">&nbsp;<code> [protected]</code></td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table border="0"><tr>
+<td>&nbsp;</td>
+<td>
+<p>
+Handles windows registered message that retrieves the Status bar.  This is so that
+plugins can update or add things to the status bar.
+
+</p>
+<p>
+<b>Parameters:</b>
+</p>
+<table border="0">
+<tr>
+<td>
+<em><i>WPARAM </i></em>
+</td>
+<td>
+&nbsp;</td>
+</tr>
+<tr>
+<td>
+<em><i>LPARAM </i></em>
+</td>
+<td>
+Pointer to a pointer that receives the CStatusBar object.
+</td>
+</tr>
+</table>
+<p>
+<b>Returns:</b>
+</p>
+<p><em><i>afx_msg LRESULT  : </i></em></p>
+</td>
+</tr>
+</table></td>
+</tr>
+</table><a name="#_methodOnAddOptionPageMessage_details"></a><table border="0">
+<tr>
+<td>
+<table border="0">
+<tr>
+<td ><a href="#_methodOnAddOptionPageMessage_summary">top</a>
+afx_msg LRESULT CMainFrame::OnAddOptionPageMessage</td>
+<td >
+(</td>
+<td >
+WPARAM </td>
+<td ><i>
+wParam</i></td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td >
+LPARAM </td>
+<td ><i>
+lParam</i></td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>)</td>
+<td colspan="2">&nbsp;<code> [protected]</code></td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table border="0"><tr>
+<td>&nbsp;</td>
+<td>
+<p>
+Function that handles message to add a page to the options page of the main applications
+options dialog.  These are property pages on a property sheet.
+
+</p>
+<p>
+<b>Parameters:</b>
+</p>
+<table border="0">
+<tr>
+<td>
+<em><i>WPARAM </i></em>
+</td>
+<td>
+Not used.
+</td>
+</tr>
+<tr>
+<td>
+<em><i>LPARAM </i></em>
+</td>
+<td>
+Pointer to a CPropertyPage object.
+</td>
+</tr>
+</table>
+<p>
+<b>Returns:</b>
+</p>
+<p><em><i>afx_msg LRESULT  : </i></em></p>
+</td>
+</tr>
+</table></td>
+</tr>
+</table></body>
+</html>

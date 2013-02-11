@@ -1,0 +1,25 @@
+#include "Shaders\HLSLconstants.h"
+
+struct v2f
+{
+	float4 Position     : POSITION;
+	float2 TexCoord0    : TEXCOORD0;	// TexCoord
+};
+
+float4 main(v2f i, 
+	uniform sampler2D CachedTexture : register(s0)) 	: COLOR
+{
+	float4 coord = float4( 0, 0, 0, 10);
+	float4 outcolor  = tex2D(CachedTexture, i.TexCoord0);
+	//grab average
+	float3 average = tex2Dlod( CachedTexture, coord ).rgb;
+	//compute average's luminance
+	float luminance = 0.2125*average.r + 0.7154*average.g + 0.0721*average.b;	
+	//now find the luminance for the incoming color
+	//float incominglum = 0.2125*outcolor.r + 0.7154*outcolor.g + 0.0721*outcolor.b;
+		
+	outcolor.rgb = outcolor.rgb * luminance * 2.0;
+	outcolor.rgb = clamp( outcolor.rgb, 0, 1);
+	outcolor.a = 1.0;
+	return outcolor;
+}

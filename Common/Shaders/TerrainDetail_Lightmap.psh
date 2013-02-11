@@ -1,0 +1,87 @@
+#include "Shaders\HLSLconstants.h"
+#include "Shaders\PSH_CommonFunctions.h"
+
+struct PSIn
+{
+	float4 MaskTileTexCoord	: TEXCOORD0; // mask(xy) tile(zw)
+#if (ACTIVELIGHTS > 0)
+	float4 TangentLight[ACTIVELIGHTS]	: TEXCOORD1;
+#if (SHADOWMAPS > 0)
+	float4 ShadowCoord[MAXSHADOWMAPS]	: TEXCOORD5;
+#endif
+#endif
+	float4 ViewVectorFog	: COLOR0;
+	float4 PosOutDepth		: COLOR1;
+#if (DETAILLIGHTS > 0 )
+	float3 Normal				: NORMAL;
+#endif
+};
+
+uniform float4 BaseScales	: register(c20); // x=base texscale
+uniform float4 LayerScales	: register(c21); // xyzw=layer texscales
+uniform float4 MaskModifiers	: register(c22); // mask modifiers (alphas)
+uniform float4 SpecularMultiplier	: register(c23);
+uniform float3 FogColor				: register(c24);
+
+PS_MRT_OUTPUT main(	PSIn  In, 
+		uniform sampler2D BaseTex : register(s0),
+		uniform sampler2D MaskTex0 : register(s1),
+		uniform sampler2D SplatTex0 : register(s2),
+		uniform sampler2D SplatTex1 : register(s3),
+		uniform sampler2D SplatTex2 : register(s4),
+		uniform sampler2D SplatTex3 : register(s5),
+		uniform sampler2D LightMap : register(s6)
+#if (SHADOWMAPS > 0)
+	,uniform sampler2D ShadowMap : register(s7)
+#endif
+	)
+{
+	float2 maskTexCoord = In.MaskTileTexCoord.xy;
+	float2 tileTexCoord = In.MaskTileTexCoord.zw;
+	float4 baseColor = tex2D(BaseTex, tileTexCoord * BaseScales.xx);
+	float4 mask0 = tex2D(MaskTex0, maskTexCoord).bgra * MaskModifiers.xyzw;
+	float4 layerColor0 = tex2D(SplatTex0, tileTexCoord * LayerScales.xx);
+	float4 layerColor1 = tex2D(SplatTex1, tileTexCoord * LayerScales.yy);
+	float4 layerColor2 = tex2D(SplatTex2, tileTexCoord * LayerScales.zz);
+	float4 layerColor3 = tex2D(SplatTex3, tileTexCoord * LayerScales.ww);
+
+	float4 c = baseColor;
+	c = lerp( c, layerColor0, mask0.xxxx );
+	c = lerp( c, layerColor1, mask0.yyyy );
+	c = lerp( c, layerColor2, mask0.zzzz );
+	c = lerp( c, layerColor3, mask0.wwww );
+
+	half3 diffuse = half3(0.0,0.0,0.0);
+	half fShadowTerm = 1.0;
+#if (ACTIVELIGHTS > 0)
+	const half3 normal = half3(0,0,1);
+	NormalizeLights( In.TangentLight );
+
+#if (SHADOWMAPS > 0)
+	fShadowTerm = min( fShadowTerm, CalcShadowTerm( In.ShadowCoord[0], ShadowMap ) );
+#endif
+
+	diffuse = CalcLights( normal, In.TangentLight );
+	float3 ViewVec = normalize( In.ViewVectorFog.xyz );
+	half3 specular = SpecularMultiplier.x*CalcMultiLightColoredSpecular( normal, ViewVec, SpecularMultiplier.y, c.w, In.TangentLight );
+#endif
+
+#if (DETAILLIGHTS > 0)
+	diffuse += CalcPixelLights( In.PosOutDepth.xyz, In.Normal, lightData );
+#endif
+
+	// lightmap
+	float3 lightMapColor =  tex2D(LightMap, maskTexCoord).xyz * 1.7;
+
+	// light
+#if (ACTIVELIGHTS > 0)
+	c.rgb = c.rgb * (lightAmbient.xyz + diffuse.rgb * lightMapColor * fShadowTerm) + specular.rgb;
+#else
+	c.rgb = c.rgb * (lightAmbient.xyz + diffuse.rgb * lightMapColor);
+#endif
+
+	// fog
+	c.rgb = lerp( c.rgb, FogColor.rgb, In.ViewVectorFog.w );
+	c.w = 1.0;
+	return MakeMRTOutput( c, In.PosOutDepth.w );
+}

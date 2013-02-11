@@ -1,0 +1,347 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\BaseSceneDL.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "Comments", "Author: Kenneth Hurley\0"
+            VALUE "CompanyName", "Signature Devices, Inc.\0"
+            VALUE "FileDescription", "BaseSceneDL DLL\0"
+            VALUE "FileVersion", "1, 0, 0, 1\0"
+            VALUE "InternalName", "BaseSceneDL\0"
+            VALUE "LegalCopyright", "Copyright (C) Signature Devices, Inc. 2002\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "BaseSceneDL.DLL\0"
+            VALUE "PrivateBuild", "\0"
+            VALUE "ProductName", "BaseSceneDL Dynamic Link Library\0"
+            VALUE "ProductVersion", "1, 0, 0, 1\0"
+            VALUE "SpecialBuild", "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_SCENEDLTYPE         ICON    DISCARDABLE     "res\\idr_SceneDL.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_SCENEDLTYPE MENU PRELOAD DISCARDABLE 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&Close",                      ID_FILE_CLOSE
+        MENUITEM SEPARATOR
+        MENUITEM "Sa&ve Scene\tAlt+S",          ID_FILE_SAVE_SCENE
+        MENUITEM "Save Scene As...\tAlt+A",     ID_FILE_SAVE_AS_SCENE
+        MENUITEM "Close Scene",                 ID_FILE_CLOSE_SCENE
+    END
+    POPUP "&View"
+    BEGIN
+        MENUITEM "View &Objects Toolbar",     ID_VIEW_RESOURCES
+        MENUITEM "View &Scene Toolbar",         ID_VIEW_SCENE
+    END
+END
+
+IDR_SCENEDLTYPE_ADD MENU PRELOAD DISCARDABLE 
+BEGIN
+    POPUP "S&cene"
+    BEGIN
+        MENUITEM "&Add Render Window",          ID_SCENE_ADDRENDERWINDOW
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_SCENEDL_TOOL_PALETTE DIALOGEX 0, 0, 44, 41
+STYLE WS_CHILD | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_TOOLWINDOW
+CAPTION "SceneDL Tools"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    PUSHBUTTON      "Tool1",IDC_TOOL1,5,4,16,16,BS_BITMAP
+    PUSHBUTTON      "Tool2",IDC_TOOL2,24,4,16,16,BS_BITMAP
+    PUSHBUTTON      "Tool3",IDC_TOOL3,5,22,16,16,BS_BITMAP
+    PUSHBUTTON      "Tool4",IDC_TOOL4,24,22,16,16,BS_BITMAP
+END
+
+IDD_SCENEDL_DLG DIALOGEX 0, 0, 143, 167
+STYLE WS_CHILD | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_TRANSPARENT
+CAPTION "WorkSpace"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+END
+
+IDD_HIERARCHY DIALOG DISCARDABLE  0, 0, 160, 106
+STYLE DS_CONTROL | WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "Tree1",IDC_HIERARCHY,"SysTreeView32",TVS_HASBUTTONS | 
+                    TVS_HASLINES | TVS_CHECKBOXES | TVS_NOSCROLL | WS_BORDER | 
+                    WS_TABSTOP,0,1,158,105
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_SCENEDLTYPE ACCELERATORS DISCARDABLE 
+BEGIN
+    "A",            ID_FILE_SAVE_AS_SCENE,  VIRTKEY, ALT, NOINVERT
+    "S",            ID_FILE_SAVE_SCENE,     VIRTKEY, ALT, NOINVERT
+END
+
+IDR_SCENEDLTYPE_ADD ACCELERATORS DISCARDABLE 
+BEGIN
+    "R",            ID_SCENE_ADDRENDERWINDOW, VIRTKEY, ALT, NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDR_SCENEDL_TOOL_PALETTE TOOLBAR DISCARDABLE  16, 16
+BEGIN
+    BUTTON      ID_3D_BUTTON
+    BUTTON      ID_TEST_PAL_BUTTON_2
+    BUTTON      ID_TEST_PAL_BUTTON_3
+    BUTTON      ID_SCENEDL_PAL_BUTTON_4
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDR_SCENEDL_TOOL_PALETTE BITMAP  DISCARDABLE     "res\\toolbar1.bmp"
+IDB_SCENEDL_TOOL_PAL    BITMAP  DISCARDABLE     "res\\tree_ico.bmp"
+IDB_TREE_ICONS          BITMAP  DISCARDABLE     "res\\tree_ico.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_SCENEDL_DLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 136
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 160
+    END
+
+    IDD_HIERARCHY, DIALOG
+    BEGIN
+        RIGHTMARGIN, 158
+        TOPMARGIN, 1
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_RESOURCE_NAME       "SceneDL"
+    IDR_SCENEDLTYPE         "\nSceneDL\nSceneDL\n\n\nSceneDL.Document\nSceneDL Document"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_SCENEDL_TEST1        "SceneDL testing menu\nTest Menu "
+    ID_SCENEDL_TEST3        "Import a Scene file\nImport Scene"
+    ID_SCENEDL_TEST2        "Test the menu\nTest Menu 1"
+    ID_FILE_OPEN_WORLD      "Saves a Scene File\nSave Scene File"
+    ID_TEST_PAL_BUTTON_3    "Test Palette Button #3\nTest #3"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_TEST_PAL_BUTTON_2    "Test Palette Button #2\nTest #2"
+    ID_3D_BUTTON			"Test Button #1\nTest 3D Button"
+    ID_SCENEDL_PAL_BUTTON_4 "Test Palette Button #3\nTest #3"
+    ID_FILE_CLOSE_SCENE     "Closes the Scene File\nClose Scene File"
+    ID_FILE_OPEN_SCENE      "Opens a Scene File\nOpen Scene File"
+    ID_SCENEDL_CLOSE        "Close the Scene Hierarchy file\\Close Scene"
+    ID_FILE_SAVE_SCENE      "Save the Current Scene File\nSave Scene"
+    ID_FILE_SAVE_AS_SCENE   "Saves the scene as\nSave Scene"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_FILE_NEW             "Create a new document\nNew"
+    ID_FILE_OPEN            "Open an existing document\nOpen"
+    ID_FILE_CLOSE           "Close the active document\nClose"
+    ID_FILE_SAVE            "Save the active document\nSave"
+    ID_FILE_SAVE_AS         "Save the active document with a new name\nSave As"
+    ID_FILE_PRINT_SETUP     "Change the printer and printing options\nPrint Setup"
+    ID_FILE_PRINT           "Print the active document\nPrint"
+    ID_FILE_PRINT_PREVIEW   "Display full pages\nPrint Preview"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_FILE_MRU_FILE1       "Open this document"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_APP_EXIT             "Quit the application; prompts to save documents\nExit"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_VIEW_TOOLBAR         "Show or hide the toolbar\nToggle ToolBar"
+    ID_VIEW_STATUS_BAR      "Show or hide the status bar\nToggle StatusBar"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_VIEW_WORLD           "Show or hide the World resources toolbar\nToggle World Toolbar"
+    ID_VIEW_OUTPUT          "Show or hide the output toolbar\nToggle Output ToolBar"
+    ID_VIEW_RESOURCES       "Show or hide the objects toolbar\nToggle objects ToolBar"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_VIEW_SCENE           "Show/Hide the Scene Toolbar\nView Scene Toolbar"
+    ID_SCENE_ADDRENDERWINDOW "Add Render Window\nRender Window"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif //_WIN32
+#include "res\BaseSceneDL.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<CSpawner Name="World" vers="2.5">
+	<CEntity Name="ShaderTest_Box" EntityTypes="Models\ShaderTest\ShaderTest_Box.sxl" PositionX="0" PositionY="0" PositionZ="0" RotationX="0" RotationY="0" RotationZ="0" ScalingX="1" ScalingY="1" ScalingZ="1">
+		<Cal3DRenderObject Name="ShaderTest_Box_RO" FileName="Models\ShaderTest\Test_Box.cfg">
+		</Cal3DRenderObject>
+	</CEntity>
+</CSpawner>

@@ -1,0 +1,66 @@
+#include "Shaders\HLSLconstants.h"
+#include "Shaders\PSH_CommonFunctions.h"
+
+struct v2f
+{
+	float2 TexCoord		: TEXCOORD0;	
+#if (ACTIVELIGHTS > 0)
+	float4 TangentLight[ACTIVELIGHTS]	: TEXCOORD1;
+	float3 SpecularH		: TEXCOORD5;
+#endif
+	float3 ViewVector		: TEXCOORD6;
+	float4 Fog				: COLOR1;
+};
+
+uniform float4 ColorMultiplier : register(c19);
+uniform float4 SpecularMultiplier	: register(c20);
+
+PS_MRT_OUTPUT main(	v2f i, float FaceDir : VFACE,
+				uniform sampler2D BaseMap		: register(s0),
+				uniform sampler2D ApertureMap	: register(s1) )
+{
+	float3 ViewVec = normalize( i.ViewVector );
+	
+	float bumpA = (1.0 - tex2D(ApertureMap, i.TexCoord).w) * .8;
+	float offset = 0.0;//(bumpA * 2.0 - 1.0) * 0.03;
+	float2 plxCoord = i.TexCoord.xy + offset * ViewVec.xy;
+	
+	
+	float4 DiffuseColor = tex2D( BaseMap, plxCoord );
+
+	float4 outcolor;
+#if (ACTIVELIGHTS > 0)
+	float4 aperture = tex2D(ApertureMap, plxCoord);
+	float3 apBump = aperture.xyz;
+	aperture.xyz = normalize(aperture.xyz * 2.0 - 1.0);
+	float d = dot(aperture.xyz, LightVec);
+	float f = 1.8;
+	float shadow = saturate((d - aperture.w) * f + 0.5);
+	// Smooth the results a little.
+	shadow = shadow * shadow * (3.0 - 2.0 * shadow);
+
+	float3 normal = normalize(apBump * 2.0 - 1.0);
+
+	NormalizeLights( i.TangentLight );	
+
+	// Regular per pixel lighting
+	float3 LightVec = i.TangentLight[0].xyz;
+	float atten = saturate(1.0 - 0.0003 * length(LightVec));
+
+	//float specular = CalcSpecularBlinn( normal, i.SpecularH, 32, 1.0 );
+	//float specular = CalcSpecularPhong( normal, ViewVec, LightVec, 32, 1.0 );
+	
+	half3 specular = SpecularMultiplier.x*CalcMultiLightColoredSpecular( normal, ViewVec, SpecularMultiplier.y, aperture.a, i.TangentLight );
+	
+	half3 intensity = CalcLights( normal, i.TangentLight );
+
+	float3 lighting = atten * shadow * (intensity * DiffuseColor + 0.2 * specular) + lerp(0.14, 0.07, aperture.w) * DiffuseColor;
+
+	outcolor.xyz = clamp( lighting + lightAmbient.xyz, 0, 2 );
+#else
+	outcolor.xyz = DiffuseColor * lightAmbient.xyz;
+#endif
+
+	outcolor.a = 1.0;
+	return MakeMRTOutput( outcolor, 1.f );
+}

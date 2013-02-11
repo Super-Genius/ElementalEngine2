@@ -1,0 +1,520 @@
+<HTML>
+<HEAD>
+<TITLE>class SMLVec3f</TITLE>
+<link href="styles.css" rel="STYLESHEET" type="text/css">
+</head>
+<BODY LINK="#0000ff" VLINK="#800080">
+<P><a NAME="SMLVec3f"></a>[<A href="index.htm">SML Overview</a>]</P>
+<H1>class SMLVec3f</H1>
+<PRE>#include &quot;<A HREF="smlmath.h">smlmath.h</A>&quot;</PRE>
+
+<P>Class <B>SMLVec3f</B> is a 3x1 vector of single precision floats. It includes data and methods, which allow forming 3-vectors, computing sum, difference, scalar and cross product of two vectors, computing product and quotient of vector and scalar value, finding normalized vector, etc.</P>
+<hr>
+<h2>Public Interface</h2>
+<h3>Constructors</h3>
+<table width=400 cellspacing=5>
+<tr>
+  <TD><P><A href="SMLVec3f.htm#constructor">constructors</A></P></TD>
+</tr>
+</table>
+
+<h3>Access the data as an array</h3>
+<table width=400 cellspacing=5>
+<tr>
+  <TD><P><A href="SMLVec3f.htm#data">data</A></P></TD>
+</tr>
+</table>
+
+<h3>Rename to XYZ</h3>
+<table width=400 cellspacing=5>
+<tr>
+  <TD><P><A href="SMLVec2f.htm#X">X</A></P></TD>
+  <TD><P><A href="SMLVec2f.htm#Y">Y</A></P></TD>
+  <TD><P><A HREF="SMLVec3f.htm#Z">Z</A></P></TD>
+</tr>
+</table>
+
+<h3>Operators</h3>
+<TABLE CELLSPACING=5 WIDTH=600>
+<TR>
+<TD><P><A HREF="SMLVec3f.htm#operator_plus">operator+</A></TD>
+<TD><P><A HREF="SMLVec3f.htm#operator_minus">operator-</A></TD>
+<TD><P><A HREF="SMLVec3f.htm#operator_times">operator*</A></TD>
+</TR>
+<TR>
+<TD><P><A HREF="SMLVec3f.htm#operator_divide">operator/</A></TD>
+<TD><P><A HREF="SMLVec3f.htm#operator_plusequal">operator+=</A></TD>
+<TD><P><A HREF="SMLVec3f.htm#operator_minusequal">operator-=</A></TD>
+</TR>
+<TR>
+<TD><P><A HREF="SMLVec3f.htm#operator_timesequal">operator*=</A></TD>
+<TD><P><A HREF="SMLVec3f.htm#operator_divideequal">operator/=</A></TD>
+<TD><P><A HREF="SMLVec3f.htm#operator_index">operator[]</A></TD>
+</TR>
+</TABLE>
+
+<h3>Methods</h3>  
+<TABLE CELLSPACING=5 WIDTH=600>
+<TR>
+<TD><P><A HREF="SMLVec3f.htm#Set">Set</A></TD>
+<TD><P><A HREF="SMLVec3f.htm#Add">Add</A></TD>
+<TD><P><A HREF="SMLVec3f.htm#Sub">Sub</A></TD>
+</TR>
+<TR>
+<TD><P><A HREF="SMLVec3f.htm#Scale">Scale</A></TD>
+<TD><P><A HREF="SMLVec3f.htm#ScaleAdd">ScaleAdd</A></TD>
+<TD><P><A HREF="SMLVec3f.htm#Dot">Dot</A></TD>
+</TR>
+<TR>
+<TD><P><A HREF="SMLVec3f.htm#Negate">Negate</A></TD>
+<TD><P><A HREF="SMLVec3f.htm#Length">Length</A></TD>
+<TD><P><A HREF="SMLVec3f.htm#LengthSquared">LengthSquared</A></TD>
+</TR>
+<TR>
+<TD><P><A HREF="SMLVec3f.htm#Distance">Distance</A></TD>
+<TD><P><A HREF="SMLVec3f.htm#DistanceSquared">DistanceSquared</A></TD>
+<TD><P><A HREF="SMLVec3f.htm#Cross">Cross</A></TD>
+</TR>
+<TR>
+<TD><P><A HREF="SMLVec3f.htm#Normalize">Normalize</A></TD>
+<TD><P><A HREF="SMLVec3f.htm#TransformPoint">TransformPoint</A></TD>
+<TD><P><A HREF="SMLVec3f.htm#TransformVector">TransformVector</A></TD>
+</TR>
+<TR>
+<TD><P><A HREF="SMLVec3f.htm#operator_less">operator&lt;</A></TD>
+<TD><P><A HREF="SMLVec3f.htm#operator_equal">operator==</A></TD>
+<TD><P><A HREF="SMLVec3f.htm#operator_notequal">operator!=</A></TD>
+</TR>
+</TABLE>
+<hr>
+
+<H3>Public Data</H3>
+<P>float <B>x</B>;</P>
+<P>float <B>y</B>;</P>
+<P>float <B>z</B>;</P>
+<P>Defines 3 components of the vector.</P>
+<p>[<A href="SMLVec3f.htm#SMLVec3f">top</A>]</p><HR>
+
+<P><A NAME="constructor"></A>SMLLIBENTRY <B>SMLVec3f</B>(float <B><I>a</I></B>, float <B><I>b</I></B>, float <B><I>c</I></B>);</P>
+<h4>Discussion</h4>
+<P>SMLVec3f object constructor. This constructor sets coordinates of vector equal to <B><I>a, b, c </I></B>correspondingly.</P>
+<P><I>Example:</I></P>
+<PRE><A href="SMLVec3f.htm#SMLVec3f">SMLVec3f</A> A(3.5f, 0.45f, 1.4f);</PRE>
+<h4>Parameters</h4>
+<P><B><I>a, b, c</I></B> - coordinates of new vector. These parameters should be of float type.</P>
+<p>[<A href="SMLVec3f.htm#SMLVec3f">top</A>]</p><HR>
+
+<P>SMLLIBENTRY <B>SMLVec3f</B>(float <B><I>v</I></B>[]);</P>
+<h4>Discussion</h4>
+<P>SMLVec3f object constructor. The constructor sets the coordinates of vector equal to first three elements of float-type array <B><I>v</I></B>.</P>
+<P><I>Example:</I></P>
+<PRE>float crd[3] = {1, 3, 2}; <A href="SMLVec3f.htm#SMLVec3f">SMLVec3f</A> A(crd);</PRE>
+<h4>Parameters</h4>
+<P><B><I>v</I></B>[] - float-type array with coordinates of new vector. The array must have at least three elements.</P>
+<p>[<A href="SMLVec3f.htm#SMLVec3f">top</A>]</p><HR>
+
+<P>SMLLIBENTRY <B>SMLVec3f</B>(const <A HREF="SMLVec3f.htm#SMLVec3f">SMLVec3f</A>&amp; <B><I>v</I></B>);</P>
+<h4>Discussion</h4>
+<P>SMLVec3f copy-constructor. The constructor sets coordinates of vector equal to those of vector <B><I>v</I></B>.</P>
+<P><I>Example:</I></P>
+<PRE>float crd[3] = {1, 3, 2};<BR><A href="SMLVec3f.htm#SMLVec3f">SMLVec3f</A> A(crd);<BR><A href="SMLVec3f.htm#SMLVec3f">SMLVec3f</A> B(A);</PRE>
+<h4>Parameters</h4>
+<P><B><I>v</I></B> - reference to an object of SMLVec3f type. </P>
+<p>[<A href="SMLVec3f.htm#SMLVec3f">top</A>]</p><HR>
+
+<P>SMLLIBENTRY <B>SMLVec3f</B>();</P>
+<h4>Discussion</h4>
+<P>Default SMLVec3f object constructor. The constructor sets all coordinates of vector equal to zero.</P>
+<P><I>Example:</I></P>
+<PRE><A href="SMLVec3f.htm#SMLVec3f">SMLVec3f</A> A();</PRE>
+<h4>Parameters</h4>
+<P>No.</P>
+<p>[<A href="SMLVec3f.htm#SMLVec3f">top</A>]</p><HR>
+
+<P>SMLLIBENTRY const float* <A NAME="data"><B>data</B></A>() const;</P>
+<P>SMLLIBENTRY float* <B>data</B>(); </P>
+<h4>Discussion</h4>
+<P>Methods are used for access to component data of the object, which are coordinates of a vector.</P>
+<P><I>Example:</I></P>
+<PRE>float *tmp, crd[3] = {1, 3, 2};<BR><A href="SMLVec3f.htm#SMLVec3f">SMLVec3f</A> A(crd);<BR>tmp = A.data(); // tmp[1] = 3</PRE>
+<h4>Parameters</h4>
+<P>No.</P>
+<h4>Return Value</h4>
+<P>Methods return float-type pointer to the first element of component data of the object. </P>
+<p>[<A href="SMLVec3f.htm#SMLVec3f">top</A>]</p><HR>
+
+<P>SMLLIBENTRY float <A NAME="X"><B>X</B></A>() const;</P>
+<h4>Discussion</h4>
+<P>Method is used for access to variable <B><I>x</I></B> of component data of the object. This variable is <B><I>x</I></B>-coordinate of the current vector.</P>
+<P><I>Example:</I></P>
+<PRE>float tmp, crd[3] = {1, 3, 2};<BR><A href="SMLVec3f.htm#SMLVec3f">SMLVec3f</A> A(crd);<BR>tmp = A.X(); // tmp = 1</PRE>
+<h4>Parameters</h4>
+<P>No.</P>
+<h4>Return Value</h4>
+<P>Methods returns value of variable <B><I>x </I></B>of component data of the object.</P>
+<p>[<A href="SMLVec3f.htm#SMLVec3f">top</A>]</p><HR>
+
+<P>SMLLIBENTRY float&amp; <B>X</B>();</P>
+<h4>Discussion</h4>
+<P>Method is used as synonym of variable <B><I>x</I></B> of component data of the object.</P>
+<h4>Parameters</h4>
+<P>No.</P>
+<h4>Return Value</h4>
+<P>Methods returns reference to variable <B><I>x </I></B>of component data of the object.</P>
+<p>[<A href="SMLVec3f.htm#SMLVec3f">top</A>]</p><HR>
+
+<P>SMLLIBENTRY float <A NAME="Y"><B>Y</B></A>() const;</P>
+<h4>Discussion</h4>
+<P>Method is used for access to variable <B><I>y</I></B> of component data of the object. This variable is <B><I>y</I></B>-coordinate of the current vector.</P>
+<P><I>Example:</I></P>
+<PRE>float tmp, crd[3] = {1, 3, 2};<BR><A href="SMLVec3f.htm#SMLVec3f">SMLVec3f</A> A(crd);<BR>tmp = A.Y(); // tmp = 3</PRE>
+<h4>Parameters</h4>
+<P>No.</P>
+<h4>Return Value</h4>
+<P>Methods returns value of variable <B><I>y </I></B>of component data of the object. This variable is <B><I>y</I></B>-coordinate of the current vector.</P>
+<p>[<A href="SMLVec3f.htm#SMLVec3f">top</A>]</p><HR>
+
+<P>SMLLIBENTRY float&amp; <B>Y</B>();</P>
+<h4>Discussion</h4>
+<P>Method is used as synonym of variable <B><I>y</I></B> of component data of the object.</P>
+<h4>Parameters</h4>
+<P>No.</P>
+<h4>Return Value</h4>
+<P>Methods returns reference to variable <B><I>y</I></B> of component data of the object.</P>
+<p>[<A href="SMLVec3f.htm#SMLVec3f">top</A>]</p><HR>
+
+<P>SMLLIBENTRY float <A NAME="Z"><B>Z</B></A>() const;</P>
+<h4>Discussion</h4>
+<P>Method is used for access to variable <B><I>z</I></B> of component data of the object. This variable is <B><I>z</I></B>-coordinate of the current vector.</P>
+<P><I>Example:</I></P>
+<PRE>float tmp, crd[3] = {1, 3, 2};<BR><A href="SMLVec3f.htm#SMLVec3f">SMLVec3f</A> A(crd);<BR>tmp = A.Z(); // tmp = 2</PRE>
+<h4>Parameters</h4>
+<P>No.</P>
+<h4>Return Value</h4>
+<P>Methods returns value of variable <B><I>z </I></B>of component data of the object.</P>
+<p>[<A href="SMLVec3f.htm#SMLVec3f">top</A>]</p><HR>
+
+<P>SMLLIBENTRY float&amp; <B>Z</B>();</P>
+<h4>Discussion</h4>
+<P>Method is used as synonym of variable <B><I>z</I></B> of component data of the object.</P>
+<h4>Parameters</h4>
+<P>No.</P>
+<h4>Return Value</h4>
+<P>Methods returns reference to variable <B><I>z</I></B> of component data of the object.</P>
+<p>[<A href="SMLVec3f.htm#SMLVec3f">top</A>]</p><HR>
+
+<P>SMLLIBENTRY const <A HREF="SMLVec3f.htm#SMLVec3f">SMLVec3f</A>&amp; <A NAME="operator_assign"><B>operator=</B></A>(const <A HREF="SMLVec3f.htm#SMLVec3f">SMLVec3f</A>&amp; <B><I>v</I></B>);</P>
+<h4>Discussion</h4>
+<P>Method is an overloaded operator-function. It sets coordinates of this vector to those of vector <B><I>v</I></B>.</P>
+<P><I>Example:</I></P>
+<PRE>float crd[3] = {1, 3, 2};<BR><A href="SMLVec3f.htm#SMLVec3f">SMLVec3f</A> A(crd), B;<BR>B = A;</PRE>
+<h4>Parameters</h4>
+<P><B><I>v -</I></B> reference to object of SMLVec3f type whose coordinates are assigned to the new vector.</P>
+<h4>Return Value</h4>
+<P>Returns reference to SMLVec3f-type object. </P>
+<p>[<A href="SMLVec3f.htm#SMLVec3f">top</A>]</p><HR>
+
+<P>friend SMLLIBENTRY bool <A NAME="operator_less"><B>operator&lt;</B></A>(const <A HREF="SMLVec3f.htm#SMLVec3f">SMLVec3f</A>&amp; <B><I>v1</I></B>, const <A HREF="SMLVec3f.htm#SMLVec3f">SMLVec3f</A>&amp; <B><I>v2</I></B>);</P>
+<h4>Discussion</h4>
+<P>Friend of the class. Function compares length of 2 vectors and returns <I>true</I>, if and only if vector <B><I>v1 </I></B>is shorter than <B><I>v2</I></B>.</P>
+<P><I>Example:</I></P>
+<PRE>float crd1[3] = {1, 2, 2}, crd2[3] = {2, 2, 2};<BR><A href="SMLVec3f.htm#SMLVec3f">SMLVec3f</A> A(crd1), B(crd2);<BR>A = (A > B)?A:B // A = B</PRE>
+<p>[<A href="SMLVec3f.htm#SMLVec3f">top</A>]</p><HR>
+
+<P>friend SMLLIBENTRY bool <A NAME="operator_equal"><B>operator==</B></A>(const <A HREF="SMLVec3f.htm#SMLVec3f">SMLVec3f</A>&amp; <B><I>v1</I></B>, const <A HREF="SMLVec3f.htm#SMLVec3f">SMLVec3f</A>&amp; <B><I>v2</I></B>);</P>
+<h4>Discussion</h4>
+<P>Friend of the class. Function returns <I>true</I>, if components of two vectors are equal to each other.</P>
+<P><I>Example:</I></P>
+<PRE>float crd1[3] = {1, 2, 2}, crd2[3] = {2, 2, 2};<BR><A href="SMLVec3f.htm#SMLVec3f">SMLVec3f</A> A(crd1), B(crd2);<BR>A = (A == B)?A:B // A = B</PRE>
+<p>[<A href="SMLVec3f.htm#SMLVec3f">top</A>]</p><HR>
+
+<P>friend SMLLIBENTRY bool <A NAME="operator_notequal"><B>operator!=</B></A>(const <A HREF="SMLVec3f.htm#SMLVec3f">SMLVec3f</A>&amp; <B><I>v1</I></B>, const <A HREF="SMLVec3f.htm#SMLVec3f">SMLVec3f</A>&amp; <B><I>v2</I></B>);</P>
+<h4>Discussion</h4>
+<P>Friend of the class. Function returns <I>true</I>, if components of two vectors are not equal.</P>
+<P><I>Example:</I></P>
+<PRE>float crd1[3] = {1, 2, 2}, crd2[3] = {2, 2, 2};<BR><A href="SMLVec3f.htm#SMLVec3f">SMLVec3f</A> A(crd1), B(crd2);<BR>A = (A != B)?A:B // A = A</PRE>
+<p>[<A href="SMLVec3f.htm#SMLVec3f">top</A>]</p><HR>
+
+<P>SMLLIBENTRY SMLVec3f <A NAME="operator_plus"><B>operator+</B></A>(const <A HREF="SMLVec3f.htm#SMLVec3f">SMLVec3f</A>&amp; <B><I>v</I></B>) const;</P>
+<h4>Discussion</h4>
+<P>Method is an overloaded operator-function. It computes and returns sum of two vectors.</P>
+<P><I>Example:</I></P>
+<PRE>float crd1[3] = {1, 2, 2}, crd2[3] = {2, 2, 2};<BR><A href="SMLVec3f.htm#SMLVec3f">SMLVec3f</A> A(crd1), B(crd2), C;<BR>C = A + B // C = {3, 4, 4}</PRE>
+<h4>Parameters</h4>
+<P><B><I>v</I></B> - reference to object of SMLVec3f type. </P>
+<h4>Return Value</h4>
+<P>Returns new object of SMLVec3f type, which is equal to sum of two vectors. </P>
+<p>[<A href="SMLVec3f.htm#SMLVec3f">top</A>]</p><HR>
+
+<P>SMLLIBENTRY SMLVec3f <A NAME="operator_minus"><B>operator-</B></A>(const <A HREF="SMLVec3f.htm#SMLVec3f">SMLVec3f</A>&amp; <B><I>v</I></B>) const;</P>
+<h4>Discussion</h4>
+<P>Method is an overloaded operator-function. It computes and returns difference of two vectors.</P>
+<P><I>Example:</I></P>
+<PRE>float crd1[3] = {1, 2, 2}, crd2[3] = {2, 2, 2};<BR><A href="SMLVec3f.htm#SMLVec3f">SMLVec3f</A> A(crd1), B(crd2), C;<BR>C = A - B // C = {-1, 0, 0}</PRE>
+<h4>Parameters</h4>
+<P><B><I>v</I></B> - reference to object of SMLVec3f type. </P>
+<h4>Return Value</h4>
+<P>Returns new object of SMLVec3f type, which is equal to difference of two vectors. </P>
+<p>[<A href="SMLVec3f.htm#SMLVec3f">top</A>]</p><HR>
+
+<P>SMLLIBENTRY SMLVec3f <A NAME="operator_times"><B>operator*</B></A>(float <B><I>var</I></B>) const;</P>
+<h4>Discussion</h4>
+<P>Method is an overloaded operator-function. It computes and returns product of vector and variable <B><I>var</I></B>.</P>
+<P><I>Example:</I></P>
+<PRE>float crd[3] = {1, 2, 2};<BR><A href="SMLVec3f.htm#SMLVec3f">SMLVec3f</A> A(crd), C;<BR>C = A * 2.0f // C = {2, 4, 4}</PRE>
+<h4>Parameters</h4>
+<P><B><I>var</I></B> - variable of float type. </P>
+<h4>Return Value</h4>
+<P>Returns new object of SMLVec3f type, which is equal to product of vector and variable. </P>
+<p>[<A href="SMLVec3f.htm#SMLVec3f">top</A>]</p><HR>
+
+<P>SMLLIBENTRY SMLVec3f <A NAME="operator_divide"><B>operator/</B></A>(float <B><I>var</I></B>) const;</P>
+<h4>Discussion</h4>
+<P>Method is an overloaded operator-function. It computes and returns quotient of vector and variable <B><I>var</I></B>.</P>
+<P><I>Example:</I></P>
+<PRE>float crd[3] = {4, 2, 2};<BR><A href="SMLVec3f.htm#SMLVec3f">SMLVec3f</A> A(crd), C;<BR>C = A / 2.0f // C = {2, 1, 1}</PRE>
+<h4>Parameters</h4>
+<P><B><I>var</I></B> - variable of float type. </P>
+<h4>Return Value</h4>
+<P>Returns new object of SMLVec3f type, which is quotient of vector and variable. </P>
+<p>[<A href="SMLVec3f.htm#SMLVec3f">top</A>]</p><HR>
+
+<P>SMLLIBENTRY <A HREF="SMLVec3f.htm#SMLVec3f">SMLVec3f</A>&amp; <A NAME="operator_plusequal"><B>operator+=</B></A>(const <A HREF="SMLVec3f.htm#SMLVec3f">SMLVec3f</A>&amp; <B><I>v</I></B>);</P>
+<h4>Discussion</h4>
+<P>Method is an overloaded operator-function. It computes sum of two vectors. The result is assigned to the first vector.</P>
+<P><I>Example:</I></P>
+<PRE>float crd1[3] = {1, 3, 2}, crd2[2] = {2, 2, 2};<BR><A href="SMLVec3f.htm#SMLVec3f">SMLVec3f</A> A(crd1), B(crd2);<BR>A += B // A = {3, 5, 4}</PRE>
+<h4>Parameters</h4>
+<P><B><I>v</I></B> - reference to object of SMLVec3f type.</P>
+<h4>Return Value</h4>
+<P>Returns reference to current object of SMLVec3f type, which is sum of two vectors.</P>
+<p>[<A href="SMLVec3f.htm#SMLVec3f">top</A>]</p><HR>
+
+<P>SMLLIBENTRY <A HREF="SMLVec3f.htm#SMLVec3f">SMLVec3f</A>&amp; <A NAME="operator_minusequal"><B>operator-=</B></A>(const <A HREF="SMLVec3f.htm#SMLVec3f">SMLVec3f</A>&amp; <B><I>v</I></B>);</P>
+<h4>Discussion</h4>
+<P>Method is an overloaded operator-function. It computes difference of two vectors. The result is assigned to the first vector.</P>
+<P><I>Example:</I></P>
+<PRE>float crd1[3] = {1, 3, 2}, crd2[2] = {2, 2, 2};<BR><A href="SMLVec3f.htm#SMLVec3f">SMLVec3f</A> A(crd1), B(crd2);<BR>A -= B // A = {-1, 1 ,0}</PRE>
+<h4>Parameters</h4>
+<P><B><I>v</I></B> - reference to object of SMLVec3f type.</P>
+<h4>Return Value</h4>
+<P>Returns reference to current object of SMLVec3f type, which is difference of two vectors.</P>
+<p>[<A href="SMLVec3f.htm#SMLVec3f">top</A>]</p><HR>
+
+<P>SMLLIBENTRY <A HREF="SMLVec3f.htm#SMLVec3f">SMLVec3f</A>&amp; <A NAME="operator_timesequal"><B>operator*=</B></A>(float <B><I>var</I></B>);</P>
+<h4>Discussion</h4>
+<P>Method is an overloaded operator-function. It computes product of vector and variable. The result is assigned to the first vector.</P>
+<P><I>Example:</I></P>
+<PRE>float crd[3] = {1, 3, 2};<BR><A href="SMLVec3f.htm#SMLVec3f">SMLVec3f</A> A(crd);<BR>A *= 2.0f // C = {2, 6, 4}</PRE>
+<h4>Parameters</h4>
+<P><B><I>v</I></B> - reference to object of SMLVec3f type.</P>
+<h4>Return Value</h4>
+<P>Returns reference to the current object of SMLVec3f type, which is product of two vectors.</P>
+<p>[<A href="SMLVec3f.htm#SMLVec3f">top</A>]</p><HR>
+
+<P>SMLLIBENTRY <A HREF="SMLVec3f.htm#SMLVec3f">SMLVec3f</A>&amp; <A NAME="operator_divideequal"><B>operator/=</B></A>(float <B><I>var</I></B>);</P>
+<h4>Discussion</h4>
+<P>Method is an overloaded operator-function. It computes quotient of vector and variable. The result is assigned to the first vector.</P>
+<P><I>Example:</I></P>
+<PRE>float crd[3] = {4, 6, 2};<BR><A href="SMLVec3f.htm#SMLVec3f">SMLVec3f</A> A(crd);<BR>A /= 2.0f // C = {2, 3, 1}</PRE>
+<h4>Parameters</h4>
+<P><B><I>var</I></B> - reference to object of SMLVec3f type.</P>
+<h4>Return Value</h4>
+<P>Returns reference to the current object of SMLVec3f type, which is quotient of the vector and variable.</P>
+<p>[<A href="SMLVec3f.htm#SMLVec3f">top</A>]</p><HR>
+
+<P>SMLLIBENTRY float&amp; <A NAME="operator_index"><B>operator[]</B></A>(int <B><I>index</I></B>);</P>
+<h4>Discussion</h4>
+<P>Method is an overloaded operator-function. It gives access to the element of component data with index <B><I>index</I></B>.</P>
+<P><I>Example:</I></P>
+<PRE>float tmp, crd[3] = {1, 3, 2};<BR><A href="SMLVec3f.htm#SMLVec3f">SMLVec3f</A> A(crd);<BR>tmp = A[1]; // tmp = 3</PRE>
+<h4>Parameters</h4>
+<P><B><I>index</I></B> - index of element of component data of the object. </P>
+<h4>Return Value</h4>
+<P>Returns reference to the element of component data with index <B><I>index</I></B> of the current object of SMLVec3f type. </P>
+<p>[<A href="SMLVec3f.htm#SMLVec3f">top</A>]</p><HR>
+
+<P>SMLLIBENTRY float <B>operator[]</B>(int <B><I>index</I></B>) const;</P>
+<h4>Discussion</h4>
+<P>Method is an overloaded operator-function. It gives access to the element of component data with index <B><I>index</I></B>. </P>
+<h4>Parameters</h4>
+<P><B><I>index</I></B> - index of element of component data of the object. </P>
+<h4>Return Value</h4>
+<P>Returns element of component data with index <B><I>index</I></B> of the current object of SMLVec3f type.</P>
+<p>[<A href="SMLVec3f.htm#SMLVec3f">top</A>]</p><HR>
+
+<P>SMLLIBENTRY void <A NAME="Set"><B>Set</B></A>(const <A HREF="SMLVec3f.htm#SMLVec3f">SMLVec3f</A>&amp; <B><I>v</I></B>);</P>
+<h4>Discussion</h4>
+<P>Method sets coordinates of vector equal to those of vector <B><I>v</I></B>.</P>
+<P><I>Example:</I></P>
+<PRE>float crd[3] = {1, 3, 2};<A href="SMLVec3f.htm#SMLVec3f">SMLVec3f</A> A(crd);<BR><A href="SMLVec3f.htm#SMLVec3f">SMLVec3f</A> B(A) ;</PRE>
+<h4>Parameters</h4>
+<P><B><I>v</I></B> - reference to vector whose coordinates are assigned to this vector.</P>
+<p>[<A href="SMLVec3f.htm#SMLVec3f">top</A>]</p><HR>
+
+<P>SMLLIBENTRY void <B>Set</B>(float <B><I>x</I></B>, float <B><I>y</I></B>, float <B><I>z</I></B>);</P>
+<h4>Discussion</h4>
+<P>Method sets coordinates of vector equal to variables <B><I>x, y, z</I></B>.</P>
+<P><I>Example:</I></P>
+<PRE><A href="SMLVec3f.htm#SMLVec3f">SMLVec3f</A> A(); A.Set(1.0f, 2.0f, -4.3f);</PRE>
+<h4>Parameters</h4>
+<P><B><I>x, y, z</I></B> - new coordinates of the vector.</P>
+<p>[<A href="SMLVec3f.htm#SMLVec3f">top</A>]</p><HR>
+
+<P>SMLLIBENTRY void <A NAME="Add"><B>Add</B></A>(const <A HREF="SMLVec3f.htm#SMLVec3f">SMLVec3f</A>&amp; <B><I>vec1</I></B>, const <A HREF="SMLVec3f.htm#SMLVec3f">SMLVec3f</A>&amp; <B><I>vec2</I></B>);</P>
+<h4>Discussion</h4>
+<P>Method sets coordinates of vector equal to sum of corresponding coordinates of two vectors <B><I>vec1</I></B> and <B><I>vec2</I></B>.</P>
+<P><I>Example:</I></P>
+<PRE>float crd1[3] = {1, 3, 2}, crd2[3] = {2, 2, 2};<BR><A href="SMLVec3f.htm#SMLVec3f">SMLVec3f</A> A(crd1), B(crd2), C;<BR>C.Add(A, B); // C = {3, 5, 4}</PRE>
+<h4>Parameters</h4>
+<P><B><I>vec1, vec2</I></B> - vectors to be added .</P>
+<p>[<A href="SMLVec3f.htm#SMLVec3f">top</A>]</p><HR>
+
+<P>SMLLIBENTRY void <A NAME="Sub"><B>Sub</B></A>(const <A HREF="SMLVec3f.htm#SMLVec3f">SMLVec3f</A>&amp; <B><I>vec1</I></B>, const <A HREF="SMLVec3f.htm#SMLVec3f">SMLVec3f</A>&amp; <B><I>vec2</I></B>);</P>
+<h4>Discussion</h4>
+<P>Method sets coordinates of vector equal to difference of corresponding coordinates of two vectors <B><I>vec1</I></B> and <B><I>vec2</I></B>.</P>
+<P><I>Example:</I></P>
+<PRE>float crd1[3] = {1, 3, 2}, crd2[3] = {2, 2, 2};<BR><A href="SMLVec3f.htm#SMLVec3f">SMLVec3f</A> A(crd1), B(crd2), C;<BR>C.Sub(A, B); // C = {-1, 1, 0}</PRE>
+<h4>Parameters</h4>
+<P><B><I>vec1, vec2</I></B> - vectors, difference of which is to be computed.</P>
+<p>[<A href="SMLVec3f.htm#SMLVec3f">top</A>]</p><HR>
+
+<P>SMLLIBENTRY void <A NAME="Scale"><B>Scale</B></A>(float <B><I>var</I></B>, const <A HREF="SMLVec3f.htm#SMLVec3f">SMLVec3f</A>&amp; <B><I>v</I></B>);</P>
+<h4>Discussion</h4>
+<P>Method sets coordinates of vector equal to product of variable <B><I>var</I></B> and vector <B><I>v</I></B>.</P>
+<P><I>Example:</I></P>
+<PRE>float crd[3] = {1, 3, 2};<BR><A href="SMLVec3f.htm#SMLVec3f">SMLVec3f</A> A(crd1);<BR>A.Scale(2.0f); // A = {2, 6, 4}</PRE>
+<h4>Parameters</h4>
+<P><B><I>var</I></B> - variable of float type (scale parameter).</P>
+<P><B><I>v</I></B> - reference to vector to be scaled. </P>
+<p>[<A href="SMLVec3f.htm#SMLVec3f">top</A>]</p><HR>
+
+<P>SMLLIBENTRY void <A NAME="ScaleAdd"><B>ScaleAdd</B></A>(float <B><I>var</I></B>, const <A HREF="SMLVec3f.htm#SMLVec3f">SMLVec3f</A>&amp; <B><I>vec1</I></B>, const <A HREF="SMLVec3f.htm#SMLVec3f">SMLVec3f</A>&amp; <B><I>vec2</I></B>);</P>
+<h4>Discussion</h4>
+<P>Method sets coordinates of vector equal to sum of scaled vector <B><I>vec1</I></B> and vector <B><I>vec2</I></B> with scale parameter <B><I>var</I></B>. <b>this = var*vec1 + vec2</b>.</P>
+<P><I>Example:</I></P>
+<PRE>float crd1[3] = {1, 3, 2}, crd2[3] = {2, 2, 2};<BR><A href="SMLVec3f.htm#SMLVec3f">SMLVec3f</A> A(crd1), B(crd2), C;<BR>C.ScaleAdd(2.0f, A, B); // C = {4, 8, 6}</PRE>
+<h4>Parameters</h4>
+<P><B><I>var</I></B> - variable of float type (scale parameter).</P>
+<P><B><I>vec1</I></B> - vector to be scaled.</P>
+<P><B><I>vec2</I></B> - vectors to be not scaled.</P>
+<p>[<A href="SMLVec3f.htm#SMLVec3f">top</A>]</p><HR>
+
+<P>SMLLIBENTRY float <A NAME="Dot"><B>Dot</B></A>(const <A HREF="SMLVec3f.htm#SMLVec3f">SMLVec3f</A>&amp; <B><I>vec</I></B>) const;</P>
+<h4>Discussion</h4>
+<P>Method computes scalar product of this vector and vector <B><I>vec</I></B>.</P>
+<P><I>Example:</I></P>
+<PRE>float sp, crd1[3] = {1, 3, 2}, crd2[3] = {2, 2, 2};<BR><A href="SMLVec3f.htm#SMLVec3f">SMLVec3f</A> A(crd1), B(crd2);<BR>sp = A.Dot(B); // sp = 12</PRE>
+<h4>Parameters</h4>
+<P><B><I>vec</I></B> - reference to the second vector of the scalar product. </P>
+<h4>Return Value</h4>
+<P>Returns scalar product of this vector and vector <B><I>vec</I></B>.</P>
+<p>[<A href="SMLVec3f.htm#SMLVec3f">top</A>]</p><HR>
+
+<P>SMLLIBENTRY float <B>Dot</B>(const float * const <B><I>vec</I></B>) const;</P>
+<h4>Discussion</h4>
+<P>Method computes scalar product of this vector and constant vector defined with constant pointer <B><I>vec</I></B>.</P>
+<h4>Parameters</h4>
+<P><B><I>vec</I></B> - constant pointer to the second constant vector of the scalar product. </P>
+<h4>Return Value</h4>
+<P>Returns scalar product of this vector and vector <B><I>vec</I></B>.</P>
+<p>[<A href="SMLVec3f.htm#SMLVec3f">top</A>]</p><HR>
+
+<P>SMLLIBENTRY const <A HREF="SMLVec3f.htm#SMLVec3f">SMLVec3f</A>&amp; <A NAME="Negate"><B>Negate</B></A>();</P>
+<h4>Discussion</h4>
+<P>Method replaces this vector with vector <B>(-x, -y -z)</B>.</P>
+<P><I>Example:</I></P>
+<PRE><A href="SMLVec3f.htm#SMLVec3f">SMLVec3f</A> A(1, 3, 2); A.Negate(); // A = {-1, -3, -2}</PRE>
+<h4>Parameters</h4>
+<P>No.</P>
+<h4>Return Value</h4>
+<P>Methods returns reference to the current object.</P>
+<p>[<A href="SMLVec3f.htm#SMLVec3f">top</A>]</p><HR>
+
+<P>SMLLIBENTRY float <A NAME="Length"><B>Length</B></A>() const;</P>
+<h4>Discussion</h4>
+<P>Method computes length of this vector.</P>
+<P><I>Example:</I></P>
+<PRE>float l;<BR><A href="SMLVec3f.htm#SMLVec3f">SMLVec3f</A> A(3,4,5); l = A.Length();</PRE>
+<h4>Parameters</h4>
+<P>No.</P>
+<h4>Return Value</h4>
+<P>Methods returns length of this vector.</P>
+<p>[<A href="SMLVec3f.htm#SMLVec3f">top</A>]</p><HR>
+
+<P>SMLLIBENTRY float <A NAME="LengthSquared"><B>LengthSquared</B></A>() const;</P>
+<h4>Discussion</h4>
+<P>Method computes length squared of this vector.</P>
+<P><I>Example:</I></P>
+<PRE>float ls;<BR><A href="SMLVec3f.htm#SMLVec3f">SMLVec3f</A> A(3,4,5); ls = A.LengthSquared();</PRE>
+<h4>Parameters</h4>
+<P>No.</P>
+<h4>Return Value</h4>
+<P>Methods returns length squared of this vector.</P>
+<p>[<A href="SMLVec3f.htm#SMLVec3f">top</A>]</p><HR>
+
+<P>SMLLIBENTRY float <A NAME="Distance"><B>Distance</B></A>(const <A HREF="SMLVec3f.htm#SMLVec3f">SMLVec3f</A>&amp; <B><I>vec</I></B>) const;</P>
+<h4>Discussion</h4>
+<P>Method computes distance between this point and vector <B><I>vec</I></B>.</P>
+<P><I>Example:</I></P>
+<PRE>float d;<BR><A href="SMLVec3f.htm#SMLVec3f">SMLVec3f</A> A(3,4,1), B(4,3,2);<BR>d = A.Distance(B);</PRE>
+<h4>Parameters</h4>
+<P><B><I>vec</I></B> - radius-vector of the second point. Reference to object of SMLVec3f type.</P>
+<h4>Return Value</h4>
+<P>Methods returns distance between two points.</P>
+<p>[<A href="SMLVec3f.htm#SMLVec3f">top</A>]</p><HR>
+
+<P>SMLLIBENTRY float <A NAME="DistanceSquared"><B>DistanceSquared</B></A>(const <A HREF="SMLVec3f.htm#SMLVec3f">SMLVec3f</A>&amp; <B><I>vec</I></B>) const;</P>
+<h4>Discussion</h4>
+<P>Method computes distance squared between this point and vector <B><I>vec</I></B>.</P>
+<P><I>Example:</I></P>
+<PRE>float ds;<BR><A href="SMLVec3f.htm#SMLVec3f">SMLVec3f</A> A(2,4,1), B(4,3,2);<BR>ds = A.Distance(B);</PRE>
+<h4>Parameters</h4>
+<P><B><I>vec</I></B> - radius-vector of the second point. Reference to object of SMLVec3f type.</P>
+<h4>Return Value</h4>
+<P>Methods returns distance squared between two points.</P>
+<p>[<A href="SMLVec3f.htm#SMLVec3f">top</A>]</p><HR>
+
+<P>SMLLIBENTRY void <A NAME="Cross"><B>Cross</B></A>(const <A HREF="SMLVec3f.htm#SMLVec3f">SMLVec3f</A>&amp; <B>vec</B>);</P>
+<h4>Discussion</h4>
+<P>Method computes cross product of two vectors. The first one is this vector and the second vector is defined with reference <B><I>vec</I></B>. Result is written into this vector.</P>
+<h4>Parameters</h4>
+<P><B><I>vec</I></B> - reference to SMLVec3f-type object.</P>
+<p>[<A href="SMLVec3f.htm#SMLVec3f">top</A>]</p><HR>
+
+<P>SMLLIBENTRY float<B> operator*</B>(const <A HREF="SMLVec3f.htm#SMLVec3f">SMLVec3f</A>&amp; <B><I>vec</I></B>) const;</P>
+<h4>Discussion</h4>
+<P>Method is an overloaded operator-function. It computes scalar product of this vector and vector <B><I>vec</I></B>. Result is written into this vector.</P>
+<h4>Parameters</h4>
+<P><B><I>vec</I></B> - reference to object of SMLVec3f type.</P>
+<h4>Return Value</h4>
+<P>Returns scalar product of the vectors.</P>
+<p>[<A href="SMLVec3f.htm#SMLVec3f">top</A>]</p><HR>
+
+<P>SMLLIBENTRY float <A NAME="Normalize"><B>Normalize</B></A>();</P>
+<h4>Discussion</h4>
+<P>Method normalizes this vector. If length of the vector is smaller than 1 / FLT_EPSILON, the normalized vector is created in accordance with general rules, i. e. normalized vector is equal to this vector divided on its length. If norm of the vector is greater than 1 / FLT_EPSILON, the method forms unit vector with coordinates {0; 1; 0}.</P>
+<P><I>Example:</I></P>
+<PRE>float n;<BR><A href="SMLVec3f.htm#SMLVec3f">SMLVec3f</A> A(3,4,2);<BR>n = A.Normalize();</PRE>
+<h4>Parameters</h4>
+<P>No.</P>
+<h4>Return Value</h4>
+<P>Methods returns value equal to the inverted length of this vector.</P>
+<p>[<A href="SMLVec3f.htm#SMLVec3f">top</A>]</p><HR>
+
+<P>SMLLIBENTRY void <A NAME="TransformPoint"><B>TransformPoint</B></A>(const <A HREF="SMLMatrix4f.htm#SMLMatrix4f">SMLMatrix4f</A>&amp; <B><I>matr</I></B>, const <A HREF="SMLVec3f.htm#SMLVec3f">SMLVec3f</A>&amp; <B><I>vec</I></B>);</P>
+<h4>Discussion</h4>
+<P>Method transforms coordinates of given point in accordance with matrix <B><I>matr</I></B>. The main minor (submatrix 3X3) of the matrix represents the rotation transformation of coordinates of the point, while the first three elements of the last column of the matrix depicts coordinates of some vector which are to be added to coordinates of the point after their rotation transformation. Coordinates of new point are assigned to this vector. </P>
+<h4>Parameters</h4>
+<P><B><I>matr</I></B> - reference to SMLMatrix4f-type object which contains transformation matrix.</P>
+<P><B><I>vec</I></B> - reference to object of SMLVec3f type with coordinates of the point which are to be transformed.</P>
+<p>[<A href="SMLVec3f.htm#SMLVec3f">top</A>]</p><HR>
+
+<P>SMLLIBENTRY void <A NAME="TransformVector"><B>TransformVector</B></A>(const <A HREF="SMLMatrix4f.htm#SMLMatrix4f">SMLMatrix4f</A>&amp; <B><I>matr</I></B>, const <A HREF="SMLVec3f.htm#SMLVec3f">SMLVec3f</A>&amp; <B><I>vec</I></B>);</P>
+<h4>Discussion</h4>
+<P>Method transforms coordinates of given vector in accordance with matrix <B><I>matr</I></B>. The main minor of the matrix represents the rotation transformation of coordinates of the point. Coordinates of new vector are assigned to this vector.</P>
+<h4>Parameters</h4>
+<P><B><I>matr</I></B> - reference to SMLMatrix4f-type object which contains transformation matrix.</P>
+<P><B><I>vec</I></B> - reference to object of SMLVec3f type with coordinates of the point which are to be transformed.</P>
+<p>[<A href="SMLVec3f.htm#SMLVec3f">top</A>]</p><HR></BODY>
+</HTML>

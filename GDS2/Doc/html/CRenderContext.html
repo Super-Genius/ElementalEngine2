@@ -1,0 +1,591 @@
+<html>
+<head>
+<title>
+Documentation for class CRenderContext
+
+</title>
+<link rel="stylesheet" type="text/css" href="doc.css">
+</head>
+<body>
+<table border="0" width="100%">
+	<tr>
+		<td align="right">
+			<h4>Auto Generated Class Documentation by ClassBuilder</h4>
+		<td>
+	</tr>
+</table>
+<hr>
+<center><a href="main_index.html">Main</a>
+<a href="namespace.html">Namespace List</a>
+<a href="class_hiearchy.html">Class Hierarchy</a>
+<a href="compound_members.html">Compound Members</a>
+<a href="compound_list.html">Compound List</a>
+<a href="diagram_list.html">Diagram List</a>
+</center><hr><h1>CRenderContext Reference</h1>
+<p></p><p><pre>#include 
+</pre></p><p>Inheritance diagram for CRenderContext
+</p><table border="0"><tr>
+<td colspan="2"><h2>Public Methods</h2></td>
+</tr>
+<tr>
+<td align="right"><a name="#_methodCRenderContext_summary"></a></td><td align="left"><a href="#_methodCRenderContext_details">CRenderContext</a>( HWND  hWnd, LPCSTR  name, DWORD  left, DWORD  top, DWORD  width, DWORD  height, DWORD  bpp, DWORD  depth, DWORD  stencil, BOOL  fullscreen, CRenderContext*  parent )</td></tr>
+<tr>
+<td>&nbsp;</td>
+<td>
+<font size=-1><em>Constructor method.</em><a href="#_methodCRenderContext_details">More...</a>
+</font></td></tr>
+<tr>
+<td align="right">virtual <a name="#_method~CRenderContext_summary"></a></td><td align="left"><a href="#_method~CRenderContext_details">~CRenderContext</a>(  )</td></tr>
+<tr>
+<td>&nbsp;</td>
+<td>
+<font size=-1><em>Destructor method.</em><a href="#_method~CRenderContext_details">More...</a>
+</font></td></tr>
+<tr>
+<td align="right"><a name="#_methodGetChildRenderContext_summary"></a>BOOL </td><td align="left"><a href="#_methodGetChildRenderContext_details">GetChildRenderContext</a>( DWORD  index, CRenderContext*  *pRC )</td></tr>
+<tr>
+<td align="right"><a name="#_methodAddChild_summary"></a>void </td><td align="left"><a href="#_methodAddChild_details">AddChild</a>( CRenderContext*  child )</td></tr>
+<tr>
+<td align="right"><a name="#_methodGetConfig_summary"></a>CConfig* </td><td align="left"><a href="#_methodGetConfig_details">GetConfig</a>(  )</td></tr>
+<tr>
+<td align="right"><a name="#_methodSetRect_summary"></a>void </td><td align="left"><a href="#_methodSetRect_details">SetRect</a>( DWORD  left, DWORD  top, DWORD  width, DWORD  height )</td></tr>
+<tr>
+<td align="right"><a name="#_methodGetRect_summary"></a>void </td><td align="left"><a href="#_methodGetRect_details">GetRect</a>( RECT*  outRect )</td></tr>
+<tr>
+<td align="right"><a name="#_methodGetParentHwnd_summary"></a>HWND </td><td align="left"><a href="#_methodGetParentHwnd_details">GetParentHwnd</a>(  )</td></tr>
+<tr>
+<td align="right"><a name="#_methodGetStencil_summary"></a>DWORD </td><td align="left"><a href="#_methodGetStencil_details">GetStencil</a>(  )</td></tr>
+<tr>
+<td align="right"><a name="#_methodGetZDepth_summary"></a>DWORD </td><td align="left"><a href="#_methodGetZDepth_details">GetZDepth</a>(  )</td></tr>
+<tr>
+<td align="right"><a name="#_methodGetName_summary"></a>LPCSTR </td><td align="left"><a href="#_methodGetName_details">GetName</a>(  )</td></tr>
+<tr>
+<td colspan="2"><h2>Public Members</h2></td>
+</tr>
+<tr>
+<td colspan="2"><h2>Protected Methods</h2></td>
+</tr>
+<tr>
+<td colspan="2"><h2>Protected Members</h2></td>
+</tr>
+</table>
+<hr>
+<tr>
+<td align="right">HWND </td><td align="left"><a href="#_memberm_hWnd_details">m_hWnd</a></td></tr>
+<tr>
+<td align="right">LPCSTR </td><td align="left"><a href="#_memberm_Name_details">m_Name</a></td></tr>
+<tr>
+<td align="right">DWORD </td><td align="left"><a href="#_memberm_Left_details">m_Left</a></td></tr>
+<tr>
+<td align="right">DWORD </td><td align="left"><a href="#_memberm_Top_details">m_Top</a></td></tr>
+<tr>
+<td align="right">DWORD </td><td align="left"><a href="#_memberm_Width_details">m_Width</a></td></tr>
+<tr>
+<td align="right">DWORD </td><td align="left"><a href="#_memberm_Height_details">m_Height</a></td></tr>
+<tr>
+<td align="right">DWORD </td><td align="left"><a href="#_memberm_Bpp_details">m_Bpp</a></td></tr>
+<tr>
+<td align="right">DWORD </td><td align="left"><a href="#_memberm_Depth_details">m_Depth</a></td></tr>
+<tr>
+<td align="right">DWORD </td><td align="left"><a href="#_memberm_Stencil_details">m_Stencil</a></td></tr>
+<tr>
+<td align="right">BOOL </td><td align="left"><a href="#_memberm_FullScreen_details">m_FullScreen</a></td></tr>
+<tr>
+<td align="right">CRenderContext* </td><td align="left"><a href="#_memberm_Parent_details">m_Parent</a></td></tr>
+<tr>
+<td align="right">VECINDEXRC </td><td align="left"><a href="#_memberm_Children_details">m_Children</a></td></tr>
+<tr>
+<td align="right">CConfig </td><td align="left"><a href="#_memberm_RCConfig_details">m_RCConfig</a></td></tr>
+<h2><a name="_details"></a>Detailed Description</h2>
+<p>
+</p>
+<hr>
+<h2>Constructor and Destructor Documentation</h2>
+<a name="#_methodCRenderContext_details"></a><table border="0">
+<tr>
+<td>
+<table border="0">
+<tr>
+<td align="right"><a href="#_methodCRenderContext_summary">top</a>
+CRenderContext::CRenderContext</td>
+<td >
+(</td>
+<td >
+)</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<a name="#_method~CRenderContext_details"></a><table border="0">
+<tr>
+<td>
+<table border="0">
+<tr>
+<td align="right"><a href="#_method~CRenderContext_summary">top</a>
+CRenderContext::~CRenderContext</td>
+<td >
+(</td>
+<td >
+)</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<hr>
+<p>
+<h2>Member Function Documentation</h2>
+</p>
+<a name="#_methodGetChildRenderContext_details"></a><table border="0">
+<tr>
+<td>
+<table border="0">
+<tr>
+<td ><a href="#_methodGetChildRenderContext_summary">top</a>
+BOOL CRenderContext::GetChildRenderContext</td>
+<td >
+(</td>
+<td >
+DWORD </td>
+<td ><i>
+index</i></td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td >
+CRenderContext* </td>
+<td ><i>
+*pRC</i></td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>)</td>
+<td colspan="2">&nbsp;<code> [public]</code></td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table border="0"><tr>
+<td>&nbsp;</td>
+<td>
+<p>
+
+</p>
+<p>
+<b>Parameters:</b>
+</p>
+<table border="0">
+<tr>
+<td>
+<em><i>DWORD </i></em>
+</td>
+<td>
+&nbsp;</td>
+</tr>
+<tr>
+<td>
+<em><i>CRenderContext* </i></em>
+</td>
+<td>
+&nbsp;</td>
+</tr>
+</table>
+<p>
+<b>Returns:</b>
+</p>
+<p><em><i>BOOL  : </i></em></p>
+</td>
+</tr>
+</table></td>
+</tr>
+</table><a name="#_methodAddChild_details"></a><table border="0">
+<tr>
+<td>
+<table border="0">
+<tr>
+<td ><a href="#_methodAddChild_summary">top</a>
+void CRenderContext::AddChild</td>
+<td >
+(</td>
+<td >
+CRenderContext* </td>
+<td ><i>
+child</i></td>
+<td >
+)</td>
+<td >
+<code> [public]</code></td >
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table border="0"><tr>
+<td>&nbsp;</td>
+<td>
+<p>
+
+</p>
+<p>
+<b>Parameters:</b>
+</p>
+<table border="0">
+<tr>
+<td>
+<em><i>CRenderContext* </i></em>
+</td>
+<td>
+&nbsp;</td>
+</tr>
+</table>
+<p>
+<b>Returns:</b>
+</p>
+<p><em><i>void  : </i></em></p>
+</td>
+</tr>
+</table></td>
+</tr>
+</table><a name="#_methodGetConfig_details"></a><table border="0">
+<tr>
+<td>
+<table border="0">
+<tr>
+<td ><a href="#_methodGetConfig_summary">top</a>
+CConfig* CRenderContext::GetConfig</td>
+<td >
+(</td>
+<td >
+)</td>
+<td >
+<code> [public]</code></td >
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table border="0"><tr>
+<td>&nbsp;</td>
+<td>
+<p>
+
+</p>
+<p>
+<b>Parameters:</b>
+</p>
+<table border="0">
+</table>
+<p>
+<b>Returns:</b>
+</p>
+<p><em><i>CConfig*  : </i></em></p>
+</td>
+</tr>
+</table></td>
+</tr>
+</table><a name="#_methodSetRect_details"></a><table border="0">
+<tr>
+<td>
+<table border="0">
+<tr>
+<td ><a href="#_methodSetRect_summary">top</a>
+void CRenderContext::SetRect</td>
+<td >
+(</td>
+<td >
+DWORD </td>
+<td ><i>
+left</i></td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td >
+DWORD </td>
+<td ><i>
+top</i></td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td >
+DWORD </td>
+<td ><i>
+width</i></td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td >
+DWORD </td>
+<td ><i>
+height</i></td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>)</td>
+<td colspan="2">&nbsp;<code> [public]</code></td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table border="0"><tr>
+<td>&nbsp;</td>
+<td>
+<p>
+
+</p>
+<p>
+<b>Parameters:</b>
+</p>
+<table border="0">
+<tr>
+<td>
+<em><i>DWORD </i></em>
+</td>
+<td>
+&nbsp;</td>
+</tr>
+<tr>
+<td>
+<em><i>DWORD </i></em>
+</td>
+<td>
+&nbsp;</td>
+</tr>
+<tr>
+<td>
+<em><i>DWORD </i></em>
+</td>
+<td>
+&nbsp;</td>
+</tr>
+<tr>
+<td>
+<em><i>DWORD </i></em>
+</td>
+<td>
+&nbsp;</td>
+</tr>
+</table>
+<p>
+<b>Returns:</b>
+</p>
+<p><em><i>void  : </i></em></p>
+</td>
+</tr>
+</table></td>
+</tr>
+</table><a name="#_methodGetRect_details"></a><table border="0">
+<tr>
+<td>
+<table border="0">
+<tr>
+<td ><a href="#_methodGetRect_summary">top</a>
+void CRenderContext::GetRect</td>
+<td >
+(</td>
+<td >
+RECT* </td>
+<td ><i>
+outRect</i></td>
+<td >
+)</td>
+<td >
+<code> [public]</code></td >
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table border="0"><tr>
+<td>&nbsp;</td>
+<td>
+<p>
+
+</p>
+<p>
+<b>Parameters:</b>
+</p>
+<table border="0">
+<tr>
+<td>
+<em><i>RECT* </i></em>
+</td>
+<td>
+&nbsp;</td>
+</tr>
+</table>
+<p>
+<b>Returns:</b>
+</p>
+<p><em><i>void  : </i></em></p>
+</td>
+</tr>
+</table></td>
+</tr>
+</table><a name="#_methodGetParentHwnd_details"></a><table border="0">
+<tr>
+<td>
+<table border="0">
+<tr>
+<td ><a href="#_methodGetParentHwnd_summary">top</a>
+HWND CRenderContext::GetParentHwnd</td>
+<td >
+(</td>
+<td >
+)</td>
+<td >
+<code> [public]</code></td >
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table border="0"><tr>
+<td>&nbsp;</td>
+<td>
+<p>
+
+</p>
+<p>
+<b>Parameters:</b>
+</p>
+<table border="0">
+</table>
+<p>
+<b>Returns:</b>
+</p>
+<p><em><i>HWND  : </i></em></p>
+</td>
+</tr>
+</table></td>
+</tr>
+</table><a name="#_methodGetStencil_details"></a><table border="0">
+<tr>
+<td>
+<table border="0">
+<tr>
+<td ><a href="#_methodGetStencil_summary">top</a>
+DWORD CRenderContext::GetStencil</td>
+<td >
+(</td>
+<td >
+)</td>
+<td >
+<code> [public]</code></td >
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table border="0"><tr>
+<td>&nbsp;</td>
+<td>
+<p>
+
+</p>
+<p>
+<b>Parameters:</b>
+</p>
+<table border="0">
+</table>
+<p>
+<b>Returns:</b>
+</p>
+<p><em><i>DWORD  : </i></em></p>
+</td>
+</tr>
+</table></td>
+</tr>
+</table><a name="#_methodGetZDepth_details"></a><table border="0">
+<tr>
+<td>
+<table border="0">
+<tr>
+<td ><a href="#_methodGetZDepth_summary">top</a>
+DWORD CRenderContext::GetZDepth</td>
+<td >
+(</td>
+<td >
+)</td>
+<td >
+<code> [public]</code></td >
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table border="0"><tr>
+<td>&nbsp;</td>
+<td>
+<p>
+
+</p>
+<p>
+<b>Parameters:</b>
+</p>
+<table border="0">
+</table>
+<p>
+<b>Returns:</b>
+</p>
+<p><em><i>DWORD  : </i></em></p>
+</td>
+</tr>
+</table></td>
+</tr>
+</table><a name="#_methodGetName_details"></a><table border="0">
+<tr>
+<td>
+<table border="0">
+<tr>
+<td ><a href="#_methodGetName_summary">top</a>
+LPCSTR CRenderContext::GetName</td>
+<td >
+(</td>
+<td >
+)</td>
+<td >
+<code> [public]</code></td >
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table border="0"><tr>
+<td>&nbsp;</td>
+<td>
+<p>
+
+</p>
+<p>
+<b>Parameters:</b>
+</p>
+<table border="0">
+</table>
+<p>
+<b>Returns:</b>
+</p>
+<p><em><i>LPCSTR  : </i></em></p>
+</td>
+</tr>
+</table></td>
+</tr>
+</table></body>
+</html>

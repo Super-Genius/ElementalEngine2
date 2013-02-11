@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root Num="1">
+	<DestroyableObject Name="Destroyable Object Database" Num="7">
+		<edit Type="string" Name="Hierarchical Model File" key="false"/>
+		<edit Type="string" Name="Physics File" key="false"/>
+		<edit Type="string" Name="Particle Spawner" key="false"/>
+		<edit Type="string" Name="Particle Attach Point" key="false"/>	
+		<edit Type="string" Name="Sound On Impact" key="false"/>	
+		<edit Type="string" Name="Sound On Stage Change" key="false"/>	
+		<edit Type="short int" Name="Stage Damage" key="false"/>
+	</DestroyableObject>
+</root>

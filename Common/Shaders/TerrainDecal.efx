@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<CEffect version="2000" 
+	numconstants="7"
+	numtextures="1"
+	numrenderstates="0"
+	numbones="0"
+	numflags="0">
+	<ShaderVariable shadertype="vertexshader" type="Function" name="ZMinMax" register="19" x="0.0" y="8000.0" z="0.0" w="1.0" ></ShaderVariable>
+	<ShaderVariable shadertype="vertexshader" type="Constant" name="Color" register="20" x="1.0" y="1.0" z="1.0" w="1.0" ></ShaderVariable>
+	<ShaderVariable shadertype="vertexshader" type="Constant" name="TexTransform" register="21" x="0.0" y="0.0" z="0.0" w="0.0" ></ShaderVariable>
+	<ShaderVariable shadertype="vertexshader" type="Constant" name="TexTransformMat0" register="22" x="1.0" y="0.0" z="0.0" w="0.0" ></ShaderVariable>
+	<ShaderVariable shadertype="vertexshader" type="Constant" name="TexTransformMat1" register="23" x="0.0" y="1.0" z="0.0" w="0.0" ></ShaderVariable>
+	<ShaderVariable shadertype="vertexshader" type="Constant" name="TexTransformMat2" register="24" x="0.0" y="0.0" z="1.0" w="0.0" ></ShaderVariable>
+	<ShaderVariable shadertype="vertexshader" type="Constant" name="TexTransformMat3" register="25" x="0.0" y="0.0" z="0.0" w="1.0" ></ShaderVariable>
+	<Texture pass="0" stage="0" file="none" numtexturestates="5" >
+		<TextureStageState mode="mipfilter" value="point" ></TextureStageState>
+		<TextureStageState mode="minfilter" value="bilinear" ></TextureStageState>
+		<TextureStageState mode="magfilter" value="bilinear" ></TextureStageState>
+		<TextureStageState mode="umode" value="clamp" ></TextureStageState>
+		<TextureStageState mode="vmode" value="clamp" ></TextureStageState>
+	</Texture>
+</CEffect>

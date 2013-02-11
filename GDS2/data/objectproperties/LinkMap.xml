@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LinkedObjects NumElements="26">
+	<Link SourceObj="CEntity" DestObj="CWorld"/>
+	<Link SourceObj="CLuaScript" DestObj="CWorld" />
+	<Link SourceObj="DNSM" DestObj="CWorld" />
+	<Link SourceObj="CTerrainSector" DestObj="CWorld" />
+	<Link SourceObj="CTimeOfDayObject" DestObj="CWorld"/>
+	<Link SourceObj="CSkybox" DestObj="CWorld"/>
+	<Link SourceObj="CWeatherRenderObject" DestObj="CWorld"/>	
+	<Link SourceObj="CAIObject" DestObj="CEntity" />
+	<Link SourceObj="CRenderObject" DestObj="CEntity" />
+	<Link SourceObj="CPhysObject" DestObj="CEntity" />
+	<Link SourceObj="CTextureObject" DestObj="CEntity" />
+	<Link SourceObj="CDatabase" DestObj="CEntity" />	
+	<Link SourceObj="CEntity" DestObj="CTerrainSector"/>
+	<Link SourceObj="CLuaScript" DestObj="CAIObject" />
+	<Link SourceObj="DNSM" DestObj="CAIObject" />
+	<Link SourceObj="CNodeSystem" DestObj="CEntity" />
+	<Link SourceObj="CNode" DestObj="CNodeSystem" />
+	<Link SourceObj="CHeightNode" DestObj="CNodeSystem" />
+	<Link SourceObj="CNodeConnection" DestObj="CNodeSystem" />
+	<Link SourceObj="CQHStateObject" DestObj="CEntity" />
+	<Link SourceObj="Cal3DRenderObject" DestObj="CEntity" />
+	<Link SourceObj="CHierarchicalModel" DestObj="CEntity" />
+	<Link SourceObj="CSplineObject" DestObj="CEntity" />
+	<Link SourceObj="CSplineObject" DestObj="CWorld" />
+	<Link SourceObj="CWorld" DestObj=""/>
+	<Link SourceObj="CLightObject" DestObj="CWorld"/>	
+</LinkedObjects>

@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<ParticleBrush name="Sparks" additive="false" framerate="30" texturerate="30" texture="particles/newFire/sparks.tga" loop="false" AttachToEmitter="0.0" shader="" keyframes="37" >
+	<Keyframe type="PARTICLE_LIFE" time="0.0" value="4.0" />
+	<Keyframe type="PARTICLE_LIFE_VARIATION" time="0.0" value="0.0" />
+	<Keyframe type="PARTICLE_NUMBER" time="0.0" value="87.0" />
+	<Keyframe type="PARTICLE_NUMBER_VARIATION" time="0.0" value="0.0" />
+	<Keyframe type="PARTICLE_VISIBILITY" time="0.0" value="0.0" />
+	<Keyframe type="PARTICLE_COLOR_R" time="0.0" value="1.0" />
+	<Keyframe type="PARTICLE_COLOR_R" time="0.1" value="1.0" />
+	<Keyframe type="PARTICLE_COLOR_R" time="0.6" value="1.0" />
+	<Keyframe type="PARTICLE_COLOR_G" time="0.0" value="1.0" />
+	<Keyframe type="PARTICLE_COLOR_G" time="0.1" value="0.9609375" />
+	<Keyframe type="PARTICLE_COLOR_G" time="0.6" value="1.0" />
+	<Keyframe type="PARTICLE_COLOR_B" time="0.0" value="1.0" />
+	<Keyframe type="PARTICLE_COLOR_B" time="0.1" value="0.58203125" />
+	<Keyframe type="PARTICLE_COLOR_B" time="0.6" value="1.0" />
+	<Keyframe type="PARTICLE_COLOR_A" time="0.0" value="1.0" />
+	<Keyframe type="PARTICLE_COLOR_A" time="0.6" value="1.0" />
+	<Keyframe type="PARTICLE_COLOR_A" time="0.9" value="0.0" />
+	<Keyframe type="PARTICLE_VELOCITY" time="0.0" value="58.0" />
+	<Keyframe type="PARTICLE_VELOCITY_VARIATION" time="0.0" value="0.0" />
+	<Keyframe type="PARTICLE_VELOCITY_LIFE" time="0.0" value="2.0" />
+	<Keyframe type="PARTICLE_VELOCITY_LIFE" time="0.23" value="0.80" />
+	<Keyframe type="PARTICLE_VELOCITY_LIFE" time="1.0" value="0.0" />	
+	<Keyframe type="PARTICLE_SPIN" time="0.0" value="4.0" />
+	<Keyframe type="PARTICLE_SPIN_VARIATION" time="0.0" value="12.0" />
+	<Keyframe type="PARTICLE_SPIN_LIFE" time="0.0" value="30.0" />
+	<Keyframe type="PARTICLE_SIZE" time="0.0" value="58" />
+	<Keyframe type="PARTICLE_SIZE_VARIATION" time="0.0" value="29" />
+	<Keyframe type="PARTICLE_SIZE_LIFE" time="0.0" value="0.0" />
+	<Keyframe type="PARTICLE_SIZE_LIFE" time="0.23" value="1.5" />
+	<Keyframe type="PARTICLE_SIZE_LIFE" time="1.0" value="2.0" />
+	<Keyframe type="PARTICLE_MOTION_RAND" time="0.0" value="0.0" />
+	<Keyframe type="PARTICLE_MOTION_RAND_VARIATION" time="0.0" value="24.0" />
+	<Keyframe type="PARTICLE_MOTION_RAND_LIFE" time="0.0" value="1.9" />
+	<Keyframe type="PARTICLE_MOTION_RAND_LIFE" time="1.0" value="1.0" />
+	<Keyframe type="PARTICLE_WEIGHT" time="0.0" value="-6.0" />
+	<Keyframe type="PARTICLE_WEIGHT_VARIATION" time="0.0" value="0.0" />
+	<Keyframe type="PARTICLE_WEIGHT_LIFE" time="0.0" value="1.0" />
+</ParticleBrush>

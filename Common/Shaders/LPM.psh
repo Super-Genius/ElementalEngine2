@@ -1,0 +1,13 @@
+#include "Shaders\HLSLconstants.h"
+
+struct v2f
+{
+	float4 Color: COLOR0;
+};
+
+float4 main(v2f i ) : COLOR
+{
+	//draw black
+	float4 outcolor  = float4(i.Color.x,i.Color.y,i.Color.z,1.0);//i.Color.a);	
+	return outcolor;
+}

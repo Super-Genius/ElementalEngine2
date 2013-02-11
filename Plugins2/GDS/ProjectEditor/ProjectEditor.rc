@@ -1,0 +1,238 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\ProjectEditor.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904B0"
+        BEGIN
+            VALUE "FileDescription", "ProjectEditor DLL"
+            VALUE "FileVersion", "1, 0, 0, 1"
+            VALUE "InternalName", "ProjectEditor"
+            VALUE "LegalCopyright", "Copyright (C) 2009 Signature Devices, Inc."
+            VALUE "OriginalFilename", "ProjectEditor.DLL"
+            VALUE "ProductName", "ProjectEditor Dynamic Link Library"
+            VALUE "ProductVersion", "1, 0, 0, 1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_PROJECTTYPE_TOOLS MENU 
+BEGIN
+    POPUP "&Tools"
+    BEGIN
+        MENUITEM "&Options...",                 ID_TOOLS_OPTIONS
+        MENUITEM "Project Settings...",         ID_TOOLS_PROJECT_SETTINGS
+    END
+END
+
+IDR_PROJECTTYPE_FILE MENU 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        POPUP "&New\tCtrl+N"
+        BEGIN
+            MENUITEM "Project...",                  ID_NEW_PROJECT
+            MENUITEM "&File...",                    ID_FILE_NEW
+        END
+    END
+END
+
+IDR_PROJECTTYPE_FILE_CLOSE MENU 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&Close",                      ID_FILE_CLOSE
+        MENUITEM "Close Projec&t",              ID_FILE_CLOSEPROJECT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_PROJECT_SETTINGS DIALOGEX 0, 0, 421, 302
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Project Settings"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "Project Directory:",IDC_STATIC,20,33,58,8
+    PUSHBUTTON      "...",IDC_DIRECTORY_SEL,392,33,22,14
+    EDITTEXT        IDC_EDIT_PROJECT_DIR,84,34,302,12,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "Version:",IDC_STATIC,20,53,27,8
+    COMBOBOX        IDC_COMBOBOX_PROJECT_VERSION,83,52,56,86,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Startup Script:",IDC_STATIC,19,73,48,8
+    EDITTEXT        IDC_EDIT_PROJECT_STARTUP_SCRIPT,82,71,301,14,ES_AUTOHSCROLL
+    LTEXT           "Additional DLLs:",IDC_STATIC,19,96,52,8
+    LTEXT           "Project Name:",IDC_STATIC,21,15,46,8
+    EDITTEXT        IDC_EDIT_PROJECT_NAME,83,14,304,14,ES_AUTOHSCROLL
+    CONTROL         "",IDC_ADDITIONAL_DLL_LIST,"SysListView32",LVS_LIST | LVS_SINGLESEL | LVS_SORTASCENDING | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,82,94,299,201,WS_EX_LEFTSCROLLBAR
+    PUSHBUTTON      "+",IDC_BUTTON_LISTBOX_ADD,387,95,27,14
+    PUSHBUTTON      "-",IDC_BUTTON_LISTBOX_REMOVE,386,115,28,15
+    PUSHBUTTON      "...",IDC_BUTTON_STARTUP_SCRIPT_SELECTOR,391,70,23,14
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_PROJECT_SETTINGS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 414
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 295
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_PROJECT_SETTINGS DLGINIT
+BEGIN
+    IDC_COMBOBOX_PROJECT_VERSION, 0x403, 4, 0
+0x2e31, 0x0030, 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDR_PROJECTTYPE         "\nTexture\nTexture\n\n\nTexture.Document\nTexture Document"
+    IDS_OBJECT_NAME         "Textures"
+    ID_IMAGE_ATTRIBUTES     "Change/Display image attributes\nImage Attributes"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_FILE_CLOSE           "Close the active document\nClose"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif //_WIN32
+#include "res\ProjectEditor.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

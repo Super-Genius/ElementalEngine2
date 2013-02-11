@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root Num="1">
+<Soldiers Name="Soldiers Database" Num="41">
+	<edit Type="short int" Name="Class" key="true"/>
+	<edit Type="string" Name="Weapon Name" key="true"/>
+	<edit Type="long int" Name="Armor Head" key="false"/>
+	<edit Type="long int" Name="Armor Body" key="false"/>
+	<edit Type="long int" Name="To Hit Head" key="false"/>
+	<edit Type="long int" Name="To Hit Body" key="false"/>
+	<edit Type="long int" Name="Weight" key="false"/>
+	<edit Type="short int" Name="Crewed Weapon" key="false"/>
+	<edit Type="short int" Name="Primary Weapon" key="false"/>
+	<edit Type="short int" Name="Secondary Weapon" key="false"/>
+	<edit Type="short int" Name="Grenade Weapon" key="false"/>
+	<edit Type="short int" Name="Hand to Hand Weapon" key="false"/>
+	<edit Type="short int" Name="Crewed AP" key="false"/>
+	<edit Type="short int" Name="Crewed HE" key="false"/>
+	<edit Type="short int" Name="Crewed HEAT" key="false"/>
+	<edit Type="short int" Name="Crewed Smoke" key="false"/>
+	<edit Type="short int" Name="Crewed Spec" key="false"/>
+	<edit Type="short int" Name="Primary AP" key="false"/>
+	<edit Type="short int" Name="Primary HE" key="false"/>
+	<edit Type="short int" Name="Primary HEAT" key="false"/>
+	<edit Type="short int" Name="Primary Smoke" key="false"/>
+	<edit Type="short int" Name="Primary Spec" key="false"/>
+	<edit Type="short int" Name="Secondary AP" key="false"/>
+	<edit Type="short int" Name="Secondary HE" key="false"/>
+	<edit Type="short int" Name="Secondary HEAT" key="false"/>
+	<edit Type="short int" Name="Secondary Smoke" key="false"/>
+	<edit Type="short int" Name="Secondary Spec" key="false"/>
+	<edit Type="short int" Name="Grenade AP" key="false"/>
+	<edit Type="short int" Name="Grenade HE" key="false"/>
+	<edit Type="short int" Name="Grenade HEAT" key="false"/>
+	<edit Type="short int" Name="Grenade Smoke" key="false"/>
+	<edit Type="short int" Name="Grenade Spec" key="false"/>
+	<edit Type="short int" Name="Secondary AP" key="false"/>
+	<edit Type="short int" Name="Secondary HE" key="false"/>
+	<edit Type="short int" Name="Secondary HEAT" key="false"/>
+	<edit Type="short int" Name="Secondary Smoke" key="false"/>
+	<edit Type="short int" Name="Secondary Spec" key="false"/>
+	<edit Type="short int" Name="Value" key="false"/>
+	<edit Type="short int" Name="Ammo Count" key="false"/>
+	<edit Type="bool" Name="Has NVG" key="false"/>
+	<edit Type="bool" Name="Has Med Kit" key="false"/>
+</Soldiers>
+</root>

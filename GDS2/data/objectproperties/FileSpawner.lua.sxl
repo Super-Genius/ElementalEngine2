@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<CSpawner Name="World" vers="3.0">
+	<CLuaScript Name="%FileName%" FileName="%Path%">
+	</CLuaScript>		
+</CSpawner>

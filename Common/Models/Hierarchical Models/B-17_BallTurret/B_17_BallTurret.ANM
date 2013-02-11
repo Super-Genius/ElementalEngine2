@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<hmesh numgeom="7" time="0.1">
+	<hnode name="Ball_Yaw" id="5" pid="0" numrotkeys="1" numscalekeys="1" numposkeys="1" tr_0="0.000000" q0x="0.000000" q0y="0.000000" q0z="0.000000" q0w="1.000000" ts_0="0.000000" s0x="1.000000" s0y="1.000000" s0z="1.000000" tp_0="0.000000" p0x="-0.000008" p0y="0.000000" p0z="-0.000002"  >
+	</hnode>
+	<hnode name="Ball_Pitch" id="6" pid="5" numrotkeys="1" numscalekeys="1" numposkeys="1" tr_0="0.000000" q0x="0.000000" q0y="0.000000" q0z="0.000000" q0w="1.000000" ts_0="0.000000" s0x="0.792880" s0y="0.792880" s0z="0.792880" tp_0="0.000000" p0x="-0.000024" p0y="0.000000" p0z="0.000000"  >
+	</hnode>
+	<hnode name="Camera_Attach" id="7" pid="6" numrotkeys="1" numscalekeys="1" numposkeys="1" tr_0="0.000000" q0x="0.000000" q0y="-0.000872" q0z="0.000000" q0w="1.000000" ts_0="0.000000" s0x="1.261224" s0y="1.261225" s0z="1.261226" tp_0="0.000000" p0x="-0.000004" p0y="2.791164" p0z="-0.000020"  >
+	</hnode>
+	<hnode name="Dual_M2" id="8" pid="6" numrotkeys="1" numscalekeys="1" numposkeys="4" tr_0="0.000000" q0x="-0.000001" q0y="0.000000" q0z="0.000001" q0w="1.000000" ts_0="0.000000" s0x="1.261224" s0y="1.261225" s0z="1.261225" tp_0="0.000000" p0x="-0.000019" p0y="2.602128" p0z="13.005031" tp_1="0.033333" p1x="-0.000019" p1y="2.602128" p1z="12.014326" tp_2="0.066667" p2x="-0.000016" p2y="2.602126" p2z="13.005031" tp_3="0.100000" p3x="-0.000019" p3y="2.602128" p3z="12.014326"  >
+	</hnode>
+	<hnode name="Left_Muzzle_Pt" id="9" pid="8" numrotkeys="1" numscalekeys="1" numposkeys="1" tr_0="0.000000" q0x="0.000000" q0y="0.000000" q0z="0.000000" q0w="1.000000" ts_0="0.000000" s0x="1.000000" s0y="0.999999" s0z="1.000000" tp_0="0.000000" p0x="-9.045657" p0y="-0.284655" p0z="19.593229"  >
+	</hnode>
+	<hnode name="Right_Muzzle_Pt" id="10" pid="8" numrotkeys="1" numscalekeys="1" numposkeys="1" tr_0="0.000000" q0x="0.000000" q0y="0.000000" q0z="0.000000" q0w="1.000000" ts_0="0.000000" s0x="1.000000" s0y="0.999999" s0z="1.000000" tp_0="0.000000" p0x="9.008088" p0y="-0.284624" p0z="19.593166"  >
+	</hnode>
+	<hnode name="Turret_glass" id="11" pid="6" numrotkeys="1" numscalekeys="1" numposkeys="1" tr_0="0.000000" q0x="0.000000" q0y="0.000000" q0z="0.000000" q0w="1.000000" ts_0="0.000000" s0x="0.505024" s0y="0.501177" s0z="0.505025" tp_0="0.000000" p0x="-0.000017" p0y="3.112717" p0z="10.760484"  >
+	</hnode>
+</hmesh>

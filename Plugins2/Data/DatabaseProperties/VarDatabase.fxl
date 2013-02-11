@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root Num="1">
+<VarDatabase Name="Variable Database/KnowledgeBase" Num="5" >
+	<edit Type="string" Name="Parent" key="true"/>
+	<edit Type="string" Name="Name" key="true"/>
+	<edit Type="string" Name="Variable Name" key="true"/>
+	<combo Type="string" name="type" key="false" DefSelect="string" 
+		NumOptions="10"
+		option1="char"
+		option2="unsigned char"
+		option3="short int"
+		option4="unsigned short int"
+		option5="long int"
+		option6="unsigned long int"
+		option7="float"
+		option8="double float"
+		option9="bool"
+		option10="string"
+	/>
+	<edit Type="%type" Name="Value" key="false"/>
+</VarDatabase>
+</root>

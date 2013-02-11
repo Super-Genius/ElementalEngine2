@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<hmesh numgeom="4">
+	<hnode name="MultiTrigger" id="0" pid="-1" type="Cal3D" file="MultiTrigger.cfg" rotqx="0.000000" rotqy="0.000000" rotqz="0.000000" rotqw="1.000000" scalex="1.000000" scaley="1.000000" scalez="1.000000" posx="0.000000" posy="0.000090" posz="0.000000" >
+	</hnode>
+	<hnode name="DelayTrigger" id="1" pid="-1" type="Cal3D" file="DelayTrigger.cfg" rotqx="0.000000" rotqy="0.000000" rotqz="0.000000" rotqw="1.000000" scalex="1.000000" scaley="1.000000" scalez="1.000000" posx="0.000141" posy="0.000090" posz="0.000000" >
+	</hnode>
+	<hnode name="Enemy_Trigger" id="2" pid="-1" type="Cal3D" file="Enemy_Trigger.cfg" rotqx="0.000000" rotqy="0.000000" rotqz="0.000000" rotqw="1.000000" scalex="1.000000" scaley="1.000000" scalez="1.000000" posx="0.000000" posy="0.000090" posz="0.000000" >
+	</hnode>
+	<hnode name="Light_Trigger" id="3" pid="-1" type="Cal3D" file="Light_Trigger.cfg" rotqx="0.000000" rotqy="0.000000" rotqz="0.000000" rotqw="1.000000" scalex="1.000000" scaley="1.000000" scalez="1.000000" posx="0.000000" posy="0.064959" posz="0.000000" >
+	</hnode>
+</hmesh>

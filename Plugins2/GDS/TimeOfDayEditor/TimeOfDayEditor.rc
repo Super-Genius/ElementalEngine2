@@ -1,0 +1,343 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#include ""res\\TimeOfDayEditor.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""     // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904e4"
+        BEGIN
+            VALUE "CompanyName", "TODO: <Company name>"
+            VALUE "FileDescription", "TODO: <File description>"
+            VALUE "FileVersion", "1.0.0.1"
+            VALUE "InternalName", "TimeOfDayEditor.dll"
+            VALUE "LegalCopyright", "TODO: (c) <Company name>.  All rights reserved."
+            VALUE "OriginalFilename", "TimeOfDayEditor.dll"
+            VALUE "ProductName", "TODO: <Product name>"
+            VALUE "ProductVersion", "1.0.0.1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1252
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_TIMEOFDAY_TOOL_PALETTE DIALOGEX 0, 0, 417, 24
+STYLE DS_SETFONT | WS_CHILD
+EXSTYLE WS_EX_TOPMOST | WS_EX_TOOLWINDOW
+FONT 6, "MS Sans Serif", 400, 0, 0x0
+BEGIN
+    PUSHBUTTON      "Button1",IDC_TODDIALOG_BUTTON,5,1,24,22,BS_ICON
+    CTEXT           "0:00",IDC_STATIC,41,1,15,8
+    CTEXT           "12:00",IDC_STATIC,117,1,19,8
+    CTEXT           "24:00",IDC_STATIC,194,1,19,8
+    CONTROL         "",IDC_TIME_SLIDER,"msctls_trackbar32",TBS_BOTH | 
+                    TBS_NOTICKS | WS_TABSTOP,36,11,180,12
+    CTEXT           "Rate",IDC_STATIC,243,1,16,8
+    EDITTEXT        IDC_TIMERATE_EDIT,239,11,26,12,ES_RIGHT | ES_AUTOHSCROLL
+    CONTROL         "",IDC_TIMERATE_SPIN,"msctls_updown32",UDS_ARROWKEYS,270,
+                    11,11,12
+    CONTROL         "Light",IDC_TIMEOFDAY_MOTION,"Button",BS_AUTOCHECKBOX | 
+                    BS_ICON | BS_PUSHLIKE | WS_TABSTOP,293,1,24,22
+    CONTROL         "Light",IDC_TIMEOFDAY_LIGHT,"Button",BS_AUTOCHECKBOX | 
+                    BS_ICON | BS_PUSHLIKE | WS_TABSTOP,324,1,24,22
+    PUSHBUTTON      "Button1",IDC_WEATHEREFFECTS_BUTTON,353,1,24,22,BS_ICON
+    CONTROL         "Light",IDC_SHADOW_ENABLE,"Button",BS_AUTOCHECKBOX | 
+                    BS_ICON | BS_PUSHLIKE | WS_TABSTOP,384,1,24,22
+END
+
+IDD_TOD_DIALOG DIALOGEX 0, 0, 628, 262
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Time of Day Editor"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    PUSHBUTTON      "Ok",IDCLOSE,567,216,54,18
+    EDITTEXT        IDC_TEXTURE0,30,24,144,12,ES_AUTOHSCROLL
+    LTEXT           "Sunlight Keyframes: 12:00am --> 12:00pm --> 11:59pm",
+                    IDC_STATIC,6,120,282,8,SS_CENTERIMAGE
+    LTEXT           "Fog Keyframes: 12:00am --> 12:00pm --> 11:59pm",
+                    IDC_STATIC,336,120,186,8
+    LTEXT           "Sky Cube Textures (Day)",IDC_STATIC,30,6,144,12,
+                    SS_CENTERIMAGE
+    EDITTEXT        IDC_TEXTURE1,30,42,144,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_TEXTURE2,30,60,144,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_TEXTURE3,30,78,144,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_TEXTURE4,30,96,144,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_TEXTURE5,204,24,144,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_TEXTURE6,204,42,144,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_TEXTURE7,204,60,144,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_TEXTURE8,204,78,144,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_TEXTURE9,204,96,144,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_TEXTURE10,378,24,144,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_TEXTURE11,378,42,144,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_TEXTURE12,378,60,144,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_TEXTURE13,378,78,144,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_TEXTURE14,378,96,144,12,ES_AUTOHSCROLL
+    LTEXT           "Sky Cube Textures (Dusk)",IDC_STATIC,204,6,144,12,
+                    SS_CENTERIMAGE
+    LTEXT           "Sky Cube Textures (Night)",IDC_STATIC,378,6,144,12,
+                    SS_CENTERIMAGE
+    PUSHBUTTON      "...",IDC_BUTTON0,174,24,18,12
+    PUSHBUTTON      "...",IDC_BUTTON1,174,42,18,12
+    PUSHBUTTON      "...",IDC_BUTTON2,174,60,18,12
+    PUSHBUTTON      "...",IDC_BUTTON3,174,78,18,12
+    PUSHBUTTON      "...",IDC_BUTTON4,174,96,18,12
+    PUSHBUTTON      "...",IDC_BUTTON5,348,24,18,12
+    PUSHBUTTON      "...",IDC_BUTTON6,348,42,18,12
+    PUSHBUTTON      "...",IDC_BUTTON7,348,60,18,12
+    PUSHBUTTON      "...",IDC_BUTTON8,348,78,18,12
+    PUSHBUTTON      "...",IDC_BUTTON9,348,96,18,12
+    PUSHBUTTON      "...",IDC_BUTTON10,522,24,18,12
+    PUSHBUTTON      "...",IDC_BUTTON11,522,42,18,12
+    PUSHBUTTON      "...",IDC_BUTTON12,522,60,18,12
+    PUSHBUTTON      "...",IDC_BUTTON13,522,78,18,12
+    PUSHBUTTON      "...",IDC_BUTTON14,522,96,18,12
+    RTEXT           "Right",IDC_STATIC,0,24,24,12,SS_CENTERIMAGE
+    RTEXT           "Front",IDC_STATIC,0,60,24,12,SS_CENTERIMAGE
+    RTEXT           "Left",IDC_STATIC,0,42,24,12,SS_CENTERIMAGE
+    RTEXT           "Back",IDC_STATIC,0,78,24,12,SS_CENTERIMAGE
+    RTEXT           "Top",IDC_STATIC,0,96,24,12,SS_CENTERIMAGE
+    PUSHBUTTON      "Add",IDC_BUTTONSUNADD,294,156,30,18
+    PUSHBUTTON      "Del",IDC_BUTTONSUNDEL,294,180,30,18
+    PUSHBUTTON      "Add",IDC_BUTTONFOGADD,528,162,30,18
+    PUSHBUTTON      "Del",IDC_BUTTONFOGDEL,528,186,30,18
+    PUSHBUTTON      "Up",IDC_BUTTONSUNUP,294,204,24,18
+    PUSHBUTTON      "Dn",IDC_BUTTONSUNDN,294,223,24,18
+    PUSHBUTTON      "Up",IDC_BUTTONFOGUP,528,210,24,18
+    PUSHBUTTON      "Dn",IDC_BUTTONFOGDN,528,228,24,18
+    CONTROL         "",IDC_LISTSUN,"SysListView32",LVS_REPORT | 
+                    LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_ALIGNLEFT | 
+                    LVS_NOSORTHEADER | WS_BORDER | WS_TABSTOP,6,132,282,126
+    CONTROL         "",IDC_LISTFOG,"SysListView32",LVS_REPORT | 
+                    LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_ALIGNLEFT | 
+                    LVS_NOSORTHEADER | WS_BORDER | WS_TABSTOP,336,132,186,
+                    126
+    PUSHBUTTON      "Cancel",ID_CANCEL,567,240,54,18
+END
+
+IDD_TODSUN_DIALOG DIALOGEX 0, 0, 262, 184
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Edit Sunlight Keyframe"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    PUSHBUTTON      "Ok",IDOK,198,162,54,18
+    PUSHBUTTON      "Ambient Color",IDC_EDITSUNAMBIENTBN,30,6,96,18
+    EDITTEXT        IDC_EDITSUNAMBIENTTEXT,138,6,84,12,ES_AUTOHSCROLL | 
+                    WS_DISABLED
+    EDITTEXT        IDC_EDITSUNKEY_DAWN,156,54,60,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDITSUNKEY_NIGHT,156,78,60,12,ES_AUTOHSCROLL
+    LTEXT           "Dawn Sky Weight",IDC_STATIC,90,54,66,12,SS_CENTERIMAGE
+    LTEXT           "Night Sky Weight",IDC_STATIC,90,78,66,12,SS_CENTERIMAGE
+    PUSHBUTTON      "Fullbright Color",IDC_EDITSUNFULLBRIGHTBN,30,30,96,18
+    EDITTEXT        IDC_EDITSUNFULLBRIGHTTEXT,138,30,84,12,ES_AUTOHSCROLL | 
+                    WS_DISABLED
+    GROUPBOX        "",IDC_STATIC,84,48,138,24
+    GROUPBOX        "",IDC_STATIC,84,72,138,24
+    LTEXT           "Description Here",IDC_EDITSUNDESC,6,102,246,54,
+                    WS_BORDER
+END
+
+IDD_TODFOG_DIALOG DIALOGEX 0, 0, 256, 172
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Edit Fog Keyframe"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    PUSHBUTTON      "Ok",IDOK,198,150,54,18
+    PUSHBUTTON      "Fog Color",IDC_EDITFOGCOLORBN,54,6,48,12
+    EDITTEXT        IDC_EDITFOGCOLORTEXT,108,6,84,12,ES_AUTOHSCROLL | 
+                    WS_DISABLED
+    EDITTEXT        IDC_EDITFOGKEY_FOGSTART,126,36,60,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDITFOGKEY_FOGEND,126,60,60,12,ES_AUTOHSCROLL
+    LTEXT           "Fog Start",IDC_STATIC,60,36,66,12,SS_CENTERIMAGE
+    LTEXT           "Fog End",IDC_STATIC,60,60,66,12,SS_CENTERIMAGE
+    GROUPBOX        "",IDC_STATIC,54,30,138,24
+    GROUPBOX        "",IDC_STATIC,54,54,138,24
+    LTEXT           "Description Here",IDC_EDITFOGDESC,6,90,246,54,WS_BORDER
+END
+
+IDD_WEATHEREFFECTS_DIALOG DIALOGEX 0, 0, 195, 99
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Weather Effects"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,138,58,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,138,79,50,14
+    LTEXT           "Effect:",IDC_STATIC,15,18,40,11
+    COMBOBOX        IDC_COMBO_WEATHEREFFECT,67,17,113,52,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Intensity:",IDC_STATIC,15,42,40,11
+    EDITTEXT        IDC_EDIT_INTENSITY,67,38,43,15,ES_AUTOHSCROLL
+    LTEXT           "Particle Scale:",IDC_STATIC,15,66,60,11
+    EDITTEXT        IDC_EDIT_PARTICLESCALE,67,62,43,15,ES_AUTOHSCROLL
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_TIMEOFDAYTYPE       ICON                    "icon1.ico"
+IDI_TOD_LIGHT           ICON                    "res\\tod_light.ico"
+IDI_TOD_MOTION          ICON                    "res\\tod_motion.ico"
+IDI_TOD_DIALOG          ICON                    "res\\tod_dialog.ico"
+IDI_WEATHERICON         ICON                    "res\\weather.ico"
+IDI_SHADOW_ICON         ICON                    "res\\Shadow.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_TIMEOFDAY_TOOL_PALETTE, DIALOG
+    BEGIN
+        RIGHTMARGIN, 405
+        TOPMARGIN, 1
+        BOTTOMMARGIN, 23
+    END
+
+    IDD_WEATHEREFFECTS_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 6
+        RIGHTMARGIN, 188
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 92
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_RAIN_EFFECT         "Rain"
+    IDS_SNOW_EFFECT         "Snow"
+    IDS_DEFAULT_EFFECT      "None"
+END
+
+STRINGTABLE 
+BEGIN
+    IDC_WEATHEREFFECTS_BUTTON "Weather Effects\nModify weather effects"
+END
+
+STRINGTABLE 
+BEGIN
+    IDC_TIMEOFDAY_LIGHT     "Lighting\nEnable\\Disable Lighting"
+    IDC_TODDIALOG_BUTTON    "Time of Day Properties\nEdit time of day and skybox properties"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#include "res\TimeOfDayEditor.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"     // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

@@ -1,0 +1,847 @@
+<HTML>
+<HEAD>
+<TITLE>Class SMLXMatrix</TITLE>
+<link href="styles.css" rel="STYLESHEET" type="text/css">
+</head>
+<BODY LINK="#0000ff" VLINK="#800080">
+<P><A NAME="SMLXMatrix"></A>[<A href="index.htm">SML Overview</A>]</P>
+
+<h1>Class SMLXMatrix</h1>
+<PRE>#include &quot;<A href="smlxmatrix.h">smlxmatrix.h</A>&quot;</PRE>
+
+<P><B>SMLXMatrix</B> class encapsulates resizable matrix object. Matrix elements are floating-point numbers.</P>
+<P>Class includes methods and data which allow to form resizable matrix, multiply two matrices, transpose them, add, subtract, copy, initialize, find maximum absolute value among elements, and others.</P>
+<hr>
+<H2>Public Interface</H2>
+
+<h3>Constructors and Destructor</h3>
+<table cellSpacing=5 width=400>
+<tr>
+<TD><P><A href="SMLXMatrix.htm#constructor">constructors</A></P></TD>
+<TD><P><A href="SMLXMatrix.htm#dtor">destructor</A></P></TD>
+</tr>
+</table>
+
+<H3>Access</H3>
+<table cellSpacing=5 width=600>
+<tr>
+<TD><P><A href="SMLXMatrix.htm#Get">Get</A></P></TD>
+<TD><P><A href="SMLXMatrix.htm#MaxAbs">MaxAbs</A></P></TD>
+<TD><P><A href="SMLXMatrix.htm#TMat">TMat</A></P></TD>
+</tr>
+<TR>
+<TD><P><A href="SMLXMatrix.htm#Data">Data</A></P></TD>
+<TD><P><A href="SMLXMatrix.htm#operator[]">operator[]</A></P></TD>
+<TD><P><A href="SMLXMatrix.htm#Index">Index</A></P></TD>
+</TR>
+<TR>
+<TD><P><A href="SMLXMatrix.htm#Size">Size</A></P></TD>
+<TD><P><A href="SMLXMatrix.htm#SMLMatrix3f">SMLMatrix3f&amp;</A></P></TD>
+<TD><P><A href="SMLXMatrix.htm#SMLMatrix4f">SMLMatrix4f&amp;</A></P></TD>
+</TR>
+<TR>
+<TD><P><A href="SMLXMatrix.htm#ncols">ncols</A></P></TD>
+<TD><P><A href="SMLXMatrix.htm#nrows">nrows</A></P></TD>
+<TD><P><A href="SMLXMatrix.htm#Export">Export</A></P></TD>
+</TR>
+</table>
+
+<H3>Modifiers</H3>
+<table cellSpacing=5 width=600>
+<TR>
+<TD><P><A href="SMLXMatrix.htm#Invert">Invert</A></P></TD>
+<TD><P><A href="SMLXMatrix.htm#Identity">Identity</A></P></TD>
+<TD><P><A href="SMLXMatrix.htm#IdentityMinus">IdentityMinus</A></P></TD>
+</TR>
+<TR>
+<TD><P><A href="SMLXMatrix.htm#Negate">Negate</A></P></TD>
+<TD><P><A href="SMLXMatrix.htm#Resize">Resize</A></P></TD>
+<TD><P><A href="SMLXMatrix.htm#Set">Set</A></P></TD>
+</TR>
+<TR>
+<TD><P><A href="SMLXMatrix.htm#Swap">Swap</A></P></TD>
+<TD><P><A href="SMLXMatrix.htm#Zero">Zero</A></P></TD>
+<TD><P><A href="SMLXMatrix.htm#Transpose">Transpose</A></P></TD>
+</TR>
+</table>
+
+<h3>const Operations</h3>
+<table cellSpacing=5 width=600>
+<tr>
+<TD><P><A href="SMLXMatrix.htm#operator_times">operator*</A></P></TD>
+<TD><P><A href="SMLXMatrix.htm#operator_plus">operator+</A></P></TD>
+<TD><P><A href="SMLXMatrix.htm#operator_minis">operator-</A></P></TD>
+</tr>
+<tr>
+<TD><P><A href="SMLXMatrix.htm#Transform">Transform</A></P></TD>
+<TD><P><A href="SMLXMatrix.htm#TransformTransposed">TransformTransposed</A></P></TD>
+</tr>
+</table>
+
+<h3>modifiable Operations</h3>
+<table cellSpacing=5 width=600>
+<tr>
+<TD><P><A href="SMLXMatrix.htm#NSub">NSub</A></P></TD>
+<TD><P><A href="SMLXMatrix.htm#Sub">Sub</A></P></TD>
+<TD><P><A href="SMLXMatrix.htm#Add">Add</A></P></TD>
+</tr>
+<tr>
+<TD><P><A href="SMLXMatrix.htm#Cross">Cross</A></P></TD>
+<TD><P><A href="SMLXMatrix.htm#Scale">Scale</A></P></TD>
+<TD><P><A href="SMLXMatrix.htm#operator_timesassign">operator*=</A></P></TD>
+</tr>
+<tr>
+<TD><P><A href="SMLXMatrix.htm#operator_plusassign">operator+=</A></P></TD>
+<TD><P><A href="SMLXMatrix.htm#operator_minusassign">operator-=</A></P></TD>
+<TD><P><A href="SMLXMatrix.htm#operator_assign">operator=</A></P></TD>
+</tr>
+<tr>
+
+</tr>
+</table>
+
+<h3>Transformations</h3>
+<table cellSpacing=5 width=400>
+<tr>
+<TD><P><A href="SMLXMatrix.htm#LUDecomposition">LUDecomposition</A></P></TD>
+<TD><P><A href="SMLXMatrix.htm#SVDecomposition">SVDecomposition</A></P></TD>
+</tr>
+</table>
+
+<h3>Predicats</h3>
+<table cellSpacing=5 width=600>
+<tr>
+<TD><P><A href="SMLXMatrix.htm#IsDefined">IsDefined</A></P></TD>
+<TD><P><A href="SMLXMatrix.htm#MarkAsDefined">MarkAsDefined</A></P></TD>
+<TD><P><A href="SMLXMatrix.htm#MarkAsUndefined">MarkAsUndefined</A></P></TD>
+</tr>
+</table>
+
+<h3>Others</h3>
+<table cellSpacing=5 width=400>
+<tr>
+<TD><P><A href="SMLXMatrix.htm#Output">Output</A></P></TD>
+</tr>
+</table>
+
+<HR>
+
+<P><A NAME="constructor"></A>SMLLIBENTRY <B>SMLXMatrix</B>();</P>
+<h4>Discussion</h4>
+<P>Default <B>SMLXMatrix</B> object constructor. Creates matrix of size 0X0.</P>
+<P><I>Example:</I></P>
+<PRE><A href="SMLXMatrix.htm#SMLXMatrix">SMLXMatrix</A> A;</PRE>
+<h4>Parameters</h4>
+<P>No.</P>
+<p>[<A href="SMLXMatrix.htm#SMLXMatrix">top</A>]</p><hr>
+
+<P>SMLLIBENTRY <B>SMLXMatrix</B>(const SMLXMatrix&amp; <B><I>B</I></B>);</P>
+<h4>Discussion</h4>
+<P><B>SMLXMatrix</B> object copy-constructor.</P>
+<P><I>Example:</I></P>
+<PRE><A href="SMLXMatrix.htm#SMLXMatrix">SMLXMatrix</A> A(6, 6); A.Identity();
+<A href="SMLXMatrix.htm#SMLXMatrix">SMLXMatrix</A> B(A);</PRE>
+<h4>Parameters</h4>
+<P><B><I>B</I></B> - reference to <B><I>SMLXMatrix</I></B> 
+ object to copy.</P>
+<p>[<A href="SMLXMatrix.htm#SMLXMatrix">top</A>]</p><hr>
+
+<P>SMLLIBENTRY <B>SMLXMatrix</B>(short <B><I>nrow</I></B>, short <B><I>ncol</I></B>);</P>
+<H4>Discussion</H4>
+<P><B>SMLXMatrix</B> creates matrix with <B><I>nrow</I></B> x <B><I>ncol</I></B> size.</P>
+<P><I>Example:</I></P>
+<PRE><A href="SMLXMatrix.htm#SMLXMatrix">SMLXMatrix</A> A(6, 6);</PRE>
+<h4>Parameters</h4>
+<P><B><I>nrow</I></B> - number of matrix rows. </P>
+<P><B><I>ncol</I></B> - number of matrix columns.</P>
+<p>[<A href="SMLXMatrix.htm#SMLXMatrix">top</A>]</p><hr>
+
+<P>SMLLIBENTRY <B>SMLXMatrix</B>(short <B><I>nrow</I></B>, short <B><I>ncol</I></B>, const float* <B><I>initialValues</I></B>);</P>
+<h4>Discussion</h4>
+<P><B>SMLXMatrix</B> creates matrix with <B><I>nrow</I></B> x <B><I>ncol</I></B> size and sets matrix elements to values pointed by <B><I>initialValues</I></B>. It is assumed that array <B><I>initialValues</I></B> contains matrix elements starting from 1<SUP>st</SUP> row and till the last row, i.e. <B><I>data[i][j] = initialValues[i * ncol + j]</I></B>;</P>
+<P><I>Example:</I></P>
+<PRE>float src[4] = {1, 2, 3, 4};<BR><A href="SMLXMatrix.htm#SMLXMatrix">SMLXMatrix</A> A(2, 2, src);</PRE>
+<h4>Parameters</h4>
+<P><B><I>nrow</I></B> - number of matrix rows. </P>
+<P><B><I>ncol</I></B> - number of matrix columns.</P>
+<P><B><I>initialValues</I></B> - pointer to initial values. Initial values should be stored in row based manner (first row is placed first, etc.).</P>
+<p>[<A href="SMLXMatrix.htm#SMLXMatrix">top</A>]</p><hr>
+
+<P>SMLLIBENTRY explicit <B>SMLXMatrix</B>(const <A href="SMLMatrix3f.htm">SMLMatrix3f</A>&amp; <B><I>m33</I></B>);</P>
+<h4>Discussion</h4>
+<P>Explicit <B>SMLXMatrix</B>object constructor. Constructs 3x3 matrix and initializes it with corresponding values of <A href="SMLMatrix3f.htm"><B>SMLMatrix3f</B></A> object.</P>
+<P><I>Example:</I></P>
+<PRE>float src[9] = {1,2,3,4,5,6,7,8,9};<br><A href="SMLMatrix3f.htm#SMLMatrix3f">SMLMatrix3f</A> A(src);<br><A href="SMLXMatrix.htm#SMLXMatrix">SMLXMatrix</A> B(A);</PRE>
+<h4>Parameters</h4>
+<P><B><I>m33</I></B> - reference to <A href="SMLMatrix3f.htm"><B>SMLMatrix3f</B></A> 
+ object.</P>
+<p>[<A href="SMLXMatrix.htm#SMLXMatrix">top</A>]</p><hr>
+
+<P>SMLLIBENTRY explicit <B>SMLXMatrix</B>(const <A href="SMLMatrix4f.htm">SMLMatrix4f</A>&amp; <B><I>m44</I></B>);</P>
+<h4>Discussion</h4>
+<P>Explicit <B>SMLXMatrix</B>object constructor. Constructs 4x4 matrix and initializes it with corresponding values of <A href="SMLMatrix4f.htm"><B>SMLMatrix4f</B></A> object.</P>
+<P><I>Example:</I></P>
+<PRE>float src[16] = {1,2,3,4,5,6,7,8,9,2,5,3,7,8,3,9};<br><A href="SMLMatrix4f.htm#SMLMatrix4f">SMLMatrix4f</A> A(src);<br><A href="SMLXMatrix.htm#SMLXMatrix">SMLXMatrix</A> B(A);</PRE>
+<h4>Parameters</h4>
+<P><B><I>m44</I></B> - reference to <A href="SMLMatrix4f.htm"><B>SMLMatrix4f</B></A> 
+ object. </P>
+<p>[<A href="SMLXMatrix.htm#SMLXMatrix">top</A>]</p><hr>
+
+<P><A NAME="dtor"></A>SMLLIBENTRY <B>~SMLXMatrix</B>();</P>
+<h4>Discussion</h4>
+<P><B>SMLXMatrix</B> object destructor.</P>
+<h4>Parameters</h4>
+<P>No.</P>
+<p>[<A href="SMLXMatrix.htm#SMLXMatrix">top</A>]</p><hr>
+
+<P>SMLLIBENTRY float <A NAME="Get"><B>Get</B></A>(int <B>i</B>, int <B><I>j</I></B>) const;</P>
+<h4>Discussion</h4>
+<P>Access to specified matrix element, lying on the intersection of <B>i</B>-th row and <B><I>j</I></B>-th column.</P>
+<P><I>Example:</I></P>
+<PRE>float element;<BR>float src[4] = {1, 2, 3, 4};<BR><A href="SMLXMatrix.htm#SMLXMatrix">SMLXMatrix</A> A(2, 2, src);<BR>element = A.Get(1, 1); // element = 4</PRE>
+<h4>Parameters</h4>
+<P><B><I>i</I></B> - row index.</P>
+<P><B><I>j</I></B> - column index.</P>
+<h4>Return Value</h4>
+<P>Matrix element value.</P>
+<p>[<A href="SMLXMatrix.htm#SMLXMatrix">top</A>]</p><hr>
+
+<P>SMLLIBENTRY float <A NAME="MaxAbs"><B>MaxAbs</B></A>() const;</P>
+<h4>Discussion</h4>
+<P>Finds maximum absolute value among matrix elements.</P>
+<P><I>Example:</I></P>
+<PRE>float maEl;<BR>float src[4] = {-1, 2, -5, 4};<BR><A href="SMLXMatrix.htm#SMLXMatrix">SMLXMatrix</A> A(2, 2, src);<BR>maEl = A.MaxAbs(); // maEl = -5</PRE>
+<h4>Parameters</h4>
+<P>No.</P>
+<h4>Return Value</h4>
+<P>Maximum absolute value of all matrix elements.</P>
+<p>[<A href="SMLXMatrix.htm#SMLXMatrix">top</A>]</p><hr>
+
+<P>SMLLIBENTRY float* <A NAME="Data"><B>Data</B></A>();</P>
+<P>SMLLIBENTRY const float* <B>Data</B>() const;</P>
+<h4>Discussion</h4>
+<P>Access matrix data.</P>
+<P><I>Example:</I></P>
+<PRE>float *ptrData;<BR>float src[3] = {-1, 3, 4};<BR><A href="SMLXMatrix.htm#SMLXMatrix">SMLXMatrix</A> A(1, 3, src);<BR>ptrData = A.Data(); // ptrData[1] = 3</PRE>
+<h4>Parameters</h4>
+<P>No.</P>
+<h4>Return Value</h4>
+<P>Returns a pointer to an array storing matrix elements in row-based manner.</P>
+<p>[<A href="SMLXMatrix.htm#SMLXMatrix">top</A>]</p><hr>
+
+<P>SMLLIBENTRY float* <B>operator[]</B>(int <B><I>i</I></B>);</P>
+<P>SMLLIBENTRY const float* <B>operator[]</B>(int <B><I>i</I></B>) const;</P>
+<h4>Discussion</h4>
+<P>Method is an overloaded operator-function. Access to <B><I>i</I></B>-th row.</P>
+<P><I>Example:</I></P>
+<PRE>float *temp;<BR>float src[6] = {1, 0, 2, -1, 3, 4};<BR><A href="SMLXMatrix.htm#SMLXMatrix">SMLXMatrix</A> A(3, 2, src);<BR>temp = A[2]; // temp[0] = 3</PRE>
+<h4>Parameters</h4>
+<P><B><I>i</I></B> - matrix row.</P>
+<h4>Return Value</h4>
+<P>Returns pointer to an array storing <B><I>i</I></B> matrix row.</P>
+<p>[<A href="SMLXMatrix.htm#SMLXMatrix">top</A>]</p><hr>
+
+<P>SMLLIBENTRY int <A NAME="Index"><B>Index</B></A>(int <B><I>i</I></B>, int <B><I>j</I></B>) const;</P>
+<h4>Discussion</h4>
+<P>Calculates an index of element specified by (i , j) in an array storing matrix elements. (See method <A href="SMLXMatrix.htm#Data">Data</A>())</P>
+<P><I>Example:</I></P>
+<PRE>int ind;<BR>float src[6] = {1, 0, 2, -1, 3, 4};<BR><A href="SMLXMatrix.htm#SMLXMatrix">SMLXMatrix</A> A(3, 2, src);<BR>ind = A.Index(2,1); // ind = 5</PRE>
+<h4>Parameters</h4>
+<P><B><I>i</I></B> - matrix row in which element resides.</P>
+<P><B><I>j</I></B> - matrix column in which element resides.</P>
+<h4>Return Value</h4>
+<P>Returns matrix element index in matrix data array.</P>
+<p>[<A href="SMLXMatrix.htm#SMLXMatrix">top</A>]</p><hr>
+
+<P>SMLLIBENTRY int <A NAME="Size"><B>Size</B></A>() const;</P>
+<h4>Discussion</h4>
+<P>Return size of this matrix (# of rows * # of columns).</P>
+<P><I>Example:</I></P>
+<PRE>int sz;<BR>float src[6] = {1, 0, 2, -1, 3, 4};<BR><A href="SMLXMatrix.htm#SMLXMatrix">SMLXMatrix</A> A(3, 2, src);<BR>sz = A.Size(); // sz = 6</PRE>
+<h4>Parameters</h4>
+<P>No.</P>
+<h4>Return Value</h4>
+<P>Size of this matrix.</P>
+<p>[<A href="SMLXMatrix.htm#SMLXMatrix">top</A>]</p><hr>
+
+<P>SMLLIBENTRY <B>operator</B> const <A href="SMLMatrix3f.htm">SMLMatrix3f</A>&amp;<B>()</B> const;</P>
+<h4>Discussion</h4>
+<P>Method is an overloaded operator-function cast to <A href="SMLMatrix3f.htm"><B>SMLMatrix3f</B></A> type. It is assumed, that current matrix is 3x3 matrix.</P>
+<P><I>Example:</I></P>
+<PRE>float src[9] = {1,2,3,4,5,6,7,8,9};<br><A href="SMLXMatrix.htm#SMLXMatrix">SMLXMatrix</A> A(3, 3, src);<br><A href="SMLMatrix3f.htm#SMLMatrix3f">SMLMatrix3f</A> B(A);</PRE>
+<h4>Parameters</h4>
+<P>No.</P>
+<h4>Return Value</h4>
+<P>Reference to <A href="SMLMatrix3f.htm"><B>SMLMatrix3f</B></A> 
+ object.</P>
+<p>[<A href="SMLXMatrix.htm#SMLXMatrix">top</A>]</p><hr>
+
+<P>SMLLIBENTRY <B>operator</B> const <A href="SMLMatrix4f.htm">SMLMatrix4f</A>&amp;<B>()</B> const;</P>
+<h4>Discussion</h4>
+<P>Method is an overloaded operator-function cast to <A href="SMLMatrix4f.htm"><B>SMLMatrix4f</B></A> type. It is assumed, that current matrix is 4x4 matrix.</P>
+<P><I>Example:</I></P>
+<PRE>float src[16] = {1,2,3,4,5,6,7,8,9,2,5,3,7,8,3,9};<br><A href="SMLXMatrix.htm#SMLXMatrix">SMLXMatrix</A> A(4, 4, src);<br><A href="SMLMatrix4f.htm#SMLMatrix4f">SMLMatrix4f</A> B(A);</PRE>
+<h4>Parameters</h4>
+<P>No.</P>
+<h4>Return Value</h4>
+<P>Reference to <A href="SMLMatrix4f.htm"><B>SMLMatrix4f</B></A> 
+ object.</P>
+<p>[<A href="SMLXMatrix.htm#SMLXMatrix">top</A>]</p><hr>
+
+<P>SMLLIBENTRY short <A NAME="ncols"><B>ncols</B></A>() const;</P>
+<h4>Discussion</h4>
+<P>Returns number of matrix columns.</P>
+<P><I>Example:</I></P>
+<PRE>short clmn;<BR>float src[6] = {1, 0, 2, -1, 3, 4};<BR><A href="SMLXMatrix.htm#SMLXMatrix">SMLXMatrix</A> A(3, 2, src);<BR>clmn = A.ncols(); // clmn = 2</PRE>
+<h4>Parameters</h4>
+<P>No.</P>
+<h4>Return Value</h4>
+<P>Number of matrix columns.</P>
+<p>[<A href="SMLXMatrix.htm#SMLXMatrix">top</A>]</p><hr>
+
+<P>SMLLIBENTRY short <A NAME="nrows"><B>nrows</B></A>() const;</P>
+<h4>Discussion</h4>
+<P>Returns number of matrix rows.</P>
+<P><I>Example:</I></P>
+<PRE>short rws;<BR>float src[6] = {1, 0, 2, -1, 3, 4};<BR><A href="SMLXMatrix.htm#SMLXMatrix">SMLXMatrix</A> A(3, 2, src);<BR>rws = A.nrows(); // rws = 3</PRE>
+<h4>Parameters</h4>
+<P>No.</P>
+<h4>Return Value</h4>
+<P>Number of matrix rows.</P>
+<p>[<A href="SMLXMatrix.htm#SMLXMatrix">top</A>]</p><hr>
+
+<P>SMLLIBENTRY void <A NAME="Export"><B>Export</B></A>(float* <B><I>dst</I></B>) const;</P>
+<h4>Discussion</h4>
+<P>Exports matrix data to an array pointed by <B><I>dst</I></B>.</P>
+<P><I>Example:</I></P>
+<PRE>float dst[6];<BR>float src[6] = {1, 0, 2, -1, 3, 4};<BR><A href="SMLXMatrix.htm#SMLXMatrix">SMLXMatrix</A> A(3, 2, src);<BR>A.Export(dst); // dst[i] = src[i], i=0...5</PRE>
+<h4>Parameters</h4>
+<P><B><I>dst</I></B> - pointer to destination array.</P>
+<h4>Return Value</h4>
+<P>No.</P>
+<p>[<A href="SMLXMatrix.htm#SMLXMatrix">top</A>]</p><hr>
+
+<P>SMLLIBENTRY <A href="SMLXTmpMatrix.htm#SMLXTmpMatrix">SMLXTmpMatrix</A>&amp; <A NAME="TMat"><B>TMat</B></A>() const;</P>
+<h4>Discussion</h4>
+<P>Creates <B>SMLXTmpMatrix</B> object from this <B>SMLXMatrix</B> object (memory is allocated from the static pool).</P>
+<P><I>Example:</I></P>
+<PRE><A href="SMLXMatrix.htm#SMLXMatrix">SMLXMatrix</A> A(3, 2);<BR><A href="SMLXTmpMatrix.htm#SMLXTmpMatrix">SMLXTmpMatrix</A> B = A.TMat();</PRE>
+<h4>Parameters</h4>
+<P>No.</P>
+<h4>Return Value</h4>
+<P>Reference to the created <B>SMLXTmpMatrix</B> object.</P>
+<p>[<A href="SMLXMatrix.htm#SMLXMatrix">top</A>]</p><hr>
+
+<P>SMLLIBENTRY static <A href="SMLXTmpMatrix.htm#SMLXTmpMatrix">SMLXTmpMatrix</A>&amp; <B>TMat</B>(const <A href="SMLXMatrix.htm#SMLXMatrix">SMLXMatrix</A>&amp; <B><I>A</I></B>);</P>
+<h4>Discussion</h4>
+<P>Creates <B>SMLXTmpMatrix</B> object from object <B><I>A</I></B> <B>SMLXMatrix</B> class with sizes of object <B><I>A </I></B>(memory is allocated from the static pool).</P>
+<P><I>Example:</I></P>
+<PRE><A href="SMLXMatrix.htm#SMLXMatrix">SMLXMatrix</A> A(3, 2);<BR><A href="SMLXTmpMatrix.htm#SMLXTmpMatrix">SMLXTmpMatrix</A> B(A);</PRE>
+<h4>Parameters</h4>
+<P><B><I>A </I></B>- reference to <B>SMLXMatrix</B> object.</P>
+<h4>Return Value</h4>
+<P>Reference to <B>SMLXTmpMatrix</B> 
+ object.</P>
+<p>[<A href="SMLXMatrix.htm#SMLXMatrix">top</A>]</p><hr>
+
+<P>SMLLIBENTRY bool <A NAME="Invert"><B>Invert</B></A>();</P>
+<h4>Discussion</h4>
+<P>Inverts this matrix.</P>
+<P><I>Example:</I></P>
+<PRE>float src[4] = {2, 0, 0.5, 1};<BR><A href="SMLXMatrix.htm#SMLXMatrix">SMLXMatrix</A> A(2, 2, src);<BR>A.Invert(); // inverse matrix = {0.5, 0, -0.25, 1}</PRE>
+<h4>Parameters</h4>
+<P>No.</P>
+<h4>Return Value</h4>
+<P><I>true</I>, if matrix was inverted.</P>
+<P><I>false</I>, otherwise.</P>
+<p>[<A href="SMLXMatrix.htm#SMLXMatrix">top</A>]</p><hr>
+
+<P>SMLLIBENTRY void <A NAME="Identity"><B>Identity</B></A>();</P>
+<h4>Discussion</h4>
+<P>Sets main diagonal elements of matrix to 1 and all others to 0.</P>
+<P><I>Example:</I></P>
+<PRE><A href="SMLXMatrix.htm#SMLXMatrix">SMLXMatrix</A> A(2, 2);<BR>A.Identity(); // matrix = {1, 0, 0, 1}</PRE>
+<h4>Parameters</h4>
+<P>No.</P>
+<h4>Return Value</h4>
+<P>No.</P>
+<p>[<A href="SMLXMatrix.htm#SMLXMatrix">top</A>]</p><hr>
+
+<P>SMLLIBENTRY void <B>Identity</B>(short <B><I>nrow</I></B>);</P>
+<h4>Discussion</h4>
+<P>Resizes matrix to <B><I>nrow</I></B> x <B><I>nrow</I></B> and sets main diagonal elements of matrix to 1 and all others to 0.</P>
+<P><I>Example:</I></P>
+<PRE><A href="SMLXMatrix.htm#SMLXMatrix">SMLXMatrix</A> A();<BR>A.Identity(2); // matrix = {1, 0, 0, 1}</PRE>
+<h4>Parameters</h4>
+<P><B><I>nrow</I></B> - number of matrix rows. </P>
+<h4>Return Value</h4>
+<P>No.</P>
+<p>[<A href="SMLXMatrix.htm#SMLXMatrix">top</A>]</p><hr>
+
+<P>SMLLIBENTRY void <B>Identity</B>(short <B><I>nrow</I></B>, short <B><I>ncol</I></B>);</P>
+<h4>Discussion</h4>
+<P>Resizes matrix to <B><I>nrow</I></B> x <B><I>ncol</I></B> and set main diagonal elements of matrix to 1 and all others to 0.</P>
+<P><I>Example:</I></P>
+<PRE><A href="SMLXMatrix.htm#SMLXMatrix">SMLXMatrix</A> A();<BR>A.Identity(2, 3); // matrix = {1, 0, 0, 0, 1, 0}</PRE>
+<h4>Parameters</h4>
+<P><B><I>nrow</I></B> - number of matrix rows. </P>
+<P><B><I>ncol</I></B> - number of matrix columns.</P>
+<h4>Return Value</h4>
+<P>No.</P>
+<p>[<A href="SMLXMatrix.htm#SMLXMatrix">top</A>]</p><hr>
+
+<P>SMLLIBENTRY void <A NAME="IdentityMinus"><B>IdentityMinus</B></A>();</P>
+<h4>Discussion</h4>
+<P>This matrix is replaced with matrix <B>(E - *this)</B>, where E - is appropriate identity matrix.</P>
+<P><I>Example:</I></P>
+<PRE>float src[4] = {1, 0, 2, -1};<BR><A href="SMLXMatrix.htm#SMLXMatrix">SMLXMatrix</A> A(2, 2, src);<BR>A.IdentityMinus(); // matrix = {0, 0, -2, 2}</PRE>
+<h4>Parameters</h4>
+<P>No.</P>
+<h4>Return Value</h4>
+<P>No.</P>
+<p>[<A href="SMLXMatrix.htm#SMLXMatrix">top</A>]</p><hr>
+
+<P>SMLLIBENTRY void <A NAME="Negate"><B>Negate</B></A>();</P>
+<h4>Discussion</h4>
+<P>Negates all matrix elements.</P>
+<P><I>Example:</I></P>
+<PRE>float src[4] = {1, 0, 2, -1};<BR><A href="SMLXMatrix.htm#SMLXMatrix">SMLXMatrix</A> A(2, 2, src);<BR>A.Negate(); // matrix = {-1, 0, -2, 1}</PRE>
+<h4>Parameters</h4>
+<P>No.</P>
+<h4>Return Value</h4>
+<P>No.</P>
+<p>[<A href="SMLXMatrix.htm#SMLXMatrix">top</A>]</p><hr>
+
+<P>SMLLIBENTRY void <A NAME="Resize"><B>Resize</B></A>(const <A href="SMLXMatrix.htm#SMLXMatrix">SMLXMatrix</A>&amp; <B><I>A</I></B>);</P>
+<h4>Discussion</h4>
+<P>Resizes this matrix to <B><I>A</I></B> sizes.</P>
+<P><I>Example:</I></P>
+<PRE><A href="SMLXMatrix.htm#SMLXMatrix">SMLXMatrix</A> A(2, 2), B(4, 4);<BR>A.Resize(B); // resize 2x2 to 4x4</PRE>
+<h4>Parameters</h4>
+<P><B><I>A</I></B> - reference to <B>SMLXMatrix</B> 
+ object.</P>
+<h4>Return Value</h4>
+<P>No.</P>
+<p>[<A href="SMLXMatrix.htm#SMLXMatrix">top</A>]</p><hr>
+
+<P>SMLLIBENTRY void <B>Resize</B>(short <B><I>nrow</I></B>, short <B><I>ncol</I></B>);</P>
+<h4>Discussion</h4>
+<P>Resizes this matrix to <B><I>nrow</I></B> x <B><I>ncol</I></B>.</P>
+<P><I>Example:</I></P>
+<PRE><A href="SMLXMatrix.htm#SMLXMatrix">SMLXMatrix</A> A(2, 2);<BR>A.Resize(4, 4); // resize 2x2 to 4x4</PRE>
+<h4>Parameters</h4>
+<P><B><I>nrow</I></B> - number of matrix row. </P>
+<P><B><I>ncol</I></B> - number of matrix column.</P>
+<h4>Return Value</h4>
+<P>No.</P>
+<p>[<A href="SMLXMatrix.htm#SMLXMatrix">top</A>]</p><hr>
+
+<P>SMLLIBENTRY void <B>Set</B>(float <B><I>initialValue</I></B>);</P>
+<h4>Discussion</h4>
+<P>Set all matrix elements to <B><I>initialValue</I></B>.</P>
+<P><I>Example:</I></P>
+<PRE><A href="SMLXMatrix.htm#SMLXMatrix">SMLXMatrix</A> A(2, 2); A.Set(1.0f); // set all matrix elements to 1.0</PRE>
+<h4>Parameters</h4>
+<P><B><I>initialValue</I></B> - initialization value.</P>
+<h4>Return Value</h4>
+<P>No.</P>
+<p>[<A href="SMLXMatrix.htm#SMLXMatrix">top</A>]</p><hr>
+
+<P>SMLLIBENTRY void <A NAME="Swap"><B>Swap</B></A>(const <A href="SMLXMatrix.htm#SMLXMatrix">SMLXMatrix</A>&amp; <B><I>A</I></B>);</P>
+<h4>Discussion</h4>
+<P>Swap <B><I>A</I></B> and this <B>SMLXMatrix</B> objects. After this operation, <B><I>A</I></B> will have matrix data of this matrix, and this matrix will have <B><I>A's</I></B> data.</P>
+<P><I>Example:</I></P>
+<PRE><A href="SMLXMatrix.htm#SMLXMatrix">SMLXMatrix</A> A(2, 2); A.Set(1.0f);<BR><A href="SMLXMatrix.htm#SMLXMatrix">SMLXMatrix</A> B(2, 2); A.Set(2.0f);<BR>A.Swap(B);</PRE>
+<h4>Parameters</h4>
+<P><B><I>A</I></B> - reference to <B>SMLXMatrix</B> object to be swapped.</P>
+<h4>Return Value</h4>
+<P>No.</P>
+<p>[<A href="SMLXMatrix.htm#SMLXMatrix">top</A>]</p><hr>
+
+<P>SMLLIBENTRY void <A NAME="Zero"><B>Zero</B></A>();</P>
+<h4>Discussion</h4>
+<P>Set all matrix elements to 0.</P>
+<P><I>Example:</I></P>
+<PRE><A href="SMLXMatrix.htm#SMLXMatrix">SMLXMatrix</A> A(2, 2); A.Zero();</PRE>
+<h4>Parameters</h4>
+<P>No.</P>
+<h4>Return Value</h4>
+<P>No.</P>
+<p>[<A href="SMLXMatrix.htm#SMLXMatrix">top</A>]</p><hr>
+
+<P>SMLLIBENTRY void <A NAME="Transpose"><B>Transpose</B></A>();</P>
+<h4>Discussion</h4>
+<P>Transpose this matrix. </P>
+<P><I>Example:</I></P>
+<PRE>float src[4] = {1, 0, 2, -1};<BR><A href="SMLXMatrix.htm#SMLXMatrix">SMLXMatrix</A> A(2, 2, src);<BR>A.Transpose(); // matrix = {1, 2, 0, -1}</PRE>
+<h4>Parameters</h4>
+<P>No.</P>
+<h4>Return Value</h4>
+<P>No.</P>
+<p>[<A href="SMLXMatrix.htm#SMLXMatrix">top</A>]</p><hr>
+
+<P>inline <A href="SMLXTransposedMatrix.htm"><B>SMLXTransposedMatrix</B></A> &amp; <B>Transpose</B>(const <A href="SMLXMatrix.htm#SMLXMatrix">SMLXMatrix</A>&amp; <B><I>m</I></B>);</P>
+<h4>Discussion</h4>
+<P>Global method, which casts matrix <B><I>m</I></B> to class <A href="SMLXTransposedMatrix.htm#SMLXTransposedMatrix">SMLXTransposedMatrix</A>. Actual transposition is not performed, but next multiplication operator will know, that it is using transposed matrix.</P>
+<P><I>Example:</I></P>
+<PRE><A href="SMLXMatrix.htm#SMLXMatrix">SMLXMatrix</A>A(6, 6); A.Identity();
+<A href="SMLXMatrix.htm#SMLXMatrix">SMLXMatrix</A>B(6, 6); B.Set(1.23f);
+<A href="SMLXMatrix.htm#SMLXMatrix">SMLXMatrix</A> C;
+C = A * Transpose(B);</PRE>
+<h4>Parameters</h4>
+<P><B><I>m</I></B> - reference to <B>SMLXMatrix</B> object to be transposed.</P>
+<h4>Return Value</h4>
+<P>Reference to <A href="SMLXTransposedMatrix.htm"><B>SMLXTransposedMatrix</B></A>  representing Transpose(<B><I>m</I></B>).</P>
+<p>[<A href="SMLXMatrix.htm#SMLXMatrix">top</A>]</p><hr>
+
+<P>SMLLIBENTRY void <B>Transpose</B>(const <A href="SMLXMatrix.htm#SMLXMatrix">SMLXMatrix</A>&amp; <B><I>m</I></B>);</P>
+<h4>Discussion</h4>
+<P>Replaces this matrix with transposed matrix <B><I>m</I></B>.</P>
+<P><I>Example:</I></P>
+<PRE>float src[4] = {1, 0, 2, -1};<BR><A href="SMLXMatrix.htm#SMLXMatrix">SMLXMatrix</A> A(2, 2, src), B(2, 2);<BR>B.Transpose(A); // matrix B = {1, 2, 0, -1}</PRE>
+<h4>Parameters</h4>
+<P><B><I>m</I></B> - reference to <B>SMLXMatrix</B> object to be transposed.</P>
+<h4>Return Value</h4>
+<P>No.</P>
+<p>[<A href="SMLXMatrix.htm#SMLXMatrix">top</A>]</p><hr>
+
+<P>SMLLIBENTRY <A href="SMLXTmpMatrix.htm#SMLXTmpMatrix">SMLXTmpMatrix</A>&amp; <B>operator*(</B>float <B><I>scale</I></B>) const;</P>
+<h4>Discussion</h4>
+<P>Method is an overloaded operator-function. It multiplies all matrix elements on parameter <B><I>scale</I></B>.</P>
+<P><I>Example:</I></P>
+<PRE>float src[4] = {1, 0, 2, -1};<BR><A href="SMLXMatrix.htm#SMLXMatrix">SMLXMatrix</A> A(2, 2, src);<BR><A href="SMLXTmpMatrix.htm#SMLXTmpMatrix">SMLXTmpMatrix</A> TM = A * 2.05f;</PRE>
+<h4>Parameters</h4>
+<P><B><I>scale</I></B> - multiplier.</P>
+<h4>Return Value</h4>
+<P>Reference to <B>SMLXTmpMatrix</B> object, which is equal to product of this matrix and number <B><I>scale</I></B>.</P>
+<p>[<A href="SMLXMatrix.htm#SMLXMatrix">top</A>]</p><hr>
+
+<P>SMLLIBENTRY <A href="SMLXTmpMatrix.htm#SMLXTmpMatrix">SMLXTmpMatrix</A>&amp; <A NAME="operator_plus"><B>operator+</B></A>(<A href="SMLXTmpMatrix.htm#SMLXTmpMatrix">SMLXTmpMatrix</A>&amp; <B><I>B</I></B>) const;</P>
+<h4>Discussion</h4>
+<P>Method is an overloaded operator-function. It computes sum of two matrices (this <B>SMLXMatrix</B> object and matrix <B><I>B</I></B>) and returns a sum as a temporary matrix object.</P>
+<P><I>Example:</I></P>
+<PRE>float src1[4] = {1, 0, 2, -1};<BR>float src2[4] = {3, 1, -1, -4};<BR><A href="SMLXMatrix.htm#SMLXMatrix">SMLXMatrix</A> A(2, 2, src1);<BR><A href="SMLXMatrix.htm#SMLXMatrix">SMLXMatrix</A> B(2, 2, src2); <A href="SMLXTmpMatrix.htm#SMLXTmpMatrix">SMLXTmpMatrix</A> tb = B.TMat();<BR><A href="SMLXTmpMatrix.htm#SMLXTmpMatrix">SMLXTmpMatrix</A> TM = A + tb;</PRE>
+<h4>Parameters</h4>
+<P><B><I>B</I></B> - reference to <B>SMLXTmpMatrix</B> to add to this <B>SMLXMatrix</B> object.</P>
+<h4>Return Value</h4>
+<P>Reference to sum <B>SMLXTmpMatrix</B> 
+ object.</P>
+<p>[<A href="SMLXMatrix.htm#SMLXMatrix">top</A>]</p><hr>
+
+<P>SMLLIBENTRY <A href="SMLXTmpMatrix.htm#SMLXTmpMatrix">SMLXTmpMatrix</A>&amp; <A NAME="operator_minis"><B>operator-</B></A>(<A href="SMLXTmpMatrix.htm#SMLXTmpMatrix">SMLXTmpMatrix</A>&amp; <B><I>B</I></B>) const;</P>
+<h4>Discussion</h4>
+<P>Method is an overloaded operator-function. It computes difference of two matrices: this and matrix <B><I>B</I></B> and returns a difference as a temporary matrix object.</P>
+<P><I>Example:</I></P>
+<PRE>float src1[4] = {1, 0, 2, -1};<BR>float src2[4] = {3, 1, -1, -4};<BR><A href="SMLXMatrix.htm#SMLXMatrix">SMLXMatrix</A> A(2, 2, src1);<BR><A href="SMLXMatrix.htm#SMLXMatrix">SMLXMatrix</A> B(2, 2, src2); <A href="SMLXTmpMatrix.htm#SMLXTmpMatrix">SMLXTmpMatrix</A> tb = B.TMat();<BR><A href="SMLXTmpMatrix.htm#SMLXTmpMatrix">SMLXTmpMatrix</A> TM = A - tb;</PRE>
+<h4>Parameters</h4>
+<P><B><I>B</I></B> - reference to <B>SMLXTmpMatrix,</B> which is subtracted from this <B>SMLXMatrix</B> object.</P>
+<h4>Return Value</h4>
+<P>Reference to difference <B>SMLXTmpMatrix</B> object.</P>
+<p>[<A href="SMLXMatrix.htm#SMLXMatrix">top</A>]</p><hr>
+
+<P>SMLLIBENTRY void <A NAME="Transform"><b>Transform</b></A>(<A href="SMLXSpatialVector.htm#SMLXSpatialVector">SMLXSpatialVector</A> const&amp; <B><I>A</I></B>, <A href="SMLXSpatialVector.htm#SMLXSpatialVector">SMLXSpatialVector</A>&amp; <B><I>B</I></B>) const;</P>
+<h4>Discussion</h4>
+<P>Transforms spatial vector <B><I>A</I></B> (<B>SMLXSpatialVector</B> object) by this matrix (multiplies matrix by vector). Result is assigned to vector <B><I>B</I></B>.</P>
+<P><I>Example:</I></P>
+<PRE>//create and initialize transform matrix A and spatial vector svB, create spatial vector svC<BR>...<BR>A.Transform(svB, svC);</PRE>
+<h4>Parameters</h4>
+<P><B><I>A</I></B> - reference to <B>SMLXSpatialVector</B> object.</P>
+<P><B><I>B</I></B> - reference to <B>SMLXSpatialVector</B> object (transformed vector).</P>
+<h4>Return Value</h4>
+<P>No.</P>
+<p>[<A href="SMLXMatrix.htm#SMLXMatrix">top</A>]</p><hr>
+
+<P>SMLLIBENTRY void <A NAME="TransformTransposed">TransformTransposed</A>(SMLXSpatialVector const&amp; <B><I>A</I></B>, <A href="SMLXSpatialVector.htm#SMLXSpatialVector">SMLXSpatialVector</A>&amp; <B><I>B</I></B>) const;</P>
+<h4>Discussion</h4>
+<P>Transform spatial vector <B><I>A</I></B> (<B>SMLXSpatialVector</B> object) with transpose of this matrix.</P>
+<P><I>Example:</I></P>
+<PRE>//create and initialize transform matrix A and spatial vector svB, create spatial vector svC<BR>...<BR>A.TransformTransposed(svB, svC);</PRE>
+<h4>Parameters</h4>
+<P><B><I>A</I></B> - reference to <B>SMLXSpatialVector</B> object.</P>
+<P><B><I>B</I></B> - reference to <B>SMLXSpatialVector</B> object (transformed vector).</P>
+<h4>Return Value</h4>
+<P>No.</P>
+<p>[<A href="SMLXMatrix.htm#SMLXMatrix">top</A>]</p><hr>
+
+<P>SMLLIBENTRY void <B>Mult</B>(const <A href="SMLXMatrix.htm#SMLXMatrix">SMLXMatrix</A>&amp; <B><I>A</I></B>, const <A href="SMLXMatrix.htm#SMLXMatrix">SMLXMatrix</A>&amp; <B><I>B</I></B>, short <B><I>Atranspose</I></B>, short <B><I>Btranspose</I></B>);</P>
+<h4>Discussion</h4>
+<P>Method computes product of matrices of objects <B><I>A</I></B> and <B><I>B</I></B>. This product depends on the value of parameters <B><I>Atranspose</I></B> and <B><I>Btranspose</I></B>. If parameter is zero, the corresponding matrix is not transposed. If parameter is not 0, the corresponding matrix is transposed. Result in this.</P>
+<P><I>Example:</I></P>
+<PRE>//create and initialize matrix A and matrix B<BR>...<BR>C.Mul(A, B, 0, 1); //multiplication matrix A and transposed matrix B</PRE>
+<h4>Parameters</h4>
+<P><B><I>A</I></B> - reference to <B>SMLXMatrix</B> object.</P>
+<P><B><I>B</I></B> - reference to <B>SMLXMatrix</B> object.</P>
+<P><B><I>Atranspose</I></B> - flag, which shows if the method uses transposed matrix <B><I>A</I></B> (!= 0) or not (0).</P>
+<P><B><I>Btranspose</I></B> - flag, which shows if the method uses transposed matrix <B><I>B</I></B> (!= 0) or not (0).</P>
+<h4>Return Value</h4>
+<P>No.</P>
+<p>[<A href="SMLXMatrix.htm#SMLXMatrix">top</A>]</p><hr>
+
+<P>SMLLIBENTRY void <A NAME="NSub"><B>NSub</B></A>(const <A href="SMLXMatrix.htm#SMLXMatrix">SMLXMatrix</A>&amp; <B><I>B</I></B>);</P>
+<h4>Discussion</h4>
+<P>Subtracts this matrix from matrix <B><I>B</I></B>. Result is assigned to this.</P>
+<P><I>Example:</I></P>
+<PRE>float src1[4] = {1, 0, 2, -1};<BR>float src2[4] = {3, 1, -1, -4};<BR><A href="SMLXMatrix.htm#SMLXMatrix">SMLXMatrix</A> A(2, 2, src1), B(2, 2, src2);<BR>A.NSub(B); // A = B - A</PRE>
+<h4>Parameters</h4>
+<P><B><I>B</I></B> - reference to <B>SMLXMatrix</B> 
+ object.</P>
+<h4>Return Value</h4>
+<P>No.</P>
+<p>[<A href="SMLXMatrix.htm#SMLXMatrix">top</A>]</p><hr>
+
+<P>SMLLIBENTRY void <A NAME="Sub"><B>Sub</B></A>(const <A href="SMLXMatrix.htm#SMLXMatrix">SMLXMatrix</A>&amp; <B><I>B</I></B>);</P>
+<h4>Discussion</h4>
+<P>Subtract matrix <B><I>B</I></B> from this matrix. Result is assigned to this.</P>
+<P><I>Example:</I></P>
+<PRE>float src1[4] = {1, 0, 2, -1};<BR>float src2[4] = {3, 1, -1, -4};<BR><A href="SMLXMatrix.htm#SMLXMatrix">SMLXMatrix</A> A(2, 2, src1), B(2, 2, src2);<BR>A.Sub(B); // A = A - B</PRE>
+<h4>Parameters</h4>
+<P><B><I>B</I></B> - reference to <B>SMLXMatrix</B> 
+ object.</P>
+<h4>Return Value</h4>
+<P>No.</P>
+<p>[<A href="SMLXMatrix.htm#SMLXMatrix">top</A>]</p><hr>
+
+<P>SMLLIBENTRY void <A NAME="Add"><B>Add</B></A>(const <A href="SMLXMatrix.htm#SMLXMatrix">SMLXMatrix</A>&amp; <B><I>B</I></B>);</P>
+<h4>Discussion</h4>
+<P>Adds matrix <B><I>B</I></B> to this. Result is assigned to this.</P>
+<P><I>Example:</I></P>
+<PRE>float src1[4] = {1, 0, 2, -1};<BR>float src2[4] = {3, 1, -1, -4};<BR><A href="SMLXMatrix.htm#SMLXMatrix">SMLXMatrix</A> A(2, 2, src1), B(2, 2, src2);<BR>A.Add(B); // A = A + B</PRE>
+<h4>Parameters</h4>
+<P><B><I>B</I></B> - reference to <B>SMLXMatrix</B> 
+ object.</P>
+<h4>Return Value</h4>
+<P>No.</P>
+<p>[<A href="SMLXMatrix.htm#SMLXMatrix">top</A>]</p><hr>
+
+<P>SMLLIBENTRY void <A NAME="Cross"><B>Cross</B></A>(const <A href="SMLVec3f.htm#SMLVec3f">SMLVec3f</A>&amp; <B><I>V</I></B>);</P>
+<h4>Discussion</h4>
+<P>Creates matrix cross operator for vector <B><I>V</I></B>. Result is assigned to this (see <A href="SMLMatrix3f.htm"><B>SMLMatrix3f</B></A>::<A href="SMLMatrix3f.htm#Cross">Cross</A>).</P>
+<P><I>Example:</I></P>
+<PRE>float src[9] = {1, 0, 2, -1, 2, 4, 1, -4, 0}; <A href="SMLXMatrix.htm#SMLXMatrix">SMLXMatrix</A> A(3, 3, src);<br><A href="SMLMatrix3f.htm#SMLMatrix3f">SMLVec3f</A> B(2, 4, 6);<br>A.Cross(B);</PRE>
+<h4>Parameters</h4>
+<P><B><I>V</I></B> -reference to <B>SMLVec3f</B> object.</P>
+<h4>Return Value</h4>
+<P>No.</P>
+<p>[<A href="SMLXMatrix.htm#SMLXMatrix">top</A>]</p><hr>
+
+<P>SMLLIBENTRY void <A NAME="Scale"><B>Scale</B></A>(float <B><I>scale</I></B>);</P>
+<h4>Discussion</h4>
+<P>Computes product of matrix and parameter <B><I>scale</I></B>. Result is assigned to this.</P>
+<P><I>Example:</I></P>
+<PRE>float src[4] = {1, 0, 2, -1}; <A href="SMLXMatrix.htm#SMLXMatrix">SMLXMatrix</A> A(2, 2, src); <BR>A.Scale(2.13f); // A = A * 2.13</PRE>
+<h4>Parameters</h4>
+<P><B><I>scale</I></B> - multiplier.</P>
+<h4>Return Value</h4>
+<P>No.</P>
+<p>[<A href="SMLXMatrix.htm#SMLXMatrix">top</A>]</p><hr>
+
+<P>SMLLIBENTRY void <A NAME="operator_timesassign"><B>operator*=</B></A>(float <B><I>scale</I></B>);</P>
+<h4>Discussion</h4>
+<P>Method is an overloaded operator-function. It computes product of matrix and parameter <B><I>scale</I></B>. Result is assigned to this.</P>
+<P><I>Example:</I></P>
+<PRE>float src[4] = {1, 0, 2, -1}; <A href="SMLXMatrix.htm#SMLXMatrix">SMLXMatrix</A> A(2, 2, src); <BR>A *= 2.13f; // A = A * 2.13</PRE>
+<h4>Parameters</h4>
+<P><B><I>scale</I></B> - multiplier.</P>
+<h4>Return Value</h4>
+<P>No.</P>
+<p>[<A href="SMLXMatrix.htm#SMLXMatrix">top</A>]</p><hr>
+
+<P>SMLLIBENTRY void <A NAME="operator_plusassign"><B>operator+=</B></A>(const <A href="SMLXMatrix.htm#SMLXMatrix">SMLXMatrix</A>&amp; <B><I>B</I></B>);</P>
+<h4>Discussion</h4>
+<P>Method is an overloaded operator-function. It computes sum of two matrices (this with matrix <B>B</B>). Result is assigned to this.</P>
+<P><I>Example:</I></P>
+<PRE>float src1[4] = {1, 0, 2, -1};<BR>float src2[4] = {3, 1, -1, -4};<BR><A href="SMLXMatrix.htm#SMLXMatrix">SMLXMatrix</A> A(2, 2, src1), <A href="SMLXMatrix.htm#SMLXMatrix">SMLXMatrix</A> B(2, 2, src2);<BR>A += B; // A = A + B</PRE>
+<h4>Parameters</h4>
+<P><B><I>B</I></B> - reference to <B>SMLXMatrix</B>, which is added to this <B>SMLXMatrix</B> object..</P>
+<h4>Return Value</h4>
+<P>No.</P>
+<p>[<A href="SMLXMatrix.htm#SMLXMatrix">top</A>]</p><hr>
+
+<P>SMLLIBENTRY void <A NAME="operator_minusassign"><B>operator-=</B></A>(const <A href="SMLXMatrix.htm#SMLXMatrix">SMLXMatrix</A>&amp; <B><I>B</I></B>);</P>
+<h4>Discussion</h4>
+<P>Method is an overloaded operator-function. It computes difference of two matrices (this and matrix <B><I>B</I></B>). Result is assigned to this.</P>
+<P><I>Example:</I></P>
+<PRE>float src1[4] = {1, 0, 2, -1};<BR>float src2[4] = {3, 1, -1, -4};<BR><A href="SMLXMatrix.htm#SMLXMatrix">SMLXMatrix</A> A(2, 2, src1), <A href="SMLXMatrix.htm#SMLXMatrix">SMLXMatrix</A> B(2, 2, src2);<BR>A -= B; // A = A - B</PRE>
+<h4>Parameters</h4>
+<P><B><I>B</I></B> - reference to <B>SMLXMatrix</B>, which is subtracted to this <B>SMLXMatrix</B> object.</P>
+<h4>Return Value</h4>
+<P>No.</P>
+<p>[<A href="SMLXMatrix.htm#SMLXMatrix">top</A>]</p><hr>
+
+<P>SMLLIBENTRY void <A NAME="operator_assign"><B>operator=</B></A>(const <A href="SMLXMatrix.htm#SMLXMatrix">SMLXMatrix</A>&amp; <B><I>B</I></B>);</P>
+<h4>Discussion</h4>
+<P>Method is an overloaded operator-function. Initializes this <B>SMLXMatrix</B> object with data and sizes of matrix <B><I>B</I></B>.</P>
+<P><I>Example:</I></P>
+<PRE>float src[4] = {1, 0, 2, -1}; <A href="SMLXMatrix.htm#SMLXMatrix">SMLXMatrix</A> A(2, 2, src), B;<BR>B = A; </PRE>
+<h4>Parameters</h4>
+<P><B><I>B</I></B> - reference to using for initialization <B>SMLXMatrix</B> 
+ object.</P>
+<h4>Return Value</h4>
+<P>No.</P>
+<p>[<A href="SMLXMatrix.htm#SMLXMatrix">top</A>]</p><hr>
+
+<P>SMLLIBENTRY void <B>operator=</B>(const <A href="SMLXTmpMatrix.htm#SMLXTmpMatrix">SMLXTmpMatrix</A>&amp; <B><I>B</I></B>);</P>
+<h4>Discussion</h4>
+<P>Method is an overloaded operator-function. Initializes this <B>SMLXMatrix</B> object with data and sizes of matrix <B><I>B</I></B>. Method is using fast <A href="SMLXMatrix.htm#Swap">Swap</A> operation.</P>
+<P><I>Example:</I></P>
+<PRE>float src[4] = {1, 0, 2, -1}; <A href="SMLXMatrix.htm#SMLXMatrix">SMLXMatrix</A> A(2, 2, src);<BR><A href="SMLXTmpMatrix.htm#SMLXTmpMatrix">SMLXTmpMatrix</A> B = A;</PRE>
+<h4>Parameters</h4>
+<P><B><I>B</I></B> - reference to <B>SMLXTmpMatrix</B> object, which is swapped with this.</P>
+<h4>Return Value</h4>
+<P>No.</P>
+<p>[<A href="SMLXMatrix.htm#SMLXMatrix">top</A>]</p><hr>
+
+<P>SMLLIBENTRY float <B>Pythag</B>(double <B><I>a</I></B>, double <B><I>b</I></B>) const;</P>
+<h4>Discussion</h4>
+<P>Computes (a<SUP>2</SUP> + b<SUP>2</SUP>)<SUP>1/2</SUP>.</P>
+<h4>Parameters</h4>
+<P><B><I>a</I></B> - first parameter.</P>
+<P><B><I>b</I></B> - second parameter.</P>
+<h4>Return Value</h4>
+<P>(a<SUP>2</SUP> + b<SUP>2</SUP>)<SUP>1/2</SUP>.</P>
+<p>[<A href="SMLXMatrix.htm#SMLXMatrix">top</A>]</p><hr>
+
+<P>SMLLIBENTRY bool <A NAME="LUDecomposition"><B>LUDecomposition</B></A>(<A href="SMLXMatrix.htm#SMLXMatrix">SMLXMatrix</A>&amp; <B><I>indx</I></B>, double&amp; <B><I>d</I></B>);</P>
+<h4>Discussion</h4>
+<P>LU - decomposition of this <B>SMLXMatrix</B> object. Factors this matrix into <B>LU</B> where <B>L</B> is lower triangular and <B>U</B> is upper triangular. Matrices <B>L</B> and <B>U</B> overwrite this matrix, while the diagonal elements of <B>L</B> (which are unity) are not stored. It is assumed that this is a square matrix.</P>
+<P><I>Note:</I></P>
+<P>Calling of this function is to be followed by (some) LUBackSubstitutions, if this method is used to solve a linear system of equations.</P>
+<P><I>Example:</I></P>
+<PRE>float src[9] = {1, 1, 2, 2, 1, 0, 3, 0 ,2}; <A href="SMLXMatrix.htm#SMLXMatrix">SMLXMatrix</A> A(3, 3, src);<BR><A href="SMLXMatrix.htm#SMLXMatrix">SMLXMatrix</A> xmid;<BR>double ddet; bool per;<BR>per = A.LUDecomposition(xmid, ddet);</PRE>
+<h4>Output Parameters</h4>
+<P><B><I>d</I></B> - determinant of this matrix multiplied by +1 or -1 indicating that the number of row interchanges was even or odd respectively.</P>
+<P><B><I>indx</I></B> - reference to some auxiliary matrix. It will be used by LUBackSubstitution method.</P>
+<h4>Return Value</h4>
+<P>Function returns <I>true</I>, if determinant is not 0, <I>false</I> otherwise.</P>
+<p>[<A href="SMLXMatrix.htm#SMLXMatrix">top</A>]</p><hr>
+
+<P>SMLLIBENTRY void <B>LUBackSubstitution</B>(<A href="SMLXMatrix.htm#SMLXMatrix">SMLXMatrix</A>&amp; <B><I>indx</I></B>, <A href="SMLXMatrix.htm#SMLXMatrix">SMLXMatrix</A>&amp; <B><I>b</I></B>) const;</P>
+<h4>Discussion</h4>
+<P>Uses the LU decomposition stored in this to solve the system of n linear equations <B><I>A</I></B>&nbsp;<B>x</B>&nbsp;=&nbsp;<B><I>b</I></B>. It is assumed, that method <A href="SMLXMatrix.htm#LUDecomposition">LUDecomposition</A> was called for matrix <B><I>A</I></B> (this matrix).</P>
+<P><I>Example:</I></P>
+<PRE>float src[9] = {1, 1, 2, 2, 1, 0, 3, 0 ,2}; <A href="SMLXMatrix.htm#SMLXMatrix">SMLXMatrix</A> A(3, 3, src);<BR>float bb[3] = {1, 3, 2}; <A href="SMLXMatrix.htm#SMLXMatrix">SMLXMatrix</A> xb(3, 1, bb);<BR><A href="SMLXMatrix.htm#SMLXMatrix">SMLXMatrix</A> xmid;<BR>double ddet; bool per;<BR>per = A.LUDecomposition(xmid, ddet);<BR>A.LUBackSubstitution(xmid, xb);</PRE>
+<h4>Parameters</h4>
+<P><B><I>indx</I></B>- reference to auxiliary matrix, which was used by <A href="SMLXMatrix.htm#LUDecomposition">LUDecomposition</A>.</P>
+<P><B><I>b</I></B> - vector (1 x n matrix), representing right part in the linear system. Upon completion of this function, <B><I>b</I></B> is overwritten with <B>x</B> 
+ (solution).</P>
+<h4>Return Value</h4>
+<P>No.</P>
+<p>[<A href="SMLXMatrix.htm#SMLXMatrix">top</A>]</p><hr>
+
+<P>SMLLIBENTRY bool <A NAME="SVDecomposition"><B>SVDecomposition</B></A>(<A href="SMLXMatrix.htm#SMLXMatrix">SMLXMatrix</A>&amp; <B><I>W</I></B>, <A href="SMLXMatrix.htm#SMLXMatrix">SMLXMatrix</A>&amp; <B><I>V</I></B>, <A href="SMLXMatrix.htm#SMLXMatrix">SMLXMatrix</A>&amp; <B><I>tmp</I></B>);</P>
+<h4>Discussion</h4>
+<P>Singular value decomposition of this <B>SMLXMatrix</B> object. Factors this matrix into <B><I>A&nbsp;= U W&nbsp;V<SUP>T </SUP></I></B>, where <B><I>U</I></B> and <B><I>V</I></B> are orthogonal matrices (for which <B><I>U<SUP>T</SUP>&nbsp;=&nbsp;U<SUP>-1</SUP></I></B>), <B><I>W</I></B> is diagonal matrix. Matrix <B><I>U</I></B> overwrites this, matrices <B><I>W&nbsp;</I></B>and <B><I>V</I></B> are output parameters.</P>
+<h4>Output Parameters</h4>
+<P><B><I>W</I></B> - reference to output diagonal matrix.</P>
+<P><B><I>V</I></B> - reference to output orthogonal matrix.</P>
+<P><B><I>tmp</I></B> 
+ - reference to some auxiliary matrix.</P>
+<h4>Return Value</h4>
+<P>Function returns <I>true</I>, if decomposition was successful, <I>false</I> otherwise.</P>
+<p>[<A href="SMLXMatrix.htm#SMLXMatrix">top</A>]</p><hr>
+
+<P>SMLLIBENTRY void <B>SVDBackSubstitution</B>(const <A href="SMLXMatrix.htm#SMLXMatrix">SMLXMatrix</A>&amp; <B><I>U</I></B>, const <A href="SMLXMatrix.htm#SMLXMatrix">SMLXMatrix</A>&amp; <B><I>W</I></B>, const <A href="SMLXMatrix.htm#SMLXMatrix">SMLXMatrix</A>&amp; <B><I>V</I></B>, const <A href="SMLXMatrix.htm#SMLXMatrix">SMLXMatrix</A>&amp; <B><I>b</I></B>, <A href="SMLXMatrix.htm#SMLXMatrix">SMLXMatrix</A>&amp; <B><I>tmp</I></B>);</P>
+<h4>Discussion</h4>
+<P>Uses the SVD decomposition represented as <B><I>A&nbsp;= U W&nbsp;V<SUP>T</SUP></I></B> to solve the system of linear equations <B><I>A&nbsp;</I>x<I>&nbsp;=&nbsp;b</I></B>. It is assumed, that method <A href="SMLXMatrix.htm#SVDecomposition">SVDecomposition</A> was called for matrix <B><I>A</I></B>, which is not required to be square. If <B><I>A</I></B> is square matrix, and <B><I>A<SUP>-1</SUP></I></B> exists, then <B>x</B>&nbsp;=&nbsp;<B><I>A<SUP>-1 </SUP>b</I></B>, otherwise solution is sought in some generalized sense.</P>
+<h4>Parameters</h4>
+<P><B><I>U</I></B>,<B><I> W, V</I></B> - matrices representing singular value decomposition of the original matrix <B><I>A</I></B>(performed by <A href="SMLXMatrix.htm#SVDecomposition">SVDecomposition</A>).</P>
+<P><B><I>b</I></B> - vector (1 x n matrix), representing right part in the linear system. Upon completion of this function, <B><I>b</I></B> is overwritten with <B>x</B> 
+ (solution).</P>
+<P><B><I>tmp</I></B>- reference to auxiliary matrix, which was used by <A href="SMLXMatrix.htm#SVDecomposition">SVDecomposition</A>.</P>
+<h4>Return Value</h4>
+<P>No.</P>
+<p>[<A href="SMLXMatrix.htm#SMLXMatrix">top</A>]</p><hr>
+
+<P>SMLLIBENTRY void <A NAME="SVDInvert"><B>SVDInvert</B></A>(SMLXMatrix const&amp; <B><I>U</I></B>, SMLXMatrix const&amp; <B><I>W</I></B>, <A href="SMLXMatrix.htm#SMLXMatrix">SMLXMatrix</A>&amp; <B><I>V</I></B>);</P>
+<h4>Discussion</h4>
+<P>This matrix will be overwritten with <B><I>V W<SUP>-1</SUP>&nbsp;U<SUP>T</SUP></I></B>, where <B><I>U</I></B>,<B><I> 
+ W, V</I></B>are matrices used by <A href="SMLXMatrix.htm#SVDecomposition">SVDecomposition</A>. If some elements on diagonal of <B><I>W</I></B> are less then FLT_EPSILON by absolute value, they are replaced by 0 in <B><I>W<SUP>-1</SUP></I></B>. Upon completion of this function, matrix <B><I>V</I></B> is changed to <B><I>V W<SUP>-1</SUP></I></B>. This methods yields <B><I>A<SUP>-1</SUP></I></B>, if it exists.</P>
+<h4>Parameters</h4>
+<P><B><I>U</I></B>,<B><I> W, V</I></B> - matrices representing singular value decomposition of the original matrix <B><I>A</I></B>(performed by <A href="SMLXMatrix.htm#SVDecomposition">SVDecomposition</A>).</P>
+<h4>Return Value</h4>
+<P>No.</P>
+<p>[<A href="SMLXMatrix.htm#SMLXMatrix">top</A>]</p><hr>
+
+<P>SMLLIBENTRY bool <A NAME="IsDefined"><B>IsDefined</B></A>() const;</P>
+<h4>Discussion</h4>
+<P>Defines whether current matrix is valid one.</P>
+<h4>Parameters</h4>
+<P>No.</P>
+<h4>Return Value</h4>
+<P><I>true</I>, if matrix was defined with non-zero sizes,</P>
+<P><I>false</I>, otherwise.</P>
+<p>[<A href="SMLXMatrix.htm#SMLXMatrix">top</A>]</p><hr>
+
+<P>SMLLIBENTRY void <A NAME="MarkAsDefined"><B>MarkAsDefined</B></A>();</P>
+<h4>Discussion</h4>
+<P>Sets internal flag. Next call of <B>IsDefined</B>() will return <I>true</I>.</P>
+<h4>Parameters</h4>
+<P>No.</P>
+<h4>Return Value</h4>
+<P>No.</P>
+<p>[<A href="SMLXMatrix.htm#SMLXMatrix">top</A>]</p><hr>
+
+<P>SMLLIBENTRY void <A NAME="MarkAsUndefined"><B>MarkAsUndefined</B></A>();</P>
+<h4>Discussion</h4>
+<P>Unsets internal flag. Next call of <B>IsDefined</B>() will return <I>false</I>.</P>
+<h4>Parameters</h4>
+<P>No.</P>
+<h4>Return Value</h4>
+<P>No.</P>
+<p>[<A href="SMLXMatrix.htm#SMLXMatrix">top</A>]</p><hr>
+
+<P>SMLLIBENTRY void <A NAME="Output"><B>Output</B></A>(const char* <B><I>caption</I></B> = NULL) const;</P>
+<h4>Discussion</h4>
+<P>Method will print the data using <B><I>OutputDebugString</I></B> function.</P>
+<h4>Parameters</h4>
+<P><B><I>caption</I></B> - text caption printed data.</P>
+<h4>Return Value</h4>
+<P>No.</P>
+<p>[<A href="SMLXMatrix.htm#SMLXMatrix">top</A>]</p><hr>
+
+<P>friend inline <A href="SMLXTmpMatrix.htm#SMLXTmpMatrix">SMLXTmpMatrix</A>&amp; __fastcall <A NAME="operator_times"><B>operator*</B></A>(const <A href="SMLXMatrix.htm#SMLXMatrix">SMLXMatrix</A>&amp; <B><I>A</I></B>, const <A href="SMLXMatrix.htm#SMLXMatrix">SMLXMatrix</A>&amp; <B><I>B</I></B>);</P>
+<h4>Discussion</h4>
+<P>Function in global scope to compute and return <B><I>A B</I></B>.</P>
+<p>[<A href="SMLXMatrix.htm#SMLXMatrix">top</A>]</p><hr>
+
+<P>friend inline <A href="SMLXTmpMatrix.htm#SMLXTmpMatrix">SMLXTmpMatrix</A>&amp; __fastcall <B>operator*</B>(const <A href="SMLXMatrix.htm#SMLXMatrix">SMLXMatrix</A>&amp; <B><I>A</I></B>, const <A href="SMLXTransposedMatrix.htm#SMLXTransposedMatrix">SMLXTransposedMatrix</A>&amp; <B><I>B</I></B>);</P>
+<h4>Discussion</h4>
+<P>Function in global scope to compute and return <B><I>A B<SUP>T</SUP></I></B>. </P>
+<P><I>Example:</I></P>
+<PRE><A href="SMLXMatrix.htm#SMLXMatrix">SMLXMatrix</A> A(6, 6); A.Identity();<BR><A href="SMLXMatrix.htm#SMLXMatrix">SMLXMatrix</A> B(6, 6); B.Set(1.23f);<BR><A href="SMLXMatrix.htm#SMLXMatrix">SMLXMatrix</A> C;<BR>C = A * Transpose(B);</PRE>
+<P>Function <A href="SMLXMatrix.htm#Transpose">Transpose</A>performs cast to class <A href="SMLXTransposedMatrix.htm#SMLXTransposedMatrix">SMLXTransposedMatrix</A>, derived from <A href="SMLXMatrix.htm"><B>SMLXMatrix</B></A>. As a result, proper <B>operator* </B>will be used, while transposition is never performed &quot;live&quot;.</P>
+<p>[<A href="SMLXMatrix.htm#SMLXMatrix">top</A>]</p><hr>
+
+<P>friend inline <A href="SMLXTmpMatrix.htm#SMLXTmpMatrix">SMLXTmpMatrix</A>&amp; __fastcall <B>operator*</B>(const <A href="SMLXTransposedMatrix.htm#SMLXTransposedMatrix">SMLXTransposedMatrix</A>&amp; <B><I>A</I></B>, const <A href="SMLXMatrix.htm#SMLXMatrix">SMLXMatrix</A>&amp; <B><I>B</I></B>);</P>
+<h4>Discussion</h4>
+<P>Function in global scope to compute and return <B><I>A<SUP>T</SUP> 
+ B</I></B>.</P>
+<p>[<A href="SMLXMatrix.htm#SMLXMatrix">top</A>]</p><hr>
+
+<P>friend inline <A href="SMLXTmpMatrix.htm#SMLXTmpMatrix">SMLXTmpMatrix</A>&amp; __fastcall <B>operator*</B>(const <A href="SMLXTransposedMatrix.htm#SMLXTransposedMatrix">SMLXTransposedMatrix</A>&amp; <B><I>A</I></B>, const <A href="SMLXTransposedMatrix.htm#SMLXTransposedMatrix">SMLXTransposedMatrix</A>&amp; <B><I>B</I></B>);</P>
+<h4>Discussion</h4>
+<P>Function in global scope to compute and return <B><I>A<SUP>T</SUP> B<SUP>T</SUP></I></B>.</P>
+<p>[<A href="SMLXMatrix.htm#SMLXMatrix">top</A>]</p><hr>
+
+<P>friend inline <A href="SMLXTmpMatrix.htm#SMLXTmpMatrix">SMLXTmpMatrix</A>&amp; __fastcall <B>operator+</B>(const <A href="SMLXMatrix.htm#SMLXMatrix">SMLXMatrix</A>&amp; <B><I>A</I></B>, const <A href="SMLXMatrix.htm#SMLXMatrix">SMLXMatrix</A>&amp; <B><I>B</I></B>);</P>
+<h4>Discussion</h4>
+<P>Function in global scope to compute and return <B><I>A + B</I></B>.</P>
+<p>[<A href="SMLXMatrix.htm#SMLXMatrix">top</A>]</p><hr>
+
+<P>friend inline <A href="SMLXTmpMatrix.htm#SMLXTmpMatrix">SMLXTmpMatrix</A>&amp; __fastcall <B>operator-</B>(const <A href="SMLXMatrix.htm#SMLXMatrix">SMLXMatrix</A>&amp; <B><I>A</I></B>, const <A href="SMLXMatrix.htm#SMLXMatrix">SMLXMatrix</A>&amp; <B><I>B</I></B>);</P>
+<h4>Discussion</h4>
+<P>Function in global scope to compute and return <B><I>A - B</I></B>.</P>
+<p>[<A href="SMLXMatrix.htm#SMLXMatrix">top</A>]</p><hr>
+
+<P>friend inline void <B>Assign</B>(<A href="SMLXMatrix.htm#SMLXMatrix">SMLXMatrix</A>&amp; <B><I>A</I></B>, float <B><I>value</I></B>);</P>
+<h4>Discussion</h4>
+<P>Function in global scope to set all values in matrix <B><I>A</I></B> to <B><I>value</I></B>.</P>
+<p>[<A href="SMLXMatrix.htm#SMLXMatrix">top</A>]</p><hr>
+
+<P>friend inline void <B>Assign</B>(<A href="SMLXMatrix.htm#SMLXMatrix">SMLXMatrix</A>&amp; <B><I>A</I></B>, const <A href="SMLXMatrix.htm#SMLXMatrix">SMLXMatrix</A>&amp; <B><I>B</I></B>);</P>
+<h4>Discussion</h4>
+<P>Function in global scope to set all values in matrix <B><I>A</I></B> to those of <B><I>B</I></B>.</P>
+<p>[<A href="SMLXMatrix.htm#SMLXMatrix">top</A>]</p><hr>
+
+</BODY>
+</HTML>

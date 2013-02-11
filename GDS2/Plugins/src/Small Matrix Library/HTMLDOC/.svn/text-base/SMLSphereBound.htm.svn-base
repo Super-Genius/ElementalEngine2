@@ -1,0 +1,298 @@
+<HTML>
+<HEAD>
+<TITLE>class SMLSphereBound</TITLE>
+<link href="styles.css" rel="STYLESHEET" type="text/css">
+</head>
+<BODY LINK="#0000ff" VLINK="#800080">
+<P><A NAME="SMLSphereBound"></a>[<A href="index.htm">SML Overview</a>]</P>
+
+<h1>class SMLSphereBound: public <A HREF="SMLBound.htm#SMLBound"><B><I>SMLBound</I></B></A></h1>
+<PRE>#include &quot;<A HREF="smlbound.h">smlbound.h</A>&quot; </PRE>
+
+<P><B>SMLSphereBound</B> is a derivative class, inherits SMLBound class. <B>SMLSphereBound</B> class represents a spherical bounding region enclosing a set of other bounds or points. This object can be extended, transformed, checked to see if a point is inside, checked to see if a vector intersects it, and checked to see if it is outside or inside a set of culling planes.</P>
+<H2>Public Interface</H2>
+
+<TABLE CELLSPACING=0 BORDER=0 WIDTH=530>
+<TR>
+<TD><P><A HREF="SMLSphereBound.htm#constructor">constructors</A></TD>
+<TD><P><A HREF="SMLSphereBound.htm#Clone">Clone</A></TD>
+<TD><P><A HREF="SMLSphereBound.htm#Cull">Cull</A></TD>
+</TR>
+<TR>
+<TD><P><A HREF="SMLSphereBound.htm#operator_assign">operator=</A></TD>
+<TD><P><A HREF="SMLSphereBound.htm#around">around</A></TD>
+<TD><P><A HREF="SMLSphereBound.htm#extendBy">extendBy</A></TD>
+</TR>
+<TR>
+<TD><P><A HREF="SMLSphereBound.htm#contains">Contains</A></TD>
+<TD><P><A HREF="SMLSphereBound.htm#Transform">Transform</A></TD>
+<TD><P><A HREF="SMLSphereBound.htm#probe">probe</A></TD>
+</TR>
+<TR>
+<TD><P><A HREF="SMLSphereBound.htm#SetRadius">SetRadius</A></TD>
+<TD><P><A HREF="SMLSphereBound.htm#GetRadius">GetRadius</A></TD>
+<TD><P><A HREF="SMLSphereBound.htm#copyFrom">copyFrom</A></TD>
+</TR>
+<TR>
+<TD><P><A HREF="SMLSphereBound.htm#copySame">CopySame</A></TD>
+<TD><P>&nbsp;</TD>
+<TD><P>&nbsp;</TD>
+</TR>
+</TABLE>
+
+<HR>
+<H2>Public Data</H2>
+<P>float <B>r</B>;</P>
+<P>Radius of this sphere.</P>
+<p>[<A href="SMLSphereBound.htm#SMLSphereBound">top</A>]</p><hr>
+
+<P><A NAME="constructor"></A>SMLLIBENTRY <B>SMLSphereBound</B>(const <A HREF="SMLVec3f.htm#SMLVec3f">SMLVec3f</A>&amp; <B><I>smlvec</I></B>, float <B><I>initr</I></B>);</P>
+<h4>Discussion</h4>
+<P>SMLSphereBound object constructor.</P>
+<h4>Parameters</h4>
+<P><B><I>smlvec</I></B> - reference to SMLVec3f constant object.</P>
+<P><B><I>initr</I></B> - radius of sphere</P>
+<p>[<A href="SMLSphereBound.htm#SMLSphereBound">top</A>]</p><hr>
+
+<P>SMLLIBENTRY <B>SMLSphereBound</B>(const <A HREF="SMLSphereBound.htm#SMLSphereBound">SMLSphereBound</A>&amp; <B><I>smlbound</I></B>)</P>
+<h4>Discussion</h4>
+<P>SMLSphereBound object copy-constructor.</P>
+<h4>Parameters</h4>
+<P><B><I>smlbound</I></B> - reference to SMLSphereBound constant object which copy to create.</P>
+<p>[<A href="SMLSphereBound.htm#SMLSphereBound">top</A>]</p><hr>
+
+<P>SMLLIBENTRY <B>SMLSphereBound</B>();</P>
+<h4>Discussion</h4>
+<P>Default SMLSphereBound object constructor.</P>
+<h4>Parameters</h4>
+<P>No.</P>
+<p>[<A href="SMLSphereBound.htm#SMLSphereBound">top</A>]</p><hr>
+
+<P>SMLLIBENTRY virtual <A HREF="SMLBound.htm#SMLBound">SMLBound</A>* <A NAME="Clone"><B>Clone</B></A>();</P>
+<P>SMLLIBENTRY virtual const <A HREF="SMLBound.htm#SMLBound">SMLBound</A>* <B>Clone</B>() const;</P>
+<h4>Discussion</h4>
+<P>These two virtual methods create the copy of the <B>SMLSphereBound</B>-type object for which they are called.</P>
+<h4>Parameters</h4>
+<P>No.</P>
+<h4>Return Value</h4>
+<P>Methods return SMLBound-type pointer or const SMLBound-type pointer to new object.</P>
+<p>[<A href="SMLSphereBound.htm#SMLSphereBound">top</A>]</p><hr>
+
+<P>SMLLIBENTRY virtual bool <A NAME="Cull"><B>Cull</B></A>(const <A HREF="SMLPlane.htm#SMLPlane">SMLPlane</A>* <B><I>planes</I></B>, int <B><I>numPlane</I></B>) const ;</P>
+<h4>Discussion</h4>
+<P>Method checks if this bound lies within frustum created by specified <B><I>planes</I></B>. Method checks the distance between the center of sphere and the planes given in array <B><I>planes</I></B>.</P>
+<h4>Parameters</h4>
+<P><B><I>planes</I></B> - defines array of planes used for culling of current sphere (frustum).</P>
+<P><B><I>numPlane</I></B> - number of <B><I>planes</I></B>.</P>
+<h4>Return Value</h4>
+<P>Returns <I>true</I> if this sphere is culled. Otherwise, returns <I>false</I>.</P>
+<p>[<A href="SMLSphereBound.htm#SMLSphereBound">top</A>]</p><hr>
+
+<P>SMLLIBENTRY const <A HREF="SMLSphereBound.htm#SMLSphereBound">SMLSphereBound</A>&amp; <A NAME="operator_assign"><B>operator =</B></A>(const <A HREF="SMLSphereBound.htm#SMLSphereBound">SMLSphereBound</A>&amp; <B><I>s</I></B>);</P>
+<h4>Discussion</h4>
+<P>Method is an overloaded operator-function. It nominates new coordinates of center of this sphere, changes its radius and makes these parameters equal to those of object <B><I>s</I></B>.</P>
+<h4>Parameters</h4>
+<P><B><I>s</I></B> - object of SMLSphereBound type.</P>
+<h4>Return Value</h4>
+<P>Returns reference to the SMLSphereBound-type object to which it nominates new sphere center coordinates and radius.</P>
+<p>[<A href="SMLSphereBound.htm#SMLSphereBound">top</A>]</p><hr>
+
+<P>SMLLIBENTRY virtual void <A NAME="around"><B>around</B></A>(const <A HREF="SMLSphereBound.htm#SMLSphereBound">SMLSphereBound</A>** <B><I>spheres</I></B>, int <B><I>nspheres</I></B>);</P>
+<h4>Discussion</h4>
+<P>Method creates new sphere, which surrounds all the spheres from array <B><I>spheres</I></B>.</P>
+<h4>Parameters</h4>
+<P><B><I>spheres</I></B> - represents array of pointers to constant objects of SMLSphereBound type</P>
+<P><B><I>nspheres</I></B> - number of spheres.</P>
+<p>[<A href="SMLSphereBound.htm#SMLSphereBound">top</A>]</p><hr>
+
+<P>SMLLIBENTRY virtual void <B>around</B>(const <A HREF="SMLVec3f.htm#SMLVec3f">SMLVec3f</A>* <B><I>pts</I></B>, int <B><I>npoints</I></B>);</P>
+<h4>Discussion</h4>
+<P>Method creates new sphere, which surrounds all the points from SMLVec3f-type array.</P>
+<h4>Parameters</h4>
+<P><B><I>pts</I></B> - array of pointers to constant objects of SMLVec3f type.</P>
+<P><B><I>npoints</I></B> - number of points.</P>
+<p>[<A href="SMLSphereBound.htm#SMLSphereBound">top</A>]</p><hr>
+
+<P>SMLLIBENTRY virtual void<B> around</B>(const <A HREF="SMLBoxBound.htm#SMLBoxBound">SMLBoxBound</A>** <B><I>boxes</I></B>, int <B><I>nboxes</I></B>);</P>
+<h4>Discussion</h4>
+<P>Method creates new sphere that surrounds all the boxes from SMLBoxBound-type array.</P>
+<h4>Parameters</h4>
+<P><B><I>boxes</I></B> - array of pointers to constant objects of SMLBoxBound type</P>
+<P><B><I>nboxes</I></B> - number of boxes.</P>
+<p>[<A href="SMLSphereBound.htm#SMLSphereBound">top</A>]</p><hr>
+
+<P>SMLLIBENTRY virtual void<B> around</B>(const <A HREF="SMLSphereBound.htm#SMLSphereBound">SMLSphereBound</A>* <B><I>sphere</I></B>);</P>
+<h4>Discussion</h4>
+<P>Method creates new sphere that coincides with the given sphere.</P>
+<h4>Parameters</h4>
+<P><B><I>sphere</I></B> - pointer to a constant object of SMLSphereBound type</P>
+<p>[<A href="SMLSphereBound.htm#SMLSphereBound">top</A>]</p><hr>
+
+<P>SMLLIBENTRY virtual void<B> around</B>(const <A HREF="SMLBoxBound.htm#SMLBoxBound">SMLBoxBound</A>* <B><I>box</I></B>);</P>
+<h4>Discussion</h4>
+<P>Method creates a new sphere which surrounds given box.</P>
+<h4>Parameters</h4>
+<P><B><I>sphere</I></B> - pointer to a constant object of SMLSphereBound type</P>
+<p>[<A href="SMLSphereBound.htm#SMLSphereBound">top</A>]</p><hr>
+
+<P>SMLLIBENTRY virtual void<B> around</B>(const <A HREF="SMLBound.htm#SMLBound">SMLBound</A>* <B><I>bound</I></B>);</P>
+<h4>Discussion</h4>
+<P>Method creates a new sphere, which surrounds an object of SMLBound type, i.e. box or sphere.</P>
+<h4>Parameters</h4>
+<P><B><I>bound</I></B> - pointer to a constant object of SMLBound type</P>
+<p>[<A href="SMLSphereBound.htm#SMLSphereBound">top</A>]</p><hr>
+
+<P>SMLLIBENTRY virtual void<B> around</B>(const <A HREF="SMLBound.htm#SMLBound">SMLBound</A>** <B><I>bounds</I></B>, int <B><I>nbounds</I></B>);</P>
+<h4>Discussion</h4>
+<P>Method creates a new sphere, which surrounds all the objects of SMLBound type, i.e. boxes or spheres.</P>
+<h4>Parameters</h4>
+<P><B><I>bound</I></B> - specifies array of bounds</P>
+<p>[<A href="SMLSphereBound.htm#SMLSphereBound">top</A>]</p><hr>
+
+<P>SMLLIBENTRY virtual void <A NAME="extendBy"><B>extendBy</B></A>(const <A HREF="SMLVec3f.htm#SMLVec3f">SMLVec3f</A>&amp; <B><I>point</I></B>);</P>
+<h4>Discussion</h4>
+<P>Method extends a spherical bound (changes its center coordinates and radius) to include given point.</P>
+<h4>Parameters</h4>
+<P><B><I>point</I></B> - reference to constant object of SMLVec3f type.</P>
+<p>[<A href="SMLSphereBound.htm#SMLSphereBound">top</A>]</p><hr>
+
+<P>SMLLIBENTRY virtual void <B>extendBy</B>(const <A HREF="SMLBoxBound.htm#SMLBoxBound">SMLBoxBound</A>* <B><I>box</I></B>);</P>
+<h4>Discussion</h4>
+<P>Method extends a spherical bound to include given box.</P>
+<h4>Parameters</h4>
+<P><B><I>box</I></B> - pointer to a constant object of SMLBoxBound type.</P>
+<p>[<A href="SMLSphereBound.htm#SMLSphereBound">top</A>]</p><hr>
+
+<P>SMLLIBENTRY virtual void <B>extendBy</B>(const <A HREF="SMLSphereBound.htm#SMLSphereBound">SMLSphereBound</A>* <B><I>sphere</I></B>);</P>
+<h4>Discussion</h4>
+<P>Method extends a spherical bound to include given sphere.</P>
+<h4>Parameters</h4>
+<P><B><I>sphere</I></B> - pointer to a constant object of SMLSphereBound type.</P>
+<p>[<A href="SMLSphereBound.htm#SMLSphereBound">top</A>]</p><hr>
+
+<P>SMLLIBENTRY virtual void <B>extendBy</B>(const <A HREF="SMLBound.htm#SMLBound">SMLBound</A>* <B><I>bound</I></B>);</P>
+<h4>Discussion</h4>
+<P>Method extends a spherical bound. If <B><I>bound</I></B> is a pointer to an object of SMLSphereBound type the method extends this spherical bound to include the sphere. If <B><I>bound</I></B> is a pointer to an object of SMLBoxBound type the method extends this spherical bound for to include given box.</P>
+<h4>Parameters</h4>
+<P><B><I>bound</I></B> - pointer to constant object of SMLBound type.</P>
+<p>[<A href="SMLSphereBound.htm#SMLSphereBound">top</A>]</p><hr>
+
+<P>SMLLIBENTRY virtual bool <A NAME="contains"><B>contains</B></A>(const <A HREF="SMLVec3f.htm#SMLVec3f">SMLVec3f</A>&amp; <B><I>point</I></B>) const;</P>
+<h4>Discussion</h4>
+<P>Method checks if the point is inside this spherical bound. </P>
+<h4>Parameters</h4>
+<P><B><I>point</I></B> - reference to a constant object of SMLVec3f type.</P>
+<h4>Return Value</h4>
+<P>Returns <I>true</I> if the point is inside this sphere. Otherwise, returns <I>false</I>.</P>
+<p>[<A href="SMLSphereBound.htm#SMLSphereBound">top</A>]</p><hr>
+
+<P>SMLLIBENTRY virtual bool <B>contains</B>(const <A HREF="SMLBoxBound.htm#SMLBoxBound">SMLBoxBound</A>* <B><I>box</I></B>) const;</P>
+<h4>Discussion</h4>
+<P>Method checks if a box is inside the shperical bound. </P>
+<h4>Parameters</h4>
+<P><B><I>box</I></B> - pointer to a constant object of SMLBox Bound type.</P>
+<h4>Return Value</h4>
+<P>Returns <I>true</I> if the given box is inside this spherical bound. Otherwise, returns <I>false</I>.</P>
+<p>[<A href="SMLSphereBound.htm#SMLSphereBound">top</A>]</p><hr>
+
+<P>SMLLIBENTRY virtual bool <B>contains</B>(const <A HREF="SMLSphereBound.htm#SMLSphereBound">SMLSphereBound</A>* <B><I>sphere</I></B>) const;</P>
+<h4>Discussion</h4>
+<P>Method checks if a sphere is inside this spherical bound. </P>
+<h4>Parameters</h4>
+<P><B><I>sphere</I></B> - pointer to a constant object of SMLSphereBound type.</P>
+<h4>Return Value</h4>
+<P>Returns <I>true</I> if the given sphere is inside this spherical bound. Otherwise, returns <I>false</I>.</P>
+<p>[<A href="SMLSphereBound.htm#SMLSphereBound">top</A>]</p><hr>
+
+<P>SMLLIBENTRY virtual bool <B>contains</B>(const <A HREF="SMLBound.htm#SMLBound">SMLBound</A>* <B><I>bound</I></B>) const;</P>
+<h4>Discussion</h4>
+<P>Method checks if an object of SMLBound type (sphere or box) is inside this spherical bound. </P>
+<h4>Parameters</h4>
+<P><B><I>bound </I></B>- pointer to a constant object of SMLBound type.</P>
+<h4>Return Value</h4>
+<P>Returns <I>true</I> if the given sphere or box are inside this spherical bound. Otherwise, returns <I>false</I>.</P>
+<p>[<A href="SMLSphereBound.htm#SMLSphereBound">top</A>]</p><hr>
+
+<P>SMLLIBENTRY virtual void <A NAME="Transform"><B>Transform</B></A>(const <A HREF="SMLBound.htm#SMLBound">SMLBound</A>* <B><I>bound</I></B>, const <A HREF="SMLMatrix4f.htm#SMLMatrix4f">SMLMatrix4f</A>&amp; <B><I>matrix</I></B>);</P>
+<h4>Discussion</h4>
+<P>Method transforms the object <B><I>bound</I></B>. If <B><I>bound</I></B> is<B><I> </I></B>a sphere, the method transforms the coordinates of its center and radius in accordance with transformation <B><I>matrix</I></B>. If <B><I>bound</I></B> is a box, the method creates a new sphere, which surrounds this box and then transforms this sphere in accordance with <B><I>matrix</I></B>.</P>
+<h4>Parameters</h4>
+<P><B><I>bound </I></B>- pointer to a constant object of SMLBound type.</P>
+<P><B><I>matrix</I></B> - transformation matrix.</P>
+<p>[<A href="SMLSphereBound.htm#SMLSphereBound">top</A>]</p><hr>
+
+<P>SMLLIBENTRY virtual bool <A NAME="probe"><B>probe</B></A>(const <A HREF="SMLVec3f.htm#SMLVec3f">SMLVec3f</A>&amp; <B><I>p1</I></B>, const <A HREF="SMLVec3f.htm#SMLVec3f">SMLVec3f</A>&amp; <B><I>p2</I></B>, float* <B><I>closeDist</I></B>, float* <B><I>farDist</I></B>);</P>
+<h4>Discussion</h4>
+<P>Method checks if segment, defined with its start <B><I>p1 </I></B>and end <B><I>p2</I></B>, crosses this sphere. </P>
+<h4>Parameters</h4>
+<P><B><I>p1</I></B> - reference to the start of the segment ( a constant object of SMLVec3f type).</P>
+<P><B><I>p2</I></B> - reference to the end of the segment ( a constant object of SMLVec3f type).</P>
+Output <h4>Parameters</h4>
+<P><B><I>closeDist</I></B> - pointer to the close cross point.</P>
+<P><B><I>farDist</I></B> - pointer to the far cross point.</P>
+<h4>Return Value</h4>
+<P>Returns <I>true</I> if the segment crosses given sphere. Otherwise, returns <I>false</I>.</P>
+<p>[<A href="SMLSphereBound.htm#SMLSphereBound">top</A>]</p><hr>
+
+<P>SMLLIBENTRY virtual bool <B>probe</B>(const <A HREF="SMLRay.htm#SMLRay">SMLRay</A>&amp; <B><I>ray</I></B>, float* <B><I>closeDist</I></B>, float* <B><I>farDist</I></B>);</P>
+<h4>Discussion</h4>
+<P>Method checks if ray crosses this sphere. </P>
+<h4>Parameters</h4>
+<P><B><I>ray </I></B>- reference to a constant object of SMLRay type.</P>
+Output <h4>Parameters</h4>
+<P><B><I>closeDist</I></B> - pointer to the close cross point.</P>
+<P><B><I>farDist</I></B> - pointer to the far cross point.</P>
+<P>Computation of these distances is not realized.</P>
+<h4>Return Value</h4>
+<P>Returns <I>true</I> if the ray crosses given sphere. Otherwise, returns <I>false</I>.</P>
+<p>[<A href="SMLSphereBound.htm#SMLSphereBound">top</A>]</p><hr>
+
+<P>SMLLIBENTRY virtual void <B>Transform</B>(const <A HREF="SMLSphereBound.htm#SMLSphereBound">SMLSphereBound</A>* <B><I>src</I></B>, const <A HREF="SMLMatrix4f.htm#SMLMatrix4f">SMLMatrix4f</A>&amp; <B><I>matrix</I></B>);</P>
+<h4>Discussion</h4>
+<P>Method transforms a sphere. The method transforms the coordinates of its center and radius in accordance with object <B><I>matrix</I></B>.</P>
+<h4>Parameters</h4>
+<P><B><I>src</I></B> - pointer to a constant object of SMLSphereBound type.</P>
+<P><B><I>matrix</I></B> - transformation matrix.</P>
+<p>[<A href="SMLSphereBound.htm#SMLSphereBound">top</A>]</p><hr>
+
+<P>SMLLIBENTRY void <A NAME="SetRadius"><B>SetRadius</B></A>(float <B><I>radius</I></B>);</P>
+<h4>Discussion</h4>
+<P>Method sets new radius of this sphere. </P>
+<h4>Parameters</h4>
+<P><B><I>radius</I></B> - new radius of this sphere.</P>
+<p>[<A href="SMLSphereBound.htm#SMLSphereBound">top</A>]</p><hr>
+
+<P>SMLLIBENTRY void <A NAME="GetRadius"><B>GetRadius</B></A>();</P>
+<h4>Discussion</h4>
+<P>Method gets radius of this sphere.</P>
+<h4>Parameters</h4>
+<P>No.</P>
+<h4>Return Value</h4>
+<P>Returns value of current radius of this sphere.</P>
+<p>[<A href="SMLSphereBound.htm#SMLSphereBound">top</A>]</p><hr>
+
+<P>virtual void <A NAME="copyFrom"><B>copyFrom</B></A>(const <A HREF="SMLBound.htm#SMLBound">SMLBound</A>&amp; <B><I>bound</I></B>);</P>
+<h4>Discussion</h4>
+<P>Method sets new radius and coordinates of center of this sphere equal to those of object <B><I>bound</I></B>.</P>
+<h4>Parameters</h4>
+<P><B><I>bound</I></B> - reference to object of SMLBound type.</P>
+<p>[<A href="SMLSphereBound.htm#SMLSphereBound">top</A>]</p><hr>
+
+<P>virtual void <A NAME="copySame"><B>copySame</B></A>(const <A HREF="SMLSphereBound.htm#SMLSphereBound">SMLSphereBound</A>* <B><I>bound</I></B>);</P>
+<h4>Discussion</h4>
+<P>Method creates new sphere with radius and coordinates of center equal to those of spherical <B><I>bound</I></B>.</P>
+<h4>Parameters</h4>
+<P><B><I>bound</I></B> - poiner to object of SMLSphereBound type.</P>
+<p>[<A href="SMLSphereBound.htm#SMLSphereBound">top</A>]</p><hr>
+
+<P>SMLLIBENTRY virtual bool <B>containsRelativeCoordinates</B>(float <B><I>px</I></B>, float <B><I>py</I></B>, float <B><I>pz</I></B>) const;</P>
+<h4>Discussion</h4>
+<P>Method checks if the point defined by <B><I>px, py, pz</I></B> is inside this sphere.</P>
+<h4>Parameters</h4>
+<P><B><I>px, py, pz</I></B> - coordinates of the point.</P>
+<h4>Return Value</h4>
+<P>Returns <I>true</I> if the point is inside this sphere. Otherwise, returns <I>false</I>.</P>
+<p>[<A href="SMLSphereBound.htm#SMLSphereBound">top</A>]</p><hr>
+
+</BODY>
+</HTML>

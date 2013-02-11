@@ -1,0 +1,1070 @@
+<html>
+<head>
+<title>
+Documentation for class CMatrix3
+
+</title>
+<link rel="stylesheet" type="text/css" href="doc.css">
+</head>
+<body>
+<table border="0" width="100%">
+	<tr>
+		<td align="right">
+			<h4>Auto Generated Class Documentation by ClassBuilder</h4>
+		<td>
+	</tr>
+</table>
+<hr>
+<center><a href="main_index.html">Main</a>
+<a href="namespace.html">Namespace List</a>
+<a href="class_hiearchy.html">Class Hierarchy</a>
+<a href="compound_members.html">Compound Members</a>
+<a href="compound_list.html">Compound List</a>
+<a href="diagram_list.html">Diagram List</a>
+</center><hr><h1>CMatrix3 Reference</h1>
+<p>C:\Development\Game Dev System\Plugins\src\include\Matrix.<a href="#_details">More...</a>
+</p><p><pre>#include 
+</pre></p><p>Inheritance diagram for CMatrix3
+</p><table border="0"><tr>
+<td colspan="2"><h2>Public Methods</h2></td>
+</tr>
+<tr>
+<td align="right"><a name="#_methodCMatrix3_summary"></a></td><td align="left"><a href="#_methodCMatrix3_details">CMatrix3</a>(  )</td></tr>
+<tr>
+<td>&nbsp;</td>
+<td>
+<font size=-1><em>Constructor method.</em><a href="#_methodCMatrix3_details">More...</a>
+</font></td></tr>
+<tr>
+<td align="right"><a name="#_methodCMatrix3_summary"></a></td><td align="left"><a href="#_methodCMatrix3_details">CMatrix3</a>( LPCSTR  name )</td></tr>
+<tr>
+<td>&nbsp;</td>
+<td>
+<font size=-1><em>Constructor method.</em><a href="#_methodCMatrix3_details">More...</a>
+</font></td></tr>
+<tr>
+<td align="right"><a name="#_methodCMatrix3_summary"></a></td><td align="left"><a href="#_methodCMatrix3_details">CMatrix3</a>( CMatrix3&  src )</td></tr>
+<tr>
+<td>&nbsp;</td>
+<td>
+<font size=-1><em>Constructor method.</em><a href="#_methodCMatrix3_details">More...</a>
+</font></td></tr>
+<tr>
+<td align="right"><a name="#_methodCMatrix3_summary"></a></td><td align="left"><a href="#_methodCMatrix3_details">CMatrix3</a>( LPCSTR  name, CMatrix3&  src )</td></tr>
+<tr>
+<td>&nbsp;</td>
+<td>
+<font size=-1><em>Constructor method.</em><a href="#_methodCMatrix3_details">More...</a>
+</font></td></tr>
+<tr>
+<td align="right"><a name="#_methodCMatrix3_summary"></a></td><td align="left"><a href="#_methodCMatrix3_details">CMatrix3</a>( CVector3  row1, CVector3  row2, CVector3  row3 )</td></tr>
+<tr>
+<td>&nbsp;</td>
+<td>
+<font size=-1><em>Constructor method.</em><a href="#_methodCMatrix3_details">More...</a>
+</font></td></tr>
+<tr>
+<td align="right"><a name="#_methodCMatrix3_summary"></a></td><td align="left"><a href="#_methodCMatrix3_details">CMatrix3</a>( LPCSTR  name, CVector3  row1, CVector3  row2, CVector3  row3 )</td></tr>
+<tr>
+<td>&nbsp;</td>
+<td>
+<font size=-1><em>Constructor method.</em><a href="#_methodCMatrix3_details">More...</a>
+</font></td></tr>
+<tr>
+<td align="right"><a name="#_method+_summary"></a>CMatrix3 operator& </td><td align="left"><a href="#_method+_details">+</a>( CMatrix3&  src )</td></tr>
+<tr>
+<td align="right"><a name="#_method-_summary"></a>CMatrix3 operator& </td><td align="left"><a href="#_method-_details">-</a>( CMatrix3&  src )</td></tr>
+<tr>
+<td align="right"><a name="#_method_summary"></a>CMatrix3 operator*& </td><td align="left"><a href="#_method_details"></a>( CMatrix3&  src )</td></tr>
+<tr>
+<td align="right"><a name="#_method_summary"></a>CVector3 operator*& </td><td align="left"><a href="#_method_details"></a>( CVector3&  src )</td></tr>
+<tr>
+<td align="right"><a name="#_methodoperator[]_summary"></a>float* </td><td align="left"><a href="#_methodoperator[]_details">operator[]</a>( int  index )</td></tr>
+<tr>
+<td align="right"><a name="#_methodoperator_summary"></a>void </td><td align="left"><a href="#_methodoperator_details">operator</a>( CMatrix3&  src )</td></tr>
+<tr>
+<td align="right"><a name="#_methodoperator_summary"></a>BOOL </td><td align="left"><a href="#_methodoperator_details">operator</a>( CMatrix3&  src )</td></tr>
+<tr>
+<td align="right"><a name="#_methodoperator!_summary"></a>BOOL </td><td align="left"><a href="#_methodoperator!_details">operator!</a>( CMatrix3&  src )</td></tr>
+<tr>
+<td align="right"><a name="#_methodSetIdentity_summary"></a>void </td><td align="left"><a href="#_methodSetIdentity_details">SetIdentity</a>(  )</td></tr>
+<tr>
+<td align="right"><a name="#_methodYawPitchRoll_summary"></a>void </td><td align="left"><a href="#_methodYawPitchRoll_details">YawPitchRoll</a>( float  yaw, float  pitch, float  roll )</td></tr>
+<tr>
+<td align="right"><a name="#_methodRoll_summary"></a>void </td><td align="left"><a href="#_methodRoll_details">Roll</a>( float  angle )</td></tr>
+<tr>
+<td align="right"><a name="#_methodYaw_summary"></a>void </td><td align="left"><a href="#_methodYaw_details">Yaw</a>( float  angle )</td></tr>
+<tr>
+<td align="right"><a name="#_methodPitch_summary"></a>void </td><td align="left"><a href="#_methodPitch_details">Pitch</a>( float  angle )</td></tr>
+<tr>
+<td align="right"><a name="#_methodRotate_summary"></a>void </td><td align="left"><a href="#_methodRotate_details">Rotate</a>( CVector3&  axis, float  angle )</td></tr>
+<tr>
+<td align="right"><a name="#_methodRotate_summary"></a>void </td><td align="left"><a href="#_methodRotate_details">Rotate</a>( CQuaternion&  orient )</td></tr>
+<tr>
+<td align="right"><a name="#_methodScale_summary"></a>void </td><td align="left"><a href="#_methodScale_details">Scale</a>( float  scale )</td></tr>
+<tr>
+<td align="right">virtual <a name="#_method~CMatrix3_summary"></a></td><td align="left"><a href="#_method~CMatrix3_details">~CMatrix3</a>(  )</td></tr>
+<tr>
+<td>&nbsp;</td>
+<td>
+<font size=-1><em>Destructor method.</em><a href="#_method~CMatrix3_details">More...</a>
+</font></td></tr>
+<tr>
+<td colspan="2"><h2>Public Members</h2></td>
+</tr>
+<tr>
+<td colspan="2"><h2>Protected Methods</h2></td>
+</tr>
+<tr>
+<td colspan="2"><h2>Protected Members</h2></td>
+</tr>
+</table>
+<hr>
+<h2><a name="_details"></a>Detailed Description</h2>
+<p>
+C:\Development\Game Dev System\Plugins\src\include\Matrix.h(27)
+
+ {B4775C6A-DE01-4ed9-9F9D-9439AE064CE4}
+</p>
+<hr>
+<h2>Constructor and Destructor Documentation</h2>
+<a name="#_methodCMatrix3_details"></a><table border="0">
+<tr>
+<td>
+<table border="0">
+<tr>
+<td align="right"><a href="#_methodCMatrix3_summary">top</a>
+CMatrix3::CMatrix3</td>
+<td >
+(</td>
+<td >
+)</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<a name="#_methodCMatrix3_details"></a><table border="0">
+<tr>
+<td>
+<table border="0">
+<tr>
+<td align="right"><a href="#_methodCMatrix3_summary">top</a>
+CMatrix3::CMatrix3</td>
+<td >
+(</td>
+<td >
+)</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<a name="#_methodCMatrix3_details"></a><table border="0">
+<tr>
+<td>
+<table border="0">
+<tr>
+<td align="right"><a href="#_methodCMatrix3_summary">top</a>
+CMatrix3::CMatrix3</td>
+<td >
+(</td>
+<td >
+)</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<a name="#_methodCMatrix3_details"></a><table border="0">
+<tr>
+<td>
+<table border="0">
+<tr>
+<td align="right"><a href="#_methodCMatrix3_summary">top</a>
+CMatrix3::CMatrix3</td>
+<td >
+(</td>
+<td >
+)</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<a name="#_methodCMatrix3_details"></a><table border="0">
+<tr>
+<td>
+<table border="0">
+<tr>
+<td align="right"><a href="#_methodCMatrix3_summary">top</a>
+CMatrix3::CMatrix3</td>
+<td >
+(</td>
+<td >
+)</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<a name="#_methodCMatrix3_details"></a><table border="0">
+<tr>
+<td>
+<table border="0">
+<tr>
+<td align="right"><a href="#_methodCMatrix3_summary">top</a>
+CMatrix3::CMatrix3</td>
+<td >
+(</td>
+<td >
+)</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<a name="#_method~CMatrix3_details"></a><table border="0">
+<tr>
+<td>
+<table border="0">
+<tr>
+<td align="right"><a href="#_method~CMatrix3_summary">top</a>
+CMatrix3::~CMatrix3</td>
+<td >
+(</td>
+<td >
+)</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<hr>
+<p>
+<h2>Member Function Documentation</h2>
+</p>
+<a name="#_method+_details"></a><table border="0">
+<tr>
+<td>
+<table border="0">
+<tr>
+<td ><a href="#_method+_summary">top</a>
+CMatrix3 operator& CMatrix3::+</td>
+<td >
+(</td>
+<td >
+CMatrix3& </td>
+<td ><i>
+src</i></td>
+<td >
+)</td>
+<td >
+<code> [public]</code></td >
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table border="0"><tr>
+<td>&nbsp;</td>
+<td>
+<p>
+
+</p>
+<p>
+<b>Parameters:</b>
+</p>
+<table border="0">
+<tr>
+<td>
+<em><i>CMatrix3& </i></em>
+</td>
+<td>
+&nbsp;</td>
+</tr>
+</table>
+<p>
+<b>Returns:</b>
+</p>
+<p><em><i>CMatrix3 operator&  : </i></em></p>
+</td>
+</tr>
+</table></td>
+</tr>
+</table><a name="#_method-_details"></a><table border="0">
+<tr>
+<td>
+<table border="0">
+<tr>
+<td ><a href="#_method-_summary">top</a>
+CMatrix3 operator& CMatrix3::-</td>
+<td >
+(</td>
+<td >
+CMatrix3& </td>
+<td ><i>
+src</i></td>
+<td >
+)</td>
+<td >
+<code> [public]</code></td >
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table border="0"><tr>
+<td>&nbsp;</td>
+<td>
+<p>
+
+</p>
+<p>
+<b>Parameters:</b>
+</p>
+<table border="0">
+<tr>
+<td>
+<em><i>CMatrix3& </i></em>
+</td>
+<td>
+&nbsp;</td>
+</tr>
+</table>
+<p>
+<b>Returns:</b>
+</p>
+<p><em><i>CMatrix3 operator&  : </i></em></p>
+</td>
+</tr>
+</table></td>
+</tr>
+</table><a name="#_method_details"></a><table border="0">
+<tr>
+<td>
+<table border="0">
+<tr>
+<td ><a href="#_method_summary">top</a>
+CMatrix3 operator*& CMatrix3::</td>
+<td >
+(</td>
+<td >
+CMatrix3& </td>
+<td ><i>
+src</i></td>
+<td >
+)</td>
+<td >
+<code> [public]</code></td >
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table border="0"><tr>
+<td>&nbsp;</td>
+<td>
+<p>
+
+</p>
+<p>
+<b>Parameters:</b>
+</p>
+<table border="0">
+<tr>
+<td>
+<em><i>CMatrix3& </i></em>
+</td>
+<td>
+&nbsp;</td>
+</tr>
+</table>
+<p>
+<b>Returns:</b>
+</p>
+<p><em><i>CMatrix3 operator*&  : </i></em></p>
+</td>
+</tr>
+</table></td>
+</tr>
+</table><a name="#_method_details"></a><table border="0">
+<tr>
+<td>
+<table border="0">
+<tr>
+<td ><a href="#_method_summary">top</a>
+CVector3 operator*& CMatrix3::</td>
+<td >
+(</td>
+<td >
+CVector3& </td>
+<td ><i>
+src</i></td>
+<td >
+)</td>
+<td >
+<code> [public]</code></td >
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table border="0"><tr>
+<td>&nbsp;</td>
+<td>
+<p>
+
+</p>
+<p>
+<b>Parameters:</b>
+</p>
+<table border="0">
+<tr>
+<td>
+<em><i>CVector3& </i></em>
+</td>
+<td>
+&nbsp;</td>
+</tr>
+</table>
+<p>
+<b>Returns:</b>
+</p>
+<p><em><i>CVector3 operator*&  : </i></em></p>
+</td>
+</tr>
+</table></td>
+</tr>
+</table><a name="#_methodoperator[]_details"></a><table border="0">
+<tr>
+<td>
+<table border="0">
+<tr>
+<td ><a href="#_methodoperator[]_summary">top</a>
+float* CMatrix3::operator[]</td>
+<td >
+(</td>
+<td >
+int </td>
+<td ><i>
+index</i></td>
+<td >
+)</td>
+<td >
+<code> [public]</code></td >
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table border="0"><tr>
+<td>&nbsp;</td>
+<td>
+<p>
+
+</p>
+<p>
+<b>Parameters:</b>
+</p>
+<table border="0">
+<tr>
+<td>
+<em><i>int </i></em>
+</td>
+<td>
+&nbsp;</td>
+</tr>
+</table>
+<p>
+<b>Returns:</b>
+</p>
+<p><em><i>float*  : </i></em></p>
+</td>
+</tr>
+</table></td>
+</tr>
+</table><a name="#_methodoperator_details"></a><table border="0">
+<tr>
+<td>
+<table border="0">
+<tr>
+<td ><a href="#_methodoperator_summary">top</a>
+void CMatrix3::operator</td>
+<td >
+(</td>
+<td >
+CMatrix3& </td>
+<td ><i>
+src</i></td>
+<td >
+)</td>
+<td >
+<code> [public]</code></td >
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table border="0"><tr>
+<td>&nbsp;</td>
+<td>
+<p>
+
+</p>
+<p>
+<b>Parameters:</b>
+</p>
+<table border="0">
+<tr>
+<td>
+<em><i>CMatrix3& </i></em>
+</td>
+<td>
+&nbsp;</td>
+</tr>
+</table>
+<p>
+<b>Returns:</b>
+</p>
+<p><em><i>void  : </i></em></p>
+</td>
+</tr>
+</table></td>
+</tr>
+</table><a name="#_methodoperator_details"></a><table border="0">
+<tr>
+<td>
+<table border="0">
+<tr>
+<td ><a href="#_methodoperator_summary">top</a>
+BOOL CMatrix3::operator</td>
+<td >
+(</td>
+<td >
+CMatrix3& </td>
+<td ><i>
+src</i></td>
+<td >
+)</td>
+<td >
+<code> [public]</code></td >
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table border="0"><tr>
+<td>&nbsp;</td>
+<td>
+<p>
+
+</p>
+<p>
+<b>Parameters:</b>
+</p>
+<table border="0">
+<tr>
+<td>
+<em><i>CMatrix3& </i></em>
+</td>
+<td>
+&nbsp;</td>
+</tr>
+</table>
+<p>
+<b>Returns:</b>
+</p>
+<p><em><i>BOOL  : </i></em></p>
+</td>
+</tr>
+</table></td>
+</tr>
+</table><a name="#_methodoperator!_details"></a><table border="0">
+<tr>
+<td>
+<table border="0">
+<tr>
+<td ><a href="#_methodoperator!_summary">top</a>
+BOOL CMatrix3::operator!</td>
+<td >
+(</td>
+<td >
+CMatrix3& </td>
+<td ><i>
+src</i></td>
+<td >
+)</td>
+<td >
+<code> [public]</code></td >
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table border="0"><tr>
+<td>&nbsp;</td>
+<td>
+<p>
+
+</p>
+<p>
+<b>Parameters:</b>
+</p>
+<table border="0">
+<tr>
+<td>
+<em><i>CMatrix3& </i></em>
+</td>
+<td>
+&nbsp;</td>
+</tr>
+</table>
+<p>
+<b>Returns:</b>
+</p>
+<p><em><i>BOOL  : </i></em></p>
+</td>
+</tr>
+</table></td>
+</tr>
+</table><a name="#_methodSetIdentity_details"></a><table border="0">
+<tr>
+<td>
+<table border="0">
+<tr>
+<td ><a href="#_methodSetIdentity_summary">top</a>
+void CMatrix3::SetIdentity</td>
+<td >
+(</td>
+<td >
+)</td>
+<td >
+<code> [public]</code></td >
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table border="0"><tr>
+<td>&nbsp;</td>
+<td>
+<p>
+
+</p>
+<p>
+<b>Parameters:</b>
+</p>
+<table border="0">
+</table>
+<p>
+<b>Returns:</b>
+</p>
+<p><em><i>void  : </i></em></p>
+</td>
+</tr>
+</table></td>
+</tr>
+</table><a name="#_methodYawPitchRoll_details"></a><table border="0">
+<tr>
+<td>
+<table border="0">
+<tr>
+<td ><a href="#_methodYawPitchRoll_summary">top</a>
+void CMatrix3::YawPitchRoll</td>
+<td >
+(</td>
+<td >
+float </td>
+<td ><i>
+yaw</i></td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td >
+float </td>
+<td ><i>
+pitch</i></td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td >
+float </td>
+<td ><i>
+roll</i></td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>)</td>
+<td colspan="2">&nbsp;<code> [public]</code></td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table border="0"><tr>
+<td>&nbsp;</td>
+<td>
+<p>
+
+</p>
+<p>
+<b>Parameters:</b>
+</p>
+<table border="0">
+<tr>
+<td>
+<em><i>float </i></em>
+</td>
+<td>
+&nbsp;</td>
+</tr>
+<tr>
+<td>
+<em><i>float </i></em>
+</td>
+<td>
+&nbsp;</td>
+</tr>
+<tr>
+<td>
+<em><i>float </i></em>
+</td>
+<td>
+&nbsp;</td>
+</tr>
+</table>
+<p>
+<b>Returns:</b>
+</p>
+<p><em><i>void  : </i></em></p>
+</td>
+</tr>
+</table></td>
+</tr>
+</table><a name="#_methodRoll_details"></a><table border="0">
+<tr>
+<td>
+<table border="0">
+<tr>
+<td ><a href="#_methodRoll_summary">top</a>
+void CMatrix3::Roll</td>
+<td >
+(</td>
+<td >
+float </td>
+<td ><i>
+angle</i></td>
+<td >
+)</td>
+<td >
+<code> [public]</code></td >
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table border="0"><tr>
+<td>&nbsp;</td>
+<td>
+<p>
+
+</p>
+<p>
+<b>Parameters:</b>
+</p>
+<table border="0">
+<tr>
+<td>
+<em><i>float </i></em>
+</td>
+<td>
+&nbsp;</td>
+</tr>
+</table>
+<p>
+<b>Returns:</b>
+</p>
+<p><em><i>void  : </i></em></p>
+</td>
+</tr>
+</table></td>
+</tr>
+</table><a name="#_methodYaw_details"></a><table border="0">
+<tr>
+<td>
+<table border="0">
+<tr>
+<td ><a href="#_methodYaw_summary">top</a>
+void CMatrix3::Yaw</td>
+<td >
+(</td>
+<td >
+float </td>
+<td ><i>
+angle</i></td>
+<td >
+)</td>
+<td >
+<code> [public]</code></td >
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table border="0"><tr>
+<td>&nbsp;</td>
+<td>
+<p>
+
+</p>
+<p>
+<b>Parameters:</b>
+</p>
+<table border="0">
+<tr>
+<td>
+<em><i>float </i></em>
+</td>
+<td>
+&nbsp;</td>
+</tr>
+</table>
+<p>
+<b>Returns:</b>
+</p>
+<p><em><i>void  : </i></em></p>
+</td>
+</tr>
+</table></td>
+</tr>
+</table><a name="#_methodPitch_details"></a><table border="0">
+<tr>
+<td>
+<table border="0">
+<tr>
+<td ><a href="#_methodPitch_summary">top</a>
+void CMatrix3::Pitch</td>
+<td >
+(</td>
+<td >
+float </td>
+<td ><i>
+angle</i></td>
+<td >
+)</td>
+<td >
+<code> [public]</code></td >
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table border="0"><tr>
+<td>&nbsp;</td>
+<td>
+<p>
+
+</p>
+<p>
+<b>Parameters:</b>
+</p>
+<table border="0">
+<tr>
+<td>
+<em><i>float </i></em>
+</td>
+<td>
+&nbsp;</td>
+</tr>
+</table>
+<p>
+<b>Returns:</b>
+</p>
+<p><em><i>void  : </i></em></p>
+</td>
+</tr>
+</table></td>
+</tr>
+</table><a name="#_methodRotate_details"></a><table border="0">
+<tr>
+<td>
+<table border="0">
+<tr>
+<td ><a href="#_methodRotate_summary">top</a>
+void CMatrix3::Rotate</td>
+<td >
+(</td>
+<td >
+CVector3& </td>
+<td ><i>
+axis</i></td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td >
+float </td>
+<td ><i>
+angle</i></td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>)</td>
+<td colspan="2">&nbsp;<code> [public]</code></td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table border="0"><tr>
+<td>&nbsp;</td>
+<td>
+<p>
+
+</p>
+<p>
+<b>Parameters:</b>
+</p>
+<table border="0">
+<tr>
+<td>
+<em><i>CVector3& </i></em>
+</td>
+<td>
+&nbsp;</td>
+</tr>
+<tr>
+<td>
+<em><i>float </i></em>
+</td>
+<td>
+&nbsp;</td>
+</tr>
+</table>
+<p>
+<b>Returns:</b>
+</p>
+<p><em><i>void  : </i></em></p>
+</td>
+</tr>
+</table></td>
+</tr>
+</table><a name="#_methodRotate_details"></a><table border="0">
+<tr>
+<td>
+<table border="0">
+<tr>
+<td ><a href="#_methodRotate_summary">top</a>
+void CMatrix3::Rotate</td>
+<td >
+(</td>
+<td >
+CQuaternion& </td>
+<td ><i>
+orient</i></td>
+<td >
+)</td>
+<td >
+<code> [public]</code></td >
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table border="0"><tr>
+<td>&nbsp;</td>
+<td>
+<p>
+
+</p>
+<p>
+<b>Parameters:</b>
+</p>
+<table border="0">
+<tr>
+<td>
+<em><i>CQuaternion& </i></em>
+</td>
+<td>
+&nbsp;</td>
+</tr>
+</table>
+<p>
+<b>Returns:</b>
+</p>
+<p><em><i>void  : </i></em></p>
+</td>
+</tr>
+</table></td>
+</tr>
+</table><a name="#_methodScale_details"></a><table border="0">
+<tr>
+<td>
+<table border="0">
+<tr>
+<td ><a href="#_methodScale_summary">top</a>
+void CMatrix3::Scale</td>
+<td >
+(</td>
+<td >
+float </td>
+<td ><i>
+scale</i></td>
+<td >
+)</td>
+<td >
+<code> [public]</code></td >
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table border="0"><tr>
+<td>&nbsp;</td>
+<td>
+<p>
+
+</p>
+<p>
+<b>Parameters:</b>
+</p>
+<table border="0">
+<tr>
+<td>
+<em><i>float </i></em>
+</td>
+<td>
+&nbsp;</td>
+</tr>
+</table>
+<p>
+<b>Returns:</b>
+</p>
+<p><em><i>void  : </i></em></p>
+</td>
+</tr>
+</table></td>
+</tr>
+</table></body>
+</html>

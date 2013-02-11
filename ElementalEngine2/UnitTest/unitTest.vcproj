@@ -1,0 +1,611 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<VisualStudioProject
+	ProjectType="Visual C++"
+	Version="7.10"
+	Name="unitTest"
+	ProjectGUID="{B704B821-6F90-45C1-9678-DDEE08E2FCA6}"
+	RootNamespace="unitTest"
+	SccProjectName="SAK"
+	SccAuxPath="SAK"
+	SccLocalPath="SAK"
+	SccProvider="SAK"
+	Keyword="MFCProj">
+	<Platforms>
+		<Platform
+			Name="Win32"/>
+	</Platforms>
+	<Configurations>
+		<Configuration
+			Name="Debug|Win32"
+			OutputDirectory=".\bin\$(ConfigurationName)"
+			IntermediateDirectory="$(ConfigurationName)"
+			ConfigurationType="1"
+			UseOfMFC="2"
+			CharacterSet="0">
+			<Tool
+				Name="VCCLCompilerTool"
+				Optimization="0"
+				AdditionalIncludeDirectories="..\SDK\include\;&quot;..\..\3rd Party\LibXML++\&quot;;&quot;..\..\3rd Party&quot;;..\src;..\..\Plugins2\include;..\..\Plugins2\ElementalEngine\LoadSaveManager"
+				PreprocessorDefinitions="WIN32;_WINDOWS;_DEBUG"
+				MinimalRebuild="TRUE"
+				BasicRuntimeChecks="3"
+				RuntimeLibrary="3"
+				RuntimeTypeInfo="TRUE"
+				UsePrecompiledHeader="3"
+				WarningLevel="3"
+				WarnAsError="TRUE"
+				Detect64BitPortabilityProblems="TRUE"
+				DebugInformationFormat="4"/>
+			<Tool
+				Name="VCCustomBuildTool"
+				Description="Copying needed DLL files..."
+				CommandLine="if NOT exist .\bin\. mkdir .\bin
+if NOT exist &quot;.\bin\$(ConfigurationName)\.&quot; mkdir &quot;.\bin\$(ConfigurationName)\&quot;
+if NOT exist &quot;.\bin\$(ConfigurationName)\Plugins\.&quot; mkdir &quot;.\bin\$(ConfigurationName)\Plugins&quot;
+if NOT exist &quot;.\bin\$(ConfigurationName)\BaseData\.&quot; mkdir &quot;.\bin\$(ConfigurationName)\BaseData&quot;
+xcopy /Y /D &quot;..\SDK\bin\$(ConfigurationName)\ElementalEngine.dll&quot; &quot;.\bin\$(ConfigurationName)\&quot; &gt;nul
+xcopy /Y /D &quot;..\SDK\bin\$(ConfigurationName)\Plugins\WorldLoader.*&quot; &quot;.\bin\$(ConfigurationName)\PlugIns&quot; &gt;nul
+xcopy /Y /D &quot;..\..\Plugins2\bin\$(ConfigurationName)\*.*&quot; &quot;.\bin\$(ConfigurationName)\Plugins&quot; &gt;nul
+xcopy /Y /D &quot;..\..\3rd Party\Novodex\bin\win32\$(ConfigurationName)\*.dll&quot; &quot;.\bin\$(ConfigurationName)\&quot; &gt;nul
+xcopy /Y /D &quot;..\..\3rd Party\LibXML++\bin\$(ConfigurationName)\LibXML++.dll&quot; &quot;.\bin\$(ConfigurationName)\&quot; &gt;nul
+xcopy /Y /D &quot;..\..\3rd Party\cal3d\bin\$(ConfigurationName)\cal3d.dll&quot; &quot;.\bin\$(ConfigurationName)\&quot; &gt;nul
+xcopy /Y /D &quot;..\..\3rd Party\OpenAL 1.1 SDK\libs\Win32\$(ConfigurationName)\OpenAL32.dll&quot; &quot;.\bin\$(ConfigurationName)\&quot; &gt;nul
+xcopy /Y /D &quot;..\..\3rd Party\OpenAL 1.1 SDK\libs\Win32\$(ConfigurationName)\alut.dll&quot; &quot;.\bin\$(ConfigurationName)\&quot; &gt;nul
+xcopy /Y /D &quot;..\..\3rd Party\OpenAL 1.1 SDK\libs\Win32\$(ConfigurationName)\wrap_oal.dll&quot; &quot;.\bin\$(ConfigurationName)\&quot; &gt;nul
+xcopy /Y /D &quot;..\..\3rd Party\\lua\toluaxx\bin\$(ConfigurationName)\toluaxx.dll&quot; &quot;.\bin\$(ConfigurationName)\&quot; &gt;nul
+xcopy /Y /D &quot;..\..\3rd Party\Ogg Vorbis\Ogg\bin\$(ConfigurationName)\ogg.dll&quot; &quot;.\bin\$(ConfigurationName)\&quot; &gt;nul
+xcopy /Y /D &quot;..\..\3rd Party\Ogg Vorbis\Vorbis\bin\$(ConfigurationName)\vorbis.dll&quot; &quot;.\bin\$(ConfigurationName)\&quot; &gt;nul
+xcopy /Y /D &quot;..\..\3rd Party\Ogg Vorbis\Vorbis\bin\$(ConfigurationName)\vorbisfile.dll&quot; &quot;.\bin\$(ConfigurationName)\&quot; &gt;nul
+
+
+"
+				Outputs="&quot;.\bin\$(ConfigurationName)\ElementalEngine.dll&quot;;&quot;.\bin\$(ConfigurationName)\nxPhysics.dll&quot;;&quot;.\bin\$(ConfigurationName)\nxFoundation.dll&quot;;&quot;.\bin\$(ConfigurationName)\InputEngine.dll&quot;"/>
+			<Tool
+				Name="VCLinkerTool"
+				AdditionalDependencies="ElementalEngine.lib"
+				LinkIncremental="2"
+				AdditionalLibraryDirectories="..\SDK\lib\$(ConfigurationName)"
+				GenerateDebugInformation="TRUE"
+				SubSystem="2"
+				TargetMachine="1"/>
+			<Tool
+				Name="VCMIDLTool"
+				PreprocessorDefinitions="_DEBUG"
+				MkTypLibCompatible="FALSE"/>
+			<Tool
+				Name="VCPostBuildEventTool"/>
+			<Tool
+				Name="VCPreBuildEventTool"/>
+			<Tool
+				Name="VCPreLinkEventTool"/>
+			<Tool
+				Name="VCResourceCompilerTool"
+				PreprocessorDefinitions="_DEBUG"
+				Culture="1033"
+				AdditionalIncludeDirectories="$(IntDir)"/>
+			<Tool
+				Name="VCWebServiceProxyGeneratorTool"/>
+			<Tool
+				Name="VCXMLDataGeneratorTool"/>
+			<Tool
+				Name="VCWebDeploymentTool"/>
+			<Tool
+				Name="VCManagedWrapperGeneratorTool"/>
+			<Tool
+				Name="VCAuxiliaryManagedWrapperGeneratorTool"/>
+		</Configuration>
+		<Configuration
+			Name="Release|Win32"
+			OutputDirectory=".\bin\$(ConfigurationName)"
+			IntermediateDirectory="$(ConfigurationName)"
+			ConfigurationType="1"
+			UseOfMFC="2"
+			CharacterSet="0">
+			<Tool
+				Name="VCCLCompilerTool"
+				AdditionalIncludeDirectories="..\SDK\include\;&quot;..\..\3rd Party\LibXML++\&quot;;&quot;..\..\3rd Party&quot;;..\src;..\..\Plugins2\include;..\..\Plugins2\ElementalEngine\LoadSaveManager"
+				PreprocessorDefinitions="WIN32;_WINDOWS;NDEBUG"
+				MinimalRebuild="FALSE"
+				RuntimeLibrary="2"
+				RuntimeTypeInfo="TRUE"
+				UsePrecompiledHeader="3"
+				WarningLevel="3"
+				WarnAsError="TRUE"
+				Detect64BitPortabilityProblems="TRUE"
+				DebugInformationFormat="0"/>
+			<Tool
+				Name="VCCustomBuildTool"
+				Description="Copying needed DLL files..."
+				CommandLine="if NOT exist .\bin\. mkdir .\bin
+if NOT exist &quot;.\bin\$(ConfigurationName)\.&quot; mkdir &quot;.\bin\$(ConfigurationName)\&quot;
+if NOT exist &quot;.\bin\$(ConfigurationName)\Plugins\.&quot; mkdir &quot;.\bin\$(ConfigurationName)\Plugins&quot;
+if NOT exist &quot;.\bin\$(ConfigurationName)\BaseData\.&quot; mkdir &quot;.\bin\$(ConfigurationName)\BaseData&quot;
+xcopy /Y /D &quot;..\SDK\bin\$(ConfigurationName)\ElementalEngine.dll&quot; &quot;.\bin\$(ConfigurationName)\&quot; &gt;nul
+xcopy /Y /D &quot;..\..\3rd Party\Novodex\bin\win32\$(ConfigurationName)\*.dll&quot; &quot;.\bin\$(ConfigurationName)\&quot; &gt;nul
+xcopy /Y /D &quot;..\SDK\bin\$(ConfigurationName)\Plugins\WorldLoader.*&quot; &quot;.\bin\$(ConfigurationName)\PlugIns&quot; &gt;nul
+xcopy /Y /D &quot;..\..\3rd Party\LibXML++\bin\$(ConfigurationName)\LibXML++.dll&quot; &quot;.\bin\$(ConfigurationName)\&quot; &gt;nul
+xcopy /Y /D &quot;..\..\Plugins2\bin\$(ConfigurationName)\*.*&quot; &quot;.\bin\$(ConfigurationName)\Plugins&quot; &gt;nul
+xcopy /Y /D &quot;..\..\3rd Party\cal3d\bin\$(ConfigurationName)\cal3d.dll&quot; &quot;.\bin\$(ConfigurationName)\&quot; &gt;nul
+xcopy /Y /D &quot;..\..\3rd Party\OpenAL 1.1 SDK\libs\Win32\$(ConfigurationName)\OpenAL32.dll&quot; &quot;.\bin\$(ConfigurationName)\&quot; &gt;nul
+xcopy /Y /D &quot;..\..\3rd Party\OpenAL 1.1 SDK\libs\Win32\$(ConfigurationName)\alut.dll&quot; &quot;.\bin\$(ConfigurationName)\&quot; &gt;nul
+xcopy /Y /D &quot;..\..\3rd Party\OpenAL 1.1 SDK\libs\Win32\$(ConfigurationName)\wrap_oal.dll&quot; &quot;.\bin\$(ConfigurationName)\&quot; &gt;nul
+xcopy /Y /D &quot;..\..\3rd Party\\lua\toluaxx\bin\$(ConfigurationName)\toluaxx.dll&quot; &quot;.\bin\$(ConfigurationName)\&quot; &gt;nul
+xcopy /Y /D &quot;..\..\3rd Party\Ogg Vorbis\Ogg\bin\$(ConfigurationName)\ogg.dll&quot; &quot;.\bin\$(ConfigurationName)\&quot; &gt;nul
+xcopy /Y /D &quot;..\..\3rd Party\Ogg Vorbis\Vorbis\bin\$(ConfigurationName)\vorbis.dll&quot; &quot;.\bin\$(ConfigurationName)\&quot; &gt;nul
+xcopy /Y /D &quot;..\..\3rd Party\Ogg Vorbis\Vorbis\bin\$(ConfigurationName)\vorbisfile.dll&quot; &quot;.\bin\$(ConfigurationName)\&quot; &gt;nul
+"
+				Outputs="&quot;.\bin\$(ConfigurationName)\ElementalEngine.dll&quot;;&quot;.\bin\$(ConfigurationName)\nxPhysics.dll&quot;;&quot;.\bin\$(ConfigurationName)\nxFoundation.dll&quot;;&quot;.\bin\$(ConfigurationName)\ICore.dll&quot;"/>
+			<Tool
+				Name="VCLinkerTool"
+				AdditionalDependencies="ElementalEngine.lib"
+				LinkIncremental="1"
+				AdditionalLibraryDirectories="..\SDK\lib\$(ConfigurationName)"
+				GenerateDebugInformation="FALSE"
+				SubSystem="2"
+				OptimizeReferences="2"
+				EnableCOMDATFolding="2"
+				TargetMachine="1"/>
+			<Tool
+				Name="VCMIDLTool"
+				PreprocessorDefinitions="NDEBUG"
+				MkTypLibCompatible="FALSE"/>
+			<Tool
+				Name="VCPostBuildEventTool"/>
+			<Tool
+				Name="VCPreBuildEventTool"/>
+			<Tool
+				Name="VCPreLinkEventTool"/>
+			<Tool
+				Name="VCResourceCompilerTool"
+				PreprocessorDefinitions="NDEBUG"
+				Culture="1033"
+				AdditionalIncludeDirectories="$(IntDir)"/>
+			<Tool
+				Name="VCWebServiceProxyGeneratorTool"/>
+			<Tool
+				Name="VCXMLDataGeneratorTool"/>
+			<Tool
+				Name="VCWebDeploymentTool"/>
+			<Tool
+				Name="VCManagedWrapperGeneratorTool"/>
+			<Tool
+				Name="VCAuxiliaryManagedWrapperGeneratorTool"/>
+		</Configuration>
+		<Configuration
+			Name="Profile|Win32"
+			OutputDirectory=".\bin\$(ConfigurationName)"
+			IntermediateDirectory="$(ConfigurationName)"
+			ConfigurationType="1"
+			UseOfMFC="2"
+			CharacterSet="0">
+			<Tool
+				Name="VCCLCompilerTool"
+				AdditionalIncludeDirectories="..\SDK\include\;&quot;..\..\3rd Party\LibXML++\&quot;;&quot;..\..\3rd Party&quot;;..\src;..\..\Plugins2\include;..\..\Plugins2\ElementalEngine\LoadSaveManager"
+				PreprocessorDefinitions="WIN32;_WINDOWS;NDEBUG"
+				MinimalRebuild="FALSE"
+				RuntimeLibrary="2"
+				RuntimeTypeInfo="TRUE"
+				UsePrecompiledHeader="3"
+				WarningLevel="3"
+				WarnAsError="TRUE"
+				Detect64BitPortabilityProblems="TRUE"
+				DebugInformationFormat="3"/>
+			<Tool
+				Name="VCCustomBuildTool"
+				Description="Copying needed DLL files..."
+				CommandLine="if NOT exist .\bin\. mkdir .\bin
+if NOT exist &quot;.\bin\$(ConfigurationName)\.&quot; mkdir &quot;.\bin\$(ConfigurationName)\&quot;
+if NOT exist &quot;.\bin\$(ConfigurationName)\Plugins\.&quot; mkdir &quot;.\bin\$(ConfigurationName)\Plugins&quot;
+if NOT exist &quot;.\bin\$(ConfigurationName)\BaseData\.&quot; mkdir &quot;.\bin\$(ConfigurationName)\BaseData&quot;
+xcopy /Y /D &quot;..\SDK\bin\$(ConfigurationName)\ElementalEngine.dll&quot; &quot;.\bin\$(ConfigurationName)\&quot; &gt;nul
+xcopy /Y /D &quot;..\..\3rd Party\Novodex\bin\win32\$(ConfigurationName)\*.dll&quot; &quot;.\bin\$(ConfigurationName)\&quot; &gt;nul
+xcopy /Y /D &quot;..\SDK\bin\$(ConfigurationName)\Plugins\WorldLoader.*&quot; &quot;.\bin\$(ConfigurationName)\PlugIns&quot; &gt;nul
+xcopy /Y /D &quot;..\..\3rd Party\LibXML++\bin\Release\LibXML++.dll&quot; &quot;.\bin\$(ConfigurationName)\&quot; &gt;nul
+xcopy /Y /D &quot;..\..\Plugins2\bin\$(ConfigurationName)\*.*&quot; &quot;.\bin\$(ConfigurationName)\Plugins&quot; &gt;nul
+xcopy /Y /D &quot;..\..\3rd Party\cal3d\bin\Release\cal3d.dll&quot; &quot;.\bin\$(ConfigurationName)&quot; &gt;nul
+xcopy /Y /D &quot;..\..\3rd Party\OpenAL 1.1 SDK\libs\Win32\release\OpenAL32.dll&quot; &quot;.\bin\$(ConfigurationName)\&quot; &gt;nul
+xcopy /Y /D &quot;..\..\3rd Party\OpenAL 1.1 SDK\libs\Win32\release\alut.dll&quot; &quot;.\bin\$(ConfigurationName)\&quot; &gt;nul
+xcopy /Y /D &quot;..\..\3rd Party\OpenAL 1.1 SDK\libs\Win32\release\wrap_oal.dll&quot; &quot;.\bin\$(ConfigurationName)\&quot; &gt;nul
+xcopy /Y /D &quot;..\..\3rd Party\\lua\toluaxx\bin\release\toluaxx.dll&quot; &quot;.\bin\$(ConfigurationName)\&quot; &gt;nul
+xcopy /Y /D &quot;..\..\3rd Party\Ogg Vorbis\Ogg\bin\release\ogg.dll&quot; &quot;.\bin\$(ConfigurationName)\&quot; &gt;nul
+xcopy /Y /D &quot;..\..\3rd Party\Ogg Vorbis\Vorbis\bin\release\vorbis.dll&quot; &quot;.\bin\$(ConfigurationName)\&quot; &gt;nul
+xcopy /Y /D &quot;..\..\3rd Party\Ogg Vorbis\Vorbis\bin\release\vorbisfile.dll&quot; &quot;.\bin\$(ConfigurationName)\&quot; &gt;nul
+"
+				Outputs="&quot;.\bin\$(ConfigurationName)\ElementalEngine.dll&quot;;&quot;.\bin\$(ConfigurationName)\nxPhysics.dll&quot;;&quot;.\bin\$(ConfigurationName)\nxFoundation.dll&quot;;&quot;.\bin\$(ConfigurationName)\ICore.dll&quot;"/>
+			<Tool
+				Name="VCLinkerTool"
+				AdditionalDependencies="ElementalEngine.lib"
+				LinkIncremental="1"
+				AdditionalLibraryDirectories="..\SDK\lib\$(ConfigurationName)"
+				GenerateDebugInformation="TRUE"
+				SubSystem="2"
+				OptimizeReferences="2"
+				EnableCOMDATFolding="2"
+				TargetMachine="1"/>
+			<Tool
+				Name="VCMIDLTool"
+				PreprocessorDefinitions="NDEBUG"
+				MkTypLibCompatible="FALSE"/>
+			<Tool
+				Name="VCPostBuildEventTool"/>
+			<Tool
+				Name="VCPreBuildEventTool"/>
+			<Tool
+				Name="VCPreLinkEventTool"/>
+			<Tool
+				Name="VCResourceCompilerTool"
+				PreprocessorDefinitions="NDEBUG"
+				Culture="1033"
+				AdditionalIncludeDirectories="$(IntDir)"/>
+			<Tool
+				Name="VCWebServiceProxyGeneratorTool"/>
+			<Tool
+				Name="VCXMLDataGeneratorTool"/>
+			<Tool
+				Name="VCWebDeploymentTool"/>
+			<Tool
+				Name="VCManagedWrapperGeneratorTool"/>
+			<Tool
+				Name="VCAuxiliaryManagedWrapperGeneratorTool"/>
+		</Configuration>
+	</Configurations>
+	<References>
+	</References>
+	<Files>
+		<Filter
+			Name="Source Files"
+			Filter="cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx"
+			UniqueIdentifier="{4FC737F1-C7A5-4376-A066-2A32D752A2FF}">
+			<File
+				RelativePath=".\stdafx.cpp">
+				<FileConfiguration
+					Name="Debug|Win32">
+					<Tool
+						Name="VCCLCompilerTool"
+						UsePrecompiledHeader="1"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32">
+					<Tool
+						Name="VCCLCompilerTool"
+						UsePrecompiledHeader="1"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Profile|Win32">
+					<Tool
+						Name="VCCLCompilerTool"
+						UsePrecompiledHeader="1"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath=".\unitTest.cpp">
+			</File>
+			<File
+				RelativePath=".\unitTestDlg.cpp">
+			</File>
+			<Filter
+				Name="Test Cases"
+				Filter="">
+				<File
+					RelativePath=".\DatabaseTest.cpp">
+				</File>
+				<File
+					RelativePath=".\EntityQueryTest.cpp">
+				</File>
+				<File
+					RelativePath=".\LanguageTest.cpp">
+				</File>
+				<File
+					RelativePath=".\MathLibraryTest.cpp">
+				</File>
+				<File
+					RelativePath=".\NodeSystemTest.cpp">
+				</File>
+				<File
+					RelativePath=".\SoundTest.cpp">
+				</File>
+				<File
+					RelativePath=".\StateMachineTest.cpp">
+				</File>
+				<File
+					RelativePath=".\TestBase.cpp">
+				</File>
+			</Filter>
+		</Filter>
+		<Filter
+			Name="Header Files"
+			Filter="h;hpp;hxx;hm;inl;inc;xsd"
+			UniqueIdentifier="{93995380-89BD-4b04-88EB-625FBE52EBFB}">
+			<File
+				RelativePath=".\CTestDlgVisitor.h">
+			</File>
+			<File
+				RelativePath=".\Resource.h">
+			</File>
+			<File
+				RelativePath=".\stdafx.h">
+			</File>
+			<File
+				RelativePath=".\unitTest.h">
+			</File>
+			<File
+				RelativePath=".\unitTestDlg.h">
+			</File>
+			<Filter
+				Name="Test Cases"
+				Filter="">
+				<File
+					RelativePath=".\DatabaseTest.h">
+				</File>
+				<File
+					RelativePath=".\EntityQueryTest.h">
+				</File>
+				<File
+					RelativePath=".\LanguageTest.h">
+				</File>
+				<File
+					RelativePath=".\MathLibraryTest.h">
+				</File>
+				<File
+					RelativePath=".\NodeSystemTest.h">
+				</File>
+				<File
+					RelativePath=".\SoundTest.h">
+				</File>
+				<File
+					RelativePath=".\StateMachineTest.h">
+				</File>
+				<File
+					RelativePath=".\TestBase.h">
+				</File>
+			</Filter>
+		</Filter>
+		<Filter
+			Name="Resource Files"
+			Filter="rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx"
+			UniqueIdentifier="{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}">
+			<File
+				RelativePath=".\res\unitTest.ico">
+			</File>
+			<File
+				RelativePath=".\unitTest.rc">
+			</File>
+			<File
+				RelativePath=".\res\unitTest.rc2">
+			</File>
+		</Filter>
+		<Filter
+			Name="Assets"
+			Filter="">
+			<File
+				RelativePath=".\Assets\physfs.zip">
+				<FileConfiguration
+					Name="Debug|Win32">
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="copy $(InputPath) $(TargetDir)
+"
+						Outputs="$(TargetDir)\$(InputFileName)"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32">
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="copy $(InputPath) $(TargetDir)
+"
+						Outputs="$(TargetDir)\$(InputFileName)"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Profile|Win32">
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="copy $(InputPath) $(TargetDir)
+"
+						Outputs="$(TargetDir)\$(InputFileName)"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath=".\Assets\TestDatabase1.dbx">
+				<FileConfiguration
+					Name="Debug|Win32">
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="copy $(InputPath) $(TargetDir)
+"
+						Outputs="$(TargetDir)\$(InputFileName)"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32">
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="copy $(InputPath) $(TargetDir)
+"
+						Outputs="$(TargetDir)\$(InputFileName)"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Profile|Win32">
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="copy $(InputPath) $(TargetDir)
+"
+						Outputs="$(TargetDir)\$(InputFileName)"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath=".\testHierarchy.wxl">
+				<FileConfiguration
+					Name="Debug|Win32">
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="copy $(InputPath) $(TargetDir)
+"
+						Outputs="$(TargetDir)\$(InputFileName)"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32">
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="copy $(InputPath) $(TargetDir)
+"
+						Outputs="$(TargetDir)\$(InputFileName)"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Profile|Win32">
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying Test Hierarchy..."
+						CommandLine="copy $(InputPath) $(TargetDir)
+"
+						AdditionalDependencies="$(InputPath)"
+						Outputs="$(TargetDir)$(InputFileName)"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath=".\Assets\TestSchema1.fxl">
+				<FileConfiguration
+					Name="Debug|Win32">
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="copy $(InputPath) $(TargetDir)
+"
+						Outputs="$(TargetDir)\$(InputFileName)"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32">
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="copy $(InputPath) $(TargetDir)
+"
+						Outputs="$(TargetDir)\$(InputFileName)"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Profile|Win32">
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="copy $(InputPath) $(TargetDir)
+"
+						Outputs="$(TargetDir)\$(InputFileName)"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath=".\Assets\TestStateMachine1.xms">
+				<FileConfiguration
+					Name="Debug|Win32">
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="copy $(InputPath) $(TargetDir)
+"
+						Outputs="$(TargetDir)\$(InputFileName)"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32">
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="copy $(InputPath) $(TargetDir)
+"
+						Outputs="$(TargetDir)\$(InputFileName)"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Profile|Win32">
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="copy $(InputPath) $(TargetDir)
+"
+						Outputs="$(TargetDir)\$(InputFileName)"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath=".\Assets\TestStateMachine2.xms">
+				<FileConfiguration
+					Name="Debug|Win32">
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="copy $(InputPath) $(TargetDir)
+"
+						Outputs="$(TargetDir)\$(InputFileName)"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32">
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="copy $(InputPath) $(TargetDir)
+"
+						Outputs="$(TargetDir)\$(InputFileName)"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Profile|Win32">
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="copy $(InputPath) $(TargetDir)
+"
+						Outputs="$(TargetDir)\$(InputFileName)"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath=".\Assets\TestStateMachine3.xms">
+				<FileConfiguration
+					Name="Debug|Win32">
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="copy $(InputPath) $(TargetDir)
+"
+						Outputs="$(TargetDir)\$(InputFileName)"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32">
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="copy $(InputPath) $(TargetDir)
+"
+						Outputs="$(TargetDir)\$(InputFileName)"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Profile|Win32">
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="copy $(InputPath) $(TargetDir)
+"
+						Outputs="$(TargetDir)\$(InputFileName)"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath=".\Assets\TestStateMachine4.xms">
+				<FileConfiguration
+					Name="Debug|Win32">
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="copy $(InputPath) $(TargetDir)
+"
+						Outputs="$(TargetDir)\$(InputFileName)"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32">
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="copy $(InputPath) $(TargetDir)
+"
+						Outputs="$(TargetDir)\$(InputFileName)"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Profile|Win32">
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="copy $(InputPath) $(TargetDir)
+"
+						Outputs="$(TargetDir)\$(InputFileName)"/>
+				</FileConfiguration>
+			</File>
+		</Filter>
+		<File
+			RelativePath=".\ReadMe.txt">
+		</File>
+		<File
+			RelativePath=".\res\unitTest.manifest">
+		</File>
+	</Files>
+	<Globals>
+		<Global
+			Name="RESOURCE_FILE"
+			Value="unitTest.rc"/>
+	</Globals>
+</VisualStudioProject>

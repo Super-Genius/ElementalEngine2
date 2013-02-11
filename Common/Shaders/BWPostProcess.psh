@@ -1,0 +1,23 @@
+#include "Shaders\HLSLconstants.h"
+#include "Shaders\PSH_CommonFunctions.h"
+
+struct PS_INPUT
+{
+	float4 Pos					: POSITION;
+	float2 TexCoord0			: TEXCOORD0;
+	float4 Color				: COLOR0;
+};
+
+PS_MRT_OUTPUT main(PS_INPUT i, 
+	uniform sampler2D Diffuse : register(s0))
+{
+	float4 color = tex2D( Diffuse, i.TexCoord0 ) * i.Color;
+	float avg = (color.r + color.g + color.b) / 3.0f;
+	color.rgb = avg;
+	// little hint of sepia; good warm b&w
+	color.r = clamp(color.r + 0.1f, 0.0f, 1.0f);
+	color.g = clamp(color.g + 0.08f, 0.0f, 1.0f);
+	
+	return MakeMRTOutput( color );
+	
+}

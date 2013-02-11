@@ -1,0 +1,17 @@
+#include "Shaders\HLSLconstants.h"
+#include "Shaders\PSH_CommonFunctions.h"
+
+struct PS_INPUT
+{
+	float4 Pos					: POSITION;
+	float2 TexCoord0			: TEXCOORD0;
+	float4 Color				: COLOR0;
+};
+
+PS_MRT_OUTPUT main(PS_INPUT i, 
+	uniform sampler2D Diffuse : register(s0))
+{
+	float4 color = tex2D( Diffuse, i.TexCoord0 ) * i.Color;
+	return MakeMRTOutput( color );
+	
+}

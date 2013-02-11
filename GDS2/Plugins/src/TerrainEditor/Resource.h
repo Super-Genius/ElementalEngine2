@@ -1,0 +1,119 @@
+//{{NO_DEPENDENCIES}}
+// Microsoft Visual C++ generated include file.
+// Used by TerrainEditor.rc
+//
+#define ID_IMPORT                       3
+#define IDS_RESOURCE_NAME               17001
+#define IDB_TOOLBAR                     17002
+#define IDS_STATUS_LAYER_LIMIT_REACHED  17002
+#define IDI_UP_ARROW                    17003
+#define IDI_DOWN_ARROW                  17004
+#define IDI_PAINT                       17005
+#define IDI_DEFORM                      17006
+#define IDD_TERRAIN_TOOL_PALETTE        17007
+#define IDI_TERRAIN_PROP                17008
+#define IDD_SECTOR_TEXTURES             17009
+#define IDB_BLANK_BITMAP                17010
+#define IDI_TERRAIN_CLEAN               17011
+#define IDD_TERRAIN_SIZE                17012
+#define IDI_LIGHT                       17014
+#define IDD_TERRAIN_OPTIONS             17016
+#define IDR_TERRAINTYPE                 17021
+#define IDC_SPLATSCALEX_EDIT            17022
+#define IDC_SPLATSCALEX_SPINNER         17023
+#define IDC_SPLATSCALEY_EDIT            17024
+#define IDC_SPLATSCALEY_SPINNER         17025
+#define IDI_ARROW_LEFT_UP               17026
+#define IDI_ARROW_LEFT_DOWN             17027
+#define IDI_ARROW_LEFT                  17028
+#define IDI_ARROW_UP                    17029
+#define IDI_ARROW_DOWN                  17030
+#define IDI_ARROW_RIGHT_UP              17031
+#define IDI_ARROW_RIGHT                 17032
+#define IDI_ARROW_RIGHT_DOWN            17033
+#define IDI_ARROW_CENTER1               17035
+#define IDI_ARROW_BLANK                 17036
+#define IDI_TERRAIN_MODIFY              17037
+#define IDD_LAYER_MATERIAL_TYPE         17038
+#define IDC_SIZE_SPINNER                17100
+#define IDC_SIZE_EDIT                   17101
+#define IDC_STRENGTH_SPINNER            17102
+#define IDC_STRENGTH_EDIT               17103
+#define IDC_DEFORM                      17104
+#define IDC_PAINT                       17105
+#define IDC_MINHEIGHT_EDIT              17106
+#define IDC_LOWER                       17107
+#define IDC_RAISE                       17108
+#define IDC_MINHEIGHT_SPINNER           17109
+#define IDC_MAXHEIGHT_EDIT              17110
+#define IDC_MAXHEIGHT_SPINNER           17111
+#define IDC_LIGHTMAP                    17112
+#define IDC_TERRAIN_PROP                17114
+#define IDC_TERRAIN_MODIFY              17115
+#define IDC_SECTOR_TEXTURES_LIST        17116
+#define IDC_REMOVE_TEXTURE              17117
+#define IDC_MATERIAL_TYPE               17118
+#define IDC_ENABLE_LAYER                17119
+#define IDC_SPIN_MINHEIGHT              17120
+#define IDC_EDIT_MINHEIGHT              17121
+#define IDC_SPIN_MAXHEIGHT              17122
+#define IDC_EDIT_MAXHEIGHT              17123
+#define IDC_COLLAPSE_LAYERS             17124
+#define IDC_SLIDER_MINSLOPE             17126
+#define IDC_GENERATE_TEXTURE            17128
+#define IDC_SLIDER_MAXSLOPE             17129
+#define IDC_STATIC_MINSLOPE             17130
+#define IDC_STATIC_MAXSLOPE             17131
+#define IDC_GEN_HEIGHT                  17132
+#define IDC_GEN_SLOPE                   17134
+#define IDC_PREVIEW_PIC                 17136
+#define IDC_CHECK_CENTER_NW             17144
+#define IDC_EDIT_SECTOR_WIDTH           17146
+#define IDC_EDIT_SECTOR_ZSCALE          17147
+#define IDC_SPIN_SECTOR_WIDTH           17148
+#define IDC_SPIN_SECTOR_ZSCALE          17149
+#define IDC_MEASUREMENT_UNITS           17150
+#define IDC_CHECK_CENTER_N              17152
+#define IDC_CHECK_CENTER_NE             17153
+#define IDC_CHECK_CENTER_W              17154
+#define IDC_CHECK_CENTER                17155
+#define IDC_CHECK_CENTER_E              17156
+#define IDC_CHECK_CENTER_SW             17157
+#define IDC_CHECK_CENTER_S              17158
+#define IDC_CHECK_CENTER_SE             17159
+#define IDC_EDIT_TERRAIN_WIDTH          17160
+#define IDC_EDIT_TERRAIN_HEIGHT         17161
+#define IDC_SPIN_TERRAIN_WIDTH          17162
+#define IDC_SPIN_TERRAIN_HEIGHT         17163
+#define IDC_MAXHEIGHT_ENABLE            17164
+#define IDC_MINHEIGHT_ENABLE            17165
+#define IDC_TERRAIN_NAME                17165
+#define IDC_TERRAIN_BASE_TEXTURE        17170
+#define IDC_TERRAIN_STATUS_TEXT         17170
+#define IDC_TERRAIN_TEXTURE_BROWSE      17171
+#define IDC_TERRAIN_OPT_MAXLAYER_SPIN   17171
+#define IDC_SPIN_SECTOR_TRIRES          17172
+#define IDC_TERRAIN_OPT_MAXLAYER_EDIT   17173
+#define IDC_BRUSHSHAPE_CBX              17175
+#define IDC_BRUSHOP_CBX                 17176
+#define IDC_SPLATSCALE_PROPORTIONAL     17178
+#define ID_MODIFYCURRENT                17179
+#define IDC_TEXTURESCALEY               17184
+#define IDC_ACCUM_MASK                  17185
+#define IDC_TEXTURESCALEX               17186
+#define IDC_TRI_RESOLUTION              17188
+#define IDC_REMOVE_GEN_LAYER            17191
+#define IDC_ADD_LAYER                   17192
+#define IDC_GEN_TEXTURES_LIST           17193
+#define IDC_NEWLAYERSIZE_EDIT           17194
+
+// Next default values for new objects
+// 
+#ifdef APSTUDIO_INVOKED
+#ifndef APSTUDIO_READONLY_SYMBOLS
+#define _APS_NEXT_RESOURCE_VALUE        17039
+#define _APS_NEXT_COMMAND_VALUE         57000
+#define _APS_NEXT_CONTROL_VALUE         17195
+#define _APS_NEXT_SYMED_VALUE           17200
+#endif
+#endif

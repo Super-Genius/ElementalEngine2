@@ -1,0 +1,7 @@
+<MaterialTemplate version="3000" effect="Cal3DEffect.efx" numrenderstates="5">
+    <RenderState mode="alphablend" value="true" />
+    <RenderState mode="alphatest" value="false" />
+    <RenderState mode="cullmode" value="cullregular" />
+    <RenderState mode="depthtest" value="ztrue" />
+    <RenderState mode="depthwrite" value="false" />
+</MaterialTemplate>

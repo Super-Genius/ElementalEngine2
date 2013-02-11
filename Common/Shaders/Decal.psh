@@ -1,0 +1,18 @@
+#include "Shaders\HLSLconstants.h"
+#include "Shaders\PSH_CommonFunctions.h"
+
+struct v2f
+{
+	float2 TexCoord0		: TEXCOORD0;	// TexCoord
+	float4 Color			: COLOR0;
+};
+
+
+PS_MRT_OUTPUT main(v2f i,
+	uniform sampler2D	BaseTexture : register(s0))
+{
+	float4 outcolor  = tex2D(BaseTexture, i.TexCoord0);
+	//outcolor.xyz *= lightAmbient.xyz;
+	outcolor.a *= i.Color.a;
+	return MakeMRTOutput( outcolor );
+}

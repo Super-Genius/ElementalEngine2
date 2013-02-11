@@ -1,0 +1,9 @@
+<MATERIAL version="2000" effectname="Shaders/cal3deffect.efx"  
+	numconstants="0"
+	numtextures="2"
+	numrenderstates="0"
+	numbones="0"
+	numflags="0">
+	<Texture pass="0" stage="0" file="spawntex.dds" numtexturestates="0"></Texture>
+	<Texture pass="0" stage="1" file="spawntex_nrml.dds" numtexturestates="0"></Texture>
+</MATERIAL>

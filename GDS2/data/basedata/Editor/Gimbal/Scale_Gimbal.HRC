@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<hmesh numgeom="7">
+	<hnode name="Scale_Gimbal" id="0" pid="-1" type="Cal3D" file="Scale_Gimbal.cfg" rotqx="0.000000" rotqy="0.000000" rotqz="0.000000" rotqw="1.000000" scalex="1.000000" scaley="1.000000" scalez="1.000000" posx="0.000000" posy="0.000000" posz="0.000000" >
+	</hnode>
+	<hnode name="X_Scale" id="1" pid="0" type="Cal3D" file="X_Scale.cfg" rotqx="0.000000" rotqy="0.000000" rotqz="0.000000" rotqw="1.000000" scalex="1.000000" scaley="1.000000" scalez="1.000000" posx="0.000000" posy="0.000000" posz="0.000000" >
+	</hnode>
+	<hnode name="XY_Scale" id="2" pid="0" type="Cal3D" file="XY_Scale.cfg" rotqx="0.000000" rotqy="0.000000" rotqz="0.000000" rotqw="1.000000" scalex="1.000000" scaley="1.000000" scalez="1.000000" posx="0.000000" posy="0.000000" posz="0.000000" >
+	</hnode>
+	<hnode name="XZ_Scale" id="3" pid="0" type="Cal3D" file="XZ_Scale.cfg" rotqx="0.000000" rotqy="0.000000" rotqz="0.000000" rotqw="1.000000" scalex="1.000000" scaley="1.000000" scalez="1.000000" posx="0.000000" posy="0.000000" posz="0.000000" >
+	</hnode>
+	<hnode name="Y_Scale" id="4" pid="0" type="Cal3D" file="Y_Scale.cfg" rotqx="0.000000" rotqy="0.000000" rotqz="0.000000" rotqw="1.000000" scalex="1.000000" scaley="1.000000" scalez="1.000000" posx="0.000000" posy="0.000000" posz="0.000000" >
+	</hnode>
+	<hnode name="YZ_Scale" id="5" pid="0" type="Cal3D" file="YZ_Scale.cfg" rotqx="0.000000" rotqy="0.000000" rotqz="0.000000" rotqw="1.000000" scalex="1.000000" scaley="1.000000" scalez="1.000000" posx="0.000000" posy="0.000000" posz="0.000000" >
+	</hnode>
+	<hnode name="Z_Scale" id="6" pid="0" type="Cal3D" file="Z_Scale.cfg" rotqx="0.000000" rotqy="0.000000" rotqz="0.000000" rotqw="1.000000" scalex="1.000000" scaley="1.000000" scalez="1.000000" posx="0.000000" posy="0.000000" posz="0.000000" >
+	</hnode>
+</hmesh>

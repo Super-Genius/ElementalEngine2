@@ -1,0 +1,48 @@
+<HTML>
+<HEAD>
+<TITLE>Class SMLXTmpMatrix</TITLE>
+<link href="styles.css" rel="STYLESHEET" type="text/css">
+</head>
+<BODY LINK="#0000ff" VLINK="#800080">
+<P><a NAME="SMLXTmpMatrix"></a>[<A href="index.htm">SML Overview</a>]</P>
+
+<h1>Class SMLXTmpMatrix: public <A HREF="SMLXMatrix.htm">SMLXMatrix</A></h1>
+<PRE>#include &quot;<A HREF="smlxmatrix.h">smlxmatrix.h</A>&quot;</PRE>
+
+<P><B>Class SMLXTmpMatrix</B> is derived from <B>SMLTMatrix</B>. This class is used in intermediate matrix calculations.</P>
+<HR>
+<P><B>SMLXTmpMatrix</B>();</P>
+<h4>Discussion</h4>
+<P>Default <B>SMLXTmpMatrix</B> object constructor.</P>
+<h4>Parameters</h4>
+<P>No.</P>
+<p>[<A href="SMLXTmpMatrix.htm#SMLXTmpMatrix">top</A>]</p><hr>
+
+<P>SMLLIBENTRY <A HREF="SMLXTmpMatrix.htm#SMLXTmpMatrix">SMLXTmpMatrix</A>&amp; operator<B>+</B>(const <A HREF="SMLXMatrix.htm#SMLXMatrix">SMLXMatrix</A>&amp; <B><I>A</I></B>);</P>
+<h4>Discussion</h4>
+<P>Method is an overloaded operator-function. It computes sum of two matrices.</P>
+<h4>Parameters</h4>
+<P><B><I>A</I></B> - reference to constant object <B>SMLXTmpMatrix</B> which is added to this matrix.</P>
+<h4>Return Value</h4>
+<P>Reference to object <B>SMLXTmpMatrix</B> which is sum of this matrix and matrix A.</P>
+<p>[<A href="SMLXTmpMatrix.htm#SMLXTmpMatrix">top</A>]</p><hr>
+
+<P>SMLLIBENTRY <A HREF="SMLXTmpMatrix.htm#SMLXTmpMatrix">SMLXTmpMatrix</A>&amp; operator<B>-</B>(const <A HREF="SMLXMatrix.htm#SMLXMatrix">SMLXMatrix</A>&amp; <B><I>A</I></B>);</P>
+<h4>Discussion</h4>
+<P>Method is an overloaded operator-function. It computes difference of two matrices.</P>
+<h4>Parameters</h4>
+<P><B><I>A</I></B> - reference to matrix subtracted from this one.</P>
+<h4>Return Value</h4>
+<P>Reference to object <B>SMLXTmpMatrix</B> which is the difference of this matrix and matrix A.</P>
+<p>[<A href="SMLXTmpMatrix.htm#SMLXTmpMatrix">top</A>]</p><hr>
+
+<P>SMLLIBENTRY <A HREF="SMLXTmpMatrix.htm#SMLXTmpMatrix">SMLXTmpMatrix</A>&amp; operator<B>*</B>(float <B><I>scale</I></B>);</P>
+<h4>Discussion</h4>
+<P>Method is an overloaded operator-function. It defines a standard operation of multiplication of matrix by number <B><I>scale</I></B>.</P>
+<h4>Parameters</h4>
+<P><B><I>scale</I></B> - multiplier.</P>
+<h4>Return Value</h4>
+<P>Reference to <B>SMLXTmpMatrix</B> object which is equal to product of matrix and number <B><I>scale</I></B>. </P>
+<p>[<A href="SMLXTmpMatrix.htm#SMLXTmpMatrix">top</A>]</p><hr>
+</BODY>
+</HTML>

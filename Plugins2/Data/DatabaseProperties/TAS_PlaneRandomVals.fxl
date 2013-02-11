@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root Num="1">
+	<TAS_PlaneRandomVals Name="Plane Random Values" Num="5">
+		<edit Type="float" name="Min idle radius" key="false"/>
+		<edit Type="float" name="Max idle radius" key="false"/>
+		<edit Type="float" name="Min attack time" key="false"/>
+		<edit Type="float" name="Max attack time" key="false"/>
+		<edit Type="float" name="Height variance" key="false"/>
+	</TAS_PlaneRandomVals>
+</root>

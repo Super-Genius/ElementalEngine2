@@ -1,0 +1,44 @@
+#include "Shaders\HLSLconstants.h"
+
+struct v2f
+{
+	float4 Position     : POSITION;
+	float2 TexCoord0    : TEXCOORD0;	// TexCoord
+};
+
+half4 main(v2f input, 
+	uniform sampler2D CachedTexture : register(s0)) 	: COLOR
+{
+	float PixelWeight[8] = { 0.2537, 0.2185, 0.0821, 0.0461, 0.0262, 0.0162, 0.0082, 0.0042 };
+	float4 color = tex2D( CachedTexture, input.TexCoord0 )* PixelWeight[0]*2.f;
+	float BlurOffset    = .00390625;
+	float2 vTexCoords[8];
+	vTexCoords[0] = float2( 0, BlurOffset );
+	vTexCoords[1] = float2( 0, BlurOffset*2 );
+	vTexCoords[2] = float2( 0, BlurOffset*3 );
+	vTexCoords[3] = float2( 0, BlurOffset*4 );
+	vTexCoords[4] = float2( 0, BlurOffset*5 );
+	vTexCoords[5] = float2( 0, BlurOffset*6 );
+	vTexCoords[6] = float2( 0, BlurOffset*7 );
+	vTexCoords[7] = float2( 0, BlurOffset*8 );
+	
+	color.rgb +=  tex2D( CachedTexture, input.TexCoord0 + vTexCoords[0] ) * PixelWeight[2];
+	color.rgb +=  tex2D( CachedTexture, input.TexCoord0 - vTexCoords[0] ) * PixelWeight[2];
+	color.rgb +=  tex2D( CachedTexture, input.TexCoord0 + vTexCoords[1] ) * PixelWeight[4];
+	color.rgb +=  tex2D( CachedTexture, input.TexCoord0 - vTexCoords[1] ) * PixelWeight[4];
+	color.rgb +=  tex2D( CachedTexture, input.TexCoord0 + vTexCoords[2] ) * PixelWeight[6];
+	color.rgb +=  tex2D( CachedTexture, input.TexCoord0 - vTexCoords[2] ) * PixelWeight[6];
+	color.rgb +=  tex2D( CachedTexture, input.TexCoord0 + vTexCoords[3] ) * PixelWeight[7];
+	color.rgb +=  tex2D( CachedTexture, input.TexCoord0 - vTexCoords[3] ) * PixelWeight[7];
+	/*color.rgb +=  tex2D( CachedTexture, input.TexCoord0 + vTexCoords[4] ) * PixelWeight[4];
+	color.rgb +=  tex2D( CachedTexture, input.TexCoord0 - vTexCoords[4] ) * PixelWeight[4];
+	color.rgb +=  tex2D( CachedTexture, input.TexCoord0 + vTexCoords[5] ) * PixelWeight[5];
+	color.rgb +=  tex2D( CachedTexture, input.TexCoord0 - vTexCoords[5] ) * PixelWeight[5];
+	color.rgb +=  tex2D( CachedTexture, input.TexCoord0 + vTexCoords[6] ) * PixelWeight[6];
+	color.rgb +=  tex2D( CachedTexture, input.TexCoord0 - vTexCoords[6] ) * PixelWeight[6];
+	color.rgb +=  tex2D( CachedTexture, input.TexCoord0 + vTexCoords[7] ) * PixelWeight[7];
+	color.rgb +=  tex2D( CachedTexture, input.TexCoord0 - vTexCoords[7] ) * PixelWeight[7];
+	*/
+	color.a = 1;
+	return color;
+}

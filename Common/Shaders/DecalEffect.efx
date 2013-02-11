@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<CEffect version="3000" 
+	numconstants="1"
+	numtextures="1"
+	numrenderstates="0"
+	numbones="0"
+	numflags="0"
+	numformats="0" >
+	<ShaderVariable shadertype="vertexshader" type="Function" name="SinCosTanTime" register="19" x="0.0" y="0.0" z="0.0" w="1.0" ></ShaderVariable>
+	<Texture tag="Diffuse" pass="0" stage="0" file="none" numtexturestates="2">
+        <TextureStageState mode="minfilter" value="bilinear" />
+        <TextureStageState mode="magfilter" value="bilinear" />
+	</Texture>
+</CEffect>

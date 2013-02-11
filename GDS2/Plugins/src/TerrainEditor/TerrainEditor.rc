@@ -1,0 +1,488 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+// Generated Help ID header file
+#define APSTUDIO_HIDDEN_SYMBOLS
+#include "resource.hm"
+#undef APSTUDIO_HIDDEN_SYMBOLS
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_LAYER_MATERIAL_TYPE DIALOGEX 0, 0, 154, 335
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "Layer &Material Type",IDC_STATIC,8,7,64,8
+    COMBOBOX        IDC_MATERIAL_TYPE,7,17,140,70,CBS_DROPDOWN | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    CONTROL         "",IDC_SECTOR_TEXTURES_LIST,"SysListView32",
+                    LVS_SINGLESEL | LVS_AUTOARRANGE | WS_BORDER | WS_TABSTOP,
+                    7,34,140,191,WS_EX_ACCEPTFILES
+    LTEXT           "Splat Layer\nScale X:",IDC_STATIC,8,228,39,17
+    EDITTEXT        IDC_SPLATSCALEX_EDIT,52,229,40,14,ES_RIGHT | 
+                    ES_AUTOHSCROLL
+    CONTROL         "",IDC_SPLATSCALEX_SPINNER,"msctls_updown32",
+                    UDS_ALIGNRIGHT | UDS_ARROWKEYS,95,229,11,14
+    LTEXT           "Splat Layer\nScale Y:",IDC_STATIC,8,246,39,16
+    EDITTEXT        IDC_SPLATSCALEY_EDIT,52,247,40,14,ES_RIGHT | 
+                    ES_AUTOHSCROLL
+    CONTROL         "",IDC_SPLATSCALEY_SPINNER,"msctls_updown32",
+                    UDS_ALIGNRIGHT | UDS_ARROWKEYS,96,247,11,14
+    CONTROL         "Link",IDC_SPLATSCALE_PROPORTIONAL,"Button",
+                    BS_AUTOCHECKBOX | BS_TOP | WS_TABSTOP,115,242,28,10
+    CONTROL         "&Enable Layer Drawing",IDC_ENABLE_LAYER,"Button",
+                    BS_AUTOCHECKBOX | WS_DISABLED | WS_TABSTOP,34,274,85,10
+    PUSHBUTTON      "&Remove Layer",IDC_REMOVE_TEXTURE,14,292,126,14
+    LTEXT           "",IDC_TERRAIN_STATUS_TEXT,7,316,140,11,SS_SUNKEN
+END
+
+IDD_TERRAIN_TOOL_PALETTE DIALOGEX 0, 0, 647, 36
+STYLE DS_SETFONT | WS_CHILD
+EXSTYLE WS_EX_TOPMOST | WS_EX_TOOLWINDOW
+FONT 6, "MS Sans Serif", 400, 0, 0x0
+BEGIN
+    PUSHBUTTON      "Terrain Parameters\nOpen Terrain Parmeters Dialog",
+                    IDC_TERRAIN_MODIFY,10,1,24,24,BS_ICON
+    PUSHBUTTON      "Modify Terrain\nOpen Modify Terrain Dialog",
+                    IDC_TERRAIN_PROP,47,1,24,24,BS_ICON
+    CONTROL         "Deform",IDC_DEFORM,"Button",BS_AUTOCHECKBOX | BS_ICON | 
+                    BS_PUSHLIKE | WS_TABSTOP,84,1,24,24
+    CONTROL         "Raise",IDC_RAISE,"Button",BS_AUTOCHECKBOX | BS_ICON | 
+                    BS_PUSHLIKE | WS_TABSTOP,121,1,24,24
+    CONTROL         "Lower",IDC_LOWER,"Button",BS_AUTOCHECKBOX | BS_ICON | 
+                    BS_PUSHLIKE | WS_TABSTOP,158,1,24,24
+    CONTROL         "Max",IDC_MAXHEIGHT_ENABLE,"Button",BS_AUTOCHECKBOX | 
+                    BS_CENTER | BS_VCENTER | BS_PUSHLIKE | BS_MULTILINE | 
+                    WS_TABSTOP,192,5,20,16
+    EDITTEXT        IDC_MAXHEIGHT_EDIT,214,6,38,14,ES_RIGHT | ES_AUTOHSCROLL
+    CONTROL         "",IDC_MAXHEIGHT_SPINNER,"msctls_updown32",
+                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,242,6,14,
+                    14
+    CONTROL         "Min",IDC_MINHEIGHT_ENABLE,"Button",BS_AUTOCHECKBOX | 
+                    BS_CENTER | BS_VCENTER | BS_PUSHLIKE | BS_MULTILINE | 
+                    WS_TABSTOP,262,5,20,16
+    EDITTEXT        IDC_MINHEIGHT_EDIT,285,6,41,14,ES_RIGHT | ES_AUTOHSCROLL
+    CONTROL         "",IDC_MINHEIGHT_SPINNER,"msctls_updown32",
+                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,316,6,14,
+                    14
+    CONTROL         "Paint",IDC_PAINT,"Button",BS_AUTOCHECKBOX | BS_ICON | 
+                    BS_PUSHLIKE | WS_TABSTOP,337,1,24,24
+    LTEXT           "Brush",IDC_STATIC,366,1,19,12,SS_CENTERIMAGE
+    CONTROL         "",IDC_BRUSHSHAPE_CBX,"ComboBoxEx32",CBS_DROPDOWNLIST | 
+                    CBS_SORT | WS_VSCROLL | WS_TABSTOP,391,1,111,106
+    LTEXT           "Size",IDC_STATIC,367,19,14,14,SS_CENTERIMAGE
+    EDITTEXT        IDC_SIZE_EDIT,390,19,39,14,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    CONTROL         "",IDC_SIZE_SPINNER,"msctls_updown32",UDS_ALIGNRIGHT | 
+                    UDS_AUTOBUDDY | UDS_ARROWKEYS,418,19,14,14
+    LTEXT           "Strength",IDC_STATIC,434,19,28,14,SS_CENTERIMAGE
+    EDITTEXT        IDC_STRENGTH_EDIT,465,19,34,14,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    CONTROL         "",IDC_STRENGTH_SPINNER,"msctls_updown32",UDS_ALIGNRIGHT | 
+                    UDS_AUTOBUDDY | UDS_ARROWKEYS,492,19,14,14
+    CONTROL         "",IDC_BRUSHOP_CBX,"ComboBoxEx32",CBS_DROPDOWNLIST | 
+                    CBS_SORT | WS_VSCROLL | WS_TABSTOP,506,1,105,106
+    LTEXT           "New Layer Scale",IDC_STATIC,507,19,62,14,SS_CENTERIMAGE
+    EDITTEXT        IDC_NEWLAYERSIZE_EDIT,575,19,36,14,ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    LTEXT           "New/Modify",IDC_STATIC,0,25,40,8
+    LTEXT           "Properties",IDC_STATIC,42,25,32,8
+    LTEXT           "Deform",IDC_STATIC,83,25,24,8
+    LTEXT           "Add",IDC_STATIC,126,25,14,8
+    LTEXT           "Subtract",IDC_STATIC,155,25,28,8
+    LTEXT           "Paint",IDC_STATIC,341,25,17,8
+END
+
+IDD_SECTOR_TEXTURES DIALOGEX 0, 0, 326, 337
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Layer Generation"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    GROUPBOX        "Layer Generation Parameters",IDC_STATIC,150,14,165,102
+    LTEXT           "Mi&nimum Height",IDC_STATIC,156,27,50,8
+    EDITTEXT        IDC_EDIT_MINHEIGHT,156,38,60,14,ES_AUTOHSCROLL
+    CONTROL         "",IDC_SPIN_MINHEIGHT,"msctls_updown32",UDS_ALIGNRIGHT | 
+                    UDS_AUTOBUDDY | UDS_ARROWKEYS,217,38,11,14
+    LTEXT           "Ma&xmimum Height",IDC_STATIC,236,27,58,8
+    EDITTEXT        IDC_EDIT_MAXHEIGHT,236,38,56,14,ES_AUTOHSCROLL
+    CONTROL         "",IDC_SPIN_MAXHEIGHT,"msctls_updown32",UDS_ALIGNRIGHT | 
+                    UDS_AUTOBUDDY | UDS_ARROWKEYS,292,38,11,14
+    LTEXT           "Minimum S&lope",IDC_STATIC_MINSLOPE,156,54,47,8
+    CONTROL         "",IDC_SLIDER_MINSLOPE,"msctls_trackbar32",TBS_BOTH | 
+                    TBS_NOTICKS | WS_TABSTOP,152,65,159,15
+    LTEXT           "Maxmimum Slo&pe",IDC_STATIC_MAXSLOPE,156,84,55,8
+    CONTROL         "",IDC_SLIDER_MAXSLOPE,"msctls_trackbar32",TBS_BOTH | 
+                    TBS_NOTICKS | WS_TABSTOP,152,94,159,15
+    CONTROL         "Generate by &Slope",IDC_GEN_SLOPE,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP,154,118,75,10
+    CONTROL         "Generate by &Height",IDC_GEN_HEIGHT,"Button",
+                    BS_AUTORADIOBUTTON,154,129,79,10
+    PUSHBUTTON      "&Generate",IDC_GENERATE_TEXTURE,268,123,50,14
+    CONTROL         17010,IDC_PREVIEW_PIC,"Static",SS_BITMAP,145,142,173,159,
+                    WS_EX_STATICEDGE
+    LTEXT           "Preview",IDC_STATIC,224,302,26,8
+    DEFPUSHBUTTON   "OK",IDOK,152,313,83,14
+    PUSHBUTTON      "Cancel",IDCANCEL,239,313,79,14
+    CONTROL         "&Accum",IDC_ACCUM_MASK,"Button",BS_AUTOCHECKBOX | 
+                    BS_LEFTTEXT | WS_TABSTOP,232,124,32,12
+    PUSHBUTTON      "&Remove Layer",IDC_REMOVE_GEN_LAYER,74,294,64,14
+    PUSHBUTTON      "&Collapse Layers",IDC_COLLAPSE_LAYERS,5,313,131,14
+    PUSHBUTTON      "Add Layer",IDC_ADD_LAYER,5,294,63,14
+    CONTROL         "",IDC_GEN_TEXTURES_LIST,"SysListView32",LVS_SINGLESEL | 
+                    LVS_AUTOARRANGE | WS_BORDER | WS_TABSTOP,5,17,133,269,
+                    WS_EX_ACCEPTFILES
+END
+
+IDD_TERRAIN_SIZE DIALOGEX 0, 0, 251, 255
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | DS_CENTER | WS_POPUP | 
+    WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_STATICEDGE
+CAPTION "New/Modify Terrain"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_TERRAIN_NAME,78,12,113,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_TERRAIN_BASE_TEXTURE,78,30,113,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",IDC_TERRAIN_TEXTURE_BROWSE,192,30,13,12
+    LTEXT           "X:",IDC_STATIC,78,48,8,9
+    EDITTEXT        IDC_TEXTURESCALEX,90,48,37,13,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "Y:",IDC_STATIC,138,48,8,9
+    EDITTEXT        IDC_TEXTURESCALEY,150,48,37,13,ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    GROUPBOX        "Terrain Size in Sectors",IDC_STATIC,12,99,119,41
+    LTEXT           "&Width",IDC_STATIC,22,109,20,8
+    EDITTEXT        IDC_EDIT_TERRAIN_WIDTH,21,119,42,14,ES_AUTOHSCROLL | 
+                    ES_NUMBER,0,HIDC_EDIT_TERRAIN_WIDTH
+    CONTROL         "",IDC_SPIN_TERRAIN_WIDTH,"msctls_updown32",
+                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,51,119,11,
+                    14
+    LTEXT           "&Height",IDC_STATIC,74,109,22,8
+    EDITTEXT        IDC_EDIT_TERRAIN_HEIGHT,76,119,40,14,ES_AUTOHSCROLL | 
+                    ES_NUMBER,0,HIDC_EDIT_TERRAIN_HEIGHT
+    CONTROL         "",IDC_SPIN_TERRAIN_HEIGHT,"msctls_updown32",
+                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,103,118,
+                    11,14
+    GROUPBOX        "Sector Size",IDC_STATIC,11,143,119,72
+    LTEXT           "&Units:",IDC_STATIC,18,154,20,8
+    COMBOBOX        IDC_MEASUREMENT_UNITS,18,166,60,82,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP,0,HIDC_MEASUREMENT_UNITS
+    LTEXT           "Tri Res:",IDC_STATIC,83,154,26,8
+    EDITTEXT        IDC_TRI_RESOLUTION,83,164,40,14,ES_AUTOHSCROLL
+    CONTROL         "",IDC_SPIN_SECTOR_TRIRES,"msctls_updown32",
+                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,111,164,
+                    11,14
+    LTEXT           "Width/Height",IDC_STATIC,18,185,43,8
+    EDITTEXT        IDC_EDIT_SECTOR_WIDTH,17,196,45,14,ES_AUTOHSCROLL
+    CONTROL         "",IDC_SPIN_SECTOR_WIDTH,"msctls_updown32",
+                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,51,196,11,
+                    14
+    LTEXT           "ZScale",IDC_STATIC,76,185,22,8
+    EDITTEXT        IDC_EDIT_SECTOR_ZSCALE,73,197,43,14,ES_AUTOHSCROLL
+    CONTROL         "",IDC_SPIN_SECTOR_ZSCALE,"msctls_updown32",
+                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,105,196,
+                    11,14
+    GROUPBOX        "&Center Terrain",IDC_STATIC,138,110,93,92
+    CONTROL         "NW",IDC_CHECK_CENTER_NW,"Button",BS_AUTOCHECKBOX | 
+                    BS_ICON | BS_PUSHLIKE | BS_FLAT | WS_TABSTOP,154,129,20,
+                    19
+    CONTROL         "N",IDC_CHECK_CENTER_N,"Button",BS_AUTOCHECKBOX | 
+                    BS_ICON | BS_PUSHLIKE | BS_FLAT | WS_TABSTOP,175,129,20,
+                    19
+    CONTROL         "NW",IDC_CHECK_CENTER_NE,"Button",BS_AUTOCHECKBOX | 
+                    BS_ICON | BS_PUSHLIKE | BS_FLAT | WS_TABSTOP,197,129,20,
+                    19
+    CONTROL         "NW",IDC_CHECK_CENTER_W,"Button",BS_AUTOCHECKBOX | 
+                    BS_ICON | BS_PUSHLIKE | BS_FLAT | WS_TABSTOP,154,150,20,
+                    19
+    CONTROL         "NW",IDC_CHECK_CENTER,"Button",BS_AUTOCHECKBOX | BS_ICON | 
+                    BS_PUSHLIKE | BS_FLAT | WS_TABSTOP,175,150,20,19
+    CONTROL         "NW",IDC_CHECK_CENTER_E,"Button",BS_AUTOCHECKBOX | 
+                    BS_ICON | BS_PUSHLIKE | BS_FLAT | WS_TABSTOP,197,150,20,
+                    19
+    CONTROL         "NW",IDC_CHECK_CENTER_SW,"Button",BS_AUTOCHECKBOX | 
+                    BS_ICON | BS_PUSHLIKE | BS_FLAT | WS_TABSTOP,154,171,20,
+                    19
+    CONTROL         "NW",IDC_CHECK_CENTER_S,"Button",BS_AUTOCHECKBOX | 
+                    BS_ICON | BS_PUSHLIKE | BS_FLAT | WS_TABSTOP,175,171,20,
+                    19
+    CONTROL         "NW",IDC_CHECK_CENTER_SE,"Button",BS_AUTOCHECKBOX | 
+                    BS_ICON | BS_PUSHLIKE | BS_FLAT | WS_TABSTOP,197,171,20,
+                    19
+    DEFPUSHBUTTON   "Create New",IDOK,18,223,45,14
+    PUSHBUTTON      "Modify Current",ID_MODIFYCURRENT,70,223,56,14
+    PUSHBUTTON      "Import...",ID_IMPORT,133,223,45,14
+    PUSHBUTTON      "Cancel",IDCANCEL,185,223,45,14
+    LTEXT           "Name:\n\nBase Texture:\n\nTexture Scale:",IDC_STATIC,20,
+                    15,52,45
+END
+
+IDD_TERRAIN_OPTIONS DIALOGEX 0, 0, 232, 135
+STYLE DS_SETFONT | DS_MODALFRAME | DS_NOFAILCREATE | WS_CHILD | WS_VISIBLE | 
+    WS_CAPTION
+CAPTION "Terrain Options"
+FONT 8, "Microsoft Sans Serif", 400, 0, 0x0
+BEGIN
+    RTEXT           "Max Layers",IDC_STATIC,7,7,36,14,SS_CENTERIMAGE
+    EDITTEXT        IDC_TERRAIN_OPT_MAXLAYER_EDIT,47,7,31,13,ES_RIGHT | 
+                    ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "",IDC_TERRAIN_OPT_MAXLAYER_SPIN,"msctls_updown32",
+                    UDS_ARROWKEYS,78,7,11,13
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_LAYER_MATERIAL_TYPE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 147
+        VERTGUIDE, 14
+        VERTGUIDE, 140
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 327
+    END
+
+    IDD_TERRAIN_TOOL_PALETTE, DIALOG
+    BEGIN
+        RIGHTMARGIN, 646
+        TOPMARGIN, 1
+        BOTTOMMARGIN, 35
+        HORZGUIDE, 19
+    END
+
+    IDD_SECTOR_TEXTURES, DIALOG
+    BEGIN
+        LEFTMARGIN, 5
+        RIGHTMARGIN, 318
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 327
+    END
+
+    IDD_TERRAIN_SIZE, DIALOG
+    BEGIN
+        LEFTMARGIN, 3
+        RIGHTMARGIN, 244
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 248
+    END
+
+    IDD_TERRAIN_OPTIONS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 225
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 128
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#include ""res\\TerrainEditor.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""     // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904e4"
+        BEGIN
+            VALUE "CompanyName", "TODO: <Company name>"
+            VALUE "FileDescription", "TODO: <File description>"
+            VALUE "FileVersion", "1.0.0.1"
+            VALUE "InternalName", "TerrainEditor.dll"
+            VALUE "LegalCopyright", "TODO: (c) <Company name>.  All rights reserved."
+            VALUE "OriginalFilename", "TerrainEditor.dll"
+            VALUE "ProductName", "TODO: <Product name>"
+            VALUE "ProductVersion", "1.0.0.1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1252
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_TOOLBAR             BITMAP                  "res\\toolbarh.bmp"
+IDB_BLANK_BITMAP        BITMAP                  "res\\blankx.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_UP_ARROW            ICON                    "res\\plus_24.ico"
+IDI_DOWN_ARROW          ICON                    "res\\delete_24.ico"
+IDI_PAINT               ICON                    "res\\paint_selected_object_24.ico"
+IDI_DEFORM              ICON                    "res\\adjust_terrain_height_24.ico"
+IDI_TERRAIN_PROP        ICON                    "res\\terrain_sector_parameters_24.ico"
+IDI_TERRAIN_CLEAN       ICON                    "res\\terrain_clean.ico"
+IDI_LIGHT               ICON                    "res\\adjust_light_intensity_24.ico"
+IDR_TERRAINTYPE         ICON                    "res\\terrain.ico"
+IDI_ARROW_LEFT_UP       ICON                    "res\\arrow_left_up.ico"
+IDI_ARROW_LEFT_DOWN     ICON                    "res\\arrow_left_down.ico"
+IDI_ARROW_LEFT          ICON                    "res\\arrow_left.ico"
+IDI_ARROW_UP            ICON                    "res\\arrow_up.ico"
+IDI_ARROW_DOWN          ICON                    "res\\arrow_down.ico"
+IDI_ARROW_RIGHT_UP      ICON                    "res\\arrow_right_up.ico"
+IDI_ARROW_RIGHT         ICON                    "res\\arrow_right.ico"
+IDI_ARROW_RIGHT_DOWN    ICON                    "res\\arrow_right_down.ico"
+IDI_ARROW_CENTER1       ICON                    "res\\arrow_ce.ico"
+IDI_ARROW_BLANK         ICON                    "res\\arrow_blank.ico"
+IDI_TERRAIN_MODIFY      ICON                    "res\\new_modify_terrain_24.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_TERRAIN_SIZE DLGINIT
+BEGIN
+    IDC_MEASUREMENT_UNITS, 0x403, 11, 0
+0x694b, 0x6f6c, 0x656d, 0x6574, 0x7372, "\000" 
+    IDC_MEASUREMENT_UNITS, 0x403, 7, 0
+0x654d, 0x6574, 0x7372, "\000" 
+    IDC_MEASUREMENT_UNITS, 0x403, 12, 0
+0x6543, 0x746e, 0x6d69, 0x7465, 0x7265, 0x0073, 
+    IDC_MEASUREMENT_UNITS, 0x403, 6, 0
+0x694d, 0x656c, 0x0073, 
+    IDC_MEASUREMENT_UNITS, 0x403, 5, 0
+0x6546, 0x7465, "\000" 
+    IDC_MEASUREMENT_UNITS, 0x403, 8, 0
+0x6e49, 0x6863, 0x7365, 0x0020, 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_RESOURCE_NAME       "Terrain"
+    IDS_STATUS_LAYER_LIMIT_REACHED 
+                            "Maximum terrain layer count reached for this sector."
+END
+
+STRINGTABLE 
+BEGIN
+    IDC_DEFORM              "Deform\nDeform the heightmap of the terrain"
+    IDC_PAINT               "Paint\nPaint a layer on the terrain"
+    IDC_LOWER               "Subtract\nLower height or remove paint from layer"
+    IDC_RAISE               "Add\nRaise height or add paint to layer"
+    IDC_TERRAIN_PROP        "Properties\nChange terrain layer properties"
+    IDC_TERRAIN_MODIFY      "New/Modify\nCreate or modify terrain"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#include "res\TerrainEditor.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"     // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

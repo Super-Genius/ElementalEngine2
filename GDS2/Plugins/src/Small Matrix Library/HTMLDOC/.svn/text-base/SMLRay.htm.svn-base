@@ -1,0 +1,68 @@
+<HTML>
+<HEAD>
+<TITLE>class SMLRay</TITLE>
+<link href="styles.css" rel="STYLESHEET" type="text/css">
+</head>
+<BODY LINK="#0000ff" VLINK="#800080">
+<P><a NAME="SMLRay"></a>[<A href="index.htm">SML Overview</a>]</P>
+
+<h1>class SMLRay: public <A HREF="SMLLine.htm#SMLLine">SMLLine</A></h1>
+<PRE>#include &quot;<A HREF="smlmath.h">smlmath.h</A>&quot;</PRE>
+
+<P>Class <B>SMLRay</B> is a derived from <B>SMLLine</B>. <B>SMLRay</B> is a line from a start point that has a direction vector, and a scalar length. It also has additional scalar parameter useful in applications.</P>
+
+<H2>Public Interface</H2>
+<TABLE CELLSPACING=0 BORDER=0 WIDTH=530>
+<TR><TD>
+<P><A HREF="SMLRay.htm#constructor">constructors</A></TD>
+<TD>
+<P><A HREF="SMLRay.htm#operator_assign">operator=</A></TD>
+<TD>
+<P>&nbsp;</TD>
+</TR>
+</TABLE>
+
+<HR>
+<H3>Public Data</H3>
+<P>SMLVec3f <B>direction</B>;</P>
+<P>SMLRay direction.</P>
+<P>float <B>length</B>;</P>
+<P>SMLRay length.</P>
+<P>float <B>a</B>;</P>
+<P>Additional scalar parameter.</P>
+<p>[<A href="SMLRay.htm#SMLRay">top</A>]</p><HR>
+
+<P>SMLLIBENTRY <B>SMLRay</B>(const <A HREF="SMLVec3f.htm#SMLVec3f">SMLVec3f</A>&amp; <B><I>start</I></B>, const <A HREF="SMLVec3f.htm#SMLVec3f">SMLVec3f</A>&amp; <B><I>direction</I></B>, float <B><I>length</I></B>);</P>
+<h4>Discussion</h4>
+<P>SMLRay object constructor.</P>
+<h4>Parameters</h4>
+<P><B><I>start</I></B> - beginning of the ray.</P>
+<P><B><I>direction</I></B> - unit vector, direction of the ray.</P>
+<P><B><I>length</I></B> - length of segment on the ray.</P>
+<p>[<A href="SMLRay.htm#SMLRay">top</A>]</p><HR>
+
+<P><A NAME="constructor"></A>SMLLIBENTRY <B>SMLRay</B>(const <A HREF="SMLVec3f.htm#SMLVec3f">SMLVec3f</A>&amp; <B><I>start</I></B>, const <A HREF="SMLVec3f.htm#SMLVec3f">SMLVec3f</A>&amp; <B><I>end</I></B>);</P>
+<h4>Discussion</h4>
+<P>SMLRay object constructor.</P>
+<h4>Parameters</h4>
+<P><B><I>start</I></B> - beginning of the ray.</P>
+<P><B><I>end</I></B> - second point on the ray.</P>
+<p>[<A href="SMLRay.htm#SMLRay">top</A>]</p><HR>
+
+<P>SMLLIBENTRY <B>SMLRay</B>();</P>
+<h4>Discussion</h4>
+<P>Default SMLRay object constructor.</P>
+<h4>Parameters</h4>
+<P>No.</P>
+<p>[<A href="SMLRay.htm#SMLRay">top</A>]</p><HR>
+
+<P>SMLLIBENTRY <A HREF="SMLRay.htm#SMLRay">SMLRay</A>&amp; <A NAME="operator_assign"><B>operator=</B></A>(<A HREF="SMLRay.htm#SMLRay">SMLRay</A>&amp; <B><I>ray</I></B>);</P>
+<h4>Discussion</h4>
+<P>Method is an overloaded operator-function. It creates ray with parameters equal to those of object <B><I>ray</I></B>.</P>
+<h4>Parameters</h4>
+<P><B><I>ray</I></B> - object of SMLRay type.</P>
+<h4>Return Value</h4>
+<P>Returns reference to this object.</P>
+<p>[<A href="SMLRay.htm#SMLRay">top</A>]</p><HR>
+</BODY>
+</HTML>

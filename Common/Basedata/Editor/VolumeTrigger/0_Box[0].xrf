@@ -1,0 +1,6 @@
+<MATERIAL version="2000" effectname="Shaders/cal3deffect.efx" numconstants="0" numtextures="2" numrenderstates="2" numbones="0" numflags="0">
+    <Texture pass="0" stage="0" file="\VolumeTrig_White.dds" numtexturestates="0" />
+    <Texture pass="0" stage="1" file="\Delay_Multi_trigger_nrml.dds" numtexturestates="0" />
+    <RenderState mode="cullmode" value="cullnone" />
+    <RenderState mode="fillmode" value="wireframe" />
+</MATERIAL>

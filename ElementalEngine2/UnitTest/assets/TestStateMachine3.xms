@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<CQHStateMachine version="1.3" name="Test_DerivedStateMachine" numStates="3" startState="Test_Derived_State" endState="Test_End_State" parentStateMachineFile="TestStateMachine1.xms" parentStateMachine="Test_StateMachine">
+	<CQHDerivedState version="1.0" parentState="Test_Main_State" x="0" y="0" width="0" height="0" numSubStates="0" numEvents="0" >
+		<CQHState version="1.0" name="Test_Derived_State" x="0" y="0" width="0" height="0" numSubStates="0" numEvents="0" entryEvent="" updateEvent="" exitEvent="">
+		</CQHState>
+		<CQHStateMachineEvent version="1.0" name="Test_Derived_Event" x="0" y="0" guard="" numActions="0" numTransitions="0">
+			<CQHStateMachineTransition version="1.0" name="Test_Derived_Transition" weight="0" targetState="Test_Main_Attack_State">
+			</CQHStateMachineTransition>
+		</CQHStateMachineEvent>
+	</CQHDerivedState>
+	<CQHState version="1.0" name="Test_Main2_State" x="0" y="0" width="0" height="0" numSubStates="0" numEvents="0" entryEvent="" updateEvent="" exitEvent="">
+	</CQHState>
+</CQHStateMachine>

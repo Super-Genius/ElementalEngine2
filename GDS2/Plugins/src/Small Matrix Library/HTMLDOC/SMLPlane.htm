@@ -1,0 +1,71 @@
+<HTML>
+<HEAD>
+<TITLE>class SMLPlane</TITLE>
+<link href="styles.css" rel="STYLESHEET" type="text/css">
+</head>
+<BODY LINK="#0000ff" VLINK="#800080">
+<P><A NAME="SMLPlane"></a>[<A href="index.htm">SML Overview</a>]</P>
+
+<h1>class SMLPlane: public <A HREF="SMLVec4f.htm#SMLVec4f">SMLVec4f</A></h1>
+<PRE>#include &quot;<A HREF="smlmath.h">smlmath.h</A>&quot;</PRE>
+
+<P><B>SMLPlane</B> inherits SMLVec4f class and has no new component data. Vector components <B><I>x, y, z</I></B> define normal to the plane and plane equation as <B><I>(x, y, z) (P<SUB>x</SUB>, P<SUB>y</SUB>, P<SUB>z</SUB>) + w = 0</I></B>, where P is any point on the plane.</P>
+<H3>Public Interface</H3>
+<TABLE CELLSPACING=0 BORDER=0 WIDTH=530>
+<TR><TD>
+<P><A HREF="SMLPlane.htm#constructor">constructors</A></TD>
+<TD>
+<P><A HREF="SMLPlane.htm#operator_assign">operator=</A></TD>
+<TD>
+<P><A HREF="SMLPlane.htm#Distance">Distance</A></TD>
+</TR>
+</TABLE>
+
+<HR>
+<P><A NAME="constructor"></A>SMLLIBENTRY <B>SMLPlane</B>(float <B><I>a</I></B>, float <B><I>b</I></B>, float <B><I>c</I></B>, float <B><I>d</I></B>);</P>
+<h4>Discussion</h4>
+<P>SMLPlane object constructor. Creates plane with normal (<B><I>a, b, c</I></B>) and<B><I> </I></B>plane value <B><I>d</I></B>.</P>
+<h4>Parameters</h4>
+<P><B><I>a, b, c, d</I></B> - variables of float type.</P>
+<p>[<A href="SMLPlane.htm#SMLPlane">top</A>]</p><HR>
+
+<P>SMLLIBENTRY <B>SMLPlane</B>(float <B><I>v</I></B>[]);</P>
+<h4>Discussion</h4>
+<P>SMLPlane object constructor. Calls constructor of base SMLVec4f class with parameter <B><I>v</I></B>, which is a pointer to array of float type.</P>
+<h4>Parameters</h4>
+<P><B><I>v</I></B> - pointer to float-type array. The array must have at least four elements.</P>
+<p>[<A href="SMLPlane.htm#SMLPlane">top</A>]</p><HR>
+
+<P>SMLLIBENTRY <B>SMLPlane</B>(const <A HREF="SMLPlane.htm#SMLPlane">SMLPlane</A>&amp; <B><I>v</I></B>);</P>
+<h4>Discussion</h4>
+<P>SMLPlane object copy-constructor<B><I>. </I></B>Method sets coordinates of this plane equal to those of plane <B><I>v</I></B>.</P>
+<h4>Parameters</h4>
+<P><B><I>v</I></B> - reference to SMLPlane-type object.</P>
+<p>[<A href="SMLPlane.htm#SMLPlane">top</A>]</p><HR>
+
+<P>SMLLIBENTRY <B>SMLPlane</B>();</P>
+<h4>Discussion</h4>
+<P>Default SMLPlane object constructor. Sets all class members to 0.</P>
+<h4>Parameters</h4>
+<P>No.</P>
+<p>[<A href="SMLPlane.htm#SMLPlane">top</A>]</p><HR>
+
+<P>SMLLIBENTRY const <A HREF="SMLPlane.htm#SMLPlane">SMLPlane</A>&amp; <A NAME="operator_assign"><B>operator=</B></A>(const <A HREF="SMLPlane.htm#SMLPlane">SMLPlane</A>&amp; <B><I>plane</I></B>);</P>
+<h4>Discussion</h4>
+<P>Method is an overloaded operator-function. It sets all values for this plane to be equal to those of object <B><I>plane</I></B>.</P>
+<h4>Parameters</h4>
+<P><B><I>plane</I></B> - reference to object of SMLPlane type whose data are assigned to this plane.</P>
+<h4>Return Value</h4>
+<P>Returns reference to this object. </P>
+<p>[<A href="SMLPlane.htm#SMLPlane">top</A>]</p><HR>
+
+<P>SMLLIBENTRY float <A NAME="Distance"><B>Distance</B></A>(const <A HREF="SMLVec3f.htm#SMLVec3f">SMLVec3f</A>&amp; <B><I>vec</I></B>) const;</P>
+<h4>Discussion</h4>
+<P>Method computes distance from this plane to point <B><I>vec</I></B>. It is positive, if <B><I>vec</I></B> lays in positive half-space of this plane, equal to 0, if point is on the plane, and negative otherwise. </P>
+<h4>Parameters</h4>
+<P><B><I>vec</I></B> - Reference to object of SMLVec3f type.</P>
+<h4>Return Value</h4>
+<P>Distance from this plane to point <B><I>vec</I></B>.</P>
+<p>[<A href="SMLPlane.htm#SMLPlane">top</A>]</p><HR>
+</BODY>
+</HTML>

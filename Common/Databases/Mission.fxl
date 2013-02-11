@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<CDatabaseSchema Version="1.0" Name="MissionSchema" NumItems="5">
+	<CSchemaItem Version="1.0" Name="WaveNumber" Type="short int" Class="edit" Default="-1">
+	</CSchemaItem>
+	<CSchemaItem Version="1.0" Name="SpawnerName" Type="string" Class="edit" Default="DefaultText">
+	</CSchemaItem>
+	<CSchemaItem Version="1.0" Name="PrimaryObjective" Type="bool" Class="edit" Default="true">
+	</CSchemaItem>
+	<CSchemaItem Version="1.0" Name="SpawnerFile" Type="string" Class="edit" Default="true">
+	</CSchemaItem>
+	<CSchemaItem Version="1.0" Name="EnemyCount" Type="short int" Class="edit" Default="true">
+	</CSchemaItem>
+</CDatabaseSchema>

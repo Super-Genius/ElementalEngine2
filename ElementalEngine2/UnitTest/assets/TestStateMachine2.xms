@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<CQHStateMachine version="1.2" name="Test_StateMachine" numStates="3" startState="Test_Start_State" endState="Test_End_State">
+	<CQHState version="1.0" name="Test_Start_State" x="0" y="0" width="0" height="0" numSubStates="0" numEvents="1" entryEvent="Test_Start_Entry_Event" updateEvent="" exitEvent="">
+		<CQHStateMachineEvent version="1.0" name="Test_Start_Entry_Event" x="0" y="0" guard="" numActions="1" numTransitions="1">
+			<CQHStateMachineActionHandler version="1.0" name="Test_Start_Entry_ActionHandler" actionName="Test_ReadyLaunch">
+			</CQHStateMachineActionHandler>
+			<CQHStateMachineTransition version="1.0" name="Test_Start_Entry_Transition" weight="0" targetState="Test_Main_Idle_State">
+			</CQHStateMachineTransition>
+		</CQHStateMachineEvent>
+	</CQHState>
+	<CQHState version="1.0" name="Test_Main_State" x="0" y="0" width="0" height="0" numSubStates="4" numEvents="3" entryEvent="" updateEvent="Test_Update_Event" exitEvent="">
+		<CQHStateMachineEvent version="1.0" name="Test_Update_Event" x="0" y="0" guard="" numActions="0" numTransitions="0">
+		</CQHStateMachineEvent>
+		<CQHStateMachineEvent version="1.0" name="Test_Main_Attack_Event" x="0" y="0" guard="" numActions="0" numTransitions="1">
+			<CQHStateMachineTransition version="1.0" name="Test_Main_Attack_Transition" weight="0" targetState="Test_Main_Attack_State">
+			</CQHStateMachineTransition>
+		</CQHStateMachineEvent>
+		<CQHStateMachineEvent version="1.0" name="Test_Main_Idle_Event" x="0" y="0" guard="" numActions="0" numTransitions="1">
+			<CQHStateMachineTransition version="1.0" name="Test_Main_Idle_Transition" weight="0" targetState="Test_Main_Idle_State">
+			</CQHStateMachineTransition>
+		</CQHStateMachineEvent>
+		<CQHState version="1.0" name="Test_Main_Idle_State" x="0" y="0" width="0" height="0" numSubStates="0" numEvents="2" entryEvent="" updateEvent="Test_Update_Event" exitEvent="">
+			<CQHStateMachineEvent version="1.0" name="Test_Update_Event" x="0" y="0" guard="" numActions="0" numTransitions="0">
+			</CQHStateMachineEvent>
+			<CQHStateMachineEvent version="1.0" name="Test_Main_Idle_Event" x="0" y="0" guard="" numActions="0" numTransitions="1">
+				<CQHStateMachineTransition version="1.0" name="Test_Main_Idle_Transition" weight="0" targetState="Test_Main_Guard_State">
+				</CQHStateMachineTransition>
+			</CQHStateMachineEvent>
+		</CQHState>
+		<CQHState version="1.0" name="Test_Main_Attack_State" x="0" y="0" width="0" height="0" numSubStates="0" numEvents="1" entryEvent="" updateEvent="Test_Attack_Update_Event" exitEvent="">
+			<CQHStateMachineEvent version="1.0" name="Test_Attack_Update_Event" x="0" y="0" guard="" numActions="0" numTransitions="0">
+			</CQHStateMachineEvent>
+		</CQHState>
+		<CQHState version="1.0" name="Test_Main_Guard_State" x="0" y="0" width="0" height="0" numSubStates="0" numEvents="1" entryEvent="" updateEvent="Test_Update_Event" exitEvent="">
+			<CQHStateMachineEvent version="1.0" name="Test_Guard_Event" x="0" y="0" guard="Test_Main_Attack_Event" numActions="0" numTransitions="1">
+				<CQHStateMachineTransition version="1.0" name="Test_Main_Guard_Transition" weight="0" targetState="Test_Main_Guard2_State">
+				</CQHStateMachineTransition>
+			</CQHStateMachineEvent>
+		</CQHState>
+		<CQHState version="1.0" name="Test_Main_Guard2_State" x="0" y="0" width="0" height="0" numSubStates="0" numEvents="0" entryEvent="" updateEvent="Test_Update_Event" exitEvent="">
+		</CQHState>
+	</CQHState>
+	<CQHState version="1.0" name="Test_End_State" x="0" y="0" width="0" height="0" numSubStates="0" numEvents="0" entryEvent="" updateEvent="" exitEvent="">
+	</CQHState>
+</CQHStateMachine>

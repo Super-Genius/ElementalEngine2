@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<CShaderPath Version="1" API="DX9" ShaderVersion="3.0" numeffects="1" effectname1="shaders/parallax.efx" numentries="2" >
+	<ShaderEntry type="vertexshader" numflags="0" shaderfile="Shaders/Parallax_NoSkin.vsh" ShaderDefineFile="" ></ShaderEntry>
+	<ShaderEntry type="pixelshader" numflags="0" shaderfile="Shaders/Parallax.psh" ShaderDefineFile="" ></ShaderEntry>
+</CShaderPath>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root Num="1">
+<TAS_Mission Name="TAS Mission" Num="7" >
+	<edit Type="short int" Name="Wave #" key="true"/>
+	<combo Type="string" name="Enemy Type" key="true" DefSelect="Enemy Type" 
+		NumOptions="3"
+		option2="Spawners\\Bf109E.sxl"
+		option1="Spawners\\HE111.sxl"
+		option3="Spawners\\TwoFighterWing.sxl"
+	/>
+	<edit Type="float" name="Start Pos X" key="false"/>
+	<edit Type="float" name="Start Pos Y" key="false"/>
+	<edit Type="float" name="Start Pos Z" key="false"/>
+	<edit Type="float" name="Idle Radius" key="false"/>
+	<edit Type="float" name="Attack Interval" key="false"/>
+</TAS_Mission>
+</root>

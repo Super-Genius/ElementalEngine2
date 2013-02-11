@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<CSpawner Name="World">
+	<CEntity Name="SpawnPoint" EntityTypes="models\spawnpoint\spawnpoint">
+		<CLocationPointObject Name="TestPoint" RenderObjectFilename="basedata\\editor\\locationpoint\\spawnpoint.cfg">
+		</CLocationPointObject>
+	</CEntity>
+</CSpawner>
+

@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<hmesh numgeom="7">
+	<hnode name="Move_Gimbal" id="0" pid="-1" type="Cal3D" file="Move_Gimbal.cfg" rotqx="0.000000" rotqy="0.000000" rotqz="0.000000" rotqw="1.000000" scalex="1.000000" scaley="1.000000" scalez="1.000000" posx="-0.005366" posy="0.000000" posz="0.000000" >
+	</hnode>
+	<hnode name="X_Move" id="1" pid="0" type="Cal3D" file="X_Move.cfg" rotqx="0.000000" rotqy="0.000000" rotqz="0.000000" rotqw="1.000000" scalex="1.000000" scaley="1.000000" scalez="1.000000" posx="0.005366" posy="0.000000" posz="0.000000" >
+	</hnode>
+	<hnode name="XY_Move" id="2" pid="0" type="Cal3D" file="XY_Move.cfg" rotqx="0.000000" rotqy="0.000000" rotqz="0.000000" rotqw="1.000000" scalex="1.000000" scaley="1.000000" scalez="1.000000" posx="0.005366" posy="0.000000" posz="0.000000" >
+	</hnode>
+	<hnode name="XZ_Move" id="3" pid="0" type="Cal3D" file="XZ_Move.cfg" rotqx="0.000000" rotqy="0.000000" rotqz="0.000000" rotqw="1.000000" scalex="1.000000" scaley="1.000000" scalez="1.000000" posx="0.005366" posy="0.000000" posz="0.000000" >
+	</hnode>
+	<hnode name="YZ_Move" id="4" pid="0" type="Cal3D" file="YZ_Move.cfg" rotqx="0.000000" rotqy="0.000000" rotqz="0.000000" rotqw="1.000000" scalex="1.000000" scaley="1.000000" scalez="1.000000" posx="0.005366" posy="0.000000" posz="0.000000" >
+	</hnode>
+	<hnode name="Z_Move" id="5" pid="0" type="Cal3D" file="Z_Move.cfg" rotqx="0.000000" rotqy="0.000000" rotqz="0.000000" rotqw="1.000000" scalex="1.000000" scaley="1.000000" scalez="1.000000" posx="0.005366" posy="0.000000" posz="0.000000" >
+	</hnode>
+	<hnode name="Y_Move" id="6" pid="0" type="Cal3D" file="Y_Move.cfg" rotqx="0.000000" rotqy="0.000000" rotqz="0.000000" rotqw="1.000000" scalex="1.000000" scaley="1.000000" scalez="1.000000" posx="0.005366" posy="0.000000" posz="0.000000" >
+	</hnode>
+</hmesh>

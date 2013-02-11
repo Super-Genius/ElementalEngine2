@@ -1,0 +1,42 @@
+///============================================================================
+/// \file		TextureEditorCmdTarget.h
+/// \brief		Definition for Command Target for Texture Editor
+/// \date		08-27-2007
+/// \author		Patrick Ghiocel
+/// \note   Elemental Engine
+///         Copyright (c)  2005-2008 Signature Devices, Inc.
+///
+///         This code is redistributable under the terms of the EE License.
+///
+///         This code is distributed without warranty or implied warranty of
+///			merchantability or fitness for a particular purpose. See the 
+///			EE License for more details.
+///
+///         You should have received a copy of the EE License along with this
+///			code; If not, write to Signature Devices, Inc.,
+///			3200 Bridge Parkway Suite 102, Redwood City, CA 94086 USA.
+///============================================================================
+
+#ifndef _TEXTUREEDITORCMDTARGET_H_
+#define _TEXTUREEDITORCMDTARGET_H_
+
+class CTextureEditor;
+
+class CTextureEditorCmdTarget : public CCmdTarget
+{
+	DECLARE_DYNAMIC(CTextureEditorCmdTarget)
+
+public:
+	CTextureEditorCmdTarget();
+	virtual ~CTextureEditorCmdTarget();
+
+protected:
+	CTextureEditor *m_pEditor;
+	
+	DECLARE_MESSAGE_MAP()
+public:
+	afx_msg void OnToolsAppertureGenerator();
+	afx_msg void OnUpdateAppertureGenerator(CCmdUI *pCmdUI);
+};
+
+#endif //_TEXTUREEDITORCMDTARGET_H_	

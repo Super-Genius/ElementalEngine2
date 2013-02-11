@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<CEffect version="2000" 
+	numconstants="9"
+	numtextures="4"
+	numrenderstates="0"
+	numbones="0"
+	numflags="0">
+  <ShaderVariable shadertype="vertexshader" type="Function" name="FogDistance" register="18" x="0.6705" y="0.7294" z="0.8549" w="6000.0" ></ShaderVariable>
+  <ShaderVariable shadertype="vertexshader" type="Function" name="EyePos" register="22" x="0.0" y="0.0" z="0.0" w="1.0" ></ShaderVariable>
+	<ShaderVariable shadertype="vertexshader" type="Constant" name="PosKs" register="23" x="0.0" y="0.0" z="0.0" w="0.0" ></ShaderVariable>
+	<ShaderVariable shadertype="vertexshader" type="Constant" name="ClipKs" register="24" x="0.0" y="0.0" z="0.0" w="0.0" ></ShaderVariable>
+	<ShaderVariable shadertype="vertexshader" type="Constant" name="DMParameters" register="25" x="0.0" y="0.0" z="0.0" w="0.0" ></ShaderVariable>
+	<ShaderVariable shadertype="vertexshader" type="Constant" name="MipKs" register="26" x="0.0" y="0.0" z="0.0" w="0.0" ></ShaderVariable>
+	<ShaderVariable shadertype="pixelshader" type="Constant" name="DiffuseAmbient" register="23" x="0.03" y="0.15" z="0.1275" w="0.15" ></ShaderVariable>
+	<ShaderVariable shadertype="pixelshader" type="Constant" name="SunDir" register="24" x="0.9" y="-0.2" z="0.1" w="0.0" ></ShaderVariable>
+  <ShaderVariable shadertype="pixelshader" type="Constant" name="FoamKs" register="25" x="10.0" y="-7.0" z="0.7" w="0.0" ></ShaderVariable>
+	<Texture pass="0" stage="0" file="none" numtexturestates="5" >
+		<TextureStageState mode="mipfilter" value="point" ></TextureStageState>
+		<TextureStageState mode="minfilter" value="bilinear" ></TextureStageState>
+		<TextureStageState mode="magfilter" value="bilinear" ></TextureStageState>
+		<TextureStageState mode="umode" value="wrap" ></TextureStageState>
+		<TextureStageState mode="vmode" value="wrap" ></TextureStageState>
+	</Texture>
+	<Texture pass="0" stage="1" file="none" numtexturestates="5" >
+		<TextureStageState mode="mipfilter" value="point" ></TextureStageState>
+		<TextureStageState mode="minfilter" value="bilinear" ></TextureStageState>
+		<TextureStageState mode="magfilter" value="bilinear" ></TextureStageState>
+		<TextureStageState mode="umode" value="wrap" ></TextureStageState>
+		<TextureStageState mode="vmode" value="wrap" ></TextureStageState>
+	</Texture>
+	<Texture pass="0" stage="2" file="none" numtexturestates="5" >
+		<TextureStageState mode="mipfilter" value="point" ></TextureStageState>
+		<TextureStageState mode="minfilter" value="bilinear" ></TextureStageState>
+		<TextureStageState mode="magfilter" value="bilinear" ></TextureStageState>
+		<TextureStageState mode="umode" value="wrap" ></TextureStageState>
+		<TextureStageState mode="vmode" value="wrap" ></TextureStageState>
+	</Texture>
+	<Texture pass="0" stage="3" file="none" numtexturestates="5" >
+		<TextureStageState mode="mipfilter" value="point" ></TextureStageState>
+		<TextureStageState mode="minfilter" value="bilinear" ></TextureStageState>
+		<TextureStageState mode="magfilter" value="bilinear" ></TextureStageState>
+		<TextureStageState mode="umode" value="wrap" ></TextureStageState>
+		<TextureStageState mode="vmode" value="wrap" ></TextureStageState>
+	</Texture>
+</CEffect>

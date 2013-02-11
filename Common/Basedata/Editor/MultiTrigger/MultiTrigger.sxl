@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<CSpawner Name="World" Version="2.500000">
+	<CEntity Name="MultiTrigger" EntityTypes="trigger" PositionX="0.0" PositionY="0.0" PositionZ="0.0" RotationX="0.0" RotationY="0.0" RotationZ="0.0" ScaleX="1.0" ScaleY="1.0" ScaleZ="1.0">
+		<CEditorEntity Name="GDSRenderPoint" EntityTypes="dummyEntity" PositionX="0.0" PositionY="0.0" PositionZ="0.0" RotationX="0.0" RotationY="0.0" RotationZ="0.0" ScaleX="1.0" ScaleY="1.0" ScaleZ="1.0">
+			<Cal3DRenderObject Name="RenderPointRO" FileName="basedata\\editor\\multitrigger\\multitrigger.cfg">
+			</Cal3DRenderObject>
+		</CEditorEntity>
+		<CLuaScript Name="MultiTrigger_Script" FileName="Scripts\MultiTrigger.lua" autostart="true" > 
+		</CLuaScript>
+		<CQHStateObject Name="MultiTrigger_StateObject" FileName="State Machine\MultiTrigger.xms" StateMachine="MultiTrigger_StateMachine" StartState="" Priority="65535">
+		</CQHStateObject>
+	</CEntity>
+</CSpawner>
+

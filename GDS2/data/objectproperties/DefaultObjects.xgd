@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root Num="21">
+	<CEntity name="Entity" FileNameProperty="" EntityTypes="Undefined" PositionX="0.0" PositionY="0.0" PositionZ="0.0" RotationX="0.0" RotationY="0.0" RotationZ="0.0" Rotation="0" ScaleX="1.0" ScaleY="1.0" ScaleZ="1.0">
+	</CEntity>
+	<CRenderObject name="RenderObj" FileNameProperty="FileName" FileName="models\objects\default.v3o" PositionX="0.0" PositionY="0.0" PositionZ="0.0" RotationX="0.000000" RotationY="0.000000" RotationZ="0.000000" ScalingX="0.025000" ScalingY="0.025000" ScalingZ="0.025000">
+	</CRenderObject>
+	<CAIObject name="AIObj" FileNameProperty="">
+	</CAIObject>
+	<CTextureObject name="TexObj" FileNameProperty="FileName" Width="0" Height="0" ColorDepth="32" FileName="textures\default.tex">
+	</CTextureObject>
+	
+	<CPhysicsObject name="PhysicsObject" Type="Actor" CollisionGroup="1" ContactGroup="1" ShapeFile="Physics\Character\Hit_Sphere.dae">
+	</CPhysicsObject>
+	
+	<CEECharacterPhysicsObject name="CharacterPhysicsObject" CollisionGroup="1" ContactGroup="1" Shape="Capsule" Mass="100">
+	</CEECharacterPhysicsObject>
+	
+	<CHeightfieldPhysicsObject Name="HeightfieldPhysicsObject" CollisionGroup="1" ContactGroup="1">
+	</CHeightfieldPhysicsObject>
+	
+	<CBoundaryPhysicsObject Name="BoundaryPhysicsObject" CollisionGroup="1" ContactGroup="1">
+	</CBoundaryPhysicsObject>
+	
+	<CTriggerPhysicsObject Name="TriggerPhysicsObject" CollisionGroup="1" ContactGroup="1" TriggerOnEntry="false" TriggerOnStay="false" TriggerOnLeave="false">
+	</CTriggerPhysicsObject>
+	
+	<CParticleRibbonRenderObject name="CParticleRibbonRenderObject">
+	</CParticleRibbonRenderObject>
+	
+	<CTerrainSector name="Terrain" FileNameProperty="HeightMap" SectorX="0" SectorY="0" HeightMap="Maps\Default.hmp">	
+	</CTerrainSector>
+	<CLuaScript name="Lua" FileNameProperty="Filename" Filename="scripts\Default.lua" autostart="true" >
+	</CLuaScript >
+	<DNSM Name="DNSM" FileNameProperty="File" File="Data\Default.xms" StartState="">
+	</DNSM>
+	<CDatabase name="Database"  FileNameProperty="FileName" FileName="Databases\Default.dxl">
+	</CDatabase>
+	<CTimeOfDayObject Name="TimeOfDayEffect" FileNameProperty="" TimeStart="0.500000" TimeRate="0.000000" NumSunLightFrames="14" NumFogFrames="14">
+		<SunLightFrame Name="SunLightFrame0" FileNameProperty="" AmbientColorX="53.000000" AmbientColorY="60.000000" AmbientColorZ="58.000000" FulLBrightColorX="53.000000" FulLBrightColorY="60.000000" FulLBrightColorZ="58.000000" DawnWeight="0.000000" NightWeight="1.000000">
+		</SunLightFrame>
+		<SunLightFrame Name="SunLightFrame1" FileNameProperty="" AmbientColorX="53.000000" AmbientColorY="60.000000" AmbientColorZ="58.000000" FulLBrightColorX="53.000000" FulLBrightColorY="60.000000" FulLBrightColorZ="58.000000" DawnWeight="1.000000" NightWeight="1.000000">
+		</SunLightFrame>
+		<SunLightFrame Name="SunLightFrame2" FileNameProperty="" AmbientColorX="53.000000" AmbientColorY="60.000000" AmbientColorZ="58.000000" FulLBrightColorX="53.000000" FulLBrightColorY="60.000000" FulLBrightColorZ="58.000000" DawnWeight="1.000000" NightWeight="0.000000">
+		</SunLightFrame>
+		<SunLightFrame Name="SunLightFrame3" FileNameProperty="" AmbientColorX="53.000000" AmbientColorY="60.000000" AmbientColorZ="58.000000" FulLBrightColorX="53.000000" FulLBrightColorY="60.000000" FulLBrightColorZ="58.000000" DawnWeight="1.000000" NightWeight="0.000000">
+		</SunLightFrame>
+		<SunLightFrame Name="SunLightFrame4" FileNameProperty="" AmbientColorX="53.000000" AmbientColorY="60.000000" AmbientColorZ="58.000000" FulLBrightColorX="110.000000" FulLBrightColorY="70.000000" FulLBrightColorZ="30.000000" DawnWeight="0.100000" NightWeight="0.000000">
+		</SunLightFrame>
+		<SunLightFrame Name="SunLightFrame5" FileNameProperty="" AmbientColorX="53.000000" AmbientColorY="60.000000" AmbientColorZ="58.000000" FulLBrightColorX="180.000000" FulLBrightColorY="140.000000" FulLBrightColorZ="110.000000" DawnWeight="0.000000" NightWeight="0.000000">
+		</SunLightFrame>
+		<SunLightFrame Name="SunLightFrame6" FileNameProperty="" AmbientColorX="53.000000" AmbientColorY="60.000000" AmbientColorZ="58.000000" FulLBrightColorX="220.000000" FulLBrightColorY="190.000000" FulLBrightColorZ="120.000000" DawnWeight="0.000000" NightWeight="0.000000">
+		</SunLightFrame>
+		<SunLightFrame Name="SunLightFrame7" FileNameProperty="" AmbientColorX="53.000000" AmbientColorY="60.000000" AmbientColorZ="58.000000" FulLBrightColorX="255.000000" FulLBrightColorY="255.000000" FulLBrightColorZ="255.000000" DawnWeight="0.000000" NightWeight="0.000000">
+		</SunLightFrame>
+		<SunLightFrame Name="SunLightFrame8" FileNameProperty="" AmbientColorX="70.000000" AmbientColorY="80.000000" AmbientColorZ="95.000000" FulLBrightColorX="255.000000" FulLBrightColorY="255.000000" FulLBrightColorZ="255.000000" DawnWeight="0.000000" NightWeight="0.000000">
+		</SunLightFrame>
+		<SunLightFrame Name="SunLightFrame9" FileNameProperty="" AmbientColorX="53.000000" AmbientColorY="60.000000" AmbientColorZ="58.000000" FulLBrightColorX="255.000000" FulLBrightColorY="255.000000" FulLBrightColorZ="200.000000" DawnWeight="0.000000" NightWeight="0.000000">
+		</SunLightFrame>
+		<SunLightFrame Name="SunLightFrame10" FileNameProperty="" AmbientColorX="53.000000" AmbientColorY="60.000000" AmbientColorZ="58.000000" FulLBrightColorX="240.000000" FulLBrightColorY="160.000000" FulLBrightColorZ="80.000000" DawnWeight="0.700000" NightWeight="0.000000">
+		</SunLightFrame>
+		<SunLightFrame Name="SunLightFrame11" FileNameProperty="" AmbientColorX="53.000000" AmbientColorY="60.000000" AmbientColorZ="58.000000" FulLBrightColorX="120.000000" FulLBrightColorY="20.000000" FulLBrightColorZ="25.000000" DawnWeight="1.000000" NightWeight="0.500000">
+		</SunLightFrame>
+		<SunLightFrame Name="SunLightFrame12" FileNameProperty="" AmbientColorX="53.000000" AmbientColorY="60.000000" AmbientColorZ="58.000000" FulLBrightColorX="53.000000" FulLBrightColorY="60.000000" FulLBrightColorZ="58.000000" DawnWeight="1.000000" NightWeight="1.000000">
+		</SunLightFrame>
+		<SunLightFrame Name="SunLightFrame13" FileNameProperty="" AmbientColorX="53.000000" AmbientColorY="60.000000" AmbientColorZ="58.000000" FulLBrightColorX="53.000000" FulLBrightColorY="60.000000" FulLBrightColorZ="58.000000" DawnWeight="0.000000" NightWeight="1.000000">
+		</SunLightFrame>
+		<FogFrame Name="FogKeyFrame0" FileNameProperty="" FogColorX="15.000000" FogColorY="0.000000" FogColorZ="25.000000" FogStart="80.000000" FogEnd="640.000000">
+		</FogFrame>
+		<FogFrame Name="FogKeyFrame1" FileNameProperty="" FogColorX="15.000000" FogColorY="0.000000" FogColorZ="25.000000" FogStart="80.000000" FogEnd="640.000000">
+		</FogFrame>
+		<FogFrame Name="FogKeyFrame2" FileNameProperty="" FogColorX="15.000000" FogColorY="5.000000" FogColorZ="25.000000" FogStart="80.000000" FogEnd="640.000000">
+		</FogFrame>
+		<FogFrame Name="FogKeyFrame3" FileNameProperty="" FogColorX="60.000000" FogColorY="140.000000" FogColorZ="180.000000" FogStart="40.000000" FogEnd="560.000000">
+		</FogFrame>
+		<FogFrame Name="FogKeyFrame4" FileNameProperty="" FogColorX="40.000000" FogColorY="160.000000" FogColorZ="200.000000" FogStart="60.000000" FogEnd="480.000000">
+		</FogFrame>
+		<FogFrame Name="FogKeyFrame5" FileNameProperty="" FogColorX="40.000000" FogColorY="160.000000" FogColorZ="200.000000" FogStart="80.000000" FogEnd="560.000000">
+		</FogFrame>
+		<FogFrame Name="FogKeyFrame6" FileNameProperty="" FogColorX="40.000000" FogColorY="160.000000" FogColorZ="200.000000" FogStart="100.000000" FogEnd="640.000000">
+		</FogFrame>
+		<FogFrame Name="FogKeyFrame7" FileNameProperty="" FogColorX="40.000000" FogColorY="160.000000" FogColorZ="200.000000" FogStart="140.000000" FogEnd="560.000000">
+		</FogFrame>
+		<FogFrame Name="FogKeyFrame8" FileNameProperty="" FogColorX="40.000000" FogColorY="160.000000" FogColorZ="200.000000" FogStart="100.000000" FogEnd="520.000000">
+		</FogFrame>
+		<FogFrame Name="FogKeyFrame9" FileNameProperty="" FogColorX="80.000000" FogColorY="100.000000" FogColorZ="160.000000" FogStart="60.000000" FogEnd="480.000000">
+		</FogFrame>
+		<FogFrame Name="FogKeyFrame10" FileNameProperty="" FogColorX="70.000000" FogColorY="30.000000" FogColorZ="40.000000" FogStart="60.000000" FogEnd="400.000000">
+		</FogFrame>
+		<FogFrame Name="FogKeyFrame11" FileNameProperty="" FogColorX="20.000000" FogColorY="20.000000" FogColorZ="25.000000" FogStart="40.000000" FogEnd="200.000000">
+		</FogFrame>
+		<FogFrame Name="FogKeyFrame12" FileNameProperty="" FogColorX="15.000000" FogColorY="10.000000" FogColorZ="25.000000" FogStart="40.000000" FogEnd="320.000000">
+		</FogFrame>
+		<FogFrame Name="FogKeyFrame13" FileNameProperty="" FogColorX="15.000000" FogColorY="5.000000" FogColorZ="25.000000" FogStart="60.000000" FogEnd="480.000000">
+		</FogFrame>
+	</CTimeOfDayObject>
+	<CSkyboxObject Name="Skybox" FileNameProperty="" TexturePath="Textures/sky">
+	</CSkyboxObject>
+	<CWeatherRenderObject Name="WeatherEffect" FileNameProperty="" Intensity="0.500000" ParticleScale="0.500000" Effect="DEFAULT_WEATHER">
+	</CWeatherRenderObject>	
+	<CNodeSystem Name="NodeSystem" FileNameProperty="" Version="1.0" NumNodes="0" NumConnections="0">
+	</CNodeSystem>
+	<CNode Name="Node" FileNameProperty="" Version="1.0" X="0.000000" Y="0.000000" Z="0.000000">
+	</CNode>
+	<CHeightNode Name="HeightNode" FileNameProperty="" Version="1.0" X="0.000000" Y="0.000000" Z="0.000000" Height="5.0" ConnectedHeightNode="">
+	</CHeightNode>
+	<CNodeConnection Name="NodeConnection" FileNameProperty="" Version="1.0" Node1="" Node2="">
+	</CNodeConnection>
+	<Cal3DRenderObject Name="Render Object" FileNameProperty="FileName" FileName="" >
+	</Cal3DRenderObject>
+	<CHierarchicalModel Name="Hierarchical Model" FileNameProperty="FileName" FileName="" >
+	</CHierarchicalModel>
+	<CQHStateObject Name="State Object" FileNameProperty="FileName" FileName="State Machine\Default.xms" StateMachine="StateObject" StartState="Start" UpdatePriority="1000">
+	</CQHStateObject>
+	<CSplineObject Name="Spline Object" FileName="" Type="Point" Loop="0" Resolution="2" EventCollide="" EventEnter="" EventExit="">
+	</CSplineObject>
+	<CLightObject Name="Light Object" FileName="" Version="1000" PositionX="1.000000" PositionY="2.000000" PositionZ="3.000000" DirectionX="11.000000" DirectionY="12.000000" DirectionZ="13.000000" Attenuation="99999.000000" ColorRed="21.000000" ColorGreen="22.000000" ColorBlue="23.000000" ColorAlpha="24.000000" LightType="OMNI_POINT_LIGHT" CastShadows="false" NumKeyframes="0">
+	</CLightObject>
+</root>

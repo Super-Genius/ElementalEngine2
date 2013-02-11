@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root Num="1">
+<Physics_Contact_Pair Name="Physics Contact Pair Database" Num="3">
+	<edit Type="short int" Name="Group A" key="false"/>
+	<edit Type="short int" Name="Group B" key="false"/>
+	<edit Type="short int" Name="Flag" key="false"/>
+</Physics_Contact_Pair>
+</root>

@@ -1,0 +1,37 @@
+H1  {
+	font-family : Arial, Helvetica;
+	font-style : italic;
+	font-weigt : bold;
+	color : navy;
+}
+
+H2  {
+	font-family : Arial, Helvetica;
+	font-weigt : bold;
+}
+
+H3  {
+	font-family : Arial, Helvetica;
+	font-style : italic;
+	font-weigt : bold;
+}
+
+H4  {
+	font-family : Arial, Helvetica;
+	font-style : italic;
+	font-weigt : bold;
+	color : navy;
+	text-decoration : underline;
+	font-size : medium;
+}
+
+P  {
+	font-family : Verdana, Arial, Helvetica;
+	font-size : small;
+}
+
+PRE  {
+	font-size : small;
+	color : Teal;
+}
+

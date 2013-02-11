@@ -1,0 +1,71 @@
+#include "Shaders\HLSLconstants.h"
+
+struct v2f
+{
+	float2 TexCoord0		: TEXCOORD0;	// TexCoord
+};
+
+uniform float4 SpherePoints[16] : register(c20);
+
+float4 main(	v2f i,
+				uniform sampler2D FrameBufferTexture : register(s0),
+				uniform sampler2D DepthTexture : register(s1),
+				uniform sampler2D RandomNormalTexture : register(s2)
+			) 	: COLOR
+{
+	const float zn = 4.0;
+	const float zf = 8000.0;
+	const float w = 1280.0;
+	const float h = 720.0;
+	const float sphere_size = 10.0;
+	float scale_x = sphere_size / w; // #pixels / screen width
+	float scale_y = sphere_size / h; // #pixels / screen height
+	float scale_z = sphere_size / zf; // far clip
+	float persp_x = 2.0*zn / w;
+	float persp_y = 2.0*zn / h;
+	float persp_z = zf/(zf-zn);
+	float persp_w = zn*zf/(zn-zf);
+	float zarg0 = (zf+zn)/(zf-zn);
+	float zarg1 = (-2.0*zf*zn) / (zf-zn);
+	
+//	float2 normalTex = i.TexCoord0.xy * float2( 1280.0 / 64.0, 720.0 / 64.0 );
+	float2 normalTex = i.TexCoord0.xy * float2( 1280.0 / 512.0, 720.0 / 512.0 );
+	float3 n = tex2D(RandomNormalTexture, normalTex).xyz * 2.0 - 1.0;
+//	n = normalize(n); // TODO: this needed?
+
+	float d0 = tex2D(DepthTexture, i.TexCoord0).r;
+//	float w0 = (zarg1 / (d0 - zarg0)) * 0.5 + 0.5;
+	float d1;
+	float a = 0;
+	float3 p;
+	for( int s = 0; s < 16; s++ )
+//	int s = 1;
+	{
+		p = reflect( SpherePoints[s].xyz, n );
+//		p = SpherePoints[s].xyz * n;
+//		p = SpherePoints[s].xyz;
+//		p = normalize(p);
+		p.x = (p.x / w) * sphere_size;
+		p.y = (p.y / h) * sphere_size;
+		p.z = (p.z / zf) * sphere_size;
+//		p.xy = mul(worldToScreen, float4(p.xy, 0.0, 1.0)).xy;
+//		p.z = 0.0; worldToScreen
+		d1 = tex2D(DepthTexture, i.TexCoord0 + p.xy).r + p.z;
+//		float w1 = (zarg1 / (d1 - zarg0)) * 0.5 + 0.5 + p.z;
+		a += step( d0, d1 );
+	}
+	a /= 16.0;
+//d0 *= 10.0;
+d1 *= 10.0;
+
+//	return float4( SpherePoints[0].xyz, 1.0 );
+//float nl = length(n);
+//	return float4( nl, nl, nl, 1.0 );
+	return float4( a, a, a, 1.0 );
+//	return float4( (n.yyy+1.0)*0.5, 1.0 );
+//	return float4( (p.xyz+1.0)*0.5, 1.0 );
+//	return float4( d0, d0, d0, 1.0 );
+//	return float4( d1, d1, d1, 1.0 );
+//	return float4( (n+1.0)*0.5, 1.0 );
+//	return tex2D(FrameBufferTexture, i.TexCoord0);
+}

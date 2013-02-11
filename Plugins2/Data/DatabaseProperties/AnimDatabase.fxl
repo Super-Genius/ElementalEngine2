@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root Num="1">
+<AnimDatabase Name="Animation Database" Num="9" >
+	<edit Type="string" Name="State" key="true"/>
+	<edit Type="string" Name="Layer 0" key="false"/>
+	<combo Type="bool" name="Layer 0 Looping" key="false" DefSelect="false" 
+		NumOptions="2"
+		option1="true"
+		option2="false"
+		/>
+	<edit Type="string" Name="Layer 1" key="false"/>
+	<combo Type="bool" name="Layer 1 Looping" key="false" DefSelect="false" 
+		NumOptions="2"
+		option1="true"
+		option2="false"
+		/>
+	<edit Type="string" Name="Layer 2" key="false"/>
+	<combo Type="bool" name="Layer 2 Looping" key="false" DefSelect="false" 
+		NumOptions="2"
+		option1="true"
+		option2="false"
+		/>
+	<edit Type="string" Name="Layer 3" key="false"/>
+	<combo Type="bool" name="Layer 3 Looping" key="false" DefSelect="false" 
+		NumOptions="2"
+		option1="true"
+		option2="false"
+		/>
+</AnimDatabase>
+</root>

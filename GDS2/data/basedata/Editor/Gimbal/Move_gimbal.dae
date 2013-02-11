@@ -1,0 +1,429 @@
+<?xml	version="1.0"	encoding="utf-8"?>
+<COLLADA version="1.4.0" xmlns="http://www.collada.org/2005/11/COLLADASchema">
+	<asset>
+		<contributor>
+			<author>NxuStream2 converter - http://www.ageia.com</author>
+			<authoring_tool>PhysX	Rocket,	PhysX	Viewer,	or CreateDynamics</authoring_tool>
+			<comments>questions	to:	jratcliff@ageia.com</comments>
+			<source_data>C:\ART\GDS\Models\UI\Move_gimbal.dae</source_data>
+		</contributor>
+		<unit	meter="1"	name="meter"/>
+		<up_axis>Y_UP</up_axis>
+	</asset>
+	 <library_materials>
+			<material	id="Material"	name="Material">
+				 <instance_effect	url="#Material-fx"></instance_effect>
+			</material>
+	 </library_materials>
+	 <library_effects>
+			<effect	id="Material-fx" name="Material">
+				 <profile_COMMON>
+						<technique id="Material-fx-COMMON" sid="COMMON">
+							 <phong>
+									<ambient>
+										 <color>0.803922 0.588235	0.92549	1</color>
+									</ambient>
+									<diffuse>
+										 <color>0.803922 0.588235	0.92549	1</color>
+									</diffuse>
+									<specular>
+										 <color>0.631373 0.631373	0.631373 1</color>
+									</specular>
+									<shininess>
+										 <float>1</float>
+									</shininess>
+									<reflective>
+										 <color>0	0	0	1</color>
+									</reflective>
+									<transparent>
+										 <color>1	1	1	1</color>
+									</transparent>
+									<transparency>
+										 <float>0</float>
+									</transparency>
+							 </phong>
+						</technique>
+				 </profile_COMMON>
+			</effect>
+	 </library_effects>
+	<library_geometries>
+	</library_geometries>
+	<library_visual_scenes>
+		<visual_scene	id="Scene0-Visual"	name="Scene0-Visual">
+			<node	id="Actor0-Node" name="Actor0" type="NODE">
+        <translate>-12.50807476	-0.596122742 0</translate>
+        <rotate>-1 0	0	 0</rotate>
+			</node>
+			<node	id="Actor1-Node" name="Actor1" type="NODE">
+        <translate>0	15.244127274 -0.025270067</translate>
+        <rotate>-1 0	0	 0</rotate>
+			</node>
+			<node	id="Actor2-Node" name="Actor2" type="NODE">
+        <translate>0	0 0</translate>
+        <rotate>-1 0	0	 0</rotate>
+			</node>
+			<node	id="Actor3-Node" name="Actor3" type="NODE">
+        <translate>0	0 0</translate>
+        <rotate>-1 0	0	 0</rotate>
+			</node>
+			<node	id="Actor4-Node" name="Actor4" type="NODE">
+        <translate>0	0 0</translate>
+        <rotate>-1 0	0	 0</rotate>
+			</node>
+			<node	id="Actor5-Node" name="Actor5" type="NODE">
+        <translate>-0.560304821	0 -12.503229141</translate>
+        <rotate>-1 0	0	 0</rotate>
+			</node>
+			</visual_scene>
+	</library_visual_scenes>
+	<library_physics_materials>
+		<physics_material	id="pmat0_0-PhysicsMaterial"	name="pmat0_0-PhysicsMaterial">
+			<technique_common>
+				<dynamic_friction>0</dynamic_friction>
+				<restitution>0</restitution>
+				<static_friction>0</static_friction>
+			</technique_common>
+		</physics_material>
+	</library_physics_materials>
+	<library_physics_models>
+		<physics_model id="Scene0-PhysicsModel">
+			<rigid_body	sid="Actor0-RigidBody" name="X_Move">
+				<technique_common>
+					<instance_physics_material url="#pmat0_0-PhysicsMaterial"/>
+					<shape>
+            <translate>-48.934299469	0.246383443 -0.057172775</translate>
+            <rotate>0.999999881 0	-0.000000087	 -90</rotate>
+						<instance_physics_material url="#pmat0_0-PhysicsMaterial"/>
+					 <mass>1</mass>
+					 <extra>
+						 <technique	profile="PhysX">
+							 <group>0</group>
+							 <skinWidth>0.025</skinWidth>
+							 <disable_collision>false</disable_collision>
+						 </technique>
+					 </extra>
+						<box>
+							<half_extents>63.25 1.986671448	1.609303474</half_extents>
+						</box>
+					 </shape>
+					 <dynamic>true</dynamic>
+					 <mass>1</mass>
+					 <mass_frame>
+            <translate>-48.934299469	0.246383443 -0.057172775</translate>
+            <rotate>-1 0	0	 0</rotate>
+					</mass_frame>
+					<inertia>2.178907394	1334.384033203 1334.836181641</inertia>
+					</technique_common>
+			<extra>
+				<technique profile="PhysX">
+						<wakeUpCounter>0.399999976</wakeUpCounter>
+						<linearDamping>0</linearDamping>
+						<angularDamping>0.050000001</angularDamping>
+						<maxAngularVelocity>7</maxAngularVelocity>
+						<sleepLinearVelocity>0.150000006</sleepLinearVelocity>
+						<sleepAngularVelocity>0.140000001</sleepAngularVelocity>
+						<solverIterationCount>4</solverIterationCount>
+						<disable_gravity>false</disable_gravity>
+						<kinematic>true</kinematic>
+						<pose_sleep_test>false</pose_sleep_test>
+						<filter_sleep_velocity>false</filter_sleep_velocity>
+					<group>0</group>
+					<disable_collision>false</disable_collision>
+					<disable_response>false</disable_response>
+					<lock_com>false</lock_com>
+				</technique>
+			</extra>
+			 </rigid_body>
+			<rigid_body	sid="Actor1-RigidBody" name="Y_Move">
+				<technique_common>
+					<instance_physics_material url="#pmat0_0-PhysicsMaterial"/>
+					<shape>
+            <translate>0.10565567	48.875450134 0</translate>
+            <rotate>0 0	0.999999881	 -90</rotate>
+						<instance_physics_material url="#pmat0_0-PhysicsMaterial"/>
+					 <mass>1</mass>
+					 <extra>
+						 <technique	profile="PhysX">
+							 <group>0</group>
+							 <skinWidth>0.025</skinWidth>
+							 <disable_collision>false</disable_collision>
+						 </technique>
+					 </extra>
+						<box>
+							<half_extents>64.376045227 1.986671448	2.026085854</half_extents>
+						</box>
+					 </shape>
+					 <dynamic>true</dynamic>
+					 <mass>1</mass>
+					 <mass_frame>
+            <translate>0.10565567	48.875450134 0</translate>
+            <rotate>-1 0	0	 0</rotate>
+					</mass_frame>
+					<inertia>1382.793457031	1382.740966797 2.683961868</inertia>
+					</technique_common>
+			<extra>
+				<technique profile="PhysX">
+						<wakeUpCounter>0.399999976</wakeUpCounter>
+						<linearDamping>0</linearDamping>
+						<angularDamping>0.050000001</angularDamping>
+						<maxAngularVelocity>7</maxAngularVelocity>
+						<sleepLinearVelocity>0.150000006</sleepLinearVelocity>
+						<sleepAngularVelocity>0.140000001</sleepAngularVelocity>
+						<solverIterationCount>4</solverIterationCount>
+						<disable_gravity>false</disable_gravity>
+						<kinematic>true</kinematic>
+						<pose_sleep_test>false</pose_sleep_test>
+						<filter_sleep_velocity>false</filter_sleep_velocity>
+					<group>0</group>
+					<disable_collision>false</disable_collision>
+					<disable_response>false</disable_response>
+					<lock_com>false</lock_com>
+				</technique>
+			</extra>
+			 </rigid_body>
+			<rigid_body	sid="Actor2-RigidBody" name="YZ_Move">
+				<technique_common>
+					<instance_physics_material url="#pmat0_0-PhysicsMaterial"/>
+					<shape>
+            <translate>-0.08168292	21.793792725 -21.192087173</translate>
+            <rotate>-0.577350378 -0.577350259	-0.577350199	 -239.999984741</rotate>
+						<instance_physics_material url="#pmat0_0-PhysicsMaterial"/>
+					 <mass>1</mass>
+					 <extra>
+						 <technique	profile="PhysX">
+							 <group>0</group>
+							 <skinWidth>0.025</skinWidth>
+							 <disable_collision>false</disable_collision>
+						 </technique>
+					 </extra>
+						<box>
+							<half_extents>20.25 2	19.549999237</half_extents>
+						</box>
+					 </shape>
+					 <dynamic>true</dynamic>
+					 <mass>1</mass>
+					 <mass_frame>
+            <translate>-0.08168292	21.793792725 -21.192087173</translate>
+            <rotate>-1 0	0	 0</rotate>
+					</mass_frame>
+					<inertia>264.088378906	128.734130859 138.020782471</inertia>
+					</technique_common>
+			<extra>
+				<technique profile="PhysX">
+						<wakeUpCounter>0.399999976</wakeUpCounter>
+						<linearDamping>0</linearDamping>
+						<angularDamping>0.050000001</angularDamping>
+						<maxAngularVelocity>7</maxAngularVelocity>
+						<sleepLinearVelocity>0.150000006</sleepLinearVelocity>
+						<sleepAngularVelocity>0.140000001</sleepAngularVelocity>
+						<solverIterationCount>4</solverIterationCount>
+						<disable_gravity>false</disable_gravity>
+						<kinematic>true</kinematic>
+						<pose_sleep_test>false</pose_sleep_test>
+						<filter_sleep_velocity>false</filter_sleep_velocity>
+					<group>0</group>
+					<disable_collision>false</disable_collision>
+					<disable_response>false</disable_response>
+					<lock_com>false</lock_com>
+				</technique>
+			</extra>
+			 </rigid_body>
+			<rigid_body	sid="Actor3-RigidBody" name="XY_Move">
+				<technique_common>
+					<instance_physics_material url="#pmat0_0-PhysicsMaterial"/>
+					<shape>
+            <translate>-21.192090988	21.79378891 0.081684113</translate>
+            <rotate>0.999999881 0.000000075	-0.000000225	 -90.000007629</rotate>
+						<instance_physics_material url="#pmat0_0-PhysicsMaterial"/>
+					 <mass>1</mass>
+					 <extra>
+						 <technique	profile="PhysX">
+							 <group>0</group>
+							 <skinWidth>0.025</skinWidth>
+							 <disable_collision>false</disable_collision>
+						 </technique>
+					 </extra>
+						<box>
+							<half_extents>20.25 2	19.549999237</half_extents>
+						</box>
+					 </shape>
+					 <dynamic>true</dynamic>
+					 <mass>1</mass>
+					 <mass_frame>
+            <translate>-21.192090988	21.793790817 0.08168412</translate>
+            <rotate>-1 0	0	 0</rotate>
+					</mass_frame>
+					<inertia>128.734100342	264.088317871 138.020812988</inertia>
+					</technique_common>
+			<extra>
+				<technique profile="PhysX">
+						<wakeUpCounter>0.399999976</wakeUpCounter>
+						<linearDamping>0</linearDamping>
+						<angularDamping>0.050000001</angularDamping>
+						<maxAngularVelocity>7</maxAngularVelocity>
+						<sleepLinearVelocity>0.150000006</sleepLinearVelocity>
+						<sleepAngularVelocity>0.140000001</sleepAngularVelocity>
+						<solverIterationCount>4</solverIterationCount>
+						<disable_gravity>false</disable_gravity>
+						<kinematic>true</kinematic>
+						<pose_sleep_test>false</pose_sleep_test>
+						<filter_sleep_velocity>false</filter_sleep_velocity>
+					<group>0</group>
+					<disable_collision>false</disable_collision>
+					<disable_response>false</disable_response>
+					<lock_com>false</lock_com>
+				</technique>
+			</extra>
+			 </rigid_body>
+			<rigid_body	sid="Actor4-RigidBody" name="XZ_Move">
+				<technique_common>
+					<instance_physics_material url="#pmat0_0-PhysicsMaterial"/>
+					<shape>
+            <translate>-21.192085266	0.08168602 -21.793794632</translate>
+            <rotate>-1 0.000000104	0.000000075	 -180</rotate>
+						<instance_physics_material url="#pmat0_0-PhysicsMaterial"/>
+					 <mass>1</mass>
+					 <extra>
+						 <technique	profile="PhysX">
+							 <group>0</group>
+							 <skinWidth>0.025</skinWidth>
+							 <disable_collision>false</disable_collision>
+						 </technique>
+					 </extra>
+						<box>
+							<half_extents>20.25 2	19.549999237</half_extents>
+						</box>
+					 </shape>
+					 <dynamic>true</dynamic>
+					 <mass>1</mass>
+					 <mass_frame>
+            <translate>-21.192087173	0.081686027 -21.793796539</translate>
+            <rotate>-1 0	0	 0</rotate>
+					</mass_frame>
+					<inertia>128.734161377	138.020782471 264.088256836</inertia>
+					</technique_common>
+			<extra>
+				<technique profile="PhysX">
+						<wakeUpCounter>0.399999976</wakeUpCounter>
+						<linearDamping>0</linearDamping>
+						<angularDamping>0.050000001</angularDamping>
+						<maxAngularVelocity>7</maxAngularVelocity>
+						<sleepLinearVelocity>0.150000006</sleepLinearVelocity>
+						<sleepAngularVelocity>0.140000001</sleepAngularVelocity>
+						<solverIterationCount>4</solverIterationCount>
+						<disable_gravity>false</disable_gravity>
+						<kinematic>true</kinematic>
+						<pose_sleep_test>false</pose_sleep_test>
+						<filter_sleep_velocity>false</filter_sleep_velocity>
+					<group>0</group>
+					<disable_collision>false</disable_collision>
+					<disable_response>false</disable_response>
+					<lock_com>false</lock_com>
+				</technique>
+			</extra>
+			 </rigid_body>
+			<rigid_body	sid="Actor5-RigidBody" name="Z_Move">
+				<technique_common>
+					<instance_physics_material url="#pmat0_0-PhysicsMaterial"/>
+					<shape>
+            <translate>0.478622466	-0.177726895 -49.373310089</translate>
+            <rotate>-0.577350378 -0.577350259	-0.577350199	 -239.999984741</rotate>
+						<instance_physics_material url="#pmat0_0-PhysicsMaterial"/>
+					 <mass>1</mass>
+					 <extra>
+						 <technique	profile="PhysX">
+							 <group>0</group>
+							 <skinWidth>0.025</skinWidth>
+							 <disable_collision>false</disable_collision>
+						 </technique>
+					 </extra>
+						<box>
+							<half_extents>63.25 2	2.049999952</half_extents>
+						</box>
+					 </shape>
+					 <dynamic>true</dynamic>
+					 <mass>1</mass>
+					 <mass_frame>
+            <translate>0.478622466	-0.177726895 -49.373310089</translate>
+            <rotate>-1 0	0	 0</rotate>
+					</mass_frame>
+					<inertia>1334.921875	2.734166145 1334.854003906</inertia>
+					</technique_common>
+			<extra>
+				<technique profile="PhysX">
+						<wakeUpCounter>0.399999976</wakeUpCounter>
+						<linearDamping>0</linearDamping>
+						<angularDamping>0.050000001</angularDamping>
+						<maxAngularVelocity>7</maxAngularVelocity>
+						<sleepLinearVelocity>0.150000006</sleepLinearVelocity>
+						<sleepAngularVelocity>0.140000001</sleepAngularVelocity>
+						<solverIterationCount>4</solverIterationCount>
+						<disable_gravity>false</disable_gravity>
+						<kinematic>true</kinematic>
+						<pose_sleep_test>false</pose_sleep_test>
+						<filter_sleep_velocity>false</filter_sleep_velocity>
+					<group>0</group>
+					<disable_collision>false</disable_collision>
+					<disable_response>false</disable_response>
+					<lock_com>false</lock_com>
+				</technique>
+			</extra>
+			 </rigid_body>
+		</physics_model>
+		<physics_model id="Scene0-PhysicsInstance">
+			<instance_physics_model	url="#Scene0-PhysicsModel">
+				<instance_rigid_body target="#Actor0-Node" body="Actor0-RigidBody">
+					<technique_common>
+						<angular_velocity>0 0	0</angular_velocity>
+						<velocity>0 0	0</velocity>
+					</technique_common>
+				</instance_rigid_body>
+				<instance_rigid_body target="#Actor1-Node" body="Actor1-RigidBody">
+					<technique_common>
+						<angular_velocity>0 0	0</angular_velocity>
+						<velocity>0 0	0</velocity>
+					</technique_common>
+				</instance_rigid_body>
+				<instance_rigid_body target="#Actor2-Node" body="Actor2-RigidBody">
+					<technique_common>
+						<angular_velocity>0 0	0</angular_velocity>
+						<velocity>0 0	0</velocity>
+					</technique_common>
+				</instance_rigid_body>
+				<instance_rigid_body target="#Actor3-Node" body="Actor3-RigidBody">
+					<technique_common>
+						<angular_velocity>0 0	0</angular_velocity>
+						<velocity>0 0	0</velocity>
+					</technique_common>
+				</instance_rigid_body>
+				<instance_rigid_body target="#Actor4-Node" body="Actor4-RigidBody">
+					<technique_common>
+						<angular_velocity>0 0	0</angular_velocity>
+						<velocity>0 0	0</velocity>
+					</technique_common>
+				</instance_rigid_body>
+				<instance_rigid_body target="#Actor5-Node" body="Actor5-RigidBody">
+					<technique_common>
+						<angular_velocity>0 0	0</angular_velocity>
+						<velocity>0 0	0</velocity>
+					</technique_common>
+				</instance_rigid_body>
+			<extra>
+				<technique profile="PhysX">
+				</technique>
+			</extra>
+			</instance_physics_model>
+		</physics_model>
+	</library_physics_models>
+	<library_physics_scenes>
+		<physics_scene id="SceneInstances-Physics">
+			<instance_physics_model	url="#Scene0-PhysicsInstance"/>
+			<technique_common>
+				<gravity>0	0 -9.81000042</gravity>
+			</technique_common>
+		</physics_scene>
+	</library_physics_scenes>
+	<scene>
+		<instance_physics_scene	url="#SceneInstances-Physics"/>
+	</scene>
+</COLLADA>

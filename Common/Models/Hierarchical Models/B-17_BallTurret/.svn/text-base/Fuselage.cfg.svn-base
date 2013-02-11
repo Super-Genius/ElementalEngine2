@@ -1,0 +1,7 @@
+#Auto Generated CFG Export file: C:/TAS/Models/Planes/B-17_BallTurret/Fuselage.cfg
+
+scale=1.0
+
+mesh=Fuselage.cmf
+
+material=0_B_17.xrf

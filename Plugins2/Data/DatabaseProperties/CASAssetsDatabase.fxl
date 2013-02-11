@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root Num="1">
+<CASAssetsDatabase Name="CAS Assets Database" Num="12">
+	<edit Type="string" Name="Name" key="false"/>
+	<edit Type="string" Name="Callsign" key="true"/>
+	<edit Type="string" Name="Holding Area" key="false"/>
+	<combo Type="string" name="Type" key="false" DefSelect="Fixed Wing" 
+		NumOptions="2"
+		option1="Fixed Wing"
+		option2="Rotary Wing"
+	/>
+	<edit Type="string" Name="Mission Number" key="false"/>
+	<edit Type="string" Name="Altitude" key="false"/>
+	<edit Type="string" Name="Time" key="false"/>
+	<edit Type="string" Name="A/C Type" key="false"/>
+	<edit Type="string" Name="Number of A/C" key="false"/>
+	<edit Type="string" Name="Radio Frequency" key="false"/>
+	<edit Type="string" Name="Ordnance" key="false"/>
+	<edit Type="string" Name="Spawner" key="false"/>		
+</CASAssetsDatabase>
+</root>

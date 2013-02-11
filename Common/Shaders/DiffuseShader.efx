@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<Effect name="DiffuseShader">
+	<Vertexshader name="DiffuseVShader" language="hlsl" shader="Shaders\Diffuse_v1.vsh" >
+	</Vertexshader>
+	<Pixelshader name="DiffusePShader" language="hlsl" shader="Shaders\Diffuse_p1.psh" >
+	</Pixelshader>
+	<Shaderpass name="default_pass" vertexshaderID="DiffuseVShader" pixelshaderID="DiffusePShader">
+		<TextureStage stage="0" name="BaseTexture" filter="bilinear" addressmodeU="clamp" addressmodeV="clamp">			
+		</TextureStage>
+	</Shaderpass>
+</Effect>

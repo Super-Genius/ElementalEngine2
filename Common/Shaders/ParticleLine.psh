@@ -1,0 +1,18 @@
+#include "Shaders\HLSLconstants.h"
+
+struct PSIn
+{
+	float2 TexCoord0	: TEXCOORD0;
+	float4 Color		:	COLOR0;
+};
+
+uniform float4 Glow					: register(c22);
+
+float4 main(	PSIn  In, 
+				uniform sampler2D colorMap0 : register(s0)
+				 ) : COLOR
+{
+	float4 color0 = tex2D(colorMap0, In.TexCoord0.xy) * In.Color;
+	color0.a *= Glow.x;
+	return color0;
+}

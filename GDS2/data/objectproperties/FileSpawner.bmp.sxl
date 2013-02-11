@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<CSpawner Name="World" vers="3.0">
+	<CTextureObject name="%FileName%" Width="0" Height="0" ColorDepth="32" FileName="%Path%">
+	</CTextureObject>
+</CSpawner>

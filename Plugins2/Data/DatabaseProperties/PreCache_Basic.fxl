@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root Num="1">
+<PreCache_Basic Name="PreCache Basic List" Num= "1" >
+	<edit Type="string" Name="PreCache FilePaths" key="true"/>
+</PreCache_Basic>
+</root>

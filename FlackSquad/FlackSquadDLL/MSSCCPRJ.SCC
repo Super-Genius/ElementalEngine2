@@ -1,0 +1,9 @@
+SCC = This is a source code control file
+
+[FlackSquadDLL.vcproj]
+SCC_Aux_Path = ""
+SCC_Project_Name = Perforce Project
+
+[FlackSquadDLL Wii.vcproj]
+SCC_Aux_Path = ""
+SCC_Project_Name = Perforce Project

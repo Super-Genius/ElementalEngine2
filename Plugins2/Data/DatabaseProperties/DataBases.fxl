@@ -1,0 +1,789 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root Num="25">
+	<TAS_PlaneRandomVals Name="Plane Random Values" Num="5">
+		<edit Type="float" name="Min idle radius" key="false"/>
+		<edit Type="float" name="Max idle radius" key="false"/>
+		<edit Type="float" name="Min attack time" key="false"/>
+		<edit Type="float" name="Max attack time" key="false"/>
+		<edit Type="float" name="Height variance" key="false"/>
+	</TAS_PlaneRandomVals>
+	<DestroyableObject Name="Destroyable Object Database" Num="7">
+		<edit Type="string" Name="Hierarchical Model File" key="false"/>
+		<edit Type="string" Name="Physics File" key="false"/>
+		<edit Type="string" Name="Particle Spawner" key="false"/>
+		<edit Type="string" Name="Particle Attach Point" key="false"/>	
+		<edit Type="string" Name="Sound On Impact" key="false"/>	
+		<edit Type="string" Name="Sound On Stage Change" key="false"/>	
+		<edit Type="short int" Name="Stage Damage" key="false"/>
+	</DestroyableObject>
+	<LuaScriptVarList Name="LuaScriptObject Variable List" Num="5">
+		<edit Type="string" Name="Variable Name" key="true"/>
+		<combo Type="string" name="Variable Type" key="false" DefSelect="String" 
+			NumOptions="4"
+			option1="String"
+			option2="Bool"
+			option3="Int"
+			option4="Float"
+		 />
+		 <edit Type="string" name="Variable Value" key="false" />
+		 <edit Type="string" name="Variable Value Min" key="false" />
+		 <edit Type="string" name="Variable Value Max" key="false" />
+	</LuaScriptVarList>
+	<Physics_Collision_Groups Name="Physics Collision Groups Database" Num="3">
+		<edit Type="short int" Name="Group A" key="false"/>
+		<edit Type="short int" Name="Group B" key="false"/>
+		<edit Type="bool" Name="Flag" key="false"/>
+	</Physics_Collision_Groups>
+	<Physics_Contact_Pair Name="Physics Contact Pair Database" Num="3">
+		<edit Type="short int" Name="Group A" key="false"/>
+		<edit Type="short int" Name="Group B" key="false"/>
+		<edit Type="short int" Name="Flag" key="false"/>
+	</Physics_Contact_Pair>
+	<TAS_MissionList Name="TAS Mission List" Num="7" >
+		<edit Type="short int" Name="Mission #" key="true"/>
+		<edit Type="string" Name="Mission Name" key="false"/>
+		<edit Type="short int" Name="Mission Time Bonus" key="false"/>
+		<edit Type="string" Name="Mission DBase File" key="false"/>
+		<edit Type="string" Name="Mission World File" key="false" DefSelect="demo.wxl"/>
+		<edit Type="string" Name="Mission Description File" key="false" DefSelect="nothing.txt"/>
+		<edit Type="short int" Name="Unit #" key="false"/>
+	</TAS_MissionList>
+	<TAS_Mission Name="TAS Mission" Num="7" >
+		<edit Type="short int" Name="Wave #" key="true"/>
+		<combo Type="string" name="Enemy Type" key="true" DefSelect="Enemy Type" 
+			NumOptions="3"
+			option2="Spawners\\Bf109E.sxl"
+			option1="Spawners\\HE111.sxl"
+			option3="Spawners\\TwoFighterWing.sxl"
+		 />
+		 <edit Type="float" name="Start Pos X" key="false"/>
+		 <edit Type="float" name="Start Pos Y" key="false"/>
+		 <edit Type="float" name="Start Pos Z" key="false"/>
+		 <edit Type="float" name="Idle Radius" key="false"/>
+		 <edit Type="float" name="Attack Interval" key="false"/>
+	</TAS_Mission>
+	<TAS_EnvGenList Name="TAS Environment Generator" Num="5" >
+		<edit Type="string" Name="Skybox Directory" key="true"/>
+		<edit Type="string" Name="Water CFG File" key="true"/>
+		<edit Type="float" Name="Fog R Val" key="true"/>
+		<edit Type="float" Name="Fog G Val" key="true"/>
+		<edit Type="float" Name="Fog B Val" key="true"/>
+	</TAS_EnvGenList>
+	<PreCache_Basic Name="PreCache Basic List" Num= "1" >
+		<edit Type="string" Name="PreCache FilePaths" key="true"/>
+	</PreCache_Basic>
+	<TASVehicleArmory Name="TAS Vehicle Armory" Num="22" >
+		<edit Type="string" Name="Turret Rotation Name" key="true"/>
+		<edit Type="string" Name="Turret Angle Name" key="false"/>
+		<edit Type="float" name="Rate of Fire(rps)" key="false"/>
+		<edit Type="float" name="Range" key="false"/>
+		<edit Type="float" name="Projectile Speed" key="false"/>
+		<edit Type="float" name="Projectile Damage" key="false"/>
+		<edit Type="string" name="Projectile Spawner" key="false"/>
+		<edit Type="bool" Name="Salvoing" key="false"/>
+		<edit Type="float" name="Salvoing Delay(sec)" key="false"/>
+		<edit Type="string" Name="Fire Particle Effect Spawner" key="false"/>
+		<edit Type="string" Name="Sound Filepath" key="false"/>
+		<edit Type="float" name="Min Fire Angle" key="false"/>
+		<edit Type="float" name="Max Fire Angle" key="false"/>
+		<edit Type="float" name="Angle Speed(deg/sec)" key="false"/>
+		<edit Type="float" name="Right Rotation" key="false"/>
+		<edit Type="float" name="Left Rotation" key="false"/>
+		<edit Type="float" name="Rotation Speed(deg/sec)" key="false"/>
+		<edit Type="short int" Name="Number of Barrels" key="false"/>
+		<edit Type="string" Name="Barrel Fire Point 1" key="false"/>
+		<edit Type="string" Name="Barrel Fire Point 2" key="false"/>
+		<edit Type="string" Name="Barrel Fire Point 3" key="false"/>
+		<edit Type="string" Name="Barrel Fire Point 4" key="false"/>
+	</TASVehicleArmory>
+	<Heroes_AnimList Name="Heroes Animation List" Num="2">
+		<combo Type="string" name="Animation Type" key="true" DefSelect="Anim_Idle"
+			NumOptions="32"
+			option1="Anim_Idle"
+			option2="Anim_Walk"
+			option3="Anim_Run"			
+			option4="Anim_A"
+			option5="Anim_AToIdle"
+			option6="Anim_AA"
+			option7="Anim_AAToIdle"
+			option8="Anim_AAA"
+			option9="Anim_AAB"
+			option10="Anim_AB"
+			option11="Anim_ABToIdle"
+			option12="Anim_ABA"
+			option13="Anim_ABB"
+			option14="Anim_B"
+			option15="Anim_BToIdle"
+			option16="Anim_BA"
+			option17="Anim_BAToIdle"
+			option18="Anim_BAA"
+			option19="Anim_BAB"
+			option20="Anim_BB"
+			option21="Anim_BBToIdle"
+			option22="Anim_BBA"
+			option23="Anim_C100"
+			option24="Anim_C200"
+			option25="Anim_C300"
+			option26="Anim_DHold"
+			option27="Anim_DHoldToIdle"
+			option28="Anim_DTapForward"
+			option29="Anim_DTapBackward"
+			option30="Anim_DTapLeft"
+			option31="Anim_DTapRight"
+			option32="Anim_DTapUp"
+		/>
+		<edit Type="string" name="Animation File" key="false" DefSelect="DefaultAnim.xaf" />
+	</Heroes_AnimList>
+	<Heroes_MoveList Name="Heroes Move List" Num="16" >
+		<edit Type="string" name="Move Name" key="true" />
+		<combo Type="string" name="Attack Style" key="false" DefSelect="Single Melee Attack"
+			NumOptions="10"
+			option1="Single Melee Attack"
+			option2="Multiple Melee Attack"
+			option3="Single Ranged Attack"
+			option4="Multiple Ranged Attack"
+			option5="Cylindrical Attack"
+			option6="Cone Attack"
+			option7="Area Of Effect"
+			option8="All Enemies"
+			option9="Charge"
+			option10="All Players"
+		/>
+		<edit Type="float" Name="Attack Style Parameter" key="false" DefSelect="0" />
+		<combo Type="string" name="Button #1" key="true" DefSelect="None"
+			NumOptions="7"
+			option1="None"
+			option2="A"
+			option3="B"
+			option4="D"
+			option5="S@100"
+			option6="S@200"
+			option7="S@300"
+		/>
+		<edit Type="short int" name="Energy Drain/Gain" key="false" />
+		<edit Type="float" name="Bonus Damage" key="false" />
+		<edit Type="long int" name="Cast Time" key="false" />
+		<combo Type="string" name="Button #2" key="true" DefSelect="None"
+			NumOptions="7"
+			option1="None"
+			option2="A"
+			option3="B"
+			option4="D"
+			option5="S@100"
+			option6="S@200"
+			option7="S@300"
+		/>
+		<edit Type="short int" name="Energy Drain/Gain" key="false" />
+		<edit Type="float" name="Bonus Damage" key="false" />
+		<edit Type="long int" name="Cast Time" key="false" />
+		<combo Type="string" name="Button #3" key="true" DefSelect="None"
+			NumOptions="7"
+			option1="None"
+			option2="A"
+			option3="B"
+			option4="D"
+			option5="S@100"
+			option6="S@200"
+			option7="S@300"
+		/>
+		<edit Type="short int" name="Energy Drain/Gain" key="false" />
+		<edit Type="float" name="Bonus Damage" key="false" />
+		<edit Type="long int" name="Cast Time" key="false" />
+		<combo Type="string" name="Special Effect" key="false" DefSelect="None"
+			NumOptions="26"
+			option1="None"
+			option2="Enemy_Blind"
+			option3="Enemy_Confused"
+			option4="Enemy_Frozen"
+			option5="Enemy_Knockback"
+			option6="Enemy_Slow"
+			option7="Enemy_Stun"
+			option8="Enemy_Webbed"
+			option9="EnemyTeam_Blind"
+			option10="EnemyTeam_Confused"
+			option11="EnemyTeam_Frozen"
+			option12="EnemyTeam_Knockback"
+			option13="EnemyTeam_Slow"
+			option14="EnemyTeam_Stun"
+			option15="EnemyTeam_Webbed"
+			option16="Player_Armor"
+			option17="Player_Damage"
+			option18="Player_Healing"
+			option19="Player_ElectricalAttack"
+			option20="Player_FrozenAttack"
+			option21="PlayerTeam_Armor"
+			option22="PlayerTeam_Damage"
+			option23="PlayerTeam_Healing"
+			option24="PlayerTeam_ElectricalAttack"
+			option25="PlayerTeam_FrozenAttack"
+			option26="CustomFunction"
+		/>
+	</Heroes_MoveList>
+	<VarDatabase Name="Variable Database/KnowledgeBase" Num="5" >
+		<edit Type="string" Name="Parent" key="true"/>
+		<edit Type="string" Name="Name" key="true"/>
+		<edit Type="string" Name="Variable Name" key="true"/>
+		<combo Type="string" name="type" key="false" DefSelect="string" 
+			NumOptions="10"
+			option1="char"
+			option2="unsigned char"
+			option3="short int"
+			option4="unsigned short int"
+			option5="long int"
+			option6="unsigned long int"
+			option7="float"
+			option8="double float"
+			option9="bool"
+			option10="string"
+		 />
+		<edit Type="%type" Name="Value" key="false"/>
+	</VarDatabase>
+	<AnimDatabase Name="Animation Database" Num="9" >
+		<edit Type="string" Name="State" key="true"/>
+		<edit Type="string" Name="Layer 0" key="false"/>
+		<combo Type="bool" name="Layer 0 Looping" key="false" DefSelect="false" 
+			NumOptions="2"
+			option1="true"
+			option2="false"
+		 />
+		<edit Type="string" Name="Layer 1" key="false"/>
+		<combo Type="bool" name="Layer 1 Looping" key="false" DefSelect="false" 
+			NumOptions="2"
+			option1="true"
+			option2="false"
+		 />
+		<edit Type="string" Name="Layer 2" key="false"/>
+		<combo Type="bool" name="Layer 2 Looping" key="false" DefSelect="false" 
+			NumOptions="2"
+			option1="true"
+			option2="false"
+		 />
+		<edit Type="string" Name="Layer 3" key="false"/>
+		<combo Type="bool" name="Layer 3 Looping" key="false" DefSelect="false" 
+			NumOptions="2"
+			option1="true"
+			option2="false"
+		 />
+	</AnimDatabase>
+	<SoundDatabase Name="Sound Database" Num="5" >
+		<edit Type="string" Name="Name" key="true"/>
+		<edit Type="string" Name="File Name" key="false"/>
+		<combo Type="string" name="Loading" key="false" DefSelect="cached" 
+			NumOptions="3"
+			option1="cached"
+			option2="memory"
+			option3="streamed"
+		 />
+		<combo Type="bool" name="Looping" key="false" DefSelect="false" 
+			NumOptions="2"
+			option1="true"
+			option2="false"
+		 />
+		<combo Type="bool" name="3D" key="false" DefSelect="false" 
+			NumOptions="2"
+			option1="true"
+			option2="false"
+		 />
+	</SoundDatabase>
+	<PsychDatabase Name="Psychological Database" Num="5">
+		<edit Type="string" Name="Stressor Group" key="false"/>
+		<edit Type="string" Name="Stressor" key="true"/>
+		<edit Type="float" Name="Stress" key="false"/>
+		<edit Type="float" Name="Discipline" key="false"/>
+		<edit Type="float" Name="Morale" key="false"/>
+	</PsychDatabase>
+	<ScenarioAssetsDatabase Name="Scenario Assets Database" Num="14">
+		<edit Type="string" Name="Scenario Name" key="true"/>
+		<edit Type="string" Name="OPS Description" key="false"/>
+		<edit Type="string" Name="OPS Briefing" key="false"/>
+		<edit Type="string" Name="Map" key="false"/>
+		<edit Type="string" Name="Map Asset Database" key="false"/>
+		<edit Type="string" Name="CFF Asset Database" key="false"/>
+		<edit Type="string" Name="CAS Asset Database" key="false"/>
+		<edit Type="string" Name="Database 1" key="false"/>
+		<edit Type="string" Name="TOD and Weather Spawner" key="false"/>
+		<edit Type="string" Name="Allied Spawner" key="false"/>
+		<edit Type="string" Name="Neutral Spawner" key="false"/>
+		<edit Type="string" Name="OpFor Spawner" key="false"/>
+		<edit Type="string" Name="Spawner 1" key="false"/>
+		<edit Type="string" Name="Spawner 2" key="false"/>
+	</ScenarioAssetsDatabase>
+	<MapAssetsDatabase Name="Map Assets Database" Num="6">
+		<edit Type="string" Name="Name" key="false"/>
+		<edit Type="string" Name="Callsign" key="true"/>
+		<edit Type="long int" Name="PosX" key="false"/>
+		<edit Type="long int" Name="PosY" key="false"/>
+		<edit Type="long int" Name="PosZ" key="false"/>
+		<combo Type="string" name="Type" key="false" DefSelect="HA" 
+			NumOptions="6"
+			option1="HA"
+			option2="IP"
+			option3="BP"
+			option4="Known Point"
+			option5="Starting Point"
+			option6="Origin Grid Coordinates"
+		/>
+	</MapAssetsDatabase>
+	<CFFAssetsDatabase Name="CFF Assets Database" Num="11">
+		<edit Type="string" Name="Name" key="false"/>
+		<edit Type="string" Name="Callsign" key="true"/>
+		<edit Type="long int" Name="PosX" key="false"/>
+		<edit Type="long int" Name="PosY" key="false"/>
+		<edit Type="long int" Name="PosZ" key="false"/>
+		<combo Type="string" name="Type" key="false" DefSelect="Artillery" 
+			NumOptions="3"
+			option1="Artillery"
+			option2="Mortar"
+			option3="Naval"
+		/>
+		<edit Type="short int" Name="Number of HE rounds" key="false"/>
+		<edit Type="short int" Name="Number of WP rounds" key="false"/>
+		<edit Type="short int" Name="Number of RP rounds" key="false"/>
+		<edit Type="short int" Name="Number of ICM rounds" key="false"/>
+		<edit Type="short int" Name="Number of Smoke rounds" key="false"/>
+	</CFFAssetsDatabase>
+	<CASAssetsDatabase Name="CAS Assets Database" Num="12">
+		<edit Type="string" Name="Name" key="false"/>
+		<edit Type="string" Name="Callsign" key="true"/>
+		<edit Type="string" Name="Holding Area" key="false"/>
+		<combo Type="string" name="Type" key="false" DefSelect="Fixed Wing" 
+			NumOptions="2"
+			option1="Fixed Wing"
+			option2="Rotary Wing"
+		/>
+		<edit Type="string" Name="Mission Number" key="false"/>
+		<edit Type="string" Name="Altitude" key="false"/>
+		<edit Type="string" Name="Time" key="false"/>
+		<edit Type="string" Name="A/C Type" key="false"/>
+		<edit Type="string" Name="Number of A/C" key="false"/>
+		<edit Type="string" Name="Radio Frequency" key="false"/>
+		<edit Type="string" Name="Ordnance" key="false"/>
+		<edit Type="string" Name="Spawner" key="false"/>		
+	</CASAssetsDatabase>
+	<FlightRosterDatabase Name="FlightRoster Database" Num="10">
+		<edit Type="string" Name="Flight Number" key="true"/>
+		<edit Type="string" Name="Mission Number" key="false"/>
+		<edit Type="string" Name="Callsign" key="false"/>
+		<edit Type="string" Name="Position" key="false"/>
+		<edit Type="string" Name="Altitude" key="false"/>
+		<edit Type="string" Name="Time" key="false"/>
+		<edit Type="string" Name="A/C Type" key="false"/>
+		<edit Type="string" Name="Number of A/C" key="false"/>
+		<edit Type="string" Name="Radio Frequency" key="false"/>
+		<edit Type="string" Name="Ordnance" key="false"/>
+	</FlightRosterDatabase>	
+	<TerrainElementsDatabase Name="Terrain Elements Database" Num="51">
+		<edit Type="string" Name="TerrainType" key="true"/>
+		<edit Type="unsigned short int" Name="Height" key="false"/>
+		<edit Type="long int" Name="Cover Prone" key="false"/>
+		<edit Type="long int" Name="Cover Low" key="false"/>
+		<edit Type="long int" Name="Cover Medium" key="false"/>
+		<edit Type="long int" Name="Cover High" key="false"/>
+		<edit Type="long int" Name="Protection Prone" key="false"/>
+		<edit Type="long int" Name="Protection Low" key="false"/>
+		<edit Type="long int" Name="Protection Medium" key="false"/>
+		<edit Type="long int" Name="Protection High" key="false"/>
+		<edit Type="long int" Name="Hinderance Prone" key="false"/>
+		<edit Type="long int" Name="Hinderance Low" key="false"/>
+		<edit Type="long int" Name="Hinderance Medium" key="false"/>
+		<edit Type="long int" Name="Hinderance High" key="false"/>
+		<edit Type="long int" Name="Top Protection" key="false"/>
+		<edit Type="short int" Name="In Elem Prot Flag" key="false"/>
+		<edit Type="long int" Name="HE Effect" key="false"/>
+		<edit Type="long int" Name="Soldier Move Low" key="false"/>
+		<edit Type="long int" Name="Soldier Move Med" key="false"/>
+		<edit Type="long int" Name="Soldier Move High" key="false"/>
+		<edit Type="long int" Name="Vehicle Move Pushed" key="false"/>
+		<edit Type="long int" Name="Vehicle Move Truck" key="false"/>
+		<edit Type="long int" Name="Vehicle Move Arm Car" key="false"/>
+		<edit Type="long int" Name="Vehicle Move Halftrack" key="false"/>
+		<edit Type="long int" Name="Vehicle Move Tracked" key="false"/>
+		<edit Type="long int" Name="Bog Chance Out of 128" key="false"/>
+		<edit Type="long int" Name="Imobolize Chance Out of 128" key="false"/>
+		<edit Type="bool" Name="Block LOS" key="false"/>
+		<edit Type="bool" Name="Block All LOS" key="false"/>
+		<edit Type="bool" Name="Is Wall" key="false"/>
+		<edit Type="bool" Name="Is Building" key="false"/>
+		<edit Type="bool" Name="Is Sunken" key="false"/>
+		<edit Type="bool" Name="Is Crushable" key="false"/>
+		<edit Type="bool" Name="Is Covered" key="false"/>
+		<edit Type="bool" Name="Is Bridge" key="false"/>
+		<edit Type="bool" Name="Is Snow" key="false"/>
+		<edit Type="bool" Name="Is Interior" key="false"/>
+		<edit Type="bool" Name="Is Road" key="false"/>
+		<edit Type="bool" Name="Is Minefield" key="false"/>
+		<edit Type="bool" Name="Is Placeable Foxhole" key="false"/>
+		<edit Type="bool" Name="Is Placeable Gun Pit" key="false"/>
+		<edit Type="bool" Name="Can Place Fort" key="false"/>
+		<edit Type="bool" Name="Is Old Foxhole" key="false"/>
+		<edit Type="bool" Name="Is Old Gun Pit" key="false"/>
+		<edit Type="short int" Name="How Long Flammable" key="false"/>
+		<edit Type="short int" Name="Explode Effect" key="false"/>
+		<edit Type="short int" Name="Level" key="false"/>
+		<edit Type="short int" Name="Rubble To" key="false"/>
+		<edit Type="short int" Name="Crush To" key="false"/>
+		<edit Type="short int" Name="Burn To" key="false"/>
+		<edit Type="short int" Name="Tree Type" key="false"/>
+	</TerrainElementsDatabase>
+	<Soldiers Name="Soldiers Database" Num="41">
+		<edit Type="short int" Name="Class" key="true"/>
+		<edit Type="string" Name="Weapon Name" key="true"/>
+		<edit Type="long int" Name="Armor Head" key="false"/>
+		<edit Type="long int" Name="Armor Body" key="false"/>
+		<edit Type="long int" Name="To Hit Head" key="false"/>
+		<edit Type="long int" Name="To Hit Body" key="false"/>
+		<edit Type="long int" Name="Weight" key="false"/>
+		<edit Type="short int" Name="Crewed Weapon" key="false"/>
+		<edit Type="short int" Name="Primary Weapon" key="false"/>
+		<edit Type="short int" Name="Secondary Weapon" key="false"/>
+		<edit Type="short int" Name="Grenade Weapon" key="false"/>
+		<edit Type="short int" Name="Hand to Hand Weapon" key="false"/>
+		<edit Type="short int" Name="Crewed AP" key="false"/>
+		<edit Type="short int" Name="Crewed HE" key="false"/>
+		<edit Type="short int" Name="Crewed HEAT" key="false"/>
+		<edit Type="short int" Name="Crewed Smoke" key="false"/>
+		<edit Type="short int" Name="Crewed Spec" key="false"/>
+		<edit Type="short int" Name="Primary AP" key="false"/>
+		<edit Type="short int" Name="Primary HE" key="false"/>
+		<edit Type="short int" Name="Primary HEAT" key="false"/>
+		<edit Type="short int" Name="Primary Smoke" key="false"/>
+		<edit Type="short int" Name="Primary Spec" key="false"/>
+		<edit Type="short int" Name="Secondary AP" key="false"/>
+		<edit Type="short int" Name="Secondary HE" key="false"/>
+		<edit Type="short int" Name="Secondary HEAT" key="false"/>
+		<edit Type="short int" Name="Secondary Smoke" key="false"/>
+		<edit Type="short int" Name="Secondary Spec" key="false"/>
+		<edit Type="short int" Name="Grenade AP" key="false"/>
+		<edit Type="short int" Name="Grenade HE" key="false"/>
+		<edit Type="short int" Name="Grenade HEAT" key="false"/>
+		<edit Type="short int" Name="Grenade Smoke" key="false"/>
+		<edit Type="short int" Name="Grenade Spec" key="false"/>
+		<edit Type="short int" Name="Secondary AP" key="false"/>
+		<edit Type="short int" Name="Secondary HE" key="false"/>
+		<edit Type="short int" Name="Secondary HEAT" key="false"/>
+		<edit Type="short int" Name="Secondary Smoke" key="false"/>
+		<edit Type="short int" Name="Secondary Spec" key="false"/>
+		<edit Type="short int" Name="Value" key="false"/>
+		<edit Type="short int" Name="Ammo Count" key="false"/>
+		<edit Type="bool" Name="Has NVG" key="false"/>
+		<edit Type="bool" Name="Has Med Kit" key="false"/>
+	</Soldiers>
+	<AITeamsDatabase Name="AI Teams Database" Num="71">
+		<edit Type="string" Name="Name" key="true"/>
+		<edit Type="string" Name="Type Name" key="true"/>
+		<edit Type="string" Name="Full Name" key="true"/>
+		<edit Type="short int" Name="Class" key="true"/>
+		<edit Type="short int" Name="Nation" key="true"/>
+		<edit Type="short int" Name="Type" key="true"/>
+		<edit Type="short int" Name="Morale" key="true"/>
+		<edit Type="short int" Name="Experience" key="true"/>
+		<edit Type="short int" Name="Style" key="true"/>
+		<edit Type="short int" Name="Icon" key="true"/>
+		<edit Type="short int" Name="SAI Unit" key="true"/>
+		<edit Type="short int" Name="Soldier List 0" key="true"/>
+		<edit Type="short int" Name="Soldier List 1" key="true"/>
+		<edit Type="short int" Name="Soldier List 2" key="true"/>
+		<edit Type="short int" Name="Soldier List 3" key="true"/>
+		<edit Type="short int" Name="Soldier List 4" key="true"/>
+		<edit Type="short int" Name="Soldier List 5" key="true"/>
+		<edit Type="short int" Name="Soldier List 6" key="true"/>
+		<edit Type="short int" Name="Soldier List 7" key="true"/>
+		<edit Type="short int" Name="Soldier List 8" key="true"/>
+		<edit Type="short int" Name="Soldier List 9" key="true"/>
+		<edit Type="short int" Name="Soldier List 10" key="true"/>
+		<edit Type="short int" Name="Soldier List 11" key="true"/>
+		<edit Type="short int" Name="Soldier List 12" key="true"/>
+		<edit Type="short int" Name="Soldier List 13" key="true"/>
+		<edit Type="short int" Name="Soldier List 14" key="true"/>
+		<edit Type="short int" Name="Soldier List 15" key="true"/>
+		<edit Type="short int" Name="Soldier List 16" key="true"/>
+		<edit Type="short int" Name="Soldier List 17" key="true"/>
+		<edit Type="short int" Name="Soldier List 18" key="true"/>
+		<edit Type="short int" Name="Soldier List 19" key="true"/>
+		<edit Type="short int" Name="Soldier List 20" key="true"/>
+		<edit Type="short int" Name="Soldier List 21" key="true"/>
+		<edit Type="short int" Name="Soldier List 22" key="true"/>
+		<edit Type="short int" Name="Soldier List 23" key="true"/>
+		<edit Type="short int" Name="Soldier List 24" key="true"/>
+		<edit Type="short int" Name="Soldier List 25" key="true"/>
+		<edit Type="short int" Name="Soldier List 26" key="true"/>
+		<edit Type="short int" Name="Soldier List 27" key="true"/>
+		<edit Type="short int" Name="Soldier Type 0" key="true"/>
+		<edit Type="short int" Name="Soldier Type 1" key="true"/>
+		<edit Type="short int" Name="Soldier Type 2" key="true"/>
+		<edit Type="short int" Name="Soldier Type 3" key="true"/>
+		<edit Type="short int" Name="Soldier Type 4" key="true"/>
+		<edit Type="short int" Name="Soldier Type 5" key="true"/>
+		<edit Type="short int" Name="Soldier Type 6" key="true"/>
+		<edit Type="short int" Name="Soldier Type 7" key="true"/>
+		<edit Type="short int" Name="Soldier Type 8" key="true"/>
+		<edit Type="short int" Name="Soldier Type 9" key="true"/>
+		<edit Type="short int" Name="Soldier Type 10" key="true"/>
+		<edit Type="short int" Name="Soldier Type 11" key="true"/>
+		<edit Type="short int" Name="Soldier Type 12" key="true"/>
+		<edit Type="short int" Name="Soldier Type 13" key="true"/>
+		<edit Type="short int" Name="Soldier Type 14" key="true"/>
+		<edit Type="short int" Name="Soldier Type 15" key="true"/>
+		<edit Type="short int" Name="Soldier Type 16" key="true"/>
+		<edit Type="short int" Name="Soldier Type 17" key="true"/>
+		<edit Type="short int" Name="Soldier Type 18" key="true"/>
+		<edit Type="short int" Name="Soldier Type 19" key="true"/>
+		<edit Type="short int" Name="Soldier Type 20" key="true"/>
+		<edit Type="short int" Name="Soldier Type 21" key="true"/>
+		<edit Type="short int" Name="Soldier Type 22" key="true"/>
+		<edit Type="short int" Name="Soldier Type 23" key="true"/>
+		<edit Type="short int" Name="Soldier Type 24" key="true"/>
+		<edit Type="short int" Name="Soldier Type 25" key="true"/>
+		<edit Type="short int" Name="Soldier Type 26" key="true"/>
+		<edit Type="short int" Name="Soldier Type 27" key="true"/>
+		<edit Type="short int" Name="Team Size" key="true"/>
+		<edit Type="short int" Name="Vehicle Class" key="true"/>
+		<edit Type="bool" Name="Can Clear Mine Fields" key="true"/>
+		<edit Type="short int" Name="Ammo Count" key="true"/>
+	</AITeamsDatabase>
+	<WeaponsDatabase Name="Weapons Database" Num="112">
+		<edit Type="string" Name="Name" key="true"/>
+		<edit Type="short int" Name="Class" key="false"/>
+		<edit Type="short int" Name="Icon" key="false"/>
+		<edit Type="short int" Name="Fire Animation Sequence" key="false"/>
+		<edit Type="short int" Name="Type" key="false"/>
+		<edit Type="short int" Name="Primary Target" key="false"/>
+		<edit Type="short int" Name="Valid Targets" key="false"/>
+		<edit Type="long int" Name="Reload Time Chamber" key="false"/>
+		<edit Type="long int" Name="Reload Time Clip" key="false"/>
+		<edit Type="long int" Name="Time to Fire" key="false"/>
+		<edit Type="long int" Name="Setup Time" key="false"/>
+		<edit Type="short int" Name="Rounds Per Clip" key="false"/>
+		<edit Type="short int" Name="Rounds in One Burst" key="false"/>
+		<edit Type="short int" Name="Weapon Weight" key="false"/>
+		<edit Type="short int" Name="Clip Weight" key="false"/>
+		<edit Type="long int" Name="Cool Rate" key="false"/>
+		<edit Type="long int" Name="Heat Rate" key="false"/>
+		<edit Type="long int" Name="No Jam or Break Quality" key="false"/>
+		<edit Type="bool" Name="Assault Fire" key="false"/>
+		<edit Type="bool" Name="Can Use Bayonet" key="false"/>
+		<edit Type="bool" Name="Back Blast" key="false"/>
+		<edit Type="bool" Name="White Phosphorus" key="false"/>
+		<edit Type="bool" Name="Rifle Grenades" key="false"/>
+		<edit Type="bool" Name="Demo Charge" key="false"/>
+		<edit Type="bool" Name="Cannister" key="false"/>
+		<edit Type="short int" Name="Blast Size AP" key="false"/>
+		<edit Type="short int" Name="Blast Size HE" key="false"/>
+		<edit Type="short int" Name="Blast Size HEAT" key="false"/>
+		<edit Type="short int" Name="Blast Size Smoke" key="false"/>
+		<edit Type="short int" Name="Blast Size Spec" key="false"/>
+		<edit Type="short int" Name="Blast Radius AP" key="false"/>
+		<edit Type="short int" Name="Blast Radius HE" key="false"/>
+		<edit Type="short int" Name="Blast Radius HEAT" key="false"/>
+		<edit Type="short int" Name="Blast Radius Smoke" key="false"/>
+		<edit Type="short int" Name="Blast Radius Spec" key="false"/>
+		<edit Type="short int" Name="Min Range AP" key="false"/>
+		<edit Type="short int" Name="Min Range HE" key="false"/>
+		<edit Type="short int" Name="Min Range HEAT" key="false"/>
+		<edit Type="short int" Name="Min Range Smoke" key="false"/>
+		<edit Type="short int" Name="Min Range Spec" key="false"/>
+		<edit Type="bool" Name="Fire Direction AP" key="false"/>
+		<edit Type="bool" Name="Fire Direction HE" key="false"/>
+		<edit Type="bool" Name="Fire Direction HEAT" key="false"/>
+		<edit Type="bool" Name="Fire Direction Smoke" key="false"/>
+		<edit Type="bool" Name="Fire Direction Spec" key="false"/>
+		<edit Type="long int" Name="Base Accuracy AP" key="false"/>
+		<edit Type="long int" Name="Base Accuracy HE" key="false"/>
+		<edit Type="long int" Name="Base Accuracy HEAT" key="false"/>
+		<edit Type="long int" Name="Base Accuracy Smoke" key="false"/>
+		<edit Type="long int" Name="Base Accuracy Spec" key="false"/>
+		<edit Type="short int" Name="Range PB AP" key="false"/>
+		<edit Type="short int" Name="Range PB HE" key="false"/>
+		<edit Type="short int" Name="Range PB HEAT" key="false"/>
+		<edit Type="short int" Name="Range PB Smoke" key="false"/>
+		<edit Type="short int" Name="Range PB Spec" key="false"/>
+		<edit Type="short int" Name="Range Close AP" key="false"/>
+		<edit Type="short int" Name="Range Close HE" key="false"/>
+		<edit Type="short int" Name="Range Close HEAT" key="false"/>
+		<edit Type="short int" Name="Range Close Smoke" key="false"/>
+		<edit Type="short int" Name="Range Close Spec" key="false"/>
+		<edit Type="short int" Name="Range Med AP" key="false"/>
+		<edit Type="short int" Name="Range Med HE" key="false"/>
+		<edit Type="short int" Name="Range Med HEAT" key="false"/>
+		<edit Type="short int" Name="Range Med Smoke" key="false"/>
+		<edit Type="short int" Name="Range Med Spec" key="false"/>
+		<edit Type="short int" Name="Range Long AP" key="false"/>
+		<edit Type="short int" Name="Range Long HE" key="false"/>
+		<edit Type="short int" Name="Range Long HEAT" key="false"/>
+		<edit Type="short int" Name="Range Long Smoke" key="false"/>
+		<edit Type="short int" Name="Range Long Spec" key="false"/>
+		<edit Type="long int" Name="Kill Rating PB AP" key="false"/>
+		<edit Type="long int" Name="Kill Rating PB HE" key="false"/>
+		<edit Type="long int" Name="Kill Rating PB HEAT" key="false"/>
+		<edit Type="long int" Name="Kill Rating PB Smoke" key="false"/>
+		<edit Type="long int" Name="Kill Rating PB Spec" key="false"/>
+		<edit Type="long int" Name="Kill Rating Close AP" key="false"/>
+		<edit Type="long int" Name="Kill Rating Close HE" key="false"/>
+		<edit Type="long int" Name="Kill Rating Close HEAT" key="false"/>
+		<edit Type="long int" Name="Kill Rating Close Smoke" key="false"/>
+		<edit Type="long int" Name="Kill Rating Close Spec" key="false"/>
+		<edit Type="long int" Name="Kill Rating Med AP" key="false"/>
+		<edit Type="long int" Name="Kill Rating Med HE" key="false"/>
+		<edit Type="long int" Name="Kill Rating Med HEAT" key="false"/>
+		<edit Type="long int" Name="Kill Rating Med Smoke" key="false"/>
+		<edit Type="long int" Name="Kill Rating Med Spec" key="false"/>
+		<edit Type="long int" Name="Kill Rating Long AP" key="false"/>
+		<edit Type="long int" Name="Kill Rating Long HE" key="false"/>
+		<edit Type="long int" Name="Kill Rating Long HEAT" key="false"/>
+		<edit Type="long int" Name="Kill Rating Long Smoke" key="false"/>
+		<edit Type="long int" Name="Kill Rating Long Spec" key="false"/>
+		<edit Type="long int" Name="Blast Rating PB AP" key="false"/>
+		<edit Type="long int" Name="Blast Rating PB HE" key="false"/>
+		<edit Type="long int" Name="Blast Rating PB HEAT" key="false"/>
+		<edit Type="long int" Name="Blast Rating PB Smoke" key="false"/>
+		<edit Type="long int" Name="Blast Rating PB Spec" key="false"/>
+		<edit Type="long int" Name="Blast Rating Close AP" key="false"/>
+		<edit Type="long int" Name="Blast Rating Close HE" key="false"/>
+		<edit Type="long int" Name="Blast Rating Close HEAT" key="false"/>
+		<edit Type="long int" Name="Blast Rating Close Smoke" key="false"/>
+		<edit Type="long int" Name="Blast Rating Close Spec" key="false"/>
+		<edit Type="long int" Name="Blast Rating Med AP" key="false"/>
+		<edit Type="long int" Name="Blast Rating Med HE" key="false"/>
+		<edit Type="long int" Name="Blast Rating Med HEAT" key="false"/>
+		<edit Type="long int" Name="Blast Rating Med Smoke" key="false"/>
+		<edit Type="long int" Name="Blast Rating Med Spec" key="false"/>
+		<edit Type="long int" Name="Blast Rating Long AP" key="false"/>
+		<edit Type="long int" Name="Blast Rating Long HE" key="false"/>
+		<edit Type="long int" Name="Blast Rating Long HEAT" key="false"/>
+		<edit Type="long int" Name="Blast Rating Long Smoke" key="false"/>
+		<edit Type="long int" Name="Blast Rating Long Spec" key="false"/>
+		<edit Type="long int" Name="Weapon Sound" key="false"/>
+		<edit Type="long int" Name="How Mounted" key="false"/>
+	</WeaponsDatabase>
+	<VehiclesDatabase Name="Vehicles Database" Num="128">
+		<edit Type="string" Name="Name" key="true"/>
+		<edit Type="short int" Name="Type" key="false"/>
+		<edit Type="short int" Name="Nation" key="false"/>
+		<edit Type="short int" Name="Class" key="false"/>
+		<edit Type="short int" Name="Hull Guns Type 1" key="false"/>
+		<edit Type="short int" Name="Hull Guns Type 2" key="false"/>
+		<edit Type="short int" Name="Hull Guns Type 3" key="false"/>
+		<edit Type="short int" Name="Hull Guns Ammo 1 AP" key="false"/>
+		<edit Type="short int" Name="Hull Guns Ammo 1 HE" key="false"/>
+		<edit Type="short int" Name="Hull Guns Ammo 1 HEAT" key="false"/>
+		<edit Type="short int" Name="Hull Guns Ammo 1 Smoke" key="false"/>
+		<edit Type="short int" Name="Hull Guns Ammo 1 Spec" key="false"/>
+		<edit Type="short int" Name="Hull Guns Ammo 2 AP" key="false"/>
+		<edit Type="short int" Name="Hull Guns Ammo 2 HE" key="false"/>
+		<edit Type="short int" Name="Hull Guns Ammo 2 HEAT" key="false"/>
+		<edit Type="short int" Name="Hull Guns Ammo 2 Smoke" key="false"/>
+		<edit Type="short int" Name="Hull Guns Ammo 2 Spec" key="false"/>
+		<edit Type="short int" Name="Hull Guns Ammo 3 AP" key="false"/>
+		<edit Type="short int" Name="Hull Guns Ammo 3 HE" key="false"/>
+		<edit Type="short int" Name="Hull Guns Ammo 3 HEAT" key="false"/>
+		<edit Type="short int" Name="Hull Guns Ammo 3 Smoke" key="false"/>
+		<edit Type="short int" Name="Hull Guns Ammo 3 Spec" key="false"/>
+		<edit Type="bool" Name="Hull Guns Exposed to Fire 1" key="false"/>
+		<edit Type="bool" Name="Hull Guns Exposed to Fire 2" key="false"/>
+		<edit Type="bool" Name="Hull Guns Exposed to Fire 3" key="false"/>
+		<edit Type="short int" Name="Hull Guns Fire Angle 1" key="false"/>
+		<edit Type="short int" Name="Hull Guns Fire Angle 2" key="false"/>
+		<edit Type="short int" Name="Hull Guns Fire Angle 3" key="false"/>
+		<edit Type="short int" Name="Hull Guns Front Low" key="false"/>
+		<edit Type="short int" Name="Hull Guns Front Med" key="false"/>
+		<edit Type="short int" Name="Hull Guns Front High" key="false"/>
+		<edit Type="short int" Name="Hull Guns Front Side Low" key="false"/>
+		<edit Type="short int" Name="Hull Guns Front Side Med" key="false"/>
+		<edit Type="short int" Name="Hull Guns Front Side High" key="false"/>
+		<edit Type="short int" Name="Hull Guns Side Low" key="false"/>
+		<edit Type="short int" Name="Hull Guns Side Med" key="false"/>
+		<edit Type="short int" Name="Hull Guns Side High" key="false"/>
+		<edit Type="short int" Name="Hull Guns Side Rear Low" key="false"/>
+		<edit Type="short int" Name="Hull Guns Side Rear Med" key="false"/>
+		<edit Type="short int" Name="Hull Guns Side Rear High" key="false"/>
+		<edit Type="short int" Name="Hull Guns Rear Low" key="false"/>
+		<edit Type="short int" Name="Hull Guns Rear Med" key="false"/>
+		<edit Type="short int" Name="Hull Guns Rear High" key="false"/>
+		<edit Type="short int" Name="Hull Guns Top Low" key="false"/>
+		<edit Type="short int" Name="Hull Guns Top Med" key="false"/>
+		<edit Type="short int" Name="Hull Guns Top High" key="false"/>
+		<edit Type="short int" Name="Hull Guns Bottom Low" key="false"/>
+		<edit Type="short int" Name="Hull Guns Bottom Med" key="false"/>
+		<edit Type="short int" Name="Hull Guns Bottom High" key="false"/>
+		<edit Type="short int" Name="Hull Crew Cover Front" key="false"/>
+		<edit Type="short int" Name="Hull Crew Cover Front Side" key="false"/>
+		<edit Type="short int" Name="Hull Crew Cover Side" key="false"/>
+		<edit Type="short int" Name="Hull Crew Cover Side Rear" key="false"/>
+		<edit Type="short int" Name="Hull Crew Cover Rear" key="false"/>
+		<edit Type="short int" Name="Hull Crew Cover Top" key="false"/>
+		<edit Type="short int" Name="Hull Crew Cover Bottom" key="false"/>
+		<edit Type="short int" Name="Hull Rotation Rate" key="false"/>
+		<edit Type="short int" Name="Hull Mount Type" key="false"/>
+		<edit Type="short int" Name="Turret Guns 1" key="false"/>
+		<edit Type="short int" Name="Turret Guns 2" key="false"/>
+		<edit Type="short int" Name="Turret Guns 3" key="false"/>
+		<edit Type="short int" Name="Turret Guns Ammo 1 AP" key="false"/>
+		<edit Type="short int" Name="Turret Guns Ammo 1 HE" key="false"/>
+		<edit Type="short int" Name="Turret Guns Ammo 1 HEAT" key="false"/>
+		<edit Type="short int" Name="Turret Guns Ammo 1 Smoke" key="false"/>
+		<edit Type="short int" Name="Turret Guns Ammo 1 Spec" key="false"/>
+		<edit Type="short int" Name="Turret Guns Ammo 2 AP" key="false"/>
+		<edit Type="short int" Name="Turret Guns Ammo 2 HE" key="false"/>
+		<edit Type="short int" Name="Turret Guns Ammo 2 HEAT" key="false"/>
+		<edit Type="short int" Name="Turret Guns Ammo 2 Smoke" key="false"/>
+		<edit Type="short int" Name="Turret Guns Ammo 2 Spec" key="false"/>
+		<edit Type="short int" Name="Turret Guns Ammo 3 AP" key="false"/>
+		<edit Type="short int" Name="Turret Guns Ammo 3 HE" key="false"/>
+		<edit Type="short int" Name="Turret Guns Ammo 3 HEAT" key="false"/>
+		<edit Type="short int" Name="Turret Guns Ammo 3 Smoke" key="false"/>
+		<edit Type="short int" Name="Turret Guns Ammo 3 Spec" key="false"/>
+		<edit Type="bool" Name="Turret Guns Exposed to Fire 1" key="false"/>
+		<edit Type="bool" Name="Turret Guns Exposed to Fire 2" key="false"/>
+		<edit Type="bool" Name="Turret Guns Exposed to Fire 3" key="false"/>
+		<edit Type="short int" Name="Turret Guns Fire Angle 1" key="false"/>
+		<edit Type="short int" Name="Turret Guns Fire Angle 2" key="false"/>
+		<edit Type="short int" Name="Turret Guns Fire Angle 3" key="false"/>
+		<edit Type="short int" Name="Turret Armor Front Low" key="false"/>
+		<edit Type="short int" Name="Turret Armor Front Med" key="false"/>
+		<edit Type="short int" Name="Turret Armor Front High" key="false"/>
+		<edit Type="short int" Name="Turret Armor Front Side Low" key="false"/>
+		<edit Type="short int" Name="Turret Armor Front Side Med" key="false"/>
+		<edit Type="short int" Name="Turret Armor Front Side High" key="false"/>
+		<edit Type="short int" Name="Turret Armor Side Low" key="false"/>
+		<edit Type="short int" Name="Turret Armor Side Med" key="false"/>
+		<edit Type="short int" Name="Turret Armor Side High" key="false"/>
+		<edit Type="short int" Name="Turret Armor Side Rear Low" key="false"/>
+		<edit Type="short int" Name="Turret Armor Side Rear Med" key="false"/>
+		<edit Type="short int" Name="Turret Armor Side Rear High" key="false"/>
+		<edit Type="short int" Name="Turret Armor Rear Low" key="false"/>
+		<edit Type="short int" Name="Turret Armor Rear Med" key="false"/>
+		<edit Type="short int" Name="Turret Armor Rear High" key="false"/>
+		<edit Type="short int" Name="Turret Armor Top Low" key="false"/>
+		<edit Type="short int" Name="Turret Armor Top Med" key="false"/>
+		<edit Type="short int" Name="Turret Armor Top High" key="false"/>
+		<edit Type="short int" Name="Turret Armor Bottom Low" key="false"/>
+		<edit Type="short int" Name="Turret Armor Bottom Med" key="false"/>
+		<edit Type="short int" Name="Turret Armor Bottom High" key="false"/>
+		<edit Type="short int" Name="Turret Crew Cover Front" key="false"/>
+		<edit Type="short int" Name="Turret Crew Cover Front Side" key="false"/>
+		<edit Type="short int" Name="Turret Crew Cover Side" key="false"/>
+		<edit Type="short int" Name="Turret Crew Cover Side Rear" key="false"/>
+		<edit Type="short int" Name="Turret Crew Cover Rear" key="false"/>
+		<edit Type="short int" Name="Turret Crew Cover Top" key="false"/>
+		<edit Type="short int" Name="Turret Crew Cover Bottom" key="false"/>
+		<edit Type="short int" Name="Turret Rotation Rate" key="false"/>
+		<edit Type="short int" Name="Turret Mount Type" key="false"/>
+		<edit Type="short int" Name="Chance to Hit Hull" key="false"/>
+		<edit Type="short int" Name="Chance to Hit Turret" key="false"/>
+		<edit Type="short int" Name="Number of Mounts" key="false"/>
+		<edit Type="short int" Name="Acceleration" key="false"/>
+		<edit Type="short int" Name="Max Speed" key="false"/>
+		<edit Type="short int" Name="Move Type" key="false"/>
+		<edit Type="short int" Name="Vehicular Size" key="false"/>
+		<edit Type="short int" Name="Element Radius" key="false"/>
+		<edit Type="short int" Name="Integrity" key="false"/>
+		<edit Type="short int" Name="Number of Crew" key="false"/>
+		<edit Type="short int" Name="Best Kill" key="false"/>
+		<edit Type="short int" Name="Best Mount" key="false"/>
+		<edit Type="short int" Name="Best Gun" key="false"/>
+		<edit Type="bool" Name="Has Gyro" key="false"/>
+		<edit Type="bool" Name="Has Schurzen" key="false"/>
+		<edit Type="bool" Name="Gun Rotates on Base" key="false"/>
+		<edit Type="short int" Name="Ground Pressure" key="false"/>
+	</VehiclesDatabase>
+</root>

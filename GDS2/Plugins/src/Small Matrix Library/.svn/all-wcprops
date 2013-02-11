@@ -1,0 +1,221 @@
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/!svn/ver/1/trunk/Development/GDS2/Plugins/src/Small%20Matrix%20Library
+END
+sml.dsp
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/!svn/ver/1/trunk/Development/GDS2/Plugins/src/Small%20Matrix%20Library/sml.dsp
+END
+smlextra.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/!svn/ver/1/trunk/Development/GDS2/Plugins/src/Small%20Matrix%20Library/smlextra.cpp
+END
+smlxspace.inl
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/!svn/ver/1/trunk/Development/GDS2/Plugins/src/Small%20Matrix%20Library/smlxspace.inl
+END
+smlxSSEmult.inl
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/!svn/ver/1/trunk/Development/GDS2/Plugins/src/Small%20Matrix%20Library/smlxSSEmult.inl
+END
+smlxGENops.h
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/!svn/ver/1/trunk/Development/GDS2/Plugins/src/Small%20Matrix%20Library/smlxGENops.h
+END
+smlxGENops.i
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/!svn/ver/1/trunk/Development/GDS2/Plugins/src/Small%20Matrix%20Library/smlxGENops.i
+END
+sml.dsw
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/!svn/ver/1/trunk/Development/GDS2/Plugins/src/Small%20Matrix%20Library/sml.dsw
+END
+ismmath.h
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/!svn/ver/1/trunk/Development/GDS2/Plugins/src/Small%20Matrix%20Library/ismmath.h
+END
+smlxSSEops2.i
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/!svn/ver/1/trunk/Development/GDS2/Plugins/src/Small%20Matrix%20Library/smlxSSEops2.i
+END
+smlmath.h
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/!svn/ver/1/trunk/Development/GDS2/Plugins/src/Small%20Matrix%20Library/smlmath.h
+END
+smlxunas.inl
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/!svn/ver/1/trunk/Development/GDS2/Plugins/src/Small%20Matrix%20Library/smlxunas.inl
+END
+smlxopt.h
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/!svn/ver/1/trunk/Development/GDS2/Plugins/src/Small%20Matrix%20Library/smlxopt.h
+END
+smlxmatrix.h
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/!svn/ver/1/trunk/Development/GDS2/Plugins/src/Small%20Matrix%20Library/smlxmatrix.h
+END
+smlmath_sse.inl
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/!svn/ver/1/trunk/Development/GDS2/Plugins/src/Small%20Matrix%20Library/smlmath_sse.inl
+END
+smlxunroll.inl
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/!svn/ver/1/trunk/Development/GDS2/Plugins/src/Small%20Matrix%20Library/smlxunroll.inl
+END
+smlbound.inl
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/!svn/ver/1/trunk/Development/GDS2/Plugins/src/Small%20Matrix%20Library/smlbound.inl
+END
+smlbound.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/!svn/ver/1/trunk/Development/GDS2/Plugins/src/Small%20Matrix%20Library/smlbound.cpp
+END
+ismbound.h
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/!svn/ver/1/trunk/Development/GDS2/Plugins/src/Small%20Matrix%20Library/ismbound.h
+END
+smlxGENops.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/!svn/ver/1/trunk/Development/GDS2/Plugins/src/Small%20Matrix%20Library/smlxGENops.cpp
+END
+smlxGENops.inl
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/!svn/ver/1/trunk/Development/GDS2/Plugins/src/Small%20Matrix%20Library/smlxGENops.inl
+END
+smlxspace.h
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/!svn/ver/1/trunk/Development/GDS2/Plugins/src/Small%20Matrix%20Library/smlxspace.h
+END
+smlextra.h
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/!svn/ver/1/trunk/Development/GDS2/Plugins/src/Small%20Matrix%20Library/smlextra.h
+END
+smlmath.inl
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/!svn/ver/1/trunk/Development/GDS2/Plugins/src/Small%20Matrix%20Library/smlmath.inl
+END
+smlmath.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/!svn/ver/1/trunk/Development/GDS2/Plugins/src/Small%20Matrix%20Library/smlmath.cpp
+END
+smlxopt.inl
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/!svn/ver/1/trunk/Development/GDS2/Plugins/src/Small%20Matrix%20Library/smlxopt.inl
+END
+src.zip
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/!svn/ver/1/trunk/Development/GDS2/Plugins/src/Small%20Matrix%20Library/src.zip
+END
+smlxun2.inl
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/!svn/ver/1/trunk/Development/GDS2/Plugins/src/Small%20Matrix%20Library/smlxun2.inl
+END
+smlxmatrix.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/!svn/ver/1/trunk/Development/GDS2/Plugins/src/Small%20Matrix%20Library/smlxmatrix.cpp
+END
+smlxmatrix.inl
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/!svn/ver/1/trunk/Development/GDS2/Plugins/src/Small%20Matrix%20Library/smlxmatrix.inl
+END
+sml.opt
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/!svn/ver/1/trunk/Development/GDS2/Plugins/src/Small%20Matrix%20Library/sml.opt
+END
+smlxSSEops.h
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/!svn/ver/1/trunk/Development/GDS2/Plugins/src/Small%20Matrix%20Library/smlxSSEops.h
+END
+smlxmult.inl
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/!svn/ver/1/trunk/Development/GDS2/Plugins/src/Small%20Matrix%20Library/smlxmult.inl
+END
+smlxSSEops.i
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/!svn/ver/1/trunk/Development/GDS2/Plugins/src/Small%20Matrix%20Library/smlxSSEops.i
+END
+smlbound.h
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/!svn/ver/1/trunk/Development/GDS2/Plugins/src/Small%20Matrix%20Library/smlbound.h
+END
+smlxmmm.inl
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/!svn/ver/1/trunk/Development/GDS2/Plugins/src/Small%20Matrix%20Library/smlxmmm.inl
+END
+smlxfun.inl
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/!svn/ver/1/trunk/Development/GDS2/Plugins/src/Small%20Matrix%20Library/smlxfun.inl
+END

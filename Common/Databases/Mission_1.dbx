@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<CDefinedDatabase Version="1.0" Name="Mission1_Database" SchemaFile="Databases\\Mission.fxl" Schema="MissionSchema" NumItems="9">
+	<CDatabaseItem WaveNumber="1" SpawnerName="BF109E_Light_N" PrimaryObjective="true" SpawnerFile="spawners\ju_87.sxl" EnemyCount="1">
+	</CDatabaseItem>
+	<CDatabaseItem WaveNumber="1" SpawnerName="BF109E_Light_SE" PrimaryObjective="true" SpawnerFile="spawners\ju_87.sxl" EnemyCount="1">
+	</CDatabaseItem>
+	<CDatabaseItem WaveNumber="1" SpawnerName="BF109E_Light_W" PrimaryObjective="true" SpawnerFile="spawners\ju_87.sxl" EnemyCount="1">
+	</CDatabaseItem>
+	<CDatabaseItem WaveNumber="1" SpawnerName="HE111_Light_SW" PrimaryObjective="true" SpawnerFile="spawners\ju_88.sxl" EnemyCount="1">
+	</CDatabaseItem>
+	<CDatabaseItem WaveNumber="1" SpawnerName="HE111_Light_S" PrimaryObjective="true" SpawnerFile="spawners\ju_88.sxl" EnemyCount="1">
+	</CDatabaseItem>
+	<CDatabaseItem WaveNumber="2" SpawnerName="BF109E_Light_NW" PrimaryObjective="true" SpawnerFile="spawners\bf109e.sxl" EnemyCount="1">
+	</CDatabaseItem>
+	<CDatabaseItem WaveNumber="2" SpawnerName="BF109E_Light_N" PrimaryObjective="true" SpawnerFile="spawners\bf109e.sxl" EnemyCount="1">
+	</CDatabaseItem>
+	<CDatabaseItem WaveNumber="2" SpawnerName="BF109E_Light_NE" PrimaryObjective="true" SpawnerFile="spawners\bf109e.sxl" EnemyCount="1">
+	</CDatabaseItem>
+	<CDatabaseItem WaveNumber="2" SpawnerName="HE111_Light_S" PrimaryObjective="true" SpawnerFile="spawners\bf109e.sxl" EnemyCount="1">
+	</CDatabaseItem>	
+</CDefinedDatabase>

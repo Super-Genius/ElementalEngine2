@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root Num="1">
+<TAS_EnvGenList Name="TAS Environment Generator" Num="5" >
+	<edit Type="string" Name="Skybox Directory" key="true"/>
+	<edit Type="string" Name="Water CFG File" key="true"/>
+	<edit Type="float" Name="Fog R Val" key="true"/>
+	<edit Type="float" Name="Fog G Val" key="true"/>
+	<edit Type="float" Name="Fog B Val" key="true"/>
+</TAS_EnvGenList>
+</root>

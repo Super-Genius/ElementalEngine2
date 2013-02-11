@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root Num="1">
+<PsychDatabase Name="Psychological Database" Num="5">
+	<edit Type="string" Name="Stressor Group" key="false"/>
+	<edit Type="string" Name="Stressor" key="true"/>
+	<edit Type="float" Name="Stress" key="false"/>
+	<edit Type="float" Name="Discipline" key="false"/>
+	<edit Type="float" Name="Morale" key="false"/>
+</PsychDatabase>
+</root>

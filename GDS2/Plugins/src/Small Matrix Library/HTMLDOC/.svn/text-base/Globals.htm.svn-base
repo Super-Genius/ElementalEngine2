@@ -1,0 +1,62 @@
+<HTML>
+<HEAD>
+<TITLE>Globals</TITLE>
+<link href="styles.css" rel="STYLESHEET" type="text/css">
+</head>
+<BODY LINK="#0000ff" VLINK="#800080">
+<P><A NAME="Globals"></a>[<A href="index.htm">SML Overview</a>]</P>
+
+<P>void <b>Assign</b>(<A HREF="SMLXMatrix.htm#SMLXMatrix">SMLXMatrix</A>&amp; A, const <A HREF="SMLXMatrix.htm#SMLXMatrix">SMLXMatrix</A>&amp; B);</P>
+<h4>Discussion</h4>
+<P>Method copies elements of matrix B to matrix A, calls corresponding method from SMLTMatrix class or function GenericAssign.</P>
+<h4>Parameters</h4>
+<P><B><I>A</I></B> - matrix to be initialized.</P>
+<P><B><I>B</I></B> - matrix which is copied.</P>
+<h4>Return Value</h4>
+<P>No.</P>
+<p>[<A href="Globals.htm#Globals">top</A>]</p><hr>
+
+<P>Function void <B>Assign</B>(<A HREF="SMLXMatrix.htm#SMLXMatrix">SMLXMatrix</A>&amp; <B><I>A</I></B>, float <B><I>value</I></B>)</P>
+<h4>Discussion</h4>
+<P>void Assign(<A HREF="SMLXMatrix.htm#SMLXMatrix">SMLXMatrix</A>&amp; A, float value);</P>
+<P>Method initializes elements of matrix A by value of variable <B><I>value</I></B>, calls corresponding method from SMLTMatrix class or function GenericAssign from array AssignValuePool.</P>
+<h4>Parameters</h4>
+<P><B><I>A</I></B> - matrix to be initialized.</P>
+<P><B><I>value</I></B> - variable used for initialization.</P>
+<h4>Return Value</h4>
+<P>No.</P>
+<p>[<A href="Globals.htm#Globals">top</A>]</p><hr>
+
+<P>void __fastcall <b>GenericAssign</b>(<A HREF="SMLXMatrix.htm#SMLXMatrix">SMLXMatrix</A>&amp; A, const <A HREF="SMLXMatrix.htm#SMLXMatrix">SMLXMatrix</A>&amp; B);</P>
+<h4>Discussion</h4>
+<P>Method copies elements of matrix B to matrix A.</P>
+<h4>Parameters</h4>
+<P><B><I>A</I></B> - matrix to be initialized.</P>
+<P><B><I>B</I></B> - matrix which is copied.</P>
+<h4>Return Value</h4>
+<P>No.</P>
+<p>[<A href="Globals.htm#Globals">top</A>]</p><hr>
+
+<P>Function void <B>GenericAssignValue</B>(<A HREF="SMLXMatrix.htm#SMLXMatrix">SMLXMatrix</A>&amp; <B><I>A</I></B>, float <B><I>value</I></B>)</P>
+<h4>Discussion</h4>
+<P>void __fastcall GenericAssignValue(<A HREF="SMLXMatrix.htm#SMLXMatrix">SMLXMatrix</A>&amp; A, float v);</P>
+<P>Method initializes elements of matrix A by value of variable <B><I>value</I></B>. </P>
+<h4>Parameters</h4>
+<P><B><I>A</I></B> - matrix to be initialized.</P>
+<P><B><I>value</I></B> - variable used for initialization.</P>
+<h4>Return Value</h4>
+<P>No.</P>
+<p>[<A href="Globals.htm#Globals">top</A>]</p><hr>
+
+<P><A HREF="SMLXTmpMatrix.htm#SMLXTmpMatrix">SMLXTmpMatrix</A>&amp; __fastcall <B>GenericTMat</B>(short <B><I>nrow</I></B>, short <B><I>ncol</I></B>);</P>
+<h4>Discussion</h4>
+<P>Method creates object of <B>SMLXTmpMatrix </B>class for matrix with not optimized sizes. <B>SMLXTmpMatrix</B> objects are placed into array pool of <B>SMLXMatrix </B>class. Memory for elements of the matrix is allocated dynamically. </P>
+<h4>Parameters</h4>
+<P><B><I>nrow</I></B> - number of lines in matrix</P>
+<P><B><I>ncol</I></B> - number of columns in matrix.</P>
+<h4>Return Value</h4>
+<P>Returns reference to object of <B>SMLXTmpMatrix</B> class.</P>
+<p>[<A href="Globals.htm#Globals">top</A>]</p><hr>
+
+</BODY>
+</HTML>

@@ -1,0 +1,268 @@
+<HTML>
+<HEAD>
+<TITLE>Class SMLXSpatialVector</TITLE>
+<link href="styles.css" rel="STYLESHEET" type="text/css">
+</head>
+<BODY LINK="#0000ff" VLINK="#800080">
+<P><A NAME="SMLXSpatialVector"></a>[<A href="index.htm">SML Overview</a>]</P>
+
+<h1>class SMLXSpatialVector: public <A HREF="SMLXMatrix.htm">SMLXMatrix</A></h1>
+<PRE>#include &quot;<A HREF="smlxmatrix.h">smlxmatrix.h</A>&quot;</PRE>
+
+<P><B>SMLXSpatialVector</B> is a derivative class and inherits <B>SMLXMatrix</B> class. This class represents spatial vectors with sizes ranging from 1 to 6. Methods of this class allow to access components of spatial vector, define its size (number of elements), length and square of the length, create spatial vector from matrix. All operations with spatial vectors may be performed with 1-column matrices, but separate class for vectors gives advantages of direct access to vector's elements using one index via public member <B>vec</B>. </P>
+<hr>
+<H2>Public Interface</H2>
+<TABLE CELLSPACING=0 BORDER=0 WIDTH=530>
+<TR>
+<TD><P><A HREF="SMLXSpatialVector.htm#constructor">constructors</A></TD>
+<TD><P><A HREF="SMLXSpatialVector.htm#Size">Size</A></TD>
+<TD><P><A HREF="SMLXSpatialVector.htm#LengthSquared">LengthSquared</A></TD>
+</TR>
+<TR>
+<TD><P><A HREF="SMLXSpatialVector.htm#Length">Length</A></TD>
+<TD><P><A HREF="SMLXSpatialVector.htm#Angular">Angular</A></TD>
+<TD><P><A HREF="SMLXSpatialVector.htm#Linear">Linear</A></TD>
+</TR>
+<TR>
+<TD><P><A HREF="SMLXSpatialVector.htm#Copy">Copy</A></TD>
+<TD><P><A HREF="SMLXSpatialVector.htm#operator_timesassign">operator*=</A></TD>
+<TD><P><A HREF="SMLXSpatialVector.htm#operator_assign">Operator=</A></TD>
+</TR>
+</TABLE>
+
+<HR>
+<H2>Public Data</H2>
+<P>float <B>vec[6]</B>;</P>
+<P>Defines components of the current vector.</P>
+<p>[<A href="SMLXSpatialVector.htm#SMLXSpatialVector">top</A>]</p><hr>
+
+<P><A NAME="constructor"></A>SMLLIBENTRY <B>SMLXSpatialVector</B>();</P>
+<h4>Discussion</h4>
+<P>Default <B>SMLXSpatialVector</B> object constructor. Defines vector of size 6.</P>
+<P><I>Example:</I></P>
+<PRE><A href="SMLXSpatialVector.htm#SMLXSpatialVector">SMLXSpatialVector</A> A();</PRE>
+<h4>Parameters</h4>
+<P>This constructor has not any input <h4>Parameters</h4>
+<p>[<A href="SMLXSpatialVector.htm#SMLXSpatialVector">top</A>]</p><hr>
+
+<P>SMLLIBENTRY <B>SMLXSpatialVector</B>(const <A HREF="SMLVec3f.htm#SMLVec3f">SMLVec3f</A>&amp; <B><I>A</I></B>);</P>
+<h4>Discussion</h4>
+<P><B>SMLXSpatialVector</B> object constructor from <B>SMLVec3f</B> object. Defines vector of size 3.</P>
+<P><I>Example:</I></P>
+<PRE>float crd[3] = {1, 3, 2};<BR><A href="SMLVec3f.htm#SMLVec3f">SMLVec3f</A> A(crd);<BR><A href="SMLXSpatialVector.htm#SMLXSpatialVector">SMLXSpatialVector</A> B(A);</PRE>
+<h4>Parameters</h4>
+<P><B><I>A</I></B> -reference to constant object <B>SMLVec3f,</B> which is used to create this <B>SMLXSpatialVector</B>.</P>
+<p>[<A href="SMLXSpatialVector.htm#SMLXSpatialVector">top</A>]</p><hr>
+
+<P>SMLLIBENTRY <B>SMLXSpatialVector</B>(const <A HREF="SMLVec4f.htm#SMLVec4f">SMLVec4f</A>&amp; <B><I>A</I></B>);</P>
+<h4>Discussion</h4>
+<P><B>SMLXSpatialVector</B> object constructor from <B>SMLVec4f</B> object. Defines vector of size 4.</P>
+<P><I>Example:</I></P>
+<PRE>float crd[4] = {1, 3, 2, 1};<BR><A href="SMLVec4f.htm#SMLVec4f">SMLVec4f</A> A(crd);<BR><A href="SMLXSpatialVector.htm#SMLXSpatialVector">SMLXSpatialVector</A> B(A);</PRE>
+<h4>Parameters</h4>
+<P><B><I>A</I></B> -reference to constant object <B>SMLVec4f,</B> which is used to create this <B>SMLXSpatialVector</B>.</P>
+<p>[<A href="SMLXSpatialVector.htm#SMLXSpatialVector">top</A>]</p><hr>
+
+<P>SMLLIBENTRY <B>SMLXSpatialVector</B>(const <A HREF="SMLXMatrix.htm#SMLXMatrix">SMLXMatrix</A>&amp; <B><I>A</I></B>);</P>
+<h4>Discussion</h4>
+<P><B>SMLXSpatialVector</B> object constructor from <B>SMLXMatrix</B> object. Defines vector of size A.<A HREF="SMLXMatrix.htm#nrows">nrows</A>(), while A.<A HREF="SMLXMatrix.htm#ncols">ncols</A>() is assumed to be equal 1.</P>
+<P><I>Example:</I></P>
+<PRE>float crd[6] = {1, 3, 2, 1, 3, 6};<BR><A HREF="SMLXMatrix.htm#SMLXMatrix">SMLXMatrix</A> A(6, 1, crd);<BR><A href="SMLXSpatialVector.htm#SMLXSpatialVector">SMLXSpatialVector</A> B(A);</PRE>
+<h4>Parameters</h4>
+<P><B><I>A</I></B> -reference to constant object <B>SMLXMatrix</B>, which is used to create this <B>SMLXSpatialVector</B>.</P>
+<p>[<A href="SMLXSpatialVector.htm#SMLXSpatialVector">top</A>]</p><hr>
+
+<P>SMLLIBENTRY <B>SMLXSpatialVector</B>(const <A HREF="SMLXSpatialVector.htm#SMLXSpatialVector">SMLXSpatialVector</A>&amp; <B><I>A</I></B>);</P>
+<h4>Discussion</h4>
+<P><B>SMLXSpatialVector</B> object copy-constructor.</P>
+<P><I>Example:</I></P>
+<PRE>float crd[6] = {1, 3, 2, 1, 3, 6}; <A href="SMLXSpatialVector.htm#SMLXSpatialVector">SMLXSpatialVector</A> A(crd);<BR><A href="SMLXSpatialVector.htm#SMLXSpatialVector">SMLXSpatialVector</A> B(A);</PRE>
+<h4>Parameters</h4>
+<P><B><I>A</I></B> - reference to constant <B>SMLXSpatialVector</B> object-copy, which is used to create this <B>SMLXSpatialVector</B>.</P>
+<p>[<A href="SMLXSpatialVector.htm#SMLXSpatialVector">top</A>]</p><hr>
+
+<P>SMLLIBENTRY explicit <B>SMLXSpatialVector</B>(const float* <B><I>initialValues</I></B>);</P>
+<h4>Discussion</h4>
+<P>Explicit <B>SMLXSpatialVector</B> object constructor. Defines vector of size 6 and sets it by using values from float array <B><I>initialValues</I></B>.</P>
+<P><I>Example:</I></P>
+<PRE>float crd[6] = {1, 3, 2, 1, 3, 6}; <A href="SMLXSpatialVector.htm#SMLXSpatialVector">SMLXSpatialVector</A> B(crd);</PRE>
+<h4>Parameters</h4>
+<P><B><I>initialValues</I></B> - initial values for the vector.</P>
+<p>[<A href="SMLXSpatialVector.htm#SMLXSpatialVector">top</A>]</p><hr>
+
+<P>SMLLIBENTRY explicit <B>SMLXSpatialVector</B>(float <B><I>value</I></B>);</P>
+<h4>Discussion</h4>
+<P>Explicit <B>SMLXSpatialVector</B> object constructor. Defines vector of size 1 and sets it to parameter <B><I>value</I></B>.</P>
+<P><I>Example:</I></P>
+<PRE><A href="SMLXSpatialVector.htm#SMLXSpatialVector">SMLXSpatialVector</A> B(1.0f);</PRE>
+<h4>Parameters</h4>
+<P><B><I>value</I></B> - initial value for 1x1 vector.</P>
+<p>[<A href="SMLXSpatialVector.htm#SMLXSpatialVector">top</A>]</p><hr>
+
+<P>SMLLIBENTRY <B>SMLXSpatialVector</B>(float, float);</P>
+<P><B>SMLXSpatialVector</B> object constructor. Created spatial vector from two elements.</P>
+<P><I>Example:</I></P>
+<PRE><A href="SMLXSpatialVector.htm#SMLXSpatialVector">SMLXSpatialVector</A> B(1.0f, 2.0f);</PRE>
+<h4>Parameters</h4>
+<P>1<SUP>st</SUP> parameter - 1<SUP>st</SUP> vector element.</P>
+<P>2<SUP>nd</SUP> parameter - 2<SUP>nd</SUP> vector element.</P>
+<p>[<A href="SMLXSpatialVector.htm#SMLXSpatialVector">top</A>]</p><hr>
+
+<P>SMLLIBENTRY <B>SMLXSpatialVector</B>(float, float, float);</P>
+<h4>Discussion</h4>
+<P><B>SMLXSpatialVector </B>object constructor. Created spatial vector from three elements.</P>
+<P><I>Example:</I></P>
+<PRE><A href="SMLXSpatialVector.htm#SMLXSpatialVector">SMLXSpatialVector</A> B(1.0f, 2.0f, 1.0f);</PRE>
+<h4>Parameters</h4>
+<P>1<SUP>st</SUP> parameter - 1<SUP>st</SUP> vector element.</P>
+<P>2<SUP>nd</SUP> parameter - 2<SUP>nd</SUP> vector element.</P>
+<P>3<SUP>rd</SUP> parameter - 3<SUP>rd</SUP> vector element.</P>
+<p>[<A href="SMLXSpatialVector.htm#SMLXSpatialVector">top</A>]</p><hr>
+
+<P>SMLLIBENTRY <B>SMLXSpatialVector</B>(float, float, float, float);</P>
+<h4>Discussion</h4>
+<P><B>SMLXSpatialVector </B>object constructor. Created spatial vector from four elements.</P>
+<P><I>Example:</I></P>
+<PRE><A href="SMLXSpatialVector.htm#SMLXSpatialVector">SMLXSpatialVector</A> B(1.0f, 2.0f, 1.0f, 3.0f);</PRE>
+<h4>Parameters</h4>
+<P>1<SUP>st</SUP> parameter - 1<SUP>st</SUP> vector element.</P>
+<P>2<SUP>nd</SUP> parameter - 2<SUP>nd</SUP> vector element.</P>
+<P>3<SUP>rd</SUP> parameter - 3<SUP>rd</SUP> vector element.</P>
+<P>4<SUP>th</SUP> parameter - 4<SUP>th</SUP> vector element.</P>
+<p>[<A href="SMLXSpatialVector.htm#SMLXSpatialVector">top</A>]</p><hr>
+
+<P>SMLLIBENTRY <B>SMLXSpatialVector</B>(float, float, float, float, float);</P>
+<h4>Discussion</h4>
+<P><B>SMLXSpatialVector </B>object constructor. Created spatial vector from five elements.</P>
+<P><I>Example:</I></P>
+<PRE><A href="SMLXSpatialVector.htm#SMLXSpatialVector">SMLXSpatialVector</A> B(1.0f, 2.0f, 1.0f, 3.0f, 2.0f);</PRE>
+<h4>Parameters</h4>
+<P>1<SUP>st</SUP> parameter - 1<SUP>st</SUP> vector element.</P>
+<P>2<SUP>nd</SUP> parameter - 2<SUP>nd</SUP> vector element.</P>
+<P>3<SUP>rd</SUP> parameter - 3<SUP>rd</SUP> vector element.</P>
+<P>4<SUP>th</SUP> parameter - 4<SUP>th</SUP> vector element.</P>
+<P>5<SUP>th</SUP> parameter - 5<SUP>th</SUP> vector element.</P>
+<p>[<A href="SMLXSpatialVector.htm#SMLXSpatialVector">top</A>]</p><hr>
+
+<P>SMLLIBENTRY <B>SMLXSpatialVector</B>(float, float, float, float, float, float);</P>
+<h4>Discussion</h4>
+<P><B>SMLXSpatialVector </B>object constructor. Created spatial vector from six elements.</P>
+<P><I>Example:</I></P>
+<PRE><A href="SMLXSpatialVector.htm#SMLXSpatialVector">SMLXSpatialVector</A> B(1.0f, 2.0f, 1.0f, 3.0f, 2.0f, 5.0f);</PRE>
+<h4>Parameters</h4>
+<P>1<SUP>st</SUP> parameter - 1<SUP>st</SUP> vector element.</P>
+<P>2<SUP>nd</SUP> parameter - 2<SUP>nd</SUP> vector element.</P>
+<P>3<SUP>rd</SUP> parameter - 3<SUP>rd</SUP> vector element.</P>
+<P>4<SUP>th</SUP> parameter - 4<SUP>th</SUP> vector element.</P>
+<P>5<SUP>th</SUP> parameter - 5<SUP>th</SUP> vector element.</P>
+<P>6<SUP>th</SUP> parameter - 6<SUP>th</SUP> vector element.</P>
+<p>[<A href="SMLXSpatialVector.htm#SMLXSpatialVector">top</A>]</p><hr>
+
+<P>SMLLIBENTRY void <A NAME="operator_timesassign"><B>operator*=</B></A>(float <B><I>scale</I></B>);</P>
+<h4>Discussion</h4>
+<P>Method is an overloaded operator-function. It computes product of this vector and variable <B><I>scale</I></B>. The result is assigned to this vector.</P>
+<P><I>Example:</I></P>
+<PRE>float crd[6] = {1, 3, 2, 1, 1, 4};<BR><A href="SMLXSpatialVector.htm#SMLXSpatialVector">SMLXSpatialVector</A> A(crd);<BR>A *= 2.0f</PRE>
+<h4>Parameters</h4>
+<P><B><I>scale</I></B> - multiplier.</P>
+<h4>Return Value</h4>
+<P>No.</P>
+<p>[<A href="SMLXSpatialVector.htm#SMLXSpatialVector">top</A>]</p><hr>
+
+<P>SMLLIBENTRY void <A NAME="operator_assign"><B>operator=</B></A>(const <A HREF="SMLXMatrix.htm#SMLXMatrix">SMLXMatrix</A>&amp; <B><I>A</I></B>);</P>
+<h4>Discussion</h4>
+<P>Method is an overloaded operator-function. This <B>SMLXSpatialVector</B> object is initialized by values from matrix <B><I>A</I></B>. Size of this vector is set to A.<A HREF="SMLXMatrix.htm#nrows">nrows</A>(), while A.<A HREF="SMLXMatrix.htm#ncols">ncols</A>() is assumed to be equal 1.</P>
+<P><I>Example:</I></P>
+<PRE>float crd[6] = {1, 3, 2, 1, 1, 4};<BR><A href="SMLXSpatialVector.htm#SMLXSpatialVector">SMLXSpatialVector</A> A(crd), B;<BR>B = A;</PRE>
+<h4>Parameters</h4>
+<P><B><I>A</I></B> - reference to constant <B>SMLXMatrix</B> object which is used for initializing of this spatial vector.</P>
+<h4>Return Value</h4>
+<P>No.</P>
+<p>[<A href="SMLXSpatialVector.htm#SMLXSpatialVector">top</A>]</p><hr>
+
+<P>SMLLIBENTRY void operator<B>=</B>(const <A HREF="SMLXSpatialVector.htm#SMLXSpatialVector">SMLXSpatialVector</A>&amp; <B><I>A</I></B>);</P>
+<h4>Discussion</h4>
+<P>Method is an overloaded operator-function. This <B>SMLXSpatialVector</B> object is initialized by values from vector <B><I>A</I></B>.</P>
+<h4>Parameters</h4>
+<P><B><I>A</I></B> - reference to constant <B>SMLXSpatialVector</B>.</P>
+<h4>Return Value</h4>
+<P>No.</P>
+<p>[<A href="SMLXSpatialVector.htm#SMLXSpatialVector">top</A>]</p><hr>
+
+<P>SMLLIBENTRY int <A NAME="Size"><B>Size</B></A>() const;</P>
+<h4>Discussion</h4>
+<P>Returns a size of the spatial vector (number from 1 to 6).</P>
+<P><I>Example:</I></P>
+<PRE>int sz, crd[6] = {1, 3, 2, 1, 1, 4};<BR><A href="SMLXSpatialVector.htm#SMLXSpatialVector">SMLXSpatialVector</A> A(crd), sz = A.Size();</PRE>
+<h4>Parameters</h4>
+<P>No.</P>
+<h4>Return Value</h4>
+<P>Number of vector elements.</P>
+<p>[<A href="SMLXSpatialVector.htm#SMLXSpatialVector">top</A>]</p><hr>
+
+<P>SMLLIBENTRY float <A NAME="LengthSquared"><B>LengthSquared</B></A>() const;</P>
+<h4>Discussion</h4>
+<P>Computes a square of the length of this spatial vector.</P>
+<P><I>Example:</I></P>
+<PRE>float ls;<BR><A href="SMLXSpatialVector.htm#SMLXSpatialVector">SMLXSpatialVector</A> A(3,4,5,8,1,2); ls = A.LengthSquared();</PRE>
+<h4>Parameters</h4>
+<P>No.</P>
+<h4>Return Value</h4>
+<P>Square of the length of the spatial vector.</P>
+<p>[<A href="SMLXSpatialVector.htm#SMLXSpatialVector">top</A>]</p><hr>
+
+<P>SMLLIBENTRY float <A NAME="Length"><B>Length</B></A>() const;</P>
+<h4>Discussion</h4>
+<P>Computes length of this spatial vector.</P>
+<P><I>Example:</I></P>
+<PRE>float l;<BR><A href="SMLXSpatialVector.htm#SMLXSpatialVector">SMLXSpatialVector</A> A(3,4,5,8,2,1); l = A.Length();</PRE>
+<h4>Parameters</h4>
+<P>No.</P>
+<h4>Return Value</h4>
+<P>Length of the spatial vector.</P>
+<p>[<A href="SMLXSpatialVector.htm#SMLXSpatialVector">top</A>]</p><hr>
+
+<P>SMLLIBENTRY <A HREF="SMLVec3f.htm#SMLVec3f">SMLVec3f</A>&amp; <A NAME="Angular"><B>Angular</B></A>()</P>
+<P>SMLLIBENTRY const <A HREF="SMLVec3f.htm#SMLVec3f">SMLVec3f</A>&amp; <B>Angular</B>() const;</P>
+<h4>Discussion</h4>
+<P>Returns angular components of this spatial vector (first 3 elements of the vector). Method is valid only for 6X1 vectors.</P>
+<P><I>Example:</I></P>
+<PRE>float *ang;<BR><A href="SMLXSpatialVector.htm#SMLXSpatialVector">SMLXSpatialVector</A> A(3,4,5,8,2,1); ang = A.Angular();</PRE>
+<h4>Parameters</h4>
+<P>No.</P>
+<h4>Return Value</h4>
+<P>Reference to <B>SMLVec3f</B> object (3 element-vector) representing angular components of this vector.</P>
+<p>[<A href="SMLXSpatialVector.htm#SMLXSpatialVector">top</A>]</p><hr>
+
+<P>SMLLIBENTRY <A HREF="SMLVec3f.htm#SMLVec3f">SMLVec3f</A>&amp; <A NAME="Linear"><B>Linear</B></A>();</P>
+<P>SMLLIBENTRY const <A HREF="SMLVec3f.htm#SMLVec3f">SMLVec3f</A>&amp; <B>Linear</B>() const;</P>
+<h4>Discussion</h4>
+<P>Returns linear components of this spatial vector (last 3 elements of the vector). Method is defined only for 6X1 vectors.</P>
+<P><I>Example:</I></P>
+<PRE>float *lin;<BR><A href="SMLXSpatialVector.htm#SMLXSpatialVector">SMLXSpatialVector</A> A(3,4,5,8,2,1); lin = A.Linear();</PRE>
+<h4>Parameters</h4>
+<P>No.</P>
+<h4>Return Value</h4>
+<P>Reference to <B>SMLVec3f</B> object (3 element-vector) representing linear components of this vector.</P>
+<p>[<A href="SMLXSpatialVector.htm#SMLXSpatialVector">top</A>]</p><hr>
+
+<P>SMLLIBENTRY void <B>AdjustSize</B>(short <B><I>nrow</I></B>);</P>
+<h4>Discussion</h4>
+<P>Sets spatial vector size to be equal <B><I>nrow</I></B>. </P>
+<h4>Parameters</h4>
+<P><B><I>nrow</I></B> - number of vector elements.</P>
+<h4>Return Value</h4>
+<P>No.</P>
+<p>[<A href="SMLXSpatialVector.htm#SMLXSpatialVector">top</A>]</p><hr>
+
+<P>SMLLIBENTRY void <A NAME="Copy"><B>Copy</B></A>(const <A HREF="SMLXMatrix.htm#SMLXMatrix">SMLXMatrix</A>&amp; <B><I>A</I></B>, int <B><I>row</I></B> = 0);</P>
+<h4>Discussion</h4>
+<P>Copies <B><I>row</I></B> of matrix <B><I>A </I></B>into this vector.</P>
+<h4>Parameters</h4>
+<P><B><I>A</I></B> - reference to <B>SMLXMatrix</B> (source).</P>
+<P><B><I>row</I></B> - rows number to be copied into this vector.</P>
+<h4>Return Value</h4>
+<P>No.</P>
+<p>[<A href="SMLXSpatialVector.htm#SMLXSpatialVector">top</A>]</p><hr>
+</BODY>
+</HTML>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CLanguage Version="1.0" LanguageName="English" NumEntries="3">
+	<CLanguageEntry Version="1.0" Key="TestString1" Text="Hello, my name is flo" NumParams="0"/>
+	<CLanguageEntry Version="1.0" Key="TestString2" Text="Hello, %TestName%, how are you?" NumParams="1">
+		<Param Name="TestName" Type="string"/>
+	</CLanguageEntry>
+	<CLanguageEntry Version="1.0" Key="TestString3" Text="Well, %TestName%, I have %TestAppleCount% apples." NumParams="2">
+		<Param Name="TestName" Type="string"/>
+		<Param Name="TestAppleCount" Type="int"/>
+	</CLanguageEntry>
+</CLanguage>

@@ -1,0 +1,6 @@
+; TimeOfDayEditor.def : Declares the module parameters for the DLL.
+
+LIBRARY      "TimeOfDayEditor"
+
+EXPORTS
+    ; Explicit exports can go here

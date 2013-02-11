@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root Num="1">
+<SoundDatabase Name="Sound Database" Num="5" >
+	<edit Type="string" Name="Name" key="true"/>
+	<edit Type="string" Name="File Name" key="false"/>
+	<combo Type="string" name="Loading" key="false" DefSelect="cached" 
+		NumOptions="3"
+		option1="cached"
+		option2="memory"
+		option3="streamed"
+		/>
+	<combo Type="bool" name="Looping" key="false" DefSelect="false" 
+		NumOptions="2"
+		option1="true"
+		option2="false"
+		/>
+	<combo Type="bool" name="3D" key="false" DefSelect="false" 
+		NumOptions="2"
+		option1="true"
+		option2="false"
+		/>
+</SoundDatabase>
+</root>

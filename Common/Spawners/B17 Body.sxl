@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<CSpawner Name="World" vers="2.5">
+	<CEntity Name="B17_Body" EntityTypes="models" PositionX="0" PositionY="0" PositionZ="0" RotationX="0" RotationY="0" RotationZ="0" ScalingX="1.0" ScalingY="1.0" ScalingZ="1.0">
+		<CHierarchicalModel Name="B17_Body_RO" FileName="models\hierarchical models\b-17_ballturret\b_17.hrc">
+		</CHierarchicalModel>		
+	</CEntity>
+</CSpawner>

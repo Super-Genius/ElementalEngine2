@@ -1,0 +1,15 @@
+#include "Shaders\HLSLconstants.h"
+#include "Shaders\PSH_CommonFunctions.h"
+
+struct PSIn
+{
+	float3 TexCoord0	: TEXCOORD0;
+};
+
+PS_MRT_OUTPUT main(	PSIn  In, 
+				uniform samplerCUBE CubeMap : register(s0) )
+{
+    float4 skyColor = texCUBE(CubeMap, In.TexCoord0);
+	return MakeMRTOutput( skyColor, 1.f );
+	
+}

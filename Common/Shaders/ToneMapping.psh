@@ -1,0 +1,43 @@
+#include "Shaders\HLSLconstants.h"
+
+struct v2f
+{
+	float4 Position     : POSITION;
+	float2 TexCoord0    : TEXCOORD0;	// TexCoord
+};
+
+uniform float4 SceneBrightness : register(c14);
+
+float4 main(v2f i, 
+	uniform sampler2D CachedTexture : register(s0)) 	: COLOR
+{
+	
+	float4 outcolor;
+	
+	float4 base = tex2D( CachedTexture, i.TexCoord0 );
+	float lower = 0;
+	float median = .4;
+	float upper = .95;
+	float upperhalf = upper - median;
+	float lowerhalf = median - lower;
+	float incominglum = base.r + base.g + base.b;
+	incominglum = incominglum / 3.f;
+	incominglum = clamp(incominglum, 0, 1 );
+	if( incominglum < median )
+	{
+		base.rgb = 0.5 * ( (base.rgb - lower) / lowerhalf  ) ;
+	}
+	else
+	{
+		base.rgb = float3(0.5, 0.5, 0.5) +  (( (base.rgb - median) / (upperhalf)) * 0.5);		
+	}
+	//map to correct half	
+	float3 contrast = pow( base.rgb, 4 );
+	contrast = contrast*4;
+	float3 color = base.rgb + contrast.rgb;	
+	color.rgb = 1.0 - exp(-1 * color.rgb);
+	outcolor.rgb = color;
+	outcolor.a = 1.0;
+	
+	return outcolor;
+}

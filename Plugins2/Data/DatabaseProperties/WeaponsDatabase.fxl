@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root Num="1">
+<WeaponsDatabase Name="Weapons Database" Num="112">
+	<edit Type="string" Name="Name" key="true"/>
+	<edit Type="short int" Name="Class" key="false"/>
+	<edit Type="short int" Name="Icon" key="false"/>
+	<edit Type="short int" Name="Fire Animation Sequence" key="false"/>
+	<edit Type="short int" Name="Type" key="false"/>
+	<edit Type="short int" Name="Primary Target" key="false"/>
+	<edit Type="short int" Name="Valid Targets" key="false"/>
+	<edit Type="long int" Name="Reload Time Chamber" key="false"/>
+	<edit Type="long int" Name="Reload Time Clip" key="false"/>
+	<edit Type="long int" Name="Time to Fire" key="false"/>
+	<edit Type="long int" Name="Setup Time" key="false"/>
+	<edit Type="short int" Name="Rounds Per Clip" key="false"/>
+	<edit Type="short int" Name="Rounds in One Burst" key="false"/>
+	<edit Type="short int" Name="Weapon Weight" key="false"/>
+	<edit Type="short int" Name="Clip Weight" key="false"/>
+	<edit Type="long int" Name="Cool Rate" key="false"/>
+	<edit Type="long int" Name="Heat Rate" key="false"/>
+	<edit Type="long int" Name="No Jam or Break Quality" key="false"/>
+	<edit Type="bool" Name="Assault Fire" key="false"/>
+	<edit Type="bool" Name="Can Use Bayonet" key="false"/>
+	<edit Type="bool" Name="Back Blast" key="false"/>
+	<edit Type="bool" Name="White Phosphorus" key="false"/>
+	<edit Type="bool" Name="Rifle Grenades" key="false"/>
+	<edit Type="bool" Name="Demo Charge" key="false"/>
+	<edit Type="bool" Name="Cannister" key="false"/>
+	<edit Type="short int" Name="Blast Size AP" key="false"/>
+	<edit Type="short int" Name="Blast Size HE" key="false"/>
+	<edit Type="short int" Name="Blast Size HEAT" key="false"/>
+	<edit Type="short int" Name="Blast Size Smoke" key="false"/>
+	<edit Type="short int" Name="Blast Size Spec" key="false"/>
+	<edit Type="short int" Name="Blast Radius AP" key="false"/>
+	<edit Type="short int" Name="Blast Radius HE" key="false"/>
+	<edit Type="short int" Name="Blast Radius HEAT" key="false"/>
+	<edit Type="short int" Name="Blast Radius Smoke" key="false"/>
+	<edit Type="short int" Name="Blast Radius Spec" key="false"/>
+	<edit Type="short int" Name="Min Range AP" key="false"/>
+	<edit Type="short int" Name="Min Range HE" key="false"/>
+	<edit Type="short int" Name="Min Range HEAT" key="false"/>
+	<edit Type="short int" Name="Min Range Smoke" key="false"/>
+	<edit Type="short int" Name="Min Range Spec" key="false"/>
+	<edit Type="bool" Name="Fire Direction AP" key="false"/>
+	<edit Type="bool" Name="Fire Direction HE" key="false"/>
+	<edit Type="bool" Name="Fire Direction HEAT" key="false"/>
+	<edit Type="bool" Name="Fire Direction Smoke" key="false"/>
+	<edit Type="bool" Name="Fire Direction Spec" key="false"/>
+	<edit Type="long int" Name="Base Accuracy AP" key="false"/>
+	<edit Type="long int" Name="Base Accuracy HE" key="false"/>
+	<edit Type="long int" Name="Base Accuracy HEAT" key="false"/>
+	<edit Type="long int" Name="Base Accuracy Smoke" key="false"/>
+	<edit Type="long int" Name="Base Accuracy Spec" key="false"/>
+	<edit Type="short int" Name="Range PB AP" key="false"/>
+	<edit Type="short int" Name="Range PB HE" key="false"/>
+	<edit Type="short int" Name="Range PB HEAT" key="false"/>
+	<edit Type="short int" Name="Range PB Smoke" key="false"/>
+	<edit Type="short int" Name="Range PB Spec" key="false"/>
+	<edit Type="short int" Name="Range Close AP" key="false"/>
+	<edit Type="short int" Name="Range Close HE" key="false"/>
+	<edit Type="short int" Name="Range Close HEAT" key="false"/>
+	<edit Type="short int" Name="Range Close Smoke" key="false"/>
+	<edit Type="short int" Name="Range Close Spec" key="false"/>
+	<edit Type="short int" Name="Range Med AP" key="false"/>
+	<edit Type="short int" Name="Range Med HE" key="false"/>
+	<edit Type="short int" Name="Range Med HEAT" key="false"/>
+	<edit Type="short int" Name="Range Med Smoke" key="false"/>
+	<edit Type="short int" Name="Range Med Spec" key="false"/>
+	<edit Type="short int" Name="Range Long AP" key="false"/>
+	<edit Type="short int" Name="Range Long HE" key="false"/>
+	<edit Type="short int" Name="Range Long HEAT" key="false"/>
+	<edit Type="short int" Name="Range Long Smoke" key="false"/>
+	<edit Type="short int" Name="Range Long Spec" key="false"/>
+	<edit Type="long int" Name="Kill Rating PB AP" key="false"/>
+	<edit Type="long int" Name="Kill Rating PB HE" key="false"/>
+	<edit Type="long int" Name="Kill Rating PB HEAT" key="false"/>
+	<edit Type="long int" Name="Kill Rating PB Smoke" key="false"/>
+	<edit Type="long int" Name="Kill Rating PB Spec" key="false"/>
+	<edit Type="long int" Name="Kill Rating Close AP" key="false"/>
+	<edit Type="long int" Name="Kill Rating Close HE" key="false"/>
+	<edit Type="long int" Name="Kill Rating Close HEAT" key="false"/>
+	<edit Type="long int" Name="Kill Rating Close Smoke" key="false"/>
+	<edit Type="long int" Name="Kill Rating Close Spec" key="false"/>
+	<edit Type="long int" Name="Kill Rating Med AP" key="false"/>
+	<edit Type="long int" Name="Kill Rating Med HE" key="false"/>
+	<edit Type="long int" Name="Kill Rating Med HEAT" key="false"/>
+	<edit Type="long int" Name="Kill Rating Med Smoke" key="false"/>
+	<edit Type="long int" Name="Kill Rating Med Spec" key="false"/>
+	<edit Type="long int" Name="Kill Rating Long AP" key="false"/>
+	<edit Type="long int" Name="Kill Rating Long HE" key="false"/>
+	<edit Type="long int" Name="Kill Rating Long HEAT" key="false"/>
+	<edit Type="long int" Name="Kill Rating Long Smoke" key="false"/>
+	<edit Type="long int" Name="Kill Rating Long Spec" key="false"/>
+	<edit Type="long int" Name="Blast Rating PB AP" key="false"/>
+	<edit Type="long int" Name="Blast Rating PB HE" key="false"/>
+	<edit Type="long int" Name="Blast Rating PB HEAT" key="false"/>
+	<edit Type="long int" Name="Blast Rating PB Smoke" key="false"/>
+	<edit Type="long int" Name="Blast Rating PB Spec" key="false"/>
+	<edit Type="long int" Name="Blast Rating Close AP" key="false"/>
+	<edit Type="long int" Name="Blast Rating Close HE" key="false"/>
+	<edit Type="long int" Name="Blast Rating Close HEAT" key="false"/>
+	<edit Type="long int" Name="Blast Rating Close Smoke" key="false"/>
+	<edit Type="long int" Name="Blast Rating Close Spec" key="false"/>
+	<edit Type="long int" Name="Blast Rating Med AP" key="false"/>
+	<edit Type="long int" Name="Blast Rating Med HE" key="false"/>
+	<edit Type="long int" Name="Blast Rating Med HEAT" key="false"/>
+	<edit Type="long int" Name="Blast Rating Med Smoke" key="false"/>
+	<edit Type="long int" Name="Blast Rating Med Spec" key="false"/>
+	<edit Type="long int" Name="Blast Rating Long AP" key="false"/>
+	<edit Type="long int" Name="Blast Rating Long HE" key="false"/>
+	<edit Type="long int" Name="Blast Rating Long HEAT" key="false"/>
+	<edit Type="long int" Name="Blast Rating Long Smoke" key="false"/>
+	<edit Type="long int" Name="Blast Rating Long Spec" key="false"/>
+	<edit Type="long int" Name="Weapon Sound" key="false"/>
+	<edit Type="long int" Name="How Mounted" key="false"/>
+</WeaponsDatabase>
+</root>

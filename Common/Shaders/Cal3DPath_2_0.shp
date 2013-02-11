@@ -1,0 +1,93 @@
+<?xml version="1.0"?>
+<CShaderPath Version="1" API="DX9" ShaderVersion="2.0" numeffects="1" effectname1="shaders/cal3deffect.efx" numentries="22" >
+
+	<ShaderEntry type="vertexshader" numflags="3" flag1="SHADOW_CAST_OMNI" 
+												  flag2="SHADOW_CAST_HEMI" 
+												  flag3="BONES_1" 
+												  shaderfile="Shaders/Cal_CastShadow_Skin.vsh" ShaderDefineFile="" ></ShaderEntry>
+	<ShaderEntry type="pixelshader" numflags="3" flag1="SHADOW_CAST_OMNI" 
+												  flag2="SHADOW_CAST_HEMI" 
+												  flag3="BONES_1" 
+												  shaderfile="Shaders/LPM.psh" ShaderDefineFile="" ></ShaderEntry>
+	
+	<ShaderEntry type="vertexshader" numflags="2" flag1="SHADOW_CAST_OMNI" 
+												  flag2="SHADOW_CAST_HEMI" 
+												  shaderfile="Shaders/Cal_CastShadow_NoSkin.vsh" ShaderDefineFile="" ></ShaderEntry>
+	<ShaderEntry type="pixelshader" numflags="2" flag1="SHADOW_CAST_OMNI" 
+												  flag2="SHADOW_CAST_HEMI" 
+												  shaderfile="Shaders/LPM.psh" ShaderDefineFile="" ></ShaderEntry>
+	
+	<ShaderEntry type="vertexshader" numflags="0" shaderfile="Shaders/Cal_NoSkin_v1_Fog.vsh" ShaderDefineFile="" ></ShaderEntry>
+	<ShaderEntry type="pixelshader" numflags="0" shaderfile="Shaders/Cal_L_2_0.psh" ShaderDefineFile="" ></ShaderEntry>
+
+	<ShaderEntry type="vertexshader" numflags="1" flag1="ALPHA" shaderfile="Shaders/Cal_NoSkin_v1_Fog.vsh" ShaderDefineFile="" ></ShaderEntry>
+	<ShaderEntry type="pixelshader"	numflags="1" flag1="ALPHA" shaderfile="Shaders/Cal_L_2_0.psh" ShaderDefineFile="" ></ShaderEntry>
+
+	<ShaderEntry type="vertexshader" numflags="2" 
+		flag1="SHADOW_RECEIVE_OMNI" 
+		flag2="SHADOW_RECEIVE_HEMI" 
+		shaderfile="Shaders/Cal_DepthShadow_NoSkin.vsh" ShaderDefineFile="Shaders/ModelShaderDefines.sdx" ></ShaderEntry>
+	<ShaderEntry type="pixelshader" numflags="2" 
+		flag1="SHADOW_RECEIVE_OMNI" 
+		flag2="SHADOW_RECEIVE_HEMI" 
+		shaderfile="Shaders/Cal_DepthShadow_P_L.psh" ShaderDefineFile="Shaders/ModelShaderDefines.sdx" ></ShaderEntry>
+
+	<ShaderEntry type="vertexshader" numflags="1"
+		flag1="SHADER_RF_LIGHT" 
+		shaderfile="Shaders/Cal_NoSkin_v1_Fog.vsh" ShaderDefineFile="Shaders/ModelShaderDefines.sdx" ></ShaderEntry>
+	<ShaderEntry type="pixelshader" numflags="1" 
+		flag1="SHADER_RF_LIGHT" 
+		shaderfile="Shaders/Cal_L_2_0.psh" ShaderDefineFile="Shaders/ModelShaderDefines.sdx" ></ShaderEntry>
+
+	<ShaderEntry type="vertexshader" numflags="3"
+		flag1="SHADER_RF_LIGHT" 
+		flag2="SHADOW_RECEIVE_OMNI" 
+		flag3="SHADOW_RECEIVE_HEMI" 
+		shaderfile="Shaders/Cal_DepthShadow_NoSkin.vsh" ShaderDefineFile="Shaders/ModelShaderDefines.sdx" ></ShaderEntry>
+	<ShaderEntry type="pixelshader" numflags="3" 
+		flag1="SHADER_RF_LIGHT" 
+		flag2="SHADOW_RECEIVE_OMNI" 
+		flag3="SHADOW_RECEIVE_HEMI" 
+		shaderfile="Shaders/Cal_DepthShadow_P_L.psh" ShaderDefineFile="Shaders/ModelShaderDefines.sdx" ></ShaderEntry>
+
+	<ShaderEntry type="vertexshader" numflags="1"
+		flag1="BONES_1" 
+		shaderfile="Shaders/Cal_v1.vsh" ShaderDefineFile="" ></ShaderEntry>
+	<ShaderEntry type="pixelshader" numflags="1"
+		flag1="BONES_1" 
+		shaderfile="Shaders/Cal_L_2_0.psh" ShaderDefineFile="" ></ShaderEntry>
+
+	<ShaderEntry type="vertexshader" numflags="3"
+		flag1="BONES_1" 
+		flag2="SHADOW_RECEIVE_OMNI" 
+		flag3="SHADOW_RECEIVE_HEMI" 
+		shaderfile="Shaders/Cal_DepthShadow_P.vsh" ShaderDefineFile="Shaders/ModelShaderDefines.sdx" ></ShaderEntry>
+	<ShaderEntry type="pixelshader" numflags="3"
+		flag1="BONES_1" 
+		flag2="SHADOW_RECEIVE_OMNI" 
+		flag3="SHADOW_RECEIVE_HEMI" 
+		shaderfile="Shaders/Cal_DepthShadow_P_L.psh" ShaderDefineFile="Shaders/ModelShaderDefines.sdx" ></ShaderEntry>
+
+	<ShaderEntry type="vertexshader" numflags="2"
+		flag1="BONES_1" 
+		flag2="SHADER_RF_LIGHT" 
+		shaderfile="Shaders/Cal_v1.vsh" ShaderDefineFile="Shaders/ModelShaderDefines.sdx" ></ShaderEntry>
+	<ShaderEntry type="pixelshader" numflags="2"
+		flag1="BONES_1"
+		flag2="SHADER_RF_LIGHT"
+		shaderfile="Shaders/Cal_L_2_0.psh" ShaderDefineFile="Shaders/ModelShaderDefines.sdx" ></ShaderEntry>
+
+	<ShaderEntry type="vertexshader" numflags="4"
+		flag1="BONES_1" 
+		flag2="SHADER_RF_LIGHT" 
+		flag3="SHADOW_RECEIVE_OMNI" 
+		flag4="SHADOW_RECEIVE_HEMI" 
+		shaderfile="Shaders/Cal_DepthShadow_P.vsh" ShaderDefineFile="Shaders/ModelShaderDefines.sdx" ></ShaderEntry>
+	<ShaderEntry type="pixelshader" numflags="4"
+		flag1="BONES_1"
+		flag2="SHADER_RF_LIGHT"
+		flag3="SHADOW_RECEIVE_OMNI" 
+		flag4="SHADOW_RECEIVE_HEMI" 
+		shaderfile="Shaders/Cal_DepthShadow_P_L.psh" ShaderDefineFile="Shaders/ModelShaderDefines.sdx" ></ShaderEntry>
+
+</CShaderPath>

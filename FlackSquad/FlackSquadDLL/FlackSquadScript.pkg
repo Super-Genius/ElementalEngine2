@@ -1,0 +1,13 @@
+typedef _cstring TCHAR;
+
+$#include "StdAfx.h"
+$#include "../../Plugins2/ElementalEngine/EELuaScript/LuaHashString.h"
+$pfile "../../Plugins2/include/EELuaScript/EE_binding_common.pkg"
+
+$#if 0 // To not include the "../"
+$cfile "FlackSquadNetwork.h"
+$hfile "FlackSquadComponent.h"
+$cfile "../../ElementalEngine2/SDK/include/NetworkMessages.h"
+$#endif
+
+$#pragma warning(disable : 4800)

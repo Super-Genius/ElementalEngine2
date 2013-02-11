@@ -1,0 +1,30 @@
+#include "Shaders\HLSLconstants.h"
+
+struct v2f
+{
+	float4 Position				: POSITION;
+	float2 TexCoord0			: TEXCOORD0;
+	float2 TexCoord1			: TEXCOORD1;
+	float2 FogSin				: COLOR;
+};
+
+float4 main(v2f i, 
+	uniform sampler2D BaseMap : register(s0),
+	uniform sampler2D NoiseMap : register(s1)) 	: COLOR
+{
+	float4 clouds = tex2D(BaseMap, i.TexCoord0);
+	float4 noisePix = tex2D(NoiseMap, i.TexCoord1);
+	float sinAdjust = (i.FogSin.g / 2.0) + 0.5;
+	noisePix.r = noisePix.r + sinAdjust;
+	if (noisePix.r > 1.0)
+	{
+		noisePix.r = noisePix.r - 1.0;
+	}
+	float pixAdjust = ((noisePix.r * 2.0) - 1.0) / 64.0;
+	float4 outcolor  =  clamp(clouds + (clouds*pixAdjust), 0.0, 1.0);
+//	float4 outcolor = float4(noisePix.r, 0.0, 0.0, 1.0);
+//	outcolor.rgb =  outcolor.rgb * i.Fog;	
+//	outcolor = float4(1.0 * sinAdjust, 0.0, 0.0, 1.0/*outcolor.a*/);	
+	outcolor.a = outcolor.a*(i.FogSin.r ) ;   	
+	return outcolor;
+}

@@ -1,0 +1,9 @@
+SCC = This is a source code control file
+
+[ExampleEditor.vcproj]
+SCC_Aux_Path = ""
+SCC_Project_Name = Perforce Project
+
+[GUIEditor.vcproj]
+SCC_Aux_Path = "P4SCC#xp-server1:1666##ntourte##SIGDEV-DESK61"
+SCC_Project_Name = Perforce Project

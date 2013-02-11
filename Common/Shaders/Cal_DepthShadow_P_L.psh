@@ -1,0 +1,74 @@
+#include "Shaders\HLSLconstants.h"
+#include "Shaders\PSH_CommonFunctions.h"
+
+struct v2f
+{
+	float4 HPosition	: POSITION;
+	float2 TexCoord0    : TEXCOORD0;	// TexCoord
+#if (ACTIVELIGHTS > 0)
+	float4 TangentLight[ACTIVELIGHTS]	: TEXCOORD1;
+#endif
+	float4 ViewVectorFog	: TEXCOORD5;
+#if (ACTIVELIGHTS > 0) && (SHADOWMAPS > 0)
+	float4 ShadowCoord[SHADOWMAPS]	: TEXCOORD6;
+#endif
+	float4 PosInDepth		: COLOR0;
+#if( DETAILLIGHTS > 0 )
+	float3 Normal			: NORMAL;
+#endif
+};
+
+uniform float4 ColorMultiplier		: register(c19);
+uniform float4 SpecularMultiplier	: register(c20);
+uniform float3 FogColor				: register(c21);
+uniform float4 Glow					: register(c22);
+
+PS_MRT_OUTPUT main(v2f i, 
+	uniform sampler2D CachedTexture : register(s0),
+	uniform sampler2D NormalMap : register(s1)
+#if (SHADOWMAPS > 0)
+	,uniform sampler2D ShadowMap[SHADOWMAPS] : register(s2)
+#endif
+	)
+{
+	//Do the rest of the shader calculation
+	float4 outcolor  = tex2D(CachedTexture, i.TexCoord0);
+
+	half3 diffuse = half3(0.0,0.0,0.0);
+	float4 normalcolor = tex2D(NormalMap, i.TexCoord0);
+	float3 normal = UnpackNormal(normalcolor);
+	half fShadowTerm = 1.0;
+
+#if (ACTIVELIGHTS > 0)
+	NormalizeLights( i.TangentLight );
+
+#if (SHADOWMAPS > 0)
+	for( int shadowmap = 0; shadowmap < SHADOWMAPS; shadowmap++ )
+		fShadowTerm = min( fShadowTerm, CalcShadowTerm( i.ShadowCoord[shadowmap], ShadowMap[shadowmap] ) );
+#endif
+
+//	i.TangentLight[0].w *= fShadowTerm;
+
+	diffuse = CalcLights( normal, i.TangentLight );
+	float3 ViewVec = normalize( i.ViewVectorFog.xyz );
+	half3 specular = SpecularMultiplier.x*CalcMultiLightColoredSpecular( normal, ViewVec, SpecularMultiplier.y, normalcolor.a, i.TangentLight );
+#endif
+
+#if (DETAILLIGHTS > 0)
+	diffuse += CalcPixelLights( i.PosInDepth.xyz, i.Normal, lightData );
+#endif
+
+	// light
+#if (ACTIVELIGHTS > 0)
+	outcolor.rgb = outcolor.rgb * (lightAmbient.xyz + diffuse.rgb * fShadowTerm) + specular.rgb;
+#else
+	outcolor.rgb = outcolor.rgb * (lightAmbient.xyz + diffuse.rgb);
+#endif
+	// tint
+	outcolor *= ColorMultiplier;
+	// fog
+	outcolor.rgb = lerp( outcolor.rgb, FogColor.rgb, i.ViewVectorFog.w );
+	// glow
+	outcolor.a *= Glow.x;
+	return MakeMRTOutput( outcolor, i.PosInDepth.x );
+}

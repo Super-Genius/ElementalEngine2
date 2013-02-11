@@ -1,0 +1,610 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\gds.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#include ""afxprint.rc""       // printing/print preview resources\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\3d.ICO"
+IDI_UPARROW             ICON                    "res\\uparrow.ico"
+IDI_DNARROW             ICON                    "res\\dnarrow.ico"
+IDI_NEWDIR              ICON                    "res\\newdir.ico"
+IDI_DELDIR              ICON                    "res\\deldir.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDR_MAINFRAME           BITMAP                  "res\\mainframe.bmp"
+IDB_TOOLBAR_LARGE       BITMAP                  "res\\Toolbarl.bmp"
+IDB_TOOLBAR_LARGE_DISABLED BITMAP                  "res\\Toolbarld.bmp"
+IDB_SIGDEV              BITMAP                  "res\\LogoSD-SuperSmall.bmp"
+IDB_TOOLBAR             BITMAP                  "res\\Toolbar.bmp"
+IDR_MAINFRAME_LARGE     BITMAP                  "res\\mainframel.bmp"
+IDB_DRIVEIMAGES         BITMAP                  "res\\Drives.bmp"
+IDB_STARTSCREEN         BITMAP                  "res\\startscreen.bmp"
+IDB_STARTSCREENOK       BITMAP                  "res\\startscreenOK.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDR_MAINFRAME TOOLBAR  16, 16
+BEGIN
+    BUTTON      ID_FILE_NEW
+    BUTTON      ID_FILE_OPEN
+    BUTTON      ID_FILE_SAVE
+    SEPARATOR
+    BUTTON      ID_EDIT_CUT
+    BUTTON      ID_EDIT_COPY
+    SEPARATOR
+    BUTTON      ID_EDIT_PASTE
+    SEPARATOR
+    BUTTON      ID_FILE_PRINT
+    SEPARATOR
+    BUTTON      ID_APP_ABOUT
+    SEPARATOR
+    BUTTON      ID_CONTEXT_HELP
+    BUTTON      ID_HELP_FINDER
+END
+
+IDR_MAINFRAME_LARGE TOOLBAR  24, 24
+BEGIN
+    BUTTON      ID_FILE_NEW
+    BUTTON      ID_FILE_OPEN
+    BUTTON      ID_FILE_SAVE
+    SEPARATOR
+    BUTTON      ID_EDIT_CUT
+    BUTTON      ID_EDIT_COPY
+    BUTTON      ID_EDIT_PASTE
+    SEPARATOR
+    BUTTON      ID_FILE_PRINT
+    SEPARATOR
+    BUTTON      ID_APP_ABOUT
+    SEPARATOR
+    BUTTON      ID_CONTEXT_HELP
+    BUTTON      ID_HELP_FINDER
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&New\tCtrl+N",                ID_FILE_NEW
+        MENUITEM "&Open...\tCtrl+O",            ID_FILE_OPEN
+        MENUITEM "&Save\tCtrl+S",               ID_FILE_SAVE
+        MENUITEM "Save &As...\tCtrl+A",         ID_FILE_SAVE_AS
+        MENUITEM "&Close",                      ID_FILE_CLOSE
+        MENUITEM SEPARATOR
+        MENUITEM "Save A&ll\tCtrl+L",           ID_FILE_SAVE_ALL
+        MENUITEM SEPARATOR
+        MENUITEM "I&mport\t",                   ID_FILE_IMPORT
+        MENUITEM "Expor&t",                     ID_FILE_EXPORT
+        MENUITEM SEPARATOR
+        MENUITEM "P&rint Setup...\tCtrl+R",     ID_FILE_PRINT_SETUP
+        MENUITEM "&Print...\tCtrl+P",           ID_FILE_PRINT
+        MENUITEM "Print Previe&w",              ID_FILE_PRINT_PREVIEW
+        MENUITEM SEPARATOR
+        MENUITEM "Recent File",                 ID_FILE_MRU_FILE1, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit\tAlt+X",                ID_APP_EXIT
+    END
+    POPUP "&Edit"
+    BEGIN
+        MENUITEM "C&ut\tCtrl+X",                ID_EDIT_CUT
+        MENUITEM "&Copy\tCtrl+C",               ID_EDIT_COPY
+        MENUITEM "&Paste\tCtrl+V",              ID_EDIT_PASTE
+        MENUITEM SEPARATOR
+        MENUITEM "&Delete\tDel",                ID_EDIT_CLEAR
+    END
+    POPUP "&View"
+    BEGIN
+        MENUITEM "&Toolbar",                    ID_VIEW_TOOLBAR
+        MENUITEM "&Status Bar",                 ID_VIEW_STATUS_BAR
+        MENUITEM "View &Objects Toolbar",       ID_VIEW_OBJECTS
+    END
+    POPUP "&Tools"
+    BEGIN
+        MENUITEM "&Options...",                 ID_TOOLS_OPTIONS
+        MENUITEM "Stop Scene",                  ID_TOOLS_PAUSESCENE
+        MENUITEM "Show Profiler",               ID_TOOLS_SHOWPROFILER
+    END
+    POPUP "&Window"
+    BEGIN
+        MENUITEM "&Cascade",                    ID_WINDOW_CASCADE
+        MENUITEM "Tile &Horizontal",            ID_WINDOW_TILE_HORZ
+        MENUITEM "Tile &Vertical",              ID_WINDOW_TILE_VERT
+        MENUITEM "Arrange &Icons",              ID_WINDOW_ARRANGE
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&Help Topics\tF1",            ID_HELP_FINDER
+        MENUITEM SEPARATOR
+        MENUITEM "&About gds...",               ID_APP_ABOUT
+    END
+END
+
+IDR_MENUTABS MENU 
+BEGIN
+    POPUP "MenuTabs"
+    BEGIN
+        MENUITEM "&Save\tCtrl+S",               ID_FILE_SAVE
+        MENUITEM "Save &As...",                 ID_FILE_SAVE_AS
+        MENUITEM SEPARATOR
+        MENUITEM "&Close",                      ID_FILE_CLOSE
+    END
+END
+
+IDR_OBJECTPAGEPOP MENU 
+BEGIN
+    POPUP "Object Resource Page"
+    BEGIN
+        POPUP "View"
+        BEGIN
+            MENUITEM "Thumbnail",                   ID_OBJVIEW_LARGEICON, MENUBREAK
+            MENUITEM "Icon",                        ID_OBJVIEW_SMALLICON
+            MENUITEM "List",                        ID_OBJVIEW_LIST
+            MENUITEM "Details",                     ID_OBJVIEW_DETAILS
+        END
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAINFRAME ACCELERATORS 
+BEGIN
+    VK_F1,          ID_CONTEXT_HELP,        VIRTKEY, SHIFT, NOINVERT
+    "C",            ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
+    VK_INSERT,      ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
+    VK_DELETE,      ID_EDIT_CUT,            VIRTKEY, SHIFT, NOINVERT
+    "X",            ID_EDIT_CUT,            VIRTKEY, CONTROL, NOINVERT
+    "V",            ID_EDIT_PASTE,          VIRTKEY, CONTROL, NOINVERT
+    VK_INSERT,      ID_EDIT_PASTE,          VIRTKEY, SHIFT, NOINVERT
+    "X",            ID_FILE_EXIT,           VIRTKEY, ALT, NOINVERT
+    "E",            ID_FILE_EXPORT,         VIRTKEY, ALT, NOINVERT
+    "I",            ID_FILE_IMPORT,         VIRTKEY, ALT, NOINVERT
+    "N",            ID_FILE_NEW,            VIRTKEY, CONTROL, NOINVERT
+    "O",            ID_FILE_OPEN,           VIRTKEY, CONTROL, NOINVERT
+    "P",            ID_FILE_PRINT,          VIRTKEY, CONTROL, NOINVERT
+    "R",            ID_FILE_PRINT_SETUP,    VIRTKEY, CONTROL, NOINVERT
+    "S",            ID_FILE_SAVE,           VIRTKEY, CONTROL, NOINVERT
+    "L",            ID_FILE_SAVE_ALL,       VIRTKEY, CONTROL, NOINVERT
+    "A",            ID_FILE_SAVE_AS,        VIRTKEY, CONTROL, NOINVERT
+    VK_F1,          ID_HELP,                VIRTKEY, NOINVERT
+    VK_F6,          ID_NEXT_PANE,           VIRTKEY, NOINVERT
+    VK_F6,          ID_PREV_PANE,           VIRTKEY, SHIFT, NOINVERT
+END
+
+IDR_RESOURCETYPE ACCELERATORS 
+BEGIN
+    "N",            ID_FILE_NEW,            VIRTKEY, CONTROL
+    "O",            ID_FILE_OPEN,           VIRTKEY, CONTROL
+    "S",            ID_FILE_SAVE,           VIRTKEY, CONTROL
+    "P",            ID_FILE_PRINT,          VIRTKEY, CONTROL
+    "Z",            ID_EDIT_UNDO,           VIRTKEY, CONTROL
+    "X",            ID_EDIT_CUT,            VIRTKEY, CONTROL
+    "C",            ID_EDIT_COPY,           VIRTKEY, CONTROL
+    "V",            ID_EDIT_PASTE,          VIRTKEY, CONTROL
+    VK_BACK,        ID_EDIT_UNDO,           VIRTKEY, ALT
+    VK_DELETE,      ID_EDIT_CUT,            VIRTKEY, SHIFT
+    VK_INSERT,      ID_EDIT_COPY,           VIRTKEY, CONTROL
+    VK_INSERT,      ID_EDIT_PASTE,          VIRTKEY, SHIFT
+    VK_F6,          ID_NEXT_PANE,           VIRTKEY 
+    VK_F6,          ID_PREV_PANE,           VIRTKEY, SHIFT
+    VK_F1,          ID_CONTEXT_HELP,        VIRTKEY, SHIFT
+    VK_F1,          ID_HELP,                VIRTKEY 
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 428, 297
+STYLE DS_SETFONT | WS_POPUP | WS_BORDER
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    CONTROL         194,IDC_BACKBITMAP,"Static",SS_BITMAP,0,0,430,295
+    LTEXT           "Licensed To: Nobody\nSerial No.: 0000-0000-0000-0000",IDC_LICENSE,269,41,141,35
+    CTEXT           "Written By\n\nKenneth L. Hurley\nPatrick Ghiocel\nMarvin Gouw\nBrian Bazyk\nKyle Swaim\nRichard Nguyen\nNick Tourte\nBrendan Geiger\nZsolt Matyas",IDC_WRITTENBY,293,82,114,123
+    DEFPUSHBUTTON   "",IDOK,319,210,70,24,BS_BITMAP | WS_GROUP
+    CTEXT           "Loading:\nXXXXXXXXXXXXXXX.DLL",IDC_LOADING,277,258,143,30
+END
+
+IDD_OUTPUTPANE DIALOGEX 0, 0, 334, 68
+STYLE DS_SETFONT | WS_CHILD | WS_CAPTION
+EXSTYLE WS_EX_TRANSPARENT
+CAPTION "Output"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+END
+
+IDD_OBJECTS_PAGE DIALOG  0, 0, 155, 112
+STYLE DS_SETFONT | DS_CONTROL | WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "List1",IDC_OBJECTS_LIST,"SysListView32",WS_BORDER | WS_TABSTOP,0,1,153,111
+END
+
+IDD_OBJECTPANE DIALOGEX 0, 0, 160, 149
+STYLE DS_SETFONT | WS_CHILD | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_TRANSPARENT
+CAPTION "Objectss"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+END
+
+IDD_OPTIONS_DIALOG DIALOGEX 0, 0, 243, 167
+STYLE DS_SETFONT | DS_MODALFRAME | DS_NOFAILCREATE | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Options"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+END
+
+IDD_OBJECT_OPTIONS DIALOGEX 0, 0, 232, 135
+STYLE DS_SETFONT | DS_MODALFRAME | DS_NOFAILCREATE | WS_CHILD | WS_VISIBLE | WS_CAPTION
+CAPTION "Object Options"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    LTEXT           "&Default Media Path",IDC_STATIC,17,18,62,8
+    EDITTEXT        IDC_EDIT2,17,29,185,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",IDC_PATH_SELECT_BUTTON,203,29,14,14
+    LTEXT           "Thumbnail &Size",IDC_STATIC,17,52,49,8
+    COMBOBOX        IDC_THUMBNAIL_SIZE,82,49,72,30,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "&Automatically Open Object Editor Window",IDC_AUTO_OPEN,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,17,71,168,10
+    CONTROL         "Cull Objects on Distance",IDC_CULLOBJECTSFLAG,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,17,111,92,10
+    EDITTEXT        IDC_CULLOBJECTSDISTANCE,111,109,40,14,ES_AUTOHSCROLL | ES_NUMBER | WS_DISABLED
+END
+
+IDD_GENERAL_OPTIONS DIALOGEX 0, 0, 232, 135
+STYLE DS_SETFONT | DS_MODALFRAME | WS_CHILD | WS_VISIBLE | WS_CAPTION
+CAPTION "General Options"
+FONT 8, "Microsoft Sans Serif", 400, 0, 0x0
+BEGIN
+    LTEXT           "Resource Directory (comes from the project file)",IDC_STATIC,7,26,177,8
+    EDITTEXT        IDC_GENERALOPT_EDIT,7,40,197,12,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "Toolbar Scroll Delay",IDC_STATIC,7,63,122,8
+    CONTROL         "",IDC_TOOLBAR_DELAY,"msctls_trackbar32",TBS_AUTOTICKS | TBS_TOP | WS_TABSTOP,7,74,217,22
+    PUSHBUTTON      "...",IDC_GENERALOPT_BROWSE,207,40,18,12,WS_DISABLED
+END
+
+IDD_NEWFILE_DIALOG DIALOGEX 0, 0, 251, 150
+STYLE DS_SETFONT | DS_MODALFRAME | DS_3DLOOK | DS_CENTER | WS_POPUP | WS_VISIBLE | WS_CAPTION
+EXSTYLE WS_EX_ACCEPTFILES | WS_EX_CLIENTEDGE
+CAPTION "New Object"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    LISTBOX         IDC_LIST1,7,8,153,132,LBS_SORT | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    DEFPUSHBUTTON   "New",IDC_BUTTON1,170,9,74,18
+    PUSHBUTTON      "Cancel",IDC_BUTTON2,170,32,74,18
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 0,9,8,0
+ PRODUCTVERSION 0,9,8,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "FileDescription", "gds MFC Application"
+            VALUE "FileVersion", "0, 9, 8, 0"
+            VALUE "InternalName", "gds"
+            VALUE "LegalCopyright", "Copyright (C) 2001"
+            VALUE "OriginalFilename", "gds.EXE"
+            VALUE "ProductName", "gds Application"
+            VALUE "ProductVersion", "0, 9, 8, 0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        BOTTOMMARGIN, 296
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDP_SOCKETS_INIT_FAILED "Windows sockets initialization failed."
+    IDS_WRITTENBY           "Written By\n\nKenneth L. Hurley\nPatrick Ghiocel\nMarvin Gouw\nBrian Bazyk\nKyle Swaim\nRichard Nguyen\nNick Tourte\nBrendan Geiger\nZsolt Matyas"
+    IDS_ERROR               "Error"
+    IDS_ERR_LOAD_FILE       "Unable to load file '%s'\nError: %s"
+END
+
+STRINGTABLE 
+BEGIN
+    IDR_MAINFRAME           "gds"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_APP_TITLE       "gds"
+    AFX_IDS_IDLEMESSAGE     "For Help, press F1"
+    AFX_IDS_HELPMODEMESSAGE "Select an object on which to get Help"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_INDICATOR_EXT        "EXT"
+    ID_INDICATOR_CAPS       "CAP"
+    ID_INDICATOR_NUM        "NUM"
+    ID_INDICATOR_SCRL       "SCRL"
+    ID_INDICATOR_OVR        "OVR"
+    ID_INDICATOR_REC        "REC"
+    ID_INDICATOR_0          "UNK"
+    ID_INDICATOR_1          "FPS: %3.1f"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_FILE_NEW             "Create a new document\nNew"
+    ID_FILE_OPEN            "Open an existing document\nOpen"
+    ID_FILE_CLOSE           "Close the active document\nClose"
+    ID_FILE_SAVE            "Save the active document\nSave"
+    ID_FILE_SAVE_AS         "Save the active document with a new name\nSave As"
+    ID_FILE_PAGE_SETUP      "Change the printing options\nPage Setup"
+    ID_FILE_PRINT_SETUP     "Change the printer and printing options\nPrint Setup"
+    ID_FILE_PRINT           "Print the active document\nPrint"
+    ID_FILE_PRINT_PREVIEW   "Display full pages\nPrint Preview"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_APP_ABOUT            "Display program information, version number and copyright\nAbout"
+    ID_APP_EXIT             "Quit the application; prompts to save documents\nExit"
+    ID_HELP_INDEX           "Opens Help\nHelp Topics"
+    ID_HELP_FINDER          "List Help topics\nHelp Topics"
+    ID_HELP_USING           "Display instructions about how to use help\nHelp"
+    ID_CONTEXT_HELP         "Display help for clicked on buttons, menus and windows\nHelp"
+    ID_HELP                 "Display help for current task or command\nHelp"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_FILE_MRU_FILE1       "Open this document"
+    ID_FILE_MRU_FILE2       "Open this document"
+    ID_FILE_MRU_FILE3       "Open this document"
+    ID_FILE_MRU_FILE4       "Open this document"
+    ID_FILE_MRU_FILE5       "Open this document"
+    ID_FILE_MRU_FILE6       "Open this document"
+    ID_FILE_MRU_FILE7       "Open this document"
+    ID_FILE_MRU_FILE8       "Open this document"
+    ID_FILE_MRU_FILE9       "Open this document"
+    ID_FILE_MRU_FILE10      "Open this document"
+    ID_FILE_MRU_FILE11      "Open this document"
+    ID_FILE_MRU_FILE12      "Open this document"
+    ID_FILE_MRU_FILE13      "Open this document"
+    ID_FILE_MRU_FILE14      "Open this document"
+    ID_FILE_MRU_FILE15      "Open this document"
+    ID_FILE_MRU_FILE16      "Open this document"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_NEXT_PANE            "Switch to the next window pane\nNext Pane"
+    ID_PREV_PANE            "Switch back to the previous window pane\nPrevious Pane"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_WINDOW_NEW           "Open another window for the active document\nNew Window"
+    ID_WINDOW_ARRANGE       "Arrange icons at the bottom of the window\nArrange Icons"
+    ID_WINDOW_CASCADE       "Arrange windows so they overlap\nCascade Windows"
+    ID_WINDOW_TILE_HORZ     "Arrange windows as non-overlapping tiles\nTile Windows"
+    ID_WINDOW_TILE_VERT     "Arrange windows as non-overlapping tiles\nTile Windows"
+    ID_WINDOW_SPLIT         "Split the active window into panes\nSplit"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_EDIT_CLEAR           "Erase the selection\nErase"
+    ID_EDIT_CLEAR_ALL       "Erase everything\nErase All"
+    ID_EDIT_COPY            "Copy the selection and put it on the Clipboard\nCopy"
+    ID_EDIT_CUT             "Cut the selection and put it on the Clipboard\nCut"
+    ID_EDIT_FIND            "Find the specified text\nFind"
+    ID_EDIT_PASTE           "Insert Clipboard contents\nPaste"
+    ID_EDIT_REPEAT          "Repeat the last action\nRepeat"
+    ID_EDIT_REPLACE         "Replace specific text with different text\nReplace"
+    ID_EDIT_SELECT_ALL      "Select the entire document\nSelect All"
+    ID_EDIT_UNDO            "Undo the last action\nUndo"
+    ID_EDIT_REDO            "Redo the previously undone action\nRedo"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_VIEW_TOOLBAR         "Show or hide the toolbar\nToggle ToolBar"
+    ID_VIEW_STATUS_BAR      "Show or hide the status bar\nToggle StatusBar"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_SCSIZE          "Change the window size"
+    AFX_IDS_SCMOVE          "Change the window position"
+    AFX_IDS_SCMINIMIZE      "Reduce the window to an icon"
+    AFX_IDS_SCMAXIMIZE      "Enlarge the window to full size"
+    AFX_IDS_SCNEXTWINDOW    "Switch to the next document window"
+    AFX_IDS_SCPREVWINDOW    "Switch to the previous document window"
+    AFX_IDS_SCCLOSE         "Close the active window and prompts to save the documents"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_SCRESTORE       "Restore the window to normal size"
+    AFX_IDS_SCTASKLIST      "Activate Task List"
+    AFX_IDS_MDICHILD        "Activate this window"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_PREVIEW_CLOSE   "Close print preview mode\nCancel Preview"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_MRC_STARTDOCKING    "Press Ctrl to prevent docking\n"
+    ID_MRC_ALLOWDOCKING     "Allow docking"
+    ID_MRC_HIDE             "Hide"
+    ID_MRC_MDIFLOAT         "Float on desktop"
+    ID_MRC_CUSTOMIZE        "Customize..."
+    ID_MRC_FLOAT            "Float"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_FILE_NEW_WORLD       "Create a new world\nNew World"
+    ID_FILE_OPEN_WORLD      "Opens a world file\nOpen World"
+    ID_FILE_CLOSE_WORLD     "Close the current world\nClose World"
+    ID_FILE_SAVE_WORLD      "Saves the world file\nSave World"
+    ID_FILE_SAVE_ALL        "Saves everything\nSave All"
+    ID_APP_HELP             "Display help information\nHelp"
+    ID_VIEW_WORLD           "Show or hide the World objects toolbar\nToggle World Toolbar"
+    ID_VIEW_OBJECTS         "Show or hide the objects toolbar\nToggle Objects ToolBar"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_TOOLS_OPTIONS        "Change options in programs\nOptions"
+    ID_FILE_IMPORT          "Import a file\nImport"
+    ID_FILE_EXPORT          "Export Current File\nExport"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif //_WIN32
+#include "res\gds.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#include "afxprint.rc"       // printing/print preview resources
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

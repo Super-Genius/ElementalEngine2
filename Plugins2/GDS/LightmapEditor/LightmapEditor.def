@@ -1,0 +1,6 @@
+; LightmapEditor.def : Declares the module parameters for the DLL.
+
+LIBRARY      "LightmapEditor"
+
+EXPORTS
+    ; Explicit exports can go here

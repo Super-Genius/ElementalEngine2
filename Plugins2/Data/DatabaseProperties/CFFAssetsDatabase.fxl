@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root Num="1">
+<CFFAssetsDatabase Name="CFF Assets Database" Num="11">
+	<edit Type="string" Name="Name" key="false"/>
+	<edit Type="string" Name="Callsign" key="true"/>
+	<edit Type="long int" Name="PosX" key="false"/>
+	<edit Type="long int" Name="PosY" key="false"/>
+	<edit Type="long int" Name="PosZ" key="false"/>
+	<combo Type="string" name="Type" key="false" DefSelect="Artillery" 
+		NumOptions="3"
+		option1="Artillery"
+		option2="Mortar"
+		option3="Naval"
+	/>
+	<edit Type="short int" Name="Number of HE rounds" key="false"/>
+	<edit Type="short int" Name="Number of WP rounds" key="false"/>
+	<edit Type="short int" Name="Number of RP rounds" key="false"/>
+	<edit Type="short int" Name="Number of ICM rounds" key="false"/>
+	<edit Type="short int" Name="Number of Smoke rounds" key="false"/>
+</CFFAssetsDatabase>
+</root>

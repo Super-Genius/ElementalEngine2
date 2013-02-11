@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root Num="1">
+<VehiclesDatabase Name="Vehicles Database" Num="128">
+	<edit Type="string" Name="Name" key="true"/>
+	<edit Type="short int" Name="Type" key="false"/>
+	<edit Type="short int" Name="Nation" key="false"/>
+	<edit Type="short int" Name="Class" key="false"/>
+	<edit Type="short int" Name="Hull Guns Type 1" key="false"/>
+	<edit Type="short int" Name="Hull Guns Type 2" key="false"/>
+	<edit Type="short int" Name="Hull Guns Type 3" key="false"/>
+	<edit Type="short int" Name="Hull Guns Ammo 1 AP" key="false"/>
+	<edit Type="short int" Name="Hull Guns Ammo 1 HE" key="false"/>
+	<edit Type="short int" Name="Hull Guns Ammo 1 HEAT" key="false"/>
+	<edit Type="short int" Name="Hull Guns Ammo 1 Smoke" key="false"/>
+	<edit Type="short int" Name="Hull Guns Ammo 1 Spec" key="false"/>
+	<edit Type="short int" Name="Hull Guns Ammo 2 AP" key="false"/>
+	<edit Type="short int" Name="Hull Guns Ammo 2 HE" key="false"/>
+	<edit Type="short int" Name="Hull Guns Ammo 2 HEAT" key="false"/>
+	<edit Type="short int" Name="Hull Guns Ammo 2 Smoke" key="false"/>
+	<edit Type="short int" Name="Hull Guns Ammo 2 Spec" key="false"/>
+	<edit Type="short int" Name="Hull Guns Ammo 3 AP" key="false"/>
+	<edit Type="short int" Name="Hull Guns Ammo 3 HE" key="false"/>
+	<edit Type="short int" Name="Hull Guns Ammo 3 HEAT" key="false"/>
+	<edit Type="short int" Name="Hull Guns Ammo 3 Smoke" key="false"/>
+	<edit Type="short int" Name="Hull Guns Ammo 3 Spec" key="false"/>
+	<edit Type="bool" Name="Hull Guns Exposed to Fire 1" key="false"/>
+	<edit Type="bool" Name="Hull Guns Exposed to Fire 2" key="false"/>
+	<edit Type="bool" Name="Hull Guns Exposed to Fire 3" key="false"/>
+	<edit Type="short int" Name="Hull Guns Fire Angle 1" key="false"/>
+	<edit Type="short int" Name="Hull Guns Fire Angle 2" key="false"/>
+	<edit Type="short int" Name="Hull Guns Fire Angle 3" key="false"/>
+	<edit Type="short int" Name="Hull Guns Front Low" key="false"/>
+	<edit Type="short int" Name="Hull Guns Front Med" key="false"/>
+	<edit Type="short int" Name="Hull Guns Front High" key="false"/>
+	<edit Type="short int" Name="Hull Guns Front Side Low" key="false"/>
+	<edit Type="short int" Name="Hull Guns Front Side Med" key="false"/>
+	<edit Type="short int" Name="Hull Guns Front Side High" key="false"/>
+	<edit Type="short int" Name="Hull Guns Side Low" key="false"/>
+	<edit Type="short int" Name="Hull Guns Side Med" key="false"/>
+	<edit Type="short int" Name="Hull Guns Side High" key="false"/>
+	<edit Type="short int" Name="Hull Guns Side Rear Low" key="false"/>
+	<edit Type="short int" Name="Hull Guns Side Rear Med" key="false"/>
+	<edit Type="short int" Name="Hull Guns Side Rear High" key="false"/>
+	<edit Type="short int" Name="Hull Guns Rear Low" key="false"/>
+	<edit Type="short int" Name="Hull Guns Rear Med" key="false"/>
+	<edit Type="short int" Name="Hull Guns Rear High" key="false"/>
+	<edit Type="short int" Name="Hull Guns Top Low" key="false"/>
+	<edit Type="short int" Name="Hull Guns Top Med" key="false"/>
+	<edit Type="short int" Name="Hull Guns Top High" key="false"/>
+	<edit Type="short int" Name="Hull Guns Bottom Low" key="false"/>
+	<edit Type="short int" Name="Hull Guns Bottom Med" key="false"/>
+	<edit Type="short int" Name="Hull Guns Bottom High" key="false"/>
+	<edit Type="short int" Name="Hull Crew Cover Front" key="false"/>
+	<edit Type="short int" Name="Hull Crew Cover Front Side" key="false"/>
+	<edit Type="short int" Name="Hull Crew Cover Side" key="false"/>
+	<edit Type="short int" Name="Hull Crew Cover Side Rear" key="false"/>
+	<edit Type="short int" Name="Hull Crew Cover Rear" key="false"/>
+	<edit Type="short int" Name="Hull Crew Cover Top" key="false"/>
+	<edit Type="short int" Name="Hull Crew Cover Bottom" key="false"/>
+	<edit Type="short int" Name="Hull Rotation Rate" key="false"/>
+	<edit Type="short int" Name="Hull Mount Type" key="false"/>
+	<edit Type="short int" Name="Turret Guns 1" key="false"/>
+	<edit Type="short int" Name="Turret Guns 2" key="false"/>
+	<edit Type="short int" Name="Turret Guns 3" key="false"/>
+	<edit Type="short int" Name="Turret Guns Ammo 1 AP" key="false"/>
+	<edit Type="short int" Name="Turret Guns Ammo 1 HE" key="false"/>
+	<edit Type="short int" Name="Turret Guns Ammo 1 HEAT" key="false"/>
+	<edit Type="short int" Name="Turret Guns Ammo 1 Smoke" key="false"/>
+	<edit Type="short int" Name="Turret Guns Ammo 1 Spec" key="false"/>
+	<edit Type="short int" Name="Turret Guns Ammo 2 AP" key="false"/>
+	<edit Type="short int" Name="Turret Guns Ammo 2 HE" key="false"/>
+	<edit Type="short int" Name="Turret Guns Ammo 2 HEAT" key="false"/>
+	<edit Type="short int" Name="Turret Guns Ammo 2 Smoke" key="false"/>
+	<edit Type="short int" Name="Turret Guns Ammo 2 Spec" key="false"/>
+	<edit Type="short int" Name="Turret Guns Ammo 3 AP" key="false"/>
+	<edit Type="short int" Name="Turret Guns Ammo 3 HE" key="false"/>
+	<edit Type="short int" Name="Turret Guns Ammo 3 HEAT" key="false"/>
+	<edit Type="short int" Name="Turret Guns Ammo 3 Smoke" key="false"/>
+	<edit Type="short int" Name="Turret Guns Ammo 3 Spec" key="false"/>
+	<edit Type="bool" Name="Turret Guns Exposed to Fire 1" key="false"/>
+	<edit Type="bool" Name="Turret Guns Exposed to Fire 2" key="false"/>
+	<edit Type="bool" Name="Turret Guns Exposed to Fire 3" key="false"/>
+	<edit Type="short int" Name="Turret Guns Fire Angle 1" key="false"/>
+	<edit Type="short int" Name="Turret Guns Fire Angle 2" key="false"/>
+	<edit Type="short int" Name="Turret Guns Fire Angle 3" key="false"/>
+	<edit Type="short int" Name="Turret Armor Front Low" key="false"/>
+	<edit Type="short int" Name="Turret Armor Front Med" key="false"/>
+	<edit Type="short int" Name="Turret Armor Front High" key="false"/>
+	<edit Type="short int" Name="Turret Armor Front Side Low" key="false"/>
+	<edit Type="short int" Name="Turret Armor Front Side Med" key="false"/>
+	<edit Type="short int" Name="Turret Armor Front Side High" key="false"/>
+	<edit Type="short int" Name="Turret Armor Side Low" key="false"/>
+	<edit Type="short int" Name="Turret Armor Side Med" key="false"/>
+	<edit Type="short int" Name="Turret Armor Side High" key="false"/>
+	<edit Type="short int" Name="Turret Armor Side Rear Low" key="false"/>
+	<edit Type="short int" Name="Turret Armor Side Rear Med" key="false"/>
+	<edit Type="short int" Name="Turret Armor Side Rear High" key="false"/>
+	<edit Type="short int" Name="Turret Armor Rear Low" key="false"/>
+	<edit Type="short int" Name="Turret Armor Rear Med" key="false"/>
+	<edit Type="short int" Name="Turret Armor Rear High" key="false"/>
+	<edit Type="short int" Name="Turret Armor Top Low" key="false"/>
+	<edit Type="short int" Name="Turret Armor Top Med" key="false"/>
+	<edit Type="short int" Name="Turret Armor Top High" key="false"/>
+	<edit Type="short int" Name="Turret Armor Bottom Low" key="false"/>
+	<edit Type="short int" Name="Turret Armor Bottom Med" key="false"/>
+	<edit Type="short int" Name="Turret Armor Bottom High" key="false"/>
+	<edit Type="short int" Name="Turret Crew Cover Front" key="false"/>
+	<edit Type="short int" Name="Turret Crew Cover Front Side" key="false"/>
+	<edit Type="short int" Name="Turret Crew Cover Side" key="false"/>
+	<edit Type="short int" Name="Turret Crew Cover Side Rear" key="false"/>
+	<edit Type="short int" Name="Turret Crew Cover Rear" key="false"/>
+	<edit Type="short int" Name="Turret Crew Cover Top" key="false"/>
+	<edit Type="short int" Name="Turret Crew Cover Bottom" key="false"/>
+	<edit Type="short int" Name="Turret Rotation Rate" key="false"/>
+	<edit Type="short int" Name="Turret Mount Type" key="false"/>
+	<edit Type="short int" Name="Chance to Hit Hull" key="false"/>
+	<edit Type="short int" Name="Chance to Hit Turret" key="false"/>
+	<edit Type="short int" Name="Number of Mounts" key="false"/>
+	<edit Type="short int" Name="Acceleration" key="false"/>
+	<edit Type="short int" Name="Max Speed" key="false"/>
+	<edit Type="short int" Name="Move Type" key="false"/>
+	<edit Type="short int" Name="Vehicular Size" key="false"/>
+	<edit Type="short int" Name="Element Radius" key="false"/>
+	<edit Type="short int" Name="Integrity" key="false"/>
+	<edit Type="short int" Name="Number of Crew" key="false"/>
+	<edit Type="short int" Name="Best Kill" key="false"/>
+	<edit Type="short int" Name="Best Mount" key="false"/>
+	<edit Type="short int" Name="Best Gun" key="false"/>
+	<edit Type="bool" Name="Has Gyro" key="false"/>
+	<edit Type="bool" Name="Has Schurzen" key="false"/>
+	<edit Type="bool" Name="Gun Rotates on Base" key="false"/>
+	<edit Type="short int" Name="Ground Pressure" key="false"/>
+</VehiclesDatabase>
+</root>

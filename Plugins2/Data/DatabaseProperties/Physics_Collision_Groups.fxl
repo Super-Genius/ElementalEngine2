@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root Num="1">
+<Physics_Collision_Groups Name="Physics Collision Groups Database" Num="3">
+	<edit Type="short int" Name="Group A" key="false"/>
+	<edit Type="short int" Name="Group B" key="false"/>
+	<edit Type="bool" Name="Flag" key="false"/>
+</Physics_Collision_Groups>
+</root>

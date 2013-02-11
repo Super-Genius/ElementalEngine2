@@ -1,0 +1,61 @@
+#include "Shaders\HLSLconstants.h"
+#include "Shaders\PSH_CommonFunctions.h"
+
+struct v2f
+{
+	float2  TexCoord0			: TEXCOORD0;
+	float2  TexCoord1			: TEXCOORD1;
+	float3  TexCoord2			: TEXCOORD2;
+#if (ACTIVELIGHTS > 0)
+	float4	TangentLight[ACTIVELIGHTS]		: TEXCOORD3;
+	float3	ViewVector			: TEXCOORD7;
+#endif
+	float4  Fog					: COLOR0;
+};
+
+uniform float4 ColorMultiplier		: register(c19);
+uniform float4 SpecularMultiplier	: register(c20);
+uniform float3 FogColor				: register(c24);
+
+PS_MRT_OUTPUT main(v2f i, 
+	uniform sampler2D Texture0	: register(s0), 
+	uniform sampler2D Texture1	: register(s1), 
+	uniform sampler2D MaskMap	: register(s2),
+	uniform sampler2D NormalMap	: register(s3)
+	) 
+{
+	float4 color0 = tex2D(Texture0, i.TexCoord0);
+	float4 color1 = tex2D(Texture1, i.TexCoord1);
+	float2 MaskTextCoord =  i.TexCoord2.xy;
+	float4 MaskValue = tex2D(MaskMap, i.TexCoord2.xy);
+	MaskValue.rgb *= i.TexCoord2.z;
+	
+	float3 c = (color0.rgb * color0.a + color1.rgb * color1.a) * i.TexCoord2.z;
+	float4 outcolor = MaskValue;
+
+#if (ACTIVELIGHTS > 0)
+	float4 NormalColor = tex2D(NormalMap, MaskTextCoord);
+	float3 Normal = UnpackNormal( NormalColor );
+
+	NormalizeLights( i.TangentLight );
+	
+	half3 intensity = CalcLights( Normal, i.TangentLight );
+	//half specular = SpecularMultiplier.x*CalcSpecular( Normal, i.SpecularH, SpecularMultiplier.y, NormalColor.a, i.TangentLight[0].x );
+	//half3 specular = SpecularMultiplier.x*CalcColoredSpecular( Normal, i.SpecularH, SpecularMultiplier.y, NormalColor.a, i.TangentLight[0].x );
+	
+	float3 ViewVec = normalize( i.ViewVector );
+	half3 specular = SpecularMultiplier.x*CalcMultiLightColoredSpecular( Normal, ViewVec, SpecularMultiplier.y, NormalColor.a, i.TangentLight );
+
+	outcolor.rgb *= clamp( intensity + lightAmbient.rgb, 0, 2 );
+	outcolor.rgb += specular;
+#else
+	outcolor.rgb *= lightAmbient.rgb;
+#endif		
+	outcolor.rgb = lerp( c.rgb, outcolor.rgb, MaskValue.a );
+//	outcolor.rgb = float3(fmod(MaskTextCoord.xy, 1.0), 0.0);
+//	outcolor.rgb = abs(i.TexCoord2.xyz);
+
+	outcolor.a = 1.0;
+		
+	return MakeMRTOutput( outcolor, i.Fog.x );
+}

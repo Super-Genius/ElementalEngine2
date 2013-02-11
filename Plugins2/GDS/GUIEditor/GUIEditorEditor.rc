@@ -1,0 +1,669 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\ExampleEditor.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "Comments", "Author: Kenneth Hurley"
+            VALUE "CompanyName", "Signature Devices, Inc."
+            VALUE "FileDescription", "ExampleEditor DLL"
+            VALUE "FileVersion", "1, 0, 0, 1"
+            VALUE "InternalName", "ExampleEditor"
+            VALUE "LegalCopyright", "Copyright (C) Signature Devices, Inc 2002"
+            VALUE "OriginalFilename", "ExampleEditor.DLL"
+            VALUE "ProductName", "ExampleEditor Dynamic Link Library"
+            VALUE "ProductVersion", "1, 0, 0, 1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_EXAMPLETYPE         ICON                    "res\\drawing_board_24.ico"
+IDI_NEWPAGEICO          ICON                    "res\\add_new_page_24.ico"
+IDI_NEWGROUPICO         ICON                    "res\\create_group_to_add_element_24.ico"
+IDI_NEWBUTTONICO        ICON                    "res\\add_button_type_element_24.ico"
+IDI_NEWTEXTICO          ICON                    "res\\add_new_text_element_24.ico"
+IDI_NEWSTATICICO        ICON                    "res\\add_static_art_element_24.ico"
+IDI_CHANGEBGICO         ICON                    "res\\change_background_color_behind_instance_24.ico"
+IDI_FULLSCREENICO       ICON                    "res\\recenter_page_previous_page_24.ico"
+IDI_EDITORICO           ICON                    "res\\drawing_board_24.ico"
+IDI_PLAYICO             ICON                    "res\\full_screen_test_mode_24.ico"
+IDI_ITEMINSTICO         ICON                    "res\\add_item_instance_24.ico"
+IDI_INSTLOCKICO         ICON                    "res\\lock_all_instances_of_same_item_to_selected_items_position_and_size_24.ico"
+IDI_NEWANIMATION        ICON                    "res\\preview_gui_animation_24.ico"
+IDI_PLAYGUIANIM         ICON                    "res\\play_gui_animation_24.ico"
+IDI_STOPGUIANIM         ICON                    "res\\stop_gui_animation_24.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_EXAMPLETYPE MENU 
+BEGIN
+    POPUP "&GUI Editor"
+    BEGIN
+        MENUITEM "New &Page...",                IDC_NEWPAGEBT
+        MENUITEM "New &Group...",               IDC_NEWGROUPBT
+        MENUITEM SEPARATOR
+        POPUP "New &Element..."
+        BEGIN
+            MENUITEM "&Button...",                  IDC_NEWBUTTONBT
+            MENUITEM "&Text...",                    IDC_NEWTEXTBT
+            MENUITEM "&Static...",                  IDC_NEWSTATICBT
+        END
+        MENUITEM "New &Instance...",            IDC_USEITEMBT
+        MENUITEM "Ali&gn Instances",            IDC_INSTLOCK
+        MENUITEM SEPARATOR
+        MENUITEM "New &Animation...",           IDC_NEWANIMATION
+        MENUITEM "P&lay Animation",             IDC_PLAYANIM
+        MENUITEM "St&op Animation",             IDC_STOPANIM
+        MENUITEM SEPARATOR
+        MENUITEM "Change &Background Color...", IDC_CHANGECOLORBT
+        MENUITEM "&Recenter Page",              IDC_FULLWINDOWBT
+        MENUITEM "T&est Page Fullscreen",       IDC_PLAYBT
+        MENUITEM SEPARATOR
+        MENUITEM "Languages...",                ID_GUIEDITOR_LANGUAGES
+    END
+END
+
+IDR_ANIMVIEWMENU MENU 
+BEGIN
+    POPUP "ANIM VIEW MENU"
+    BEGIN
+        MENUITEM "View anim data...",           ID_VIEWANIMDATA
+        MENUITEM "Delete Key",                  ID_DELETEKEY
+    END
+END
+
+IDR_EMPTYSPOT MENU 
+BEGIN
+    POPUP "EMPTYSPOT"
+    BEGIN
+        MENUITEM "Add Key",                     ID_ADDKEY
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_GUITOOLPAL DIALOGEX 0, 0, 509, 36
+STYLE DS_SETFONT | WS_CHILD | WS_SYSMENU
+EXSTYLE WS_EX_TOOLWINDOW | WS_EX_CONTEXTHELP
+FONT 8, "MS Sans Serif", 400, 0, 0x0
+BEGIN
+    PUSHBUTTON      "New Page",IDC_NEWPAGEBT,9,2,22,22,BS_ICON
+    PUSHBUTTON      "New Group",IDC_NEWGROUPBT,47,2,22,22,BS_ICON
+    PUSHBUTTON      "New Button",IDC_NEWBUTTONBT,85,2,22,22,BS_ICON
+    PUSHBUTTON      "Inst Lock",IDC_INSTLOCK,237,2,22,22,BS_ICON
+    PUSHBUTTON      "New Text",IDC_NEWTEXTBT,123,2,22,22,BS_ICON
+    PUSHBUTTON      "New Static",IDC_NEWSTATICBT,161,2,22,22,BS_ICON
+    PUSHBUTTON      "Ref. Element",IDC_USEITEMBT,199,2,22,22,BS_ICON
+    PUSHBUTTON      "Change BG Color",IDC_CHANGECOLORBT,351,2,22,22,BS_ICON
+    PUSHBUTTON      "Set Page Full Window",IDC_FULLWINDOWBT,275,2,22,22,BS_ICON
+    PUSHBUTTON      "Set Page Full Window",IDC_PLAYBT,313,2,22,22,BS_ICON
+    PUSHBUTTON      "New Anim",IDC_NEWANIMATION,389,2,22,22,BS_ICON
+    PUSHBUTTON      "Play Anim",IDC_PLAYANIM,427,2,22,22,BS_ICON
+    PUSHBUTTON      "Stop Anim",IDC_STOPANIM,465,2,22,22,BS_ICON
+    CTEXT           "New Page",IDC_STATIC1,2,24,34,8
+    CTEXT           "New Group",IDC_STATIC,38,24,37,8
+    CTEXT           "New BT",IDC_STATIC,77,24,38,8
+    CTEXT           "New Text",IDC_STATIC,117,24,32,8
+    CTEXT           "New Static",IDC_STATIC,153,24,36,8
+    CTEXT           "New Inst",IDC_STATIC,188,24,45,8
+    CTEXT           "BG Col",IDC_STATIC,350,24,23,8
+    CTEXT           "Center Page",IDC_STATIC,268,24,40,8
+    CTEXT           "Preview",IDC_STATIC,310,24,26,8
+    CTEXT           "Lock Inst",IDC_STATIC,232,24,30,8
+    CTEXT           "New Anim",IDC_STATIC,383,24,33,8
+    CTEXT           "Play Anim",IDC_STATIC,421,24,32,8
+    CTEXT           "Stop Anim",IDC_STATIC,458,24,33,8
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDFRAME,77,2,1,29
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDFRAME,267,2,1,29
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDFRAME,381,2,1,29
+END
+
+IDD_GUIPROPERTIES DIALOGEX 0, 0, 130, 330
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,80,0,50,14,NOT WS_VISIBLE
+    LTEXT           "",IDC_PROPERTIES_SPOT,0,42,129,287
+    PUSHBUTTON      "Button1",IDC_BUTTON1,0,0,50,14
+END
+
+IDD_GUITOOLS DIALOGEX 0, 0, 175, 394
+STYLE DS_SYSMODAL | DS_SETFONT | DS_FIXEDSYS | WS_CHILD
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,125,0,50,14,NOT WS_VISIBLE
+    CONTROL         "",IDC_PAGEHIERTREE,"SysTreeView32",TVS_HASBUTTONS | TVS_HASLINES | TVS_LINESATROOT | TVS_EDITLABELS | TVS_SHOWSELALWAYS | WS_BORDER | WS_GROUP | WS_TABSTOP,0,0,175,394,WS_EX_LEFTSCROLLBAR
+END
+
+IDD_RESBOX DIALOGEX 0, 0, 149, 90
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_TOPMOST
+CAPTION "Set Working Resolution"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,49,69,50,14
+    LTEXT           "X Resolution",IDC_STATIC,23,16,40,8
+    LTEXT           "Y Resolution",IDC_STATIC,83,16,40,8
+    EDITTEXT        IDC_XRES,21,34,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_YRES,85,34,40,14,ES_AUTOHSCROLL
+END
+
+IDD_ENTERPAGENAME DIALOGEX 0, 0, 132, 90
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_TOPMOST
+CAPTION "Enter Page Name"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,41,69,50,14
+    EDITTEXT        IDC_PAGENAME,21,26,89,14,ES_AUTOHSCROLL
+END
+
+IDD_GROUPNAMEBOX DIALOGEX 0, 0, 145, 90
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Set Group Name"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,46,69,50,14
+    EDITTEXT        IDC_GROUPNAME,30,23,83,14,ES_AUTOHSCROLL
+END
+
+IDD_USEGROUPBOX DIALOGEX 0, 0, 126, 90
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Select Group to Add"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,38,69,50,14
+    COMBOBOX        IDC_USEGROUP,17,26,91,80,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_NEWBUTTON DIALOGEX 0, 0, 149, 90
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "New Button"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,48,69,50,14
+    CONTROL         "Check Box",IDC_CHECKBOXBT,"Button",BS_AUTORADIOBUTTON | WS_DISABLED,78,15,49,10
+    CONTROL         "Slider",IDC_SLIDERBT,"Button",BS_AUTORADIOBUTTON | WS_DISABLED,78,25,33,10
+    CONTROL         "Standard BT",IDC_STANDARDBT,"Button",BS_AUTORADIOBUTTON,24,14,55,10
+    CONTROL         "Radio BT",IDC_RADIOBT,"Button",BS_AUTORADIOBUTTON | WS_DISABLED,24,25,44,10
+    EDITTEXT        IDC_BUTTONNAME,28,50,93,14,ES_AUTOHSCROLL
+    LTEXT           "Button Name",IDC_STATIC,51,39,42,8
+END
+
+IDD_NEWTEXT DIALOGEX 0, 0, 144, 121
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "New Text Object"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,46,100,50,14
+    CONTROL         "Static Text",IDC_STATICTEXTBT,"Button",BS_AUTORADIOBUTTON,17,14,51,10
+    CONTROL         "List Box",IDC_LISTBOXBT,"Button",BS_AUTORADIOBUTTON | WS_DISABLED,17,31,41,10
+    CONTROL         "Edit Text",IDC_EDITTEXTBT,"Button",BS_AUTORADIOBUTTON | WS_DISABLED,75,15,45,10
+    CONTROL         "Combo Box",IDC_COMBOBOXBT,"Button",BS_AUTORADIOBUTTON,75,31,52,10
+    CONTROL         "Spinner",IDC_SPINNERBT,"Button",BS_AUTORADIOBUTTON,48,45,40,10
+    EDITTEXT        IDC_TEXTNAME,24,73,95,14,ES_AUTOHSCROLL
+    LTEXT           "Item Name",IDC_STATIC,53,60,36,8
+END
+
+IDD_NEWSTATIC DIALOGEX 0, 0, 147, 107
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "New Static Item"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,50,86,50,14
+    CONTROL         "Static Art",IDC_STATICARTBT,"Button",BS_AUTORADIOBUTTON,25,14,46,10
+    CONTROL         "Status Bar",IDC_STATUSBARBT,"Button",BS_AUTORADIOBUTTON,84,14,49,10
+    CONTROL         "Modify Gui Cursor",IDC_CURSORBT,"Button",BS_AUTORADIOBUTTON | WS_DISABLED,36,70,73,10
+    EDITTEXT        IDC_STATICNAME,27,55,93,14,ES_AUTOHSCROLL
+    LTEXT           "Item Name",IDC_STATIC,54,43,36,8
+    CONTROL         "Movie",IDC_MOVIEBT,"Button",BS_AUTORADIOBUTTON,51,28,35,10
+END
+
+IDD_USEITEM DIALOGEX 0, 0, 153, 90
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Select Item to Reference"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,51,69,50,14
+    COMBOBOX        IDC_ITEMSELECT,37,33,82,73,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_SETBGCOLOR DIALOGEX 0, 0, 139, 99
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Set Color"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,43,78,50,14
+    COMBOBOX        IDC_COLORS,26,25,88,91,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_RVAL,20,56,29,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_GVAL,53,56,29,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_BVAL,86,56,29,14,ES_AUTOHSCROLL
+    LTEXT           "Pick color here or enter below",IDC_STATIC,22,14,96,8
+    LTEXT           "R",IDC_STATIC,33,47,8,8
+    LTEXT           "G",IDC_STATIC,65,47,8,8
+    LTEXT           "B",IDC_STATIC,99,47,8,8
+END
+
+IDD_ANIMVIEW DIALOGEX 0, 0, 741, 169
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_VSCROLL | WS_HSCROLL | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,619,3,50,14,NOT WS_VISIBLE
+    PUSHBUTTON      "Cancel",IDCANCEL,619,0,50,14,NOT WS_VISIBLE
+    COMBOBOX        IDC_ANIMSELCOMBO,0,0,131,88,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_NEWANIMATION DIALOGEX 0, 0, 107, 90
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "New Animation"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,28,69,50,14
+    EDITTEXT        IDC_ANIMNAME,17,37,73,14,ES_AUTOHSCROLL
+    LTEXT           "Animation Name",IDC_STATIC,27,26,52,8
+END
+
+IDD_KEYFRAMEDATA DIALOGEX 0, 0, 173, 142
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Keyframe Data"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,59,121,50,14
+    LTEXT           "Object Name",IDC_STATIC,26,7,42,8
+    CTEXT           "Static",IDC_KEYVIEWOBJNAME,17,16,59,8
+    LTEXT           "Keyframe",IDC_STATIC,114,7,32,8
+    CTEXT           "Static",IDC_KEYVIEWKEYFRAME,119,16,19,8
+    LTEXT           "Attr 1",IDC_KEYVIEWATTR1,34,31,20,8
+    LTEXT           "Attr 2",IDC_KEYVIEWATTR2,120,31,20,8
+    LTEXT           "Attr 3",IDC_KEYVIEWATTR3,33,56,20,8
+    LTEXT           "Attr 4",IDC_KEYVIEWATTR4,119,56,20,8
+    EDITTEXT        IDC_EDIT1,23,41,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT2,107,41,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT3,23,67,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT4,107,67,40,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Update Key Data",IDC_KEYVIEWUPDATEBT,53,97,61,14
+END
+
+IDD_GUIEDDATA DIALOGEX 0, 0, 186, 160
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,129,7,50,14,NOT WS_VISIBLE
+    PUSHBUTTON      "Cancel",IDCANCEL,129,24,50,14,NOT WS_VISIBLE
+    LTEXT           "Mouse Position",IDC_STATIC,18,39,49,8
+    LTEXT           "X",IDC_STATIC,24,50,8,8
+    LTEXT           "Y",IDC_STATIC,46,50,8,8
+    LTEXT           "X",IDC_MOUSEX,22,59,18,8
+    LTEXT           "Y",IDC_MOUSEY,44,59,17,8
+    LTEXT           "Zoom",IDC_STATIC,32,79,19,8
+    LTEXT           "%",IDC_ZOOM,28,91,28,8
+    COMBOBOX        IDC_RESCOMBO,7,20,82,66,CBS_DROPDOWN | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Working Resolution",IDC_STATIC,15,7,63,8
+END
+
+IDD_LANGUAGEVIEW DIALOGEX 0, 0, 248, 132
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Languages"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    PUSHBUTTON      "Close",IDCANCEL,97,111,50,14
+    LISTBOX         IDC_LANGUAGELIST,15,22,99,80,LBS_SORT | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_HSCROLL | WS_TABSTOP
+    LTEXT           "Loaded Languages",IDC_STATIC,34,10,61,8
+    PUSHBUTTON      "Set Active Language",IDC_SETACTIVELANG,123,35,94,14
+    PUSHBUTTON      "Remove Language",IDC_REMOVELANG,124,88,94,14
+    PUSHBUTTON      "Add Language...",IDC_ADDLANG,124,70,94,14
+    LTEXT           "Active Language:",IDC_STATIC,148,7,57,8
+    CTEXT           "Lang",IDC_ACTIVELANGUAGE,125,19,102,8
+    PUSHBUTTON      "Edit Language...",IDC_EDITLANG,124,52,94,14
+END
+
+IDD_ADDEDITLANG DIALOGEX 0, 0, 234, 100
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Add / Edit Language"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,42,79,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,143,79,50,14
+    LTEXT           "Language Name",IDC_STATIC,7,7,52,8
+    LTEXT           "Language File",IDC_STATIC,7,34,45,8
+    EDITTEXT        IDC_LANGNAMEEDIT,7,18,190,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_LANGFILEEDIT,7,46,190,14,ES_AUTOHSCROLL | ES_READONLY
+    PUSHBUTTON      "...",IDC_LANGFILEOPENBT,200,46,27,14
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_EXAMPLETYPE ACCELERATORS 
+BEGIN
+    "C",            ID_COPY_ITEM,           VIRTKEY, CONTROL, NOINVERT
+    "V",            ID_PASTE_INST,          VIRTKEY, SHIFT, CONTROL, NOINVERT
+    "V",            ID_PASTE_NEW,           VIRTKEY, CONTROL, NOINVERT
+    "H",            ID_SHOW_HIDE,           VIRTKEY, CONTROL, NOINVERT
+    "P",            ID_ANIM_TEST,           VIRTKEY, CONTROL, NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDR_EXAMPLE_TOOL_PALETTE TOOLBAR  16, 16
+BEGIN
+    BUTTON      ID_3D_BUTTON
+    BUTTON      ID_TEST_PAL_BUTTON_2
+    BUTTON      ID_TEST_PAL_BUTTON_3
+    BUTTON      ID_EXAMPLE_PAL_BUTTON_4
+END
+
+IDR_EXAMPLETYPE TOOLBAR  16, 16
+BEGIN
+    BUTTON      ID_EXAMPLE_TEST1
+    BUTTON      ID_EXAMPLE_TEST2
+    BUTTON      ID_EXAMPLE_TEST3
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDR_EXAMPLE_TOOL_PALETTE BITMAP                  "res\\toolbar1.bmp"
+IDB_EXAMPLE_TOOL_PAL    BITMAP                  "res\\icons.bmp"
+IDR_EXAMPLETYPE         BITMAP                  "res\\toolbar.bmp"
+IDB_TOOLBAR             BITMAP                  "res\\toolbarh.bmp"
+IDB_EYES                BITMAP                  "res\\eyes.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_GUIPROPERTIES, DIALOG
+    BEGIN
+        BOTTOMMARGIN, 317
+        HORZGUIDE, 316
+    END
+
+    IDD_RESBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 142
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 83
+    END
+
+    IDD_ENTERPAGENAME, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 125
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 83
+    END
+
+    IDD_GROUPNAMEBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 138
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 83
+    END
+
+    IDD_USEGROUPBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 119
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 83
+    END
+
+    IDD_NEWBUTTON, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 142
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 83
+    END
+
+    IDD_NEWTEXT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 137
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 114
+    END
+
+    IDD_NEWSTATIC, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 140
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 100
+    END
+
+    IDD_USEITEM, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 146
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 83
+    END
+
+    IDD_SETBGCOLOR, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 132
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 92
+    END
+
+    IDD_ANIMVIEW, DIALOG
+    BEGIN
+        RIGHTMARGIN, 729
+    END
+
+    IDD_NEWANIMATION, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 100
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 83
+    END
+
+    IDD_KEYFRAMEDATA, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 166
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 135
+    END
+
+    IDD_GUIEDDATA, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 153
+    END
+
+    IDD_LANGUAGEVIEW, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 241
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 125
+    END
+
+    IDD_ADDEDITLANG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 227
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 93
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_RESOURCE_NAME       "GUIs"
+END
+
+STRINGTABLE 
+BEGIN
+    IDC_NEWGROUPBT          "New Group\nCreate a group to add elements to"
+    IDC_NEWBUTTONBT         "New Button\nAdd a button-type element"
+    IDC_INSTLOCK            "Instance Lock\nLock all instances of same item to selected item's position and size"
+    IDC_NEWTEXTBT           "New Text\nAdd a new text-type element"
+    IDC_NEWSTATICBT         "New Static\nAdd a static art-type element, modify mouse cursor"
+    IDC_USEITEMBT           "Use Item\nAdd an item instance"
+    IDC_NEWPAGEBT           "New Page\nAdd a new page"
+    IDC_NEWANIMATION        "New Animation\nCreate a new GUI animation"
+    IDC_PLAYANIM            "Play Animation\nPlay the selected animation"
+    IDC_STOPANIM            "Stop Animation\nStop the currently playing animation"
+END
+
+STRINGTABLE 
+BEGIN
+    IDC_CHANGECOLORBT       "Change Color\nChange the background color behind the canvas"
+    IDC_FULLWINDOWBT        "Full Window\nRe-Center the page in the view"
+    IDC_PLAYBT              "Play\nPreview the page in fullscreen"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif //_WIN32
+#include "res\ExampleEditor.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

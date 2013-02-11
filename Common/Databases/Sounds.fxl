@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<CDatabaseSchema Version="1.0" Name="SoundSchema" NumItems="4">
+	<CSchemaItem Version="1.0" Name="KeyString" Type="string" Class="edit" Default="">
+	</CSchemaItem>
+	<CSchemaItem Version="1.0" Name="FileName" Type="string" Class="edit" Default="">
+	</CSchemaItem>
+	<CSchemaItem Version="1.0" Name="GlobalVolume" Type="float" Class="edit" Default="1.0">
+	</CSchemaItem>
+	<CSchemaItem Version="1.0" Name="CacheUncompressed" Type="bool" Class="edit" Default="true">
+	</CSchemaItem>
+</CDatabaseSchema>

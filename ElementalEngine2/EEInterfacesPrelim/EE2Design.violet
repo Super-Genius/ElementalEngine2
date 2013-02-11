@@ -1,0 +1,608 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<java version="1.4.2_10" class="java.beans.XMLDecoder"> 
+ <object class="com.horstmann.violet.ClassDiagramGraph"> 
+  <void method="addNode"> 
+   <object id="ClassNode0" class="com.horstmann.violet.ClassNode"> 
+    <void property="methods"> 
+     <void property="text"> 
+      <string>virtual ~IIndexBuffer() = 0;
+virtual bool Resize( UINT numElements ) = 0;
+virtual UINT GetSize() = 0;
+virtual bool Lock( UINT offset, UINT size, void ** pData ) = 0;
+virtual bool Unlock() = 0;</string> 
+     </void> 
+    </void> 
+    <void property="name"> 
+     <void property="text"> 
+      <string>IIndexBuffer
+</string> 
+     </void> 
+    </void> 
+   </object> 
+   <object class="java.awt.geom.Point2D$Double"> 
+    <void method="setLocation"> 
+     <double>340.0</double> 
+     <double>690.0</double> 
+    </void> 
+   </object> 
+  </void> 
+  <void method="addNode"> 
+   <object id="ClassNode1" class="com.horstmann.violet.ClassNode"> 
+    <void property="methods"> 
+     <void property="text"> 
+      <string>virtual ~IVertexBufferObject() = 0;
+virtual bool Initialize( ElementalEngine::CHANNELDESCRIPTORLIST &amp;channels, UINT numElements, bool bdynamic ) = 0;
+virtual void GetDescription( VertexBufferDescriptor &amp;Desc ) = 0;
+virtual bool Lock( UINT offset, UINT size, void ** pData ) = 0;
+virtual bool Unlock() = 0;	</string> 
+     </void> 
+    </void> 
+    <void property="name"> 
+     <void property="text"> 
+      <string>IVertexBuffer</string> 
+     </void> 
+    </void> 
+   </object> 
+   <object class="java.awt.geom.Point2D$Double"> 
+    <void method="setLocation"> 
+     <double>30.0</double> 
+     <double>500.0</double> 
+    </void> 
+   </object> 
+  </void> 
+  <void method="addNode"> 
+   <object id="ClassNode2" class="com.horstmann.violet.ClassNode"> 
+    <void property="methods"> 
+     <void property="text"> 
+      <string>	/// Sets the texture of the surface to a stage name. Stage names are things like &quot;BaseTexture&quot;, &quot;NormalMap&quot;,
+	/// and that are used by the shader
+	virtual void SetTexture( IHashString * stagename, ITextureObject * texture ) = 0;
+	/// Gets the texture of the surface from a stage name. Stage names are things like &quot;BaseTexture&quot;, &quot;NormalMap&quot;,
+	/// and that are used by the shader. Returns NULL if surface does not have a listing of the stage name
+	virtual ITextureObject * GetTextureFromStageName( IHashString * stagename ) = 0;
+
+	/// responsible for loading the mesh into internal buffers and then allocating vertex buffer space for the mesh
+	virtual bool SetMesh( IMeshObject * mesh ) = 0;
+
+	virtual ISurface * Hierarchy_GetParent() = 0;
+	virtual void Hierarchy_GetChildren( vector&lt; ISurface * &gt; &amp;children_out ) = 0;
+	/// creates a double link between parent and child or nothing if a link already exists.
+	virtual bool Hierarchy_SetParent( ISurface * surf ) = 0;
+	/// creates a double link between parent and child or nothing if one already exists.
+	virtual bool Hierarchy_SetChild( ISurface * surf ) = 0;
+	/// Sets the rotation offset from the parent
+	virtual void Hierarchy_SetRotationOffset( IVec3 * RotationOffset ) = 0;
+	/// Gets the rotation offset from the parent
+	virtual IVec3 * Hierarchy_GetRotationOffset() = 0;
+	/// Sets the translation offset from the parent
+	virtual void Hierarchy_SetTranslationOffset( IVec3 * RotationOffset ) = 0;
+	/// Gets the rotation offset from the parent
+	virtual IVec3 * Hierarchy_GetTranslationOffset() = 0;
+	/// recursively builds the rotation based on precalculated parent. Builds rotation for all its children
+    virtual bool Hierarchy_BuildRotation() = 0;	
+	/// Get precalculated rotation matrix
+	virtual IMatrix4x4 * GetRotationMatrix() = 0;
+
+	/// --vertex buffer associations
+	virtual IVertexBufferObject * GetVertexBuffer() = 0;
+	/// get the offsets
+	virtual UINT GetVertexBufferOffset() = 0;
+	/// get number of vertices
+	virtual UINT GetNumVertices() = 0;
+	/// Index buffer associations
+	virtual IIndexBuffer * GetIndexBuffer() = 0;
+	/// Index buffer associations
+	virtual UINT GetIndexBufferOffset() = 0;
+	/// Index buffer associations
+	virtual UINT GetNumIndices() = 0;
+	/// number of primitives
+	virtual UINT GetNumPrimitives() = 0;
+
+	//Renders this surface with a shader(1 pass )
+	virtual bool Render( IShader * ) = 0;</string> 
+     </void> 
+    </void> 
+    <void property="name"> 
+     <void property="text"> 
+      <string>ISurface</string> 
+     </void> 
+    </void> 
+   </object> 
+   <object class="java.awt.geom.Point2D$Double"> 
+    <void method="setLocation"> 
+     <double>1570.0</double> 
+     <double>260.0</double> 
+    </void> 
+   </object> 
+  </void> 
+  <void method="addNode"> 
+   <object id="ClassNode3" class="com.horstmann.violet.ClassNode"> 
+    <void property="methods"> 
+     <void property="text"> 
+      <string>
+	virtual UINT GetNumStages() = 0;
+	/// Sets the name of a texture stage. Used for loading a shader and associating texture stages with names
+	/// that the model or other surfaces will also have
+	virtual void SetTextureStage( UINT stage, IHashString * stagename ) = 0;
+	///  gets the name of the stage, or NULL if there&apos;s no name assocaited with this stage( uses custom tex or stage not used )
+	virtual IHashString * GetTextureStageName( UINT stage ) = 0;
+	/// does the stage use a custom texture
+	virtual bool	IsStageCustom( UINT stage ) = 0;
+	/// Gets the custom texture associate with a stage, or NULL if the stage does not use a custom texture or does not
+	/// use a texture at all
+	virtual ITextureObject * GetShaderTextureFromStage( UINT stage ) = 0;
+	/// gets the shader version
+	virtual DWORD GetPixelShaderVersion() = 0;
+	virtual DWORD GetVertexShaderVersion() = 0;
+
+	virtual bool SetCallback( IShaderCallback * callback ) = 0;
+	virtual IShaderCallback * GetCallback() = 0;</string> 
+     </void> 
+    </void> 
+    <void property="name"> 
+     <void property="text"> 
+      <string>IShader</string> 
+     </void> 
+    </void> 
+   </object> 
+   <object class="java.awt.geom.Point2D$Double"> 
+    <void method="setLocation"> 
+     <double>260.0</double> 
+     <double>1100.0</double> 
+    </void> 
+   </object> 
+  </void> 
+  <void method="addNode"> 
+   <object id="ClassNode4" class="com.horstmann.violet.ClassNode"> 
+    <void property="methods"> 
+     <void property="text"> 
+      <string>/// adds a shader pass to this effect
+	virtual void AddShaderPass( IShader * shader, const UINT pass ) = 0;
+	/// removes a shader pass to this effect
+	virtual void RemoveShaderPass( IShader * shader, const UINT pass ) = 0;
+	/// gets the associated shader pass to this effect
+	virtual IShader * GetShaderPass( const UINT pass ) = 0;
+	/// makes this effect visible or invisible	
+	virtual void SetVisible( const UINT pass, bool visible ) = 0;
+	/// gets status if this effect is visible or invisible	
+	virtual bool GetVisible( const UINT pass ) = 0;
+	/// Gets number of passes
+	virtual UINT GetNumPass() = 0;</string> 
+     </void> 
+    </void> 
+    <void property="name"> 
+     <void property="text"> 
+      <string>IEffect</string> 
+     </void> 
+    </void> 
+   </object> 
+   <object class="java.awt.geom.Point2D$Double"> 
+    <void method="setLocation"> 
+     <double>1080.0</double> 
+     <double>1060.0</double> 
+    </void> 
+   </object> 
+  </void> 
+  <void method="addNode"> 
+   <object id="ClassNode5" class="com.horstmann.violet.ClassNode"> 
+    <void property="methods"> 
+     <void property="text"> 
+      <string>	/// \brief Builds a frustum from the parameters
+	/// \param origin = the origin of the viewpoint
+	/// \param direction = the viewvector
+	/// \param upvector =the upvector of the frustum
+	/// \param angle = the Field of View angle
+	/// \param nearcap = the near clipping plane distance from the origin
+	/// \param farcap = the far clipping plane distance from the origin
+	virtual void Build( const IVec3 &amp;origin, const IVec3 &amp;direction, const IVec3 &amp;upvector,
+					float horizontalfov, float verticalfov, float nearcap, float farcap ) = 0;
+
+	/// \brief Checks if a sphere lies within the frustum
+	/// \param position = the position of the center of the sphere in world space
+	/// \param radius = the radius of the sphere
+	/// \return bool = returns true if the sphere is visible
+	virtual bool IsSphereInView( const IVec3 &amp;position, const float radius ) = 0;
+
+	/// \brief Checks if an axis aligned bounding box is visible within the frustum
+	/// \param aabbMin = the min coord of the AABB
+	/// \param aabbMax = the  max coord of the AABB
+	/// \return bool = returns true if the AABB is visible
+	virtual bool IsAABBInView( const IVec3 &amp;aabbMin, const IVec3 &amp;aabbMax ) = 0;</string> 
+     </void> 
+    </void> 
+    <void property="name"> 
+     <void property="text"> 
+      <string>IFrustum
+</string> 
+     </void> 
+    </void> 
+   </object> 
+   <object class="java.awt.geom.Point2D$Double"> 
+    <void method="setLocation"> 
+     <double>2580.0</double> 
+     <double>40.0</double> 
+    </void> 
+   </object> 
+  </void> 
+  <void method="addNode"> 
+   <object id="ClassNode6" class="com.horstmann.violet.ClassNode"> 
+    <void property="methods"> 
+     <void property="text"> 
+      <string>virtual void BuildCamera( IVec3* position, IVec3* upvector, IVec3* viewvector,
+							float nearclip, float farclip, float FOVangle ) = 0;
+	/// Set the Rotation of the camera
+	virtual void SetRotation( float x, float y, float z ) = 0;
+	virtual void SetRotation( IVec3 * rot ) = 0;
+	/// Sets the Position of the camera
+	virtual void SetPosition( float x, float y, float z ) = 0;
+	virtual void SetPosition( IVec3 * pos ) = 0;
+	/// Sets the Look At Vector of the camera, builds the internal view vector
+	virtual void SetLookAt( float x, float y, float z ) = 0;
+	virtual void SetLookAt( IVec3 * lookat ) = 0;
+	/// Sets the Field of View Angle of the camera in Degrees
+	virtual void SetFOVAngle( float angle ) = 0;
+	/// Sets the clipping planes of the camera in distance relative to position
+	virtual void SetClipping( float nearclip, float farclip ) = 0;
+	/// Sets the upvector of the camera. Default up vector is (0,0,1)
+	virtual void SetUpVector( float x, float y, float z ) = 0;
+	virtual void SetUpVector( IVec3 * upvector ) = 0;
+	/// Sets the view vector of the camera
+	virtual void SetViewVector( float x, float y, float z ) = 0;
+	virtual void SetViewVector( IVec3 * viewvector ) = 0;
+	/// Gets the view vector of the camera
+	virtual const IVec3* GetViewVector() = 0;
+	/// Gets the up vector of the camera
+	virtual const IVec3* GetUpVector() = 0;
+	/// Gets the position of the camera
+	virtual IVec3&amp; GetPosition() = 0;
+
+	/// Renderer function
+	virtual IFrustum * GetFrustum() = 0;
+
+	/// Activates this camera as the current camera for the renderer
+	virtual void Activate() = 0;</string> 
+     </void> 
+    </void> 
+    <void property="name"> 
+     <void property="text"> 
+      <string>ICamera</string> 
+     </void> 
+    </void> 
+   </object> 
+   <object class="java.awt.geom.Point2D$Double"> 
+    <void method="setLocation"> 
+     <double>3260.0</double> 
+     <double>70.0</double> 
+    </void> 
+   </object> 
+  </void> 
+  <void method="addNode"> 
+   <object id="ClassNode7" class="com.horstmann.violet.ClassNode"> 
+    <void property="methods"> 
+     <void property="text"> 
+      <string>/// \brief Render the renderobject
+	/// \return true if object was rendered, false otherwise
+	virtual bool Render( UINT pass ) = 0;
+
+	/// \brief Compare for sorting
+	/// \param obj = object to compare to
+	/// \param sortMethod = a sort method specifying how to compare(set in RENDEROBJECTCOMPARE)
+	/// \param curRenderPass = the current render pass to sort to
+	/// \return bool = must return true if (this pointer) &lt; (obj)
+	virtual bool IsLessThan( const IRenderObject * obj, DWORD sortMethod, int curRenderPass ) = 0;
+
+	/// \brief This is for render priorities between classes
+	/// will change as soon as a new architecture can be designed to better incorporate
+	/// different renderobject types being pushed on the same sorted list
+	/// \return DWORD = the priority key this returns, the higher the number,
+	/// the higher its priority
+	virtual DWORD GetRenderPriority() = 0;
+
+	/// \brief Number of passes this render object has to go through
+	/// \return UINT = the number of passes that this object has to go through
+	virtual UINT GetNumPass() = 0;
+
+	/// \brief Sets the position of the render object
+	/// \param position IVec3 class reference to fill in
+	virtual void SetPosition( const IVec3 &amp;position ) = 0;
+
+	/// \brief Gets the position of the render object
+	/// \return IVec3 = position f the object
+	virtual IVec3 &amp;GetPosition() = 0;
+
+	/// \brief Gets bounding sphere of object. This is a 3D interface call that should be implemented for only
+	///			3D objects. Might want to seperate more of this later
+	/// \param position = vector that will be filled the center of the sphere
+	/// \param radius = float that will be filled with the radius of the sphere
+	virtual void GetBoundingSphere( IVec3 &amp;position, float &amp;radius ) = 0;
+
+	/// \brief Gets the base sort class which implements IRenderObject::IsLessThan()
+	/// child classes must not re-implement IsLessThan() if they return the BaseSortClass hash!!
+	/// typically, each render object has a IsLessThan() and returns a unique BaseSortClass
+	virtual IHashString * GetBaseSortClass() = 0;
+
+	/// \brief returns if this renderobject needs to be sorted in the transparency list
+	/// \return bool = true if this object uses transparency
+	virtual bool IsAlphaObject() = 0;
+
+	/// \brief Gets the internal mesh
+	virtual IMeshObject * GetMeshObject() = 0;
+
+	virtual bool GetBoundingBox( IVec3 &amp;pos, IVec3 &amp;dim, IVec3 &amp;rotation ) = 0;</string> 
+     </void> 
+    </void> 
+    <void property="name"> 
+     <void property="text"> 
+      <string>IRenderObject</string> 
+     </void> 
+    </void> 
+   </object> 
+   <object class="java.awt.geom.Point2D$Double"> 
+    <void method="setLocation"> 
+     <double>2460.0</double> 
+     <double>460.0</double> 
+    </void> 
+   </object> 
+  </void> 
+  <void method="addNode"> 
+   <object id="ClassNode8" class="com.horstmann.violet.ClassNode"> 
+    <void property="methods"> 
+     <void property="text"> 
+      <string>virtual IHashString * GetTextureName() = 0;
+	virtual unsigned int GetReferenceCount() = 0;
+	virtual unsigned int IncrementRefCount() = 0;
+	virtual unsigned int DecrementRefCount() = 0;
+	virtual bool LoadFromFile(  const TCHAR * file ) = 0;
+	virtual UINT GetHeight() = 0;
+	virtual UINT GetWidth() = 0;
+	virtual UINT GetColorDepth() = 0;
+	virtual void SetTextureName(IHashString *newName) = 0;
+	virtual bool IsRenderTarget() = 0;</string> 
+     </void> 
+    </void> 
+    <void property="name"> 
+     <void property="text"> 
+      <string>IBaseTextureObject</string> 
+     </void> 
+    </void> 
+   </object> 
+   <object class="java.awt.geom.Point2D$Double"> 
+    <void method="setLocation"> 
+     <double>600.0</double> 
+     <double>0.0</double> 
+    </void> 
+   </object> 
+  </void> 
+  <void method="addNode"> 
+   <object id="ClassNode9" class="com.horstmann.violet.ClassNode"> 
+    <void property="methods"> 
+     <void property="text"> 
+      <string>virtual void* Read() = 0;
+	virtual bool Write( void * p ) =  0;
+	virtual void * Lock() = 0;
+	virtual void Unlock() = 0;
+	virtual bool MakeBlankTexture( UINT sizex, UINT sizey, UINT  colordepth ) = 0;
+	virtual bool MakeRenderTarget( UINT sizex, UINT sizey, UINT colordepth, DWORD type = 0) = 0;	</string> 
+     </void> 
+    </void> 
+    <void property="name"> 
+     <void property="text"> 
+      <string>ITextureObject</string> 
+     </void> 
+    </void> 
+   </object> 
+   <object class="java.awt.geom.Point2D$Double"> 
+    <void method="setLocation"> 
+     <double>50.0</double> 
+     <double>320.0</double> 
+    </void> 
+   </object> 
+  </void> 
+  <void method="addNode"> 
+   <object id="ClassNode10" class="com.horstmann.violet.ClassNode"> 
+    <void property="methods"> 
+     <void property="text"> 
+      <string>virtual void* Read( EE_CUBEMAPFACE faceindex ) = 0;
+	virtual bool Write( EE_CUBEMAPFACE faceindex, void *p ) = 0;
+    virtual void * Lock( EE_CUBEMAPFACE faceindex ) = 0;
+	virtual void Unlock( EE_CUBEMAPFACE faceindex ) = 0;
+	virtual bool			 InitializeCubemap( const UINT squaresize, const UINT colordepth, bool bRenderTarget = false ) = 0;
+	</string> 
+     </void> 
+    </void> 
+    <void property="name"> 
+     <void property="text"> 
+      <string>ICubeTextureObject</string> 
+     </void> 
+    </void> 
+   </object> 
+   <object class="java.awt.geom.Point2D$Double"> 
+    <void method="setLocation"> 
+     <double>610.0</double> 
+     <double>320.0</double> 
+    </void> 
+   </object> 
+  </void> 
+  <void method="addNode"> 
+   <object id="ClassNode11" class="com.horstmann.violet.ClassNode"> 
+    <void property="methods"> 
+     <void property="text"> 
+      <string>virtual bool SetEmitterLifeTime( const float average, const float variation ) = 0;
+	
+	virtual bool SetColorFunction( IFunctionParam * func ) = 0;
+	virtual bool SetSizeFunction( IFunctionParam * func ) = 0;
+	virtual bool SetAnimationFunction( IFunctionParam * func ) = 0;
+
+	virtual bool SetParticleLifeTime( const float average, const float variation ) = 0;
+	virtual bool SetGrowth( IFunctionParam * param ) = 0;
+	virtual bool SetSpeed( IFunctionParam * param ) = 0;
+
+	virtual bool SetTexture( ITextureObject * texture ) = 0;
+	virtual bool SetAnimationTextureSubdivisions( const UINT xdiv = 1, const UINT ydiv = 1,
+					const UINT numAnimations = 1 ) = 0;
+	virtual bool SetTransparencyType( DWORD temptype ) = 0;//should be additive, or normal
+</string> 
+     </void> 
+    </void> 
+    <void property="name"> 
+     <void property="text"> 
+      <string>IParticleEmitter</string> 
+     </void> 
+    </void> 
+   </object> 
+   <object class="java.awt.geom.Point2D$Double"> 
+    <void method="setLocation"> 
+     <double>2000.0</double> 
+     <double>1350.0</double> 
+    </void> 
+   </object> 
+  </void> 
+  <void method="addNode"> 
+   <object id="ClassNode12" class="com.horstmann.violet.ClassNode"> 
+    <void property="methods"> 
+     <void property="text"> 
+      <string>
+	virtual float GetValue( float time ) = 0;</string> 
+     </void> 
+    </void> 
+    <void property="name"> 
+     <void property="text"> 
+      <string>IFunctionParam</string> 
+     </void> 
+    </void> 
+   </object> 
+   <object class="java.awt.geom.Point2D$Double"> 
+    <void method="setLocation"> 
+     <double>1970.0</double> 
+     <double>1110.0</double> 
+    </void> 
+   </object> 
+  </void> 
+  <void method="connect"> 
+   <object class="com.horstmann.violet.ClassRelationshipEdge"> 
+    <void property="bentStyle"> 
+     <object class="com.horstmann.violet.BentStyle" field="HVH"/> 
+    </void> 
+    <void property="startArrowHead"> 
+     <object class="com.horstmann.violet.ArrowHead" field="DIAMOND"/> 
+    </void> 
+   </object> 
+   <object idref="ClassNode2"/> 
+   <object idref="ClassNode1"/> 
+  </void> 
+  <void method="connect"> 
+   <object class="com.horstmann.violet.ClassRelationshipEdge"> 
+    <void property="bentStyle"> 
+     <object class="com.horstmann.violet.BentStyle" field="HVH"/> 
+    </void> 
+    <void property="startArrowHead"> 
+     <object class="com.horstmann.violet.ArrowHead" field="DIAMOND"/> 
+    </void> 
+   </object> 
+   <object idref="ClassNode2"/> 
+   <object idref="ClassNode0"/> 
+  </void> 
+  <void method="connect"> 
+   <object class="com.horstmann.violet.ClassRelationshipEdge"> 
+    <void property="bentStyle"> 
+     <object class="com.horstmann.violet.BentStyle" field="HVH"/> 
+    </void> 
+    <void property="startArrowHead"> 
+     <object class="com.horstmann.violet.ArrowHead" field="DIAMOND"/> 
+    </void> 
+   </object> 
+   <object idref="ClassNode4"/> 
+   <object idref="ClassNode3"/> 
+  </void> 
+  <void method="connect"> 
+   <object class="com.horstmann.violet.ClassRelationshipEdge"> 
+    <void property="bentStyle"> 
+     <object class="com.horstmann.violet.BentStyle" field="HVH"/> 
+    </void> 
+    <void property="startArrowHead"> 
+     <object class="com.horstmann.violet.ArrowHead" field="DIAMOND"/> 
+    </void> 
+   </object> 
+   <object idref="ClassNode6"/> 
+   <object idref="ClassNode5"/> 
+  </void> 
+  <void method="connect"> 
+   <object class="com.horstmann.violet.ClassRelationshipEdge"> 
+    <void property="bentStyle"> 
+     <object class="com.horstmann.violet.BentStyle" field="HVH"/> 
+    </void> 
+    <void property="startArrowHead"> 
+     <object class="com.horstmann.violet.ArrowHead" field="DIAMOND"/> 
+    </void> 
+   </object> 
+   <object idref="ClassNode2"/> 
+   <object idref="ClassNode8"/> 
+  </void> 
+  <void method="connect"> 
+   <object class="com.horstmann.violet.ClassRelationshipEdge"> 
+    <void property="bentStyle"> 
+     <object class="com.horstmann.violet.BentStyle" field="VHV"/> 
+    </void> 
+    <void property="endArrowHead"> 
+     <object class="com.horstmann.violet.ArrowHead" field="TRIANGLE"/> 
+    </void> 
+   </object> 
+   <object idref="ClassNode9"/> 
+   <object idref="ClassNode8"/> 
+  </void> 
+  <void method="connect"> 
+   <object class="com.horstmann.violet.ClassRelationshipEdge"> 
+    <void property="bentStyle"> 
+     <object class="com.horstmann.violet.BentStyle" field="VHV"/> 
+    </void> 
+    <void property="endArrowHead"> 
+     <object class="com.horstmann.violet.ArrowHead" field="TRIANGLE"/> 
+    </void> 
+   </object> 
+   <object idref="ClassNode10"/> 
+   <object idref="ClassNode8"/> 
+  </void> 
+  <void method="connect"> 
+   <object class="com.horstmann.violet.ClassRelationshipEdge"> 
+    <void property="bentStyle"> 
+     <object class="com.horstmann.violet.BentStyle" field="VHV"/> 
+    </void> 
+    <void property="endArrowHead"> 
+     <object class="com.horstmann.violet.ArrowHead" field="TRIANGLE"/> 
+    </void> 
+   </object> 
+   <object idref="ClassNode11"/> 
+   <object idref="ClassNode7"/> 
+  </void> 
+  <void method="connect"> 
+   <object class="com.horstmann.violet.ClassRelationshipEdge"> 
+    <void property="endArrowHead"> 
+     <object class="com.horstmann.violet.ArrowHead" field="V"/> 
+    </void> 
+    <void property="lineStyle"> 
+     <object class="com.horstmann.violet.LineStyle" field="DOTTED"/> 
+    </void> 
+   </object> 
+   <object idref="ClassNode11"/> 
+   <object idref="ClassNode12"/> 
+  </void> 
+  <void method="connect"> 
+   <object class="com.horstmann.violet.NoteEdge"/> 
+   <object idref="ClassNode7"/> 
+   <object idref="ClassNode2"/> 
+  </void> 
+  <void method="connect"> 
+   <object class="com.horstmann.violet.NoteEdge"/> 
+   <object idref="ClassNode6"/> 
+   <object idref="ClassNode6"/> 
+  </void> 
+  <void method="connect"> 
+   <object class="com.horstmann.violet.NoteEdge"/> 
+   <object idref="ClassNode7"/> 
+   <object idref="ClassNode4"/> 
+  </void> 
+  <void property="minBounds"> 
+   <object class="java.awt.geom.Rectangle2D$Double"/> 
+  </void> 
+ </object> 
+</java> 

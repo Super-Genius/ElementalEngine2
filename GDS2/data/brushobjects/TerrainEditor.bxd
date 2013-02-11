@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TerrainEditorBrushObjects>
+	<BrushObject Name="Gaussian Blend" FileName="gaussian.tga" Operator="+" />
+	<BrushObject Name="Square Shift" FileName="square.tga" Operator="+" />
+</TerrainEditorBrushObjects >

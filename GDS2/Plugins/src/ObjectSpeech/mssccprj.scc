@@ -1,0 +1,9 @@
+SCC = This is a Source Code Control file
+
+[ObjectSpeech.dsp]
+SCC_Aux_Path = "\\xp-server1\VSS\"
+SCC_Project_Name = "$/Development/Game Dev System/Plugins/src/ObjectSpeech", WTCAAAAA
+
+[ObjectSpeech.vcproj]
+SCC_Aux_Path = "\\xp-server1\VSS\"
+SCC_Project_Name = "$/Development/Game Dev System/Plugins/src/ObjectSpeech", WTCAAAAA

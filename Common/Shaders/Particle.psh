@@ -1,0 +1,16 @@
+#include "Shaders\HLSLconstants.h"
+
+struct PSIn
+{
+	float4 HPosition			: POSITION;
+	float2 TexCoord0			: TEXCOORD0;
+	float4 Color				: COLOR0;
+};
+
+float4 main(	PSIn  In, 
+				uniform sampler2D colorMap : register(s0)
+				 ) : COLOR
+{
+	float4 color0 = tex2D(colorMap, In.TexCoord0.xy) * In.Color;
+	return color0;
+}

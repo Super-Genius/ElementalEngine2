@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<Effect version="2000" 
+	numconstants="4"
+	numtextures="0"
+	numrenderstates="3"
+	numbones="0"
+	numflags="0">
+	<ShaderVariable shadertype="vertexshader" type="Function" name="EyePos" register="18" x="0.0" y="0.0" z="0.0" w="1.0" ></ShaderVariable>
+	<ShaderVariable shadertype="vertexshader" type="Constant" name="UVDrift" register="19" x="0.01" y="0.005" z="0.0" w="0.0" ></ShaderVariable>
+	<ShaderVariable shadertype="vertexshader" type="Function" name="SinCosTanTime" register="20" x="0.0" y="0.0" z="0.0" w="0.0" ></ShaderVariable>
+	<ShaderVariable shadertype="vertexshader" type="Constant" name="CloudFade" register="21" x="1250.0" y="4000.0" z="0.05" w="0.0" ></ShaderVariable>
+	<RenderState mode="alphablend" value="true" />
+	<RenderState mode="depthwrite" value="false" />	
+	<RenderState mode="alphatest" value="false" />		
+</Effect>

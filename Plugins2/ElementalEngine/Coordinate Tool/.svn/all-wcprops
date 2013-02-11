@@ -1,0 +1,137 @@
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/!svn/ver/3/trunk/Development/Plugins2/ElementalEngine/Coordinate%20Tool
+END
+stdafx.h
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/!svn/ver/3/trunk/Development/Plugins2/ElementalEngine/Coordinate%20Tool/stdafx.h
+END
+CoordinateToolShaderCallback.h
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/!svn/ver/1/trunk/Development/Plugins2/ElementalEngine/Coordinate%20Tool/CoordinateToolShaderCallback.h
+END
+Coordinate Tool 2005.vcproj.SIGDEV-DESK35.Zsolt Matyas.user
+K 25
+svn:wc:ra_dav:version-url
+V 138
+/!svn/ver/3/trunk/Development/Plugins2/ElementalEngine/Coordinate%20Tool/Coordinate%20Tool%202005.vcproj.SIGDEV-DESK35.Zsolt%20Matyas.user
+END
+Coordinate Tool.link
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/!svn/ver/3/trunk/Development/Plugins2/ElementalEngine/Coordinate%20Tool/Coordinate%20Tool.link
+END
+Coordinate Tool.vcproj
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/!svn/ver/1/trunk/Development/Plugins2/ElementalEngine/Coordinate%20Tool/Coordinate%20Tool.vcproj
+END
+Coordinate Tool.vcproj.vspscc
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/!svn/ver/1/trunk/Development/Plugins2/ElementalEngine/Coordinate%20Tool/Coordinate%20Tool.vcproj.vspscc
+END
+MSSCCPRJ.SCC
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/!svn/ver/1/trunk/Development/Plugins2/ElementalEngine/Coordinate%20Tool/MSSCCPRJ.SCC
+END
+Coordinate Tool 2005.vcproj
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/!svn/ver/3/trunk/Development/Plugins2/ElementalEngine/Coordinate%20Tool/Coordinate%20Tool%202005.vcproj
+END
+Coordinate Tool 2005.vcproj.vspscc
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/!svn/ver/1/trunk/Development/Plugins2/ElementalEngine/Coordinate%20Tool/Coordinate%20Tool%202005.vcproj.vspscc
+END
+StaticLibSymbols.gen
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/!svn/ver/1/trunk/Development/Plugins2/ElementalEngine/Coordinate%20Tool/StaticLibSymbols.gen
+END
+CoordinateObject.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/!svn/ver/3/trunk/Development/Plugins2/ElementalEngine/Coordinate%20Tool/CoordinateObject.cpp
+END
+CoordinateRenderObject.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/!svn/ver/3/trunk/Development/Plugins2/ElementalEngine/Coordinate%20Tool/CoordinateRenderObject.cpp
+END
+CoordinateToolManager.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/!svn/ver/1/trunk/Development/Plugins2/ElementalEngine/Coordinate%20Tool/CoordinateToolManager.cpp
+END
+stdafx.pch
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/!svn/ver/3/trunk/Development/Plugins2/ElementalEngine/Coordinate%20Tool/stdafx.pch
+END
+CoordinateToolDLL.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/!svn/ver/3/trunk/Development/Plugins2/ElementalEngine/Coordinate%20Tool/CoordinateToolDLL.cpp
+END
+CoordinateRenderObject.h
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/!svn/ver/1/trunk/Development/Plugins2/ElementalEngine/Coordinate%20Tool/CoordinateRenderObject.h
+END
+CoordinateObject.h
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/!svn/ver/1/trunk/Development/Plugins2/ElementalEngine/Coordinate%20Tool/CoordinateObject.h
+END
+CoordinateToolManager.h
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/!svn/ver/1/trunk/Development/Plugins2/ElementalEngine/Coordinate%20Tool/CoordinateToolManager.h
+END
+StaticLibSymbols.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/!svn/ver/3/trunk/Development/Plugins2/ElementalEngine/Coordinate%20Tool/StaticLibSymbols.cpp
+END
+CoordinateToolShaderCallback.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/!svn/ver/1/trunk/Development/Plugins2/ElementalEngine/Coordinate%20Tool/CoordinateToolShaderCallback.cpp
+END
+stdafx.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/!svn/ver/1/trunk/Development/Plugins2/ElementalEngine/Coordinate%20Tool/stdafx.cpp
+END
+StaticLibSymbols.h
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/!svn/ver/3/trunk/Development/Plugins2/ElementalEngine/Coordinate%20Tool/StaticLibSymbols.h
+END

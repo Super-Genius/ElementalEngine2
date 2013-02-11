@@ -1,0 +1,203 @@
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/!svn/ver/3/trunk/Development/Common/Models/Boned%20Models/AIM_Henchman
+END
+AIM_Henchman_walk_with_gun.caf
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/!svn/ver/3/trunk/Development/Common/Models/Boned%20Models/AIM_Henchman/AIM_Henchman_walk_with_gun.caf
+END
+AIM_Henchman_dead_on_front_02.caf
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/!svn/ver/3/trunk/Development/Common/Models/Boned%20Models/AIM_Henchman/AIM_Henchman_dead_on_front_02.caf
+END
+A.I.M_Henchman_diffuse.dds
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/!svn/ver/3/trunk/Development/Common/Models/Boned%20Models/AIM_Henchman/A.I.M_Henchman_diffuse.dds
+END
+AIM_Henchman.csf
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/!svn/ver/3/trunk/Development/Common/Models/Boned%20Models/AIM_Henchman/AIM_Henchman.csf
+END
+AIM_Henchman_fidget_with_gun.caf
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/!svn/ver/3/trunk/Development/Common/Models/Boned%20Models/AIM_Henchman/AIM_Henchman_fidget_with_gun.caf
+END
+AIM_Henchman_dead_on_back_02.caf
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/!svn/ver/3/trunk/Development/Common/Models/Boned%20Models/AIM_Henchman/AIM_Henchman_dead_on_back_02.caf
+END
+AIM_Henchman_big_hit_front.caf
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/!svn/ver/3/trunk/Development/Common/Models/Boned%20Models/AIM_Henchman/AIM_Henchman_big_hit_front.caf
+END
+AIM_Henchman_Idle_to_Stunned.caf
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/!svn/ver/3/trunk/Development/Common/Models/Boned%20Models/AIM_Henchman/AIM_Henchman_Idle_to_Stunned.caf
+END
+AIM_Henchman_big_hit_left.caf
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/!svn/ver/3/trunk/Development/Common/Models/Boned%20Models/AIM_Henchman/AIM_Henchman_big_hit_left.caf
+END
+AIM_Henchman_idle_with_gun.caf
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/!svn/ver/3/trunk/Development/Common/Models/Boned%20Models/AIM_Henchman/AIM_Henchman_idle_with_gun.caf
+END
+AIM_Henchman_jog_with_gun.caf
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/!svn/ver/3/trunk/Development/Common/Models/Boned%20Models/AIM_Henchman/AIM_Henchman_jog_with_gun.caf
+END
+A.I.M_Henchman_nrml.dds
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/!svn/ver/3/trunk/Development/Common/Models/Boned%20Models/AIM_Henchman/A.I.M_Henchman_nrml.dds
+END
+AIM_Henchman_big_hit_back.caf
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/!svn/ver/3/trunk/Development/Common/Models/Boned%20Models/AIM_Henchman/AIM_Henchman_big_hit_back.caf
+END
+AIM_Henchman.cfg
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/!svn/ver/3/trunk/Development/Common/Models/Boned%20Models/AIM_Henchman/AIM_Henchman.cfg
+END
+AIM_Henchman_melee_kick.caf
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/!svn/ver/3/trunk/Development/Common/Models/Boned%20Models/AIM_Henchman/AIM_Henchman_melee_kick.caf
+END
+AIM_Henchman_melee_rifle_strike.caf
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/!svn/ver/3/trunk/Development/Common/Models/Boned%20Models/AIM_Henchman/AIM_Henchman_melee_rifle_strike.caf
+END
+AIM_Henchman_die_in_place.caf
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/!svn/ver/3/trunk/Development/Common/Models/Boned%20Models/AIM_Henchman/AIM_Henchman_die_in_place.caf
+END
+AIM_Henchman_dead_on_front.caf
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/!svn/ver/3/trunk/Development/Common/Models/Boned%20Models/AIM_Henchman/AIM_Henchman_dead_on_front.caf
+END
+AIM_Henchman_big_hit_right.caf
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/!svn/ver/3/trunk/Development/Common/Models/Boned%20Models/AIM_Henchman/AIM_Henchman_big_hit_right.caf
+END
+aim_henchman_collisionbox.dae
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/!svn/ver/3/trunk/Development/Common/Models/Boned%20Models/AIM_Henchman/aim_henchman_collisionbox.dae
+END
+AIM_Henchman_dead_on_back.caf
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/!svn/ver/3/trunk/Development/Common/Models/Boned%20Models/AIM_Henchman/AIM_Henchman_dead_on_back.caf
+END
+AIM_Henchman_little_hit_front.caf
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/!svn/ver/3/trunk/Development/Common/Models/Boned%20Models/AIM_Henchman/AIM_Henchman_little_hit_front.caf
+END
+AIM_Henchman_little_hit_left.caf
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/!svn/ver/3/trunk/Development/Common/Models/Boned%20Models/AIM_Henchman/AIM_Henchman_little_hit_left.caf
+END
+AIM_Henchman_Stunned_Idle.caf
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/!svn/ver/3/trunk/Development/Common/Models/Boned%20Models/AIM_Henchman/AIM_Henchman_Stunned_Idle.caf
+END
+AIM_Henchman_Stunned_to_Idle.caf
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/!svn/ver/3/trunk/Development/Common/Models/Boned%20Models/AIM_Henchman/AIM_Henchman_Stunned_to_Idle.caf
+END
+AIM_Henchman_little_hit_back.caf
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/!svn/ver/3/trunk/Development/Common/Models/Boned%20Models/AIM_Henchman/AIM_Henchman_little_hit_back.caf
+END
+AIM_Henchman_get_up.CAF
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/!svn/ver/3/trunk/Development/Common/Models/Boned%20Models/AIM_Henchman/AIM_Henchman_get_up.CAF
+END
+AIM_Henchman_knock_back.CAF
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/!svn/ver/3/trunk/Development/Common/Models/Boned%20Models/AIM_Henchman/AIM_Henchman_knock_back.CAF
+END
+AIM_Henchman.xrf
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/!svn/ver/3/trunk/Development/Common/Models/Boned%20Models/AIM_Henchman/AIM_Henchman.xrf
+END
+AIM_Henchman_firing_gun.caf
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/!svn/ver/3/trunk/Development/Common/Models/Boned%20Models/AIM_Henchman/AIM_Henchman_firing_gun.caf
+END
+AIM_Henchman_on_back_Idle.CAF
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/!svn/ver/3/trunk/Development/Common/Models/Boned%20Models/AIM_Henchman/AIM_Henchman_on_back_Idle.CAF
+END
+AIM_Henchman.cmf
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/!svn/ver/3/trunk/Development/Common/Models/Boned%20Models/AIM_Henchman/AIM_Henchman.cmf
+END
+AIM_Henchman_little_hit_right.caf
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/!svn/ver/3/trunk/Development/Common/Models/Boned%20Models/AIM_Henchman/AIM_Henchman_little_hit_right.caf
+END

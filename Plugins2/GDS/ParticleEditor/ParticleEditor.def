@@ -1,0 +1,6 @@
+; ParticleEditor.def : Declares the module parameters for the DLL.
+
+LIBRARY      "ParticleEditor"
+
+EXPORTS
+    ; Explicit exports can go here

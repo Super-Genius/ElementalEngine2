@@ -1,0 +1,184 @@
+#include "Shaders\HLSLconstants.h"
+
+struct v2f
+{
+	float4 HPosition	: POSITION;
+	float2 TexCoord0    : TEXCOORD0;	// TexCoord
+	float3 Normal		: TEXCOORD1;
+	float4 ShadowCoord	: TEXCOORD2;
+	float3 Tangent		: TEXCOORD3;
+	float3 Binormal		: TEXCOORD4;
+	float3 PosIn		: COLOR0;
+	float4 Fog			: COLOR1;
+	float3 EyeVector	: TEXCOORD7;
+};
+
+float4 main(v2f i, 
+	uniform sampler2D CachedTexture : register(s0),
+	uniform sampler2D NormalMap : register(s1),
+	uniform sampler2D ShadowMap : register(s2)) 	: COLOR
+{
+/*	//Percentage closer filtering
+	// Generate the 9 texture co-ordinates for a 3x3 PCF kernel
+	float2 vTexCoords[9];
+	// Texel size
+	float fTexelSize = 1.0 / 1024.0;
+
+	// Generate the tecture coordinates for the specified depth-map size
+	// 4 3 5
+	// 1 0 2
+	// 7 6 8
+	float fShadowTerm = 1.0;	
+	//Shadow coord has to be correct per pixel or else we get distorted and
+	//offset shadows   
+	float4 shadowCoord;
+	float3 lightspace = i.PosIn.xyz + i.ShadowCoord.xyz;
+	float lenP =  length( lightspace.xyz );
+	float depth = lenP/ i.ShadowCoord.w;//alpha test for culling away other hemisphere
+	float hemisphere = lightspace.z;
+	lightspace.xyz = lightspace.xyz / lenP;
+	
+	depth -=  0.001;
+	//Do the rest of the shader calculation
+	float4 outcolor  = tex2D(CachedTexture, i.TexCoord0);
+	float4 normalcolor = tex2D(NormalMap, i.TexCoord0);
+	
+	normalcolor.xyz = normalcolor.xyz* 2 - 1;
+	//deriving z component of unit normals(for compressed textures)
+	normalcolor.z = sqrt( 1 - normalcolor.x*normalcolor.x - normalcolor.y*normalcolor.y );
+
+	
+	float4 intensity = lightAmbient;	
+
+	float3x3 matInverse = float3x3(i.Tangent, i.Binormal, i.Normal);
+	//float3x3 matInverse = transpose( float3x3(T, B, N) );
+	float3 normal = mul( normalcolor.xyz, matInverse );	
+	
+	float accumSpecular = 0;
+	float3 E = normalize(i.EyeVector);
+	float4 lightPack;
+	float4 lightColor;
+	bool atLight = false;
+
+		
+	for( float a = 0 ; a < lightNum.x; a += 1.0 )
+	{
+		lightColor = lightData[ a*2 ];
+		lightPack = lightData[ a*2 + 1 ];
+		float atten = 1.0;
+		if( lightPack.w != -1.0 )
+		{
+			//Point light, special direction computation
+			//calculate direction to light
+			lightPack.xyz = lightPack.xyz - i.PosIn.xyz;
+			//calculate point light attenuation, linear for now
+			atten = 1.0 - (length( lightPack.xyz )/lightPack.w);
+			atten = clamp( atten, 0, 1 );
+		}
+		lightPack.xyz = normalize( lightPack.xyz );	
+		atten = atten*lightColor.w;	
+		lightColor.w = 1.0;
+
+		//don't clamp top for HDR
+		float diffuse = max( 0.0, dot(normal,lightPack.xyz) );
+		//float diffuse = saturate(dot(normal,lightPack.xyz));
+
+		intensity = intensity + atten*(diffuse*lightColor);
+		
+		if( diffuse > 0 )
+		{			
+			atLight = true;
+			float3 reflection = normalize(2 * diffuse * normal - lightPack.xyz);
+			
+			//Don't clamp for HDR
+			//float specular = pow(saturate(dot(reflection, E)), 4+ (1-normalcolor.a)*4);
+			float specular = pow(saturate(dot(reflection, E)), 4+ (1-normalcolor.a)*4);
+			accumSpecular = accumSpecular + atten*specular;
+		}		
+	}
+		
+	if( atLight )
+	{
+		if( hemisphere < 0 )
+		{		
+			shadowCoord.x = lightspace.x / (lightspace.z - 1);
+			shadowCoord.y = -lightspace.y / (lightspace.z - 1);
+			shadowCoord.xy = float2(0.5,0.5) + (0.50* shadowCoord.xy);
+			float4 coord = float4( shadowCoord.x, shadowCoord.y, 0, 3 );
+			float S = tex2D( ShadowMap, shadowCoord.xy ).r;	
+			float compare = tex2Dlod( ShadowMap, coord ).r;
+			if(  1 )//abs(S - compare) > .003 )
+			{
+				vTexCoords[0] = shadowCoord.xy + float2( -fTexelSize, -fTexelSize);
+				vTexCoords[1] = shadowCoord.xy + float2(  fTexelSize, -fTexelSize );
+				vTexCoords[2] = shadowCoord.xy + float2( -fTexelSize,  fTexelSize );
+				vTexCoords[3] = shadowCoord.xy + float2(  fTexelSize,  fTexelSize );
+				// Sample each of them checking whether the pixel under test is shadowed or not
+				for( int k = 0; k < 4; k++ )
+				{
+					float A = tex2D( ShadowMap, vTexCoords[ k ] ).r;
+					if( depth > A )
+					{
+						fShadowTerm -= .08f;
+					}
+				}
+			}else
+			{
+				if( depth > S )
+				{
+					fShadowTerm -= .31f;
+				}
+			}
+		}
+		else
+		{
+			shadowCoord.z = lightspace.x / (lightspace.z + 1);
+			shadowCoord.w = -lightspace.y / (lightspace.z + 1);
+			shadowCoord.zw = float2(0.5,0.5) + (0.50* shadowCoord.zw);
+			float4 coord = float4( shadowCoord.z, shadowCoord.w, 0, 3 );
+			float S = tex2D( ShadowMap, shadowCoord.zw ).g;
+			float compare = tex2Dlod( ShadowMap, coord ).g;
+			if( 1 )// abs(S - compare) > .003 )
+			{
+				vTexCoords[0] = shadowCoord.zw + float2( -fTexelSize, -fTexelSize);
+				vTexCoords[1] = shadowCoord.zw + float2(  fTexelSize, -fTexelSize );
+				vTexCoords[2] = shadowCoord.zw + float2( -fTexelSize,  fTexelSize );
+				vTexCoords[3] = shadowCoord.zw + float2(  fTexelSize,  fTexelSize );
+				// Sample each of them checking whether the pixel under test is shadowed or not
+				for( int k = 0; k < 4; k++ )
+				{
+					float A = tex2D( ShadowMap, vTexCoords[ k ] ).g;
+					if( depth > A )
+					{
+						fShadowTerm -= .08f;
+					}
+				}
+			}else
+			{
+				if( depth > S )
+				{
+					fShadowTerm -= .31f;
+				}
+			}
+		}
+	}
+	//clamp intensity
+	//for HDR don't clamp
+	//intensity = saturate( intensity );
+	//temporary clamp to get rid of weird tangents!#!@???
+	intensity = clamp( intensity, 0, 2 );
+	
+	float newfShadowTerm = fShadowTerm + (( 1 - fShadowTerm )*depth );
+	newfShadowTerm = saturate( newfShadowTerm );
+
+	outcolor.xyz =  newfShadowTerm*intensity.xyz* outcolor.xyz;
+	//This allows us to fade the shadow as it extends away from the light
+	
+	float specComponent = saturate( normalcolor.a );
+	outcolor.xyz += accumSpecular * specComponent * newfShadowTerm;
+
+	outcolor.rgb = lerp( outcolor.rgb, i.Fog.rgb, i.Fog.w );
+*/
+	float4 outcolor = float4( 1, 1, 0, 1 );
+	return outcolor;	
+}

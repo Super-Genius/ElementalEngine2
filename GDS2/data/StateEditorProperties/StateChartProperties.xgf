@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root Num="4">
+	<StateMachine Name="State Machine" Num="4">
+		<edit Type="string" Name="Name" BKey="false"/>
+		<static Type="string" Name="File" BKey="false"/>
+		<static Type="string" Name="Start State" BKey="false"/>
+		<static Type="string" Name="End State" BKey="false"/>
+	</StateMachine>
+	<State Name="State" Num="9">
+		<edit Type="string" Name="Name" BKey="false"/>
+		<static Type="string" Name="Parent State" BKey="false"/>
+		<edit Type="int" Name="X" BKey="false"/>
+		<edit Type="int" Name="Y" BKey="false"/>
+		<edit Type="int" Name="Width" BKey="false"/>
+		<edit Type="int" Name="Height" BKey="false"/>
+		<edit Type="string" Name="Entry Event" BKey="false"/>
+		<edit Type="string" Name="Update Event" BKey="false"/>
+		<edit Type="string" Name="Exit Event" BKey="false"/>
+	</State>
+	<Event Name="Event" Num="2">
+		<edit Type="string" Name="Name" BKey="false"/>
+		<static Type="string" Name="Parent State" BKey="false"/>
+	</Event>
+	<Transition Name="Transition" Num="4">
+		<edit Type="string" Name="Name" BKey="false"/>
+		<static Type="string" Name="Event" BKey="false"/>
+		<static Type="string" Name="Source" BKey="false"/>
+		<static Type="string" Name="Target" BKey="false"/>
+	</Transition>
+</root>

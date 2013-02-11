@@ -1,0 +1,1033 @@
+<html>
+<head>
+<title>
+Documentation for class CGDSApp
+
+</title>
+<link rel="stylesheet" type="text/css" href="doc.css">
+</head>
+<body>
+<table border="0" width="100%">
+	<tr>
+		<td align="right">
+			<h4>Auto Generated Class Documentation by ClassBuilder</h4>
+		<td>
+	</tr>
+</table>
+<hr>
+<center><a href="main_index.html">Main</a>
+<a href="namespace.html">Namespace List</a>
+<a href="class_hiearchy.html">Class Hierarchy</a>
+<a href="compound_members.html">Compound Members</a>
+<a href="compound_list.html">Compound List</a>
+<a href="diagram_list.html">Diagram List</a>
+</center><hr><h1>CGDSApp Reference</h1>
+<p>C:\Development\Game Dev System\gds.<a href="#_details">More...</a>
+</p><p><pre>#include 
+</pre></p><p>Inheritance diagram for CGDSApp
+</p><table border="0"><tr>
+<td colspan="2"><h2>Public Methods</h2></td>
+</tr>
+<tr>
+<td align="right"><a name="#_methodCGDSApp_summary"></a></td><td align="left"><a href="#_methodCGDSApp_details">CGDSApp</a>(  )</td></tr>
+<tr>
+<td>&nbsp;</td>
+<td>
+<font size=-1><em>Constructor method.</em><a href="#_methodCGDSApp_details">More...</a>
+</font></td></tr>
+<tr>
+<td align="right"><a name="#_methodGetRecentFileList_summary"></a>CRecentFileList* </td><td align="left"><a href="#_methodGetRecentFileList_details">GetRecentFileList</a>(  )</td></tr>
+<tr>
+<td>&nbsp;</td>
+<td>
+<font size=-1><em>The GetRecentFileList function returns a list of recently loaded files so the user can
+quickly choose from a recently used file list.</em><a href="#_methodGetRecentFileList_details">More...</a>
+</font></td></tr>
+<tr>
+<td align="right"><a name="#_methodGetFilterStrLength_summary"></a>DWORD </td><td align="left"><a href="#_methodGetFilterStrLength_details">GetFilterStrLength</a>( LPTSTR  filterStr )</td></tr>
+<tr>
+<td>&nbsp;</td>
+<td>
+<font size=-1><em>This function is used to get the total filter string lengths for all the plugins.</em><a href="#_methodGetFilterStrLength_details">More...</a>
+</font></td></tr>
+<tr>
+<td align="right"><a name="#_methodBuildFilterLists_summary"></a>void </td><td align="left"><a href="#_methodBuildFilterLists_details">BuildFilterLists</a>(  )</td></tr>
+<tr>
+<td>&nbsp;</td>
+<td>
+<font size=-1><em>This function builds a filter list, which is a list of filters that each plug-in says it is interested in.</em><a href="#_methodBuildFilterLists_details">More...</a>
+</font></td></tr>
+<tr>
+<td align="right"><a name="#_methodFindExtensionMatch_summary"></a>CDLLInterface* </td><td align="left"><a href="#_methodFindExtensionMatch_details">FindExtensionMatch</a>( LPTSTR  ext, BOOL  isLoad )</td></tr>
+<tr>
+<td>&nbsp;</td>
+<td>
+<font size=-1><em>This function searchs the plugins file filter extensions to find a match for the extenstion of 
+the file the user is trying to load.</em><a href="#_methodFindExtensionMatch_details">More...</a>
+</font></td></tr>
+<tr>
+<td align="right"><a name="#_methodOnOpenRecentFile_summary"></a>BOOL </td><td align="left"><a href="#_methodOnOpenRecentFile_details">OnOpenRecentFile</a>( UINT  nID )</td></tr>
+<tr>
+<td>&nbsp;</td>
+<td>
+<font size=-1><em>The OnOpenRectFile function search through the DLLS and extensions specified to pass
+the plugin DLL the name of the file to load.</em><a href="#_methodOnOpenRecentFile_details">More...</a>
+</font></td></tr>
+<tr>
+<td align="right"><a name="#_methodBroadcastMessage_summary"></a>BOOL </td><td align="left"><a href="#_methodBroadcastMessage_details">BroadcastMessage</a>( UINT  nID, void*  pExtra )</td></tr>
+<tr>
+<td>&nbsp;</td>
+<td>
+<font size=-1><em>BroadcastMessage is used to send message to all plug-ins.</em><a href="#_methodBroadcastMessage_details">More...</a>
+</font></td></tr>
+<tr>
+<td align="right"><a name="#_methodStaticBroadcastMessage_summary"></a>BOOL </td><td align="left"><a href="#_methodStaticBroadcastMessage_details">StaticBroadcastMessage</a>( UINT  nID, void*  pExtra )</td></tr>
+<tr>
+<td>&nbsp;</td>
+<td>
+<font size=-1><em>One way to have callbacks in C++ is to make the function static.</em><a href="#_methodStaticBroadcastMessage_details">More...</a>
+</font></td></tr>
+<tr>
+<td align="right"><a name="#_methodInitInstance_summary"></a>BOOL </td><td align="left"><a href="#_methodInitInstance_details">InitInstance</a>(  )</td></tr>
+<tr>
+<td align="right"><a name="#_methodExitInstance_summary"></a>int </td><td align="left"><a href="#_methodExitInstance_details">ExitInstance</a>(  )</td></tr>
+<tr>
+<td align="right"><a name="#_methodOnIdle_summary"></a>BOOL </td><td align="left"><a href="#_methodOnIdle_details">OnIdle</a>( LONG  lCount )</td></tr>
+<tr>
+<td>&nbsp;</td>
+<td>
+<font size=-1><em>OnIdle is being used to call each of the DLLS that have registered, so that they can
+update anything that they need to.</em><a href="#_methodOnIdle_details">More...</a>
+</font></td></tr>
+<tr>
+<td align="right"><a name="#_methodOnAppAbout_summary"></a>afx_msg void </td><td align="left"><a href="#_methodOnAppAbout_details">OnAppAbout</a>(  )</td></tr>
+<tr>
+<td align="right"><a name="#_methodOnFileOpen_summary"></a>afx_msg void </td><td align="left"><a href="#_methodOnFileOpen_details">OnFileOpen</a>(  )</td></tr>
+<tr>
+<td>&nbsp;</td>
+<td>
+<font size=-1><em>The OnFileOpen function was overridden so that the main application can match extensions
+with the plugin DLLs and then pass the file open command to the correct plugin DLL.</em><a href="#_methodOnFileOpen_details">More...</a>
+</font></td></tr>
+<tr>
+<td align="right">virtual <a name="#_method~CGDSApp_summary"></a></td><td align="left"><a href="#_method~CGDSApp_details">~CGDSApp</a>(  )</td></tr>
+<tr>
+<td>&nbsp;</td>
+<td>
+<font size=-1><em>Destructor method.</em><a href="#_method~CGDSApp_details">More...</a>
+</font></td></tr>
+<tr>
+<td colspan="2"><h2>Public Members</h2></td>
+</tr>
+<tr>
+<td align="right">STDDLLLIST </td><td align="left"><a href="#_memberm_DLLS_details">m_DLLS</a></td></tr>
+<tr>
+<td>&nbsp;</td>
+<td>
+<font size=-1><em>A templated linked list that holds all the DLLInterfaces that are loaded.</em><a href="#_memberm_DLLS_details">More...</a>
+</font></td></tr>
+<tr>
+<td align="right">HANDLELIST </td><td align="left"><a href="#_memberm_DLLHandles_details">m_DLLHandles</a></td></tr>
+<tr>
+<td>&nbsp;</td>
+<td>
+<font size=-1><em>This is where the main program keeps track of all the handles for the Plug-ins that are loaded.</em><a href="#_memberm_DLLHandles_details">More...</a>
+</font></td></tr>
+<tr>
+<td align="right">CProgramInfo* </td><td align="left"><a href="#_memberm_ProgramInfo_details">m_ProgramInfo</a></td></tr>
+<tr>
+<td align="right">HMENU </td><td align="left"><a href="#_memberm_CurMenu_details">m_CurMenu</a></td></tr>
+<tr>
+<td>&nbsp;</td>
+<td>
+<font size=-1><em>This is the main windows menu handle.</em><a href="#_memberm_CurMenu_details">More...</a>
+</font></td></tr>
+<tr>
+<td align="right">HACCEL </td><td align="left"><a href="#_memberm_CurAccel_details">m_CurAccel</a></td></tr>
+<tr>
+<td>&nbsp;</td>
+<td>
+<font size=-1><em>This is current list of accelerators for the program.</em><a href="#_memberm_CurAccel_details">More...</a>
+</font></td></tr>
+<tr>
+<td colspan="2"><h2>Protected Methods</h2></td>
+</tr>
+<tr>
+<td colspan="2"><h2>Protected Members</h2></td>
+</tr>
+</table>
+<hr>
+<h2><a name="_details"></a>Detailed Description</h2>
+<p>
+C:\Development\Game Dev System\gds.h(19)
+
+
+C:\Development\Game Dev System\gds.h(19)
+
+ CGDSApp:
+C:\Development\Game Dev System\gds.h(19)
+
+ See gds.cpp for the implementation of this class
+C:\Development\Game Dev System\gds.h(19)
+
+
+</p>
+<hr>
+<h2>Constructor and Destructor Documentation</h2>
+<a name="#_methodCGDSApp_details"></a><table border="0">
+<tr>
+<td>
+<table border="0">
+<tr>
+<td align="right"><a href="#_methodCGDSApp_summary">top</a>
+CGDSApp::CGDSApp</td>
+<td >
+(</td>
+<td >
+)</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<a name="#_method~CGDSApp_details"></a><table border="0">
+<tr>
+<td>
+<table border="0">
+<tr>
+<td align="right"><a href="#_method~CGDSApp_summary">top</a>
+CGDSApp::~CGDSApp</td>
+<td >
+(</td>
+<td >
+)</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<hr>
+<p>
+<h2>Member Function Documentation</h2>
+</p>
+<a name="#_methodGetRecentFileList_details"></a><table border="0">
+<tr>
+<td>
+<table border="0">
+<tr>
+<td ><a href="#_methodGetRecentFileList_summary">top</a>
+CRecentFileList* CGDSApp::GetRecentFileList</td>
+<td >
+(</td>
+<td >
+)</td>
+<td >
+<code> [public]</code></td >
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table border="0"><tr>
+<td>&nbsp;</td>
+<td>
+<p>
+The GetRecentFileList function returns a list of recently loaded files so the user can
+quickly choose from a recently used file list.
+
+</p>
+<p>
+<b>Parameters:</b>
+</p>
+<table border="0">
+</table>
+<p>
+<b>Returns:</b>
+</p>
+<p><em><i>CRecentFileList*  : </i></em></p>
+</td>
+</tr>
+</table></td>
+</tr>
+</table><a name="#_methodGetFilterStrLength_details"></a><table border="0">
+<tr>
+<td>
+<table border="0">
+<tr>
+<td ><a href="#_methodGetFilterStrLength_summary">top</a>
+DWORD CGDSApp::GetFilterStrLength</td>
+<td >
+(</td>
+<td >
+LPTSTR </td>
+<td ><i>
+filterStr</i></td>
+<td >
+)</td>
+<td >
+<code> [public]</code></td >
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table border="0"><tr>
+<td>&nbsp;</td>
+<td>
+<p>
+This function is used to get the total filter string lengths for all the plugins.  This is done so
+that the open dialog box can use all the extensions and filters.
+
+</p>
+<p>
+<b>Parameters:</b>
+</p>
+<table border="0">
+<tr>
+<td>
+<em><i>LPTSTR </i></em>
+</td>
+<td>
+Pointer to a string that is used in the calculation of the total size of filter list strings for all
+plugins.
+</td>
+</tr>
+</table>
+<p>
+<b>Returns:</b>
+</p>
+<p><em><i>DWORD  : </i></em></p>
+</td>
+</tr>
+</table></td>
+</tr>
+</table><a name="#_methodBuildFilterLists_details"></a><table border="0">
+<tr>
+<td>
+<table border="0">
+<tr>
+<td ><a href="#_methodBuildFilterLists_summary">top</a>
+void CGDSApp::BuildFilterLists</td>
+<td >
+(</td>
+<td >
+)</td>
+<td >
+<code> [public]</code></td >
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table border="0"><tr>
+<td>&nbsp;</td>
+<td>
+<p>
+This function builds a filter list, which is a list of filters that each plug-in says it is interested in. 
+These are the extension names and the file filter lists such as *.jpg.
+
+</p>
+<p>
+<b>Parameters:</b>
+</p>
+<table border="0">
+</table>
+<p>
+<b>Returns:</b>
+</p>
+<p><em><i>void  : </i></em></p>
+</td>
+</tr>
+</table></td>
+</tr>
+</table><a name="#_methodFindExtensionMatch_details"></a><table border="0">
+<tr>
+<td>
+<table border="0">
+<tr>
+<td ><a href="#_methodFindExtensionMatch_summary">top</a>
+CDLLInterface* CGDSApp::FindExtensionMatch</td>
+<td >
+(</td>
+<td >
+LPTSTR </td>
+<td ><i>
+ext</i></td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td >
+BOOL </td>
+<td ><i>
+isLoad</i></td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>)</td>
+<td colspan="2">&nbsp;<code> [public]</code></td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table border="0"><tr>
+<td>&nbsp;</td>
+<td>
+<p>
+This function searchs the plugins file filter extensions to find a match for the extenstion of 
+the file the user is trying to load.  The match returns a pointer to the DLL that handles
+the type of file that is trying to be loaded
+
+</p>
+<p>
+<b>Parameters:</b>
+</p>
+<table border="0">
+<tr>
+<td>
+<em><i>LPTSTR </i></em>
+</td>
+<td>
+&nbsp;</td>
+</tr>
+<tr>
+<td>
+<em><i>BOOL </i></em>
+</td>
+<td>
+&nbsp;</td>
+</tr>
+</table>
+<p>
+<b>Returns:</b>
+</p>
+<p><em><i>CDLLInterface*  : </i></em></p>
+</td>
+</tr>
+</table></td>
+</tr>
+</table><a name="#_methodOnOpenRecentFile_details"></a><table border="0">
+<tr>
+<td>
+<table border="0">
+<tr>
+<td ><a href="#_methodOnOpenRecentFile_summary">top</a>
+BOOL CGDSApp::OnOpenRecentFile</td>
+<td >
+(</td>
+<td >
+UINT </td>
+<td ><i>
+nID</i></td>
+<td >
+)</td>
+<td >
+<code> [public]</code></td >
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table border="0"><tr>
+<td>&nbsp;</td>
+<td>
+<p>
+The OnOpenRectFile function search through the DLLS and extensions specified to pass
+the plugin DLL the name of the file to load.
+
+</p>
+<p>
+<b>Parameters:</b>
+</p>
+<table border="0">
+<tr>
+<td>
+<em><i>UINT </i></em>
+</td>
+<td>
+&nbsp;</td>
+</tr>
+</table>
+<p>
+<b>Returns:</b>
+</p>
+<p><em><i>BOOL  : </i></em></p>
+</td>
+</tr>
+</table></td>
+</tr>
+</table><a name="#_methodBroadcastMessage_details"></a><table border="0">
+<tr>
+<td>
+<table border="0">
+<tr>
+<td ><a href="#_methodBroadcastMessage_summary">top</a>
+BOOL CGDSApp::BroadcastMessage</td>
+<td >
+(</td>
+<td >
+UINT </td>
+<td ><i>
+nID</i></td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td >
+void* </td>
+<td ><i>
+pExtra</i></td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>)</td>
+<td colspan="2">&nbsp;<code> [public]</code></td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table border="0"><tr>
+<td>&nbsp;</td>
+<td>
+<p>
+BroadcastMessage is used to send message to all plug-ins.  The plug-ins get a pointer
+to the static implementation of this function, which in turn calls this function through the 
+main applications class.
+
+</p>
+<p>
+<b>Parameters:</b>
+</p>
+<table border="0">
+<tr>
+<td>
+<em><i>UINT </i></em>
+</td>
+<td>
+This is the ID for the RegisterWindowMessage that is being passed
+</td>
+</tr>
+<tr>
+<td>
+<em><i>void* </i></em>
+</td>
+<td>
+This is any data that is associated with the particular message that is being broadcast (nID)
+</td>
+</tr>
+</table>
+<p>
+<b>Returns:</b>
+</p>
+<p><em><i>BOOL  : </i></em></p>
+</td>
+</tr>
+</table></td>
+</tr>
+</table><a name="#_methodStaticBroadcastMessage_details"></a><table border="0">
+<tr>
+<td>
+<table border="0">
+<tr>
+<td ><a href="#_methodStaticBroadcastMessage_summary">top</a>
+BOOL CGDSApp::StaticBroadcastMessage</td>
+<td >
+(</td>
+<td >
+UINT </td>
+<td ><i>
+nID</i></td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td >
+void* </td>
+<td ><i>
+pExtra</i></td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>)</td>
+<td colspan="2">&nbsp;<code> [public]</code></td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table border="0"><tr>
+<td>&nbsp;</td>
+<td>
+<p>
+One way to have callbacks in C++ is to make the function static.  We do this so that DLLS
+can make callbacks to the application and use the message sending functions.
+
+</p>
+<p>
+<b>Parameters:</b>
+</p>
+<table border="0">
+<tr>
+<td>
+<em><i>UINT </i></em>
+</td>
+<td>
+RegsiterWindowMessage ID that is broadcast to all DLLS.
+</td>
+</tr>
+<tr>
+<td>
+<em><i>void* </i></em>
+</td>
+<td>
+Variable data (dependent on the RegisterWindowMessage ID.
+</td>
+</tr>
+</table>
+<p>
+<b>Returns:</b>
+</p>
+<p><em><i>BOOL  : </i></em></p>
+</td>
+</tr>
+</table></td>
+</tr>
+</table><a name="#_methodLoadDLLS_details"></a><table border="0">
+<tr>
+<td>
+<table border="0">
+<tr>
+<td ><a href="#_methodLoadDLLS_summary">top</a>
+void CGDSApp::LoadDLLS</td>
+<td >
+(</td>
+<td >
+)</td>
+<td >
+<code> [private]</code></td >
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table border="0"><tr>
+<td>&nbsp;</td>
+<td>
+<p>
+The LoadDLLS function calls the searchDLLS function with base DLLS and then 
+Object DLLS, so that base DLLS will get loaded first.  Base DLLS have a higher
+priority than the Object DLLS.
+
+</p>
+<p>
+<b>Parameters:</b>
+</p>
+<table border="0">
+</table>
+<p>
+<b>Returns:</b>
+</p>
+<p><em><i>void  : </i></em></p>
+</td>
+</tr>
+</table></td>
+</tr>
+</table><a name="#_methodGetALLInterfaces_details"></a><table border="0">
+<tr>
+<td>
+<table border="0">
+<tr>
+<td ><a href="#_methodGetALLInterfaces_summary">top</a>
+void CGDSApp::GetALLInterfaces</td>
+<td >
+(</td>
+<td >
+const CString& </td>
+<td ><i>
+pathName</i></td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td >
+DLLTYPE </td>
+<td ><i>
+type</i></td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>)</td>
+<td colspan="2">&nbsp;<code> [private]</code></td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table border="0"><tr>
+<td>&nbsp;</td>
+<td>
+<p>
+
+</p>
+<p>
+<b>Parameters:</b>
+</p>
+<table border="0">
+<tr>
+<td>
+<em><i>const CString& </i></em>
+</td>
+<td>
+Path and Name to search for all the DLLS.
+</td>
+</tr>
+<tr>
+<td>
+<em><i>DLLTYPE </i></em>
+</td>
+<td>
+Type of DLL to load.  (Deprecated)
+</td>
+</tr>
+</table>
+<p>
+<b>Returns:</b>
+</p>
+<p><em><i>void  : </i></em></p>
+</td>
+</tr>
+</table></td>
+</tr>
+</table><a name="#_methodInitAllDLLS_details"></a><table border="0">
+<tr>
+<td>
+<table border="0">
+<tr>
+<td ><a href="#_methodInitAllDLLS_summary">top</a>
+void CGDSApp::InitAllDLLS</td>
+<td >
+(</td>
+<td >
+)</td>
+<td >
+<code> [private]</code></td >
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table border="0"><tr>
+<td>&nbsp;</td>
+<td>
+<p>
+After the DLLS have been determined and the priorties sorted, each of the DLLS is called
+in order of priority to initialize themselves.
+
+</p>
+<p>
+<b>Parameters:</b>
+</p>
+<table border="0">
+</table>
+<p>
+<b>Returns:</b>
+</p>
+<p><em><i>void  : </i></em></p>
+</td>
+</tr>
+</table></td>
+</tr>
+</table><a name="#_methodSearchDLLS_details"></a><table border="0">
+<tr>
+<td>
+<table border="0">
+<tr>
+<td ><a href="#_methodSearchDLLS_summary">top</a>
+void CGDSApp::SearchDLLS</td>
+<td >
+(</td>
+<td >
+const CString& </td>
+<td ><i>
+pathName</i></td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td >
+DLLTYPE </td>
+<td ><i>
+type</i></td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>)</td>
+<td colspan="2">&nbsp;<code> [private]</code></td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table border="0"><tr>
+<td>&nbsp;</td>
+<td>
+<p>
+The SearchDLLS searchs a certain directory for DLLs of a known type.  These are determined
+by the extension of the DLL and also a Magic Value and interface versions.
+
+</p>
+<p>
+<b>Parameters:</b>
+</p>
+<table border="0">
+<tr>
+<td>
+<em><i>const CString& </i></em>
+</td>
+<td>
+Path to s& wildcard name to earch DLLS for. 
+</td>
+</tr>
+<tr>
+<td>
+<em><i>DLLTYPE </i></em>
+</td>
+<td>
+DLL type to load.  (Deprecated)
+</td>
+</tr>
+</table>
+<p>
+<b>Returns:</b>
+</p>
+<p><em><i>void  : </i></em></p>
+</td>
+</tr>
+</table></td>
+</tr>
+</table><a name="#_methodInitInstance_details"></a><table border="0">
+<tr>
+<td>
+<table border="0">
+<tr>
+<td ><a href="#_methodInitInstance_summary">top</a>
+BOOL CGDSApp::InitInstance</td>
+<td >
+(</td>
+<td >
+)</td>
+<td >
+<code> [public]</code></td >
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table border="0"><tr>
+<td>&nbsp;</td>
+<td>
+<p>
+
+</p>
+<p>
+<b>Parameters:</b>
+</p>
+<table border="0">
+</table>
+<p>
+<b>Returns:</b>
+</p>
+<p><em><i>BOOL  : </i></em></p>
+</td>
+</tr>
+</table></td>
+</tr>
+</table><a name="#_methodExitInstance_details"></a><table border="0">
+<tr>
+<td>
+<table border="0">
+<tr>
+<td ><a href="#_methodExitInstance_summary">top</a>
+int CGDSApp::ExitInstance</td>
+<td >
+(</td>
+<td >
+)</td>
+<td >
+<code> [public]</code></td >
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table border="0"><tr>
+<td>&nbsp;</td>
+<td>
+<p>
+
+</p>
+<p>
+<b>Parameters:</b>
+</p>
+<table border="0">
+</table>
+<p>
+<b>Returns:</b>
+</p>
+<p><em><i>int  : </i></em></p>
+</td>
+</tr>
+</table></td>
+</tr>
+</table><a name="#_methodOnIdle_details"></a><table border="0">
+<tr>
+<td>
+<table border="0">
+<tr>
+<td ><a href="#_methodOnIdle_summary">top</a>
+BOOL CGDSApp::OnIdle</td>
+<td >
+(</td>
+<td >
+LONG </td>
+<td ><i>
+lCount</i></td>
+<td >
+)</td>
+<td >
+<code> [public]</code></td >
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table border="0"><tr>
+<td>&nbsp;</td>
+<td>
+<p>
+OnIdle is being used to call each of the DLLS that have registered, so that they can
+update anything that they need to.  This can be a good time for RenderDLLS to render
+the 3D scene
+
+</p>
+<p>
+<b>Parameters:</b>
+</p>
+<table border="0">
+<tr>
+<td>
+<em><i>LONG </i></em>
+</td>
+<td>
+&nbsp;</td>
+</tr>
+</table>
+<p>
+<b>Returns:</b>
+</p>
+<p><em><i>BOOL  : </i></em></p>
+</td>
+</tr>
+</table></td>
+</tr>
+</table><a name="#_methodOnAppAbout_details"></a><table border="0">
+<tr>
+<td>
+<table border="0">
+<tr>
+<td ><a href="#_methodOnAppAbout_summary">top</a>
+afx_msg void CGDSApp::OnAppAbout</td>
+<td >
+(</td>
+<td >
+)</td>
+<td >
+<code> [public]</code></td >
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table border="0"><tr>
+<td>&nbsp;</td>
+<td>
+<p>
+
+</p>
+<p>
+<b>Parameters:</b>
+</p>
+<table border="0">
+</table>
+<p>
+<b>Returns:</b>
+</p>
+<p><em><i>afx_msg void  : </i></em></p>
+</td>
+</tr>
+</table></td>
+</tr>
+</table><a name="#_methodOnFileOpen_details"></a><table border="0">
+<tr>
+<td>
+<table border="0">
+<tr>
+<td ><a href="#_methodOnFileOpen_summary">top</a>
+afx_msg void CGDSApp::OnFileOpen</td>
+<td >
+(</td>
+<td >
+)</td>
+<td >
+<code> [public]</code></td >
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table border="0"><tr>
+<td>&nbsp;</td>
+<td>
+<p>
+The OnFileOpen function was overridden so that the main application can match extensions
+with the plugin DLLs and then pass the file open command to the correct plugin DLL.
+
+</p>
+<p>
+<b>Parameters:</b>
+</p>
+<table border="0">
+</table>
+<p>
+<b>Returns:</b>
+</p>
+<p><em><i>afx_msg void  : </i></em></p>
+</td>
+</tr>
+</table></td>
+</tr>
+</table></body>
+</html>

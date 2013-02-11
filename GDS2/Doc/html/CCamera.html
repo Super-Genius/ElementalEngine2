@@ -1,0 +1,1357 @@
+<html>
+<head>
+<title>
+Documentation for class CCamera
+
+</title>
+<link rel="stylesheet" type="text/css" href="doc.css">
+</head>
+<body>
+<table border="0" width="100%">
+	<tr>
+		<td align="right">
+			<h4>Auto Generated Class Documentation by ClassBuilder</h4>
+		<td>
+	</tr>
+</table>
+<hr>
+<center><a href="main_index.html">Main</a>
+<a href="namespace.html">Namespace List</a>
+<a href="class_hiearchy.html">Class Hierarchy</a>
+<a href="compound_members.html">Compound Members</a>
+<a href="compound_list.html">Compound List</a>
+<a href="diagram_list.html">Diagram List</a>
+</center><hr><h1>CCamera Reference</h1>
+<p>C:\Development\Game Dev System\Plugins\src\include\Camera.<a href="#_details">More...</a>
+</p><p><pre>#include 
+</pre></p><p>Inheritance diagram for CCamera
+</p><table border="0"><tr>
+<td colspan="2"><h2>Public Methods</h2></td>
+</tr>
+<tr>
+<td align="right"><a name="#_methodCCamera_summary"></a></td><td align="left"><a href="#_methodCCamera_details">CCamera</a>(  )</td></tr>
+<tr>
+<td>&nbsp;</td>
+<td>
+<font size=-1><em>Constructor method.</em><a href="#_methodCCamera_details">More...</a>
+</font></td></tr>
+<tr>
+<td align="right"><a name="#_methodCCamera_summary"></a></td><td align="left"><a href="#_methodCCamera_details">CCamera</a>( LPCSTR  name )</td></tr>
+<tr>
+<td>&nbsp;</td>
+<td>
+<font size=-1><em>Constructor method.</em><a href="#_methodCCamera_details">More...</a>
+</font></td></tr>
+<tr>
+<td align="right"><a name="#_methodLookAt_summary"></a>void </td><td align="left"><a href="#_methodLookAt_details">LookAt</a>( CVector4&  target )</td></tr>
+<tr>
+<td align="right"><a name="#_methodSetProjectionType_summary"></a>BOOL </td><td align="left"><a href="#_methodSetProjectionType_details">SetProjectionType</a>( PROJECTION_TYPE  projection )</td></tr>
+<tr>
+<td align="right"><a name="#_methodGetProjectionType_summary"></a>PROJECTION_TYPE </td><td align="left"><a href="#_methodGetProjectionType_details">GetProjectionType</a>(  )</td></tr>
+<tr>
+<td align="right"><a name="#_methodSetFOV_summary"></a>void </td><td align="left"><a href="#_methodSetFOV_details">SetFOV</a>( float  fov )</td></tr>
+<tr>
+<td align="right"><a name="#_methodGetFOV_summary"></a>float </td><td align="left"><a href="#_methodGetFOV_details">GetFOV</a>(  )</td></tr>
+<tr>
+<td align="right"><a name="#_methodSetPosition_summary"></a>void </td><td align="left"><a href="#_methodSetPosition_details">SetPosition</a>( CVector4&  position )</td></tr>
+<tr>
+<td align="right"><a name="#_methodGetPosition_summary"></a>CVector4& </td><td align="left"><a href="#_methodGetPosition_details">GetPosition</a>(  )</td></tr>
+<tr>
+<td align="right"><a name="#_methodMoveTo_summary"></a>void </td><td align="left"><a href="#_methodMoveTo_details">MoveTo</a>( CVector4&  pos )</td></tr>
+<tr>
+<td align="right"><a name="#_methodRoll_summary"></a>void </td><td align="left"><a href="#_methodRoll_details">Roll</a>( float  angle )</td></tr>
+<tr>
+<td align="right"><a name="#_methodYaw_summary"></a>void </td><td align="left"><a href="#_methodYaw_details">Yaw</a>( float  angle )</td></tr>
+<tr>
+<td align="right"><a name="#_methodPitch_summary"></a>void </td><td align="left"><a href="#_methodPitch_details">Pitch</a>( float  angle )</td></tr>
+<tr>
+<td align="right"><a name="#_methodRotate_summary"></a>void </td><td align="left"><a href="#_methodRotate_details">Rotate</a>( CVector4&  axis, float  angle )</td></tr>
+<tr>
+<td align="right"><a name="#_methodRotate_summary"></a>void </td><td align="left"><a href="#_methodRotate_details">Rotate</a>( CQuaternion&  quat )</td></tr>
+<tr>
+<td align="right"><a name="#_methodSetViewMatrix_summary"></a>void </td><td align="left"><a href="#_methodSetViewMatrix_details">SetViewMatrix</a>( CMatrix4&  viewMat )</td></tr>
+<tr>
+<td align="right"><a name="#_methodGetViewMatrix_summary"></a>CMatrix4& </td><td align="left"><a href="#_methodGetViewMatrix_details">GetViewMatrix</a>(  )</td></tr>
+<tr>
+<td align="right"><a name="#_methodSetProjectionMatrix_summary"></a>void </td><td align="left"><a href="#_methodSetProjectionMatrix_details">SetProjectionMatrix</a>( CMatrix4&  viewMat )</td></tr>
+<tr>
+<td align="right"><a name="#_methodGetProjectionMatrix_summary"></a>CMatrix4& </td><td align="left"><a href="#_methodGetProjectionMatrix_details">GetProjectionMatrix</a>(  )</td></tr>
+<tr>
+<td align="right"><a name="#_methodSetNearClip_summary"></a>void </td><td align="left"><a href="#_methodSetNearClip_details">SetNearClip</a>( float  dist )</td></tr>
+<tr>
+<td align="right"><a name="#_methodGetNearClip_summary"></a>float </td><td align="left"><a href="#_methodGetNearClip_details">GetNearClip</a>(  )</td></tr>
+<tr>
+<td align="right"><a name="#_methodSetFarClip_summary"></a>void </td><td align="left"><a href="#_methodSetFarClip_details">SetFarClip</a>( float  dist )</td></tr>
+<tr>
+<td align="right"><a name="#_methodGetFarClip_summary"></a>float </td><td align="left"><a href="#_methodGetFarClip_details">GetFarClip</a>(  )</td></tr>
+<tr>
+<td align="right"><a name="#_methodSetOrientation_summary"></a>void </td><td align="left"><a href="#_methodSetOrientation_details">SetOrientation</a>( CQuaternion&  orient )</td></tr>
+<tr>
+<td align="right"><a name="#_methodGetOrientation_summary"></a>CQuaternion& </td><td align="left"><a href="#_methodGetOrientation_details">GetOrientation</a>(  )</td></tr>
+<tr>
+<td align="right"><a name="#_methodGetFrustumPlanes_summary"></a>CPlane* </td><td align="left"><a href="#_methodGetFrustumPlanes_details">GetFrustumPlanes</a>(  )</td></tr>
+<tr>
+<td align="right"><a name="#_methodSetAspectRatio_summary"></a>void </td><td align="left"><a href="#_methodSetAspectRatio_details">SetAspectRatio</a>( float  aspect )</td></tr>
+<tr>
+<td align="right"><a name="#_methodGetAspectRatio_summary"></a>float </td><td align="left"><a href="#_methodGetAspectRatio_details">GetAspectRatio</a>(  )</td></tr>
+<tr>
+<td align="right">virtual <a name="#_method~CCamera_summary"></a></td><td align="left"><a href="#_method~CCamera_details">~CCamera</a>(  )</td></tr>
+<tr>
+<td>&nbsp;</td>
+<td>
+<font size=-1><em>Destructor method.</em><a href="#_method~CCamera_details">More...</a>
+</font></td></tr>
+<tr>
+<td colspan="2"><h2>Public Members</h2></td>
+</tr>
+<tr>
+<td colspan="2"><h2>Protected Methods</h2></td>
+</tr>
+<tr>
+<td colspan="2"><h2>Protected Members</h2></td>
+</tr>
+</table>
+<hr>
+<h2><a name="_details"></a>Detailed Description</h2>
+<p>
+C:\Development\Game Dev System\Plugins\src\include\Camera.h(41)
+
+ {6E3AB6E5-1101-4077-9ACB-D13133BB41E8}
+</p>
+<hr>
+<h2>Constructor and Destructor Documentation</h2>
+<a name="#_methodCCamera_details"></a><table border="0">
+<tr>
+<td>
+<table border="0">
+<tr>
+<td align="right"><a href="#_methodCCamera_summary">top</a>
+CCamera::CCamera</td>
+<td >
+(</td>
+<td >
+)</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<a name="#_methodCCamera_details"></a><table border="0">
+<tr>
+<td>
+<table border="0">
+<tr>
+<td align="right"><a href="#_methodCCamera_summary">top</a>
+CCamera::CCamera</td>
+<td >
+(</td>
+<td >
+)</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<a name="#_method~CCamera_details"></a><table border="0">
+<tr>
+<td>
+<table border="0">
+<tr>
+<td align="right"><a href="#_method~CCamera_summary">top</a>
+CCamera::~CCamera</td>
+<td >
+(</td>
+<td >
+)</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<hr>
+<p>
+<h2>Member Function Documentation</h2>
+</p>
+<a name="#_methodLookAt_details"></a><table border="0">
+<tr>
+<td>
+<table border="0">
+<tr>
+<td ><a href="#_methodLookAt_summary">top</a>
+void CCamera::LookAt</td>
+<td >
+(</td>
+<td >
+CVector4& </td>
+<td ><i>
+target</i></td>
+<td >
+)</td>
+<td >
+<code> [public]</code></td >
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table border="0"><tr>
+<td>&nbsp;</td>
+<td>
+<p>
+
+</p>
+<p>
+<b>Parameters:</b>
+</p>
+<table border="0">
+<tr>
+<td>
+<em><i>CVector4& </i></em>
+</td>
+<td>
+&nbsp;</td>
+</tr>
+</table>
+<p>
+<b>Returns:</b>
+</p>
+<p><em><i>void  : </i></em></p>
+</td>
+</tr>
+</table></td>
+</tr>
+</table><a name="#_methodSetProjectionType_details"></a><table border="0">
+<tr>
+<td>
+<table border="0">
+<tr>
+<td ><a href="#_methodSetProjectionType_summary">top</a>
+BOOL CCamera::SetProjectionType</td>
+<td >
+(</td>
+<td >
+PROJECTION_TYPE </td>
+<td ><i>
+projection</i></td>
+<td >
+)</td>
+<td >
+<code> [public]</code></td >
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table border="0"><tr>
+<td>&nbsp;</td>
+<td>
+<p>
+
+</p>
+<p>
+<b>Parameters:</b>
+</p>
+<table border="0">
+<tr>
+<td>
+<em><i>PROJECTION_TYPE </i></em>
+</td>
+<td>
+&nbsp;</td>
+</tr>
+</table>
+<p>
+<b>Returns:</b>
+</p>
+<p><em><i>BOOL  : </i></em></p>
+</td>
+</tr>
+</table></td>
+</tr>
+</table><a name="#_methodGetProjectionType_details"></a><table border="0">
+<tr>
+<td>
+<table border="0">
+<tr>
+<td ><a href="#_methodGetProjectionType_summary">top</a>
+PROJECTION_TYPE CCamera::GetProjectionType</td>
+<td >
+(</td>
+<td >
+)</td>
+<td >
+<code> [public]</code></td >
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table border="0"><tr>
+<td>&nbsp;</td>
+<td>
+<p>
+
+</p>
+<p>
+<b>Parameters:</b>
+</p>
+<table border="0">
+</table>
+<p>
+<b>Returns:</b>
+</p>
+<p><em><i>PROJECTION_TYPE  : </i></em></p>
+</td>
+</tr>
+</table></td>
+</tr>
+</table><a name="#_methodSetFOV_details"></a><table border="0">
+<tr>
+<td>
+<table border="0">
+<tr>
+<td ><a href="#_methodSetFOV_summary">top</a>
+void CCamera::SetFOV</td>
+<td >
+(</td>
+<td >
+float </td>
+<td ><i>
+fov</i></td>
+<td >
+)</td>
+<td >
+<code> [public]</code></td >
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table border="0"><tr>
+<td>&nbsp;</td>
+<td>
+<p>
+
+</p>
+<p>
+<b>Parameters:</b>
+</p>
+<table border="0">
+<tr>
+<td>
+<em><i>float </i></em>
+</td>
+<td>
+&nbsp;</td>
+</tr>
+</table>
+<p>
+<b>Returns:</b>
+</p>
+<p><em><i>void  : </i></em></p>
+</td>
+</tr>
+</table></td>
+</tr>
+</table><a name="#_methodGetFOV_details"></a><table border="0">
+<tr>
+<td>
+<table border="0">
+<tr>
+<td ><a href="#_methodGetFOV_summary">top</a>
+float CCamera::GetFOV</td>
+<td >
+(</td>
+<td >
+)</td>
+<td >
+<code> [public]</code></td >
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table border="0"><tr>
+<td>&nbsp;</td>
+<td>
+<p>
+
+</p>
+<p>
+<b>Parameters:</b>
+</p>
+<table border="0">
+</table>
+<p>
+<b>Returns:</b>
+</p>
+<p><em><i>float  : </i></em></p>
+</td>
+</tr>
+</table></td>
+</tr>
+</table><a name="#_methodSetPosition_details"></a><table border="0">
+<tr>
+<td>
+<table border="0">
+<tr>
+<td ><a href="#_methodSetPosition_summary">top</a>
+void CCamera::SetPosition</td>
+<td >
+(</td>
+<td >
+CVector4& </td>
+<td ><i>
+position</i></td>
+<td >
+)</td>
+<td >
+<code> [public]</code></td >
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table border="0"><tr>
+<td>&nbsp;</td>
+<td>
+<p>
+
+</p>
+<p>
+<b>Parameters:</b>
+</p>
+<table border="0">
+<tr>
+<td>
+<em><i>CVector4& </i></em>
+</td>
+<td>
+&nbsp;</td>
+</tr>
+</table>
+<p>
+<b>Returns:</b>
+</p>
+<p><em><i>void  : </i></em></p>
+</td>
+</tr>
+</table></td>
+</tr>
+</table><a name="#_methodGetPosition_details"></a><table border="0">
+<tr>
+<td>
+<table border="0">
+<tr>
+<td ><a href="#_methodGetPosition_summary">top</a>
+CVector4& CCamera::GetPosition</td>
+<td >
+(</td>
+<td >
+)</td>
+<td >
+<code> [public]</code></td >
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table border="0"><tr>
+<td>&nbsp;</td>
+<td>
+<p>
+
+</p>
+<p>
+<b>Parameters:</b>
+</p>
+<table border="0">
+</table>
+<p>
+<b>Returns:</b>
+</p>
+<p><em><i>CVector4&  : </i></em></p>
+</td>
+</tr>
+</table></td>
+</tr>
+</table><a name="#_methodMoveTo_details"></a><table border="0">
+<tr>
+<td>
+<table border="0">
+<tr>
+<td ><a href="#_methodMoveTo_summary">top</a>
+void CCamera::MoveTo</td>
+<td >
+(</td>
+<td >
+CVector4& </td>
+<td ><i>
+pos</i></td>
+<td >
+)</td>
+<td >
+<code> [public]</code></td >
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table border="0"><tr>
+<td>&nbsp;</td>
+<td>
+<p>
+
+</p>
+<p>
+<b>Parameters:</b>
+</p>
+<table border="0">
+<tr>
+<td>
+<em><i>CVector4& </i></em>
+</td>
+<td>
+&nbsp;</td>
+</tr>
+</table>
+<p>
+<b>Returns:</b>
+</p>
+<p><em><i>void  : </i></em></p>
+</td>
+</tr>
+</table></td>
+</tr>
+</table><a name="#_methodRoll_details"></a><table border="0">
+<tr>
+<td>
+<table border="0">
+<tr>
+<td ><a href="#_methodRoll_summary">top</a>
+void CCamera::Roll</td>
+<td >
+(</td>
+<td >
+float </td>
+<td ><i>
+angle</i></td>
+<td >
+)</td>
+<td >
+<code> [public]</code></td >
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table border="0"><tr>
+<td>&nbsp;</td>
+<td>
+<p>
+
+</p>
+<p>
+<b>Parameters:</b>
+</p>
+<table border="0">
+<tr>
+<td>
+<em><i>float </i></em>
+</td>
+<td>
+&nbsp;</td>
+</tr>
+</table>
+<p>
+<b>Returns:</b>
+</p>
+<p><em><i>void  : </i></em></p>
+</td>
+</tr>
+</table></td>
+</tr>
+</table><a name="#_methodYaw_details"></a><table border="0">
+<tr>
+<td>
+<table border="0">
+<tr>
+<td ><a href="#_methodYaw_summary">top</a>
+void CCamera::Yaw</td>
+<td >
+(</td>
+<td >
+float </td>
+<td ><i>
+angle</i></td>
+<td >
+)</td>
+<td >
+<code> [public]</code></td >
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table border="0"><tr>
+<td>&nbsp;</td>
+<td>
+<p>
+
+</p>
+<p>
+<b>Parameters:</b>
+</p>
+<table border="0">
+<tr>
+<td>
+<em><i>float </i></em>
+</td>
+<td>
+&nbsp;</td>
+</tr>
+</table>
+<p>
+<b>Returns:</b>
+</p>
+<p><em><i>void  : </i></em></p>
+</td>
+</tr>
+</table></td>
+</tr>
+</table><a name="#_methodPitch_details"></a><table border="0">
+<tr>
+<td>
+<table border="0">
+<tr>
+<td ><a href="#_methodPitch_summary">top</a>
+void CCamera::Pitch</td>
+<td >
+(</td>
+<td >
+float </td>
+<td ><i>
+angle</i></td>
+<td >
+)</td>
+<td >
+<code> [public]</code></td >
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table border="0"><tr>
+<td>&nbsp;</td>
+<td>
+<p>
+
+</p>
+<p>
+<b>Parameters:</b>
+</p>
+<table border="0">
+<tr>
+<td>
+<em><i>float </i></em>
+</td>
+<td>
+&nbsp;</td>
+</tr>
+</table>
+<p>
+<b>Returns:</b>
+</p>
+<p><em><i>void  : </i></em></p>
+</td>
+</tr>
+</table></td>
+</tr>
+</table><a name="#_methodRotate_details"></a><table border="0">
+<tr>
+<td>
+<table border="0">
+<tr>
+<td ><a href="#_methodRotate_summary">top</a>
+void CCamera::Rotate</td>
+<td >
+(</td>
+<td >
+CVector4& </td>
+<td ><i>
+axis</i></td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td >
+float </td>
+<td ><i>
+angle</i></td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>)</td>
+<td colspan="2">&nbsp;<code> [public]</code></td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table border="0"><tr>
+<td>&nbsp;</td>
+<td>
+<p>
+
+</p>
+<p>
+<b>Parameters:</b>
+</p>
+<table border="0">
+<tr>
+<td>
+<em><i>CVector4& </i></em>
+</td>
+<td>
+&nbsp;</td>
+</tr>
+<tr>
+<td>
+<em><i>float </i></em>
+</td>
+<td>
+&nbsp;</td>
+</tr>
+</table>
+<p>
+<b>Returns:</b>
+</p>
+<p><em><i>void  : </i></em></p>
+</td>
+</tr>
+</table></td>
+</tr>
+</table><a name="#_methodRotate_details"></a><table border="0">
+<tr>
+<td>
+<table border="0">
+<tr>
+<td ><a href="#_methodRotate_summary">top</a>
+void CCamera::Rotate</td>
+<td >
+(</td>
+<td >
+CQuaternion& </td>
+<td ><i>
+quat</i></td>
+<td >
+)</td>
+<td >
+<code> [public]</code></td >
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table border="0"><tr>
+<td>&nbsp;</td>
+<td>
+<p>
+
+</p>
+<p>
+<b>Parameters:</b>
+</p>
+<table border="0">
+<tr>
+<td>
+<em><i>CQuaternion& </i></em>
+</td>
+<td>
+&nbsp;</td>
+</tr>
+</table>
+<p>
+<b>Returns:</b>
+</p>
+<p><em><i>void  : </i></em></p>
+</td>
+</tr>
+</table></td>
+</tr>
+</table><a name="#_methodSetViewMatrix_details"></a><table border="0">
+<tr>
+<td>
+<table border="0">
+<tr>
+<td ><a href="#_methodSetViewMatrix_summary">top</a>
+void CCamera::SetViewMatrix</td>
+<td >
+(</td>
+<td >
+CMatrix4& </td>
+<td ><i>
+viewMat</i></td>
+<td >
+)</td>
+<td >
+<code> [public]</code></td >
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table border="0"><tr>
+<td>&nbsp;</td>
+<td>
+<p>
+
+</p>
+<p>
+<b>Parameters:</b>
+</p>
+<table border="0">
+<tr>
+<td>
+<em><i>CMatrix4& </i></em>
+</td>
+<td>
+&nbsp;</td>
+</tr>
+</table>
+<p>
+<b>Returns:</b>
+</p>
+<p><em><i>void  : </i></em></p>
+</td>
+</tr>
+</table></td>
+</tr>
+</table><a name="#_methodGetViewMatrix_details"></a><table border="0">
+<tr>
+<td>
+<table border="0">
+<tr>
+<td ><a href="#_methodGetViewMatrix_summary">top</a>
+CMatrix4& CCamera::GetViewMatrix</td>
+<td >
+(</td>
+<td >
+)</td>
+<td >
+<code> [public]</code></td >
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table border="0"><tr>
+<td>&nbsp;</td>
+<td>
+<p>
+
+</p>
+<p>
+<b>Parameters:</b>
+</p>
+<table border="0">
+</table>
+<p>
+<b>Returns:</b>
+</p>
+<p><em><i>CMatrix4&  : </i></em></p>
+</td>
+</tr>
+</table></td>
+</tr>
+</table><a name="#_methodSetProjectionMatrix_details"></a><table border="0">
+<tr>
+<td>
+<table border="0">
+<tr>
+<td ><a href="#_methodSetProjectionMatrix_summary">top</a>
+void CCamera::SetProjectionMatrix</td>
+<td >
+(</td>
+<td >
+CMatrix4& </td>
+<td ><i>
+viewMat</i></td>
+<td >
+)</td>
+<td >
+<code> [public]</code></td >
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table border="0"><tr>
+<td>&nbsp;</td>
+<td>
+<p>
+
+</p>
+<p>
+<b>Parameters:</b>
+</p>
+<table border="0">
+<tr>
+<td>
+<em><i>CMatrix4& </i></em>
+</td>
+<td>
+&nbsp;</td>
+</tr>
+</table>
+<p>
+<b>Returns:</b>
+</p>
+<p><em><i>void  : </i></em></p>
+</td>
+</tr>
+</table></td>
+</tr>
+</table><a name="#_methodGetProjectionMatrix_details"></a><table border="0">
+<tr>
+<td>
+<table border="0">
+<tr>
+<td ><a href="#_methodGetProjectionMatrix_summary">top</a>
+CMatrix4& CCamera::GetProjectionMatrix</td>
+<td >
+(</td>
+<td >
+)</td>
+<td >
+<code> [public]</code></td >
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table border="0"><tr>
+<td>&nbsp;</td>
+<td>
+<p>
+
+</p>
+<p>
+<b>Parameters:</b>
+</p>
+<table border="0">
+</table>
+<p>
+<b>Returns:</b>
+</p>
+<p><em><i>CMatrix4&  : </i></em></p>
+</td>
+</tr>
+</table></td>
+</tr>
+</table><a name="#_methodSetNearClip_details"></a><table border="0">
+<tr>
+<td>
+<table border="0">
+<tr>
+<td ><a href="#_methodSetNearClip_summary">top</a>
+void CCamera::SetNearClip</td>
+<td >
+(</td>
+<td >
+float </td>
+<td ><i>
+dist</i></td>
+<td >
+)</td>
+<td >
+<code> [public]</code></td >
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table border="0"><tr>
+<td>&nbsp;</td>
+<td>
+<p>
+
+</p>
+<p>
+<b>Parameters:</b>
+</p>
+<table border="0">
+<tr>
+<td>
+<em><i>float </i></em>
+</td>
+<td>
+&nbsp;</td>
+</tr>
+</table>
+<p>
+<b>Returns:</b>
+</p>
+<p><em><i>void  : </i></em></p>
+</td>
+</tr>
+</table></td>
+</tr>
+</table><a name="#_methodGetNearClip_details"></a><table border="0">
+<tr>
+<td>
+<table border="0">
+<tr>
+<td ><a href="#_methodGetNearClip_summary">top</a>
+float CCamera::GetNearClip</td>
+<td >
+(</td>
+<td >
+)</td>
+<td >
+<code> [public]</code></td >
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table border="0"><tr>
+<td>&nbsp;</td>
+<td>
+<p>
+
+</p>
+<p>
+<b>Parameters:</b>
+</p>
+<table border="0">
+</table>
+<p>
+<b>Returns:</b>
+</p>
+<p><em><i>float  : </i></em></p>
+</td>
+</tr>
+</table></td>
+</tr>
+</table><a name="#_methodSetFarClip_details"></a><table border="0">
+<tr>
+<td>
+<table border="0">
+<tr>
+<td ><a href="#_methodSetFarClip_summary">top</a>
+void CCamera::SetFarClip</td>
+<td >
+(</td>
+<td >
+float </td>
+<td ><i>
+dist</i></td>
+<td >
+)</td>
+<td >
+<code> [public]</code></td >
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table border="0"><tr>
+<td>&nbsp;</td>
+<td>
+<p>
+
+</p>
+<p>
+<b>Parameters:</b>
+</p>
+<table border="0">
+<tr>
+<td>
+<em><i>float </i></em>
+</td>
+<td>
+&nbsp;</td>
+</tr>
+</table>
+<p>
+<b>Returns:</b>
+</p>
+<p><em><i>void  : </i></em></p>
+</td>
+</tr>
+</table></td>
+</tr>
+</table><a name="#_methodGetFarClip_details"></a><table border="0">
+<tr>
+<td>
+<table border="0">
+<tr>
+<td ><a href="#_methodGetFarClip_summary">top</a>
+float CCamera::GetFarClip</td>
+<td >
+(</td>
+<td >
+)</td>
+<td >
+<code> [public]</code></td >
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table border="0"><tr>
+<td>&nbsp;</td>
+<td>
+<p>
+
+</p>
+<p>
+<b>Parameters:</b>
+</p>
+<table border="0">
+</table>
+<p>
+<b>Returns:</b>
+</p>
+<p><em><i>float  : </i></em></p>
+</td>
+</tr>
+</table></td>
+</tr>
+</table><a name="#_methodSetOrientation_details"></a><table border="0">
+<tr>
+<td>
+<table border="0">
+<tr>
+<td ><a href="#_methodSetOrientation_summary">top</a>
+void CCamera::SetOrientation</td>
+<td >
+(</td>
+<td >
+CQuaternion& </td>
+<td ><i>
+orient</i></td>
+<td >
+)</td>
+<td >
+<code> [public]</code></td >
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table border="0"><tr>
+<td>&nbsp;</td>
+<td>
+<p>
+
+</p>
+<p>
+<b>Parameters:</b>
+</p>
+<table border="0">
+<tr>
+<td>
+<em><i>CQuaternion& </i></em>
+</td>
+<td>
+&nbsp;</td>
+</tr>
+</table>
+<p>
+<b>Returns:</b>
+</p>
+<p><em><i>void  : </i></em></p>
+</td>
+</tr>
+</table></td>
+</tr>
+</table><a name="#_methodGetOrientation_details"></a><table border="0">
+<tr>
+<td>
+<table border="0">
+<tr>
+<td ><a href="#_methodGetOrientation_summary">top</a>
+CQuaternion& CCamera::GetOrientation</td>
+<td >
+(</td>
+<td >
+)</td>
+<td >
+<code> [public]</code></td >
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table border="0"><tr>
+<td>&nbsp;</td>
+<td>
+<p>
+
+</p>
+<p>
+<b>Parameters:</b>
+</p>
+<table border="0">
+</table>
+<p>
+<b>Returns:</b>
+</p>
+<p><em><i>CQuaternion&  : </i></em></p>
+</td>
+</tr>
+</table></td>
+</tr>
+</table><a name="#_methodGetFrustumPlanes_details"></a><table border="0">
+<tr>
+<td>
+<table border="0">
+<tr>
+<td ><a href="#_methodGetFrustumPlanes_summary">top</a>
+CPlane* CCamera::GetFrustumPlanes</td>
+<td >
+(</td>
+<td >
+)</td>
+<td >
+<code> [public]</code></td >
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table border="0"><tr>
+<td>&nbsp;</td>
+<td>
+<p>
+
+</p>
+<p>
+<b>Parameters:</b>
+</p>
+<table border="0">
+</table>
+<p>
+<b>Returns:</b>
+</p>
+<p><em><i>CPlane*  : </i></em></p>
+</td>
+</tr>
+</table></td>
+</tr>
+</table><a name="#_methodSetAspectRatio_details"></a><table border="0">
+<tr>
+<td>
+<table border="0">
+<tr>
+<td ><a href="#_methodSetAspectRatio_summary">top</a>
+void CCamera::SetAspectRatio</td>
+<td >
+(</td>
+<td >
+float </td>
+<td ><i>
+aspect</i></td>
+<td >
+)</td>
+<td >
+<code> [public]</code></td >
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table border="0"><tr>
+<td>&nbsp;</td>
+<td>
+<p>
+
+</p>
+<p>
+<b>Parameters:</b>
+</p>
+<table border="0">
+<tr>
+<td>
+<em><i>float </i></em>
+</td>
+<td>
+&nbsp;</td>
+</tr>
+</table>
+<p>
+<b>Returns:</b>
+</p>
+<p><em><i>void  : </i></em></p>
+</td>
+</tr>
+</table></td>
+</tr>
+</table><a name="#_methodGetAspectRatio_details"></a><table border="0">
+<tr>
+<td>
+<table border="0">
+<tr>
+<td ><a href="#_methodGetAspectRatio_summary">top</a>
+float CCamera::GetAspectRatio</td>
+<td >
+(</td>
+<td >
+)</td>
+<td >
+<code> [public]</code></td >
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table border="0"><tr>
+<td>&nbsp;</td>
+<td>
+<p>
+
+</p>
+<p>
+<b>Parameters:</b>
+</p>
+<table border="0">
+</table>
+<p>
+<b>Returns:</b>
+</p>
+<p><em><i>float  : </i></em></p>
+</td>
+</tr>
+</table></td>
+</tr>
+</table></body>
+</html>

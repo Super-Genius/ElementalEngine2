@@ -1,0 +1,54 @@
+#include "Shaders\HLSLconstants.h"
+
+struct PSIn
+{
+	float4 HPosition	: POSITION;
+	float2 TexCoord		: TEXCOORD0;
+};
+
+uniform float4 AnimLerp		: register(c21);
+
+float4 main(PSIn  In, 
+			uniform sampler2D hmapframe0 : register(s0),
+			uniform sampler2D hmapframe1 : register(s1)
+			) : COLOR
+{
+	const float TexSize = 256;
+	const float2 Scales = float2(TexSize, 1.0/TexSize);
+	const float4 k = float4(0.25, 0.25, 0.25, 0.25);
+
+	float r0, r1;
+	r0 = tex2D(hmapframe0, In.TexCoord).r;
+	r1 = tex2D(hmapframe1, In.TexCoord).r;
+	float t = lerp( r0, r1, AnimLerp.x );
+	float H = saturate( pow(t, 1.7) );
+
+	float r0xn = tex2D(hmapframe0, In.TexCoord-float2(Scales.y,0)).r;
+	float r1xn = tex2D(hmapframe1, In.TexCoord-float2(Scales.y,0)).r;
+	float txn = lerp( r0xn.r, r1xn.r, AnimLerp.x );
+	float Hxn = saturate( pow(txn, 1.7) );
+
+	float r0xp = tex2D(hmapframe0, In.TexCoord+float2(Scales.y,0)).r;
+	float r1xp = tex2D(hmapframe1, In.TexCoord+float2(Scales.y,0)).r;
+	float txp = lerp( r0xp.r, r1xp.r, AnimLerp.x );
+	float Hxp = saturate( pow(txp, 1.7) );
+
+	float r0yn = tex2D(hmapframe0, In.TexCoord-float2(0,Scales.y)).r;
+	float r1yn = tex2D(hmapframe1, In.TexCoord-float2(0,Scales.y)).r;
+	float tyn = lerp( r0yn.r, r1yn.r, AnimLerp.x );
+	float Hyn = saturate( pow(tyn, 1.7) );
+
+	float r0yp = tex2D(hmapframe0, In.TexCoord+float2(0,Scales.y)).r;
+	float r1yp = tex2D(hmapframe1, In.TexCoord+float2(0,Scales.y)).r;
+	float typ = lerp( r0yp.r, r1yp.r, AnimLerp.x );
+	float Hyp = saturate( pow(typ, 1.7) );
+
+	float s = lerp( r0, r1, AnimLerp.x );
+
+	float3 c;
+	c.r = H;
+	c.g = (Hxp-Hxn)*0.5*0.5+0.5;
+	c.b = (Hyp-Hyn)*0.5*0.5+0.5;
+
+	return float4(c.rgb, s);
+}

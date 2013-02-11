@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<hmesh numgeom="7">
+	<hnode name="Ball_Yaw" id="5" pid="0" type="DUMMY" file="NONE" rotqx="0.000000" rotqy="0.000000" rotqz="0.000000" rotqw="1.000000" scalex="1.000000" scaley="1.000000" scalez="1.000000" posx="-0.000008" posy="0.000000" posz="-0.000002" >
+	</hnode>
+	<hnode name="Ball_Pitch" id="6" pid="5" type="DUMMY" file="NONE" rotqx="0.000000" rotqy="0.000000" rotqz="0.000000" rotqw="1.000000" scalex="0.792880" scaley="0.792880" scalez="0.792880" posx="-0.000024" posy="0.000000" posz="0.000000" >
+	</hnode>
+	<hnode name="Camera_Attach" id="7" pid="6" type="DUMMY" file="NONE" rotqx="-0.000000" rotqy="0.000872" rotqz="-0.000000" rotqw="1.000000" scalex="1.261224" scaley="1.261225" scalez="1.261226" posx="-0.000004" posy="2.791164" posz="-0.000020" >
+	</hnode>
+	<hnode name="Dual_M2" id="8" pid="6" type="Cal3D" file="Dual_M2.cfg" rotqx="0.000001" rotqy="-0.000000" rotqz="-0.000001" rotqw="1.000000" scalex="1.261224" scaley="1.261225" scalez="1.261225" posx="-0.000019" posy="2.602128" posz="13.005031" >
+	</hnode>
+	<hnode name="Left_Muzzle_Pt" id="9" pid="8" type="DUMMY" file="NONE" rotqx="-0.000000" rotqy="0.000000" rotqz="0.000000" rotqw="1.000000" scalex="1.000000" scaley="0.999999" scalez="1.000000" posx="-9.045657" posy="-0.284655" posz="19.593229" >
+	</hnode>
+	<hnode name="Right_Muzzle_Pt" id="10" pid="8" type="DUMMY" file="NONE" rotqx="0.000000" rotqy="0.000000" rotqz="0.000000" rotqw="1.000000" scalex="1.000000" scaley="0.999999" scalez="1.000000" posx="9.008088" posy="-0.284624" posz="19.593166" >
+	</hnode>
+	<hnode name="Turret_glass" id="11" pid="6" type="Cal3D" file="Turret_glass.cfg" rotqx="-0.000000" rotqy="-0.000000" rotqz="-0.000000" rotqw="1.000000" scalex="0.505024" scaley="0.501177" scalez="0.505025" posx="-0.000017" posy="3.112717" posz="10.760484" >
+	</hnode>
+</hmesh>

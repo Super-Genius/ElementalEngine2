@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<Effect version="2000" 
+	numconstants="0"
+	numtextures="1"
+	numrenderstates="0"
+	numbones="0"
+	numflags="0">
+	 <Texture pass="0" stage="0" file="none" numtexturestates="5" >
+		<TextureStageState mode="mipfilter" value="point" ></TextureStageState>
+		<TextureStageState mode="minfilter" value="point" ></TextureStageState>
+		<TextureStageState mode="magfilter" value="point" ></TextureStageState>
+		<TextureStageState mode="umode" value="clamp" ></TextureStageState>
+		<TextureStageState mode="vmode" value="clamp" ></TextureStageState>
+	</Texture>
+</Effect>

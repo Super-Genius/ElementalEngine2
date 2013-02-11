@@ -1,0 +1,16 @@
+[OPTIONS]
+Compatibility=1.1 or later
+Compiled file=gds.chm
+Contents file=gds.hhc
+Default topic=topics\default.html
+Display compile progress=No
+Full-text search=Yes
+Index file=gds.hhk
+Language=0x409 Английский (США)
+
+
+[FILES]
+topics\default.html
+
+[INFOTYPES]
+

@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<hmesh numgeom="4">
+	<hnode name="Rotate_Gimbal" id="0" pid="-1" type="DUMMY" file="NONE" rotqx="0.000000" rotqy="0.000000" rotqz="0.000000" rotqw="1.000000" scalex="1.000000" scaley="1.000000" scalez="1.000000" posx="0.000000" posy="0.000000" posz="0.000000" >
+	</hnode>
+	<hnode name="X_Axis" id="1" pid="0" type="Cal3D" file="X_Axis.cfg" rotqx="0.000000" rotqy="0.000000" rotqz="0.000000" rotqw="1.000000" scalex="1.000000" scaley="1.000000" scalez="1.000000" posx="0.000000" posy="0.000000" posz="0.000000" >
+	</hnode>
+	<hnode name="Z_Axis" id="2" pid="0" type="Cal3D" file="Z_Axis.cfg" rotqx="0.000000" rotqy="0.000000" rotqz="0.000000" rotqw="1.000000" scalex="1.000000" scaley="1.000000" scalez="1.000000" posx="0.000000" posy="0.000000" posz="0.000000" >
+	</hnode>
+	<hnode name="Y_Axis" id="3" pid="0" type="Cal3D" file="Y_Axis.cfg" rotqx="0.000000" rotqy="0.000000" rotqz="0.000000" rotqw="1.000000" scalex="1.000000" scaley="1.000000" scalez="1.000000" posx="0.000000" posy="0.000000" posz="0.000000" >
+	</hnode>
+</hmesh>

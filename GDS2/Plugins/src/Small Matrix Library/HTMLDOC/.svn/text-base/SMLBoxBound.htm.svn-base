@@ -1,0 +1,278 @@
+<HTML>
+<HEAD>
+<TITLE>class SMLBoxBound</TITLE>
+<link href="styles.css" rel="STYLESHEET" type="text/css">
+</head>
+<BODY LINK="#0000ff" VLINK="#800080">
+<P><A NAME="SMLBoxBound"></a>[<A href="index.htm">SML Overview</a>]</P>
+
+<h1>class SMLBoxBound: public <A HREF="SMLBound.htm#SMLBound">SMLBound</A></h1>
+<PRE>#include &quot;<A HREF="smlbound.h">smlbound.h</A>&quot;</PRE>
+
+<P><B>SMLBoxBound</B> is a derivative class, inherits <B>SMLBound</B> class. The <B>SMLBoxBound </B>class represents an axis aligned bounding box enclosing a set of other bounds or points. This object can be extended, transformed, checked to see if a point is inside, checked to see if a vector intersects it, and checked to see if it is outside or inside a set of culling planes.</P>
+<hr>
+<H2>Public Interface</H2>
+<TABLE CELLSPACING=0 BORDER=0 WIDTH=530>
+<TR>
+<TD><P><A HREF="SMLBoxBound.htm#constructor">constructors</A></TD>
+<TD><P><A HREF="SMLBoxBound.htm#Clone">Clone</A></TD>
+<TD><P><A HREF="SMLBoxBound.htm#ComputeMinMax">ComputeMinMax</A></TD>
+</TR>
+<TR>
+<TD><P><A HREF="SMLBoxBound.htm#Cull">Cull</A></TD>
+<TD><P><A HREF="SMLBoxBound.htm#operator_assign">operator=</A></TD>
+<TD><P><A HREF="SMLBoxBound.htm#around">around</A></TD>
+</TR>
+<TR>
+<TD><P><A HREF="SMLBoxBound.htm#extendBy">extendBy</A></TD>
+<TD><P><A HREF="SMLBoxBound.htm#contains">contains</A></TD>
+<TD><P><A HREF="SMLBoxBound.htm#Transform">Transform</A></TD>
+</TR>
+<TR>
+<TD><P><A HREF="SMLBoxBound.htm#SetSide">SetSide</A></TD>
+<TD><P><A HREF="SMLBoxBound.htm#GetSide">GetSide</A></TD>
+<TD><P><A HREF="SMLBoxBound.htm#copyFrom">copyFrom</A></TD>
+</TR>
+<TR>
+<TD><P><A HREF="SMLBoxBound.htm#copySame">copySame</A></TD>
+<TD><P>&nbsp;</TD>
+<TD><P>&nbsp;</TD>
+</TR>
+</TABLE>
+
+<HR>
+<H2>Public Data</H2>
+<P>SMLVec3f <B>side</B>;</P>
+<P>Box side.</P>
+<P>SMLVec3f <B>min</B>;</P>
+<P>Corner of box with minimum values of x, y, z.</P>
+<P>SMLVec3f <B>max</B>;</P>
+<P>Corner of box with maximum values of x, y, z.</P>
+<P>SMLVec3f <B>corners</B>[8];</P>
+<P>8 corners of this box.</P>
+<P><B><I>min, max and corners</I></B> are computed by function <A HREF="SMLBoxBound.htm#ComputeMinMax">ComputeMinMax</A>.</P>
+<p>[<A href="SMLBoxBound.htm#SMLBoxBound">top</A>]</p><hr>
+
+<P><A NAME="constructor"></A>SMLLIBENTRY <B>SMLBoxBound</B>(const <A HREF="SMLVec3f.htm#SMLVec3f">SMLVec3f</A>&amp; <B><I>center</I></B>, const <A HREF="SMLVec3f.htm#SMLVec3f">SMLVec3f</A>&amp; <B><I>side</I></B>);</P>
+<h4>Discussion</h4>
+<P>SMLBoxBound object constructor. This constructor sets component data of the class <B><I>center</I></B> and <B><I>side</I></B> equal to input objects data <B><I>center</I></B> and <B><I>side</I></B> correspondingly.</P>
+<h4>Parameters</h4>
+<P><B><I>center</I></B> - reference to SMLVec3f constant object </P>
+<P><B><I>side </I></B>- reference to SMLVec3f constant object</P>
+<p>[<A href="SMLBoxBound.htm#SMLBoxBound">top</A>]</p><hr>
+
+<P>SMLLIBENTRY <B>SMLBoxBound </B>(const <A HREF="SMLBoxBound.htm#SMLBoxBound">SMLBoxBound</A>&amp; <B><I>bound</I></B>);</P>
+<h4>Discussion</h4>
+<P>SMLBoxBound object copy-constructor. Makes copy of the object <B><I>bound </I></B>of the same class.</P>
+<h4>Parameters</h4>
+<P><B><I>bound</I></B> - reference to SMLBoxBound constant object.</P>
+<p>[<A href="SMLBoxBound.htm#SMLBoxBound">top</A>]</p><hr>
+
+<P>SMLLIBENTRY <B>SMLBoxBound</B>();</P>
+<h4>Discussion</h4>
+<P>Default SMLBoxBound object constructor. This constructor sets parameters <B><I>center</I></B> and <B><I>side</I></B> of the class equal to zero.</P>
+<h4>Parameters</h4>
+<P>No.</P>
+<p>[<A href="SMLBoxBound.htm#SMLBoxBound">top</A>]</p><hr>
+
+<P>SMLLIBENTRY virtual <A HREF="SMLBound.htm#SMLBound">SMLBound</A>* <A NAME="Clone"><B>Clone</B></A>();</P>
+<P>SMLLIBENTRY virtual const <A HREF="SMLBound.htm#SMLBound">SMLBound</A>* <B>Clone</B>() const;</P>
+<h4>Discussion</h4>
+<P>These two virtual methods create the copy of the SMLBoxBound-type object for which they are called.</P>
+<h4>Parameters</h4>
+<P>No.</P>
+<h4>Return Value</h4>
+<P>Methods return SMLBound-type pointer or const SMLBound-type pointer to new created object.</P>
+<p>[<A href="SMLBoxBound.htm#SMLBoxBound">top</A>]</p><hr>
+
+<P>SMLLIBENTRY void <A NAME="ComputeMinMax"><B>ComputeMinMax</B></A>();</P>
+<h4>Discussion</h4>
+<P>Method defines variables <B><I>min</I></B>, <B><I>max</I></B>, and coordinates of corners of parallelepiped, i.e. defines component array <B><I>corners</I></B>. Sides of the parallelepiped are equal to 2*<B><I>side.x</I></B>, 2*<B><I>side.y,</I></B> and<B><I> </I></B>2*<B><I>side.z</I></B>.</P>
+<h4>Parameters</h4>
+<P>No.</P>
+<p>[<A href="SMLBoxBound.htm#SMLBoxBound">top</A>]</p><hr>
+
+<P>SMLLIBENTRY virtual bool <A NAME="Cull"><B>Cull</B></A>(const <A HREF="SMLPlane.htm#SMLPlane">SMLPlane</A>* <B><I>planes</I></B>, int <B><I>nplane</I></B>) const;</P>
+<h4>Discussion</h4>
+<P>Method checks if the bound lies within frustum created by specified <B><I>planes</I></B>.</P>
+<h4>Parameters</h4>
+<P><B><I>planes</I></B> - defines array of planes used for culling of current box (frustum). Box is culled if it is not intersected with intersection of all positive half-spaces defined by <B><I>planes</I></B>.</P>
+<P><B><I>numPlane</I></B> - number of <B><I>planes</I></B>.</P>
+<h4>Return Value</h4>
+<P>Returns <I>true</I> if box is culled, <I>false</I> otherwise.</P>
+<p>[<A href="SMLBoxBound.htm#SMLBoxBound">top</A>]</p><hr>
+
+<P>SMLLIBENTRY const <A HREF="SMLBoxBound.htm#SMLBoxBound">SMLBoxBound</A>&amp; <A NAME="operator_assign"><B>operator=</B></A>(const <A HREF="SMLBoxBound.htm#SMLBoxBound">SMLBoxBound</A>&amp; <B><I>bound</I></B>);</P>
+<h4>Discussion</h4>
+<P>Method is an overloaded operator-function. It sets parameters of this box to be equal to those of object <B><I>bound</I></B>.</P>
+<h4>Parameters</h4>
+<P><B><I>bound</I></B> - object of SMLBoxBound type.</P>
+<h4>Return Value</h4>
+<P>Returns reference to the SMLBoxBound-type object to which it nominates new box center coordinates and side. </P>
+<p>[<A href="SMLBoxBound.htm#SMLBoxBound">top</A>]</p><hr>
+
+<P>SMLLIBENTRY virtual void <A NAME="around"><B>around</B></A>(const <A HREF="SMLVec3f.htm#SMLVec3f">SMLVec3f</A>* <B><I>pts</I></B>, int <B><I>npoints</I></B>);</P>
+<h4>Discussion</h4>
+<P>Method sets parameters (center coordinates and side) of this parallelepiped to contain all the points defined by parameter <B><I>pts</I></B>. Minimum object with such properties is created by the method.</P>
+<h4>Parameters</h4>
+<P><B><I>pts</I></B> - pointer to array of constant objects of SMLVes3f type.</P>
+<P><B><I>npoints</I></B> - number of points. Variable should be a positive value.</P>
+<p>[<A href="SMLBoxBound.htm#SMLBoxBound">top</A>]</p><hr>
+
+<P>SMLLIBENTRY virtual void <B>around</B>(const <A HREF="SMLSphereBound.htm#SMLSphereBound">SMLSphereBound</A>** <B><I>spheres</I></B>, int <B><I>nspheres</I></B>);</P>
+<h4>Discussion</h4>
+<P>Method sets parameters of this parallelepiped to include all spheres specified by parameter <B><I>spheres</I></B>. Minimum object with such properties is created by the method.</P>
+<h4>Parameters</h4>
+<P><B><I>spheres</I></B> - pointer to array of constant objects of SMLSphereBound type.</P>
+<P><B><I>nspheres</I></B> - number of spheres. Variable should be a positive value or zero.</P>
+<p>[<A href="SMLBoxBound.htm#SMLBoxBound">top</A>]</p><hr>
+
+<P>SMLLIBENTRY virtual void <B>around</B>(const <A HREF="SMLBoxBound.htm#SMLBoxBound">SMLBoxBound</A>** <B><I>boxes</I></B>, int <B><I>nboxes</I></B>);</P>
+<h4>Discussion</h4>
+<P>Method sets parameters of this parallelepiped to include all the parallelepipeds specified by parameter <B><I>boxes</I></B>. Minimum object with such properties is created by the method.</P>
+<h4>Parameters</h4>
+<P><B><I>boxes</I></B> - pointer to array of constant objects of SMLSphereBound type.</P>
+<P><B><I>nboxes</I></B> - number of boxes. Variable should be a positive value or zero.</P>
+<p>[<A href="SMLBoxBound.htm#SMLBoxBound">top</A>]</p><hr>
+
+<P>SMLLIBENTRY virtual void <B>around</B>(const <A HREF="SMLSphereBound.htm#SMLSphereBound">SMLSphereBound</A>* <B><I>sphere</I></B>);</P>
+<h4>Discussion</h4>
+<P>Method sets parameters of this parallelepiped to include <B><I>sphere</I></B>. Minimum object with such properties is created by the method.</P>
+<h4>Parameters</h4>
+<P><B><I>sphere</I></B> - pointer to constant object of SMLSphereBound type.</P>
+<p>[<A href="SMLBoxBound.htm#SMLBoxBound">top</A>]</p><hr>
+
+<P>SMLLIBENTRY virtual void <B>around</B>(const <A HREF="SMLBoxBound.htm#SMLBoxBound">SMLBoxBound</A>* <B><I>box</I></B>);</P>
+<h4>Discussion</h4>
+<P>Method sets parameters of this parallelepiped to be equal to parameters of <B><I>box</I></B>.</P>
+<h4>Parameters</h4>
+<P><B><I>box</I></B> - pointer to constant object of SMLBoxBound type.</P>
+<p>[<A href="SMLBoxBound.htm#SMLBoxBound">top</A>]</p><hr>
+
+<P>SMLLIBENTRY virtual void <B>around</B>(const <A HREF="SMLBound.htm#SMLBound">SMLBound</A>* <B><I>bound</I></B>);</P>
+<h4>Discussion</h4>
+<P>Method sets parameters of this parallelepiped to include object <B><I>bound</I></B>.</P>
+<h4>Parameters</h4>
+<P><B><I>bound</I></B> - pointer to constant object of SMLBound type.</P>
+<p>[<A href="SMLBoxBound.htm#SMLBoxBound">top</A>]</p><hr>
+
+<P>SMLLIBENTRY virtual void <B>around</B>(const <A HREF="SMLBound.htm#SMLBound">SMLBound</A>** <B><I>bounds</I></B>, int <B><I>nbounds</I></B>);</P>
+<h4>Discussion</h4>
+<P>Method sets parameters of this parallelepiped to include all objects defined by <B><I>bounds</I></B>.</P>
+<h4>Parameters</h4>
+<P><B><I>bounds</I></B> - pointer to an array of constant objects of SMLBound type.</P>
+<P><B><I>nbounds</I></B> - number of bounds. Variable should be a positive value.</P>
+<p>[<A href="SMLBoxBound.htm#SMLBoxBound">top</A>]</p><hr>
+
+<P>SMLLIBENTRY virtual void <A NAME="extendBy"><B>extendBy</B></A>(const <A HREF="SMLVec3f.htm#SMLVec3f">SMLVec3f</A>&amp; <B><I>point</I></B>);</P>
+<h4>Discussion</h4>
+<P>Method extends parallelepiped (changes its center coordinates and side) to include given <B><I>point</I></B>.</P>
+<h4>Parameters</h4>
+<P><B><I>point</I></B> - reference to constant object of SMLVec3f type.</P>
+<p>[<A href="SMLBoxBound.htm#SMLBoxBound">top</A>]</p><hr>
+
+<P>SMLLIBENTRY virtual void <B>extendBy</B>(const <A HREF="SMLBoxBound.htm#SMLBoxBound">SMLBoxBound</A>* <B><I>box</I></B>);</P>
+<h4>Discussion</h4>
+<P>Method extends parallelepiped to include given <B><I>box</I></B>.</P>
+<h4>Parameters</h4>
+<P><B><I>box</I></B> - pointer to a constant object of SMLBoxBound type.</P>
+<p>[<A href="SMLBoxBound.htm#SMLBoxBound">top</A>]</p><hr>
+
+<P>SMLLIBENTRY virtual void <B>extendBy</B>(const <A HREF="SMLSphereBound.htm#SMLSphereBound">SMLSphereBound</A>* <B><I>sphere</I></B>);</P>
+<h4>Discussion</h4>
+<P>Method extends parallelepiped to include given <B><I>sphere</I></B>.</P>
+<h4>Parameters</h4>
+<P><B><I>sphere</I></B> - pointer to a constant object of SMLSphereBound type.</P>
+<p>[<A href="SMLBoxBound.htm#SMLBoxBound">top</A>]</p><hr>
+
+<P>SMLLIBENTRY virtual void <B>extendBy</B>(const <A HREF="SMLBound.htm#SMLBound">SMLBound</A>* <B><I>bound</I></B>);</P>
+<h4>Discussion</h4>
+<P>Method extends parallelepiped to include given <B><I>bound</I></B>.</P>
+<h4>Parameters</h4>
+<P><B><I>bound</I></B> - pointer to constant object of SMLBound type.</P>
+<p>[<A href="SMLBoxBound.htm#SMLBoxBound">top</A>]</p><hr>
+
+<P>SMLLIBENTRY virtual bool <A NAME="contains"><B>contains</B></A>(const <A HREF="SMLVec3f.htm#SMLVec3f">SMLVec3f</A>&amp; <B><I>point</I></B>) const;</P>
+<h4>Discussion</h4>
+<P>Method checks if the <B><I>point</I></B> is inside this parallelepiped.</P>
+<h4>Parameters</h4>
+<P><B><I>point</I></B> - reference to a constant object of SMLVec3f type.</P>
+<h4>Return Value</h4>
+<P>Returns <I>true</I> if the point is inside the parallelepiped. Otherwise, returns <I>false</I>.</P>
+<p>[<A href="SMLBoxBound.htm#SMLBoxBound">top</A>]</p><hr>
+
+<P>SMLLIBENTRY virtual bool <B>contains</B>(const <A HREF="SMLBoxBound.htm#SMLBoxBound">SMLBoxBound</A>* <B><I>box</I></B>) const;</P>
+<h4>Discussion</h4>
+<P>Method checks if specified <B><I>box</I></B> is inside this parallelepiped.</P>
+<h4>Parameters</h4>
+<P><B><I>box</I></B> - pointer to a constant object of SMLBox Bound type.</P>
+<h4>Return Value</h4>
+<P>Returns <I>true</I> if <B><I>box</I></B> is inside this parallelepiped. Otherwise, returns <B><I>false</I></B>.</P>
+<p>[<A href="SMLBoxBound.htm#SMLBoxBound">top</A>]</p><hr>
+
+<P>SMLLIBENTRY virtual bool <B>contains</B>(const <A HREF="SMLSphereBound.htm#SMLSphereBound">SMLSphereBound</A>* <B><I>sphere</I></B>) const;</P>
+<h4>Discussion</h4>
+<P>Method checks if specified <B><I>sphere</I></B> is inside this parallelepiped.</P>
+<h4>Parameters</h4>
+<P><B><I>sphere</I></B> - pointer to a constant object of SMLSphereBound type.</P>
+<h4>Return Value</h4>
+<P>Returns <I>true</I> if the given sphere is inside this parallelepiped. Otherwise, returns <I>false</I>.</P>
+<p>[<A href="SMLBoxBound.htm#SMLBoxBound">top</A>]</p><hr>
+
+<P>SMLLIBENTRY virtual bool <B>contains</B>(const <A HREF="SMLBound.htm#SMLBound">SMLBound</A>* <B><I>bound</I></B>) const;</P>
+<h4>Discussion</h4>
+<P>Method checks if specified <B><I>bound </I></B>is inside this parallelepiped. </P>
+<h4>Parameters</h4>
+<P><B><I>bound </I></B>- pointer to a constant object of SMLBound type.</P>
+<h4>Return Value</h4>
+<P>Returns <I>true</I> if <B><I>bound</I></B> is inside this parallelepiped. Otherwise, returns <B><I>false</I></B>.</P>
+<p>[<A href="SMLBoxBound.htm#SMLBoxBound">top</A>]</p><hr>
+
+<P>SMLLIBENTRY virtual void <A NAME="Transform"><B>Transform</B></A>(const <A HREF="SMLBound.htm#SMLBound">SMLBound</A>* <B><I>bound</I></B>, const <A HREF="SMLMatrix4f.htm#SMLMatrix4f">SMLMatrix4f</A>&amp; <B><I>matrix</I></B>);</P>
+<h4>Discussion</h4>
+<P>Method transforms the object <B><I>bound</I></B> in accordance with transformation matrix and writes it into this. </P>
+<h4>Parameters</h4>
+<P><B><I>bound </I></B>- pointer to a constant object of SMLBound type.</P>
+<P><B><I>matrix</I></B> - transformation matrix.</P>
+<p>[<A href="SMLBoxBound.htm#SMLBoxBound">top</A>]</p><hr>
+
+<P>SMLLIBENTRY virtual void <B>Transform</B>(const <A HREF="SMLBoxBound.htm#SMLBoxBound">SMLBoxBound</A>* <B><I>src</I></B>, const <A HREF="SMLMatrix4f.htm#SMLMatrix4f">SMLMatrix4f</A>&amp; <B><I>matrix</I></B>)</P>
+<h4>Discussion</h4>
+<P>Method transforms box in accordance with transformation <B><I>matrix</I></B>.</P>
+<h4>Parameters</h4>
+<P><B><I>src </I></B>- pointer to a constant object of SMLBoxBound type.</P>
+<P><B><I>matrix</I></B> - transformation matrix.</P>
+<p>[<A href="SMLBoxBound.htm#SMLBoxBound">top</A>]</p><hr>
+
+<P>SMLLIBENTRY void <A NAME="SetSide"><B>SetSide</B></A>(const <A HREF="SMLVec3f.htm#SMLVec3f">SMLVec3f</A>&amp; <B><I>vector</I></B>);</P>
+<h4>Discussion</h4>
+<P>Method sets side of this box to be equal to <B><I>vector</I></B>.</P>
+<h4>Parameters</h4>
+<P><B><I>vector</I></B> - new side of this box.</P>
+<p>[<A href="SMLBoxBound.htm#SMLBoxBound">top</A>]</p><hr>
+
+<P>SMLLIBENTRY const <A HREF="SMLVec3f.htm#SMLVec3f">SMLVec3f</A>&amp; <A NAME="GetSide"><B>GetSide</B></A>() const;</P>
+<h4>Discussion</h4>
+<P>Method returns side of this box. </P>
+<h4>Parameters</h4>
+<P>No.</P>
+<h4>Return Value</h4>
+<P>Returns reference to current side of this box.</P>
+<p>[<A href="SMLBoxBound.htm#SMLBoxBound">top</A>]</p><hr>
+
+<P>virtual void <A NAME="copyFrom"><B>copyFrom</B></A>(const <A HREF="SMLBound.htm#SMLBound">SMLBound</A>&amp; <B><I>bound</I></B>);</P>
+<h4>Discussion</h4>
+<P>Method sets new side and coordinates of center of this box equal to those of object <B><I>bound</I></B>.</P>
+<h4>Parameters</h4>
+<P><B><I>bound</I></B> - reference to object of SMLBound type.</P>
+<p>[<A href="SMLBoxBound.htm#SMLBoxBound">top</A>]</p><hr>
+
+<P>virtual void <A NAME="copySame"><B>copySame</B></A>(const <A HREF="SMLBoxBound.htm#SMLBoxBound">SMLBoxBound</A>* <B><I>bound</I></B>);</P>
+<h4>Discussion</h4>
+<P>Method creates new box with side and coordinates of center equal to those of box <B><I>bound</I></B>.</P>
+<h4>Parameters</h4>
+<P><B><I>bound</I></B> - poiner to object of SMLBoxBound type.</P>
+<p>[<A href="SMLBoxBound.htm#SMLBoxBound">top</A>]</p><hr>
+
+</BODY>
+</HTML>

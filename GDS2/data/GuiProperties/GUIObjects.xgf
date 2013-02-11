@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root Num="16">
+
+<CGUIMovie Name="Movie" Num="5">
+	<hidden Type="float"/>
+	<file Type="string" Name="IdleTexture" DefFile="basedata\editor\textures\tv_hiss.ant" defExt="*.tga" filters="All Texture Files|*.tex;*.jpg;*.jpeg;*.tga;*.dds;*.ant|" />
+	<file Type="string" Name="MovieFile" DefFile="" defExt="*.avi" filters="All Movie Files|*.avi|" />
+	<check Type="bool" Name="EditorPlayMovie" />
+	<edit Type="string" Name="MovieCompleteEvent" BKey="false"/>
+</CGUIMovie>
+
+<CGUICheckBox Name="Check Box" Num="30">
+	<file Type="string" Name="NormTex" DefFile="basedata\editor\textures\none.dds" defExt="*.tga" filters="All Texture Files|*.tex;*.jpg;*.jpeg;*.tga;*.dds;*.ant|" />
+	<file Type="string" Name="HighTex" DefFile="basedata\editor\textures\none.dds" defExt="*.tga" filters="All Texture Files|*.tex;*.jpg;*.jpeg;*.tga;*.dds;*.ant|" />
+	<file Type="string" Name="GrayTex" DefFile="basedata\editor\textures\none.dds" defExt="*.tga" filters="All Texture Files|*.tex;*.jpg;*.jpeg;*.tga;*.dds;*.ant|" />
+	<file Type="string" Name="DepressedTex" DefFile="basedata\editor\textures\none.dds" defExt="*.tga" filters="All Texture Files|*.tex;*.jpg;*.jpeg;*.tga;*.dds;*.ant|" />
+	<file Type="string" Name="SelectNormTex" DefFile="basedata\editor\textures\none.dds" defExt="*.tga" filters="All Texture Files|*.tex;*.jpg;*.jpeg;*.tga;*.dds;*.ant|" />
+	<file Type="string" Name="SelectHighTex" DefFile="basedata\editor\textures\none.dds" defExt="*.tga" filters="All Texture Files|*.tex;*.jpg;*.jpeg;*.tga;*.dds;*.ant|" />
+	<file Type="string" Name="SelectGrayTex" DefFile="basedata\editor\textures\none.dds" defExt="*.tga" filters="All Texture Files|*.tex;*.jpg;*.jpeg;*.tga;*.dds;*.ant|" />
+	<check Type="bool" Name="IsChecked"/>
+	<file Type="string" Name="DecalUnsNorm" DefFile="" defExt="*.tga" filters="All Texture Files|*.tex;*.jpg;*.jpeg;*.tga;*.dds;*.ant|"/>
+	<file Type="string" Name="DecalUnsHigh" DefFile="" defExt="*.tga" filters="All Texture Files|*.tex;*.jpg;*.jpeg;*.tga;*.dds;*.ant|"/>
+	<file Type="string" Name="DecalUnsGrayed" DefFile="" defExt="*.tga" filters="All Texture Files|*.tex;*.jpg;*.jpeg;*.tga;*.dds;*.ant|"/>
+	<file Type="string" Name="DecalDepressed" DefFile="" defExt="*.tga" filters="All Texture Files|*.tex;*.jpg;*.jpeg;*.tga;*.dds;*.ant|"/>
+	<file Type="string" Name="DecalSelNorm" DefFile="" defExt="*.tga" filters="All Texture Files|*.tex;*.jpg;*.jpeg;*.tga;*.dds;*.ant|"/>
+	<file Type="string" Name="DecalSelHigh" DefFile="" defExt="*.tga" filters="All Texture Files|*.tex;*.jpg;*.jpeg;*.tga;*.dds;*.ant|"/>
+	<file Type="string" Name="DecalSelGrayed" DefFile="" defExt="*.tga" filters="All Texture Files|*.tex;*.jpg;*.jpeg;*.tga;*.dds;*.ant|"/>
+	<spinner Type="int" name="DecalOffsetX" Min="0" Max="9999" Increments="1" DefVal="0"/>
+	<spinner Type="int" name="DecalOffsetY" Min="0" Max="9999" Increments="1" DefVal="0"/>
+	<file Type="string" Name="NormFont" DefFile="basedata\editor\fonts\arial.ttf" defExt="*.ttf" filters="All Font Files|*.ttf|" />
+	<file Type="string" Name="BoldFont" DefFile="basedata\editor\fonts\arial.ttf" defExt="*.ttf" filters="All Font Files|*.ttf|" />
+	<spinner Type="int" name="Fontsize" Min="0" Max="50" Increments="1" DefVal="20"/>
+	<edit Type="string" Name="TextUnsNorm" BKey="false"/>
+	<edit Type="string" Name="TextUnsHigh" BKey="false"/>
+	<edit Type="string" Name="TextUnsGrayed" BKey="false"/>
+	<edit Type="string" Name="TextDepressed" BKey="false"/>
+	<edit Type="string" Name="TextSelNorm" BKey="false"/>
+	<edit Type="string" Name="TextSelHigh" BKey="false"/>
+	<edit Type="string" Name="TextSelGrayed" BKey="false"/>
+	<spinner Type="int" name="TextOffSetX" Min="-999" Max="9999" Increments="1" DefVal="0"/>
+	<spinner Type="int" name="TextOffSetY" Min="-999" Max="9999" Increments="1" DefVal="0"/>
+	<check Type="bool" Name="CenterText" />
+</CGUICheckBox>
+
+<CGUIEditText Name="Edit Text" Num="11">
+	<file Type="string" Name="NormTex" DefFile="basedata\editor\textures\none.dds" defExt="*.tga" filters="All Texture Files|*.tex;*.jpg;*.jpeg;*.tga;*.dds;*.ant|" />
+	<edit Type="string" Name="EditText" BKey="false"/>
+	<spinner Type="int" Name="MaxCharCount" Min="0" Max="9999" Increments="1" DefVal="0"/>
+	<file Type="string" Name="FontName" DefFile="basedata\editor\fonts\arial.ttf" defExt="*.ttf" filters="All Font Files|*.ttf|" />
+	<spinner Type="int" name="Fontsize" Min="0" Max="50" Increments="1" DefVal="20"/>
+	<color Type="int" name="FontColor" DefColor="0" />
+	<color Type="int" name="CursorColor" DefColor="0" />
+	<spinner Type="int" name="TextOffSetX" Min="-999" Max="9999" Increments="1" DefVal="0"/>
+	<spinner Type="int" name="TextOffSetY" Min="-999" Max="9999" Increments="1" DefVal="0"/>
+	<check Type="bool" Name="CenterText" />
+	<file type="string" Name="AllowedChars" DefFile="Data\AllChars.txt" defExt="*.txt" filters="Txt Files|*.txt|" />
+</CGUIEditText>
+
+<CGUIGroup Name="Group" Num="6">
+	<hidden Type="float"/>
+	<spinner Type="float" Name="posx" Min="0" Max="9999" Increments="1" DefVal="0"/>
+	<spinner Type="float" Name="posy" Min="0" Max="9999" Increments="1" DefVal="0"/>
+	<spinner Type="float" Name="width" Min="0" Max="9999" Increments="1" DefVal="0"/>
+	<spinner Type="float" Name="height" Min="0" Max="9999" Increments="1" DefVal="0"/>
+	<spinner Type="int" Name="zorder" Min="-999" Max="999" Increments="1" DefVal="0"/>
+</CGUIGroup>
+
+<CGUIStatusBar Name="Status Bar" Num="18">
+	<hidden Type="float"/>
+	<file Type="string" Name="FullTex" DefFile="basedata\editor\textures\none.dds" defExt="*.tga" filters="All Texture Files|*.tex;*.jpg;*.jpeg;*.tga;*.dds;*.ant|"/>
+	<file Type="string" Name="BGTex" DefFile="basedata\editor\textures\none.dds" defExt="*.tga" filters="All Texture Files|*.tex;*.jpg;*.jpeg;*.tga;*.dds;*.ant|"/>
+	<file Type="string" Name="TwoHndPcntTex" DefFile="basedata\editor\textures\none.dds" defExt="*.tga" filters="All Texture Files|*.tex;*.jpg;*.jpeg;*.tga;*.dds;*.ant|"/>
+	<file Type="string" Name="ThreeHndPcntTex" DefFile="basedata\editor\textures\none.dds" defExt="*.tga" filters="All Texture Files|*.tex;*.jpg;*.jpeg;*.tga;*.dds;*.ant|"/>
+	<file Type="string" Name="FourHndPcntTex" DefFile="basedata\editor\textures\none.dds" defExt="*.tga" filters="All Texture Files|*.tex;*.jpg;*.jpeg;*.tga;*.dds;*.ant|"/>
+	<file Type="string" Name="AnimGhostBarTex" DefFile="basedata\editor\textures\none.dds" defExt="*.tga" filters="All Texture Files|*.tex;*.jpg;*.jpeg;*.tga;*.dds;*.ant|"/>
+	<check Type="bool" Name="ForwardRender" />
+	<spinner Type="int" Name="LeftOffset" Min="-999" Max="999" Increments="1" DefVal="0"/>
+	<spinner Type="int" Name="TopOffset" Min="-999" Max="999" Increments="1" DefVal="0"/>
+	<spinner Type="int" Name="RightOffset" Min="-999" Max="999" Increments="1" DefVal="0"/>
+	<spinner Type="int" Name="BottomOffset" Min="-999" Max="999" Increments="1" DefVal="0"/>
+	<spinner Type="int" Name="EditorRender %" Min="0" Max="400" Increments="1" DefVal="0"/>
+	<check Type="bool" Name="AnimateBarShift" />
+	<spinner Type="float" Name="AnimationTime" Min="0" Max="9999" Increments="0.01" DefVal="0"/>
+	<check Type="bool" Name="LingerGhostBar" />
+	<spinner Type="float" Name="LingerTime" Min="0" Max="9999" Increments="0.01" DefVal="0"/>
+	<check Type="bool" Name="IsLoadingBar" />
+</CGUIStatusBar>
+
+<CGUIItem Name="Item" Num="26">
+	<hidden Type="float"/>
+	<file Type="string" Name="NormTex" DefFile="basedata\editor\textures\none.dds" defExt="*.tga" filters="All Texture Files|*.tex;*.jpg;*.jpeg;*.tga;*.dds;*.ant|"/>
+	<file Type="string" Name="HighTex" DefFile="basedata\editor\textures\none.dds" defExt="*.tga" filters="All Texture Files|*.tex;*.jpg;*.jpeg;*.tga;*.dds;*.ant|"/>
+	<file Type="string" Name="SelectTex" DefFile="basedata\editor\textures\none.dds" defExt="*.tga" filters="All Texture Files|*.tex;*.jpg;*.jpeg;*.tga;*.dds;*.ant|"/>
+	<file Type="string" Name="GrayTex" DefFile="basedata\editor\textures\none.dds" defExt="*.tga" filters="All Texture Files|*.tex;*.jpg;*.jpeg;*.tga;*.dds;*.ant|"/>
+	<file Type="string" Name="DecalNorm" DefFile="" defExt="*.tga" filters="All Texture Files|*.tex;*.jpg;*.jpeg;*.tga;*.dds;*.ant|"/>
+	<file Type="string" Name="DecalHigh" DefFile="" defExt="*.tga" filters="All Texture Files|*.tex;*.jpg;*.jpeg;*.tga;*.dds;*.ant|"/>
+	<file Type="string" Name="DecalSelect" DefFile="" defExt="*.tga" filters="All Texture Files|*.tex;*.jpg;*.jpeg;*.tga;*.dds;*.ant|"/>
+	<file Type="string" Name="DecalGray" DefFile="" defExt="*.tga" filters="All Texture Files|*.tex;*.jpg;*.jpeg;*.tga;*.dds;*.ant|"/>
+	<spinner Type="int" name="DecalOffsetX" Min="0" Max="9999" Increments="1" DefVal="0"/>
+	<spinner Type="int" name="DecalOffsetY" Min="0" Max="9999" Increments="1" DefVal="0"/>
+	<edit Type="string" Name="TextNorm" BKey="false"/>
+	<edit Type="string" Name="TextHigh" BKey="false"/>
+	<edit Type="string" Name="TextSelect" BKey="false"/>
+	<edit Type="string" Name="TextGrayed" BKey="false"/>
+	<file Type="string" Name="FontName" DefFile="basedata\editor\fonts\arial.ttf" defExt="*.ttf" filters="All Font Files|*.ttf|" />
+	<file Type="string" Name="AltFontName" DefFile="basedata\editor\fonts\arial.ttf" defExt="*.ttf" filters="All Font Files|*.ttf|" />
+	<spinner Type="int" name="Fontsize" Min="0" Max="50" Increments="1" DefVal="20"/>
+	<color Type="int" name="NormFontColor" DefColor="4278190080"/>
+	<color Type="int" name="HighFontColor" DefColor="0"/>
+	<color Type="int" name="SelFontColor"  DefColor="0"/>
+	<color Type="int" name="GrayFontColor" DefColor="0"/>
+	<spinner Type="int" name="TextOffSetX" Min="-999" Max="9999" Increments="1" DefVal="0"/>
+	<spinner Type="int" name="TextOffSetY" Min="-999" Max="9999" Increments="1" DefVal="0"/>
+	<check Type="bool" Name="CenterText" />
+	<check Type="bool" Name="UseSmartScale" />
+</CGUIItem>
+
+<CGUIListBox Name="List Box" Num="21">
+	<spinner Type="float" Name="VertSliderWidth" Min="0" Max="9999" Increments="1" DefVal="32"/>
+	<spinner Type="float" Name="HorizSliderWidth" Min="0" Max="9999" Increments="1" DefVal="32"/>	
+	<file Type="string" Name="VertBarTex" DefFile="basedata\editor\textures\none.dds" defExt="*.tga" filters="All Texture Files|*.tex;*.jpg;*.jpeg;*.tga;*.dds;*.ant|" />
+	<file Type="string" Name="VertButtonNormTex" DefFile="basedata\editor\textures\none.dds" defExt="*.tga" filters="All Texture Files|*.tex;*.jpg;*.jpeg;*.tga;*.dds;*.ant|" />
+	<file Type="string" Name="VertButtonHighTex" DefFile="basedata\editor\textures\none.dds" defExt="*.tga" filters="All Texture Files|*.tex;*.jpg;*.jpeg;*.tga;*.dds;*.ant|" />
+	<file Type="string" Name="VertButtonSelectTex" DefFile="basedata\editor\textures\none.dds" defExt="*.tga" filters="All Texture Files|*.tex;*.jpg;*.jpeg;*.tga;*.dds;*.ant|" />
+	<file Type="string" Name="HorizBarTex" DefFile="basedata\editor\textures\none.dds" defExt="*.tga" filters="All Texture Files|*.tex;*.jpg;*.jpeg;*.tga;*.dds;*.ant|" />
+	<file Type="string" Name="HorizButtonNormTex" DefFile="basedata\editor\textures\none.dds" defExt="*.tga" filters="All Texture Files|*.tex;*.jpg;*.jpeg;*.tga;*.dds;*.ant|" />
+	<file Type="string" Name="HorizButtonHighTex" DefFile="basedata\editor\textures\none.dds" defExt="*.tga" filters="All Texture Files|*.tex;*.jpg;*.jpeg;*.tga;*.dds;*.ant|" />
+	<file Type="string" Name="HorizButtonSelectTex" DefFile="basedata\editor\textures\none.dds" defExt="*.tga" filters="All Texture Files|*.tex;*.jpg;*.jpeg;*.tga;*.dds;*.ant|" />
+	<file Type="string" Name="BackGround" DefFile="basedata\editor\textures\none.dds" defExt="*.tga" filters="All Texture Files|*.tex;*.jpg;*.jpeg;*.tga;*.dds;*.ant|" />
+	<file Type="string" Name="HighlightTex" DefFile="" defExt="*.tga" filters="All Texture Files|*.tex;*.jpg;*.jpeg;*.tga;*.dds;*.ant|" />
+	<file Type="string" Name="SourceTextFile" DefFile="Data\TestListBox.txt" defExt="*.txt" filters="Txt Files|*.txt|" />
+	<file Type="string" Name="FontName" DefFile="basedata\editor\fonts\arial.ttf" defExt="*.ttf" filters="All Font Files|*.ttf|" />
+	<spinner Type="int" Name="Fontsize" min="0" Max="50" Increments="1"  DefVal="20"/>
+	<color Type="int" name="NormFontColor" DefColor="0" />
+	<color Type="int" name="SelectFontColor" DefColor="0" />
+	<spinner Type="int" Name="TextOffSetX" min="-999" Max="999" Increments="1"  DefVal="0"/>
+	<spinner Type="int" Name="TextOffSetY" min="-999" Max="999" Increments="1"  DefVal="0"/>
+	<check Type="bool" name="WrapText" />
+	<check Type="bool" name="DisableSelect" />
+</CGUIListBox>
+
+<CGUIRadioButton Name="Radio Button" Num="30">
+	<file Type="string" Name="NormTex" DefFile="basedata\editor\textures\none.dds" defExt="*.tga" filters="All Texture Files|*.tex;*.jpg;*.jpeg;*.tga;*.dds;*.ant|" />
+	<file Type="string" Name="HighTex" DefFile="basedata\editor\textures\none.dds" defExt="*.tga" filters="All Texture Files|*.tex;*.jpg;*.jpeg;*.tga;*.dds;*.ant|" />
+	<file Type="string" Name="GrayTex" DefFile="basedata\editor\textures\none.dds" defExt="*.tga" filters="All Texture Files|*.tex;*.jpg;*.jpeg;*.tga;*.dds;*.ant|" />
+	<file Type="string" Name="DepressedTex" DefFile="basedata\editor\textures\none.dds" defExt="*.tga" filters="All Texture Files|*.tex;*.jpg;*.jpeg;*.tga;*.dds;*.ant|" />
+	<file Type="string" Name="SelectNormTex" DefFile="basedata\editor\textures\none.dds" defExt="*.tga" filters="All Texture Files|*.tex;*.jpg;*.jpeg;*.tga;*.dds;*.ant|" />
+	<file Type="string" Name="SelectHighTex" DefFile="basedata\editor\textures\none.dds" defExt="*.tga" filters="All Texture Files|*.tex;*.jpg;*.jpeg;*.tga;*.dds;*.ant|" />
+	<file Type="string" Name="SelectGrayTex" DefFile="basedata\editor\textures\none.dds" defExt="*.tga" filters="All Texture Files|*.tex;*.jpg;*.jpeg;*.tga;*.dds;*.ant|" />
+	<check Type="bool" Name="IsChecked"/>
+	<file Type="string" Name="DecalUnsNorm" DefFile="" defExt="*.tga" filters="All Texture Files|*.tex;*.jpg;*.jpeg;*.tga;*.dds;*.ant|"/>
+	<file Type="string" Name="DecalUnsHigh" DefFile="" defExt="*.tga" filters="All Texture Files|*.tex;*.jpg;*.jpeg;*.tga;*.dds;*.ant|"/>
+	<file Type="string" Name="DecalUnsGrayed" DefFile="" defExt="*.tga" filters="All Texture Files|*.tex;*.jpg;*.jpeg;*.tga;*.dds;*.ant|"/>
+	<file Type="string" Name="DecalDepressed" DefFile="" defExt="*.tga" filters="All Texture Files|*.tex;*.jpg;*.jpeg;*.tga;*.dds;*.ant|"/>
+	<file Type="string" Name="DecalSelNorm" DefFile="" defExt="*.tga" filters="All Texture Files|*.tex;*.jpg;*.jpeg;*.tga;*.dds;*.ant|"/>
+	<file Type="string" Name="DecalSelHigh" DefFile="" defExt="*.tga" filters="All Texture Files|*.tex;*.jpg;*.jpeg;*.tga;*.dds;*.ant|"/>
+	<file Type="string" Name="DecalSelGrayed" DefFile="" defExt="*.tga" filters="All Texture Files|*.tex;*.jpg;*.jpeg;*.tga;*.dds;*.ant|"/>
+	<spinner Type="int" name="DecalOffsetX" Min="0" Max="9999" Increments="1" DefVal="0"/>
+	<spinner Type="int" name="DecalOffsetY" Min="0" Max="9999" Increments="1" DefVal="0"/>
+	<file Type="string" Name="NormFont" DefFile="basedata\editor\fonts\arial.ttf" defExt="*.ttf" filters="All Font Files|*.ttf|" />
+	<file Type="string" Name="BoldFont" DefFile="basedata\editor\fonts\arial.ttf" defExt="*.ttf" filters="All Font Files|*.ttf|" />
+	<spinner Type="int" name="Fontsize" Min="0" Max="50" Increments="1" DefVal="20"/>
+	<edit Type="string" Name="TextUnsNorm" BKey="false"/>
+	<edit Type="string" Name="TextUnsHigh" BKey="false"/>
+	<edit Type="string" Name="TextUnsGrayed" BKey="false"/>
+	<edit Type="string" Name="TextDepressed" BKey="false"/>
+	<edit Type="string" Name="TextSelNorm" BKey="false"/>
+	<edit Type="string" Name="TextSelHigh" BKey="false"/>
+	<edit Type="string" Name="TextSelGrayed" BKey="false"/>
+	<spinner Type="int" name="TextOffSetX" Min="-999" Max="9999" Increments="1" DefVal="0"/>
+	<spinner Type="int" name="TextOffSetY" Min="-999" Max="9999" Increments="1" DefVal="0"/>
+	<check Type="bool" Name="CenterText" />
+</CGUIRadioButton>
+
+<CGUISlider Name="Slider" Num="6">
+	<file Type="string" Name="BarNormTexture" DefFile="basedata\editor\textures\none.dds" defExt="*.tga" filters="All Texture Files|*.tex;*.jpg;*.jpeg;*.tga;*.dds;*.ant|" />
+	<file Type="string" Name="BarGrayTexture" DefFile="basedata\editor\textures\none.dds" defExt="*.tga" filters="All Texture Files|*.tex;*.jpg;*.jpeg;*.tga;*.dds;*.ant|" />
+	<file Type="string" Name="ButtonNormTexture" DefFile="basedata\editor\textures\none.dds" defExt="*.tga" filters="All Texture Files|*.tex;*.jpg;*.jpeg;*.tga;*.dds;*.ant|" />
+	<file Type="string" Name="ButtonSelectTexture" DefFile="basedata\editor\textures\none.dds" defExt="*.tga" filters="All Texture Files|*.tex;*.jpg;*.jpeg;*.tga;*.dds;*.ant|" />
+	<file Type="string" Name="ButtonGrayTexture" DefFile="basedata\editor\textures\none.dds" defExt="*.tga" filters="All Texture Files|*.tex;*.jpg;*.jpeg;*.tga;*.dds;*.ant|" />
+	<combo Type="string" Name="SliderType" BKey="false" DefSelect="VERTICAL" NumOptions="2" option1="HORIZONTAL" option2="VERTICAL" />
+</CGUISlider>
+
+<CGUIStaticText Name="Static Text" Num="23">
+	<hidden Type="float"/>
+	<file Type="string" Name="NormTex" DefFile="basedata\editor\textures\none.dds" defExt="*.tga" filters="All Texture Files|*.tex;*.jpg;*.jpeg;*.tga;*.dds;*.ant|" />
+	<edit Type="string" Name="StaticText" BKey="false"/>
+	<file Type="string" Name="TextFile" DefFile="" defExt="*.txt" filters="Text Files|*.txt|" />
+	<check Type="bool" Name="LoadFromFile" />
+	<check Type="bool" Name="UseLanguageEntry" />
+	<edit Type="string" Name="LanguageEntryKey" BKey="false"/>
+	<file Type="string" Name="FontName" DefFile="basedata\editor\fonts\arial.ttf" defExt="*.ttf" filters="All Font Files|*.ttf|" />
+	<spinner Type="int" name="Fontsize" Min="0" Max="50" Increments="1" DefVal="20"/>
+	<color Type="int" name="NormFontColor" DefColor="0" />
+	<color Type="int" name="HighFontColor" DefColor="0" />
+	<color Type="int" name="SelectFontColor" DefColor="0" />
+	<color Type="int" name="GrayFontColor" DefColor="0" />
+	<spinner Type="int" name="TextOffSetX" Min="-999" Max="9999" Increments="1" DefVal="0"/>
+	<spinner Type="int" name="TextOffSetY" Min="-999" Max="9999" Increments="1" DefVal="0"/>
+	<check Type="bool" Name="CenterText" />
+	<check Type="bool" name="HideTexture" />
+	<check Type="bool" name="UseFontDropShadow" />
+	<color Type="int" name="DropShadowColor" DefColor="-1" />
+	<spinner Type="int" name="ShadowScaleX" Min="-999" Max="9999" Increments="1" DefVal="0"/>
+	<spinner Type="int" name="ShadowScaleY" Min="-999" Max="9999" Increments="1" DefVal="0"/>
+	<spinner Type="int" name="ShadowOffSetX" Min="-999" Max="9999" Increments="1" DefVal="0"/>
+	<spinner Type="int" name="ShadowOffSetY" Min="-999" Max="9999" Increments="1" DefVal="0"/>
+</CGUIStaticText>
+
+<CGUIComboBox Name="Combo Box" Num="22">
+	<hidden Type="float"/>
+	<file Type="string" Name="NormTex" DefFile="basedata\editor\textures\none.dds" defExt="*.tga" filters="All Texture Files|*.tex;*.jpg;*.jpeg;*.tga;*.dds;*.ant|" />
+	<file Type="string" Name="GrayTex" DefFile="basedata\editor\textures\none.dds" defExt="*.tga" filters="All Texture Files|*.tex;*.jpg;*.jpeg;*.tga;*.dds;*.ant|" />
+	<file Type="string" Name="ArrowNormTex" DefFile="basedata\editor\textures\none.dds" defExt="*.tga" filters="All Texture Files|*.tex;*.jpg;*.jpeg;*.tga;*.dds;*.ant|" />
+	<file Type="string" Name="ArrowSelTex" DefFile="basedata\editor\textures\none.dds" defExt="*.tga" filters="All Texture Files|*.tex;*.jpg;*.jpeg;*.tga;*.dds;*.ant|" />
+	<file Type="string" Name="ArrowGrayTex" DefFile="basedata\editor\textures\none.dds" defExt="*.tga" filters="All Texture Files|*.tex;*.jpg;*.jpeg;*.tga;*.dds;*.ant|" />
+	<file Type="string" Name="DropDownTex" DefFile="basedata\editor\textures\none.dds" defExt="*.tga" filters="All Texture Files|*.tex;*.jpg;*.jpeg;*.tga;*.dds;*.ant|" />
+	<spinner Type="int" name="DropDownOffsetY" Min="-999" Max="9999" Increments="1" DefVal="0"/>
+	<spinner Type="int" name="DropDownHeightOffset" Min="-999" Max="9999" Increments="1" DefVal="0"/>
+	<file Type="string" Name="HighlightTex" DefFile="" defExt="*.tga" filters="All Texture Files|*.tex;*.jpg;*.jpeg;*.tga;*.dds;*.ant|" />
+	<edit Type="string" Name="DefaultText" BKey="false"/>
+	<file Type="string" Name="DropDownListFile" DefFile="" defExt="*.txt" filters="Txt Files|*.txt|" />
+	<file Type="string" Name="FontName" DefFile="basedata\editor\fonts\arial.ttf" defExt="*.ttf" filters="All Font Files|*.ttf|" />
+	<spinner Type="int" Name="Fontsize" min="0" Max="50" Increments="1"  DefVal="20"/>
+	<color Type="int" name="NormFontColor" DefColor="0" />
+	<color Type="int" name="SelectFontColor" DefColor="0" />
+	<color Type="int" name="GrayFontColor" DefColor="0" />
+	<spinner Type="int" name="TextOffSetX" Min="-999" Max="9999" Increments="1" DefVal="0"/>
+	<spinner Type="int" name="TextOffSetY" Min="-999" Max="9999" Increments="1" DefVal="0"/>
+	<spinner Type="int" name="ListTextOffSetX" Min="-999" Max="9999" Increments="1" DefVal="0"/>
+	<spinner Type="int" name="ListTextOffSetY" Min="-999" Max="9999" Increments="1" DefVal="0"/>
+	<check Type="bool" Name="ButtonOnRight" />	
+</CGUIComboBox>
+
+<CGUIStaticArt Name="Static Art" Num="3">
+	<hidden Type="float"/>
+	<file Type="string" Name="NormTex" DefFile="basedata\editor\textures\none.dds" defExt="*.tga" filters="All Texture Files|*.tex;*.jpg;*.jpeg;*.tga;*.dds;*.ant|" />
+	<check Type="bool" Name="UseSmartScale" />	
+</CGUIStaticArt>
+	
+<CGUICursor Name="Cursor" Num="9">
+	<hidden Type="float"/>
+	<edit Type="float" Name="posx" BKey="false"/>
+	<edit Type="float" Name="posy" BKey="false"/>
+	<spinner Type="float" Name="width" Min="0" Max="9999" Increments="1" DefVal="30"/>
+	<spinner Type="float" Name="height" Min="0" Max="9999" Increments="1" DefVal="30"/>
+	<edit Type="int" name="ZOrder" BKey="false"/>
+	<spinner Type="int" name="iHotX" Min="0" Max="9999" Increments="1" DefVal="0"/>
+	<spinner Type="int" name="iHotY" Min="0" Max="9999" Increments="1" DefVal="0"/>
+	<file Type="string" Name="NormTex" DefFile="basedata\editor\textures\none.dds" defExt="*.tga" filters="All Texture Files|*.tex;*.jpg;*.jpeg;*.tga;*.dds;*.ant|" />
+</CGUICursor>
+
+<CGUISpinnerItem Name="Spinner" Num="22">
+	<hidden Type="float"/>
+	<file Type="string" Name="NormTex" DefFile="basedata\editor\textures\none.dds" defExt="*.tga" filters="All Texture Files|*.tex;*.jpg;*.jpeg;*.tga;*.dds;*.ant|" />
+	<file Type="string" Name="GrayTex" DefFile="basedata\editor\textures\none.dds" defExt="*.tga" filters="All Texture Files|*.tex;*.jpg;*.jpeg;*.tga;*.dds;*.ant|" />
+	<file Type="string" Name="ArrowUpNormTex" DefFile="basedata\editor\textures\none.dds" defExt="*.tga" filters="All Texture Files|*.tex;*.jpg;*.jpeg;*.tga;*.dds;*.ant|" />
+	<file Type="string" Name="ArrowUpSelTex" DefFile="basedata\editor\textures\none.dds" defExt="*.tga" filters="All Texture Files|*.tex;*.jpg;*.jpeg;*.tga;*.dds;*.ant|" />
+	<file Type="string" Name="ArrowUpGrayTex" DefFile="basedata\editor\textures\none.dds" defExt="*.tga" filters="All Texture Files|*.tex;*.jpg;*.jpeg;*.tga;*.dds;*.ant|" />
+	<file Type="string" Name="ArrowDownNormTex" DefFile="basedata\editor\textures\none.dds" defExt="*.tga" filters="All Texture Files|*.tex;*.jpg;*.jpeg;*.tga;*.dds;*.ant|" />
+	<file Type="string" Name="ArrowDownSelTex" DefFile="basedata\editor\textures\none.dds" defExt="*.tga" filters="All Texture Files|*.tex;*.jpg;*.jpeg;*.tga;*.dds;*.ant|" />
+	<file Type="string" Name="ArrowDownGrayTex" DefFile="basedata\editor\textures\none.dds" defExt="*.tga" filters="All Texture Files|*.tex;*.jpg;*.jpeg;*.tga;*.dds;*.ant|" />
+	<combo Type="string" Name="NumericalType" BKey="false" DefSelect="INTEGER" NumOptions="2" option1="INTEGER" option2="FLOAT" />
+	<edit Type="string" Name="DefaultText" BKey="false"/>
+	<file Type="string" Name="FontName" DefFile="basedata\editor\fonts\arial.ttf" defExt="*.ttf" filters="All Font Files|*.ttf|" />
+	<spinner Type="int" Name="Fontsize" min="0" Max="50" Increments="1"  DefVal="20"/>
+	<spinner Type="float" Name="Increment" Min="-9999" Max="9999" Increments="1" DefVal="0"/>
+	<spinner Type="float" Name="Max" Min="-999999" Max="999999" Increments="1" DefVal="0"/>
+	<spinner Type="float" Name="Min" Min="-999999" Max="999999" Increments="1" DefVal="0"/>
+	<color type="int" name="CursorColor" DefColor="0" />
+	<color Type="int" name="NormFontColor" DefColor="0" />
+	<color Type="int" name="GrayFontColor" DefColor="0" />
+	<spinner Type="int" name="TextOffSetX" Min="-999" Max="9999" Increments="1" DefVal="0"/>
+	<spinner Type="int" name="TextOffSetY" Min="-999" Max="9999" Increments="1" DefVal="0"/>
+	<check Type="bool" Name="ButtonsOnRight" />	
+</CGUISpinnerItem>
+
+<CGUIInstance Name="Item Instance" Num="11">
+	<hidden Type="float"/>
+	<spinner Type="float" Name="posx" Min="0" Max="9999" Increments="1" DefVal="50"/>
+	<spinner Type="float" Name="posy" Min="0" Max="9999" Increments="1" DefVal="50"/>
+	<spinner Type="float" Name="width" Min="0" Max="9999" Increments="1" DefVal="50"/>
+	<spinner Type="float" Name="height" Min="0" Max="9999" Increments="1" DefVal="50"/>
+	<spinner Type="int" Name="zorder" Min="-999" Max="999" Increments="1" DefVal="0"/>
+	<color Type="int" name="ItemColor" DefColor="-1" />
+	<spinner Type="int" Name="ItemAlpha" Min="0" Max="255" Increments="1" DefVal="255"/>
+	<spinner Type="float" Name="ItemAngle" Min="-9999.9" Max="9999.9" Increments="1" DefVal="0"/>
+	<hidden Type="string"/>
+	<hidden Type="string"/>
+</CGUIInstance>
+
+<CGUIAnimation Name="GUI Animation" Num="6">
+	<hidden Type="float"/>
+	<static Type="int" Name="NumObjects"/>
+	<static Type="float" Name="TotalTime"/>
+	<spinner Type="int" Name="FramesPerSec" Min="1" Max="60" Increments="1" DefVal="30"/>
+	<check Type="bool" Name="IsLooping" />
+	<check Type="bool" Name="PositionRelative" />
+</CGUIAnimation>
+
+</root>

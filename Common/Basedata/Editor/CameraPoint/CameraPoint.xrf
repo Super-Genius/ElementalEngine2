@@ -1,0 +1,18 @@
+<MATERIAL version="3000" templatename="Opaque_Clamp" numconstants="2" numtextures="2" numbones="0" numflags="0">
+    <ShaderVar name="FogColor" x="0.6705" y="0.7294" z="0.8549" w="10000" />
+    <ShaderVar name="EyePos" x="0" y="0" z="0" w="1" />
+    <Texture pass="0" stage="0" file="\colors.dds" numtexturestates="5">
+        <TextureStageState mode="magfilter" value="linear" />
+        <TextureStageState mode="minfilter" value="linear" />
+        <TextureStageState mode="mipfilter" value="point" />
+        <TextureStageState mode="umode" value="clamp" />
+        <TextureStageState mode="vmode" value="clamp" />
+    </Texture>
+    <Texture pass="0" stage="1" file="\colors_nrml.dds" numtexturestates="5">
+        <TextureStageState mode="magfilter" value="linear" />
+        <TextureStageState mode="minfilter" value="linear" />
+        <TextureStageState mode="mipfilter" value="point" />
+        <TextureStageState mode="umode" value="clamp" />
+        <TextureStageState mode="vmode" value="clamp" />
+    </Texture>
+</MATERIAL>

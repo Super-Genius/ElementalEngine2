@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root Num="1">
+<AITeamsDatabase Name="AI Teams Database" Num="71">
+	<edit Type="string" Name="Name" key="true"/>
+	<edit Type="string" Name="Type Name" key="true"/>
+	<edit Type="string" Name="Full Name" key="true"/>
+	<edit Type="short int" Name="Class" key="true"/>
+	<edit Type="short int" Name="Nation" key="true"/>
+	<edit Type="short int" Name="Type" key="true"/>
+	<edit Type="short int" Name="Morale" key="true"/>
+	<edit Type="short int" Name="Experience" key="true"/>
+	<edit Type="short int" Name="Style" key="true"/>
+	<edit Type="short int" Name="Icon" key="true"/>
+	<edit Type="short int" Name="SAI Unit" key="true"/>
+	<edit Type="short int" Name="Soldier List 0" key="true"/>
+	<edit Type="short int" Name="Soldier List 1" key="true"/>
+	<edit Type="short int" Name="Soldier List 2" key="true"/>
+	<edit Type="short int" Name="Soldier List 3" key="true"/>
+	<edit Type="short int" Name="Soldier List 4" key="true"/>
+	<edit Type="short int" Name="Soldier List 5" key="true"/>
+	<edit Type="short int" Name="Soldier List 6" key="true"/>
+	<edit Type="short int" Name="Soldier List 7" key="true"/>
+	<edit Type="short int" Name="Soldier List 8" key="true"/>
+	<edit Type="short int" Name="Soldier List 9" key="true"/>
+	<edit Type="short int" Name="Soldier List 10" key="true"/>
+	<edit Type="short int" Name="Soldier List 11" key="true"/>
+	<edit Type="short int" Name="Soldier List 12" key="true"/>
+	<edit Type="short int" Name="Soldier List 13" key="true"/>
+	<edit Type="short int" Name="Soldier List 14" key="true"/>
+	<edit Type="short int" Name="Soldier List 15" key="true"/>
+	<edit Type="short int" Name="Soldier List 16" key="true"/>
+	<edit Type="short int" Name="Soldier List 17" key="true"/>
+	<edit Type="short int" Name="Soldier List 18" key="true"/>
+	<edit Type="short int" Name="Soldier List 19" key="true"/>
+	<edit Type="short int" Name="Soldier List 20" key="true"/>
+	<edit Type="short int" Name="Soldier List 21" key="true"/>
+	<edit Type="short int" Name="Soldier List 22" key="true"/>
+	<edit Type="short int" Name="Soldier List 23" key="true"/>
+	<edit Type="short int" Name="Soldier List 24" key="true"/>
+	<edit Type="short int" Name="Soldier List 25" key="true"/>
+	<edit Type="short int" Name="Soldier List 26" key="true"/>
+	<edit Type="short int" Name="Soldier List 27" key="true"/>
+	<edit Type="short int" Name="Soldier Type 0" key="true"/>
+	<edit Type="short int" Name="Soldier Type 1" key="true"/>
+	<edit Type="short int" Name="Soldier Type 2" key="true"/>
+	<edit Type="short int" Name="Soldier Type 3" key="true"/>
+	<edit Type="short int" Name="Soldier Type 4" key="true"/>
+	<edit Type="short int" Name="Soldier Type 5" key="true"/>
+	<edit Type="short int" Name="Soldier Type 6" key="true"/>
+	<edit Type="short int" Name="Soldier Type 7" key="true"/>
+	<edit Type="short int" Name="Soldier Type 8" key="true"/>
+	<edit Type="short int" Name="Soldier Type 9" key="true"/>
+	<edit Type="short int" Name="Soldier Type 10" key="true"/>
+	<edit Type="short int" Name="Soldier Type 11" key="true"/>
+	<edit Type="short int" Name="Soldier Type 12" key="true"/>
+	<edit Type="short int" Name="Soldier Type 13" key="true"/>
+	<edit Type="short int" Name="Soldier Type 14" key="true"/>
+	<edit Type="short int" Name="Soldier Type 15" key="true"/>
+	<edit Type="short int" Name="Soldier Type 16" key="true"/>
+	<edit Type="short int" Name="Soldier Type 17" key="true"/>
+	<edit Type="short int" Name="Soldier Type 18" key="true"/>
+	<edit Type="short int" Name="Soldier Type 19" key="true"/>
+	<edit Type="short int" Name="Soldier Type 20" key="true"/>
+	<edit Type="short int" Name="Soldier Type 21" key="true"/>
+	<edit Type="short int" Name="Soldier Type 22" key="true"/>
+	<edit Type="short int" Name="Soldier Type 23" key="true"/>
+	<edit Type="short int" Name="Soldier Type 24" key="true"/>
+	<edit Type="short int" Name="Soldier Type 25" key="true"/>
+	<edit Type="short int" Name="Soldier Type 26" key="true"/>
+	<edit Type="short int" Name="Soldier Type 27" key="true"/>
+	<edit Type="short int" Name="Team Size" key="true"/>
+	<edit Type="short int" Name="Vehicle Class" key="true"/>
+	<edit Type="bool" Name="Can Clear Mine Fields" key="true"/>
+	<edit Type="short int" Name="Ammo Count" key="true"/>
+</AITeamsDatabase>
+</root>

@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<CEffect version="2000" 
+	numconstants="2"
+	numtextures="0"
+	numrenderstates="0"
+	numbones="0"
+	numflags="0">
+	<ShaderVariable shadertype="vertexshader" type="Function" name="ZMinMax" register="19" x="0.0" y="8000.0" z="0.0" w="1.0" ></ShaderVariable>
+	<ShaderVariable shadertype="pixelshader" type="Function" name="FogColor" register="24" x="1.0" y="1.0" z="1.0" w="1.0" ></ShaderVariable>	
+</CEffect>

@@ -1,0 +1,24 @@
+<MATERIAL version="2000" effectname="Shaders/cal3deffect.efx"  
+	numconstants="0"
+	numtextures="2"
+	numrenderstates="1"
+	numbones="0"
+	numflags="2">
+	<Texture pass="0" stage="0" file="A.I.M_Henchman_diffuse.dds" numtexturestates="5">
+		<TextureStageState mode="mipfilter" value="point" ></TextureStageState>
+		<TextureStageState mode="minfilter" value="bilinear" ></TextureStageState>
+		<TextureStageState mode="magfilter" value="bilinear" ></TextureStageState>
+	    <TextureStageState mode="vmode" value="clamp" />
+        <TextureStageState mode="umode" value="clamp" />
+	</Texture>
+	<Texture pass="0" stage="1" file="A.I.M_Henchman_nrml.dds" numtexturestates="5">
+		<TextureStageState mode="mipfilter" value="point" ></TextureStageState>
+		<TextureStageState mode="minfilter" value="bilinear" ></TextureStageState>
+		<TextureStageState mode="magfilter" value="bilinear" ></TextureStageState>
+	    <TextureStageState mode="vmode" value="clamp" />
+        <TextureStageState mode="umode" value="clamp" />
+	</Texture>	
+    <RenderState mode="alphablend" value="false" />	
+	<Flag flag="SHADOW_RECEIVE"/>
+	<Flag flag="SHADOW_CAST"/>	
+</MATERIAL>

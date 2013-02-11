@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Flack Squad", "FlackSquad.vcproj", "{34E91835-8DB8-474B-A795-C322823C7123}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
+	ProjectSection(ProjectDependencies) = postProject
+		{5E511530-25D4-4F57-95D3-192D58E7AB44} = {5E511530-25D4-4F57-95D3-192D58E7AB44}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Flack Squad DLL", "FlackSquadDLL\FlackSquadDLL.vcproj", "{5E511530-25D4-4F57-95D3-192D58E7AB44}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SourceCodeControl) = preSolution
+		SccNumberOfProjects = 3
+		SccProjectName0 = Perforce\u0020Project
+		SccLocalPath0 = .
+		SccProvider0 = MSSCCI:Perforce\u0020SCM
+		CanCheckoutShared = true
+		SccProjectUniqueName1 = FlackSquad.vcproj
+		SccLocalPath1 = .
+		CanCheckoutShared = true
+		SccProjectUniqueName2 = FlackSquadDLL\\FlackSquadDLL.vcproj
+		SccLocalPath2 = FlackSquadDLL
+		CanCheckoutShared = true
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Profile|Win32 = Profile|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{34E91835-8DB8-474B-A795-C322823C7123}.Debug|Win32.ActiveCfg = Debug|Win32
+		{34E91835-8DB8-474B-A795-C322823C7123}.Debug|Win32.Build.0 = Debug|Win32
+		{34E91835-8DB8-474B-A795-C322823C7123}.Profile|Win32.ActiveCfg = Profile|Win32
+		{34E91835-8DB8-474B-A795-C322823C7123}.Profile|Win32.Build.0 = Profile|Win32
+		{34E91835-8DB8-474B-A795-C322823C7123}.Release|Win32.ActiveCfg = Release|Win32
+		{34E91835-8DB8-474B-A795-C322823C7123}.Release|Win32.Build.0 = Release|Win32
+		{5E511530-25D4-4F57-95D3-192D58E7AB44}.Debug|Win32.ActiveCfg = Debug|Win32
+		{5E511530-25D4-4F57-95D3-192D58E7AB44}.Debug|Win32.Build.0 = Debug|Win32
+		{5E511530-25D4-4F57-95D3-192D58E7AB44}.Profile|Win32.ActiveCfg = Profile|Win32
+		{5E511530-25D4-4F57-95D3-192D58E7AB44}.Profile|Win32.Build.0 = Profile|Win32
+		{5E511530-25D4-4F57-95D3-192D58E7AB44}.Release|Win32.ActiveCfg = Release|Win32
+		{5E511530-25D4-4F57-95D3-192D58E7AB44}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

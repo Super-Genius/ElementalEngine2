@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<hmesh numgeom="1">
+	<hnode name="Enemy_Trigger" id="0" pid="-1" type="Cal3D" file="Enemy_Trigger.cfg" rotqx="0.000000" rotqy="0.000000" rotqz="0.000000" rotqw="1.000000" scalex="2.000000" scaley="2.000000" scalez="2.000000" posx="0.000000" posy="-0.000000" posz="0.259836" >
+	</hnode>
+</hmesh>

@@ -1,0 +1,17 @@
+#include "Shaders\HLSLconstants.h"
+#include "Shaders\PSH_CommonFunctions.h"
+
+struct PSIn
+{
+	float2 TexCoord0	: TEXCOORD0; // decal
+	float4 Color		: COLOR0;
+	float4 Fog			: COLOR1;
+};
+
+PS_MRT_OUTPUT main(	PSIn  In, 
+		uniform sampler2D DecalTex : register(s0)
+	)
+{
+	float4 decalColor = tex2D(DecalTex, In.TexCoord0);
+	return MakeMRTOutput( decalColor * In.Color, In.Fog.x );
+}

@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<CShaderPath Version="1" API="DX9" ShaderVersion="3.0" numeffects="1" effectname1="shaders/AlphaBlend_EnvMap.efx" numentries="6" >
+
+	<ShaderEntry type="vertexshader" numflags="2" flag1="SHADOW_CAST_OMNI" 
+												  flag2="SHADOW_CAST_HEMI" 
+												  shaderfile="Shaders/Cal_CastShadow_NoSkin.vsh" ShaderDefineFile="" ></ShaderEntry>
+	<ShaderEntry type="pixelshader" numflags="2" flag1="SHADOW_CAST_OMNI" 
+												  flag2="SHADOW_CAST_HEMI" 
+												  shaderfile="Shaders/LPM.psh" ShaderDefineFile="" ></ShaderEntry>
+
+	<ShaderEntry type="vertexshader" numflags="0"
+		shaderfile="Shaders/GlassEffect.vsh" ShaderDefineFile="" ></ShaderEntry>
+	<ShaderEntry type="pixelshader" numflags="0" 
+		shaderfile="Shaders/AlphaBlend_EnvMap.psh" ShaderDefineFile="" ></ShaderEntry>
+
+	<ShaderEntry type="vertexshader" numflags="1"
+		flag1="SHADER_RF_LIGHT" 
+		shaderfile="Shaders/GlassEffect.vsh" ShaderDefineFile="Shaders/ModelShaderDefines.sdx" ></ShaderEntry>
+	<ShaderEntry type="pixelshader" numflags="1" 
+		flag1="SHADER_RF_LIGHT" 
+		shaderfile="Shaders/AlphaBlend_EnvMap.psh" ShaderDefineFile="Shaders/ModelShaderDefines.sdx" ></ShaderEntry>
+
+</CShaderPath>

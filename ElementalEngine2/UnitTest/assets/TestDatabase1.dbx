@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<CDefinedDatabase Version="1.0" Name="TestDatabase1" SchemaFile="TestSchema1.fxl" Schema="TestSchema1" NumItems="3">
+	<CDatabaseItem Monster="TestMonster1" Id="100" Health="500">
+	</CDatabaseItem>
+	<CDatabaseItem Monster="TestMonster2" Id="101" Health="400">
+	</CDatabaseItem>
+	<CDatabaseItem Monster="TestMonster3" Id="102" Health="300">
+	</CDatabaseItem>
+</CDefinedDatabase>

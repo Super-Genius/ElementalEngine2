@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<CEffect version="3000" 
+	numconstants="9"
+	numtextures="8"
+	numrenderstates="0"
+	numbones="0"
+	numflags="0"
+	numformats="0">
+	<ShaderVariable shadertype="vertexshader" type="Function" name="FogDistance" register="18" x="0.6705" y="0.7294" z="0.8549" w="6000.0" ></ShaderVariable>	
+	<ShaderVariable shadertype="vertexshader" type="Function" name="ZMinMax" register="19" x="0.0" y="8000.0" z="0.0" w="1.0" ></ShaderVariable>
+	<ShaderVariable shadertype="vertexshader" type="Function" name="EyePos" register="22" x="0.0" y="0.0" z="0.0" w="1.0" ></ShaderVariable>
+	<ShaderVariable shadertype="vertexshader" type="Constant" name="Params" register="23" x="0.0" y="0.0" z="0.0" w="0.0" ></ShaderVariable>
+	<ShaderVariable shadertype="pixelshader" type="Constant" name="BaseScales" register="20" x="1.0" y="1.0" z="1.0" w="1.0" ></ShaderVariable>
+	<ShaderVariable shadertype="pixelshader" type="Constant" name="LayerScales" register="21" x="1.0" y="1.0" z="1.0" w="1.0" ></ShaderVariable>
+	<ShaderVariable shadertype="pixelshader" type="Constant" name="MaskModifiers" register="22" x="0.0" y="0.0" z="0.0" w="0.0" ></ShaderVariable>
+	<ShaderVariable shadertype="pixelshader" type="Constant" name="SpecularMultiplier" register="23" x="1.0" y="6.0" z="0.0" w="0.0" ></ShaderVariable>
+	<ShaderVariable shadertype="pixelshader" type="Function" name="FogColor" register="24" x="0.6705" y="0.7294" z="0.8549" w="6000.0" ></ShaderVariable>	
+	<Texture tag="Base" pass="0" stage="0" file="none" numtexturestates="5" >
+		<TextureStageState mode="mipfilter" value="point" ></TextureStageState>
+		<TextureStageState mode="minfilter" value="bilinear" ></TextureStageState>
+		<TextureStageState mode="magfilter" value="bilinear" ></TextureStageState>
+		<TextureStageState mode="umode" value="wrap" ></TextureStageState>
+		<TextureStageState mode="vmode" value="wrap" ></TextureStageState>
+	</Texture>
+	<Texture tag="Mask0" pass="0" stage="1" file="none" numtexturestates="5" >
+		<TextureStageState mode="mipfilter" value="point" ></TextureStageState>
+		<TextureStageState mode="minfilter" value="bilinear" ></TextureStageState>
+		<TextureStageState mode="magfilter" value="bilinear" ></TextureStageState>
+		<TextureStageState mode="umode" value="clamp" ></TextureStageState>
+		<TextureStageState mode="vmode" value="clamp" ></TextureStageState>
+	</Texture>
+	<Texture tag="Mask1" pass="0" stage="2" file="none" numtexturestates="5" >
+		<TextureStageState mode="mipfilter" value="point" ></TextureStageState>
+		<TextureStageState mode="minfilter" value="bilinear" ></TextureStageState>
+		<TextureStageState mode="magfilter" value="bilinear" ></TextureStageState>
+		<TextureStageState mode="umode" value="wrap" ></TextureStageState>
+		<TextureStageState mode="vmode" value="wrap" ></TextureStageState>
+	</Texture>
+	<Texture tag="Mask2" pass="0" stage="3" file="none" numtexturestates="5" >
+		<TextureStageState mode="mipfilter" value="point" ></TextureStageState>
+		<TextureStageState mode="minfilter" value="bilinear" ></TextureStageState>
+		<TextureStageState mode="magfilter" value="bilinear" ></TextureStageState>
+		<TextureStageState mode="umode" value="wrap" ></TextureStageState>
+		<TextureStageState mode="vmode" value="wrap" ></TextureStageState>
+	</Texture>
+	<Texture tag="Mask3" pass="0" stage="4" file="none" numtexturestates="5" >
+		<TextureStageState mode="mipfilter" value="point" ></TextureStageState>
+		<TextureStageState mode="minfilter" value="bilinear" ></TextureStageState>
+		<TextureStageState mode="magfilter" value="bilinear" ></TextureStageState>
+		<TextureStageState mode="umode" value="wrap" ></TextureStageState>
+		<TextureStageState mode="vmode" value="wrap" ></TextureStageState>
+	</Texture>
+	<Texture tag="Mask4" pass="0" stage="5" file="none" numtexturestates="5" >
+		<TextureStageState mode="mipfilter" value="point" ></TextureStageState>
+		<TextureStageState mode="minfilter" value="bilinear" ></TextureStageState>
+		<TextureStageState mode="magfilter" value="bilinear" ></TextureStageState>
+		<TextureStageState mode="umode" value="wrap" ></TextureStageState>
+		<TextureStageState mode="vmode" value="wrap" ></TextureStageState>
+	</Texture>
+	<Texture tag="LightMap" pass="0" stage="6" file="none" numtexturestates="5" >
+		<TextureStageState mode="mipfilter" value="point" ></TextureStageState>
+		<TextureStageState mode="minfilter" value="bilinear" ></TextureStageState>
+		<TextureStageState mode="magfilter" value="bilinear" ></TextureStageState>
+		<TextureStageState mode="umode" value="clamp" ></TextureStageState>
+		<TextureStageState mode="vmode" value="clamp" ></TextureStageState>
+	</Texture>
+	<Texture tag="ShadowMap" pass="0" stage="7" file="procedural" numtexturestates="0">
+	</Texture>
+</CEffect>

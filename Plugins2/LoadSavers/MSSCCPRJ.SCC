@@ -1,0 +1,5 @@
+SCC = This is a source code control file
+
+[LoadSaver Plugins.sln]
+SCC_Aux_Path = ""
+SCC_Project_Name = Perforce Project

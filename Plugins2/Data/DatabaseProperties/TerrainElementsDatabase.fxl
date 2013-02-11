@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root Num="1">
+<TerrainElementsDatabase Name="Terrain Elements Database" Num="51">
+	<edit Type="string" Name="TerrainType" key="true"/>
+	<edit Type="unsigned short int" Name="Height" key="false"/>
+	<edit Type="long int" Name="Cover Prone" key="false"/>
+	<edit Type="long int" Name="Cover Low" key="false"/>
+	<edit Type="long int" Name="Cover Medium" key="false"/>
+	<edit Type="long int" Name="Cover High" key="false"/>
+	<edit Type="long int" Name="Protection Prone" key="false"/>
+	<edit Type="long int" Name="Protection Low" key="false"/>
+	<edit Type="long int" Name="Protection Medium" key="false"/>
+	<edit Type="long int" Name="Protection High" key="false"/>
+	<edit Type="long int" Name="Hinderance Prone" key="false"/>
+	<edit Type="long int" Name="Hinderance Low" key="false"/>
+	<edit Type="long int" Name="Hinderance Medium" key="false"/>
+	<edit Type="long int" Name="Hinderance High" key="false"/>
+	<edit Type="long int" Name="Top Protection" key="false"/>
+	<edit Type="short int" Name="In Elem Prot Flag" key="false"/>
+	<edit Type="long int" Name="HE Effect" key="false"/>
+	<edit Type="long int" Name="Soldier Move Low" key="false"/>
+	<edit Type="long int" Name="Soldier Move Med" key="false"/>
+	<edit Type="long int" Name="Soldier Move High" key="false"/>
+	<edit Type="long int" Name="Vehicle Move Pushed" key="false"/>
+	<edit Type="long int" Name="Vehicle Move Truck" key="false"/>
+	<edit Type="long int" Name="Vehicle Move Arm Car" key="false"/>
+	<edit Type="long int" Name="Vehicle Move Halftrack" key="false"/>
+	<edit Type="long int" Name="Vehicle Move Tracked" key="false"/>
+	<edit Type="long int" Name="Bog Chance Out of 128" key="false"/>
+	<edit Type="long int" Name="Imobolize Chance Out of 128" key="false"/>
+	<edit Type="bool" Name="Block LOS" key="false"/>
+	<edit Type="bool" Name="Block All LOS" key="false"/>
+	<edit Type="bool" Name="Is Wall" key="false"/>
+	<edit Type="bool" Name="Is Building" key="false"/>
+	<edit Type="bool" Name="Is Sunken" key="false"/>
+	<edit Type="bool" Name="Is Crushable" key="false"/>
+	<edit Type="bool" Name="Is Covered" key="false"/>
+	<edit Type="bool" Name="Is Bridge" key="false"/>
+	<edit Type="bool" Name="Is Snow" key="false"/>
+	<edit Type="bool" Name="Is Interior" key="false"/>
+	<edit Type="bool" Name="Is Road" key="false"/>
+	<edit Type="bool" Name="Is Minefield" key="false"/>
+	<edit Type="bool" Name="Is Placeable Foxhole" key="false"/>
+	<edit Type="bool" Name="Is Placeable Gun Pit" key="false"/>
+	<edit Type="bool" Name="Can Place Fort" key="false"/>
+	<edit Type="bool" Name="Is Old Foxhole" key="false"/>
+	<edit Type="bool" Name="Is Old Gun Pit" key="false"/>
+	<edit Type="short int" Name="How Long Flammable" key="false"/>
+	<edit Type="short int" Name="Explode Effect" key="false"/>
+	<edit Type="short int" Name="Level" key="false"/>
+	<edit Type="short int" Name="Rubble To" key="false"/>
+	<edit Type="short int" Name="Crush To" key="false"/>
+	<edit Type="short int" Name="Burn To" key="false"/>
+	<edit Type="short int" Name="Tree Type" key="false"/>
+</TerrainElementsDatabase>
+</root>

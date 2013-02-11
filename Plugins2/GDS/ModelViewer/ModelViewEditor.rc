@@ -1,0 +1,336 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\ExampleEditor.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "Comments", "Author: Kenneth Hurley"
+            VALUE "CompanyName", "Signature Devices, Inc."
+            VALUE "FileDescription", "ModelViewEditor DLL"
+            VALUE "FileVersion", "1, 0, 0, 1"
+            VALUE "InternalName", "ModelViewEditor"
+            VALUE "LegalCopyright", "Copyright (C) Signature Devices, Inc 2002"
+            VALUE "OriginalFilename", "ModelViewEditor.DLL"
+            VALUE "ProductName", "ModelViewEditor Dynamic Link Library"
+            VALUE "ProductVersion", "1, 0, 0, 1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MODELVIEWTYPE       ICON                    "res\\3d_objects_tab_24.ico"
+IDI_RESETLOOKAT         ICON                    "res\\reset_look_at_offset_reset_rotations_16.ico"
+IDI_ZOOMEXTENTS         ICON                    "res\\zoom_extents_24.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MODELVIEWTYPE MENU 
+BEGIN
+    POPUP "E&xample"
+    BEGIN
+        MENUITEM "Test Menu &1\tCtrl+Alt+1",    ID_EXAMPLE_TEST1
+        MENUITEM "Test Menu &2\tCtrl+Alt+2",    ID_EXAMPLE_TEST2
+        MENUITEM SEPARATOR
+        MENUITEM "Test Menu &3\tCtrl+Alt+3",    ID_EXAMPLE_TEST3
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_MODELVIEW_TB DIALOGEX 0, 0, 690, 52
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    PUSHBUTTON      "Zoom Extents",IDC_MODELVIEW_TB_BUTTON_ZOOMEXTENTS,5,13,
+                    24,24,BS_ICON
+END
+
+IDD_MODELVIEWDLG DIALOGEX 0, 0, 210, 176
+STYLE DS_SETFONT | WS_CHILD | WS_VISIBLE
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    LTEXT           "Animations:",IDC_STATIC,7,56,38,8
+    COMBOBOX        IDC_MODELVIEW_TB_COMBO_ANIMSELECT,7,66,150,217,
+                    CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Play Sel.",IDC_MODELVIEW_TB_BUTTON_ANIMPLAY,159,66,42,
+                    14
+    PUSHBUTTON      "Play Sequence",IDC_MODELVIEW_TB_BUTTON_PLAYSEQUENCE,7,
+                    156,77,14
+    PUSHBUTTON      "Clear",IDC_MODELVIEW_TB_BUTTON_CLEARANIMATIONLIST,89,85,
+                    39,14
+    PUSHBUTTON      "Add",IDC_MODELVIEW_TB_BUTTON_ADDANIMATION,7,85,39,14
+    PUSHBUTTON      "Remove",IDC_MODELVIEW_TB_BUTTON_REMOVEANIM,49,85,39,14
+    GROUPBOX        "LookAt Offset",IDC_STATIC,0,0,191,25
+    LTEXT           "XYZ:",IDC_STATIC,5,11,17,10
+    EDITTEXT        IDC_MODELVIEW_TB_EDIT_LOOKOFFSETX,27,8,43,12,
+                    ES_AUTOHSCROLL
+    EDITTEXT        IDC_MODELVIEW_TB_EDIT_LOOKOFFSETY,75,8,43,12,
+                    ES_AUTOHSCROLL
+    EDITTEXT        IDC_MODELVIEW_TB_EDIT_LOOKOFFSETZ,123,8,43,12,
+                    ES_AUTOHSCROLL
+    PUSHBUTTON      "Reset",IDC_MODELVIEW_TB_BUTTON_RESET_LOOKAT,170,7,16,16,
+                    BS_ICON
+    GROUPBOX        "Rotation",IDC_STATIC,0,24,191,25
+    LTEXT           "PYR:",IDC_STATIC,5,36,17,10
+    EDITTEXT        IDC_MODELVIEW_TB_EDIT_ROTATIONX,27,33,43,12,
+                    ES_AUTOHSCROLL
+    EDITTEXT        IDC_MODELVIEW_TB_EDIT_ROTATIONY,75,33,43,12,
+                    ES_AUTOHSCROLL
+    EDITTEXT        IDC_MODELVIEW_TB_EDIT_ROTATIONZ,123,33,43,12,
+                    ES_AUTOHSCROLL
+    PUSHBUTTON      "Reset",IDC_MODELVIEW_TB_BUTTON_RESET_ROTATION,170,31,16,
+                    16,BS_ICON
+    LISTBOX         IDC_MODELVIEW_TB_LIST_ANIMATIONS,7,101,196,51,
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_MODELVIEW_TOOL_PALETTE DIALOGEX 0, 0, 186, 95
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Dialog"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MODELVIEWTYPE ACCELERATORS 
+BEGIN
+    "1",            ID_EXAMPLE_TEST1,       VIRTKEY, CONTROL, ALT, NOINVERT
+    "2",            ID_EXAMPLE_TEST2,       VIRTKEY, CONTROL, ALT, NOINVERT
+    "3",            ID_EXAMPLE_TEST3,       VIRTKEY, CONTROL, ALT, NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDR_EXAMPLE_TOOL_PALETTE TOOLBAR  16, 16
+BEGIN
+    BUTTON      ID_3D_BUTTON
+    BUTTON      ID_TEST_PAL_BUTTON_2
+    BUTTON      ID_TEST_PAL_BUTTON_3
+    BUTTON      ID_EXAMPLE_PAL_BUTTON_4
+END
+
+IDR_MODELVIEWTYPE TOOLBAR  16, 16
+BEGIN
+    BUTTON      ID_EXAMPLE_TEST1
+    BUTTON      ID_EXAMPLE_TEST2
+    BUTTON      ID_EXAMPLE_TEST3
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDR_EXAMPLE_TOOL_PALETTE BITMAP                  "res\\toolbar1.bmp"
+IDB_EXAMPLE_TOOL_PAL    BITMAP                  "res\\icons.bmp"
+IDR_MODELVIEWTYPE       BITMAP                  "res\\toolbar.bmp"
+IDB_TOOLBAR             BITMAP                  "res\\toolbarh.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_MODELVIEW_TB, DIALOG
+    BEGIN
+        RIGHTMARGIN, 559
+    END
+
+    IDD_MODELVIEWDLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 200
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 169
+    END
+
+    IDD_MODELVIEW_TOOL_PALETTE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 88
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDR_MODELVIEWTYPE       "\nExample\nExample\n\n\nExample.Document\nExample Document"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_RESOURCE_NAME       "Models"
+    IDS_PLAY_SELECTED       "Play Selected"
+    IDS_PLAY_LIST           "Play List Animations"
+    IDS_STOP_ANIMATION      "Stop Animation"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_EXAMPLE_TEST1        "Example testing menu\nTest Menu "
+    ID_EXAMPLE_TEST3        "Example testing menu\nTest Menu 3"
+    ID_EXAMPLE_TEST2        "Example testing menu\nTest Menu 2"
+    ID_TEST_PAL_BUTTON_3    "Test Palette Button #3\nTest #3"
+    ID_TEST_PAL_BUTTON_2    "Test Palette Button #2\nTest #2"
+    ID_3D_BUTTON            "Test Button #1\nTest 3d Button"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_EXAMPLE_PAL_BUTTON_4 "Test Palette Button #3\nTest #3"
+END
+
+STRINGTABLE 
+BEGIN
+    IDC_MODELVIEW_TB_BUTTON_RESET_ROTATION 
+                            "Reset Rotation\nResets the look at rotation"
+    IDC_MODELVIEW_TB_BUTTON_RESET_LOOKAT 
+                            "Reset Position\nResets the look at position"
+    IDC_MODELVIEW_TB_BUTTON_ZOOMEXTENTS 
+                            "Zoom Extents\nZooms to frame the model in the window"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif //_WIN32
+#include "res\ExampleEditor.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

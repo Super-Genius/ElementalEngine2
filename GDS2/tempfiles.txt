@@ -1,0 +1,1 @@
+*.obj,*.ilk,*.pdb,*.ncb,*.opt,*.bsc,*.pch,*.sbr,*.idb,*.stt,*.plg

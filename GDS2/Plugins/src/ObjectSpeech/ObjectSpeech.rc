@@ -1,0 +1,229 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\ObjectSpeech.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "Comments", "Author: Kenneth Hurley"
+            VALUE "CompanyName", "Signature Devices, Inc."
+            VALUE "FileDescription", "ObjectSpeech DLL"
+            VALUE "FileVersion", "1, 0, 0, 1"
+            VALUE "InternalName", "ObjectSpeech"
+            VALUE "LegalCopyright", "Copyright (C) Signature Devices, Inc 2002"
+            VALUE "OriginalFilename", "ObjectSpeech.DLL"
+            VALUE "ProductName", "ObjectSpeech Dynamic Link Library"
+            VALUE "ProductVersion", "1, 0, 0, 1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_SpeechTYPE          ICON                    "res\\idr_exam.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_SpeechTYPE MENU 
+BEGIN
+    POPUP "E&xample"
+    BEGIN
+        MENUITEM "Test Menu &1\tCtrl+Alt+1",    ID_Speech_TEST1
+        MENUITEM "Test Menu &2\tCtrl+Alt+2",    ID_Speech_TEST2
+        MENUITEM SEPARATOR
+        MENUITEM "Test Menu &3\tCtrl+Alt+3",    ID_Speech_TEST3
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_Speech_TOOL_PALETTE DIALOGEX 0, 0, 44, 41
+STYLE DS_SETFONT | WS_CHILD | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_TOOLWINDOW
+CAPTION "Speech Tools"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    PUSHBUTTON      "Tool1",IDC_TOOL1,5,4,16,16,BS_BITMAP
+    PUSHBUTTON      "Tool2",IDC_TOOL2,24,4,16,16,BS_BITMAP
+    PUSHBUTTON      "Tool3",IDC_TOOL3,5,22,16,16,BS_BITMAP
+    PUSHBUTTON      "Tool4",IDC_TOOL4,24,22,16,16,BS_BITMAP
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_SpeechTYPE ACCELERATORS 
+BEGIN
+    "1",            ID_Speech_TEST1,        VIRTKEY, CONTROL, ALT, NOINVERT
+    "2",            ID_Speech_TEST2,        VIRTKEY, CONTROL, ALT, NOINVERT
+    "3",            ID_Speech_TEST3,        VIRTKEY, CONTROL, ALT, NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDR_Speech_TOOL_PALETTE TOOLBAR  16, 16
+BEGIN
+    BUTTON      ID_3D_BUTTON
+    BUTTON      ID_TEST_PAL_BUTTON_2
+    BUTTON      ID_TEST_PAL_BUTTON_3
+    BUTTON      ID_Speech_PAL_BUTTON_4
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDR_Speech_TOOL_PALETTE BITMAP                  "res\\toolbar1.bmp"
+IDB_Speech_TOOL_PAL     BITMAP                  "res\\icons.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDR_SpeechTYPE          "\nSpeech\nSpeech\n\n\nSpeech.Document\nSpeech Document"
+    IDS_RESOURCE_NAME       "Speechs"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_Speech_TEST1         "Speech testing menu\nTest Menu "
+    ID_Speech_TEST3         "Speech testing menu\nTest Menu 3"
+    ID_Speech_TEST2         "Speech testing menu\nTest Menu 2"
+    ID_TEST_PAL_BUTTON_3    "Test Palette Button #3\nTest #3"
+    ID_TEST_PAL_BUTTON_2    "Test Palette Button #2\nTest #2"
+    ID_3D_BUTTON            "Test Button #1\nTest 3d Button"
+    ID_Speech_PAL_BUTTON_4  "Test Palette Button #3\nTest #3"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif //_WIN32
+#include "res\ObjectSpeech.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

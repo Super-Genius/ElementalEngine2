@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<CSpawner Name="World" vers="2.5">
+	<CEntity Name="OceanWater" EntityTypes="Water\OceanWater.sxl" PositionX="0" PositionY="0" PositionZ="0" RotationX="0" RotationY="0" RotationZ="0" ScalingX="1" ScalingY="1" ScalingZ="1">
+		<COceanRenderObject Name="OceanWater_RO" FoamTexture="Textures/Water/FoamNV40.dds" EnvMapTexture="Models/Water/cubemap_SkyTest.dds" DiffuseColorX="0.03" DiffuseColorY="0.15" DiffuseColorZ="0.1275" AmbientValue="0.15" SunDirX="0.9" SunDirY="-0.2" SunDirZ="0.1" ClipScale="1.15" ClipOffset="1.5" TextureScale="1.0" Windy="0.5">
+		</COceanRenderObject>
+	</CEntity>
+</CSpawner>

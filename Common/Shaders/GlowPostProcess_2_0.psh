@@ -1,0 +1,50 @@
+#include "Shaders\HLSLconstants.h"
+#include "Shaders\PSH_CommonFunctions.h"
+
+struct v2f
+{
+	float4 Pos				: POSITION;
+	float4 TexCoords[4]		: TEXCOORD0;
+	float4 TexCoordCenter	: COLOR1;
+	float4 Weight			: COLOR0;
+};
+
+uniform float4 ZMinMaxWidthHeight	: register(c20);
+
+half4 main(v2f i, 
+	uniform sampler2D FrameTexture : register(s0)
+	) 	: COLOR
+{
+	float2 tu = float2( 1.0 / ZMinMaxWidthHeight.zw );
+
+	float3 vSample = 0.0f;
+	float4 vColor = 0.0f;
+	float2 vSamplePosition;
+
+	// Gaussian 3x3
+	float4 frameColor = tex2D(FrameTexture, i.TexCoordCenter.xy);
+	float testGlow = tex2D(FrameTexture, i.TexCoordCenter.xy).a;
+	if (testGlow > 0.0)
+	{
+		const float mipLevel = 2.0;
+		for(int iSample = 0; iSample < 4; iSample++)
+		{
+			vSamplePosition = i.TexCoordCenter + i.TexCoords[iSample].xy * tu;
+			vColor = tex2D(FrameTexture, vSamplePosition);
+//			vSample += i.Weight.x * vColor.rgb;
+			vSample += i.Weight.x * vColor.rgb*vColor.a;
+		}
+		for(int iSample = 0; iSample < 4; iSample++)
+		{
+			vSamplePosition = i.TexCoordCenter + i.TexCoords[iSample].zw * tu;
+			vColor = tex2D(FrameTexture, vSamplePosition);
+//			vSample += i.Weight.x * vColor.rgb;
+			vSample += i.Weight.x * vColor.rgb*vColor.a;
+		}
+		return float4(frameColor.rgb + vSample, 1.0);
+	}
+	else
+	{
+		return float4(frameColor.rgb, 1.0);
+	}
+}

@@ -1,0 +1,28 @@
+Open Source License for Elemental Engine 2 (PC version)
+
+Copyright (c) 2002-2008, Signature Devices, Inc. All rights reserved.
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+
+    * Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+    * Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+    * Neither the name of the Signature Devices, Inc. nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+Additional Information 
+
+Phatyaffle.com, Signature Devices, Inc. and Graffiti Entertainment, Inc. (also referred to as the "Licensee") is offering an “Open Source” gaming engine for developers of video games. The License is a liberal open source BSD style license. We only request, but do not demand, that the developer use our services. These services are really benefits to both the developer and Graffiti Entertainment, Inc/Phatyaffle.com. We hope the developer sees the benefits of the services which are as follows:
+
+    * Multiplayer Lobby, Leaderboards, High Scores, other statistics through the Phatyaffle server using built-in MySQL databases for each developer.
+    * In-game advertising system that splits revenues with the developer on a 50/50 basis. Phatyaffle.com will seek out advertisers and help integrate the advertisers into the game.
+    * Graffiti Entertainment would like first right of refusal to publish your games on console platforms including XBOX 360, Nintendo Wii, Nintendo DS, Apple iPhone (and other mobile devices), Sony Playstation 3, Sony Playstation 2, Sony Playstation Portable, and other consoles.
+          o The Elemental Engine 2 has been ported to consoles for this very purpose.  The engine allows for much quicker development time, in porting games to consoles such as XBOX 360, Wii, DS, PSP, PS3, PS2 & iPhones
+    * Graffiti Entertainment is a licensed publisher for many console platforms and this gives the Independent (“Indy”) developer a great opportunity to get their products on consoles platforms.
+    * Elemental Engine is very portable and has been ported to multiple console platforms, so the porting of your titles is a very quick process.
+    * Any new code changes or enhancements should be given back to the community.
+    * Participate in bug tracking and fixing bugs in the system.
+    * Place the finished game on Phatyaffle.com in the shopping section.  We split the revenue with you with the developer getting 70% and phatyaffle.com getting 30%
+
+Elemental Engine 2 Other Libraries
+
+Elemental Engine 2 uses several other open source 3rd Party libraries. These libraries have been carefully chosen to allow Elemental Engine 2 to have it's own license structure. The libraries do not include any GPL licenses, but only LGPL, MIT, BSD or similar licenses that allow for commercial products without releasing the source code. We do however release the complete source code for the Elemental Engine 2 for your benefit.

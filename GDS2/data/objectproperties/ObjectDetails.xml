@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects>
+	<CEntity Name="Entity"/>
+	<CRenderObject Name="RenderObj" FileNameProperty="FileName" />
+	<CAIObject Name="AIObj" />
+	<CTextureObject Name="TexObj" FileNameProperty="FileName" />
+	<CPhysObject Name="Phys" />
+	<CTerrainSector Name="Terrain" FileNameProperty="HeightMap" />
+	<CLuaScript Name="Lua" FileNameProperty="Filename" />
+	<DNSM Name="DNSM" FileNameProperty="File" />
+	<CDatabase Name="Database" FileNameProperty="FileName" />
+	<CTimeOfDayObject Name="TimeOfDayEffect" />
+	<CSkyboxObject Name="Skybox" FileNameProperty="TexturePath" />
+	<CWeatherRenderObject Name="WeatherEffect" />
+	<CNodeSystem Name="NodeSystem" />
+	<CNode Name="Node" />
+	<CHeightNode Name="HeightNode" />
+	<CNodeConnection Name="NodeConnection" />
+	<Cal3DRenderObject Name="Render Object" FileNameProperty="FileName" />
+	<CHierarchicalModel Name="Hierarchical Model" FileNameProperty="FileName" />
+	<CQHStateObject Name="State Object" FileNameProperty="FileName" />
+	<CQHState LabelProperty="name" />
+	<CQHDerivedState LabelProperty="name" />
+	<CQHStateMachineEvent LabelProperty="name"/>
+	<CQHStateMachineActionHandler LabelProperty="name"/>
+	<CQHStateMachineTransition LabelProperty="name"/>
+</objects>

@@ -1,0 +1,93 @@
+<?xml version="1.0"?>
+<Database Schema="" NumItems="45" RowSize="3">
+	<DBItem Type="string" Value="BF109E">
+	</DBItem>
+	<DBItem Type="string" Value="strings\english\bf109e_data.txt">
+	</DBItem>
+	<DBItem Type="string" Value="textures\gui\enemy_targets\bf_109.dds">
+	</DBItem>
+	<DBItem Type="string" Value="HE111">
+	</DBItem>
+	<DBItem Type="string" Value="strings\english\he111_data.txt">
+	</DBItem>
+	<DBItem Type="string" Value="textures\gui\enemy_targets\he_111.dds">
+	</DBItem>
+	<DBItem Type="string" Value="Z31">
+	</DBItem>
+	<DBItem Type="string" Value="strings\english\z31_data.txt">
+	</DBItem>
+	<DBItem Type="string" Value="textures\gui\enemy_targets\z_class.dds">
+	</DBItem>
+	<DBItem Type="string" Value="TIGER">
+	</DBItem>
+	<DBItem Type="string" Value="strings\english\Tiger_Data.txt">
+	</DBItem>
+	<DBItem Type="string" Value="textures\gui\enemy_targets\tiger2.dds">
+	</DBItem>
+	<DBItem Type="string" Value="PANZER">
+	</DBItem>
+	<DBItem Type="string" Value="strings\english\Panzer_Data.txt">
+	</DBItem>
+	<DBItem Type="string" Value="textures\gui\enemy_targets\panzer.dds">
+	</DBItem>
+	<DBItem Type="string" Value="V1">
+	</DBItem>
+	<DBItem Type="string" Value="strings\english\V1_Data.txt">
+	</DBItem>
+	<DBItem Type="string" Value="textures\gui\enemy_targets\v1_rocket.dds">
+	</DBItem>
+	<DBItem Type="string" Value="V2">
+	</DBItem>
+	<DBItem Type="string" Value="strings\english\V2_Data.txt">
+	</DBItem>
+	<DBItem Type="string" Value="textures\gui\enemy_targets\v2_rocket.dds">
+	</DBItem>
+	<DBItem Type="string" Value="ME262">
+	</DBItem>
+	<DBItem Type="string" Value="strings\english\ME262_Data.txt">
+	</DBItem>
+	<DBItem Type="string" Value="textures\gui\enemy_targets\Me_262.dds">
+	</DBItem>
+	<DBItem Type="string" Value="JU88">
+	</DBItem>
+	<DBItem Type="string" Value="strings\english\Yonkers88_Data.txt">
+	</DBItem>
+	<DBItem Type="string" Value="textures\gui\enemy_targets\Ju_88.dds">
+	</DBItem>
+	<DBItem Type="string" Value="JU87">
+	</DBItem>
+	<DBItem Type="string" Value="strings\english\stuka87_Data.txt">
+	</DBItem>
+	<DBItem Type="string" Value="textures\gui\enemy_targets\Ju_87.dds">
+	</DBItem>
+	<DBItem Type="string" Value="UBOAT">
+	</DBItem>
+	<DBItem Type="string" Value="strings\english\uboat_Data.txt">
+	</DBItem>
+	<DBItem Type="string" Value="textures\gui\enemy_targets\U_Boat.dds">
+	</DBItem>
+	<DBItem Type="string" Value="TCLASS">
+	</DBItem>
+	<DBItem Type="string" Value="strings\english\tclass_Data.txt">
+	</DBItem>
+	<DBItem Type="string" Value="textures\gui\enemy_targets\Torpedo_Boat.dds">
+	</DBItem>
+	<DBItem Type="string" Value="HCLASS">
+	</DBItem>
+	<DBItem Type="string" Value="strings\english\hclass_Data.txt">
+	</DBItem>
+	<DBItem Type="string" Value="textures\gui\enemy_targets\Bismarck.dds">
+	</DBItem>
+	<DBItem Type="string" Value="KUBELWAGEN">
+	</DBItem>
+	<DBItem Type="string" Value="strings\english\kubelwagen_Data.txt">
+	</DBItem>
+	<DBItem Type="string" Value="textures\gui\enemy_targets\kubelwagen.dds">
+	</DBItem>
+	<DBItem Type="string" Value="TRUCK">
+	</DBItem>
+	<DBItem Type="string" Value="strings\english\transporttruck_Data.txt">
+	</DBItem>
+	<DBItem Type="string" Value="textures\gui\enemy_targets\transport_truck.dds">
+	</DBItem>
+</Database>

@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<Effect name="DefaultShader">
+	<Vertexshader name="PostProcessPassThru" language="hlsl" shader="Shaders\postprocess_passthru.vsh" >
+	</Vertexshader>
+	<Pixelshader name="FastPShader" language="hlsl" shader="Shaders\ToneMapping.psh" >
+	</Pixelshader>
+	<Pixelshader name="Blur" language="hlsl" shader="Shaders\Blur.psh" >
+	</Pixelshader>
+	<Shaderpass name="ToneMapping" vertexshaderID="PostProcessPassThru" pixelshaderID="FastPShader">
+		<TextureStage stage="0" name="BaseTexture" filter="bilinear" addressmodeU="clamp" addressmodeV="clamp">			
+		</TextureStage>
+	</Shaderpass>
+	<Shaderpass name="Blur" vertexshaderID="PostProcessPassThru" pixelshaderID="Blur">
+		<TextureStage stage="0" name="BaseTexture" filter="bilinear" addressmodeU="clamp" addressmodeV="clamp">			
+		</TextureStage>
+	</Shaderpass>
+</Effect>

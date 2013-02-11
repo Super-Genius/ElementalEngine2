@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<CDatabaseSchema Version="1.0" Name="TestSchema1" NumItems="3">
+	<CSchemaItem Version="1.0" Name="Monster" Type="string" Class="edit" Default="">
+	</CSchemaItem>
+	<CSchemaItem Version="1.0" Name="Id" Type="short int" Class="key" Default="-1">
+	</CSchemaItem>
+	<CSchemaItem Version="1.0" Name="Health" Type="long int" Class="edit" Default="1000">
+	</CSchemaItem>
+</CDatabaseSchema>

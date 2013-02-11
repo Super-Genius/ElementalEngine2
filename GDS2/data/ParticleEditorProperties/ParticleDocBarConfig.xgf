@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root Num="2">
+
+<CParticleType Name="Brush" Num="8">
+	<edit Type="string" Name="BrushName" BKey="false"/>
+	<check Type="bool" Name="Additive Blend" />
+	<spinner Type="float" Name="Framerate" Min="0" Max="300" Increments="1" DefVal="30.0"/>
+	<spinner Type="float" Name="Tex Framerate" Min="0" Max="300" Increments="1" DefVal="30.0"/>
+	<file Type="string" Name="Texture Filepath" DefFile="basedata\editor\textures\none.tga" defExt="*.tga" filters="Tex Files|*.tex|Jpeg Files|*.jpeg;*.jpg|Targa Files|*.tga|All Texture Files|*.tex;*.jpg;*.jpeg;*.tga|" />
+	<check Type="bool" Name="Looping" />
+	<spinner Type="float" Name="Attach To Emitter" Min="0" Max="9999" Increments="1" DefVal="0"/>
+	<file Type="string" Name="Shader Filepath" DefFile="basedata\editor\shaders\none.shd" defExt="*.tga" filters="Tex Files|*.tex|Jpeg Files|*.jpeg;*.jpg|Targa Files|*.tga|All Texture Files|*.tex;*.jpg;*.jpeg;*.tga|" />
+</CParticleType>
+
+<CParticleEmitter Name="Emitter" Num="1">
+	<edit Type="string" Name="EmitterName" BKey="false"/>
+</CParticleEmitter>
+
+</root>

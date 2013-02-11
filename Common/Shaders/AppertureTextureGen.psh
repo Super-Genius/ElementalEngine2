@@ -1,0 +1,36 @@
+#include "Shaders\HLSLconstants.h"
+
+struct PSIn
+{
+	float2 TexCoord0	: TEXCOORD0;
+};
+
+uniform float4 DirOffset	: register(c20);
+
+float4 main(	PSIn  In, 
+				uniform sampler2D HeightMap : register(s0),
+				uniform sampler2D PrevAccumTarget : register(s1)
+			) : COLOR
+{
+	float4 HeightValue = tex2D(HeightMap, In.TexCoord0);
+	float4 PrevAccumValue = tex2D(PrevAccumTarget, In.TexCoord0);
+	float3 Position = float3( In.TexCoord0, HeightValue.x);
+	Position.z += DirOffset.w;
+
+	float inf = 1.0;
+	for( int i = 0; i < 128; i++ )
+	{
+		Position += DirOffset.xyz;
+		
+		float h = tex2D( HeightMap, Position.xy ).x;
+		
+		if( Position.z < h )
+		{
+			inf = 0.0;
+		}
+	}
+
+	float4 OutColor = PrevAccumValue + saturate(float4( DirOffset.xyz * inf, inf ));
+//	float4 OutColor = float4(0.5, 0.5, 0.5, 1.0);
+	return OutColor;
+}

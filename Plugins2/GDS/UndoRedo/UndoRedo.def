@@ -1,0 +1,6 @@
+; UndoRedo.def : Declares the module parameters for the DLL.
+
+LIBRARY      "UndoRedo"
+
+EXPORTS
+    ; Explicit exports can go here

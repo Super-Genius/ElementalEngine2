@@ -1,0 +1,3056 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<VisualStudioProject
+	ProjectType="Visual C++"
+	Version="8.00"
+	Name="Flack Squad"
+	ProjectGUID="{34E91835-8DB8-474B-A795-C322823C7123}"
+	RootNamespace="FlackSquad"
+	SccProjectName="Perforce Project"
+	SccLocalPath="."
+	SccProvider="MSSCCI:Perforce SCM"
+	Keyword="Win32Proj"
+	>
+	<Platforms>
+		<Platform
+			Name="Win32"
+		/>
+	</Platforms>
+	<ToolFiles>
+	</ToolFiles>
+	<Configurations>
+		<Configuration
+			Name="Debug|Win32"
+			OutputDirectory="..\..\FlackSquad"
+			IntermediateDirectory="$(PlatformName)\$(ConfigurationName)"
+			ConfigurationType="1"
+			InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC71.vsprops"
+			CharacterSet="2"
+			>
+			<Tool
+				Name="VCPreBuildEventTool"
+			/>
+			<Tool
+				Name="VCCustomBuildTool"
+			/>
+			<Tool
+				Name="VCXMLDataGeneratorTool"
+			/>
+			<Tool
+				Name="VCWebServiceProxyGeneratorTool"
+			/>
+			<Tool
+				Name="VCMIDLTool"
+			/>
+			<Tool
+				Name="VCCLCompilerTool"
+				Optimization="0"
+				AdditionalIncludeDirectories="..\ElementalEngine2\SDK\include;..\Plugins2\include;..\Platform"
+				PreprocessorDefinitions="WIN32;_DEBUG;_WINDOWS;_CRT_SECURE_NO_DEPRECATE"
+				MinimalRebuild="true"
+				BasicRuntimeChecks="3"
+				RuntimeLibrary="3"
+				RuntimeTypeInfo="true"
+				UsePrecompiledHeader="1"
+				WarningLevel="3"
+				Detect64BitPortabilityProblems="true"
+				DebugInformationFormat="4"
+			/>
+			<Tool
+				Name="VCManagedResourceCompilerTool"
+			/>
+			<Tool
+				Name="VCResourceCompilerTool"
+			/>
+			<Tool
+				Name="VCPreLinkEventTool"
+			/>
+			<Tool
+				Name="VCLinkerTool"
+				AdditionalDependencies="ElementalEngine.lib EE-SDK.lib"
+				OutputFile="$(OutDir)/FlackSquad.exe"
+				LinkIncremental="2"
+				AdditionalLibraryDirectories="&quot;..\ElementalEngine2\SDK\lib\$(PlatformName)\$(ConfigurationName)&quot;"
+				GenerateDebugInformation="true"
+				ProgramDatabaseFile="$(OutDir)/$(ProjectName).pdb"
+				SubSystem="2"
+				TargetMachine="1"
+			/>
+			<Tool
+				Name="VCALinkTool"
+			/>
+			<Tool
+				Name="VCManifestTool"
+			/>
+			<Tool
+				Name="VCXDCMakeTool"
+			/>
+			<Tool
+				Name="VCBscMakeTool"
+			/>
+			<Tool
+				Name="VCFxCopTool"
+			/>
+			<Tool
+				Name="VCAppVerifierTool"
+			/>
+			<Tool
+				Name="VCWebDeploymentTool"
+			/>
+			<Tool
+				Name="VCPostBuildEventTool"
+				Description="Copying over dependent assets"
+				CommandLine="syncdep.bat"
+			/>
+		</Configuration>
+		<Configuration
+			Name="Release|Win32"
+			OutputDirectory="..\..\FlackSquad"
+			IntermediateDirectory="$(PlatformName)\$(ConfigurationName)"
+			ConfigurationType="1"
+			InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC71.vsprops"
+			CharacterSet="2"
+			>
+			<Tool
+				Name="VCPreBuildEventTool"
+			/>
+			<Tool
+				Name="VCCustomBuildTool"
+			/>
+			<Tool
+				Name="VCXMLDataGeneratorTool"
+			/>
+			<Tool
+				Name="VCWebServiceProxyGeneratorTool"
+			/>
+			<Tool
+				Name="VCMIDLTool"
+			/>
+			<Tool
+				Name="VCCLCompilerTool"
+				AdditionalIncludeDirectories="..\ElementalEngine2\SDK\include;..\Plugins2\include;&quot;..\3rd Party\GlobalVR\ExDev\V4\Zeus\API\inc&quot;;..\Platform"
+				PreprocessorDefinitions="WIN32;NDEBUG;_WINDOWS;_CRT_SECURE_NO_DEPRECATE"
+				RuntimeLibrary="2"
+				RuntimeTypeInfo="true"
+				UsePrecompiledHeader="1"
+				WarningLevel="3"
+				Detect64BitPortabilityProblems="true"
+				DebugInformationFormat="3"
+			/>
+			<Tool
+				Name="VCManagedResourceCompilerTool"
+			/>
+			<Tool
+				Name="VCResourceCompilerTool"
+			/>
+			<Tool
+				Name="VCPreLinkEventTool"
+			/>
+			<Tool
+				Name="VCLinkerTool"
+				AdditionalDependencies="ElementalEngine.lib EE-SDK.lib"
+				OutputFile="$(OutDir)/FlackSquad.exe"
+				LinkIncremental="1"
+				AdditionalLibraryDirectories="&quot;..\ElementalEngine2\SDK\lib\$(PlatformName)\$(ConfigurationName)&quot;"
+				GenerateDebugInformation="true"
+				SubSystem="2"
+				OptimizeReferences="2"
+				EnableCOMDATFolding="2"
+				TargetMachine="1"
+				FixedBaseAddress="1"
+			/>
+			<Tool
+				Name="VCALinkTool"
+			/>
+			<Tool
+				Name="VCManifestTool"
+			/>
+			<Tool
+				Name="VCXDCMakeTool"
+			/>
+			<Tool
+				Name="VCBscMakeTool"
+			/>
+			<Tool
+				Name="VCFxCopTool"
+			/>
+			<Tool
+				Name="VCAppVerifierTool"
+			/>
+			<Tool
+				Name="VCWebDeploymentTool"
+			/>
+			<Tool
+				Name="VCPostBuildEventTool"
+				Description="Copying over dependent assets"
+				CommandLine="syncdep.bat"
+			/>
+		</Configuration>
+		<Configuration
+			Name="Profile|Win32"
+			OutputDirectory="..\..\FlackSquad"
+			IntermediateDirectory="$(PlatformName)\$(ConfigurationName)"
+			ConfigurationType="1"
+			InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC71.vsprops"
+			CharacterSet="2"
+			>
+			<Tool
+				Name="VCPreBuildEventTool"
+			/>
+			<Tool
+				Name="VCCustomBuildTool"
+			/>
+			<Tool
+				Name="VCXMLDataGeneratorTool"
+			/>
+			<Tool
+				Name="VCWebServiceProxyGeneratorTool"
+			/>
+			<Tool
+				Name="VCMIDLTool"
+			/>
+			<Tool
+				Name="VCCLCompilerTool"
+				AdditionalIncludeDirectories="..\ElementalEngine2\SDK\include;..\Plugins2\include;&quot;..\3rd Party\GlobalVR\ExDev\V4\Zeus\API\inc&quot;;..\Platform"
+				PreprocessorDefinitions="WIN32;NDEBUG;_WINDOWS;_CRT_SECURE_NO_DEPRECATE"
+				RuntimeLibrary="2"
+				RuntimeTypeInfo="true"
+				UsePrecompiledHeader="1"
+				WarningLevel="3"
+				Detect64BitPortabilityProblems="true"
+				DebugInformationFormat="3"
+			/>
+			<Tool
+				Name="VCManagedResourceCompilerTool"
+			/>
+			<Tool
+				Name="VCResourceCompilerTool"
+			/>
+			<Tool
+				Name="VCPreLinkEventTool"
+			/>
+			<Tool
+				Name="VCLinkerTool"
+				AdditionalDependencies="ElementalEngine.lib EE-SDK.lib"
+				OutputFile="$(OutDir)/FlackSquadP.exe"
+				LinkIncremental="1"
+				AdditionalLibraryDirectories="&quot;..\ElementalEngine2\SDK\lib\$(PlatformName)\$(ConfigurationName)&quot;;..\Platform"
+				GenerateDebugInformation="true"
+				SubSystem="2"
+				OptimizeReferences="2"
+				EnableCOMDATFolding="2"
+				TargetMachine="1"
+			/>
+			<Tool
+				Name="VCALinkTool"
+			/>
+			<Tool
+				Name="VCManifestTool"
+			/>
+			<Tool
+				Name="VCXDCMakeTool"
+			/>
+			<Tool
+				Name="VCBscMakeTool"
+			/>
+			<Tool
+				Name="VCFxCopTool"
+			/>
+			<Tool
+				Name="VCAppVerifierTool"
+			/>
+			<Tool
+				Name="VCWebDeploymentTool"
+			/>
+			<Tool
+				Name="VCPostBuildEventTool"
+				Description="Copying over dependent assets"
+				CommandLine="syncdep.bat"
+			/>
+		</Configuration>
+	</Configurations>
+	<References>
+	</References>
+	<Files>
+		<Filter
+			Name="Source Files"
+			Filter="cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx"
+			UniqueIdentifier="{4FC737F1-C7A5-4376-A066-2A32D752A2FF}"
+			>
+			<File
+				RelativePath=".\Src\CmdLine.cpp"
+				>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						UsePrecompiledHeader="2"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath=".\Src\FlackSquad.cpp"
+				>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						UsePrecompiledHeader="2"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						UsePrecompiledHeader="2"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Profile|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						UsePrecompiledHeader="2"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath=".\Src\GameComponent.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\Src\stdafx.cpp"
+				>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						UsePrecompiledHeader="1"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						UsePrecompiledHeader="1"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Profile|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						UsePrecompiledHeader="1"
+					/>
+				</FileConfiguration>
+			</File>
+		</Filter>
+		<Filter
+			Name="Header Files"
+			Filter="h;hpp;hxx;hm;inl;inc;xsd"
+			UniqueIdentifier="{93995380-89BD-4b04-88EB-625FBE52EBFB}"
+			>
+			<File
+				RelativePath=".\Src\CmdLine.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Src\FlackSquad.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Src\GameComponent.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Src\res\Resource.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Src\stdafx.h"
+				>
+			</File>
+		</Filter>
+		<Filter
+			Name="Resource Files"
+			Filter="rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx"
+			UniqueIdentifier="{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}"
+			>
+			<File
+				RelativePath=".\Src\res\FlackSquad.ico"
+				>
+			</File>
+			<File
+				RelativePath=".\Src\res\FlackSquad.rc"
+				>
+			</File>
+			<File
+				RelativePath=".\Src\res\small.ico"
+				>
+			</File>
+		</Filter>
+		<Filter
+			Name="Dependencies"
+			>
+			<File
+				RelativePath="..\Plugins2\Bin\Debug\AIObject.dlo"
+				>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying newer $(InputFileName)"
+						CommandLine="copy &quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputName).*&quot; &quot;$(TargetDir)\Plugins\&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputFileName)&quot;"
+						Outputs="&quot;$(TargetDir)Plugins\$(InputFileName)&quot;"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying newer $(InputFileName)"
+						CommandLine="copy &quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputName).*&quot; &quot;$(TargetDir)\Plugins\&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputFileName)&quot;"
+						Outputs="&quot;$(TargetDir)Plugins\$(InputFileName)&quot;"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Profile|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying newer $(InputFileName)"
+						CommandLine="copy &quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputName).*&quot; &quot;$(TargetDir)\Plugins\&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputFileName)&quot;"
+						Outputs="&quot;$(TargetDir)Plugins\$(InputFileName)&quot;"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="..\3rd Party\OpenAL 1.1 SDK\libs\Win32\alut.dll"
+				>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Updating Required DLL $(InputFileName)"
+						CommandLine="copy &quot;..\3rd Party\OpenAL 1.1 SDK\libs\Win32\$(ConfigurationName)\$(InputName).*&quot; &quot;$(TargetDir)&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\3rd Party\OpenAL 1.1 SDK\libs\Win32\$(ConfigurationName)\$(InputFileName)&quot;"
+						Outputs="$(TargetDir)$(InputFileName)"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Updating Required DLL $(InputFileName)"
+						CommandLine="copy &quot;..\3rd Party\OpenAL 1.1 SDK\libs\Win32\$(ConfigurationName)\$(InputName).*&quot; &quot;$(TargetDir)&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\3rd Party\OpenAL 1.1 SDK\libs\Win32\$(ConfigurationName)\$(InputFileName)&quot;"
+						Outputs="$(TargetDir)$(InputFileName)"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Profile|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Updating Required DLL $(InputFileName)"
+						CommandLine="copy &quot;..\3rd Party\OpenAL 1.1 SDK\libs\Win32\release\$(InputName).*&quot; &quot;$(TargetDir)&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\3rd Party\OpenAL 1.1 SDK\libs\Win32\release\$(InputFileName)&quot;"
+						Outputs="$(TargetDir)$(InputFileName)"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="..\3rd Party\Cal3d\bin\debug\cal3d.dll"
+				>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Updating Required DLL $(InputFileName)"
+						CommandLine="copy &quot;..\3rd Party\Cal3d\bin\$(PlatformName)\$(ConfigurationName)\$(InputName).*&quot; &quot;$(TargetDir)&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\3rd Party\Cal3d\bin\$(PlatformName)\$(ConfigurationName)\$(InputFileName)&quot;"
+						Outputs="$(TargetDir)$(InputFileName)"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Updating Required DLL $(InputFileName)"
+						CommandLine="copy &quot;..\3rd Party\Cal3d\bin\$(PlatformName)\$(ConfigurationName)\$(InputName).*&quot; &quot;$(TargetDir)&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\3rd Party\Cal3d\bin\$(PlatformName)\$(ConfigurationName)\$(InputFileName)&quot;"
+						Outputs="$(TargetDir)$(InputFileName)"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Profile|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Updating Required DLL $(InputFileName)"
+						CommandLine="copy &quot;..\3rd Party\Cal3d\bin\$(PlatformName)\Release\$(InputName).*&quot; &quot;$(TargetDir)&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\3rd Party\Cal3d\bin\$(PlatformName)\Release\$(InputFileName)&quot;"
+						Outputs="$(TargetDir)$(InputFileName)"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="..\Plugins2\Bin\Debug\Cal3dLoader.dls"
+				>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying newer $(InputFileName)"
+						CommandLine="copy &quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputName).*&quot; &quot;$(TargetDir)\Plugins\&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputFileName)&quot;"
+						Outputs="&quot;$(TargetDir)Plugins\$(InputFileName)&quot;"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying newer $(InputFileName)"
+						CommandLine="copy &quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputName).*&quot; &quot;$(TargetDir)\Plugins\&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputFileName)&quot;"
+						Outputs="&quot;$(TargetDir)Plugins\$(InputFileName)&quot;"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Profile|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying newer $(InputFileName)"
+						CommandLine="copy &quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputName).*&quot; &quot;$(TargetDir)\Plugins\&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputFileName)&quot;"
+						Outputs="&quot;$(TargetDir)Plugins\$(InputFileName)&quot;"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="..\Plugins2\Bin\Debug\Cal3dModel.dlo"
+				>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying newer $(InputFileName)"
+						CommandLine="copy &quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputName).*&quot; &quot;$(TargetDir)\Plugins\&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputFileName)&quot;"
+						Outputs="&quot;$(TargetDir)Plugins\$(InputFileName)&quot;"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying newer $(InputFileName)"
+						CommandLine="copy &quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputName).*&quot; &quot;$(TargetDir)\Plugins\&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputFileName)&quot;"
+						Outputs="&quot;$(TargetDir)Plugins\$(InputFileName)&quot;"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Profile|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying newer $(InputFileName)"
+						CommandLine="copy &quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputName).*&quot; &quot;$(TargetDir)\Plugins\&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputFileName)&quot;"
+						Outputs="&quot;$(TargetDir)Plugins\$(InputFileName)&quot;"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="..\3rd Party\Microsoft\DirectX SDK\Developer Runtime\x86\d3dx9_32.dll"
+				>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Updating Required DLL $(InputFileName)"
+						CommandLine="copy &quot;..\3rd Party\Microsoft\DirectX SDK\Developer Runtime\x86\$(InputName).*&quot; &quot;$(TargetDir)&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\3rd Party\Microsoft\DirectX SDK\Developer Runtime\x86\$(InputFileName)&quot;"
+						Outputs="$(TargetDir)$(InputFileName)"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Profile|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Updating Required DLL $(InputFileName)"
+						CommandLine="copy &quot;..\3rd Party\Microsoft\DirectX SDK\Developer Runtime\x86\$(InputName).*&quot; &quot;$(TargetDir)&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\3rd Party\Microsoft\DirectX SDK\Developer Runtime\x86\$(InputFileName)&quot;"
+						Outputs="$(TargetDir)$(InputFileName)"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="..\3rd Party\Microsoft\DirectX SDK\Developer Runtime\x86\d3dx9d_32.dll"
+				>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Updating Required DLL $(InputFileName)"
+						CommandLine="copy &quot;..\3rd Party\Microsoft\DirectX SDK\Developer Runtime\x86\$(InputName).*&quot; &quot;$(TargetDir)&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\3rd Party\Microsoft\DirectX SDK\Developer Runtime\x86\$(InputFileName)&quot;"
+						Outputs="$(TargetDir)$(InputFileName)"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description=""
+						CommandLine=""
+						AdditionalDependencies=""
+						Outputs=""
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Profile|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description=""
+						CommandLine=""
+						AdditionalDependencies=""
+						Outputs=""
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="..\Plugins2\Bin\Debug\Database.dlo"
+				>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying newer $(InputFileName)"
+						CommandLine="copy &quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputName).*&quot; &quot;$(TargetDir)\Plugins\&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputFileName)&quot;"
+						Outputs="&quot;$(TargetDir)Plugins\$(InputFileName)&quot;"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying newer $(InputFileName)"
+						CommandLine="copy &quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputName).*&quot; &quot;$(TargetDir)\Plugins\&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputFileName)&quot;"
+						Outputs="&quot;$(TargetDir)Plugins\$(InputFileName)&quot;"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Profile|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying newer $(InputFileName)"
+						CommandLine="copy &quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputName).*&quot; &quot;$(TargetDir)\Plugins\&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputFileName)&quot;"
+						Outputs="&quot;$(TargetDir)Plugins\$(InputFileName)&quot;"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="..\Plugins2\Bin\Debug\DatabaseIO.dls"
+				>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying newer $(InputFileName)"
+						CommandLine="copy &quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputName).*&quot; &quot;$(TargetDir)\Plugins\&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputFileName)&quot;"
+						Outputs="&quot;$(TargetDir)Plugins\$(InputFileName)&quot;"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying newer $(InputFileName)"
+						CommandLine="copy &quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputName).*&quot; &quot;$(TargetDir)\Plugins\&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputFileName)&quot;"
+						Outputs="&quot;$(TargetDir)Plugins\$(InputFileName)&quot;"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Profile|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying newer $(InputFileName)"
+						CommandLine="copy &quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputName).*&quot; &quot;$(TargetDir)\Plugins\&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputFileName)&quot;"
+						Outputs="&quot;$(TargetDir)Plugins\$(InputFileName)&quot;"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="..\Plugins2\Bin\Debug\DefaultMath.dlm"
+				>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying newer $(InputFileName)"
+						CommandLine="copy &quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputName).*&quot; &quot;$(TargetDir)\Plugins\&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputFileName)&quot;"
+						Outputs="&quot;$(TargetDir)Plugins\$(InputFileName)&quot;"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying newer $(InputFileName)"
+						CommandLine="copy &quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputName).*&quot; &quot;$(TargetDir)\Plugins\&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputFileName)&quot;"
+						Outputs="&quot;$(TargetDir)Plugins\$(InputFileName)&quot;"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Profile|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying newer $(InputFileName)"
+						CommandLine="copy &quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputName).*&quot; &quot;$(TargetDir)\Plugins\&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputFileName)&quot;"
+						Outputs="&quot;$(TargetDir)Plugins\$(InputFileName)&quot;"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="..\3rd Party\DevIL\lib\debug\DevIL.dll"
+				>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Updating Required DLL $(InputFileName)"
+						CommandLine="copy &quot;..\3rd Party\DevIL\lib\$(PlatformName)\Dynamic$(ConfigurationName)\$(InputName).*&quot; &quot;$(TargetDir)&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\3rd Party\DevIL\lib\$(PlatformName)\Dynamic$(ConfigurationName)\$(InputFileName)&quot;"
+						Outputs="$(TargetDir)$(InputFileName)"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Updating Required DLL $(InputFileName)"
+						CommandLine="copy &quot;..\3rd Party\DevIL\lib\$(PlatformName)\DynamicRelease\$(InputName).*&quot; &quot;$(TargetDir)&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\3rd Party\DevIL\lib\$(PlatformName)\DynamicRelease\$(InputFileName)&quot;"
+						Outputs="$(TargetDir)$(InputFileName)"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Profile|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Updating Required DLL $(InputFileName)"
+						CommandLine="copy &quot;..\3rd Party\DevIL\lib\$(PlatformName)\DynamicRelease\$(InputName).*&quot; &quot;$(TargetDir)&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\3rd Party\DevIL\lib\$(PlatformName)\DynamicRelease\$(InputFileName)&quot;"
+						Outputs="$(TargetDir)$(InputFileName)"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="..\Plugins2\Bin\Debug\DX9Renderer.dlo"
+				>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying newer $(InputFileName)"
+						CommandLine="copy &quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputName).*&quot; &quot;$(TargetDir)\Plugins\&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputFileName)&quot;"
+						Outputs="&quot;$(TargetDir)Plugins\$(InputFileName)&quot;"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying newer $(InputFileName)"
+						CommandLine="copy &quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputName).*&quot; &quot;$(TargetDir)\Plugins\&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputFileName)&quot;"
+						Outputs="&quot;$(TargetDir)Plugins\$(InputFileName)&quot;"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Profile|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying newer $(InputFileName)"
+						CommandLine="copy &quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputName).*&quot; &quot;$(TargetDir)\Plugins\&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputFileName)&quot;"
+						Outputs="&quot;$(TargetDir)Plugins\$(InputFileName)&quot;"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="..\Plugins2\Bin\Debug\EELuaScript.dlo"
+				>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying newer $(InputFileName)"
+						CommandLine="if NOT exist $(TargetDir)\Plugins\. mkdir &quot;$(TargetDir)\Plugins\&quot;&#x0D;&#x0A;copy &quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputName).*&quot; &quot;$(TargetDir)\Plugins\&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputFileName)&quot;"
+						Outputs="&quot;$(TargetDir)Plugins\$(InputFileName)&quot;"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying newer $(InputFileName)"
+						CommandLine="if NOT exist $(TargetDir)\Plugins\. mkdir &quot;$(TargetDir)\Plugins\&quot;&#x0D;&#x0A;copy &quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputName).*&quot; &quot;$(TargetDir)\Plugins\&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputFileName)&quot;"
+						Outputs="&quot;$(TargetDir)Plugins\$(InputFileName)&quot;"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Profile|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying newer $(InputFileName)"
+						CommandLine="if NOT exist $(TargetDir)\Plugins\. mkdir &quot;$(TargetDir)\Plugins\&quot;&#x0D;&#x0A;copy &quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputName).*&quot; &quot;$(TargetDir)\Plugins\&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputFileName)&quot;"
+						Outputs="&quot;$(TargetDir)Plugins\$(InputFileName)&quot;"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="..\ElementalEngine2\Sdk\bin\debug\ElementalEngine.dll"
+				>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying newer $(InputFileName)"
+						CommandLine="copy &quot;..\ElementalEngine2\SDK\bin\$(PlatformName)\$(ConfigurationName)\$(InputName).dll&quot; &quot;$(TargetDir)&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\ElementalEngine2\SDK\bin\$(PlatformName)\$(ConfigurationName)\$(InputFileName)&quot;"
+						Outputs="$(TargetDir)\$(InputFileName)"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying newer $(InputFileName)"
+						CommandLine="copy &quot;..\ElementalEngine2\SDK\bin\$(PlatformName)\$(ConfigurationName)\$(InputName).dll&quot; &quot;$(TargetDir)&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\ElementalEngine2\SDK\bin\$(PlatformName)\$(ConfigurationName)\$(InputFileName)&quot;"
+						Outputs="$(TargetDir)\$(InputFileName)"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Profile|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying newer $(InputFileName)"
+						CommandLine="copy &quot;..\ElementalEngine2\SDK\bin\$(PlatformName)\$(ConfigurationName)\$(InputName).dll&quot; &quot;$(TargetDir)&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\ElementalEngine2\SDK\bin\$(PlatformName)\$(ConfigurationName)\$(InputFileName)&quot;"
+						Outputs="$(TargetDir)\$(InputFileName)"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="..\Plugins2\Bin\Debug\EntityQuery.dlo"
+				>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying newer $(InputFileName)"
+						CommandLine="copy &quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputName).*&quot; &quot;$(TargetDir)\Plugins\&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputFileName)&quot;"
+						Outputs="&quot;$(TargetDir)Plugins\$(InputFileName)&quot;"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying newer $(InputFileName)"
+						CommandLine="copy &quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputName).*&quot; &quot;$(TargetDir)\Plugins\&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputFileName)&quot;"
+						Outputs="&quot;$(TargetDir)Plugins\$(InputFileName)&quot;"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Profile|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying newer $(InputFileName)"
+						CommandLine="copy &quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputName).*&quot; &quot;$(TargetDir)\Plugins\&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputFileName)&quot;"
+						Outputs="&quot;$(TargetDir)Plugins\$(InputFileName)&quot;"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath=".\bin\Debug\FlackSquadDLL.dlo"
+				>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying newer $(InputFileName)"
+						CommandLine="copy &quot;bin\$(PlatformName)\$(ConfigurationName)\$(InputName).*&quot; &quot;$(TargetDir)\Plugins\&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;bin\$(PlatformName)\$(ConfigurationName)\$(InputFileName)&quot;"
+						Outputs="&quot;$(TargetDir)Plugins\$(InputFileName)&quot;"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying newer $(InputFileName)"
+						CommandLine="copy &quot;bin\$(PlatformName)\$(ConfigurationName)\$(InputName).*&quot; &quot;$(TargetDir)\Plugins\&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;bin\$(PlatformName)\$(ConfigurationName)\$(InputFileName)&quot;"
+						Outputs="&quot;$(TargetDir)Plugins\$(InputFileName)&quot;"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Profile|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying newer $(InputFileName)"
+						CommandLine="copy &quot;bin\$(PlatformName)\$(ConfigurationName)\$(InputName).*&quot; &quot;$(TargetDir)\Plugins\&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;bin\$(PlatformName)\$(ConfigurationName)\$(InputFileName)&quot;"
+						Outputs="&quot;$(TargetDir)Plugins\$(InputFileName)&quot;"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="..\Plugins2\Bin\win32\debug\GameUtilities.dlo"
+				>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying newer $(InputFileName)"
+						CommandLine="copy &quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputName).*&quot; &quot;$(TargetDir)\Plugins\&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputFileName)&quot;"
+						Outputs="&quot;$(TargetDir)Plugins\$(InputFileName)&quot;"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying newer $(InputFileName)"
+						CommandLine="copy &quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputName).*&quot; &quot;$(TargetDir)\Plugins\&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputFileName)&quot;"
+						Outputs="&quot;$(TargetDir)Plugins\$(InputFileName)&quot;"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Profile|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying newer $(InputFileName)"
+						CommandLine="copy &quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputName).*&quot; &quot;$(TargetDir)\Plugins\&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputFileName)&quot;"
+						Outputs="&quot;$(TargetDir)Plugins\$(InputFileName)&quot;"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="..\Plugins2\Bin\Debug\GuiLoader.dls"
+				>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying newer $(InputFileName)"
+						CommandLine="copy &quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputName).*&quot; &quot;$(TargetDir)\Plugins\&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputFileName)&quot;"
+						Outputs="&quot;$(TargetDir)Plugins\$(InputFileName)&quot;"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying newer $(InputFileName)"
+						CommandLine="copy &quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputName).*&quot; &quot;$(TargetDir)\Plugins\&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputFileName)&quot;"
+						Outputs="&quot;$(TargetDir)Plugins\$(InputFileName)&quot;"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Profile|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying newer $(InputFileName)"
+						CommandLine="copy &quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputName).*&quot; &quot;$(TargetDir)\Plugins\&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputFileName)&quot;"
+						Outputs="&quot;$(TargetDir)Plugins\$(InputFileName)&quot;"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="..\Plugins2\Bin\Debug\GUISystem.dlo"
+				>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying newer $(InputFileName)"
+						CommandLine="copy &quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputName).*&quot; &quot;$(TargetDir)\Plugins\&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputFileName)&quot;"
+						Outputs="&quot;$(TargetDir)Plugins\$(InputFileName)&quot;"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying newer $(InputFileName)"
+						CommandLine="copy &quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputName).*&quot; &quot;$(TargetDir)\Plugins\&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputFileName)&quot;"
+						Outputs="&quot;$(TargetDir)Plugins\$(InputFileName)&quot;"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Profile|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying newer $(InputFileName)"
+						CommandLine="copy &quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputName).*&quot; &quot;$(TargetDir)\Plugins\&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputFileName)&quot;"
+						Outputs="&quot;$(TargetDir)Plugins\$(InputFileName)&quot;"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="..\ElementalEngine2\Sdk\bin\debug\Plugins\HeightMapLoader.dls"
+				>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying newer $(InputFileName)"
+						CommandLine="copy &quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputName).*&quot; &quot;$(TargetDir)\Plugins\&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputFileName)&quot;"
+						Outputs="&quot;$(TargetDir)Plugins\$(InputFileName)&quot;"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying newer $(InputFileName)"
+						CommandLine="copy &quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputName).*&quot; &quot;$(TargetDir)\Plugins\&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputFileName)&quot;"
+						Outputs="&quot;$(TargetDir)Plugins\$(InputFileName)&quot;"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Profile|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying newer $(InputFileName)"
+						CommandLine="copy &quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputName).*&quot; &quot;$(TargetDir)\Plugins\&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputFileName)&quot;"
+						Outputs="&quot;$(TargetDir)Plugins\$(InputFileName)&quot;"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="..\Plugins2\Bin\Debug\HierarchicalModel.dlo"
+				>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying newer $(InputFileName)"
+						CommandLine="copy &quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputName).*&quot; &quot;$(TargetDir)\Plugins\&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputFileName)&quot;"
+						Outputs="&quot;$(TargetDir)Plugins\$(InputFileName)&quot;"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying newer $(InputFileName)"
+						CommandLine="copy &quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputName).*&quot; &quot;$(TargetDir)\Plugins\&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputFileName)&quot;"
+						Outputs="&quot;$(TargetDir)Plugins\$(InputFileName)&quot;"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Profile|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying newer $(InputFileName)"
+						CommandLine="copy &quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputName).*&quot; &quot;$(TargetDir)\Plugins\&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputFileName)&quot;"
+						Outputs="&quot;$(TargetDir)Plugins\$(InputFileName)&quot;"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="..\Plugins2\Bin\Debug\HierarchicalModelLoader.dls"
+				>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying newer $(InputFileName)"
+						CommandLine="copy &quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputName).*&quot; &quot;$(TargetDir)\Plugins\&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputFileName)&quot;"
+						Outputs="&quot;$(TargetDir)Plugins\$(InputFileName)&quot;"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying newer $(InputFileName)"
+						CommandLine="copy &quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputName).*&quot; &quot;$(TargetDir)\Plugins\&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputFileName)&quot;"
+						Outputs="&quot;$(TargetDir)Plugins\$(InputFileName)&quot;"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Profile|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying newer $(InputFileName)"
+						CommandLine="copy &quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputName).*&quot; &quot;$(TargetDir)\Plugins\&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputFileName)&quot;"
+						Outputs="&quot;$(TargetDir)Plugins\$(InputFileName)&quot;"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="..\Plugins2\Bin\Debug\HLSLShaderLoader.dls"
+				>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying newer $(InputFileName)"
+						CommandLine="copy &quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputName).*&quot; &quot;$(TargetDir)\Plugins\&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputFileName)&quot;"
+						Outputs="&quot;$(TargetDir)Plugins\$(InputFileName)&quot;"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying newer $(InputFileName)"
+						CommandLine="copy &quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputName).*&quot; &quot;$(TargetDir)\Plugins\&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputFileName)&quot;"
+						Outputs="&quot;$(TargetDir)Plugins\$(InputFileName)&quot;"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Profile|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying newer $(InputFileName)"
+						CommandLine="copy &quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputName).*&quot; &quot;$(TargetDir)\Plugins\&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputFileName)&quot;"
+						Outputs="&quot;$(TargetDir)Plugins\$(InputFileName)&quot;"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="..\3rd Party\DevIL\lib\$(PlatformName)\Dynamicdebug\ILU.dll"
+				>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Updating Required DLL $(InputFileName)"
+						CommandLine="copy &quot;..\3rd Party\DevIL\lib\$(PlatformName)\Dynamic$(ConfigurationName)\$(InputName).*&quot; &quot;$(TargetDir)&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\3rd Party\DevIL\lib\$(PlatformName)\Dynamic$(ConfigurationName)\$(InputFileName)&quot;"
+						Outputs="$(TargetDir)$(InputFileName)"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Updating Required DLL $(InputFileName)"
+						CommandLine="copy &quot;..\3rd Party\DevIL\lib\$(PlatformName)\Dynamic$(ConfigurationName)\$(InputName).*&quot; &quot;$(TargetDir)&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\3rd Party\DevIL\lib\$(PlatformName)\Dynamic$(ConfigurationName)\$(InputFileName)&quot;"
+						Outputs="$(TargetDir)$(InputFileName)"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Profile|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Updating Required DLL $(InputFileName)"
+						CommandLine="copy &quot;..\3rd Party\DevIL\lib\$(PlatformName)\DynamicRelease\$(InputName).*&quot; &quot;$(TargetDir)&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\3rd Party\DevIL\lib\$(PlatformName)\DynamicRelease\$(InputFileName)&quot;"
+						Outputs="$(TargetDir)$(InputFileName)"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="..\3rd Party\DevIL\lib\$(PlatformName)\DynamicDebug\ILUT.dll"
+				>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Updating Required DLL $(InputFileName)"
+						CommandLine="copy &quot;..\3rd Party\DevIL\lib\$(PlatformName)\Dynamic$(ConfigurationName)\$(InputName).*&quot; &quot;$(TargetDir)&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\3rd Party\DevIL\lib\$(PlatformName)\Dynamic$(ConfigurationName)\$(InputFileName)&quot;"
+						Outputs="$(TargetDir)$(InputFileName)"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Updating Required DLL $(InputFileName)"
+						CommandLine="copy &quot;..\3rd Party\DevIL\lib\$(PlatformName)\Dynamic$(ConfigurationName)\$(InputName).*&quot; &quot;$(TargetDir)&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\3rd Party\DevIL\lib\$(PlatformName)\Dynamic$(ConfigurationName)\$(InputFileName)&quot;"
+						Outputs="$(TargetDir)$(InputFileName)"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Profile|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Updating Required DLL $(InputFileName)"
+						CommandLine="copy &quot;..\3rd Party\DevIL\lib\$(PlatformName)\DynamicRelease\$(InputName).*&quot; &quot;$(TargetDir)&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\3rd Party\DevIL\lib\$(PlatformName)\DynamicRelease\$(InputFileName)&quot;"
+						Outputs="$(TargetDir)$(InputFileName)"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="..\Plugins2\bin\win32\debug\LanguageLoader.dls"
+				>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying newer $(InputFileName)"
+						CommandLine="copy &quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputName).*&quot; &quot;$(TargetDir)\Plugins\&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputFileName)&quot;"
+						Outputs="&quot;$(TargetDir)Plugins\$(InputFileName)&quot;"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying newer $(InputFileName)"
+						CommandLine="copy &quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputName).*&quot; &quot;$(TargetDir)\Plugins\&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputFileName)&quot;"
+						Outputs="&quot;$(TargetDir)Plugins\$(InputFileName)&quot;"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Profile|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying newer $(InputFileName)"
+						CommandLine="copy &quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputName).*&quot; &quot;$(TargetDir)\Plugins\&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputFileName)&quot;"
+						Outputs="&quot;$(TargetDir)Plugins\$(InputFileName)&quot;"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="..\Plugins2\bin\win32\debug\LanguageLocalizer.dlo"
+				>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying newer $(InputFileName)"
+						CommandLine="copy &quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputName).*&quot; &quot;$(TargetDir)\Plugins\&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputFileName)&quot;"
+						Outputs="&quot;$(TargetDir)Plugins\$(InputFileName)&quot;"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying newer $(InputFileName)"
+						CommandLine="copy &quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputName).*&quot; &quot;$(TargetDir)\Plugins\&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputFileName)&quot;"
+						Outputs="&quot;$(TargetDir)Plugins\$(InputFileName)&quot;"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Profile|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying newer $(InputFileName)"
+						CommandLine="copy &quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputName).*&quot; &quot;$(TargetDir)\Plugins\&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputFileName)&quot;"
+						Outputs="&quot;$(TargetDir)Plugins\$(InputFileName)&quot;"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="..\3rd Party\LibXML++\bin\Debug\LibXML++.dll"
+				>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying newer $(InputFileName)"
+						CommandLine="copy &quot;..\3rd Party\LibXML++\bin\$(PlatformName)\$(ConfigurationName)\$(InputName).*&quot; &quot;$(TargetDir)&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\3rd Party\LibXML++\bin\$(PlatformName)\$(ConfigurationName)\$(InputFileName)&quot;"
+						Outputs="$(TargetDir)$(InputFileName)"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying newer $(InputFileName)"
+						CommandLine="copy &quot;..\3rd Party\LibXML++\bin\$(PlatformName)\$(ConfigurationName)\$(InputName).*&quot; &quot;$(TargetDir)&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\3rd Party\LibXML++\bin\$(PlatformName)\$(ConfigurationName)\$(InputFileName)&quot;"
+						Outputs="$(TargetDir)$(InputFileName)"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Profile|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying newer $(InputFileName)"
+						CommandLine="copy &quot;..\3rd Party\LibXML++\bin\$(PlatformName)\release\$(InputName).*&quot; &quot;$(TargetDir)&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\3rd Party\LibXML++\bin\$(PlatformName)\release\$(InputFileName)&quot;"
+						Outputs="$(TargetDir)$(InputFileName)"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="..\Plugins2\Bin\Profile\LightmapCacheLoader.dls"
+				>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying newer $(InputFileName)"
+						CommandLine="copy &quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputName).*&quot; &quot;$(TargetDir)\Plugins\&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputFileName)&quot;"
+						Outputs="&quot;$(TargetDir)Plugins\$(InputFileName)&quot;"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying newer $(InputFileName)"
+						CommandLine="copy &quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputName).*&quot; &quot;$(TargetDir)\Plugins\&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputFileName)&quot;"
+						Outputs="&quot;$(TargetDir)Plugins\$(InputFileName)&quot;"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Profile|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying newer $(InputFileName)"
+						CommandLine="copy &quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputName).*&quot; &quot;$(TargetDir)\Plugins\&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputFileName)&quot;"
+						Outputs="&quot;$(TargetDir)Plugins\$(InputFileName)&quot;"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="..\Plugins2\Bin\Debug\LoadSaveManager.dlo"
+				>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying newer $(InputFileName)"
+						CommandLine="copy &quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputName).*&quot; &quot;$(TargetDir)\Plugins\&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputFileName).*&quot;"
+						Outputs="&quot;$(TargetDir)Plugins\$(InputFileName)&quot;"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying newer $(InputFileName)"
+						CommandLine="copy &quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputName).*&quot; &quot;$(TargetDir)\Plugins\&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputFileName).*&quot;"
+						Outputs="&quot;$(TargetDir)Plugins\$(InputFileName)&quot;"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Profile|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying newer $(InputFileName)"
+						CommandLine="copy &quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputName).*&quot; &quot;$(TargetDir)\Plugins\&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputFileName).*&quot;"
+						Outputs="&quot;$(TargetDir)Plugins\$(InputFileName)&quot;"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="..\Plugins2\Bin\Debug\LuaLoader.dls"
+				>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying newer $(InputFileName)"
+						CommandLine="copy &quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputName).*&quot; &quot;$(TargetDir)\Plugins\&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputFileName)&quot;"
+						Outputs="&quot;$(TargetDir)Plugins\$(InputFileName)&quot;"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying newer $(InputFileName)"
+						CommandLine="copy &quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputName).*&quot; &quot;$(TargetDir)\Plugins\&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputFileName)&quot;"
+						Outputs="&quot;$(TargetDir)Plugins\$(InputFileName)&quot;"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Profile|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying newer $(InputFileName)"
+						CommandLine="copy &quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputName).*&quot; &quot;$(TargetDir)\Plugins\&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputFileName)&quot;"
+						Outputs="&quot;$(TargetDir)Plugins\$(InputFileName)&quot;"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="..\Plugins2\Bin\Debug\LuaNSM.dlo"
+				>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying newer $(InputFileName)"
+						CommandLine="copy &quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputName).*&quot; &quot;$(TargetDir)\Plugins\&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputFileName)&quot;"
+						Outputs="&quot;$(TargetDir)Plugins\$(InputFileName)&quot;"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying newer $(InputFileName)"
+						CommandLine="copy &quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputName).*&quot; &quot;$(TargetDir)\Plugins\&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputFileName)&quot;"
+						Outputs="&quot;$(TargetDir)Plugins\$(InputFileName)&quot;"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Profile|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying newer $(InputFileName)"
+						CommandLine="copy &quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputName).*&quot; &quot;$(TargetDir)\Plugins\&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputFileName)&quot;"
+						Outputs="&quot;$(TargetDir)Plugins\$(InputFileName)&quot;"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="..\Plugins2\bin\debug\NodeSystem.dlo"
+				>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying newer $(InputFileName)"
+						CommandLine="copy &quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputName).*&quot; &quot;$(TargetDir)\Plugins\&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputFileName)&quot;"
+						Outputs="&quot;$(TargetDir)Plugins\$(InputFileName)&quot;"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying newer $(InputFileName)"
+						CommandLine="copy &quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputName).*&quot; &quot;$(TargetDir)\Plugins\&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputFileName)&quot;"
+						Outputs="&quot;$(TargetDir)Plugins\$(InputFileName)&quot;"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Profile|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying newer $(InputFileName)"
+						CommandLine="copy &quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputName).*&quot; &quot;$(TargetDir)\Plugins\&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputFileName)&quot;"
+						Outputs="&quot;$(TargetDir)Plugins\$(InputFileName)&quot;"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="..\Plugins2\Bin\Debug\NovodexPhysics.dlo"
+				>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying newer $(InputFileName)"
+						CommandLine="copy &quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputName).*&quot; &quot;$(TargetDir)\Plugins\&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputFileName)&quot;"
+						Outputs="&quot;$(TargetDir)Plugins\$(InputFileName)&quot;"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying newer $(InputFileName)"
+						CommandLine="copy &quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputName).*&quot; &quot;$(TargetDir)\Plugins\&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputFileName)&quot;"
+						Outputs="&quot;$(TargetDir)Plugins\$(InputFileName)&quot;"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Profile|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying newer $(InputFileName)"
+						CommandLine="copy &quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputName).*&quot; &quot;$(TargetDir)\Plugins\&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputFileName)&quot;"
+						Outputs="&quot;$(TargetDir)Plugins\$(InputFileName)&quot;"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="..\3rd Party\Novodex\Bin\win32\Debug\NxCooking.dll"
+				>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description=""
+						CommandLine=""
+						AdditionalDependencies=""
+						Outputs=""
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Updating Required DLL $(InputFileName)"
+						CommandLine="copy &quot;..\3rd Party\Novodex\bin\win32\$(InputName).*&quot; &quot;$(TargetDir)&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\3rd Party\Novodex\bin\win32\$(InputFileName)&quot;"
+						Outputs="$(TargetDir)$(InputFileName)"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Profile|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Updating Required DLL NxCooking.dll"
+						CommandLine="copy &quot;..\3rd Party\Novodex\bin\win32\NxCooking.dll&quot; &quot;$(TargetDir)&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\3rd Party\Novodex\bin\win32\NxCooking.dll&quot;"
+						Outputs="$(TargetDir)NxCooking.dll"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="..\3rd Party\Novodex\Bin\win32\NxCookingDEBUG.dll"
+				>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Updating Required DLL $(InputFileName)"
+						CommandLine="copy &quot;..\3rd Party\Novodex\bin\win32\$(InputName).*&quot; &quot;$(TargetDir)&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\3rd Party\Novodex\bin\win32\$(InputFileName)&quot;"
+						Outputs="$(TargetDir)$(InputFileName)"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description=""
+						CommandLine=""
+						AdditionalDependencies=""
+						Outputs=""
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Profile|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description=""
+						CommandLine=""
+						AdditionalDependencies=""
+						Outputs=""
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="..\3rd Party\Novodex\Bin\win32\NxExtensions.dll"
+				>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description=""
+						CommandLine=""
+						AdditionalDependencies=""
+						Outputs=""
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Updating Required DLL $(InputFileName)"
+						CommandLine="copy &quot;..\3rd Party\Novodex\bin\win32\$(InputName).*&quot; &quot;$(TargetDir)&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\3rd Party\Novodex\bin\win32\$(InputFileName)&quot;"
+						Outputs="$(TargetDir)$(InputFileName)"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Profile|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Updating Required DLL NxExtensions.dll"
+						CommandLine="copy &quot;..\3rd Party\Novodex\bin\win32\NxExtensions.dll&quot; &quot;$(TargetDir)&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\3rd Party\Novodex\bin\win32\NxExtensions.dll&quot;"
+						Outputs="$(TargetDir)NxExtensions.dll"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="..\3rd Party\Novodex\Bin\win32\NxExtensionsDEBUG.dll"
+				>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Updating Required DLL $(InputFileName)"
+						CommandLine="copy &quot;..\3rd Party\Novodex\bin\win32\$(InputName).*&quot; &quot;$(TargetDir)&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\3rd Party\Novodex\bin\win32\$(InputFileName)&quot;"
+						Outputs="$(TargetDir)$(InputFileName)"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description=""
+						CommandLine=""
+						AdditionalDependencies=""
+						Outputs=""
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Profile|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description=""
+						CommandLine=""
+						AdditionalDependencies=""
+						Outputs=""
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="..\Plugins2\Bin\Debug\ObjectCubeMap.dlo"
+				>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying newer $(InputFileName)"
+						CommandLine="copy &quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputName).*&quot; &quot;$(TargetDir)\Plugins\&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputFileName)&quot;"
+						Outputs="&quot;$(TargetDir)Plugins\$(InputFileName)&quot;"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying newer $(InputFileName)"
+						CommandLine="copy &quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputName).*&quot; &quot;$(TargetDir)\Plugins\&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputFileName)&quot;"
+						Outputs="&quot;$(TargetDir)Plugins\$(InputFileName)&quot;"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Profile|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying newer $(InputFileName)"
+						CommandLine="copy &quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputName).*&quot; &quot;$(TargetDir)\Plugins\&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputFileName)&quot;"
+						Outputs="&quot;$(TargetDir)Plugins\$(InputFileName)&quot;"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="..\Plugins2\bin\Debug\OctreeSceneManager.dlo"
+				>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying newer $(InputFileName)"
+						CommandLine="copy &quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputName).*&quot; &quot;$(TargetDir)\Plugins\&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputFileName)&quot;"
+						Outputs="&quot;$(TargetDir)Plugins\$(InputFileName)&quot;"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying newer $(InputFileName)"
+						CommandLine="copy &quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputName).*&quot; &quot;$(TargetDir)\Plugins\&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputFileName)&quot;"
+						Outputs="&quot;$(TargetDir)Plugins\$(InputFileName)&quot;"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Profile|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying newer $(InputFileName)"
+						CommandLine="copy &quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputName).*&quot; &quot;$(TargetDir)\Plugins\&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputFileName)&quot;"
+						Outputs="&quot;$(TargetDir)Plugins\$(InputFileName)&quot;"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="..\3rd Party\Ogg Vorbis\Ogg\bin\release\ogg.dll"
+				>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Updating Required DLL $(InputFileName)"
+						CommandLine="copy &quot;..\3rd Party\Ogg Vorbis\Ogg\bin\$(PlatformName)\$(ConfigurationName)\$(InputName).*&quot; &quot;$(TargetDir)&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\3rd Party\Ogg Vorbis\Ogg\bin\$(PlatformName)\$(ConfigurationName)\$(InputFileName)&quot;"
+						Outputs="$(TargetDir)$(InputFileName)"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Updating Required DLL $(InputFileName)"
+						CommandLine="copy &quot;..\3rd Party\Ogg Vorbis\Ogg\bin\$(PlatformName)\$(ConfigurationName)\$(InputName).*&quot; &quot;$(TargetDir)&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\3rd Party\Ogg Vorbis\Ogg\bin\$(PlatformName)\$(ConfigurationName)\$(InputFileName)&quot;"
+						Outputs="$(TargetDir)$(InputFileName)"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Profile|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Updating Required DLL $(InputFileName)"
+						CommandLine="copy &quot;..\3rd Party\Ogg Vorbis\Ogg\bin\release\$(InputName).*&quot; &quot;$(TargetDir)&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\3rd Party\Ogg Vorbis\Ogg\bin\release\$(InputFileName)&quot;"
+						Outputs="$(TargetDir)$(InputFileName)"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="..\Plugins2\Bin\Debug\OpenAL.dlo"
+				>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying newer $(InputFileName)"
+						CommandLine="copy &quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputName).*&quot; &quot;$(TargetDir)\Plugins\&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputFileName)&quot;"
+						Outputs="&quot;$(TargetDir)Plugins\$(InputFileName)&quot;"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying newer $(InputFileName)"
+						CommandLine="copy &quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputName).*&quot; &quot;$(TargetDir)\Plugins\&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputFileName)&quot;"
+						Outputs="&quot;$(TargetDir)Plugins\$(InputFileName)&quot;"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Profile|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying newer $(InputFileName)"
+						CommandLine="copy &quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputName).*&quot; &quot;$(TargetDir)\Plugins\&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputFileName)&quot;"
+						Outputs="&quot;$(TargetDir)Plugins\$(InputFileName)&quot;"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="..\3rd Party\OpenAL 1.1 SDK\libs\Win32\OpenAL32.dll"
+				>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Updating Required DLL $(InputFileName)"
+						CommandLine="copy &quot;..\3rd Party\OpenAL 1.1 SDK\libs\Win32\$(ConfigurationName)\$(InputName).*&quot; &quot;$(TargetDir)&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\3rd Party\OpenAL 1.1 SDK\libs\Win32\$(ConfigurationName)\$(InputFileName)&quot;"
+						Outputs="$(TargetDir)$(InputFileName)"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Updating Required DLL $(InputFileName)"
+						CommandLine="copy &quot;..\3rd Party\OpenAL 1.1 SDK\libs\Win32\$(ConfigurationName)\$(InputName).*&quot; &quot;$(TargetDir)&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\3rd Party\OpenAL 1.1 SDK\libs\Win32\$(ConfigurationName)\$(InputFileName)&quot;"
+						Outputs="$(TargetDir)$(InputFileName)"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Profile|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Updating Required DLL $(InputFileName)"
+						CommandLine="copy &quot;..\3rd Party\OpenAL 1.1 SDK\libs\Win32\release\$(InputName).*&quot; &quot;$(TargetDir)&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\3rd Party\OpenAL 1.1 SDK\libs\Win32\release\$(InputFileName)&quot;"
+						Outputs="$(TargetDir)$(InputFileName)"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="..\Plugins2\Bin\Debug\ParticleLoader.dls"
+				>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying newer $(InputFileName)"
+						CommandLine="copy &quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputName).*&quot; &quot;$(TargetDir)\Plugins\&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputFileName)&quot;"
+						Outputs="&quot;$(TargetDir)Plugins\$(InputFileName)&quot;"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying newer $(InputFileName)"
+						CommandLine="copy &quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputName).*&quot; &quot;$(TargetDir)\Plugins\&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputFileName)&quot;"
+						Outputs="&quot;$(TargetDir)Plugins\$(InputFileName)&quot;"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Profile|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying newer $(InputFileName)"
+						CommandLine="copy &quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputName).*&quot; &quot;$(TargetDir)\Plugins\&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputFileName)&quot;"
+						Outputs="&quot;$(TargetDir)Plugins\$(InputFileName)&quot;"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="..\Plugins2\Bin\Debug\PhysicsLoader.dls"
+				>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying newer $(InputFileName)"
+						CommandLine="copy &quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputName).*&quot; &quot;$(TargetDir)\Plugins\&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputFileName)&quot;"
+						Outputs="&quot;$(TargetDir)Plugins\$(InputFileName)&quot;"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying newer $(InputFileName)"
+						CommandLine="copy &quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputName).*&quot; &quot;$(TargetDir)\Plugins\&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputFileName)&quot;"
+						Outputs="&quot;$(TargetDir)Plugins\$(InputFileName)&quot;"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Profile|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying newer $(InputFileName)"
+						CommandLine="copy &quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputName).*&quot; &quot;$(TargetDir)\Plugins\&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputFileName)&quot;"
+						Outputs="&quot;$(TargetDir)Plugins\$(InputFileName)&quot;"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="..\3rd Party\Novodex\Bin\win32\PhysXCore.dll"
+				>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Updating Required DLL PhysXCore.dl"
+						CommandLine="copy &quot;..\3rd Party\Novodex\bin\win32\$(InputName).*&quot; &quot;$(TargetDir)&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\3rd Party\Novodex\bin\win32\$(InputFileName)&quot;"
+						Outputs="&quot;$(TargetDir)Plugins\$(InputFileName)&quot;"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Updating Required DLL PhysXCore.dl"
+						CommandLine="copy &quot;..\3rd Party\Novodex\bin\win32\$(InputName).*&quot; &quot;$(TargetDir)&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\3rd Party\Novodex\bin\win32\$(InputFileName)&quot;"
+						Outputs="&quot;$(TargetDir)Plugins\$(InputFileName)&quot;"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Profile|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Updating Required DLL PhysXCore.dl"
+						CommandLine="copy &quot;..\3rd Party\Novodex\bin\win32\$(InputName).*&quot; &quot;$(TargetDir)&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\3rd Party\Novodex\bin\win32\$(InputFileName)&quot;"
+						Outputs="&quot;$(TargetDir)Plugins\$(InputFileName)&quot;"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="..\3rd Party\Novodex\bin\win32\debug\PhysXLoader.dll"
+				>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description=""
+						CommandLine=""
+						AdditionalDependencies=""
+						Outputs=""
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Updating Required DLL $(InputFileName)"
+						CommandLine="copy &quot;..\3rd Party\Novodex\bin\win32\$(InputName).*&quot; &quot;$(TargetDir)&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\3rd Party\Novodex\bin\win32\$(InputFileName)&quot;"
+						Outputs="$(TargetDir)$(InputFileName)"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Profile|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Updating Required DLL PhysXLoader.dll"
+						CommandLine="copy &quot;..\3rd Party\Novodex\bin\win32\PhysXLoader.dll&quot; &quot;$(TargetDir)&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\3rd Party\Novodex\bin\win32\PhysXLoader.dll&quot;"
+						Outputs="$(TargetDir)PhysXLoader.dll"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="..\3rd Party\Novodex\Bin\win32\PhysXLoaderDEBUG.dll"
+				>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Updating Required DLL $(InputFileName)"
+						CommandLine="copy &quot;..\3rd Party\Novodex\bin\win32\$(InputName).*&quot; &quot;$(TargetDir)&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\3rd Party\Novodex\bin\win32\$(InputFileName)&quot;"
+						Outputs="$(TargetDir)$(InputFileName)"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description=""
+						CommandLine=""
+						AdditionalDependencies=""
+						Outputs=""
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Profile|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description=""
+						CommandLine=""
+						AdditionalDependencies=""
+						Outputs=""
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="..\Plugins2\Bin\Debug\Precache.dlo"
+				>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying newer $(InputFileName)"
+						CommandLine="copy &quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputName).*&quot; &quot;$(TargetDir)\Plugins\&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputFileName)&quot;"
+						Outputs="&quot;$(TargetDir)Plugins\$(InputFileName)&quot;"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying newer $(InputFileName)"
+						CommandLine="copy &quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputName).*&quot; &quot;$(TargetDir)\Plugins\&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputFileName)&quot;"
+						Outputs="&quot;$(TargetDir)Plugins\$(InputFileName)&quot;"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Profile|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying newer $(InputFileName)"
+						CommandLine="copy &quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputName).*&quot; &quot;$(TargetDir)\Plugins\&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputFileName)&quot;"
+						Outputs="&quot;$(TargetDir)Plugins\$(InputFileName)&quot;"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="..\Plugins2\Bin\Debug\PrecacheLoader.dls"
+				>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying newer $(InputFileName)"
+						CommandLine="copy &quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputName).*&quot; &quot;$(TargetDir)\Plugins\&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputFileName)&quot;"
+						Outputs="&quot;$(TargetDir)Plugins\$(InputFileName)&quot;"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying newer $(InputFileName)"
+						CommandLine="copy &quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputName).*&quot; &quot;$(TargetDir)\Plugins\&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputFileName)&quot;"
+						Outputs="&quot;$(TargetDir)Plugins\$(InputFileName)&quot;"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Profile|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying newer $(InputFileName)"
+						CommandLine="copy &quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputName).*&quot; &quot;$(TargetDir)\Plugins\&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputFileName)&quot;"
+						Outputs="&quot;$(TargetDir)Plugins\$(InputFileName)&quot;"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="..\Plugins2\Bin\Debug\Profiler.dlo"
+				>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying newer $(InputFileName)"
+						CommandLine="copy &quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputName).*&quot; &quot;$(TargetDir)\Plugins\&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputFileName)&quot;"
+						Outputs="&quot;$(TargetDir)Plugins\$(InputFileName)&quot;"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying newer $(InputFileName)"
+						CommandLine="copy &quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputName).*&quot; &quot;$(TargetDir)\Plugins\&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputFileName)&quot;"
+						Outputs="&quot;$(TargetDir)Plugins\$(InputFileName)&quot;"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Profile|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying newer $(InputFileName)"
+						CommandLine="copy &quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputName).*&quot; &quot;$(TargetDir)\Plugins\&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputFileName)&quot;"
+						Outputs="&quot;$(TargetDir)Plugins\$(InputFileName)&quot;"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="..\Plugins2\Bin\Debug\QHStateMachine.dlo"
+				>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying newer $(InputFileName)"
+						CommandLine="copy &quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputName).*&quot; &quot;$(TargetDir)\Plugins\&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputFileName)&quot;"
+						Outputs="&quot;$(TargetDir)Plugins\$(InputFileName)&quot;"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying newer $(InputFileName)"
+						CommandLine="copy &quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputName).*&quot; &quot;$(TargetDir)\Plugins\&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputFileName)&quot;"
+						Outputs="&quot;$(TargetDir)Plugins\$(InputFileName)&quot;"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Profile|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying newer $(InputFileName)"
+						CommandLine="copy &quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputName).*&quot; &quot;$(TargetDir)\Plugins\&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputFileName)&quot;"
+						Outputs="&quot;$(TargetDir)Plugins\$(InputFileName)&quot;"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="..\Plugins2\Bin\Debug\ShaderEffectLoader.dls"
+				>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying newer $(InputFileName)"
+						CommandLine="copy &quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputName).*&quot; &quot;$(TargetDir)\Plugins\&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputFileName)&quot;"
+						Outputs="&quot;$(TargetDir)Plugins\$(InputFileName)&quot;"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying newer $(InputFileName)"
+						CommandLine="copy &quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputName).*&quot; &quot;$(TargetDir)\Plugins\&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputFileName)&quot;"
+						Outputs="&quot;$(TargetDir)Plugins\$(InputFileName)&quot;"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Profile|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying newer $(InputFileName)"
+						CommandLine="copy &quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputName).*&quot; &quot;$(TargetDir)\Plugins\&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputFileName)&quot;"
+						Outputs="&quot;$(TargetDir)Plugins\$(InputFileName)&quot;"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="..\Plugins2\Bin\Debug\Shape.dlo"
+				>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying newer $(InputFileName)"
+						CommandLine="copy &quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputName).*&quot; &quot;$(TargetDir)\Plugins\&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputFileName)&quot;"
+						Outputs="&quot;$(TargetDir)Plugins\$(InputFileName)&quot;"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying newer $(InputFileName)"
+						CommandLine="copy &quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputName).*&quot; &quot;$(TargetDir)\Plugins\&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputFileName)&quot;"
+						Outputs="&quot;$(TargetDir)Plugins\$(InputFileName)&quot;"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Profile|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying newer $(InputFileName)"
+						CommandLine="copy &quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputName).*&quot; &quot;$(TargetDir)\Plugins\&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputFileName)&quot;"
+						Outputs="&quot;$(TargetDir)Plugins\$(InputFileName)&quot;"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="..\Plugins2\Bin\Debug\SkyBox.dlo"
+				>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying newer $(InputFileName)"
+						CommandLine="copy &quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputName).*&quot; &quot;$(TargetDir)\Plugins\&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputFileName)&quot;"
+						Outputs="&quot;$(TargetDir)Plugins\$(InputFileName)&quot;"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying newer $(InputFileName)"
+						CommandLine="copy &quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputName).*&quot; &quot;$(TargetDir)\Plugins\&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputFileName)&quot;"
+						Outputs="&quot;$(TargetDir)Plugins\$(InputFileName)&quot;"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Profile|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying newer $(InputFileName)"
+						CommandLine="copy &quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputName).*&quot; &quot;$(TargetDir)\Plugins\&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputFileName)&quot;"
+						Outputs="&quot;$(TargetDir)Plugins\$(InputFileName)&quot;"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="..\Plugins2\Bin\Debug\SoundLoader.dls"
+				>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying newer $(InputFileName)"
+						CommandLine="copy &quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputName).*&quot; &quot;$(TargetDir)\Plugins\&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputFileName)&quot;"
+						Outputs="&quot;$(TargetDir)Plugins\$(InputFileName)&quot;"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying newer $(InputFileName)"
+						CommandLine="copy &quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputName).*&quot; &quot;$(TargetDir)\Plugins\&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputFileName)&quot;"
+						Outputs="&quot;$(TargetDir)Plugins\$(InputFileName)&quot;"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Profile|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying newer $(InputFileName)"
+						CommandLine="copy &quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputName).*&quot; &quot;$(TargetDir)\Plugins\&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputFileName)&quot;"
+						Outputs="&quot;$(TargetDir)Plugins\$(InputFileName)&quot;"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="..\Plugins2\Bin\Debug\SpawnLoader.dls"
+				>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying newer $(InputFileName)"
+						CommandLine="copy &quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputName).*&quot; &quot;$(TargetDir)\Plugins\&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputFileName)&quot;"
+						Outputs="&quot;$(TargetDir)Plugins\$(InputFileName)&quot;"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying newer $(InputFileName)"
+						CommandLine="copy &quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputName).*&quot; &quot;$(TargetDir)\Plugins\&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputFileName)&quot;"
+						Outputs="&quot;$(TargetDir)Plugins\$(InputFileName)&quot;"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Profile|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying newer $(InputFileName)"
+						CommandLine="copy &quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputName).*&quot; &quot;$(TargetDir)\Plugins\&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputFileName)&quot;"
+						Outputs="&quot;$(TargetDir)Plugins\$(InputFileName)&quot;"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="..\Plugins2\Bin\Debug\Spline.dlo"
+				>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying newer $(InputFileName)"
+						CommandLine="copy &quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputName).*&quot; &quot;$(TargetDir)\Plugins\&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputFileName)&quot;"
+						Outputs="&quot;$(TargetDir)Plugins\$(InputFileName)&quot;"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying newer $(InputFileName)"
+						CommandLine="copy &quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputName).*&quot; &quot;$(TargetDir)\Plugins\&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputFileName)&quot;"
+						Outputs="&quot;$(TargetDir)Plugins\$(InputFileName)&quot;"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Profile|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying newer $(InputFileName)"
+						CommandLine="copy &quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputName).*&quot; &quot;$(TargetDir)\Plugins\&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputFileName)&quot;"
+						Outputs="&quot;$(TargetDir)Plugins\$(InputFileName)&quot;"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="..\Plugins2\Bin\Debug\StateLoader.dls"
+				>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying newer $(InputFileName)"
+						CommandLine="copy &quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputName).*&quot; &quot;$(TargetDir)\Plugins\&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputFileName)&quot;"
+						Outputs="&quot;$(TargetDir)Plugins\$(InputFileName)&quot;"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying newer $(InputFileName)"
+						CommandLine="copy &quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputName).*&quot; &quot;$(TargetDir)\Plugins\&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputFileName)&quot;"
+						Outputs="&quot;$(TargetDir)Plugins\$(InputFileName)&quot;"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Profile|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying newer $(InputFileName)"
+						CommandLine="copy &quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputName).*&quot; &quot;$(TargetDir)\Plugins\&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputFileName)&quot;"
+						Outputs="&quot;$(TargetDir)Plugins\$(InputFileName)&quot;"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="..\Plugins2\Bin\Debug\Terrain.dlo"
+				>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying newer $(InputFileName)"
+						CommandLine="copy &quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputName).*&quot; &quot;$(TargetDir)\Plugins\&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputFileName)&quot;"
+						Outputs="&quot;$(TargetDir)Plugins\$(InputFileName)&quot;"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying newer $(InputFileName)"
+						CommandLine="copy &quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputName).*&quot; &quot;$(TargetDir)\Plugins\&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputFileName)&quot;"
+						Outputs="&quot;$(TargetDir)Plugins\$(InputFileName)&quot;"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Profile|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying newer $(InputFileName)"
+						CommandLine="copy &quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputName).*&quot; &quot;$(TargetDir)\Plugins\&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputFileName)&quot;"
+						Outputs="&quot;$(TargetDir)Plugins\$(InputFileName)&quot;"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="..\ElementalEngine2\Sdk\bin\debug\Plugins\TextureLoader.dls"
+				>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying newer $(InputFileName)"
+						CommandLine="copy &quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputName).*&quot; &quot;$(TargetDir)\Plugins\&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputFileName)&quot;"
+						Outputs="&quot;$(TargetDir)Plugins\$(InputFileName)&quot;"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying newer $(InputFileName)"
+						CommandLine="copy &quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputName).*&quot; &quot;$(TargetDir)\Plugins\&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputFileName)&quot;"
+						Outputs="&quot;$(TargetDir)Plugins\$(InputFileName)&quot;"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Profile|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying newer $(InputFileName)"
+						CommandLine="copy &quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputName).*&quot; &quot;$(TargetDir)\Plugins\&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputFileName)&quot;"
+						Outputs="&quot;$(TargetDir)Plugins\$(InputFileName)&quot;"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="..\3rd Party\lua\toluaxx\bin\$(PlatformName)\release\toluaxx.dll"
+				>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Updating Required DLL $(InputFileName)"
+						CommandLine="copy &quot;..\3rd Party\lua\toluaxx\bin\$(PlatformName)\$(ConfigurationName)\$(InputName).*&quot; &quot;$(TargetDir)&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\3rd Party\lua\toluaxx\bin\$(PlatformName)\$(ConfigurationName)\$(InputFileName)&quot;"
+						Outputs="$(TargetDir)$(InputFileName)"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Updating Required DLL $(InputFileName)"
+						CommandLine="copy &quot;..\3rd Party\lua\toluaxx\bin\$(PlatformName)\$(ConfigurationName)\$(InputName).*&quot; &quot;$(TargetDir)&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\3rd Party\lua\toluaxx\bin\$(PlatformName)\$(ConfigurationName)\$(InputFileName)&quot;"
+						Outputs="$(TargetDir)$(InputFileName)"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Profile|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Updating Required DLL $(InputFileName)"
+						CommandLine="copy &quot;..\3rd Party\lua\toluaxx\bin\$(PlatformName)\release\$(InputName).*&quot; &quot;$(TargetDir)&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\3rd Party\lua\toluaxx\bin\$(PlatformName)\release\$(InputFileName)&quot;"
+						Outputs="$(TargetDir)$(InputFileName)"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="..\3rd Party\Ogg Vorbis\Vorbis\bin\release\vorbis.dll"
+				>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Updating Required DLL $(InputFileName)"
+						CommandLine="copy &quot;..\3rd Party\Ogg Vorbis\Vorbis\bin\$(PlatformName)\$(ConfigurationName)\$(InputName).*&quot; &quot;$(TargetDir)&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\3rd Party\Ogg Vorbis\Vorbis\bin\$(PlatformName)\$(ConfigurationName)\$(InputFileName)&quot;"
+						Outputs="$(TargetDir)$(InputFileName)"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Updating Required DLL $(InputFileName)"
+						CommandLine="copy &quot;..\3rd Party\Ogg Vorbis\Vorbis\bin\$(PlatformName)\$(ConfigurationName)\$(InputName).*&quot; &quot;$(TargetDir)&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\3rd Party\Ogg Vorbis\Vorbis\bin\$(PlatformName)\$(ConfigurationName)\$(InputFileName)&quot;"
+						Outputs="$(TargetDir)$(InputFileName)"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Profile|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Updating Required DLL $(InputFileName)"
+						CommandLine="copy &quot;..\3rd Party\Ogg Vorbis\Vorbis\bin\release\$(InputName).*&quot; &quot;$(TargetDir)&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\3rd Party\Ogg Vorbis\Vorbis\bin\release\$(InputFileName)&quot;"
+						Outputs="$(TargetDir)$(InputFileName)"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="..\3rd Party\Ogg Vorbis\Vorbis\bin\release\vorbisfile.dll"
+				>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Updating Required DLL $(InputFileName)"
+						CommandLine="copy &quot;..\3rd Party\Ogg Vorbis\Vorbis\bin\$(PlatformName)\$(ConfigurationName)\$(InputName).*&quot; &quot;$(TargetDir)&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\3rd Party\Ogg Vorbis\Vorbis\bin\$(PlatformName)\$(ConfigurationName)\$(InputFileName)&quot;"
+						Outputs="$(TargetDir)$(InputFileName)"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Updating Required DLL $(InputFileName)"
+						CommandLine="copy &quot;..\3rd Party\Ogg Vorbis\Vorbis\bin\$(PlatformName)\$(ConfigurationName)\$(InputName).*&quot; &quot;$(TargetDir)&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\3rd Party\Ogg Vorbis\Vorbis\bin\$(PlatformName)\$(ConfigurationName)\$(InputFileName)&quot;"
+						Outputs="$(TargetDir)$(InputFileName)"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Profile|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Updating Required DLL $(InputFileName)"
+						CommandLine="copy &quot;..\3rd Party\Ogg Vorbis\Vorbis\bin\release\$(InputName).*&quot; &quot;$(TargetDir)&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\3rd Party\Ogg Vorbis\Vorbis\bin\release\$(InputFileName)&quot;"
+						Outputs="$(TargetDir)$(InputFileName)"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="..\Plugins2\Bin\Debug\Water.dlo"
+				>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying newer $(InputFileName)"
+						CommandLine="copy &quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputName).*&quot; &quot;$(TargetDir)\Plugins\&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputFileName)&quot;"
+						Outputs="&quot;$(TargetDir)Plugins\$(InputFileName)&quot;"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying newer $(InputFileName)"
+						CommandLine="copy &quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputName).*&quot; &quot;$(TargetDir)\Plugins\&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputFileName)&quot;"
+						Outputs="&quot;$(TargetDir)Plugins\$(InputFileName)&quot;"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Profile|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying newer $(InputFileName)"
+						CommandLine="copy &quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputName).*&quot; &quot;$(TargetDir)\Plugins\&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputFileName)&quot;"
+						Outputs="&quot;$(TargetDir)Plugins\$(InputFileName)&quot;"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="..\Plugins2\Bin\Win32\Debug\Win32Environment.dlo"
+				>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying newer $(InputFileName)"
+						CommandLine="copy &quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputName).*&quot; &quot;$(TargetDir)\Plugins\&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputFileName)&quot;"
+						Outputs="&quot;$(TargetDir)Plugins\$(InputFileName)&quot;"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying newer $(InputFileName)"
+						CommandLine="copy &quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputName).*&quot; &quot;$(TargetDir)\Plugins\&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputFileName)&quot;"
+						Outputs="&quot;$(TargetDir)Plugins\$(InputFileName)&quot;"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Profile|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying newer $(InputFileName)"
+						CommandLine="copy &quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputName).*&quot; &quot;$(TargetDir)\Plugins\&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputFileName)&quot;"
+						Outputs="&quot;$(TargetDir)Plugins\$(InputFileName)&quot;"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="..\Plugins2\Bin\Win32\Debug\Win32Input.dlo"
+				>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying newer $(InputFileName)"
+						CommandLine="copy &quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputName).*&quot; &quot;$(TargetDir)\Plugins\&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputFileName)&quot;"
+						Outputs="&quot;$(TargetDir)Plugins\$(InputFileName)&quot;"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying newer $(InputFileName)"
+						CommandLine="copy &quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputName).*&quot; &quot;$(TargetDir)\Plugins\&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputFileName)&quot;"
+						Outputs="&quot;$(TargetDir)Plugins\$(InputFileName)&quot;"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Profile|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying newer $(InputFileName)"
+						CommandLine="copy &quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputName).*&quot; &quot;$(TargetDir)\Plugins\&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputFileName)&quot;"
+						Outputs="&quot;$(TargetDir)Plugins\$(InputFileName)&quot;"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="..\Plugins2\Bin\Debug\WorldEvent.dlo"
+				>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying newer $(InputFileName)"
+						CommandLine="copy &quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputName).*&quot; &quot;$(TargetDir)\Plugins\&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputFileName)&quot;"
+						Outputs="&quot;$(TargetDir)Plugins\$(InputFileName)&quot;"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying newer $(InputFileName)"
+						CommandLine="copy &quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputName).*&quot; &quot;$(TargetDir)\Plugins\&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputFileName)&quot;"
+						Outputs="&quot;$(TargetDir)Plugins\$(InputFileName)&quot;"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Profile|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying newer $(InputFileName)"
+						CommandLine="copy &quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputName).*&quot; &quot;$(TargetDir)\Plugins\&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputFileName)&quot;"
+						Outputs="&quot;$(TargetDir)Plugins\$(InputFileName)&quot;"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="..\ElementalEngine2\Sdk\bin\debug\Plugins\WorldLoader.dls"
+				>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying newer $(InputFileName)"
+						CommandLine="copy &quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputName).*&quot; &quot;$(TargetDir)\Plugins\&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputFileName)&quot;"
+						Outputs="&quot;$(TargetDir)Plugins\$(InputFileName)&quot;"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying newer $(InputFileName)"
+						CommandLine="copy &quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputName).*&quot; &quot;$(TargetDir)\Plugins\&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputFileName)&quot;"
+						Outputs="&quot;$(TargetDir)Plugins\$(InputFileName)&quot;"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Profile|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying newer $(InputFileName)"
+						CommandLine="copy &quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputName).*&quot; &quot;$(TargetDir)\Plugins\&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputFileName)&quot;"
+						Outputs="&quot;$(TargetDir)Plugins\$(InputFileName)&quot;"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="..\3rd Party\OpenAL 1.1 SDK\libs\Win32\debug\wrap_oal.dll"
+				>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Updating Required DLL $(InputFileName)"
+						CommandLine="copy &quot;..\3rd Party\OpenAL 1.1 SDK\libs\Win32\$(ConfigurationName)\$(InputName).*&quot; &quot;$(TargetDir)&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\3rd Party\OpenAL 1.1 SDK\libs\Win32\$(ConfigurationName)\$(InputFileName)&quot;"
+						Outputs="&quot;$(TargetDir)$(InputFileName)&quot;"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Updating Required DLL $(InputFileName)"
+						CommandLine="copy &quot;..\3rd Party\OpenAL 1.1 SDK\libs\Win32\$(ConfigurationName)\$(InputName).*&quot; &quot;$(TargetDir)&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\3rd Party\OpenAL 1.1 SDK\libs\Win32\$(ConfigurationName)\$(InputFileName)&quot;"
+						Outputs="&quot;$(TargetDir)$(InputFileName)&quot;"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Profile|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Updating Required DLL $(InputFileName)"
+						CommandLine="copy &quot;..\3rd Party\OpenAL 1.1 SDK\libs\Win32\$(ConfigurationName)\$(InputName).*&quot; &quot;$(TargetDir)&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\3rd Party\OpenAL 1.1 SDK\libs\Win32\$(ConfigurationName)\$(InputFileName)&quot;"
+						Outputs="&quot;$(TargetDir)$(InputFileName)&quot;"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="..\Plugins2\bin\win32\debug\ZLibStreamFactory.dlo"
+				>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying newer $(InputFileName)"
+						CommandLine="copy &quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputFileName)&quot; &quot;$(TargetDir)\Plugins\&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputFileName)&quot;"
+						Outputs="&quot;$(TargetDir)Plugins\$(InputFileName)&quot;"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying newer $(InputFileName)"
+						CommandLine="copy &quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputFileName)&quot; &quot;$(TargetDir)\Plugins\&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputFileName)&quot;"
+						Outputs="&quot;$(TargetDir)Plugins\$(InputFileName)&quot;"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Profile|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying newer $(InputFileName)"
+						CommandLine="copy &quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputFileName)&quot; &quot;$(TargetDir)\Plugins\&quot;&#x0D;&#x0A;"
+						AdditionalDependencies="&quot;..\Plugins2\bin\$(PlatformName)\$(ConfigurationName)\$(InputFileName)&quot;"
+						Outputs="&quot;$(TargetDir)Plugins\$(InputFileName)&quot;"
+					/>
+				</FileConfiguration>
+			</File>
+		</Filter>
+		<File
+			RelativePath=".\CompileShaders.bat"
+			>
+			<FileConfiguration
+				Name="Debug|Win32"
+				ExcludedFromBuild="true"
+				>
+				<Tool
+					Name="VCCustomBuildTool"
+					Description="Compiling Shaders..."
+					CommandLine="CompileShaders.bat&#x0D;&#x0A;"
+					Outputs="..\..\FlackSquad\Shaders\Compiled\none"
+				/>
+			</FileConfiguration>
+			<FileConfiguration
+				Name="Release|Win32"
+				ExcludedFromBuild="true"
+				>
+				<Tool
+					Name="VCCustomBuildTool"
+					Description="Compiling Shaders..."
+					CommandLine="CompileShaders.bat&#x0D;&#x0A;"
+					Outputs="..\..\FlackSquad\Shaders\Compiled\none"
+				/>
+			</FileConfiguration>
+			<FileConfiguration
+				Name="Profile|Win32"
+				ExcludedFromBuild="true"
+				>
+				<Tool
+					Name="VCCustomBuildTool"
+					Description="Compiling Shaders..."
+					CommandLine="CompileShaders.bat&#x0D;&#x0A;"
+					Outputs="..\..\FlackSquad\Shaders\Compiled\none"
+				/>
+			</FileConfiguration>
+		</File>
+	</Files>
+	<Globals>
+	</Globals>
+</VisualStudioProject>

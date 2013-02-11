@@ -1,0 +1,33 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "unitTest", "unitTest.vcproj", "{B704B821-6F90-45C1-9678-DDEE08E2FCA6}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SourceCodeControl) = preSolution
+		SccNumberOfProjects = 2
+		SccLocalPath0 = .
+		CanCheckoutShared = true
+		SolutionUniqueID = {D78C0342-D6E6-477E-88D2-6D6CF001C24A}
+		SccProjectUniqueName1 = unitTest.vcproj
+		SccLocalPath1 = .
+		CanCheckoutShared = true
+	EndGlobalSection
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Profile = Profile
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{B704B821-6F90-45C1-9678-DDEE08E2FCA6}.Debug.ActiveCfg = Debug|Win32
+		{B704B821-6F90-45C1-9678-DDEE08E2FCA6}.Debug.Build.0 = Debug|Win32
+		{B704B821-6F90-45C1-9678-DDEE08E2FCA6}.Profile.ActiveCfg = Profile|Win32
+		{B704B821-6F90-45C1-9678-DDEE08E2FCA6}.Profile.Build.0 = Profile|Win32
+		{B704B821-6F90-45C1-9678-DDEE08E2FCA6}.Release.ActiveCfg = Release|Win32
+		{B704B821-6F90-45C1-9678-DDEE08E2FCA6}.Release.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

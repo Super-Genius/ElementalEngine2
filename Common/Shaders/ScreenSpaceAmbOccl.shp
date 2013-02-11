@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<CShaderPath Version="1" API="DX9" ShaderVersion="3.0" numeffects="1" effectname1="shaders/ScreenSpaceAmbOccl.efx" numentries="2" >
+	<ShaderEntry type="vertexshader" numflags="0" shaderfile="shaders/postprocess_passthru.vsh" ShaderDefineFile="" ></ShaderEntry>
+	<ShaderEntry type="pixelshader" numflags="0" shaderfile="shaders/ScreenSpaceAmbOccl.psh" ShaderDefineFile="" ></ShaderEntry>
+</CShaderPath>

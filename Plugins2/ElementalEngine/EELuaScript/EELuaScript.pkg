@@ -1,0 +1,60 @@
+
+CLuaDWORD TODWORD(unsigned long x);
+unsigned long FROMDWORD(CLuaDWORD x);
+CLuaDWORD FLOAT_SIZEOF();
+//DWORD TODWORD(unsigned long x);
+//unsigned long FROMDWORD(DWORD x);
+//DWORD FLOAT_SIZEOF();
+
+CLuaFloat TOFLOAT(float x = 0.0f);
+float GETFLOAT(CLuaFloat x);
+
+$#include "stdafx.h"
+$pfile "../../include/EELuaScript/EE_binding_common.pkg"
+$#if 0	// dummy includes for tolua .pkg file
+$cfile "LuaMessages.i"
+$cfile "LuaHashString.h" 
+$cfile "LuaToolBox.h"
+$cfile "LuaManager.h"
+$cfile "LuaArchive.h"
+$cfile "LuaVariableList.h"
+$cfile "../../../ElementalEngine2/SDK/include/Vec3.h"
+$cfile "../../../ElementalEngine2/SDK/include/EulerAngle.h"
+$cfile "LuaVec3.h"
+$cfile "LuaVec4.h"
+$cfile "LuaMatrix3x3.h"
+$cfile "LuaMatrix4x4.h"
+$cfile "LuaQuaternion.h"
+$cfile "LuaMath.h"
+$cfile "LuaDWORDSet.h"
+$cfile "LuaHashStringList.h"
+$cfile "LuaRandUtil.h"
+$cfile "LuaVisitor.h"
+$cfile "LuaDatabase.h"
+$cfile "LuaEulerAngle.h"
+$cfile "LuaTimer.h"
+$#endif
+
+$inline CLuaDWORD TODWORD(unsigned long i) { return CLuaDWORD(i); }
+$inline unsigned long FROMDWORD(CLuaDWORD i) { return i.x; }
+$inline CLuaDWORD FLOAT_SIZEOF() { return CLuaDWORD(sizeof(float)); }
+//$inline DWORD TODWORD(unsigned long i) { return i; }
+//$inline unsigned long FROMDWORD(DWORD i) { return i; }
+//$inline DWORD FLOAT_SIZEOF() { return sizeof(float); }
+
+$inline CLuaFloat TOFLOAT(float x = 0.0f) { return CLuaFloat(x); }
+$inline float GETFLOAT(CLuaFloat f) { return f.x; }
+
+$typedef TCHAR* _cstring;
+$typedef void* _userdata;
+
+// stubs for tolua parsing so it generates classes with garbage collection we can override
+// (instead of the default garbage collector).
+class Vec3 {};
+class Vec4 {};
+class EulerAngle {};
+class Quaternion {};
+class Matrix3x3 {};
+class Matrix4x4 {};
+class StdString {};
+class CLuaDWORD { public: unsigned long x; };

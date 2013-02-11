@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<Effect version="2000" 
+	numconstants="15"
+	numtextures="4"
+	numrenderstates="0"
+	numbones="0"
+	numflags="0">
+	<ShaderVariable shadertype="vertexshader" type="Function" name="EyePos" register="17" x="0.0" y="0.0" z="0.0" w="1.0" ></ShaderVariable>
+	<ShaderVariable shadertype="vertexshader" type="Function" name="FogDistance" register="18" x="0.6705" y="0.7294" z="0.8549" w="6000.0" ></ShaderVariable>	
+	<ShaderVariable shadertype="vertexshader" type="Function" name="ZMinMax" register="19" x="0.0" y="8000.0" z="0.0" w="1.0" ></ShaderVariable>
+	<ShaderVariable shadertype="vertexshader" type="Function" name="SinCosTanTime" register="20" x="0.0" y="0.0" z="0.0" w="0.0" ></ShaderVariable>
+	<ShaderVariable shadertype="vertexshader" type="Constant" name="Texture0_X" register="21" x="0.15" y="0.0" z="0.15" w="-0.005" ></ShaderVariable>
+	<ShaderVariable shadertype="vertexshader" type="Constant" name="Texture0_Y" register="22" x="0.15" y="0.0" z="0.15" w="-0.005" ></ShaderVariable>
+	<ShaderVariable shadertype="vertexshader" type="Constant" name="Texture1_X" register="23" x="0.15" y="0.0" z="0.15" w="-0.005" ></ShaderVariable>
+	<ShaderVariable shadertype="vertexshader" type="Constant" name="Texture1_Y" register="24" x="0.15" y="0.0" z="0.15" w="-0.005" ></ShaderVariable>
+	<ShaderVariable shadertype="vertexshader" type="Constant" name="TextureMask_X" register="25" x="0.05" y="0.0" z="0.05" w="0.0" ></ShaderVariable>
+	<ShaderVariable shadertype="vertexshader" type="Constant" name="TextureMask_Y" register="26" x="0.05" y="0.0" z="0.05" w="0.0" ></ShaderVariable>
+	<ShaderVariable shadertype="vertexshader" type="Constant" name="WaterInfo" register="27" x="0.0" y="0.0" z="0.0" w="0.0" ></ShaderVariable>
+	<ShaderVariable shadertype="vertexshader" type="Constant" name="WaterConstants" register="28" x="0.2" y="0.0" z="0.0" w="0.0" ></ShaderVariable>
+	<ShaderVariable shadertype="pixelshader" type="Constant" name="ColorMultiplier" register="19" x="1.0" y="1.0" z="1.0" w="1.0" ></ShaderVariable>	
+	<ShaderVariable shadertype="pixelshader" type="Constant" name="SpecularGloss" register="20" x="1.0" y="32.0" z="0.0" w="0.0" ></ShaderVariable>	
+	<ShaderVariable shadertype="pixelshader" type="Function" name="FogColor" register="24" x="0.6705" y="0.7294" z="0.8549" w="6000.0" ></ShaderVariable>	
+	<Texture pass="0" stage="0" file="none" numtexturestates="5" >
+		<TextureStageState mode="mipfilter" value="point" ></TextureStageState>
+		<TextureStageState mode="minfilter" value="bilinear" ></TextureStageState>
+		<TextureStageState mode="magfilter" value="bilinear" ></TextureStageState>
+		<TextureStageState mode="umode" value="wrap" ></TextureStageState>
+		<TextureStageState mode="vmode" value="wrap" ></TextureStageState>
+	</Texture>
+	<Texture pass="0" stage="1" file="none" numtexturestates="5" >
+		<TextureStageState mode="mipfilter" value="point" ></TextureStageState>
+		<TextureStageState mode="minfilter" value="bilinear" ></TextureStageState>
+		<TextureStageState mode="magfilter" value="bilinear" ></TextureStageState>
+		<TextureStageState mode="umode" value="wrap" ></TextureStageState>
+		<TextureStageState mode="vmode" value="wrap" ></TextureStageState>
+	</Texture>
+	<Texture pass="0" stage="2" file="none" numtexturestates="5" >
+		<TextureStageState mode="mipfilter" value="point" ></TextureStageState>
+		<TextureStageState mode="minfilter" value="bilinear" ></TextureStageState>
+		<TextureStageState mode="magfilter" value="bilinear" ></TextureStageState>
+		<TextureStageState mode="umode" value="wrap" ></TextureStageState>
+		<TextureStageState mode="vmode" value="wrap" ></TextureStageState>
+	</Texture>
+	<Texture pass="0" stage="3" file="none" numtexturestates="5" >
+		<TextureStageState mode="mipfilter" value="point" ></TextureStageState>
+		<TextureStageState mode="minfilter" value="bilinear" ></TextureStageState>
+		<TextureStageState mode="magfilter" value="bilinear" ></TextureStageState>
+		<TextureStageState mode="umode" value="wrap" ></TextureStageState>
+		<TextureStageState mode="vmode" value="wrap" ></TextureStageState>
+	</Texture>
+</Effect>

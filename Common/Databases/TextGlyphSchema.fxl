@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<CDatabaseSchema Version="1.0" Name="TextGlyphSchema" NumItems="2">
+	<CSchemaItem Version="1.0" Name="KeyString" Type="string" Class="edit" Default="">
+	</CSchemaItem>
+	<CSchemaItem Version="1.0" Name="TextureFileName" Type="string" Class="edit" Default="">
+	</CSchemaItem>	
+</CDatabaseSchema>

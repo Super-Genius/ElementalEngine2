@@ -1,0 +1,92 @@
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ElementalEngine", "ElementalEngine 2005.vcproj", "{A51E8CB3-3995-48B7-9D44-96F04A31DCDE}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
+	ProjectSection(ProjectDependencies) = postProject
+		{C87A3EE8-D7C5-4970-9B62-1D04BB28CA13} = {C87A3EE8-D7C5-4970-9B62-1D04BB28CA13}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "unitTest", "unitTest\unitTest 2005.vcproj", "{B704B821-6F90-45C1-9678-DDEE08E2FCA6}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
+	ProjectSection(ProjectDependencies) = postProject
+		{A51E8CB3-3995-48B7-9D44-96F04A31DCDE} = {A51E8CB3-3995-48B7-9D44-96F04A31DCDE}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "EESDKLib", "EESDKLib\EE-SDK 2005.vcproj", "{C87A3EE8-D7C5-4970-9B62-1D04BB28CA13}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SourceCodeControl) = preSolution
+		SccNumberOfProjects = 4
+		SccProjectName0 = Perforce\u0020Project
+		SccLocalPath0 = .
+		SccProvider0 = MSSCCI:Perforce\u0020SCM
+		CanCheckoutShared = true
+		SccProjectUniqueName1 = EESDKLib\\EE-SDK\u00202005.vcproj
+		SccLocalPath1 = .
+		CanCheckoutShared = true
+		SccProjectFilePathRelativizedFromConnection1 = EESDKLib\\
+		SccProjectUniqueName2 = ElementalEngine\u00202005.vcproj
+		SccLocalPath2 = .
+		CanCheckoutShared = true
+		SccProjectUniqueName3 = unitTest\\unitTest\u00202005.vcproj
+		SccLocalPath3 = .
+		CanCheckoutShared = true
+		SccProjectFilePathRelativizedFromConnection3 = unitTest\\
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Debug|Xbox 360 = Debug|Xbox 360
+		Profile|Win32 = Profile|Win32
+		Profile|Xbox 360 = Profile|Xbox 360
+		Release|Win32 = Release|Win32
+		Release|Xbox 360 = Release|Xbox 360
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A51E8CB3-3995-48B7-9D44-96F04A31DCDE}.Debug|Win32.ActiveCfg = Debug|Win32
+		{A51E8CB3-3995-48B7-9D44-96F04A31DCDE}.Debug|Win32.Build.0 = Debug|Win32
+		{A51E8CB3-3995-48B7-9D44-96F04A31DCDE}.Debug|Xbox 360.ActiveCfg = Debug|Xbox 360
+		{A51E8CB3-3995-48B7-9D44-96F04A31DCDE}.Debug|Xbox 360.Build.0 = Debug|Xbox 360
+		{A51E8CB3-3995-48B7-9D44-96F04A31DCDE}.Profile|Win32.ActiveCfg = Profile|Win32
+		{A51E8CB3-3995-48B7-9D44-96F04A31DCDE}.Profile|Win32.Build.0 = Profile|Win32
+		{A51E8CB3-3995-48B7-9D44-96F04A31DCDE}.Profile|Xbox 360.ActiveCfg = Profile|Xbox 360
+		{A51E8CB3-3995-48B7-9D44-96F04A31DCDE}.Profile|Xbox 360.Build.0 = Profile|Xbox 360
+		{A51E8CB3-3995-48B7-9D44-96F04A31DCDE}.Release|Win32.ActiveCfg = Release|Win32
+		{A51E8CB3-3995-48B7-9D44-96F04A31DCDE}.Release|Win32.Build.0 = Release|Win32
+		{A51E8CB3-3995-48B7-9D44-96F04A31DCDE}.Release|Xbox 360.ActiveCfg = Release|Xbox 360
+		{A51E8CB3-3995-48B7-9D44-96F04A31DCDE}.Release|Xbox 360.Build.0 = Release|Xbox 360
+		{B704B821-6F90-45C1-9678-DDEE08E2FCA6}.Debug|Win32.ActiveCfg = Debug|Win32
+		{B704B821-6F90-45C1-9678-DDEE08E2FCA6}.Debug|Win32.Build.0 = Debug|Win32
+		{B704B821-6F90-45C1-9678-DDEE08E2FCA6}.Debug|Xbox 360.ActiveCfg = Debug|Xbox 360
+		{B704B821-6F90-45C1-9678-DDEE08E2FCA6}.Profile|Win32.ActiveCfg = Profile|Win32
+		{B704B821-6F90-45C1-9678-DDEE08E2FCA6}.Profile|Win32.Build.0 = Profile|Win32
+		{B704B821-6F90-45C1-9678-DDEE08E2FCA6}.Profile|Xbox 360.ActiveCfg = Profile|Xbox 360
+		{B704B821-6F90-45C1-9678-DDEE08E2FCA6}.Release|Win32.ActiveCfg = Release|Win32
+		{B704B821-6F90-45C1-9678-DDEE08E2FCA6}.Release|Win32.Build.0 = Release|Win32
+		{B704B821-6F90-45C1-9678-DDEE08E2FCA6}.Release|Xbox 360.ActiveCfg = Release|Xbox 360
+		{C87A3EE8-D7C5-4970-9B62-1D04BB28CA13}.Debug|Win32.ActiveCfg = Debug|Win32
+		{C87A3EE8-D7C5-4970-9B62-1D04BB28CA13}.Debug|Win32.Build.0 = Debug|Win32
+		{C87A3EE8-D7C5-4970-9B62-1D04BB28CA13}.Debug|Xbox 360.ActiveCfg = Debug|Xbox 360
+		{C87A3EE8-D7C5-4970-9B62-1D04BB28CA13}.Debug|Xbox 360.Build.0 = Debug|Xbox 360
+		{C87A3EE8-D7C5-4970-9B62-1D04BB28CA13}.Profile|Win32.ActiveCfg = Profile|Win32
+		{C87A3EE8-D7C5-4970-9B62-1D04BB28CA13}.Profile|Win32.Build.0 = Profile|Win32
+		{C87A3EE8-D7C5-4970-9B62-1D04BB28CA13}.Profile|Xbox 360.ActiveCfg = Profile|Xbox 360
+		{C87A3EE8-D7C5-4970-9B62-1D04BB28CA13}.Profile|Xbox 360.Build.0 = Profile|Xbox 360
+		{C87A3EE8-D7C5-4970-9B62-1D04BB28CA13}.Release|Win32.ActiveCfg = Release|Win32
+		{C87A3EE8-D7C5-4970-9B62-1D04BB28CA13}.Release|Win32.Build.0 = Release|Win32
+		{C87A3EE8-D7C5-4970-9B62-1D04BB28CA13}.Release|Xbox 360.ActiveCfg = Release|Xbox 360
+		{C87A3EE8-D7C5-4970-9B62-1D04BB28CA13}.Release|Xbox 360.Build.0 = Release|Xbox 360
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

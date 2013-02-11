@@ -1,0 +1,18 @@
+<MATERIAL version="3000" templatename="Opaque_Wrap" numconstants="2" numtextures="2" numbones="0" numflags="0">
+    <ShaderVar name="FogColor" x="0.6705" y="0.7294" z="0.8549" w="10000" />
+    <ShaderVar name="EyePos" x="0" y="0" z="0" w="1" />
+    <Texture pass="0" stage="0" file="\Red_Diffuse.dds" numtexturestates="5">
+        <TextureStageState mode="magfilter" value="bilinear" />
+        <TextureStageState mode="minfilter" value="bilinear" />
+        <TextureStageState mode="mipfilter" value="bilinear" />
+        <TextureStageState mode="umode" value="wrap" />
+        <TextureStageState mode="vmode" value="wrap" />
+    </Texture>
+    <Texture pass="0" stage="1" file="\Pick_Up_nrml.dds" numtexturestates="5">
+        <TextureStageState mode="magfilter" value="bilinear" />
+        <TextureStageState mode="minfilter" value="bilinear" />
+        <TextureStageState mode="mipfilter" value="bilinear" />
+        <TextureStageState mode="umode" value="wrap" />
+        <TextureStageState mode="vmode" value="wrap" />
+    </Texture>
+</MATERIAL>

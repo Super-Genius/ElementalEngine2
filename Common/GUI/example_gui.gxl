@@ -1,0 +1,175 @@
+<?xml version="1.0"?>
+<CGUI_ Vers="2.0a" XRes="800" YRes="600">
+	<CGUIPage name="Example Menu PG" NumGuiElements="2" GuiName1="Background IMG" GuiType1="CGUIInstance" GuiName2="Test BT" GuiType2="CGUIInstance">
+	</CGUIPage>
+	<CGUIInstance name="Background IMG" PosX="0.000000" PosY="0.000000" Width="800.000000" Height="600.000000" ZOrder="0" ItemColor="16777215" ItemAlpha="255" ItemAngle="0.000000" ItemReference="Background IMG_orig" ItemRefType="CGUIStaticArt">
+	</CGUIInstance>
+	<CGUIInstance name="Test BT" PosX="275.000000" PosY="313.000000" Width="256.000000" Height="256.000000" ZOrder="-1" ItemColor="16777215" ItemAlpha="255" ItemAngle="0.000000" ItemReference="Test BT_orig" ItemRefType="CGUIItem">
+	</CGUIInstance>
+	<CGUIStaticArt name="Background IMG_orig" NormTexture="Textures\GUI\example_background.tga" SmartScale="false">
+	</CGUIStaticArt>
+	<CGUIItem name="Test BT_orig" NormTexture="Textures\GUI\example_buttonface.tga" HighTexture="Textures\GUI\example_buttonface.tga" SelectTexture="Textures\GUI\example_buttonface.tga" GrayTexture="Textures\GUI\example_buttonface.tga" NormDecalTexture="" HighDecalTexture="" SelectDecalTexture="" GrayDecalTexture="" DecalOffsetX="0.000000" DecalOffsetY="0.000000" StaticText="Mouse Over" StaticTextHigh="Now Press" StaticTextSelect="Excellent!" StaticTextGrayed="Mouse Over" FontName="basedata\editor\fonts\arial.ttf" BoldFontName="basedata\editor\fonts\arial.ttf" Fontsize="26" NormFontColor="0" HighFontColor="16711680" SelFontColor="3329330" GrayFontColor="0" TextOffSetX="0" TextOffSetY="-10" CenterText="true" SmartScale="false">
+	</CGUIItem>
+	<CGUICursor name="MouseCursor" PosX="33.000000" PosY="2.000000" Width="30.000000" Height="30.000000" ZOrder="0" HotX="0" HotY="0" NormTexture="Textures\GUI\example_cursor.tga">
+	</CGUICursor>
+	<CGUIPage name="Example Animated PG" NumGuiElements="7" GuiName1="Background2 IMG" GuiType1="CGUIInstance" GuiName2="Random BT1" GuiType2="CGUIInstance" GuiName3="Random BT2" GuiType3="CGUIInstance" GuiName4="Random BT3" GuiType4="CGUIInstance" GuiName5="Random BT4" GuiType5="CGUIInstance" GuiName6="Random BT5" GuiType6="CGUIInstance" GuiName7="Text 8" GuiType7="CGUIInstance">
+	</CGUIPage>
+	<CGUIInstance name="Background2 IMG" PosX="0.000000" PosY="0.000000" Width="800.000000" Height="600.000000" ZOrder="1" ItemColor="16777215" ItemAlpha="255" ItemAngle="0.000000" ItemReference="Background2 IMG_orig" ItemRefType="CGUIStaticArt">
+	</CGUIInstance>
+	<CGUIInstance name="Random BT1" PosX="-219.000000" PosY="194.000015" Width="208.000000" Height="75.000000" ZOrder="0" ItemColor="16777215" ItemAlpha="255" ItemAngle="0.000000" ItemReference="Random BT1_orig" ItemRefType="CGUIItem">
+	</CGUIInstance>
+	<CGUIInstance name="Random BT2" PosX="-243.000000" PosY="274.000000" Width="236.000000" Height="75.000000" ZOrder="0" ItemColor="16777215" ItemAlpha="255" ItemAngle="0.000000" ItemReference="Random BT2_orig" ItemRefType="CGUIItem">
+	</CGUIInstance>
+	<CGUIInstance name="Random BT3" PosX="-249.000000" PosY="354.000000" Width="246.000000" Height="75.000000" ZOrder="0" ItemColor="16777215" ItemAlpha="255" ItemAngle="0.000000" ItemReference="Random BT3_orig" ItemRefType="CGUIItem">
+	</CGUIInstance>
+	<CGUIInstance name="Random BT4" PosX="822.000061" PosY="243.000015" Width="250.000000" Height="75.000000" ZOrder="0" ItemColor="16777215" ItemAlpha="255" ItemAngle="0.000000" ItemReference="Random BT4_orig" ItemRefType="CGUIItem">
+	</CGUIInstance>
+	<CGUIInstance name="Random BT5" PosX="822.000000" PosY="333.000000" Width="222.000000" Height="75.000000" ZOrder="0" ItemColor="16777215" ItemAlpha="255" ItemAngle="0.000000" ItemReference="Random BT5_orig" ItemRefType="CGUIItem">
+	</CGUIInstance>
+	<CGUIStaticArt name="Background2 IMG_orig" NormTexture="Textures\GUI\example_background2.tga" SmartScale="false">
+	</CGUIStaticArt>
+	<CGUIItem name="Random BT1_orig" NormTexture="Textures\GUI\example_buttonface.tga" HighTexture="Textures\GUI\example_buttonface.tga" SelectTexture="Textures\GUI\example_buttonface.tga" GrayTexture="basedata\editor\textures\none.tga" NormDecalTexture="" HighDecalTexture="" SelectDecalTexture="" GrayDecalTexture="" DecalOffsetX="0.000000" DecalOffsetY="0.000000" StaticText="Random Button 1" StaticTextHigh="Random Button 1" StaticTextSelect="Random Button 1" StaticTextGrayed="Random Button 1" FontName="basedata\editor\fonts\arial.ttf" BoldFontName="basedata\editor\fonts\arial.ttf" Fontsize="20" NormFontColor="0" HighFontColor="0" SelFontColor="0" GrayFontColor="0" TextOffSetX="0" TextOffSetY="0" CenterText="true" SmartScale="false">
+	</CGUIItem>
+	<CGUIItem name="Random BT2_orig" NormTexture="Textures\GUI\example_buttonface.tga" HighTexture="Textures\GUI\example_buttonface.tga" SelectTexture="Textures\GUI\example_buttonface.tga" GrayTexture="basedata\editor\textures\none.tga" NormDecalTexture="" HighDecalTexture="" SelectDecalTexture="" GrayDecalTexture="" DecalOffsetX="0.000000" DecalOffsetY="0.000000" StaticText="Random Button 2" StaticTextHigh="Random Button 2" StaticTextSelect="Random Button 2" StaticTextGrayed="Random Button 2" FontName="basedata\editor\fonts\arial.ttf" BoldFontName="basedata\editor\fonts\arial.ttf" Fontsize="20" NormFontColor="0" HighFontColor="0" SelFontColor="0" GrayFontColor="0" TextOffSetX="0" TextOffSetY="0" CenterText="true" SmartScale="false">
+	</CGUIItem>
+	<CGUIItem name="Random BT3_orig" NormTexture="Textures\GUI\example_buttonface.tga" HighTexture="Textures\GUI\example_buttonface.tga" SelectTexture="Textures\GUI\example_buttonface.tga" GrayTexture="basedata\editor\textures\none.tga" NormDecalTexture="" HighDecalTexture="" SelectDecalTexture="" GrayDecalTexture="" DecalOffsetX="0.000000" DecalOffsetY="0.000000" StaticText="Random Button 3" StaticTextHigh="Random Button 3" StaticTextSelect="Random Button " StaticTextGrayed="Random Button 3" FontName="basedata\editor\fonts\arial.ttf" BoldFontName="basedata\editor\fonts\arial.ttf" Fontsize="20" NormFontColor="0" HighFontColor="0" SelFontColor="0" GrayFontColor="0" TextOffSetX="0" TextOffSetY="0" CenterText="true" SmartScale="false">
+	</CGUIItem>
+	<CGUIItem name="Random BT4_orig" NormTexture="Textures\GUI\example_buttonface.tga" HighTexture="Textures\GUI\example_buttonface.tga" SelectTexture="Textures\GUI\example_buttonface.tga" GrayTexture="basedata\editor\textures\none.tga" NormDecalTexture="" HighDecalTexture="" SelectDecalTexture="" GrayDecalTexture="" DecalOffsetX="0.000000" DecalOffsetY="0.000000" StaticText="Random Button 4" StaticTextHigh="Random Button 4" StaticTextSelect="Random Button 4" StaticTextGrayed="Random Button 4" FontName="basedata\editor\fonts\arial.ttf" BoldFontName="basedata\editor\fonts\arial.ttf" Fontsize="20" NormFontColor="0" HighFontColor="0" SelFontColor="0" GrayFontColor="0" TextOffSetX="0" TextOffSetY="0" CenterText="true" SmartScale="false">
+	</CGUIItem>
+	<CGUIItem name="Random BT5_orig" NormTexture="Textures\GUI\example_buttonface.tga" HighTexture="Textures\GUI\example_buttonface.tga" SelectTexture="Textures\GUI\example_buttonface.tga" GrayTexture="basedata\editor\textures\none.tga" NormDecalTexture="" HighDecalTexture="" SelectDecalTexture="" GrayDecalTexture="" DecalOffsetX="0.000000" DecalOffsetY="0.000000" StaticText="Random Button 5" StaticTextHigh="Random Button 5" StaticTextSelect="Random Button 5" StaticTextGrayed="Random Button 5" FontName="basedata\editor\fonts\arial.ttf" BoldFontName="basedata\editor\fonts\arial.ttf" Fontsize="20" NormFontColor="0" HighFontColor="0" SelFontColor="0" GrayFontColor="0" TextOffSetX="0" TextOffSetY="0" CenterText="true" SmartScale="false">
+	</CGUIItem>
+	<CGUIInstance name="Text 8" PosX="235.000000" PosY="275.000000" Width="333.000000" Height="129.000000" ZOrder="-1" ItemColor="16777215" ItemAlpha="0" ItemAngle="0.000000" ItemReference="Text 8_orig" ItemRefType="CGUIStaticText">
+	</CGUIInstance>
+	<CGUIStaticText name="Text 8_orig" NormTexture="basedata\editor\textures\none.tga" StaticText="Using custom font" Filename="" LoadFromFile="false" FontName="Fonts\Digirtu_.ttf" Fontsize="28" NormFontColor="0" HighFontColor="0" SelectFontColor="0" GrayFontColor="0" TextOffSetX="0" TextOffSetY="0" CenterText="true" HideTexture="true">
+	</CGUIStaticText>
+	<CGUIAnimation name="Example ANIM" ObjectNum="6" TotalTime="0.666667" FramesPerSec="30" IsLooping="false">
+		<GUIAnimObject ObjectName="Random BT1" ObjectType="CGUIInstance">
+			<GUIChannel Type="Pos" KeyNum="2">
+				<GUIKey Time="0.000000" XPos="-219.000000" YPos="194.000000">
+				</GUIKey>
+				<GUIKey Time="0.166667" XPos="23.000000" YPos="194.000000">
+				</GUIKey>
+			</GUIChannel>
+			<GUIChannel Type="Size" KeyNum="1">
+				<GUIKey Time="0.000000" Width="208.000000" Height="75.000000">
+				</GUIKey>
+			</GUIChannel>
+			<GUIChannel Type="Color" KeyNum="1">
+				<GUIKey Time="0.000000" R="255.000000" G="255.000000" B="255.000000" A="255.000000">
+				</GUIKey>
+			</GUIChannel>
+			<GUIChannel Type="Rotation" KeyNum="1">
+				<GUIKey Time="0.000000" Angle="0.000000">
+				</GUIKey>
+			</GUIChannel>
+		</GUIAnimObject>
+		<GUIAnimObject ObjectName="Random BT2" ObjectType="CGUIInstance">
+			<GUIChannel Type="Pos" KeyNum="3">
+				<GUIKey Time="0.000000" XPos="-243.000000" YPos="274.000000">
+				</GUIKey>
+				<GUIKey Time="0.066667" XPos="-243.000000" YPos="274.000000">
+				</GUIKey>
+				<GUIKey Time="0.233333" XPos="22.000000" YPos="274.000000">
+				</GUIKey>
+			</GUIChannel>
+			<GUIChannel Type="Size" KeyNum="1">
+				<GUIKey Time="0.000000" Width="236.000000" Height="75.000000">
+				</GUIKey>
+			</GUIChannel>
+			<GUIChannel Type="Color" KeyNum="1">
+				<GUIKey Time="0.000000" R="255.000000" G="255.000000" B="255.000000" A="255.000000">
+				</GUIKey>
+			</GUIChannel>
+			<GUIChannel Type="Rotation" KeyNum="1">
+				<GUIKey Time="0.000000" Angle="0.000000">
+				</GUIKey>
+			</GUIChannel>
+		</GUIAnimObject>
+		<GUIAnimObject ObjectName="Random BT3" ObjectType="CGUIInstance">
+			<GUIChannel Type="Pos" KeyNum="3">
+				<GUIKey Time="0.000000" XPos="-249.000000" YPos="354.000000">
+				</GUIKey>
+				<GUIKey Time="0.133333" XPos="-249.000000" YPos="354.000000">
+				</GUIKey>
+				<GUIKey Time="0.300000" XPos="23.000000" YPos="354.000000">
+				</GUIKey>
+			</GUIChannel>
+			<GUIChannel Type="Size" KeyNum="1">
+				<GUIKey Time="0.000000" Width="246.000000" Height="75.000000">
+				</GUIKey>
+			</GUIChannel>
+			<GUIChannel Type="Color" KeyNum="1">
+				<GUIKey Time="0.000000" R="255.000000" G="255.000000" B="255.000000" A="255.000000">
+				</GUIKey>
+			</GUIChannel>
+			<GUIChannel Type="Rotation" KeyNum="1">
+				<GUIKey Time="0.000000" Angle="0.000000">
+				</GUIKey>
+			</GUIChannel>
+		</GUIAnimObject>
+		<GUIAnimObject ObjectName="Random BT4" ObjectType="CGUIInstance">
+			<GUIChannel Type="Pos" KeyNum="3">
+				<GUIKey Time="0.000000" XPos="822.000000" YPos="243.000000">
+				</GUIKey>
+				<GUIKey Time="0.200000" XPos="822.000000" YPos="243.000000">
+				</GUIKey>
+				<GUIKey Time="0.366667" XPos="540.000000" YPos="237.000000">
+				</GUIKey>
+			</GUIChannel>
+			<GUIChannel Type="Size" KeyNum="1">
+				<GUIKey Time="0.000000" Width="250.000000" Height="75.000000">
+				</GUIKey>
+			</GUIChannel>
+			<GUIChannel Type="Color" KeyNum="1">
+				<GUIKey Time="0.000000" R="255.000000" G="255.000000" B="255.000000" A="255.000000">
+				</GUIKey>
+			</GUIChannel>
+			<GUIChannel Type="Rotation" KeyNum="0">
+			</GUIChannel>
+		</GUIAnimObject>
+		<GUIAnimObject ObjectName="Random BT5" ObjectType="CGUIInstance">
+			<GUIChannel Type="Pos" KeyNum="3">
+				<GUIKey Time="0.000000" XPos="822.000000" YPos="333.000000">
+				</GUIKey>
+				<GUIKey Time="0.266667" XPos="822.000000" YPos="333.000000">
+				</GUIKey>
+				<GUIKey Time="0.433333" XPos="568.000000" YPos="333.000000">
+				</GUIKey>
+			</GUIChannel>
+			<GUIChannel Type="Size" KeyNum="1">
+				<GUIKey Time="0.000000" Width="222.000000" Height="75.000000">
+				</GUIKey>
+			</GUIChannel>
+			<GUIChannel Type="Color" KeyNum="1">
+				<GUIKey Time="0.000000" R="255.000000" G="255.000000" B="255.000000" A="255.000000">
+				</GUIKey>
+			</GUIChannel>
+			<GUIChannel Type="Rotation" KeyNum="1">
+				<GUIKey Time="0.000000" Angle="0.000000">
+				</GUIKey>
+			</GUIChannel>
+		</GUIAnimObject>
+		<GUIAnimObject ObjectName="Text 8" ObjectType="CGUIInstance">
+			<GUIChannel Type="Pos" KeyNum="1">
+				<GUIKey Time="0.000000" XPos="235.000000" YPos="275.000000">
+				</GUIKey>
+			</GUIChannel>
+			<GUIChannel Type="Size" KeyNum="1">
+				<GUIKey Time="0.000000" Width="333.000000" Height="129.000000">
+				</GUIKey>
+			</GUIChannel>
+			<GUIChannel Type="Color" KeyNum="3">
+				<GUIKey Time="0.000000" R="255.000000" G="255.000000" B="255.000000" A="0.000000">
+				</GUIKey>
+				<GUIKey Time="0.433333" R="255.000000" G="255.000000" B="255.000000" A="0.000000">
+				</GUIKey>
+				<GUIKey Time="0.666667" R="255.000000" G="255.000000" B="255.000000" A="255.000000">
+				</GUIKey>
+			</GUIChannel>
+			<GUIChannel Type="Rotation" KeyNum="1">
+				<GUIKey Time="0.000000" Angle="0.000000">
+				</GUIKey>
+			</GUIChannel>
+		</GUIAnimObject>
+	</CGUIAnimation>
+</CGUI_>

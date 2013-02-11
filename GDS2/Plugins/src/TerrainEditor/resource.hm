@@ -1,0 +1,6 @@
+// Microsoft Visual C++ generated Help ID include file.
+// Used by TerrainEditor.rc
+//
+#define HIDC_EDIT_TERRAIN_HEIGHT        0xc2744309    // IDD_TERRAIN_SIZE
+#define HIDC_EDIT_TERRAIN_WIDTH         0xc2744308    // IDD_TERRAIN_SIZE
+#define HIDC_MEASUREMENT_UNITS          0xc27442fe    // IDD_TERRAIN_SIZE

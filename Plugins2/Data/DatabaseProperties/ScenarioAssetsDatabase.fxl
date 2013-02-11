@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root Num="1">
+<ScenarioAssetsDatabase Name="Scenario Assets Database" Num="14">
+	<edit Type="string" Name="Scenario Name" key="true"/>
+	<edit Type="string" Name="OPS Description" key="false"/>
+	<edit Type="string" Name="OPS Briefing" key="false"/>
+	<edit Type="string" Name="Map" key="false"/>
+	<edit Type="string" Name="Map Asset Database" key="false"/>
+	<edit Type="string" Name="CFF Asset Database" key="false"/>
+	<edit Type="string" Name="CAS Asset Database" key="false"/>
+	<edit Type="string" Name="Database 1" key="false"/>
+	<edit Type="string" Name="TOD and Weather Spawner" key="false"/>
+	<edit Type="string" Name="Allied Spawner" key="false"/>
+	<edit Type="string" Name="Neutral Spawner" key="false"/>
+	<edit Type="string" Name="OpFor Spawner" key="false"/>
+	<edit Type="string" Name="Spawner 1" key="false"/>
+	<edit Type="string" Name="Spawner 2" key="false"/>
+</ScenarioAssetsDatabase>
+</root>

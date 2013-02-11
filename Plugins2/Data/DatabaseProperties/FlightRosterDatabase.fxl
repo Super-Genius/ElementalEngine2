@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root Num="1">
+<FlightRosterDatabase Name="FlightRoster Database" Num="10">
+	<edit Type="string" Name="Flight Number" key="true"/>
+	<edit Type="string" Name="Mission Number" key="false"/>
+	<edit Type="string" Name="Callsign" key="false"/>
+	<edit Type="string" Name="Position" key="false"/>
+	<edit Type="string" Name="Altitude" key="false"/>
+	<edit Type="string" Name="Time" key="false"/>
+	<edit Type="string" Name="A/C Type" key="false"/>
+	<edit Type="string" Name="Number of A/C" key="false"/>
+	<edit Type="string" Name="Radio Frequency" key="false"/>
+	<edit Type="string" Name="Ordnance" key="false"/>
+</FlightRosterDatabase>
+</root>

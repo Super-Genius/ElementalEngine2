@@ -1,0 +1,415 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#include ""res\\StateMachineEditor.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""     // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904e4"
+        BEGIN
+            VALUE "CompanyName", "Signature Devices, Inc."
+            VALUE "FileDescription", "State Machine Editor Plugin"
+            VALUE "FileVersion", "1.0.0.1"
+            VALUE "InternalName", "StateMachineEditor.dll"
+            VALUE "LegalCopyright", "(c) 2007 Signature Devices, Inc.  All rights reserved."
+            VALUE "OriginalFilename", "StateMachineEditor.dll"
+            VALUE "ProductName", "GDS"
+            VALUE "ProductVersion", "1.0.0.1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1252
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_STATEMACHINETYPE    ICON                    "res\\state_machine_tool_tab_24.ico"
+IDC_ADD                 ICON                    "add.ico"
+IDC_REMOVE              ICON                    "remove.ico"
+IDC_UP                  ICON                    "up.ico"
+IDC_DOWN                ICON                    "down.ico"
+IDI_STATE_BUTTON        ICON                    "res\\create_state_24.ico"
+IDI_EVENT_BUTTON        ICON                    "res\\create_event_24.ico"
+IDI_TRANSITION_MODE     ICON                    "res\\create_transition_24.ico"
+IDI_VALIDATE            ICON                    "res\\validation_tool_24.ico"
+IDI_ENTRY_EVENT_BUTTON  ICON                    "entry_event.ico"
+IDI_UPDATE_EVENT_BUTTON ICON                    "update_event.ico"
+IDI_EXIT_EVENT_BUTTON   ICON                    "exit_event.ico"
+IDI_FLATVIEW            ICON                    "res\\flat_view_24.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_EDITOR_CONTEXT_MENU MENU 
+BEGIN
+    POPUP "Editor"
+    BEGIN
+        MENUITEM "&Back One Level",             ID_EDITOR_BACKONELEVEL
+        MENUITEM SEPARATOR
+        MENUITEM "&Undo",                       ID_EDIT_UNDO
+        MENUITEM "&Redo",                       ID_EDIT_REDO
+        MENUITEM SEPARATOR
+        MENUITEM "Cu&t",                        ID_EDIT_CUT
+        MENUITEM "&Copy",                       ID_EDIT_COPY
+        MENUITEM "&Paste",                      ID_EDIT_PASTE
+        MENUITEM SEPARATOR
+        MENUITEM "&Group",                      ID_EDITOR_GROUP
+        MENUITEM "U&ngroup",                    ID_EDITOR_UNGROUP
+    END
+END
+
+IDR_STATE_CONTEXT_MENU MENU 
+BEGIN
+    POPUP "State"
+    BEGIN
+        MENUITEM "Up in &Hierarchy",            ID_STATE_UPINHIERARCHY
+        MENUITEM "Add &Entry Event",            ID_STATE_ADDENTRYEVENT
+        MENUITEM "&Add Update Event",           ID_STATE_ADDUPDATEEVENT
+        MENUITEM "Add E&xit Event",             ID_STATE_ADDEXITEVENT
+        MENUITEM SEPARATOR
+        MENUITEM "Cu&t",                        ID_EDIT_CUT
+        MENUITEM "&Copy",                       ID_EDIT_COPY
+        MENUITEM SEPARATOR
+        MENUITEM "&Up",                         ID_ENTITY_UP
+        MENUITEM "&Down",                       ID_ENTITY_DOWN
+        MENUITEM "To &Front",                   ID_ENTITY_TOFRONT
+        MENUITEM "To &Back",                    ID_ENTITY_TOBACK
+    END
+END
+
+IDR_EVENT_CONTEXT_MENU MENU 
+BEGIN
+    POPUP "Event"
+    BEGIN
+        MENUITEM "&Add Transition",             65535
+        MENUITEM "&Override",                   65535
+        MENUITEM SEPARATOR
+        MENUITEM "Cu&t",                        ID_EDIT_CUT
+        MENUITEM "&Copy",                       ID_EDIT_COPY
+        MENUITEM SEPARATOR
+        MENUITEM "&Up",                         ID_ENTITY_UP
+        MENUITEM "&Down",                       ID_ENTITY_DOWN
+        MENUITEM "To &Front",                   ID_ENTITY_TOFRONT
+        MENUITEM "To &Back",                    ID_ENTITY_TOBACK
+        MENUITEM SEPARATOR
+        MENUITEM "&Properties",                 ID_ENTITY_PROPERTIES
+    END
+END
+
+IDR_TRANSITION_CONTEXT_MENU MENU 
+BEGIN
+    POPUP "Transition"
+    BEGIN
+        MENUITEM "Select &Source Event",        ID_TRANSITION_SELECTSOURCE
+        MENUITEM "Select &Target State",        ID_TRANSITION_SELECTTARGET
+        MENUITEM SEPARATOR
+        MENUITEM "&Up",                         ID_ENTITY_UP
+        MENUITEM "&Down",                       ID_ENTITY_DOWN
+        MENUITEM "To &Front",                   ID_ENTITY_TOFRONT
+        MENUITEM "To &Back",                    ID_ENTITY_TOBACK
+    END
+END
+
+IDR_STATEMACHINETYPE MENU 
+BEGIN
+    POPUP "State &Machine"
+    BEGIN
+        MENUITEM "Add &State",                  ID_STATE_BUTTON
+        MENUITEM "Add &Event",                  ID_EVENT_BUTTON
+        MENUITEM "&Add EntryEvent",             ID_ENTRY_EVENT_BUTTON
+        MENUITEM "Add &Update Event",           ID_UPDATE_EVENT_BUTTON
+        MENUITEM "Add E&xit Event",             ID_EXIT_EVENT_BUTTON
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDR_STATEMACHINETYPE TOOLBAR  16, 15
+BEGIN
+    BUTTON      ID_STATE_BUTTON
+    BUTTON      ID_EVENT_BUTTON
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDR_STATEMACHINETYPE    BITMAP                  "toolbar1.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_STATEMACHINE_TOOLBAR, DIALOG
+    BEGIN
+        LEFTMARGIN, 6
+        RIGHTMARGIN, 291
+        TOPMARGIN, 1
+        BOTTOMMARGIN, 35
+    END
+
+    IDD_EVENT_ACTIONS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 387
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 211
+    END
+
+    IDD_EVENT_TRANSITIONS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 387
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 211
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_STATEMACHINE_TOOLBAR DIALOGEX 0, 0, 294, 36
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    PUSHBUTTON      "State",ID_STATE_BUTTON,6,1,24,24,BS_ICON
+    PUSHBUTTON      "Event",ID_EVENT_BUTTON,42,1,24,24,BS_ICON
+    CONTROL         "Transition",ID_TRANSITION_MODE,"Button",BS_AUTOCHECKBOX | 
+                    BS_ICON | BS_PUSHLIKE | WS_TABSTOP,186,1,24,24
+    PUSHBUTTON      "Validate",ID_VALIDATE,222,1,24,24,BS_ICON
+    CONTROL         "Flat",ID_FLAT_MODE,"Button",BS_AUTOCHECKBOX | BS_ICON | 
+                    BS_PUSHLIKE | WS_TABSTOP,258,1,24,24
+    PUSHBUTTON      "Entry Event",ID_ENTRY_EVENT_BUTTON,78,1,24,24,BS_ICON
+    PUSHBUTTON      "Update Event",ID_UPDATE_EVENT_BUTTON,114,1,24,24,
+                    BS_ICON
+    PUSHBUTTON      "Exit Event",ID_EXIT_EVENT_BUTTON,150,1,24,24,BS_ICON
+    LTEXT           "New State",IDC_STATIC,0,25,34,8
+    LTEXT           "New Event",IDC_STATIC,36,25,36,8
+    LTEXT           "Entry Ev",IDC_STATIC,75,25,28,8
+    LTEXT           "Update Ev",IDC_STATIC,109,25,34,8
+    LTEXT           "Exit Ev",IDC_STATIC,151,25,23,8
+    LTEXT           "Transition",IDC_STATIC,182,25,32,8
+    LTEXT           "Validate",IDC_STATIC,221,25,26,8
+    LTEXT           "Flat View",IDC_STATIC,255,25,30,8
+END
+
+IDD_EVENT_ACTIONS DIALOGEX 0, 0, 394, 218
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Action Handlers"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    PUSHBUTTON      "Add",IDC_ADD,7,7,24,24,BS_ICON
+    PUSHBUTTON      "Remove",IDC_REMOVE,35,7,24,24,BS_ICON
+    PUSHBUTTON      "Up",IDC_UP,66,7,24,24,BS_ICON
+    PUSHBUTTON      "Down",IDC_DOWN,96,7,24,24,BS_ICON
+END
+
+IDD_EVENT_TRANSITIONS DIALOGEX 0, 0, 394, 218
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Transitions"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    PUSHBUTTON      "Add",IDC_ADD,7,7,24,24,BS_ICON
+    PUSHBUTTON      "Remove",IDC_REMOVE,35,7,24,24,BS_ICON
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_RESOURCE_NAME       "State Machines"
+    IDS_ERROR               "Error"
+    IDS_ERR_CANT_CREATE_ACTION "Failed to create action handler."
+    IDS_ERR_CANT_UPDATE_ACTION "Failed to update action handler."
+    IDS_ERR_CANT_CREATE_TRANSITION "Failed to create transition."
+    IDS_ERR_CANT_UPDATE_TRANSITION "Failed to update transition."
+    IDS_CONFIRM             "Confirm"
+    IDS_CONFIRM_PASTE       "Some items in clipboard cannot be pasted. Are you sure to paste without these items?"
+    IDS_ERR_PASTE_FAILED    "Failed to paste data."
+    IDS_ERR_COPY_FAILED     "Failed to copy selection to clipboard."
+    IDS_VALIDATE_MACHINE_BAD_START_STATE 
+                            "Start state of state machine should refer to valid state. The name '%s' is not valid state name."
+    IDS_VALIDATE_MACHINE_BAD_END_STATE 
+                            "End state of state machine should refer to valid state. The name '%s' is not valid state name."
+    IDS_VALIDATE_STATE_BAD_LABEL 
+                            "State label '%s' already exists in state machine."
+    IDS_VALIDATE_STATE_BAD_ENTRY_EVENT 
+                            "State's entry event value refers to non-existent event '%s'."
+    IDS_VALIDATE_STATE_BAD_UPDATE_EVENT 
+                            "State's update event value refers to non-existent event '%s'."
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_VALIDATE_STATE_BAD_EXIT_EVENT 
+                            "State's exit event value refers to non-existent event '%s'."
+    IDS_VALIDATE_STATE_EMPTY_LABEL "Name of the state should be set."
+    IDS_VALIDATE_MACHINE_EMPTY_START_STATE 
+                            "Start state of state machine should should be set."
+    IDS_VALIDATE_EVENT_EMPTY_LABEL "Event name should be set."
+    IDS_VALIDATE_EVENT_BAD_LABEL "Event with name '%s' exists already."
+    IDS_VALIDATE_ACTION_EMPTY_NAME "Action name should be set."
+    IDS_VALIDATE_TRANSITION_BAD_TARGET_STATE 
+                            "Target state of transition refers to non-existent state '%s'."
+    IDS_VALIDATE_TRANSITION_BAD_WEIGHT 
+                            "All event's transitions have zero weight. At least one transtion should have non-zero weight."
+    IDS_VALIDATE_MACHINE_EMPTY_NAME "State machine name should be set."
+    IDS_VALIDATE_MACHINE_BAD_NAME 
+                            "State machine with name '%s' exists already."
+    IDS_CONFIRM_SAVE_INVALID_MACHINE 
+                            "Some objects in state machine are not in consistent state. Are you sure to continue saving?"
+    IDS_CONFIRM_STATE_RENAME 
+                            "Some state machine objects refer to this state. Whould you like to update these refrences also?"
+    IDS_CONFIRM_EVENT_RENAME 
+                            "This event event is overriden (or base) in hierarchy. Whould you like to update these hierarchy event names also?"
+    IDS_CONFIRM_STATE_DROP  "Whould you like to change selected state parent to '%s'?"
+    IDS_COL_ACTION_HANDLER  "Action Handler Function"
+    IDS_COL_WEIGHT          "Weight"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_COL_TARGET_STATE    "Target State"
+    IDS_CONFIRM_CHANGE_PARENT_MACHINE 
+                            "Are you sure to change parent state machine? Derived object(s) will be deleted in this case."
+    IDS_VALIDATE_MACHINE_BAD_PARENT_FILE 
+                            "Parent state machine file name is not correct. File with name '%s' does not exist."
+END
+
+STRINGTABLE 
+BEGIN
+    ID_STATE_BUTTON         "New State\nAdd state to state machine"
+    ID_EVENT_BUTTON         "New Event\nAdd event to state"
+    ID_ENTRY_EVENT_BUTTON   "Add Entry Event\nAdd entry event to state"
+    ID_UPDATE_EVENT_BUTTON  "Add Update Event\nAdd update event to state"
+    ID_EXIT_EVENT_BUTTON    "Add Exit Event\nAdd exit event to state"
+    ID_TRANSITION_MODE      "Transition\nDraw a transition from event to state"
+    ID_FLAT_MODE            "Flat View\nView the states and substates on one page"
+    ID_VALIDATE             "Validate\nValidate the state machine"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#include "res\StateMachineEditor.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"     // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

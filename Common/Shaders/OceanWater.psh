@@ -1,0 +1,87 @@
+#include "Shaders\HLSLconstants.h"
+
+struct PSIn
+{
+	float4 HPosition	: POSITION;
+	float4 INP			: TEXCOORD0;
+	float4 INP1			: TEXCOORD1;
+	float4 EyeVector	: TEXCOORD2;
+	float2 TexGens		: TEXCOORD3;
+	float4 INP2			: TEXCOORD4;
+//	float3 EyeVector	: TEXCOORD5;
+//	float4 Col0		: COLOR0;
+//	float4 Col1		: COLOR1;
+};
+
+uniform float4 DiffuseAmbient	: register(c23);
+uniform float4 SunDir			: register(c24);
+uniform float4 FoamKs			: register(c25);
+uniform float4 MaxReflection	: register(c26);
+
+float4 main(	PSIn  In, 
+				uniform sampler2D dXYMapA : register(s0),
+				uniform sampler2D dXYMapB : register(s1),
+				uniform sampler2D FoamMap : register(s2),
+				uniform samplerCUBE EnvMap : register(s3)
+				 ) : COLOR
+{
+	// Sum (H,Nx,Ny) maps in 0..1
+	half3 mapA = tex2D(dXYMapA, In.INP.xy).xyz;
+	half3 mapB = tex2D(dXYMapB, In.INP1.xy).xyz;
+	half3 N = mapA + mapB * half3(1.0/3.1, 1.0, 1.0);
+
+	// Add micro bump
+//	N += tex2Dbias(dXYMapA, In.INP2).xyz*half3((1.0/13.1/0.4), 1.0, 1.0)*0.4; // this is slow
+	N += tex2D(dXYMapA, In.INP2.xy).xyz*half3((1.0/13.1/0.4), 1.0, 1.0)*0.4;
+
+	half FoamNx = N.x;
+
+	N.xz = -(N.yz*2.0 - 2.4);
+	N.y = In.INP.z;
+	N = normalize(N);
+
+	half3 E = normalize(In.EyeVector.xyz);
+	half3 R = reflect(E, N);
+
+	// Hack to eleminate backside artifacts
+//	half hackR = saturate((-R.z+0.05)*10);
+//	N = normalize(lerp(half3(0,0,1), N, hackR));
+//	R = reflect(E, N);
+
+	half4 reflectColor = texCUBE(EnvMap, R);
+		    
+	// sun road splashes
+	reflectColor *= 1.0 + saturate(dot(reflectColor.rgb,reflectColor.rgb) - 0.97*3.0)*200.0h;
+
+	// fresnel - could use 1D tex lookup for this
+	const half fresnelPower = 5.0f;
+	const half fresnelBias = 0.0237f; // air to water boundary: 0.0237
+	half facing = 1.0 - max(dot(-E, N), 0);
+	half fresnel = fresnelBias + (1.0-fresnelBias)*pow(facing, fresnelPower);
+//	half fresnel = tex2D( fresnelLookup, half2(facing,0.5) );
+
+	half3 diffuseL = saturate(dot(N, SunDir.xyz));
+	half3 diffuse = (diffuseL+DiffuseAmbient.www)*DiffuseAmbient.xyz;
+	
+	half3 WaterColor = lerp( diffuse, reflectColor, fresnel);
+	
+
+	// foam caps
+	if (FoamNx > FoamKs.z)
+	{
+		// *** begin original ***
+//		half Foam = FoamNx*FoamKs.x+FoamKs.y;
+//		Foam=saturate(Foam*(tex2D(FoamMap, In.TexGens.xy*23.0h).w*(tex2D(FoamMap, In.TexGens.xy*397.0h).w*0.5h+0.75h)));
+//		WaterColor = lerp(WaterColor,(diffuseL*0.4+0.5), Foam);
+		// *** end original ***
+		half Foam = FoamNx*FoamKs.x+FoamKs.y;
+		Foam=saturate(Foam*(tex2D(FoamMap, In.TexGens.xy*23.0h).w));
+		WaterColor = lerp(WaterColor,(diffuseL*0.4+0.5), Foam);
+//		WaterColor = Foam;
+	}
+
+//	return half4(In.Col0.rgb, 1.0);
+//	half3 outcolor = lerp( WaterColor.rgb, float3(0.0,1.0,0.0), In.EyeVector.w );
+	return half4(WaterColor.rgb, 1 - In.EyeVector.w);
+//	return half4((N+1.0)*0.5, 1.0f);
+}

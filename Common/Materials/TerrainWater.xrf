@@ -1,0 +1,3 @@
+<MATERIAL version="2000" effectname="Shaders/TerrainWater.efx" numconstants="0" numtextures="0" numrenderstates="1" numbones="0" numflags="0">
+    <RenderState mode="alphablend" value="true" />
+</MATERIAL>

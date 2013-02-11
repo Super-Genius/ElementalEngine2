@@ -1,0 +1,4 @@
+<MaterialTemplate version="3000" effect="Cal3DEffect.efx" numrenderstates="2">
+    <RenderState mode="alphablend" value="false" />
+    <RenderState mode="cullmode" value="cullregular" />
+</MaterialTemplate>

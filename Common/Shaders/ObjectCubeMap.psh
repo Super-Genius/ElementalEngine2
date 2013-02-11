@@ -1,0 +1,16 @@
+#include "Shaders\HLSLconstants.h"
+
+struct v2f
+{
+	float4 Position     : POSITION;
+	float3 TexCoord0    : TEXCOORD0;
+};
+
+float4 main(v2f i,
+	uniform samplerCUBE CubeTex : register(s0) ) : COLOR
+{
+	
+	float4 outcolor = texCUBE(CubeTex, i.TexCoord0.xyz);
+	outcolor.a = 1.0;
+	return outcolor;
+}

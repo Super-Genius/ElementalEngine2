@@ -1,0 +1,521 @@
+<html>
+<head>
+<title>
+Documentation for class CObjectBar
+
+</title>
+<link rel="stylesheet" type="text/css" href="doc.css">
+</head>
+<body>
+<table border="0" width="100%">
+	<tr>
+		<td align="right">
+			<h4>Auto Generated Class Documentation by ClassBuilder</h4>
+		<td>
+	</tr>
+</table>
+<hr>
+<center><a href="main_index.html">Main</a>
+<a href="namespace.html">Namespace List</a>
+<a href="class_hiearchy.html">Class Hierarchy</a>
+<a href="compound_members.html">Compound Members</a>
+<a href="compound_list.html">Compound List</a>
+<a href="diagram_list.html">Diagram List</a>
+</center><hr><h1>CObjectBar Reference</h1>
+<p>C:\Development\Game Dev System\ObjectBar.<a href="#_details">More...</a>
+</p><p><pre>#include 
+</pre></p><p>Inheritance diagram for CObjectBar
+</p><table border="0"><tr>
+<td colspan="2"><h2>Public Methods</h2></td>
+</tr>
+<tr>
+<td align="right"><a name="#_methodCObjectBar_summary"></a></td><td align="left"><a href="#_methodCObjectBar_details">CObjectBar</a>(  )</td></tr>
+<tr>
+<td>&nbsp;</td>
+<td>
+<font size=-1><em>Constructor method.</em><a href="#_methodCObjectBar_details">More...</a>
+</font></td></tr>
+<tr>
+<td align="right">virtual <a name="#_method~CObjectBar_summary"></a></td><td align="left"><a href="#_method~CObjectBar_details">~CObjectBar</a>(  )</td></tr>
+<tr>
+<td>&nbsp;</td>
+<td>
+<font size=-1><em>Destructor method.</em><a href="#_method~CObjectBar_details">More...</a>
+</font></td></tr>
+<tr>
+<td colspan="2"><h2>Public Members</h2></td>
+</tr>
+<tr>
+<td align="right">* </td><td align="left"><a href="#_memberm_ObjectPages_details">m_ObjectPages</a></td></tr>
+<tr>
+<td align="right">CObjectOptions* </td><td align="left"><a href="#_memberobOptions_details">obOptions</a></td></tr>
+<tr>
+<td colspan="2"><h2>Protected Methods</h2></td>
+</tr>
+<tr>
+<td align="right"><a name="#_methodOnCreate_summary"></a>afx_msg int </td><td align="left"><a href="#_methodOnCreate_details">OnCreate</a>( LPCREATESTRUCT  lpCreateStruct )</td></tr>
+<tr>
+<td align="right"><a name="#_methodOnSize_summary"></a>afx_msg void </td><td align="left"><a href="#_methodOnSize_details">OnSize</a>( UINT  nType, int  cx, int  cy )</td></tr>
+<tr>
+<td>&nbsp;</td>
+<td>
+<font size=-1><em>Message handler for resizing of the dockable bars.</em><a href="#_methodOnSize_details">More...</a>
+</font></td></tr>
+<tr>
+<td align="right"><a name="#_methodOnAddObject_summary"></a>afx_msg LRESULT </td><td align="left"><a href="#_methodOnAddObject_details">OnAddObject</a>( WPARAM  wParam, LPARAM  lParam )</td></tr>
+<tr>
+<td>&nbsp;</td>
+<td>
+<font size=-1><em>Message handler for adding objects to the object bar.</em><a href="#_methodOnAddObject_details">More...</a>
+</font></td></tr>
+<tr>
+<td align="right"><a name="#_methodOnRemoveObject_summary"></a>afx_msg LRESULT </td><td align="left"><a href="#_methodOnRemoveObject_details">OnRemoveObject</a>( WPARAM  wParam, LPARAM  lParam )</td></tr>
+<tr>
+<td>&nbsp;</td>
+<td>
+<font size=-1><em>Message handler to remove and object from the message bar.</em><a href="#_methodOnRemoveObject_details">More...</a>
+</font></td></tr>
+<tr>
+<td align="right"><a name="#_methodOnClearObjects_summary"></a>afx_msg LRESULT </td><td align="left"><a href="#_methodOnClearObjects_details">OnClearObjects</a>( WPARAM  wParam, LPARAM  lParam )</td></tr>
+<tr>
+<td>&nbsp;</td>
+<td>
+<font size=-1><em>Clear all objects from the object bar.</em><a href="#_methodOnClearObjects_details">More...</a>
+</font></td></tr>
+<tr>
+<td colspan="2"><h2>Protected Members</h2></td>
+</tr>
+</table>
+<hr>
+<h2><a name="_details"></a>Detailed Description</h2>
+<p>
+C:\Development\Game Dev System\ObjectBar.h(14)
+
+ ObjectBar.h : header file
+C:\Development\Game Dev System\ObjectBar.h(14)
+
+
+C:\Development\Game Dev System\ObjectBar.h(14)
+
+
+C:\Development\Game Dev System\ObjectBar.h(14)
+
+ CObjectBar window
+</p>
+<hr>
+<h2>Constructor and Destructor Documentation</h2>
+<a name="#_methodCObjectBar_details"></a><table border="0">
+<tr>
+<td>
+<table border="0">
+<tr>
+<td align="right"><a href="#_methodCObjectBar_summary">top</a>
+CObjectBar::CObjectBar</td>
+<td >
+(</td>
+<td >
+)</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<a name="#_method~CObjectBar_details"></a><table border="0">
+<tr>
+<td>
+<table border="0">
+<tr>
+<td align="right"><a href="#_method~CObjectBar_summary">top</a>
+CObjectBar::~CObjectBar</td>
+<td >
+(</td>
+<td >
+)</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<hr>
+<p>
+<h2>Member Function Documentation</h2>
+</p>
+<a name="#_methodInitObjectPages_details"></a><table border="0">
+<tr>
+<td>
+<table border="0">
+<tr>
+<td ><a href="#_methodInitObjectPages_summary">top</a>
+void CObjectBar::InitObjectPages</td>
+<td >
+(</td>
+<td >
+)</td>
+<td >
+<code> [private]</code></td >
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table border="0"><tr>
+<td>&nbsp;</td>
+<td>
+<p>
+Initialize all the object tab pages on the object bar.
+
+</p>
+<p>
+<b>Parameters:</b>
+</p>
+<table border="0">
+</table>
+<p>
+<b>Returns:</b>
+</p>
+<p><em><i>void  : </i></em></p>
+</td>
+</tr>
+</table></td>
+</tr>
+</table><a name="#_methodOnCreate_details"></a><table border="0">
+<tr>
+<td>
+<table border="0">
+<tr>
+<td ><a href="#_methodOnCreate_summary">top</a>
+afx_msg int CObjectBar::OnCreate</td>
+<td >
+(</td>
+<td >
+LPCREATESTRUCT </td>
+<td ><i>
+lpCreateStruct</i></td>
+<td >
+)</td>
+<td >
+<code> [protected]</code></td >
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table border="0"><tr>
+<td>&nbsp;</td>
+<td>
+<p>
+
+</p>
+<p>
+<b>Parameters:</b>
+</p>
+<table border="0">
+<tr>
+<td>
+<em><i>LPCREATESTRUCT </i></em>
+</td>
+<td>
+&nbsp;</td>
+</tr>
+</table>
+<p>
+<b>Returns:</b>
+</p>
+<p><em><i>afx_msg int  : </i></em></p>
+</td>
+</tr>
+</table></td>
+</tr>
+</table><a name="#_methodOnSize_details"></a><table border="0">
+<tr>
+<td>
+<table border="0">
+<tr>
+<td ><a href="#_methodOnSize_summary">top</a>
+afx_msg void CObjectBar::OnSize</td>
+<td >
+(</td>
+<td >
+UINT </td>
+<td ><i>
+nType</i></td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td >
+int </td>
+<td ><i>
+cx</i></td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td >
+int </td>
+<td ><i>
+cy</i></td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>)</td>
+<td colspan="2">&nbsp;<code> [protected]</code></td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table border="0"><tr>
+<td>&nbsp;</td>
+<td>
+<p>
+Message handler for resizing of the dockable bars.
+
+</p>
+<p>
+<b>Parameters:</b>
+</p>
+<table border="0">
+<tr>
+<td>
+<em><i>UINT </i></em>
+</td>
+<td>
+&nbsp;</td>
+</tr>
+<tr>
+<td>
+<em><i>int </i></em>
+</td>
+<td>
+&nbsp;</td>
+</tr>
+<tr>
+<td>
+<em><i>int </i></em>
+</td>
+<td>
+&nbsp;</td>
+</tr>
+</table>
+<p>
+<b>Returns:</b>
+</p>
+<p><em><i>afx_msg void  : </i></em></p>
+</td>
+</tr>
+</table></td>
+</tr>
+</table><a name="#_methodOnAddObject_details"></a><table border="0">
+<tr>
+<td>
+<table border="0">
+<tr>
+<td ><a href="#_methodOnAddObject_summary">top</a>
+afx_msg LRESULT CObjectBar::OnAddObject</td>
+<td >
+(</td>
+<td >
+WPARAM </td>
+<td ><i>
+wParam</i></td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td >
+LPARAM </td>
+<td ><i>
+lParam</i></td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>)</td>
+<td colspan="2">&nbsp;<code> [protected]</code></td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table border="0"><tr>
+<td>&nbsp;</td>
+<td>
+<p>
+Message handler for adding objects to the object bar.
+
+</p>
+<p>
+<b>Parameters:</b>
+</p>
+<table border="0">
+<tr>
+<td>
+<em><i>WPARAM </i></em>
+</td>
+<td>
+Not Used
+</td>
+</tr>
+<tr>
+<td>
+<em><i>LPARAM </i></em>
+</td>
+<td>
+Pointer to an OBJECTSTRUCT. 
+</td>
+</tr>
+</table>
+<p>
+<b>Returns:</b>
+</p>
+<p><em><i>afx_msg LRESULT  : </i></em></p>
+</td>
+</tr>
+</table></td>
+</tr>
+</table><a name="#_methodOnRemoveObject_details"></a><table border="0">
+<tr>
+<td>
+<table border="0">
+<tr>
+<td ><a href="#_methodOnRemoveObject_summary">top</a>
+afx_msg LRESULT CObjectBar::OnRemoveObject</td>
+<td >
+(</td>
+<td >
+WPARAM </td>
+<td ><i>
+wParam</i></td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td >
+LPARAM </td>
+<td ><i>
+lParam</i></td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>)</td>
+<td colspan="2">&nbsp;<code> [protected]</code></td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table border="0"><tr>
+<td>&nbsp;</td>
+<td>
+<p>
+Message handler to remove and object from the message bar.
+
+</p>
+<p>
+<b>Parameters:</b>
+</p>
+<table border="0">
+<tr>
+<td>
+<em><i>WPARAM </i></em>
+</td>
+<td>
+Not Used.
+</td>
+</tr>
+<tr>
+<td>
+<em><i>LPARAM </i></em>
+</td>
+<td>
+Pointer to an OBJECTSTRUCT
+</td>
+</tr>
+</table>
+<p>
+<b>Returns:</b>
+</p>
+<p><em><i>afx_msg LRESULT  : </i></em></p>
+</td>
+</tr>
+</table></td>
+</tr>
+</table><a name="#_methodOnClearObjects_details"></a><table border="0">
+<tr>
+<td>
+<table border="0">
+<tr>
+<td ><a href="#_methodOnClearObjects_summary">top</a>
+afx_msg LRESULT CObjectBar::OnClearObjects</td>
+<td >
+(</td>
+<td >
+WPARAM </td>
+<td ><i>
+wParam</i></td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td >
+LPARAM </td>
+<td ><i>
+lParam</i></td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>)</td>
+<td colspan="2">&nbsp;<code> [protected]</code></td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table border="0"><tr>
+<td>&nbsp;</td>
+<td>
+<p>
+Clear all objects from the object bar.
+
+</p>
+<p>
+<b>Parameters:</b>
+</p>
+<table border="0">
+<tr>
+<td>
+<em><i>WPARAM </i></em>
+</td>
+<td>
+Not Used.
+</td>
+</tr>
+<tr>
+<td>
+<em><i>LPARAM </i></em>
+</td>
+<td>
+Pointer to an OBJECTSTRUCT
+</td>
+</tr>
+</table>
+<p>
+<b>Returns:</b>
+</p>
+<p><em><i>afx_msg LRESULT  : </i></em></p>
+</td>
+</tr>
+</table></td>
+</tr>
+</table></body>
+</html>

@@ -1,0 +1,50 @@
+#include "Shaders\HLSLconstants.h"
+
+struct PSIn
+{
+	float2 TexCoord0	: TEXCOORD0;
+	float4 Color		:	COLOR0;
+//	float4 Depth		:	COLOR1;
+//	float4  Center		:	TEXCOORD1;
+//	float4  Pos			:	TEXCOORD2;
+};
+
+uniform float Density : register(c20);
+
+float4 main(	PSIn  In, 
+				uniform sampler2D colorMap0 : register(s0),				
+				uniform sampler2D DepthMap : register(s1)
+				 ) : COLOR
+{
+	
+	//check depth 
+	float4 color0 = float4(0,0,0,0);
+	//enable for soft particles:
+	/*
+	float alpha = 0;
+	float d = length( In.Pos.xyz - In.Center.xyz );
+	float nearclip = In.Center.w;
+	d = ( d - nearclip ) / In.Pos.w;
+	if( d < In.Depth.w )
+	{
+		float w = sqrt( In.Depth.w*In.Depth.w - d*d );
+		float SceneDepth = tex2D(DepthMap, In.Depth.xy);//scene depth
+		float NearSide = In.Depth.z - w;//near side of the particle sphere
+		float FarSide= In.Depth.z + w;//farthest depth for particle sphere
+		//below is (scenedepth or farthest particle depth, whichever is nearer
+		//- (nearclip or nearest particle depth, whichever is farther)
+		//When the scene occludes, this will be scenedepth - nearside = negative number
+		//When particles occlude = Farside - nearside = positive number
+		float ds = min( SceneDepth, FarSide )  - max( 0, NearSide );
+		if( ds > 0 )
+		{
+			alpha = 1.f - exp( -Density*ds * (1-(d/In.Depth.w)) );		
+			alpha = saturate( alpha );
+			color0 = tex2D(colorMap0, In.TexCoord0.xy) * In.Color;
+		}
+	}
+	color0.a *= alpha;*/
+	//disable for soft particles:
+	color0 = tex2D(colorMap0, In.TexCoord0.xy) * In.Color;
+	return color0;
+}

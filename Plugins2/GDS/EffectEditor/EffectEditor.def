@@ -1,0 +1,6 @@
+; EffectEditor.def : Declares the module parameters for the DLL.
+
+LIBRARY      "EffectEditor"
+
+EXPORTS
+    ; Explicit exports can go here

@@ -1,0 +1,14 @@
+<MATERIAL version="2000" effectname="Shaders/TerrainLava.efx" numconstants="0" numtextures="4" numrenderstates="4" numbones="0" numflags="0">
+    <Texture pass="0" stage="0" file="Textures\Lava\Lava_Red.dds" numtexturestates="0">
+    </Texture> 
+    <Texture pass="0" stage="1" file="Textures\Lava\Lava_Yellow.dds" numtexturestates="0">
+    </Texture> 
+    <Texture pass="0" stage="2" file="Textures\Lava\Mantle_Diffuse.dds" numtexturestates="0">
+    </Texture>
+    <Texture pass="0" stage="3" file="Textures\Lava\Mantle_nrml.dds" numtexturestates="0">
+    </Texture> 
+   <RenderState mode="alphablend" value="false" />
+   <RenderState mode="alphatest" value="false" />
+   <RenderState mode="depthwrite" value="true" />
+   <RenderState mode="depthtest" value="true" />
+</MATERIAL>
